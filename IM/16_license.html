@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<HTML lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>SGIM</title>
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+	<!--[if (gte IE 7)&(lte IE 8)]>
+	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="SGIM_wrap" class="">
+		<div class="nav">
+			<div class="nav_inner scroll">
+				<div class="nav_header">
+					<a href="" class="logo">
+						<img src="img/common/logo_186x30.png">
+					</a>
+				</div>
+				<div class="nav_tab">
+					<a href="" class="">사용자</a>
+					<a href="" class="on">관리자</a>
+				</div>
+				<ul class="nav_list">
+					<li><a href="" class="depth_menu"><i class="UserMangement"></i><span>사용자 관리</span></a>
+						<ul>
+							<li><a href="">사용자</a></li>
+							<li><a href="" class="on">사용자 그룹</a></li>
+							<li><a href="">조직 그룹</a></li>
+							<li><a href="">대량 등록</a></li>
+							<li><a href="">자가 등록</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="ResourceMangement"></i><span>시스템 관리</span></a>
+						<ul>
+							<li><a href="">조정 및 배포</a></li>
+							<li><a href="">시스템(자원)</a></li>
+							<li><a href="">시스템(자원) 그룹</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="PolicyMangement"></i><span>정책 관리</span></a>
+						<ul>
+							<li><a href="">역할</a></li>
+							<li><a href="">조정 정책</a></li>
+							<li><a href="">배포 정책</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="AMMangement"></i><span>정책제어 정책</span></a>
+						<ul>
+							<li><a href="">PAM 연결 관리</a></li>
+							<li><a href="">접속조회</a></li>
+							<li><a href="">접근권한 관리</a></li>
+							<li><a href="">명령어</a></li>
+							<li><a href="">금지 명령어</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="icon_pw"></i><span>인증/인가 관리</span></a>
+						<ul>
+							<li><a href="">인증 관리</a></li>
+							<li><a href="">인가 관리</a></li>
+							<li><a href="">암호 정책 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="AuditingReport"></i><span>감사 및 보고서 긴 메뉴명입니다</span></a>
+						<ul>
+							<li><a href="">모니터링</a></li>
+							<li><a href="">감사</a></li>
+							<li><a href="">보고서</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="AttributeMangement"></i><span>속성관리</span></a>
+						<ul>
+							<li><a href="">사용자 정보</a></li>
+							<li><a href="">사용자그룹 정보</a></li>
+							<li><a href="">조직 정보</a></li>
+						</ul>
+					</li>
+					<li><a href="" class=""><i class="Connector"></i><span>Connector</span></a></li>
+					<li><a href="" class=""><i class="ONSDModel"></i><span>ONSD Entry</span></a></li>
+					<li><a href="" class=""><i class="WorkflowManagement"></i><span>워크플로우</span></a></li>
+					<li><a href="" class="depth_menu"><i class="System"></i><span>시스템</span></a>
+						<ul>
+							<li><a href="">관리자</a></li>
+							<li><a href="">저장소 관리</a></li>
+							<li><a href="">서비스 모듈 관리</a></li>
+							<li><a href="">스케줄 관리</a></li>
+							<li><a href="">CMS</a></li>
+							<li><a href="">환경 설정</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div class="header">
+				<div class="btn_lnb"><a>메뉴</a></div>
+				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
+				<div class="header_title">
+					<h1>사용자 관리</h1>
+					<ol class="link_depth">
+						<li><a href="">HOME</a></li>
+						<li><a href="">역할관리</a></li>
+					</ol>
+				</div>
+				<ul class="gl_nav">
+					<li class="btn_modetrans"><a href="">사용자 모드<i></i></a></li>
+					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> <span>user01</span></a></li>
+					<li class="time"><i></i><span>2020-09-11 15:35:00</span></li>
+					<li class="btn_alim"><a href="">alim<span>13</span></a>
+						<div class="balloon alim_pop" style="display:none">
+							<div class="alim_pop_wrap">
+								<div class="alim_top">
+									<span>새 알림</span>
+									<button class="alim_clear">모든 알림 지우기</button>
+								</div>
+								<ul class="alim_list">
+									<li><a><i></i>경고!</a></li>
+									<li><a><i></i>나한테만 오는 알람메세지이이이이 두줄일때 다음줄로 넘어갑니다 </a></li>
+									<li><a><i></i>전체적인 알람공지</a></li>
+									<li><a><i></i>SMS문자왔숑</a></li>
+									<li><a><i></i>메일왔네요</a></li>
+									<li><a><i></i>기타알람</a></li>
+								</ul>
+								<div class="allAlim">
+									<a href="" class="btn_allAlim">모두 보기 ></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="btn_logout"><a href="">logout</a></li>
+					<li class="lang_wrap"><a href="">KR</a>
+						<ul class="lang_pop balloon" style="display:none">
+							<li><a class="kr_lang"><i></i>한국어</a></li>
+							<li><a class="us_lang"><i></i>English</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="i-card_wrap">
+				<div class="dash_box">
+					<div class="license_info_card">
+						<div class="li_customer_info">
+							<p class="customer_name">한국의약품 안전관리원</p>
+							<div class="date_info">
+								<p>발급일</p>
+								<p>2021.12.28</p>
+							</div>
+							<ul class="sq_nv_wd">
+								<li>판매</li>
+								<li>L4</li>
+								<li>소프트웨어</li>
+							</ul>
+						</div>
+						<div class="exp_period_info">
+							<div class="exp_perid_wrap">
+								<p class="tit">IM라이선스</p>
+								<div class="license_stt">
+									<p class="bluetxt">유효</p>
+									<i class="icon_license"></i>
+								</div>
+								<div class="exp_perid_bar_wrap">
+									<div class="exp_perid_bar">
+										<p class="current_status"></p>
+										<div class="balloon" style="display:block;">
+											<p>30일 남음</p>
+										</div>
+									</div>
+									<div class="license_date">
+										<p>2021.12.28</p>
+										<p>2023.08.15</p>
+									</div>
+								</div>
+							</div>
+							<div class="exp_perid_wrap">
+								<p class="tit">유지보수</p>
+								<div class="license_stt">
+									<p class="">만료</p>
+									<i class="icon_license expiration"></i>
+									<!-- 빨간글자= "redtxt" -->
+								</div>
+								<div class="exp_perid_bar_wrap">
+									<div class="exp_perid_bar">
+										<p class="current_status gray"></p>
+									</div>
+									<div class="license_date">
+										<p>2021.12.28</p>
+										<p>2023.08.15</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dash_box">
+					<div class="li_gt_flx">
+						<div class="li_gt_info">
+							<p class="tit">서버</p>
+							<div class="li_gt_txt">
+								<p class="bigtxt orttxt">80</p>
+								<p class="smalltxt">/99<span>개</span></p>
+							</div>
+						</div>
+						<div class="li_gt_info">
+							<p class="tit">사용자</p>
+							<div class="li_gt_txt">
+								<p class="bigtxt redtxt">698</p>
+								<p class="smalltxt">/700<span>명</span></p>
+							</div>
+						</div>
+						<div class="li_gt_info">
+							<p class="tit">PM기능</p>
+							<div class="li_gt_txt">
+								<p class="bigtxt bluetxt">사용</p>
+								<!-- 비사용은 bluetxt삭제만 -->
+							</div>
+						</div>
+						<div class="li_gt_info">
+							<p class="tit">커넥터</p>
+							<p class="type">Reconciliation, Application, OSAccount, CLOUD…</p>
+							<div class="li_gt_txt">
+								<p class="bigtxt navytxt">5</p>
+								<p class="smalltxt"><span>(종)</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="t_cont_in">
+					<div class="list_btn cl_both">
+						<div class="list_left_btn f_l wid50">
+							<button class="shadow">활성</button>
+							<button class="shadow">비활성</button>
+							<span class="divide"></span>
+							<button class="shadow">생성</button>
+						</div>
+						<div class="list_right_btn f_r wid50">
+							<button class="skyblue">새로고침</button>
+						</div>
+					</div>
+					<div class="tbl_list">
+						<table class="default_tbl">
+							<thead>
+								<tr>
+									<th class="tbl_num_wid"></th>
+									<th class="sort_column">
+										<div class="">상태<span class="ascanding"></span></div>
+									</th>
+									<th class="sort_column">
+										<div class="">버전<span class="ascanding"></span></div>
+									</th>
+									<th class="sort_column">
+										<div class="">종류<span class="ascanding"></span></div>
+									</th>
+									<th class="sort_column">
+										<div class="">사용형태<span class="ascanding"></span></div>
+									</th>
+									<th class="sort_column">
+										<div class="">라이선스<span class="ascanding"></span></div>
+									</th>
+									<th class="sort_column">
+										<div class="">만료일<span class="ascanding"></span></div>
+									</th>
+									<th class="sort_column">
+										<div class=""><span class="ascanding"></span></div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use">유지보수</p>
+											<p class="lc_use">서버</p>
+											<p class="lc_use">사용자</p>
+											<p class="lc_use">PM기능</p>
+											<p class="lc_use">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use">유지보수</p>
+											<p class="lc_use">서버</p>
+											<p class="lc_use">사용자</p>
+											<p class="lc_use">PM기능</p>
+											<p class="lc_use">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use">유지보수</p>
+											<p class="lc_use">서버</p>
+											<p class="lc_use">사용자</p>
+											<p class="lc_use">PM기능</p>
+											<p class="lc_use">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use nouse">유지보수</p>
+											<p class="lc_use nouse">서버</p>
+											<p class="lc_use nouse">사용자</p>
+											<p class="lc_use nouse">PM기능</p>
+											<p class="lc_use nouse">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use nouse">유지보수</p>
+											<p class="lc_use nouse">서버</p>
+											<p class="lc_use nouse">사용자</p>
+											<p class="lc_use nouse">PM기능</p>
+											<p class="lc_use nouse">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use nouse">유지보수</p>
+											<p class="lc_use nouse">서버</p>
+											<p class="lc_use nouse">사용자</p>
+											<p class="lc_use nouse">PM기능</p>
+											<p class="lc_use nouse">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use nouse">유지보수</p>
+											<p class="lc_use nouse">서버</p>
+											<p class="lc_use nouse">사용자</p>
+											<p class="lc_use nouse">PM기능</p>
+											<p class="lc_use nouse">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use">유지보수</p>
+											<p class="lc_use">서버</p>
+											<p class="lc_use">사용자</p>
+											<p class="lc_use">PM기능</p>
+											<p class="lc_use">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use">유지보수</p>
+											<p class="lc_use">서버</p>
+											<p class="lc_use">사용자</p>
+											<p class="lc_use">PM기능</p>
+											<p class="lc_use">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>유효</td>
+									<td>L4</td>
+									<td>판매</td>
+									<td>소프트웨어</td>
+									<td>
+										<div class="license_use">
+											<p class="lc_use">유지보수</p>
+											<p class="lc_use">서버</p>
+											<p class="lc_use">사용자</p>
+											<p class="lc_use">PM기능</p>
+											<p class="lc_use">커넥터(5종)</p>
+										</div>
+									</td>
+									<td>2025.04.25</td>
+									<td><button class="btnstl shadow">발급키 확인</button> <button class="btnstl shadow">비활성화</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tbl_btm">
+						<div class="page_info">1-10/50</div>
+						<div class="pagination">
+							<ul>
+								<li><a href="" class="first diss"><span></span>첫페이지</a></li>
+								<li><a href="" class="prev diss"><span></span>이전</a></li>
+								<li><a href="">1</a></li>
+								<li><a href="" class="on">2</a></li>
+								<li><a href="">3</a></li>
+								<li><a href="">4</a></li>
+								<li><a href="">5</a></li>
+								<li><a href="" class="next"><span></span>다음</a></li>
+								<li><a href="" class="last"><span></span>마지막페이지</a></li>
+							</ul>
+						</div>
+						<div class="page_select">
+							<select class="form_contrl">
+								<option value="">10</option>
+								<option value="">25</option>
+								<option value="">50</option>
+								<option value="">100</option>
+							</select>
+						</div>
+					</div>
+					<div class="list_btn cl_both">
+						<div class="list_left_btn f_l wid50">
+							<button class="shadow">활성</button>
+							<button class="shadow">비활성</button>
+							<span class="divide"></span>
+							<button class="shadow">생성</button>
+						</div>
+						<div class="list_right_btn f_r wid50">
+							<button class="skyblue">새로고침</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</HTML>
