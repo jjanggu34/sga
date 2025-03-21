@@ -1,6 +1,7 @@
 @charset "UTF-8";
+/* @import url("../css/style.css"); */
 
-body { min-width:1600px; color:#fff; }
+body { min-width:1600px; color:#fff; overflow: auto; }
 body * {  font-family:"S-CoreDream"; font-size:13px; box-sizing:border-box; }
 body > section{ margin-top:50px; height:calc(100% - 70px); top:-13px; }
 body.win_popup > section{ top:0; }
@@ -13,6 +14,7 @@ body.win_popup > section{ top:0; }
 .tr{ text-align:right !important; }
 .mg3020{ margin:30px 20px 20px; width:calc(100% - 40px); }
 .mg3020.computer_box{ padding:0; }
+.fl{ position:relative; }
 
 .content_wrap{ padding:30px 20px;  width:100%; }
 
@@ -93,9 +95,7 @@ body.win_popup > section{ top:0; }
      --font-extrabold: 700;
 }
 
-/*******************************************************************************
-*	폰트 #font
-*******************************************************************************/
+/***************** 폰트 *****************/
 .title { font-size:var(--font-20); font-weight:var(--font-extrabold); }
 /* 시스템 영역 */
 .sys-title { font-size:var(--font-16); font-weight:var(--font-bold); }
@@ -105,28 +105,30 @@ body.win_popup > section{ top:0; }
 /* 그래프영역 별첨 */
 .graph-txt { font-size:var(--font-14); font-weight:var(--font-medium); }
 
-/*******************************************************************************
-*	라벨 #label
-*******************************************************************************/
+/***************** 라벨 *****************/
 .label { display:inline-block; width:auto; padding:5px 10px 5px 8px; border-radius:14px; font-size:var(--font-12); }
 .ico { padding:0 7px 0 25px !important; min-width:35px; height:23px; background-position: 5px center; background-repeat: no-repeat; background-size: 18px; line-height:22px; font-weight:var(--font-medium); }
 
 .true { background-color:#2E6FD4; background-image: url(../img/common/ico_list_ok.svg); color:#fff; }
 .false { background-color:#FF4040; background-image: url(../img/common/ico_list_erro.svg); color:#fff;}
 
+/***************** 셀렉트 *****************/
 
-/*******************************************************************************
-*	리스트
-*******************************************************************************/
+
+/***************** 리스트 *****************/
 /* grid */
 .dash_box { border-radius:20px; background:var(--card-color01); }
 /* grid header */
 .dash_box_top { display:flex; align-items:center; justify-content:space-between; padding:0 20px; height:50px; background:transparent; color:#fff; border-bottom:1px solid var(--border-color); }
 .dash_box_top .dash_title { display:inline-block; font-size:16px; font-weight:600; }
+.dash_box_top .more_btn::after { content:">"; display:inline-block; width:10px; height:10px; color:#fff; }
+.dash_box_top .more_btn a { color:#fff; }
 
+/******** 기본 테이블 ********/
 /* table */
 .tbl_list.dash_table { padding:5px 10px 0; }
 .dash_table .default_tbl { width:100%; border:0; background:transparent; word-break:break-all; table-layout:fixed; cursor:auto; box-sizing:content-box; }
+.tbl-br { border-right:1px solid #505764 !important; }
 
 /* thead */
 .default_tbl > thead > tr:hover { background:transparent; cursor:auto; }
@@ -141,3 +143,12 @@ body.win_popup > section{ top:0; }
 .default_tbl > tbody > tr td { padding:10px 0; border:0; border-bottom:1px solid #505764; font-size:var(--font-13); font-weight:var(--font-regular); line-height:16px; color:var(--normal-color); text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .default_tbl .sort_column div { color:#fff; }
 .default_tbl > tbody > tr td div { color:var(--normal-color); }
+
+/* no_data */
+.no_data::after { background: url(../img/common/ico-nodata.png) no-repeat;
+     opacity: .3; }
+
+/******** row 테이블 ********/
+.default_tbl.type2 tbody > tr:last-child { border-bottom:1px solid #fff; }
+.default_tbl.type2 tbody > tr th { border-bottom:1px solid #fff; color:#fff; }
+.default_tbl.type2 tbody > tr th:first-child { border-right:1px solid #fff; border-bottom:1px solid #505764; color:#fff; }
