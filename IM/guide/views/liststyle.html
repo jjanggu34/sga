@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<HTML lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>cardlist</title>
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <!-- 기존 css -->
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+
+    <!-- 추가 css -->
+    <link rel="stylesheet" href="../../css/renewal.css">
+
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/common.js"></script>
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <!--[if (gte IE 7)&(lte IE 8)]>
+	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <style>
+        .content > h2 { margin:20px 0; font-size:var(--font-16); color:#fff; }
+    </style>
+</head>
+
+<body>
+    <div id="SGIM_wrap" class="mini_nav">
+        <!-- S: side nav -->
+        <!-- E: side nav -->
+        <!-- S: container -->
+        <div id="container">
+            <!-- S: header -->
+            <!-- E: header -->
+            <!-- S: content -->
+            <div class="content" style="background-color:#111327;">
+                <h2>기본 테이블 리스트</h2>
+                <div class="tbl_list dash_table">
+                    <div class="dash_box_top">
+                        <p class="dash_title">계정 현황</p>
+                        <div class="more_btn">
+                            <a href="#javascript:void(0);">더보기</a>
+                        </div>
+                    </div>
+                    <table class="default_tbl grid">
+                        <colgroup>
+                            <col width="33.33%" >
+                            <col width="33.33%" >
+                            <col width="33.33%" >
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th data-tooltip="시스템명" class="gridText">시스템명</th>
+                                <th data-tooltip="서비스 영역" class="gridText">서비스 영역</th>
+                                <th data-tooltip="계정명" class="gridText">계정명</th>
+                            </tr>
+                        </thead>
+                        <tbody class="">
+                            <tr>
+                                <td colspan="3" class="center"> 데이터가 없습니다. </td>
+                                <td colspan="3" class="center" style="display: none;"> 로딩중 </td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+
+                <h2>check_list / more_list</h2>
+                <div class="tbl_list dash_table">
+                    <table class="default_tbl">
+                        <colgroup>
+                            <col width="8%" >
+                            <col width="5%" >
+                            <col width="5%" >
+                            <col width="5%" >
+                            <col width="*" >
+                            <col width="5%" >
+                            <col width="*" >
+                            <col width="*" >
+                            <col width="*" >
+                            <col width="*" >
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tbl_num_wid">순번</th>
+                                <th class="check_list"><input type="checkbox" name="" id="list00"
+                                        class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
+                                <th></th>
+                                <th class="sort_column">
+                                    <div class="">종류<span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class="">계정종류<span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class=""><span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class="">상태<span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class="">설명<span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class="">형식<span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class="">동시 실행 허용 여부<span class="ascanding"></span></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list01"
+                                        class="check_stl"><label for="list01" class="check_stl_lab"></label>
+                                </td>
+                                <td id="addslide_1" class="more_list" style="cursor: pointer;">
+                                    <button type="button" aria-label="ableSlide" class="icon_arrow_open"> 더보기 </button>
+                                </td>
+                                <td>OS</td>
+                                <td>셀렉트박스</td>
+                                </td>
+                                <td class="more_list"><button type="button" title="상세보기" aria-label="상세보기" class="btn_detailview"></button></td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="활성화" class="gridText">
+                                            <div><i class="icon_list editable_enabled"></i><span> 활성화</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>data1</td>
+                                <td>
+                                    <div>
+                                        <i class="icon_ff exel"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="true" class="gridText">
+                                            <span class="label true ico">TRUE</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list02"
+                                        class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                <td class="more_list" style="cursor: pointer;">
+                                    <button type="button" aria-label="ableSlide" class="icon_arrow_open"> 더보기 </button>
+                                </td>
+                                <td>OS</td>
+                                <td>셀렉트박스</td>
+                                <td class="more_list"><button type="button" title="상세보기" aria-label="상세보기" class="btn_detailview"></button></td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="활성화" class="gridText">
+                                            <div><i class="icon_list sv_connect"></i><span>접속확인</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>공통으로 사용할 수 있는 결재라인 - 보안담당자 > 보안팀장(없으면 생략) 순으로 결재라인을 설정에 따라 자동 선택하는 모델</td>
+                                <td>
+                                    <div>
+                                        <i class="icon_ff"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="true" class="gridText">
+                                            <span class="label false ico">FALSE</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list02"
+                                        class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                <td class="more_list" style="cursor: pointer;">
+                                    <button type="button" aria-label="ableSlide" class="icon_arrow_open"> 더보기 </button>
+                                </td>
+                                <td>OS</td>
+                                <td>셀렉트박스</td>
+                                <td class="more_list"><button type="button" title="상세보기" aria-label="상세보기" class="btn_detailview"></button></td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="활성화" class="gridText">
+                                            <div><i class="icon_list sv_disconnect"></i><span>접속안됨</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>공통으로 사용할 수 </td>
+                                <td>
+                                    <div>
+                                        <i class="icon_ff"></i>
+                                        <i class="icon_ff exel"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="true" class="gridText">
+                                            <span class="label false ico">FALSE</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list02"
+                                        class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                <td class="more_list" style="cursor: pointer;">
+                                    <button type="button" aria-label="ableSlide" class="icon_arrow_open"> 더보기 </button>
+                                </td>
+                                <td>OS</td>
+                                <td>셀렉트박스</td>
+                                <td class="more_list"><button type="button" title="상세보기" aria-label="상세보기" class="btn_detailview"></button></td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="활성화" class="gridText">
+                                            <div><i class="icon_list none"></i><span>상태없음</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>공통으로 사용할 수 </td>
+                                <td>
+                                    <div>
+                                        <i class="icon_ff word"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="true" class="gridText">
+                                            <span class="label false ico">FALSE</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list02"
+                                        class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                <td class="more_list" style="cursor: pointer;">
+                                    <button type="button" aria-label="ableSlide" class="icon_arrow_open"> 더보기 </button>
+                                </td>
+                                <td>OS</td>
+                                <td>셀렉트박스</td>
+                                <td class="more_list"><button type="button" title="상세보기" aria-label="상세보기" class="btn_detailview"></button></td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="활성화" class="gridText">
+                                            <div><i class="icon_pgs"></i><span>생성 진행중</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>공통으로 사용할 수 </td>
+                                <td>
+                                    <div>
+                                        <i class="icon_ff csv"></i>
+                                        <i class="icon_ff hwp"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="true" class="gridText">
+                                            <span class="label false ico">FALSE</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list02"
+                                        class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                <td class="more_list" style="cursor: pointer;">
+                                    <button type="button" aria-label="ableSlide" class="icon_arrow_open"> 더보기 </button>
+                                </td>
+                                <td>OS</td>
+                                <td>셀렉트박스</td>
+                                <td class="more_list"><button type="button" title="상세보기" aria-label="상세보기" class="btn_detailview"></button></td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="활성화" class="gridText">
+                                            <div><i class="icon_list icheck"></i><span>생성</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>i에 sl_ff 넣으면 작아짐-></td>
+                                <td>
+                                    <div>
+                                        <i class="icon_ff text"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="true" class="gridText">
+                                            <span class="label false ico">FALSE</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list02"
+                                        class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                <td class="more_list" style="cursor: pointer;">
+                                    <button type="button" aria-label="ableSlide" class="icon_arrow_open"> 더보기 </button>
+                                </td>
+                                <td>OS</td>
+                                <td>셀렉트박스</td>
+                                <td class="more_list"><button type="button" title="상세보기" aria-label="상세보기" class="btn_detailview"></button></td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="활성화" class="gridText">
+                                            <div><i class="icon_pgs"></i><span>생성 진행중</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>공통으로 사용할 수 </td>
+                                <td>
+                                    <div>
+                                        <i class="icon_ff csv"></i>
+                                        <i class="icon_ff hwp"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <div data-tooltip="true" class="gridText">
+                                            <span class="label false ico">FALSE</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>dash_box 안에 테이블<span style="color:var(--border-color);"> th 안에 ascanding은 필터링</span></h2>
+                <div class="dash_box">
+                    <div class="tbl_list dash_table">
+                        <table class="default_tbl">
+                            <colgroup>
+                                <col width="8%" >
+                                <col width="5%" >
+                                <col width="*" >
+                                <col width="*" >
+                                <col width="*" >
+                                <col width="*" >
+                                <col width="*" >
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="tbl_num_wid">순번</th>
+                                    <th class="check_list"><input type="checkbox" name="" id="list00"
+                                            class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
+                                    <th class="sort_column">
+                                        <div class="">종류<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">제조사<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">모델명<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">이름<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">설명<span class="ascanding"></span></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td class="check_list"><input type="checkbox" name="" id="list01"
+                                            class="check_stl"><label for="list01" class="check_stl_lab"></label>
+                                    </td>
+                                    <td>OS</td>
+                                    <td>RedHat</td>
+                                    <td>data1</td>
+                                    <td>CentOS(1503)</td>
+                                    <td>Linux 표준모델</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td class="check_list"><input type="checkbox" name="" id="list02"
+                                            class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                    <td>OS</td>
+                                    <td>RedHat</td>
+                                    <td>data1</td>
+                                    <td>CentOS(1503)</td>
+                                    <td>Linux 표준모델</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h2>table contents</h2>
+            </div>
+            <!-- E: content -->
+            <!-- S: footer -->
+            <div class="footer">
+                <p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
+            </div>
+            <!-- E: footer -->
+        </div>
+        <div class="scroll_btns" style="display:none">
+            <button class="btn_toTheTop"></button>
+            <button class="btn_toThebottom"></button>
+        </div>
+        <script>
+            $("body").on("mousewheel", function (e) {
+                var wheel = e.originalEvent.wheelDelta;
+
+                if (wheel > 0) {
+                    //스크롤 올릴때
+                } else {
+                    //스크롤 내릴때
+                    $(".scroll_btns").show();
+                }
+            });
+            $(window).scroll(function () {
+                var scrollValue = $(document).scrollTop();
+                if (scrollValue > 65) {
+                    $(".list_btn_stk").addClass("btnarea");
+                } else {
+                    $(".list_btn_stk").removeClass("btnarea");
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</HTML>

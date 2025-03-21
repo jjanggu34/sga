@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<HTML lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>cardlist</title>
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <!-- 기존 css -->
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+
+    <!-- 추가 css -->
+    <link rel="stylesheet" href="../../css/renewal.css">
+
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/common.js"></script>
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <!--[if (gte IE 7)&(lte IE 8)]>
+	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div id="SGIM_wrap" class="mini_nav">
+        <!-- S: side nav -->
+        <!-- E: side nav -->
+        <!-- S: container -->
+        <div id="container">
+            <!-- S: header -->
+            <!-- E: header -->
+            <!-- S: content -->
+            <div class="content">
+                <div class="search_wrap">
+                    <div class="search_box">
+                        <input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
+                        <button class="btn_search" type="submit">검색</button>
+                        <button class="btn_detail_search" type="submit">상세검색</button>
+                    </div>
+                    <form class="detail_search_wrap" style="display:none">
+                        <p class="detail_search_btn">상세검색<i>닫기</i></p>
+                        <div class="search_column4">
+                            <div class="col">
+                                <dl>
+                                    <dt><label for="detail01">종류</label></dt>
+                                    <dd><input type="text" name="" id="detail01" class="form_contrl"></dd>
+                                </dl>
+                            </div>
+                            <div class="col">
+                                <dl>
+                                    <dt><label for="detail04">제조사</label></dt>
+                                    <dd><input type="text" name="" id="detail04" class="form_contrl"></dd>
+                                </dl>
+                            </div>
+                            <div class="col">
+                                <dl>
+                                    <dt><label for="detail07">모델명</label></dt>
+                                    <dd><select name="" id="detail07" class="form_contrl">
+                                            <option value="">전체</option>
+                                            <option value="">222</option>
+                                            <option value="">333</option>
+                                            <option value="">444</option>
+                                            <option value="">555</option>
+                                        </select></dd>
+                                </dl>
+                            </div>
+                            <div class="col">
+                                <dl>
+                                    <dt><label for="detail09">이름</label></dt>
+                                    <dd><input type="text" name="" id="detail09" class="form_contrl"></dd>
+                                </dl>
+                            </div>
+                            <div class="col">
+                                <dl>
+                                    <dt><label for="detail10">이름</label></dt>
+                                    <dd><input type="text" name="" id="detail10" class="form_contrl"></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="search_date">
+                            <dl class="flx">
+                                <dt>생성일</dt>
+                                <dd>
+                                    <div class="flx">
+                                        <ul class="flx month_select">
+                                            <li><button class="shadow">1개월</button></li>
+                                            <li><button class="shadow on">3개월</button></li>
+                                            <li><button class="shadow">6개월</button></li>
+                                            <li><button class="shadow">10개월</button></li>
+                                            <li><button class="shadow">12개월</button></li>
+                                        </ul>
+                                        <div class="form_date">
+                                            <input type="text" class="form_contrl date_ctl" value="시작날짜"
+                                                readonly="readonly">
+                                            <span> - </span>
+                                            <input type="text" class="form_contrl date_ctl" value="종료날짜"
+                                                readonly="readonly">
+                                        </div>
+                                        <button class="shadow">초기화</button>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="search_column1">
+                            <div class="col">
+                                <dl class="flx">
+                                    <dt><label for="detail07">모델명</label></dt>
+                                    <dd><select name="" id="detail07" class="form_contrl">
+                                            <option value="">전체</option>
+                                            <option value="">222</option>
+                                            <option value="">333</option>
+                                            <option value="">444</option>
+                                            <option value="">555</option>
+                                        </select></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="box2">
+                            <p class="btn_box">
+                                <a href="" class="white">초기화</a>
+                                <a href="" class="gradient">검색</a>
+                            </p>
+                        </div>
+                    </form>
+
+                    <div class="related_box" style="display:none">
+                        <ul class="related_list">
+                            <li><a href="">연관검색어1</a></li>
+                            <li><a href="">연관검색어2</a></li>
+                            <li><a href="">연관검색어3</a></li>
+                            <li><a href="">연관검색어4</a></li>
+                            <li><a href="">연관검색어5</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 스크롤시 고정할 상단버튼 "list_btn_stk" 클래스 추가-->
+                <div class="list_btn cl_both list_btn_stk">
+                    <div class="list_left_btn f_l wid50">
+                        <button class="shadow">활성</button>
+                        <button class="shadow">비활성</button>
+                        <span class="divide"></span>
+                        <button class="shadow">생성</button>
+                        <button class="shadow">복사생성</button>
+                        <button class="shadow">삭제</button>
+                        <button class="shadow">Update</button>
+                    </div>
+                    <div class="list_right_btn f_r wid50">
+                        <div class="dropdown">
+                            <button class="skybluebd btn_dropdown">보고서 생성
+                                <span>
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 10L10 5H2L6 10Z" fill="#2772FB" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <ul class="dropdown_list" style="display:none">
+                                <li>
+                                    <button><i class="icon_ff sl_ff exel"></i> EXEL</button>
+                                </li>
+                                <li>
+                                    <button><i class="icon_ff sl_ff"></i> PDF</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="skybluebd"><i class="icon_ff sl_ff exel"></i>EXEL</button>
+                        <button class="skybluebd"><i class="icon_ff sl_ff"></i>PDF</button>
+                        <button class="skyblue"><i class="icon_setting"></i> 설정</button>
+                        <button class="skyblue">새로고침</button>
+                    </div>
+                </div>
+                <div class="tbl_list">
+                    <table class="default_tbl">
+                        <thead>
+                            <tr>
+                                <th class="tbl_num_wid"></th>
+                                <th class="check_list"><input type="checkbox" name="" id="list00"
+                                        class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
+                                <th></th>
+                                <th class="sort_column">
+                                    <div class="">종류<span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class="">제조사<span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class="">모델명<span class="ascanding"></span></div>
+                                </th>
+                                <th></th>
+                                <th class="sort_column">
+                                    <div class="">이름<span class="ascanding"></span></div>
+                                </th>
+                                <th class="sort_column">
+                                    <div class="">설명<span class="ascanding"></span></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list01"
+                                        class="check_stl"><label for="list01" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>10</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td class="bluetxt wgt800">위임됨<span class="mandatxt"><i></i></span></td>
+                                <td><i class="icon_list none"></i>상태없음</td>
+                                <td>
+                                    <i class="icon_ff"></i>
+                                    <i class="icon_ff exel"></i>
+                                    <i class="icon_ff word"></i>
+                                    <i class="icon_ff csv"></i>
+                                    <i class="icon_ff hwp"></i>
+                                    <i class="icon_ff text"></i>
+                                </td>
+                                <td><button class="btnstl trcolor">TRUE</button></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list02"
+                                        class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>1</span><button class="icon_arrow_close">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td class="bluetxt wgt800">위임함<span class="mandatxt madna_ed"><i></i></span></td>
+                                <td><i class="icon_pgs"></i>생성 진행중</td>
+                                <td>
+                                    <i class="icon_ff"></i>
+                                    <i class="icon_ff exel"></i>
+                                    <i class="icon_ff hwp"></i>
+                                    <i class="icon_ff text"></i>
+                                </td>
+                                <td><button class="btnstl fcolor">FALSE</button></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list03"
+                                        class="check_stl"><label for="list03" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>0</span><button class="icon_arrow_none"></button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>승인됨</td>
+                                <td><i class="icon_list icheck"></i>생성</td>
+                                <td>
+                                    <i class="icon_ff hwp"></i>
+                                    <i class="icon_ff text"></i>
+                                    <i class="icon_ff exel"></i>
+                                </td>
+                                <td>Linux 표준모델 <i title="수신됨" class="icon_received"></i></td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list04"
+                                        class="check_stl"><label for="list04" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>승인됨<span class="mandatxt"><i></i></span></td>
+                                <td><i class="icon_list"></i>정상</td>
+                                <td>CentOS(1503)</td>
+                                <td><i class="icon_list sv_connect"></i>연결됨</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list05"
+                                        class="check_stl"><label for="list05" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>승인됨<span class="mandatxt madna_ed"><i></i></span></td>
+                                <td><i class="icon_pgs inprogress_create"></i>수정 작업중</td>
+                                <td>CentOS(1503)</td>
+                                <td><i class="icon_list sv_disconnect"></i>연결끊김</td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list06"
+                                        class="check_stl"><label for="list06" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_pgs inprogress_pending"></i>수정 진행중</td>
+                                <td>CentOS(1503)</td>
+                                <td><i class="icon_list locked"></i>잠금</td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list07"
+                                        class="check_stl"><label for="list07" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_pgs inprogress_ing"></i>작업 보류중</td>
+                                <td>CentOS(1503)</td>
+                                <td><i class="icon_list sv_connect_error"></i>접속오류</td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list07"
+                                        class="check_stl"><label for="list07" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list iwarning"></i>작업중 오류</td>
+                                <td>CentOS(1503)</td>
+                                <td><i class="icon_list connection_compl"></i>수집완료</td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list08"
+                                        class="check_stl"><label for="list08" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list disabled"></i>비활성</td>
+                                <td>CentOS(1503)</td>
+                                <td><i class="icon_list connection_error"></i>수집오류</td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list09"
+                                        class="check_stl"><label for="list09" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_pgs inprogress_delete"></i>삭제 진행중</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td class="check_list"><input type="checkbox" name="" id="list10"
+                                        class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                <td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
+                                <td>OS</td>
+                                <td>RedHat</td>
+                                <td>data1</td>
+                                <td><i class="icon_list idisabled"></i>삭제됨</td>
+                                <td>CentOS(1503)</td>
+                                <td>Linux 표준모델</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tbl_btm">
+                    <div class="page_info">1-10/50</div>
+                    <div class="pagination">
+                        <ul>
+                            <li><a href="" class="first diss"><span></span>첫페이지</a></li>
+                            <li><a href="" class="prev diss"><span></span>이전</a></li>
+                            <li><a href="">1</a></li>
+                            <li><a href="" class="on">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">5</a></li>
+                            <li><a href="" class="next"><span></span>다음</a></li>
+                            <li><a href="" class="last"><span></span>마지막페이지</a></li>
+                        </ul>
+                    </div>
+                    <div class="page_select">
+                        <select class="form_contrl">
+                            <option value="">10</option>
+                            <option value="">25</option>
+                            <option value="">50</option>
+                            <option value="">100</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="list_btn cl_both">
+                    <div class="list_left_btn f_l wid50">
+                        <button class="shadow">생성</button>
+                        <button class="shadow">복사생성</button>
+                        <button class="shadow">삭제</button>
+                        <button class="shadow">Update</button>
+                    </div>
+                    <div class="list_right_btn f_r wid50">
+                        <button class="skyblue">자가등록</button>
+                        <button class="skyblue">수동 Recon</button>
+                        <button class="skyblue">대량등록</button>
+                    </div>
+                </div>
+            </div>
+            <!-- E: content -->
+            <!-- S: footer -->
+            <div class="footer">
+                <p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
+            </div>
+            <!-- E: footer -->
+        </div>
+        <div class="scroll_btns" style="display:none">
+            <button class="btn_toTheTop"></button>
+            <button class="btn_toThebottom"></button>
+        </div>
+        <script>
+            $("body").on("mousewheel", function (e) {
+                var wheel = e.originalEvent.wheelDelta;
+
+                if (wheel > 0) {
+                    //스크롤 올릴때
+                } else {
+                    //스크롤 내릴때
+                    $(".scroll_btns").show();
+                }
+            });
+            $(window).scroll(function () {
+                var scrollValue = $(document).scrollTop();
+                if (scrollValue > 65) {
+                    $(".list_btn_stk").addClass("btnarea");
+                } else {
+                    $(".list_btn_stk").removeClass("btnarea");
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</HTML>
