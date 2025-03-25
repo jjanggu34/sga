@@ -1,3 +1,194 @@
+@charset "UTF-8";
+/* 변수 지정하기 */
+/* mixin 함수 선언하기 */
+body {
+  min-width: 1600px;
+  color: var(--white);
+  overflow: auto;
+}
+body * {
+  font-family: "S-CoreDream";
+  font-size: 13px;
+  box-sizing: border-box;
+}
+body > section {
+  margin-top: 50px;
+  height: calc(100% - 70px);
+  top: -13px;
+}
+body.win_popup > section {
+  top: 0;
+}
 
+.sub {
+  min-height: 100%;
+}
+
+.mCSB_container {
+  width: 100% !important;
+}
+
+.dashboard .tab_container {
+  height: 100%;
+}
+.dashboard_box {
+  min-height: 750px;
+  height: 100%;
+}
+.dashboard_main {
+  position: relative;
+  padding: 0 !important;
+}
+
+.tl {
+  text-align: left !important;
+}
+
+tr {
+  text-align: right !important;
+}
+
+.mg3020 {
+  margin: 30px 20px 20px;
+  width: calc(100% - 40px);
+}
+.mg3020.computer_box {
+  padding: 0;
+}
+
+.content_wrap {
+  padding: 30px 20px;
+  width: 100%;
+}
+
+/***************** 폰트 *****************/
+.title {
+  font-size: var(--font-20);
+  font-weight: var(--font-extrabold);
+}
+
+/* 시스템 영역 */
+.sys-title {
+  font-size: var(--font-16);
+  font-weight: var(--font-bold);
+}
+
+.text1 {
+  font-size: var(--font-13);
+  font-weight: var(--font-regular);
+}
+
+/* 수치값이 있을 경우 */
+.text2 {
+  font-size: var(--font-28);
+}
+
+/* 그래프영역 별첨 */
+.graph-txt {
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
+}
+
+/***************** 라벨 *****************/
+.label {
+  display: inline-block;
+  width: auto;
+  padding: 5px 10px 5px 8px;
+  border-radius: 14px;
+  font-size: var(--font-12);
+}
+
+.ico {
+  padding: 0 7px 0 25px !important;
+  min-width: 35px;
+  height: 23px;
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  font-weight: var(--font-medium);
+}
+
+.true {
+  background-color: var(--true);
+  color: var(--white);
+  line-height: 26px;
+}
+.true.ico {
+  background-image: url(../img/common/ico_list_ok.svg);
+}
+
+.false {
+  background-color: var(--false);
+  color: var(--white);
+  line-height: 26px;
+}
+.false.ico {
+  background-image: url(../img/common/ico_list_erro.svg);
+}
+.false_tit {
+  color: var(--false) !important;
+}
+
+/***************** 그리드 *****************/
+.dashboard_box_cont .dashboard_cont {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px 20px;
+}
+.dashboard_box_cont .dashboard_cont > li {
+  position: relative;
+  float: left;
+  border-radius: 20px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+}
+.dashboard_box_cont .dashboard_cont > li.w_100 {
+  width: calc(100% - 20px);
+  margin: 20px 10px 0;
+}
+.dashboard_box_cont .dashboard_cont > li.w_50 {
+  width: calc(50% - 20px);
+  margin: 20px 10px 0;
+}
+.dashboard_box_cont .dashboard_cont > li.w_25 {
+  width: calc(25% - 21px);
+  margin: 20px 10px 0;
+}
+
+.dash_box {
+  height: auto;
+  border: 1px solid var(--card-boder-color);
+  border-radius: 20px;
+  background: var(--card-color01);
+  overflow: hidden;
+}
+.dash_box .dash_box_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 50px;
+  background: transparent;
+  color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+}
+.dash_box .dash_box_top .dash_title {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: var(--font-bold);
+}
+.dash_box .dash_box_top .more_btn::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  color: var(--white);
+  background: url("../img/common/arrow.svg") no-repeat;
+  background-size: 10px;
+}
+.dash_box .dash_box_top .more_btn a {
+  color: var(--white);
+}
 
 /*# sourceMappingURL=layout.css.map */

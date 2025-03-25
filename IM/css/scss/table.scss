@@ -1,0 +1,132 @@
+@use 'variable' as *;
+
+.dash_table {
+    padding:10px 0;
+    .d_list_tt.f_ro {
+        position:absolute;
+        left:12px;
+        bottom:10px;
+    }
+    .default_tbl {
+        width:$wh100;
+        border:0;
+        background:transparent;
+        word-break:break-all;
+        table-layout:fixed; cursor:auto;
+        box-sizing:content-box;
+        .tbl_br {
+            border-right:1px solid var(--border-color) !important;
+        }
+        .tbl_fff {
+            border-bottom:1px solid var(--white) !important;
+        }
+        thead {
+            tr {
+                th {
+                    height:38px;
+                    padding:3px 10px;
+                    border:0;
+                    border-bottom:1px solid var(--white);
+                    font-size:var(--font-14);
+                    font-weight:var(--font-bold);
+                    color:var(--white);
+                    background-color:transparent !important;
+                }
+                &:hover {
+                    background:transparent;
+                    cursor:auto;
+                }
+            }
+        }
+        tbody {
+            tr {
+                &[onclick] {
+                    cursor:pointer;
+                    &:hover {
+                        background:#000;
+                    }
+                }
+                &:hover {
+                    background: #3a424d;
+                }
+                th {
+                    border:0;
+                    border-bottom:1px solid var(--border-color);
+                    font-size:var(--font-14);
+                    font-weight:var(--font-bold);
+                    color:var(--normal-color);
+                    line-height:38px;
+                }
+                .sort_column {
+                    div {
+                        color:var(--white);
+                    }
+                }
+                td {
+                    padding:10px 0;
+                    border:0;
+                    border-bottom:1px solid var(--border-color); font-size:var(--font-13);
+                    font-weight:var(--font-regular);
+                    color:var(--normal-color);
+                    line-height:16px;
+                    text-align:center;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    overflow:hidden;
+                    div {
+                        color:var(--normal-color);
+                    }
+                    &.no_data {
+                        width:$wh100;
+                        height:$wh100;
+                        padding:40px 0;
+                        line-height:normal;
+                        p {
+                            position:relative;
+                            padding-top:60px;
+                            &::after {
+                                @include content(55px, 51px);
+                                position:absolute;
+                                top:0;
+                                left:50%;
+                                transform:translateX(-50%);
+                                background: url(../img/common/ico-nodata.png) no-repeat;
+                                opacity: .3;
+                            }
+                            span {
+                                display:block;
+                                margin-bottom:10px;
+                                font-size:var(--font-18);
+                                font-weight:var(--font-regular);
+                            }
+                        }
+                    }
+                }
+            }
+            .accordion {
+                cursor:pointer;
+                &:hover {
+                    background:#121212;
+                }
+            }
+        }
+    }
+    &.type1 {
+        tbody {
+            > tr {
+                th {
+                    color:var(--white);
+                    &:first-child {
+                        @extend .tbl_br;
+                        @extend .tbl_fff;
+                    }
+                }
+                &:last-child {
+                    td {
+                        @extend .tbl_fff;
+                    }
+                }
+            }
+        }
+    }
+}

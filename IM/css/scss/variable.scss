@@ -1,0 +1,16 @@
+/* 변수 지정하기 */
+$wh100: 100%;//width:100%, height:100%
+
+/* mixin 함수 선언하기 */
+@mixin flexsb() {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+@mixin content($width, $height) {
+    content:"";
+    display:inline-block;
+    width:$width;
+    height:$height;
+}

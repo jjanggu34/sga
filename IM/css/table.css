@@ -1,3 +1,115 @@
-
+@charset "UTF-8";
+/* 변수 지정하기 */
+/* mixin 함수 선언하기 */
+.dash_table {
+  padding: 10px 0;
+}
+.dash_table .d_list_tt.f_ro {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+}
+.dash_table .default_tbl {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  word-break: break-all;
+  table-layout: fixed;
+  cursor: auto;
+  box-sizing: content-box;
+}
+.dash_table .default_tbl .tbl_br, .dash_table.type1 .default_tbl tbody > tr th:first-child, .dash_table.type1 tbody > tr .default_tbl th:first-child {
+  border-right: 1px solid var(--border-color) !important;
+}
+.dash_table .default_tbl .tbl_fff, .dash_table.type1 .default_tbl tbody > tr:last-child td, .dash_table.type1 tbody > tr:last-child .default_tbl td, .dash_table.type1 .default_tbl tbody > tr th:first-child, .dash_table.type1 tbody > tr .default_tbl th:first-child {
+  border-bottom: 1px solid var(--white) !important;
+}
+.dash_table .default_tbl thead tr th {
+  height: 38px;
+  padding: 3px 10px;
+  border: 0;
+  border-bottom: 1px solid var(--white);
+  font-size: var(--font-14);
+  font-weight: var(--font-bold);
+  color: var(--white);
+  background-color: transparent !important;
+}
+.dash_table .default_tbl thead tr:hover {
+  background: transparent;
+  cursor: auto;
+}
+.dash_table .default_tbl tbody tr[onclick] {
+  cursor: pointer;
+}
+.dash_table .default_tbl tbody tr[onclick]:hover {
+  background: #000;
+}
+.dash_table .default_tbl tbody tr:hover {
+  background: #3a424d;
+}
+.dash_table .default_tbl tbody tr th {
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--font-14);
+  font-weight: var(--font-bold);
+  color: var(--normal-color);
+  line-height: 38px;
+}
+.dash_table .default_tbl tbody tr .sort_column div {
+  color: var(--white);
+}
+.dash_table .default_tbl tbody tr td {
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--font-13);
+  font-weight: var(--font-regular);
+  color: var(--normal-color);
+  line-height: 16px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.dash_table .default_tbl tbody tr td div {
+  color: var(--normal-color);
+}
+.dash_table .default_tbl tbody tr td.no_data {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+  line-height: normal;
+}
+.dash_table .default_tbl tbody tr td.no_data p {
+  position: relative;
+  padding-top: 60px;
+}
+.dash_table .default_tbl tbody tr td.no_data p::after {
+  content: "";
+  display: inline-block;
+  width: 55px;
+  height: 51px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../img/common/ico-nodata.png) no-repeat;
+  opacity: 0.3;
+}
+.dash_table .default_tbl tbody tr td.no_data p span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: var(--font-18);
+  font-weight: var(--font-regular);
+}
+.dash_table .default_tbl tbody .accordion {
+  cursor: pointer;
+}
+.dash_table .default_tbl tbody .accordion:hover {
+  background: #121212;
+}
+.dash_table.type1 tbody > tr th {
+  color: var(--white);
+}
 
 /*# sourceMappingURL=table.css.map */
