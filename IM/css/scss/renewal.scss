@@ -1,4 +1,19 @@
-@charset "UTF-8";
+/* 변수 지정하기 */
+$wh100: 100%;//width:100%, height:100%
+
+/* mixin 함수 선언하기 */
+@mixin flexsb() {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+@mixin content($width, $height) {
+    content:"";
+    display:inline-block;
+    width:$width;
+    height:$height;
+}
 
 body {
     min-width:1600px;
@@ -11,30 +26,296 @@ body {
     }
     > section {
         margin-top:50px;
-        height:calc(100% - 70px);
+        height:calc($wh100 - 70px);
         top:-13px;
     }
     &.win_popup > section {
         top:0;
     }
 }
-
 .sub {
-    min-height:100%;
+    min-height:$wh100;
 }
 .mCSB_container {
-    width:100% !important;
+    width:$wh100 !important;
 }
 .dashboard {
     .tab_container {
-        height:100%;
+        height:$wh100;
     }
     &_box {
         min-height:750px;
-        height:100%;
+        height:$wh100;
     }
     &_main {
         position:relative;
         padding:0 !important;
+    }
+}
+.tl {
+    text-align:left !important;
+}
+tr {
+    text-align:right !important;
+}
+.mg3020{ 
+    margin:30px 20px 20px;
+    width:calc($wh100 - 40px);
+    &.computer_box {
+        padding:0;
+    }
+}
+.content_wrap {
+    padding:30px 20px;
+    width:$wh100;
+}
+
+/***************** 폰트 *****************/
+.title {
+    font-size:var(--font-20);
+    font-weight:var(--font-extrabold);
+}
+/* 시스템 영역 */
+.sys-title {
+    font-size:var(--font-16);
+    font-weight:var(--font-bold);
+}
+.text1 {
+    font-size:var(--font-13);
+    font-weight:var(--font-regular);
+}
+/* 수치값이 있을 경우 */
+.text2 {
+    font-size:var(--font-28);
+}
+/* 그래프영역 별첨 */
+.graph-txt {
+    font-size:var(--font-14);
+    font-weight:var(--font-medium);
+}
+
+/***************** 라벨 *****************/
+.label {
+    display:inline-block;
+    width:auto;
+    padding:5px 10px 5px 8px;
+    border-radius:14px;
+    font-size:var(--font-12);
+}
+.ico {
+    padding:0 7px 0 25px !important;
+    min-width:35px; height:23px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    font-weight:var(--font-medium);
+}
+.true {
+    background-color:var(--true);
+    color:var(--white);
+    line-height:26px;
+    &.ico {
+        background-image: url(../img/common/ico_list_ok.svg);
+    }
+}
+.false {
+    background-color:var(--false);
+    color:var(--white);
+    line-height:26px;
+    &.ico {
+        background-image: url(../img/common/ico_list_erro.svg);
+    }
+    &_tit {
+        color:var(--false) !important;
+    }
+}
+
+/***************** 그리드 *****************/
+.dashboard_box_cont {
+    .dashboard_cont {
+        position:relative;
+        display:flex;
+        flex-wrap:wrap;
+        width:$wh100;
+        padding:0 10px 20px;
+        > li {
+            position:relative;
+            float:left;
+            border-radius:20px;
+            box-shadow:0 3px 20px rgba(0, 0, 0, .3);
+            &.w_100 {
+                width:calc(100% - 20px);
+                margin:20px 10px 0;
+            }
+            &.w_50 {
+                width:calc(50% - 20px);
+                margin:20px 10px 0;
+            }
+            &.w_25 {
+                width:calc(25% - 21px);
+                margin:20px 10px 0;
+            }
+        }
+    }
+}
+.dash_box {
+    height:auto;
+    border:1px solid var(--card-boder-color);
+    border-radius:20px;
+    background:var(--card-color01);
+    overflow:hidden;
+    .dash_box_top {
+        @include flexsb();
+        padding:0 20px;
+        height:50px;
+        background:transparent;
+        color:var(--white);
+        border-bottom:1px solid var(--border-color);
+        .dash_title {
+            display:inline-block;
+            font-size:16px;
+            font-weight:var(--font-bold);
+        }
+        .more_btn {
+            &::after {
+                @include content(10px, 16px);
+                color:var(--white);
+                background:url("../img/common/arrow.svg") no-repeat;background-size:10px;
+            }
+            a {
+                color:var(--white);
+            }
+        }
+    }
+    
+}
+.dash_table {
+    padding:10px 0;
+    .d_list_tt.f_ro {
+        position:absolute;
+        left:12px;
+        bottom:10px;
+    }
+    .default_tbl {
+        width:$wh100;
+        border:0;
+        background:transparent;
+        word-break:break-all;
+        table-layout:fixed; cursor:auto;
+        box-sizing:content-box;
+        .tbl_br {
+            border-right:1px solid var(--border-color) !important;
+        }
+        .tbl_fff {
+            border-bottom:1px solid var(--white) !important;
+        }
+        thead {
+            tr {
+                th {
+                    height:38px;
+                    padding:3px 10px;
+                    border:0;
+                    border-bottom:1px solid var(--white);
+                    font-size:var(--font-14);
+                    font-weight:var(--font-bold);
+                    color:var(--white);
+                    background-color:transparent !important;
+                }
+                &:hover {
+                    background:transparent;
+                    cursor:auto;
+                }
+            }
+        }
+        tbody {
+            tr {
+                &[onclick] {
+                    cursor:pointer;
+                    &:hover {
+                        background:#000;
+                    }
+                }
+                &:hover {
+                    background: #3a424d;
+                }
+                th {
+                    border:0;
+                    border-bottom:1px solid var(--border-color);
+                    font-size:var(--font-14);
+                    font-weight:var(--font-bold);
+                    color:var(--normal-color);
+                    line-height:38px;
+                }
+                .sort_column {
+                    div {
+                        color:var(--white);
+                    }
+                }
+                td {
+                    padding:10px 0;
+                    border:0;
+                    border-bottom:1px solid var(--border-color); font-size:var(--font-13);
+                    font-weight:var(--font-regular);
+                    color:var(--normal-color);
+                    line-height:16px;
+                    text-align:center;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    overflow:hidden;
+                    div {
+                        color:var(--normal-color);
+                    }
+                    &.no_data {
+                        width:$wh100;
+                        height:$wh100;
+                        padding:40px 0;
+                        line-height:normal;
+                        p {
+                            position:relative;
+                            padding-top:60px;
+                            &::after {
+                                @include content(55px, 51px);
+                                position:absolute;
+                                top:0;
+                                left:50%;
+                                transform:translateX(-50%);
+                                background: url(../img/common/ico-nodata.png) no-repeat;
+                                opacity: .3;
+                            }
+                            span {
+                                display:block;
+                                margin-bottom:10px;
+                                font-size:var(--font-18);
+                                font-weight:var(--font-regular);
+                            }
+                        }
+                    }
+                }
+            }
+            .accordion {
+                cursor:pointer;
+                &:hover {
+                    background:#121212;
+                }
+            }
+        }
+    }
+    &.type1 {
+        tbody {
+            > tr {
+                th {
+                    color:var(--white);
+                    &:first-child {
+                        @extend .tbl_br;
+                        @extend .tbl_fff;
+                    }
+                }
+                &:last-child {
+                    td {
+                        @extend .tbl_fff;
+                    }
+                }
+            }
+        }
     }
 }
