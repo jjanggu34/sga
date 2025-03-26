@@ -40,10 +40,10 @@ body {
 .tl {
     text-align:left !important;
 }
-tr {
+.tr {
     text-align:right !important;
 }
-.mg3020{ 
+.mg3020{
     margin:30px 20px 20px;
     width:calc($wh100 - 40px);
     &.computer_box {

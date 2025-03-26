@@ -1,3 +1,7 @@
+.scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea {
+  width: 100%;
+}
 
-
-/*# sourceMappingURL=form.css.map */
+textarea, textarea[readonly] {
+  background: var(--btn--color-dark);
+}

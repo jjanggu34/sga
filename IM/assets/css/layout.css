@@ -44,7 +44,7 @@ body.win_popup > section {
   text-align: left !important;
 }
 
-tr {
+.tr {
   text-align: right !important;
 }
 
@@ -190,5 +190,3 @@ tr {
 .dash_box .dash_box_top .more_btn a {
   color: var(--white);
 }
-
-/*# sourceMappingURL=layout.css.map */

@@ -103,12 +103,6 @@
                     }
                 }
             }
-            .accordion {
-                cursor:pointer;
-                &:hover {
-                    background:#121212;
-                }
-            }
         }
     }
     &.type1 {
@@ -124,6 +118,129 @@
                 &:last-child {
                     td {
                         @extend .tbl_fff;
+                    }
+                }
+            }
+        }
+    }
+    .accordion_tbl {
+        .accordion {
+            cursor:pointer;
+            &:hover {
+                background:#121212;
+            }
+            &.tr_open {
+                td {
+                    border-bottom:0 !important;
+                    background:#121212;
+                    .view_hide_btn_icon {
+                        background:var(--btn-color-blue);
+                        transform:rotate(90deg);
+                        &::before{
+                            background-color:var(--white);
+                        }
+                    }
+                }
+            }
+            &.tr_open + .subtask_bundle {
+                display:table-row;
+                td {
+                    background:#121212;
+                }
+            }
+            td {
+                .view_hide_btn_icon {
+                    position:relative;
+                    top:3px;
+                    display:inline-block;
+                    width:20px;
+                    height:20px;
+                    border-radius:50%;
+                    background:var(--white);
+                    text-align:center;
+                    &:hover {
+                        background:var(--btn-color-blue);
+                        &::before { background:var(--white); }
+                    }
+                    &::before{
+                        content:"";
+                        @include viewHBI(#121212);
+                        -webkit-mask-position:7px, 7px;
+                        mask-position:7px, 7px;
+                    }
+                }
+            }
+        }
+        .subtask_bundle {
+            display:none;
+            &:hover {
+                background:transparent !important;
+            }
+            td {
+                padding:10px !important;
+                border-top:0 !important;
+                font-size:var(--font-12);
+                white-space:normal !important;
+                * {
+                    font-size:var(--font-12);
+                }
+            }
+            .row_subtask {
+                padding:5px 10px;
+                margin:5px 0;
+                border-radius:7px;
+                background:var(--btn-color-dark);
+                .subtask_name {
+                    @include flexsb(null);
+                    font-weight:var(--font-medium);
+                    text-align:start;
+                    * {
+                        opacity:.8;
+                    }
+                }
+                .subtask_detail {
+                    display:none;
+                    margin-left:30px;
+                    text-align:start;
+                }
+                &.tr_open {
+                    .subtask_name {
+                        padding-bottom:7px;
+                        margin-bottom:10px;
+                        @extend .tbl_br;
+                        .subtask_catagory_title {
+                            flex-shrink:0;
+                            margin:8px;
+                            font-weight:var(--font-bold);
+                            .view_hide_btn_icon {
+                                @include viewHBI(var(--white));
+                                -webkit-mask-position:6px, 5px; mask-position:6px, 5px;
+                                transform:rotate(90deg);
+                            }
+                        }
+                        .subtask_catagory_detail {
+                            font-weight:var(--font-regular);
+                        }
+                        .subtask_catagory_Result {
+                            padding:0 7px;
+                            margin-right:5px;
+                            border-radius:7px;
+                        }
+                    }
+                    .subtask_detail {
+                        display:block;
+                        margin-bottom:10px;
+                        .subtask_catagory {
+                            display:flex;
+                            .subtask_catagory_title {
+                                flex-shrink:0;
+                                margin-right:8px;
+                                font-weight:var(--font-bold);
+                            }
+                            .subtask_catagory_detail {
+                                max-width:85%;
+                            }
+                        }
                     }
                 }
             }
