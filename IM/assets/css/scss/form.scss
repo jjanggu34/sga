@@ -1,2 +1,39 @@
+@use 'variable' as *;
+
+/*---------------------------------------------
+	#search
+---------------------------------------------*/
+.search_box {
+    max-width:450px;
+    height:35px;
+    border:0;
+    .search_inputbox {
+        width:$wh100;
+        height:35px;
+        border:1px solid var(--border-color-d);
+        border-radius:7px;
+    }
+    .btn_search {
+        width:44px;
+        height:35px;
+    }
+    .btn_detail_search{
+        height:35px;
+        border-radius:0 7px 7px 0;
+        background:var(--im);
+    }
+}
+
+.detail_search_wrap {
+    .detail_search_btn {
+        top:-35px;
+        height:35px;
+        margin-left:135px;
+    }
+}
+
+/*---------------------------------------------
+	#textarea
+---------------------------------------------*/
 .scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea { width:100%; }
 textarea, textarea[readonly] { background: var(--btn--color-dark); }

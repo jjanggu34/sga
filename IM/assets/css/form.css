@@ -1,3 +1,39 @@
+@charset "UTF-8";
+/* 변수 지정하기 */
+/* mixin 함수 선언하기 */
+/*---------------------------------------------
+	#search
+---------------------------------------------*/
+.search_box {
+  max-width: 450px;
+  height: 35px;
+  border: 0;
+}
+.search_box .search_inputbox {
+  width: 100%;
+  height: 35px;
+  border: 1px solid var(--border-color-d);
+  border-radius: 7px;
+}
+.search_box .btn_search {
+  width: 44px;
+  height: 35px;
+}
+.search_box .btn_detail_search {
+  height: 35px;
+  border-radius: 0 7px 7px 0;
+  background: var(--im);
+}
+
+.detail_search_wrap .detail_search_btn {
+  top: -35px;
+  height: 35px;
+  margin-left: 135px;
+}
+
+/*---------------------------------------------
+	#textarea
+---------------------------------------------*/
 .scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea {
   width: 100%;
 }

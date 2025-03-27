@@ -401,7 +401,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr role="row" class="accordion tr_open">
+                            <tr role="row" class="accordion">
                                 <td>
                                     <div class="view_hide_btn_icon" onclick="onoffDisplay(this)"></div>
                                 </td>
@@ -411,7 +411,40 @@
                             </tr>
                             <tr class="subtask_bundle">
                                 <td colspan="4">
-                                    <div class="row_subtask accordion tr_open">
+                                    <div class="row_subtask accordion">
+                                        <div class="subtask_name">
+                                            <p class="subtask_catagory_title">
+                                                <span class="view_hide_btn_icon"></span>
+                                            </p>
+                                            <p class="subtask_catagory_Result false">failed</p>
+                                            <p class="subtask_catagory_detail">
+                                                CIS-1.1.1. Ensure a separate partition for containers has been created (Automated)</p>
+                                        </div>
+                                        <div class="subtask_detail">
+                                            <div class="subtask_catagory">
+                                                <div class="subtask_catagory_title">· Result:</div>
+                                                <div class="false_tit subtask_catagory_detail">failed</div>
+                                            </div>
+                                            <div class="subtask_catagory">
+                                                <div class="subtask_catagory_title">· Description: </div>
+                                                <div title="The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker." class="subtask_catagory_detail">The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker.</div>
+                                            </div>
+                                            <div class="subtask_catagory">
+                                                <div class="subtask_catagory_title">· Remediation:</div>
+                                                <div title="For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition." class="subtask_catagory_detail">For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition.</div>
+                                            </div>
+                                            <div class="subtask_catagory">
+                                                <div class="subtask_catagory_title">· Actual value:</div>
+                                                <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea">
+                                                    <div class="scroll-content">
+                                                        <textarea readonly="readonly" class="textarea-scrollbar scrollbar-outer">failedß: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row_subtask accordion">
                                         <div class="subtask_name">
                                             <p class="subtask_catagory_title">
                                                 <span class="view_hide_btn_icon"></span>
@@ -438,39 +471,6 @@
                                                 <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea">
                                                     <div class="scroll-content">
                                                         <textarea readonly="readonly" class="textarea-scrollbar scrollbar-outer">failed: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="row_subtask accordion">
-                                        <div class="subtask_name">
-                                            <p class="subtask_catagory_title">
-                                                <span class="view_hide_btn_icon"></span>
-                                            </p>
-                                            <p class="subtask_catagory_Result bc_failed">failed</p>
-                                            <p class="subtask_catagory_detail">
-                                                CIS-1.1.1. Ensure a separate partition for containers has been created (Automated)</p>
-                                        </div>
-                                        <div class="subtask_detail">
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Result:</div>
-                                                <div class="tc_failed subtask_catagory_detail">failed</div>
-                                            </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Description: </div>
-                                                <div title="The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker." class="subtask_catagory_detail">The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker.</div>
-                                            </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Remediation:</div>
-                                                <div title="For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition." class="subtask_catagory_detail">For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition.</div>
-                                            </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Actual value:</div>
-                                                <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea" style="position: relative;">
-                                                    <div class="scroll-content" style="height: 66px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
-                                                        <textarea readonly="" class="textarea-scrollbar scrollbar-outer">failed: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -564,6 +564,18 @@
                 }
             });
         </script>
+
+        <!-- s : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
+        <script>
+            $(document).ready(function(){
+        
+                $('.accordion').on('click',  function() {
+                    $(this).toggleClass("tr_open");
+                });
+            });
+
+        </script>	
+        <!-- e : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
     </div>
 </body>
 

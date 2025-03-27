@@ -180,7 +180,7 @@
   padding: 5px 10px;
   margin: 5px 0;
   border-radius: 7px;
-  background: var(--btn-color-dark);
+  background: var(--btn--color-dark);
 }
 .dash_table .accordion_tbl .subtask_bundle .row_subtask .subtask_name {
   display: flex;
@@ -191,21 +191,12 @@
 .dash_table .accordion_tbl .subtask_bundle .row_subtask .subtask_name * {
   opacity: 0.8;
 }
-.dash_table .accordion_tbl .subtask_bundle .row_subtask .subtask_detail {
-  display: none;
-  margin-left: 30px;
-  text-align: start;
-}
-.dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name {
-  padding-bottom: 7px;
-  margin-bottom: 10px;
-}
-.dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name .subtask_catagory_title {
+.dash_table .accordion_tbl .subtask_bundle .row_subtask .subtask_name .subtask_catagory_title {
   flex-shrink: 0;
   margin: 8px;
   font-weight: var(--font-bold);
 }
-.dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name .subtask_catagory_title .view_hide_btn_icon {
+.dash_table .accordion_tbl .subtask_bundle .row_subtask .subtask_name .subtask_catagory_title .view_hide_btn_icon {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -220,15 +211,26 @@
   mask-repeat: no-repeat;
   -webkit-mask-position: 6px, 5px;
   mask-position: 6px, 5px;
-  transform: rotate(90deg);
 }
-.dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name .subtask_catagory_detail {
+.dash_table .accordion_tbl .subtask_bundle .row_subtask .subtask_name .subtask_catagory_detail {
   font-weight: var(--font-regular);
 }
-.dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name .subtask_catagory_Result {
+.dash_table .accordion_tbl .subtask_bundle .row_subtask .subtask_name .subtask_catagory_Result {
   padding: 0 7px;
   margin-right: 5px;
   border-radius: 7px;
+}
+.dash_table .accordion_tbl .subtask_bundle .row_subtask .subtask_detail {
+  display: none;
+  margin-left: 30px;
+  text-align: start;
+}
+.dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name {
+  padding-bottom: 7px;
+  margin-bottom: 10px;
+}
+.dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name .view_hide_btn_icon {
+  transform: rotate(90deg);
 }
 .dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_detail {
   display: block;

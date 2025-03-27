@@ -1,0 +1,119 @@
+@use 'variable' as *;
+
+/***************** 폰트 *****************/
+.title {
+    @include title(var(--font-20), var(--font-extrabold), 24px);
+}
+/* 시스템 영역 */
+.sys-title {
+    @include title(var(--font-16), var(--font-bold), 19px);
+}
+.text1 {
+    @include title(var(--font-13), var(--font-regular), 16px);
+}
+/* 수치값이 있을 경우 */
+.text2 {
+    @include title(var(--font-14), var(--font-medium), 18px);
+}
+.text2 + .num {
+    @include title(var(--font-28), var(--font-heavy), 33px);
+}
+/* 그래프영역 별첨 */
+.graph-txt {
+    @include title(var(--font-14), var(--font-medium), 16px);
+}
+
+/***************** 라벨 *****************/
+.label {
+    display:inline-block;
+    width:auto;
+    padding:5px 24ßpx 5px 8px;
+    border-radius:14px;
+    font-size:var(--font-12);
+}
+.ico {
+    padding:0 7px 0 25px !important;
+    min-width:35px; height:23px;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    font-weight:var(--font-medium);
+}
+.true {
+    background-color:var(--true);
+    color:var(--white);
+    line-height:26px;
+    &.ico {
+        background-image: url(../images/common/ico_list_ok.svg);
+    }
+}
+.false {
+    background-color:var(--false);
+    color:var(--white);
+    line-height:26px;
+    &.ico {
+        background-image: url(../images/common/ico_list_erro.svg);
+    }
+    &_tit {
+        color:var(--false) !important;
+    }
+}
+
+/***************** 그리드 *****************/
+.dashboard_box_cont {
+    .dashboard_cont {
+        position:relative;
+        display:flex;
+        flex-wrap:wrap;
+        width:$wh100;
+        padding:0 10px 20px;
+        > li {
+            position:relative;
+            float:left;
+            border-radius:20px;
+            box-shadow:0 3px 20px rgba(0, 0, 0, .3);
+            &.w_100 {
+                width:calc(100% - 20px);
+                margin:20px 10px 0;
+            }
+            &.w_50 {
+                width:calc(50% - 20px);
+                margin:20px 10px 0;
+            }
+            &.w_25 {
+                width:calc(25% - 21px);
+                margin:20px 10px 0;
+            }
+        }
+    }
+}
+.dash_box {
+    height:auto;
+    border:1px solid var(--card-boder-color);
+    border-radius:20px;
+    background:var(--card-color01);
+    overflow:hidden;
+    .dash_box_top {
+        @include flexsb();
+        padding:0 20px;
+        height:50px;
+        background:transparent;
+        color:var(--white);
+        border-bottom:1px solid var(--border-color);
+        .dash_title {
+            display:inline-block;
+            font-size:16px;
+            font-weight:var(--font-bold);
+        }
+        .more_btn {
+            &::after {
+                @include content(10px, 16px);
+                color:var(--white);
+                background:url("../img/common/arrow.svg") no-repeat;background-size:10px;
+            }
+            a {
+                color:var(--white);
+            }
+        }
+    }
+}

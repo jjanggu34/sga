@@ -1,5 +1,7 @@
 /* 변수 지정하기 */
 $wh100: 100%;//width:100%, height:100%
+$tl: left !important;//text-align:left;
+$tr: right !important;//text-align:right;
 
 /* mixin 함수 선언하기 */
 @mixin flexsb($justify: space-between) {
@@ -30,4 +32,10 @@ $wh100: 100%;//width:100%, height:100%
     mask-size:9px;
     -webkit-mask-repeat:no-repeat;
     mask-repeat:no-repeat;
+}
+
+@mixin title($size, $weight, $line) {
+    font-size:$size;
+    font-weight:$weight;
+    line-height:$line;
 }
