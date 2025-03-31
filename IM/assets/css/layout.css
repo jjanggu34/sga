@@ -5,13 +5,13 @@
 	#기본 레이아웃
 ---------------------------------------------*/
 body {
-  color: var(--white);
   background: var(--body);
   overflow: auto;
 }
 body * {
   font-family: "S-CoreDream";
   font-size: 13px;
+  color: var(--content);
   box-sizing: border-box;
 }
 

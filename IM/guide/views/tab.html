@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<HTML lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>tab</title>
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <!-- 기존 css -->
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+
+    <!-- 추가 css -->
+    <link rel="stylesheet" href="../../css/jquery.scrollbar.css">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+
+    <!-- jQuery 라이브러리 -->
+    <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+    <!-- jQuery UI 라이브러리 -->
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <!-- js -->
+    <script type="text/javascript" charset="utf-8" src="../../js/common.js"></script>
+
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <!--[if (gte IE 7)&(lte IE 8)]>
+	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <style>
+        .tit { margin:20px 0 10px; font-size:var(--font-16); }
+    </style>
+</head>
+
+<body>
+    <div id="SGIM_wrap" class="mini_nav">
+        <!-- S: side nav -->
+        <!-- E: side nav -->
+        <!-- S: container -->
+        <div id="container" style="padding:0 !important;">
+            <!-- S: header -->
+            <!-- E: header -->
+            <!-- S: content -->
+            <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
+                <h2>tab</h2>
+                <section>
+                    <p class="tit">cont_in_tab</p>
+                    <div class="tab_wrap cont_in_tab moveup">
+                        <ul class="tab_list">
+                            <li><a href="" class="on">서버 목록</a></li>
+                            <li><a href="">접근 권한</a></li>
+                            <li><a href="">암호 조회</a></li>
+                            <li><a href="">명령어 신청</a></li>
+                        </ul>
+                    </div>
+                    <p class="tit">mini_tab</p>
+                    <div class="mini_tab moveup">
+                        <ul class="mtab_list">
+                            <li><a class="on">하위댑스01</a></li>
+                            <li><a class="">하위댑스02</a></li>
+                            <li><a class="">하위댑스03</a></li>
+                            <li><a class="">하위댑스04</a></li>
+                            <li><a class="">하위댑스05</a></li>
+                        </ul>
+                    </div>
+                    <p class="tit">system_tab</p>
+                    <div class="i-card_wrap">
+                        <div class="dash_box system_tab">
+                            <p class="i-card_title">system name 01</p>
+                            <div class="system_info">
+                                <p>172.24.130.242;173.24.130.242</p>
+                                <p>OS / 시스템</p>
+                            </div>
+                        </div>
+                        <div class="dash_box system_tab on">
+                            <p class="i-card_title">system name 02</p>
+                            <div class="system_info">
+                                <p>172.24.130.242;173.24.130.242</p>
+                                <p>OS / 시스템</p>
+                            </div>
+                        </div>
+                        <div class="dash_box system_tab">
+                            <p class="i-card_title">system name 03</p>
+                            <div class="system_info">
+                                <p>172.24.130.242;173.24.130.242</p>
+                                <p>OS / 시스템</p>
+                            </div>
+                        </div>
+                        <div class="dash_box system_tab">
+                            <p class="i-card_title">system name 04</p>
+                            <div class="system_info">
+                                <p>172.24.130.242;173.24.130.242</p>
+                                <p>OS / 시스템</p>
+                            </div>
+                        </div>
+                        <div class="dash_box system_tab">
+                            <p class="i-card_title">system name 05</p>
+                            <div class="system_info">
+                                <p>172.24.130.242;173.24.130.242</p>
+                                <p>OS / 시스템</p>
+                            </div>
+                        </div>
+                        <div class="dash_box system_tab">
+                            <p class="i-card_title">system name 06</p>
+                            <div class="system_info">
+                                <p>172.24.130.242;173.24.130.242</p>
+                                <p>OS / 시스템</p>
+                            </div>
+                        </div>
+                        <div class="more_list_tab on"><!-- 목록열리면 클래스 on 추가 -->
+                            <div class="btn_more_list"><span class="more_plus"></span> 999</div>
+                            <div class="balloon list_pop" style="display:block">
+                                <div class="move_box">
+                                    <div class="search_box mini_search">
+                                        <input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox">
+                                        <button class="btn_search" type="submit">검색</button>
+                                    </div>
+                                    <div class="move_tbl scroll pg_m_tbl">
+                                        <!-- 아래 페이지버튼 있을때 클래스 "pg_m_tbl" 추가 -->
+                                        <table class="default_tbl">
+                                            <thead>
+                                                <tr>
+                                                    <th class="check_list"><input type="checkbox" name="" id="list00" class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
+                                                    <th class="sort_column">
+                                                        <div class="">User ID<span class="ascanding"></span></div>
+                                                    </th>
+                                                    <th class="sort_column">
+                                                        <div class="">First Name<span class="ascanding"></span></div>
+                                                    </th>
+                                                    <th class="sort_column">
+                                                        <div class="">Last Name<span class="ascanding"></span></div>
+                                                    </th>
+                                                    <th class="sort_column">
+                                                        <div class="">Type<span class="ascanding"></span></div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="check_list"><input type="checkbox" name="" id="list01" class="check_stl"><label for="list01" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="check_list"><input type="checkbox" name="" id="list02" class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="check_list"><input type="checkbox" name="" id="list03" class="check_stl"><label for="list03" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="check_list"><input type="checkbox" name="" id="list04" class="check_stl"><label for="list04" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="check_list"><input type="checkbox" name="" id="list05" class="check_stl"><label for="list05" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="check_list"><input type="checkbox" name="" id="list06" class="check_stl"><label for="list06" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                    <tr><td class="check_list"><input type="checkbox" name="" id="list07" class="check_stl"><label for="list07" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                    <tr><td class="check_list"><input type="checkbox" name="" id="list08" class="check_stl"><label for="list08" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                    <tr><td class="check_list"><input type="checkbox" name="" id="list09" class="check_stl"><label for="list09" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                                    <tr><td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
+                                                    <td>member1234</td>
+                                                    <td>RedHat</td>
+                                                    <td>data1</td>
+                                                    <td>CentOS(1503)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="pagination mini_paging">
+                                        <ul>
+                                            <li>
+                                                <a href="" class="first diss"><span></span>처음</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="prev diss"><span></span>이전</a>
+                                            </li>
+                                            <li class="currentpage">
+                                                <p><em>1</em> / 5</p>
+                                            </li>
+                                            <li>
+                                                <a href="" class="next"><span></span>다음</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="last"><span></span>마지막</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- E: content -->
+            <!-- S: footer -->
+            <div class="footer">
+                <p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
+            </div>
+            <!-- E: footer -->
+        </div>
+        <div class="scroll_btns" style="display:none">
+            <button class="btn_toTheTop"></button>
+            <button class="btn_toThebottom"></button>
+        </div>
+        <script>
+            $("body").on("mousewheel", function (e) {
+                var wheel = e.originalEvent.wheelDelta;
+
+                if (wheel > 0) {
+                    //스크롤 올릴때
+                } else {
+                    //스크롤 내릴때
+                    $(".scroll_btns").show();
+                }
+            });
+            $(window).scroll(function () {
+                var scrollValue = $(document).scrollTop();
+                if (scrollValue > 65) {
+                    $(".list_btn_stk").addClass("btnarea");
+                } else {
+                    $(".list_btn_stk").removeClass("btnarea");
+                }
+            });
+        </script>
+
+        <!-- s : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
+        <script>
+            $(document).ready(function(){
+        
+                $('.accordion').on('click',  function() {
+                    $(this).toggleClass("tr_open");
+                });
+            });
+
+        </script>	
+        <!-- e : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
+    </div>
+</body>
+
+</HTML>

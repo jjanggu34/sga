@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* 변수 지정하기 */
 /* mixin 함수 선언하기 */
-/***************** 폰트 *****************/
+/***************** 공통 *****************/
 .title {
   font-size: var(--font-20);
   font-weight: var(--font-extrabold);
@@ -41,7 +41,7 @@
   line-height: 16px;
 }
 
-/***************** 라벨 *****************/
+/* 라벨 */
 .ico {
   padding: 0 7px 0 25px !important;
   min-width: 35px;
@@ -52,7 +52,7 @@
   font-weight: var(--font-medium);
 }
 
-.true {
+.trcolor {
   display: inline-block;
   width: auto;
   border-radius: 14px;
@@ -62,14 +62,14 @@
   color: var(--true);
   background-color: #EFFCF3;
 }
-.true.ico {
+.trcolor.ico {
   line-height: 26px;
   background-image: url(../images/common/ico_list_ok.svg);
   background-size: 10px;
   background-position: 10px center;
 }
 
-.false {
+.fcolor {
   display: inline-block;
   width: auto;
   border-radius: 14px;
@@ -77,12 +77,23 @@
   color: var(--white);
   background-color: var(--false);
 }
-.false.ico {
+.fcolor.ico {
   line-height: 26px;
   background-image: url(../images/common/ico_list_erro.svg);
 }
-.false_tit {
+.fcolor_tit {
   color: var(--false) !important;
+}
+
+/* N 알림 */
+.new_org {
+  background-color: var(--info);
+}
+
+/* 나누는 선 */
+.divide {
+  height: 10px;
+  background-color: var(--border-d);
 }
 
 /***************** 탭 *****************/

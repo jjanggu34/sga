@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<HTML lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>list</title>
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <!-- 기존 css -->
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+
+    <!-- 추가 css -->
+    <link rel="stylesheet" href="../../css/jquery.scrollbar.css">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+
+    <!-- jQuery 라이브러리 -->
+    <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+    <!-- jQuery UI 라이브러리 -->
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <!-- js -->
+    <script type="text/javascript" charset="utf-8" src="../../js/common.js"></script>
+
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <!--[if (gte IE 7)&(lte IE 8)]>
+	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <style>
+        .tit { margin:20px 0 10px; font-size:var(--font-16); }
+    </style>
+</head>
+
+<body>
+    <div id="SGIM_wrap" class="mini_nav">
+        <!-- S: side nav -->
+        <!-- E: side nav -->
+        <!-- S: container -->
+        <div id="container" style="padding:0 !important;">
+            <!-- S: header -->
+            <!-- E: header -->
+            <!-- S: content -->
+            <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
+                <h2>list</h2>
+                <section>
+                    <p class="tit">apply_card</p>
+                    <div class="dash_wrap apply_card" style="margin:0;">
+                        <div class="dash_box grbox">
+                            <div class="apply_card_w">
+                                <div class="apply_txt_w">
+                                    <p class="apply_tit"><span>시스템 그룹</span>사용 신청</p>
+                                    <div class="apply_txt">
+                                        <p>시스템의 접속하기 위한 계정의 사용 신청합니다. 신청한 계정은 필요에 따라 승인절차를 받습니다. 사용기간이 지나면 자동으로 사용권한이 회수며 사용 완료시 셀프서비스에서 즉시 반납할 수 있습니다.</p>
+                                        <button class="shadow"><i class="icon_applylist"></i>1개 보유</button>
+                                    </div>
+                                </div>
+                                <div class="help_w">
+                                    <button class="help_btn">?</button>
+                                    <div class="balloon" style="display:none">
+                                        도움말 들어갑니다 <br>
+                                        도움말 들어갑니다
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrow_apply">
+                                <i class="icon_arrapply"></i>
+                            </div>
+                        </div>
+                        <div class="dash_box ppbox">
+                            <div class="apply_card_w">
+                                <div class="apply_txt_w">
+                                    <p class="apply_tit"><span>시스템 계정</span>생성 및 사용신청</p>
+                                    <div class="apply_txt">
+                                        <p>시스템의 접속하기 위한 계정의 사용 신청합니다. 신청한 계정은 필요에 따라 승인절차를 받습니다. 사용기간이 지나면 자동으로 사용권한이 회수며 사용 완료시 셀프서비스에서 즉시 반납할 수 있습니다.</p>
+                                        <a class="shadow"><i class="icon_applylist"></i>1개 보유</a>
+                                    </div>
+                                </div>
+                                <div class="help_w">
+                                    <button class="help_btn">?</button>
+                                    <div class="balloon" style="display:none">
+                                        도움말 들어갑니다 <br>
+                                        도움말 들어갑니다
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrow_apply">
+                                <i class="icon_arrapply"></i>
+                            </div>
+                        </div>
+                        <div class="dash_box blbox">
+                            <div class="apply_card_w">
+                                <div class="apply_txt_w">
+                                    <p class="apply_tit"><span>시스템</span>사용 신청</p>
+                                    <div class="apply_txt">
+                                        <p>시스템의 접속하기 위한 계정의 사용 신청합니다. 신청한 계정은 필요에 따라 승인절차를 받습니다. 사용기간이 지나면 자동으로 사용권한이 회수며 사용 완료시 셀프서비스에서 즉시 반납할 수 있습니다.</p>
+                                        <a class="shadow"><i class="icon_applylist"></i>1개 보유</a>
+                                    </div>
+                                </div>
+                                <div class="help_w">
+                                    <button class="help_btn">?</button>
+                                    <div class="balloon" style="display:none">
+                                        도움말 들어갑니다 <br>
+                                        도움말 들어갑니다
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrow_apply">
+                                <i class="icon_arrapply"></i>
+                            </div>
+                        </div>
+                        <div class="dash_box orgbox">
+                            <div class="apply_card_w">
+                                <div class="apply_txt_w">
+                                    <p class="apply_tit"><span>역할</span>사용 신청</p>
+                                    <div class="apply_txt">
+                                        <p>시스템의 접속하기 위한 계정의 사용 신청합니다. 신청한 계정은 필요에 따라 승인절차를 받습니다. 사용기간이 지나면 자동으로 사용권한이 회수며 사용 완료시 셀프서비스에서 즉시 반납할 수 있습니다.</p>
+                                        <a class="shadow"><i class="icon_applylist"></i>1개 보유</a>
+                                    </div>
+                                </div>
+                                <div class="help_w">
+                                    <button class="help_btn">?</button>
+                                    <div class="balloon" style="display:none">
+                                        도움말 들어갑니다 <br>
+                                        도움말 들어갑니다
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrow_apply">
+                                <i class="icon_arrapply"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- E: content -->
+            <!-- S: footer -->
+            <div class="footer">
+                <p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
+            </div>
+            <!-- E: footer -->
+        </div>
+        <div class="scroll_btns" style="display:none">
+            <button class="btn_toTheTop"></button>
+            <button class="btn_toThebottom"></button>
+        </div>
+        <script>
+            $("body").on("mousewheel", function (e) {
+                var wheel = e.originalEvent.wheelDelta;
+
+                if (wheel > 0) {
+                    //스크롤 올릴때
+                } else {
+                    //스크롤 내릴때
+                    $(".scroll_btns").show();
+                }
+            });
+            $(window).scroll(function () {
+                var scrollValue = $(document).scrollTop();
+                if (scrollValue > 65) {
+                    $(".list_btn_stk").addClass("btnarea");
+                } else {
+                    $(".list_btn_stk").removeClass("btnarea");
+                }
+            });
+        </script>
+
+        <!-- s : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
+        <script>
+            $(document).ready(function(){
+        
+                $('.accordion').on('click',  function() {
+                    $(this).toggleClass("tr_open");
+                });
+            });
+
+        </script>	
+        <!-- e : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
+    </div>
+</body>
+
+</HTML>

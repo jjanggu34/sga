@@ -2,23 +2,32 @@
 /* 변수 지정하기 */
 /* mixin 함수 선언하기 */
 /*---------------------------------------------
-	#search
+	#input
 ---------------------------------------------*/
+/* disabled */
+.form_contrl:disabled {
+  background: var(--button-disabled);
+}
+
+/* search */
 .search_wrap {
   background: var(--body);
   padding: 20px 24px;
 }
+.search_wrap + .tab_wrap.cont_in_tab {
+  margin-top: 0;
+}
 
 .search_box {
   max-width: 432px;
-  height: 35px;
+  height: 28px;
   margin: 0 auto;
   border: 0;
 }
 .search_box .search_inputbox {
   max-width: 350px;
   width: 100%;
-  height: 35px;
+  height: 28px;
   border: 1px solid var(--border-d);
   border-radius: 7px;
 }
@@ -31,7 +40,7 @@
 }
 .search_box .btn_detail_search {
   width: auto;
-  height: 35px;
+  height: 28px;
   padding: 7px 14px 6px;
   border-radius: 7px;
   color: var(--white);
@@ -48,52 +57,72 @@
   margin-left: 135px;
 }
 
-/*---------------------------------------------
-	#check
----------------------------------------------*/
+/* check */
 .check_stl_lab:before {
+  margin-right: 5px;
   border: 1px solid var(--default);
-}
-
-.check_stl_lab::before {
-  background: url(../images/common/check_off.svg) no-repeat center/auto;
 }
 
 .radio_stl_lab:before {
+  margin-right: 5px;
   border: 1px solid var(--default);
-}
-
-.radio_stl_lab::before {
-  background: url(../images/common/check_off.svg) no-repeat center/auto;
 }
 
 .check_stl:checked + label:before {
   border: 1px solid var(--primary);
-  background: url(../images/common/check_on.svg) no-repeat center/auto var(--primary);
 }
 
 .check_stl:disabled + label:before {
   border: 1px solid var(--button-disabled);
-  background: url(../images/common/check_dis.svg) no-repeat center/auto var(--button-disabled);
 }
 
 .radio_stl:checked + label:before {
   border: 1px solid var(--primary);
-  background: url(../images/common/check_on.svg) no-repeat center/auto var(--primary);
 }
 
 .radio_stl:disabled + label:before {
   border: 1px solid var(--button-disabled);
+}
+
+.check_stl + label {
+  color: var(--content);
+}
+.check_stl + label::before {
+  background: url(../images/common/check_off.svg) no-repeat center/auto;
+}
+.check_stl:checked + label::before {
+  background: url(../images/common/check_on.svg) no-repeat center/auto var(--primary);
+}
+.check_stl:checked + label::after {
+  content: none;
+}
+.check_stl:disabled + label::before {
   background: url(../images/common/check_dis.svg) no-repeat center/auto var(--button-disabled);
 }
 
-/*---------------------------------------------
-	#textarea
----------------------------------------------*/
+.radio_stl:checked + label::before {
+  background-color: var(--primary);
+}
+.radio_stl:checked + label::after {
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+.radio_stl + label + .req_txt {
+  padding: 0;
+}
+
+/* textarea */
 .scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea {
   width: 100%;
 }
 
 textarea, textarea[readonly] {
   background: var(--btn--color-dark);
+}
+
+/*---------------------------------------------
+	#selectbox
+---------------------------------------------*/
+select.form_contrl {
+  background: url(../images/common/select_arrow.png) no-repeat right 50% var(--sub-select);
 }

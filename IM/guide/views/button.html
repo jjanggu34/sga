@@ -32,7 +32,11 @@
 	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
 	<![endif]-->
     <style>
-        .tit { margin:20px 0 10px; font-size:var(--font-16); }
+        .info_text { margin-top:10px; padding:10px; border-radius:14px; background:#ffd582; }
+        .info_text li { margin-bottom:5px; }
+        .info_text li:last-child { margin-bottom:0; }
+        .tit { display:inline-block; margin:30px 0 10px; font-size:var(--font-16); }
+        .tit::after { content:""; display:inline-block; width:100%; height:2px; background:var(--primary); vertical-align:super; }
     </style>
 </head>
 
@@ -47,7 +51,45 @@
             <!-- S: content -->
             <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
                 <h2>button</h2>
+                <ul class="info_text">
+                    <li>talbe 위 아래에 버튼 올 때: list_btn > list_ㅁㅁㅁ_btn > button.class명 ( ㅁ: left / right )</li>
+                    <li>그 외의 버튼 : btn_box > f_l/f_r > a.class명</li>
+                </ul>
                 <section>
+                    <p class="tit">primary / line / disabled / line_disabled</p>
+                    <div class="list_btn">
+                        <div class="list_left_btn">
+                            <button class="primary">primary</button>
+                            <button class="line">line</button>
+                            <button class="disabled">disabled</button>
+                            <button class="line_disabled">line_disabled</button>
+                        </div>
+                    </div>
+
+                    <p class="tit">btn_box</p>
+                    <div class="btn_box cl_both">
+                        <div class="f_l">
+                        </div>
+                        <div class="f_r">
+                            <a href="" class="line">되돌리기</a>
+                            <a href="" class="primary">확인</a>
+                            <a href="" class="primary">취소</a>
+                            <a href="" class="primary">저장</a>
+                        </div>
+                    </div>
+
+                    <p class="tit">align_right / tree 구조에 들어가 있음</p>
+                    <div class="align_right">
+                        <button class="btnstl skyblue arrow">선택추가<i></i></button>
+                        <button class="btnstl shadow arrow">전체추가<i></i></button>
+                    </div>
+
+                    <p class="tit">그냥 div에 묶여있음(15_02_systemgroup_tree_layout_filelist.html)</p>
+                    <div>
+						<button class="btnstl skyblue">선택삭제</button>
+						<button class="btnstl shadow">선택다운로드</button>
+					</div>
+
                     <p class="tit">list_btn</p>
                     <div class="list_btn cl_both list_btn_stk">
 
@@ -59,7 +101,7 @@
     
                             <span class="divide"></span>
     
-                            <button class="line">생성</button>
+                            <button class="line_disabled">생성</button>
     
                             <button class="line_disabled">복사생성</button>
     
@@ -70,14 +112,86 @@
                         </div>
     
                         <div class="list_right_btn f_r wid50">
-                            <button class="true icon"><i class="icon_ff sl_ff exel"></i>EXEL</button>
-                            <button class="primary icon"><i class="icon_setting"></i> 설정</button>
+                            <button class="true icon"><i class="icon_ff sl_ff exel"></i>EXEL 추출</button>
+                            <button class="primary icon"><i class="icon_setting"></i> 상태초기화</button>
                             <button class="primary icon">
                                 <i class="icon_reset"></i>
                                 새로고침
                             </button>
                         </div>
                     </div>
+
+                    <div class="list_btn" style="margin-top:20px;">
+                        <div class="list_left_btn">
+                            <button class="line">활성</button>
+                            <button class="line">비활성</button>
+                            <span class="divide"></span>
+                            <p class="inb opttxt">상태 :</p>
+                            <p class="inb"><input type="checkbox" name="" id="chk01" class="check_stl">
+                            <label for="chk01" class="check_stl_lab"> 활성화</label></p>
+                            <p class="inb"><input type="checkbox" name="" id="chk02" class="check_stl">
+                            <label for="chk02" class="check_stl_lab"> 비활성화</label></p>
+                            <p class="inb"><input type="checkbox" name="" id="chk03" class="check_stl">
+                            <label for="chk03" class="check_stl_lab"> 삭제진행중</label></p>
+                        </div>
+                        <div class="list_right_btn">
+                            <button class="skyblue">자가등록</button>
+                            <button class="skyblue">수동 Recon</button>
+                            <button class="skyblue">대량등록</button>
+                        </div>
+                    </div>
+
+                    <p class="tit">table 안에 버튼</p>
+                    <div class="btns_detail">
+                        <ul class="cl_both">
+                            <li class="f_l wid33">
+                                <a title="편집"></a>
+                            </li>
+                            <li class="f_l wid33">
+                                <a title="삭제" class="del"></a>
+                            </li>
+                            <li class="f_l wid33">
+                                <a title="테스트" class="test"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="tit">tit_in_btn</p>
+                    <div class="move_box">
+                        <div class="move_tit">
+                            <div class="btn_box tit_in_btn">
+                                <button class="blue">텍스트</button>
+                                <button class="navy">텍스트</button>
+                                <button class="white ref">새로고침</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="tit">sych_mnt_toast toggle버튼</p>
+                    <div class="sych_mnt_toast" style="position:static;">
+						<div class="err_toast">
+							<div class="flx">
+								<p class="icon_err"></p>
+								<div class="sych_mnt_toast_detail">
+									<p>접근제어 시스템 배포오류 : <em>2</em></p>
+									<p>OS System 접속오류 : <em>5</em></p>
+									<p>결재오류 : <em>1</em></p>
+								</div>
+							</div>
+							<button class="btn_close"></button>
+						</div>
+						<div class="warning_toast">
+							<div class="flx">
+								<p class="icon_warning"></p>
+								<div class="sych_mnt_toast_detail">
+									<p>비인가 생성 계정 : <em>15</em></p>
+									<p>OS System 접속오류 : <em>5</em></p>
+									<p>결재오류 : <em>1</em></p>
+								</div>
+							</div>
+							<button class="btn_close"></button>
+						</div>
+					</div>
 
                     <p class="tit">pagination</p>
                     <div class="tbl_btm">
@@ -100,6 +214,27 @@
                                 <li><a href="" class="last"><span></span>마지막페이지</a></li>
                             </ul>
                         </div>
+                    </div>
+
+                    <p class="tit">pagination mini</p>
+                    <div class="pagination mini_paging">
+                        <ul>
+                            <li>
+                                <a href="" class="first diss"><span></span>처음</a>
+                            </li>
+                            <li>
+                                <a href="" class="prev diss"><span></span>이전</a>
+                            </li>
+                            <li class="currentpage">
+                                <p><em>1</em> / 1</p>
+                            </li>
+                            <li>
+                                <a href="" class="next diss"><span></span>다음</a>
+                            </li>
+                            <li>
+                                <a href="" class="last diss"><span></span>마지막</a>
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </div>

@@ -2,9 +2,26 @@
 /*---------------------------------------------
 	#상단 버튼
     #스크롤시 고정할 상단버튼 "list_btn_stk" 추가
+    #tit_in_btn: absolute
 ---------------------------------------------*/
 .list_btn {
   top: 60px;
+}
+.list_btn .opttxt {
+  font-weight: var(--font-regular);
+  color: var(--title);
+}
+
+.btn_box a {
+  line-height: 30px;
+}
+
+.btn_box button {
+  line-height: 30px;
+}
+
+.list_btn button {
+  line-height: 30px;
 }
 
 /*---------------------------------------------
@@ -46,7 +63,7 @@ button.true {
   line-height: 18px;
 }
 button.icon {
-  padding: 7px 14px 6px 30px;
+  padding: 0 14px 0 30px;
 }
 
 /*---------------------------------------------

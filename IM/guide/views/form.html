@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>cardlist</title>
+    <title>form</title>
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,6 +33,7 @@
 	<![endif]-->
     <style>
         .tit { margin:20px 0 10px; font-size:var(--font-16); }
+        .check-wrap > div { display:inline-block; margin-right:10px; }
     </style>
 </head>
 
@@ -47,13 +48,112 @@
             <!-- S: content -->
             <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
                 <h2>form</h2>
-                <p class="tit">search</p>
                 <form>
+                    <p class="tit">search</p>
                     <div class="search_box">
                         <input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
                         <button class="btn_search" type="submit">검색</button>
                         <button class="btn_detail_search" type="submit">상세검색</button>
                     </div>
+                    <p class="tit">기본 input</p>
+                    <div class="form_stl"><!-- form 태그에 넣어도 됨 -->
+                        <dl class="form_list">
+                            <dt class="form_tit">
+                                <label for="onsdName">이름</label>
+                            </dt>
+                            <dd class="form_txt">
+                                <input type="text" name="" class="form_contrl" id="onsdName" placeholder="이름">
+                                <span class="dupli_check redtxt">
+                                    <i></i>이름 중복입니다.
+                                </span>
+                            </dd>
+                        </dl>
+                        <dl class="form_list">
+                            <dt class="form_tit">
+                                <label for="onsdName">이름</label>
+                            </dt>
+                            <dd class="form_txt">
+                                <input type="text" name="" class="form_contrl" id="onsdName" placeholder="sga">
+                                <span class="dupli_check bluetxt">
+                                    <i></i>사용가능합니다.
+                                </span>
+                            </dd>
+                        </dl>
+                        <dl class="form_list">
+                            <dt class="form_tit">
+                                <label for="">run at</label>
+                            </dt>
+                            <dd class="form_txt">
+                                <input type="text" name="" class="form_contrl" id="" placeholder="12:00" disabled>
+                            </dd>
+                        </dl>
+                        <dl class="form_list">
+                            <dt class="form_tit">
+                                <label for="onsdName">신청사유</label>
+                            </dt>
+                            <dd class="form_txt">
+                                <textarea class="form_contrl" id="modelExplain"></textarea>
+                                <div class="ducheck_bl">
+                                    <span class="dupli_check graytxt"><i></i>필수 입력 값 입니다.</span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="form_list">
+                            <dt class="form_tit">
+                                <label for="onsdName">파일첨부</label>
+                            </dt>
+                            <dd class="form_txt">
+                                <div class="file_upload_wrap">
+                                    <div class="file_upload_btns">
+                                        <button class="btnstl shadow">파일선택</button>
+                                        <button class="btnstl navy list_upload"><i></i>목록 업로드</button>
+                                    </div>
+                                    <div class="file_upload_box">
+                                        <p class="icon_file_upload"></p><p>파일을 마우스로 끌어 오세요</p>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <p class="tit">checkbox</p>
+                    <div class="check-wrap"><!--check-wrap 안에만 가져가기-->
+                        <div class="check_list">
+                            <input type="checkbox" name="" id="list02" class="check_stl">
+                            <label for="list02" class="check_stl_lab">기본</label>
+                        </div>
+                        <div class="check_list">
+                            <input type="checkbox" name="" id="list03" class="check_stl" checked>
+                            <label for="list03" class="check_stl_lab">활성</label>
+                        </div>
+                        <div class="check_list">
+                            <input type="checkbox" name="" id="list04" class="check_stl" disabled>
+                            <label for="list04" class="check_stl_lab">비활성</label>
+                        </div>
+                    </div>
+                    <p class="tit">radio</p>
+                    <div class="cl_both check2">
+                        <div class="f_l">
+                            <div>
+                                <input type="radio" name="rd" id="rd01" class="radio_stl"><label for="rd01" class="radio_stl_lab">Enable</label>
+                                <p class="req_txt inbl">- 설명문구 들어갑니다.</p>
+                            </div>
+                        </div>
+                        <div class="f_l">
+                            <div>
+                                <input type="radio" name="rd" id="rd02" class="radio_stl"><label for="rd02" class="radio_stl_lab">Disable</label>
+                                <p class="req_txt inbl">- 설명문구 설명문구 설명문구 들어갑니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tit">selectbox</p>
+                    <div class="page_select">
+						<select class="form_contrl">
+							<option value="">10</option>
+							<option value="">25</option>
+							<option value="">50</option>
+							<option value="">100</option>
+						</select>
+					</div>
                 </form>
             </div>
             <!-- E: content -->

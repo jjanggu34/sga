@@ -5,12 +5,12 @@
 ---------------------------------------------*/
 body {
     // min-width:1600px;   
-    color:var(--white);
     background:var(--body);
     overflow:auto;
     * {
         font-family:"S-CoreDream";
         font-size:13px;
+        color:var(--content);
         box-sizing:border-box;
     }
 }
@@ -23,10 +23,10 @@ body {
         padding:18px 20px 18px 26px;
         height:60px;
         background:var(--white);
-        $btns: "btn_lnb", "btn_lnb_m";
+        $Hbtns: "btn_lnb", "btn_lnb_m";
 
-        @each $btn in $btns {
-            .#{$btn} {
+        @each $Hbtn in $Hbtns {
+            .#{$Hbtn} {
                 a {
                     @include icon(24px, 24px);
                 }

@@ -1,6 +1,6 @@
 @use 'variable' as *;
 
-/***************** 폰트 *****************/
+/***************** 공통 *****************/
 .title {
     @include title(var(--font-20), var(--font-extrabold), 24px);
 }
@@ -23,7 +23,7 @@
     @include title(var(--font-14), var(--font-medium), 16px);
 }
 
-/***************** 라벨 *****************/
+/* 라벨 */
 .ico {
     padding:0 7px 0 25px !important;
     min-width:35px;
@@ -33,7 +33,7 @@
     background-size: 18px;
     font-weight:var(--font-medium);
 }
-.true {
+.trcolor {
     @include label();
     padding:5px 22px;
     border:1px solid var(--true);
@@ -46,7 +46,7 @@
         background-position:10px center;
     }
 }
-.false {
+.fcolor {
     @include label();
     color:var(--white);
     background-color:var(--false);
@@ -57,6 +57,17 @@
     &_tit {
         color:var(--false) !important;
     }
+}
+
+/* N 알림 */
+.new_org {
+    background-color:var(--info);
+}
+
+/* 나누는 선 */
+.divide {
+    height:10px;
+    background-color:var(--border-d);
 }
 
 /***************** 탭 *****************/

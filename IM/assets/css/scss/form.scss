@@ -1,21 +1,31 @@
 @use 'variable' as *;
 
 /*---------------------------------------------
-	#search
+	#input
 ---------------------------------------------*/
+/* disabled */
+.form_contrl {
+    &:disabled {
+        background:var(--button-disabled);
+    }
+}
+/* search */
 .search_wrap {
     background:var(--body);
     padding:20px 24px;
+    &+ .tab_wrap.cont_in_tab {
+        margin-top:0;
+    }
 }
 .search_box {
     max-width:432px;
-    height:35px;
+    height:28px;
     margin:0 auto;
     border:0;
     .search_inputbox {
         max-width:350px;
         width:$wh100;
-        height:35px;
+        height:28px;
         border:1px solid var(--border-d);
         border-radius:7px;
     }
@@ -28,7 +38,7 @@
     }
     .btn_detail_search{
         width:auto;
-        height:35px;
+        height:28px;
         padding:7px 14px 6px;
         border-radius:7px;
         color:var(--white);
@@ -47,19 +57,15 @@
     }
 }
 
-/*---------------------------------------------
-	#check
----------------------------------------------*/
+/* check */
 $inputs: "check_stl", "radio_stl";
 $labels: "check_stl_lab", "radio_stl_lab";
 
 // default
 @each $label in $labels {
     .#{$label}:before {
+        margin-right:5px;
         border: 1px solid var(--default);
-    }
-    .#{$label}::before {
-        background:url(../images/common/check_off.svg)no-repeat center/auto;
     }
 }
 
@@ -67,17 +73,61 @@ $labels: "check_stl_lab", "radio_stl_lab";
     // checked
     .#{$input}:checked + label:before {
         border: 1px solid var(--primary);
-        background:url(../images/common/check_on.svg)no-repeat center/auto var(--primary);
     }
     // disabled
     .#{$input}:disabled + label:before {
         border: 1px solid var(--button-disabled);
-        background:url(../images/common/check_dis.svg) no-repeat center/ auto var(--button-disabled);
+    }
+}
+.check_stl{
+    &+label {
+        color:var(--content);
+        &::before {
+            background:url(../images/common/check_off.svg)no-repeat center/auto;
+        }
+    }
+    &:checked {
+        &+ label {
+            &::before {
+                background:url(../images/common/check_on.svg)no-repeat center/auto var(--primary);
+            }
+            &::after {
+                content:none;
+            }
+        }
+    }
+    &:disabled {
+        &+ label::before {
+            background:url(../images/common/check_dis.svg) no-repeat center/ auto var(--button-disabled);
+        }
+    }
+}
+.radio_stl {
+    &:checked {
+        &+ label {
+            &::before {
+                background-color:var(--primary);
+            }
+            &::after {
+                margin-top:0;
+                transform:translateY(-50%);
+            }
+        }
+    }
+    &+ label + .req_txt {
+        padding:0;
     }
 }
 
-/*---------------------------------------------
-	#textarea
----------------------------------------------*/
+/* textarea */
 .scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea { width:100%; }
 textarea, textarea[readonly] { background: var(--btn--color-dark); }
+
+/*---------------------------------------------
+	#selectbox
+---------------------------------------------*/
+select{
+    &.form_contrl {
+        background: url(../images/common/select_arrow.png) no-repeat right 50% var(--sub-select);
+    }
+}
