@@ -7,6 +7,33 @@
 .dash_table {
   padding: 10px 0;
 }
+.dash_table .dash_box_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 50px;
+  background: transparent;
+  color: var(--title);
+  border-bottom: 1px solid var(--border-d);
+}
+.dash_table .dash_box_top .dash_title {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: var(--font-bold);
+}
+.dash_table .dash_box_top .more_btn::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  color: var(--title);
+  background: url("../img/common/arrow.svg") no-repeat;
+  background-size: 10px;
+}
+.dash_table .dash_box_top .more_btn a {
+  color: var(--title);
+}
 .dash_table .d_list_tt.f_ro {
   position: absolute;
   left: 12px;
@@ -21,53 +48,45 @@
   cursor: auto;
   box-sizing: content-box;
 }
-.dash_table .default_tbl .tbl_br, .dash_table .default_tbl .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name, .dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .default_tbl .subtask_name, .dash_table.type1 .default_tbl tbody > tr th:first-child, .dash_table.type1 tbody > tr .default_tbl th:first-child {
-  border-right: 1px solid var(--border-color) !important;
+.dash_table .default_tbl .tbl_br, .dash_table .default_tbl .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name, .dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .default_tbl .subtask_name {
+  border-right: 1px solid var(--border-d) !important;
 }
-.dash_table .default_tbl .tbl_fff, .dash_table.type1 .default_tbl tbody > tr:last-child td, .dash_table.type1 tbody > tr:last-child .default_tbl td, .dash_table.type1 .default_tbl tbody > tr th:first-child, .dash_table.type1 tbody > tr .default_tbl th:first-child {
+.dash_table .default_tbl .tbl_fff {
   border-bottom: 1px solid var(--white) !important;
 }
 .dash_table .default_tbl thead tr th {
   height: 38px;
   padding: 3px 10px;
   border: 0;
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid var(--border-d);
   font-size: var(--font-14);
-  font-weight: var(--font-bold);
-  color: var(--white);
-  background-color: transparent !important;
+  font-weight: var(--font-regular);
+  color: var(--title);
+  background-color: var(--table-th);
 }
 .dash_table .default_tbl thead tr:hover {
   background: transparent;
   cursor: auto;
 }
-.dash_table .default_tbl tbody tr[onclick] {
-  cursor: pointer;
-}
-.dash_table .default_tbl tbody tr[onclick]:hover {
-  background: #000;
-}
-.dash_table .default_tbl tbody tr:hover {
-  background: #3a424d;
-}
 .dash_table .default_tbl tbody tr th {
   border: 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-d);
   font-size: var(--font-14);
-  font-weight: var(--font-bold);
-  color: var(--normal-color);
+  font-weight: var(--font-regular);
+  color: var(--title);
   line-height: 38px;
+  background: var(--table-th);
 }
 .dash_table .default_tbl tbody tr .sort_column div {
-  color: var(--white);
+  color: var(--content);
 }
 .dash_table .default_tbl tbody tr td {
   padding: 10px 0;
   border: 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-d);
   font-size: var(--font-13);
   font-weight: var(--font-regular);
-  color: var(--normal-color);
+  color: var(--content);
   line-height: 16px;
   text-align: center;
   text-overflow: ellipsis;
@@ -75,7 +94,7 @@
   overflow: hidden;
 }
 .dash_table .default_tbl tbody tr td div {
-  color: var(--normal-color);
+  color: var(--content);
 }
 .dash_table .default_tbl tbody tr td.no_data {
   width: 100%;
@@ -109,9 +128,6 @@
 /*---------------------------------------------
     #row type1
 ---------------------------------------------*/
-.dash_table.type1 tbody > tr th {
-  color: var(--white);
-}
 /*---------------------------------------------
     #table 안에 accordion
 ---------------------------------------------*/

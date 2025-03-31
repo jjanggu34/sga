@@ -48,6 +48,35 @@
 }
 
 /*---------------------------------------------
+	#check
+---------------------------------------------*/
+$inputs: "check_stl", "radio_stl";
+$labels: "check_stl_lab", "radio_stl_lab";
+
+// default
+@each $label in $labels {
+    .#{$label}:before {
+        border: 1px solid var(--default);
+    }
+    .#{$label}::before {
+        background:url(../images/common/check_off.svg)no-repeat center/auto;
+    }
+}
+
+@each $input in $inputs {
+    // checked
+    .#{$input}:checked + label:before {
+        border: 1px solid var(--primary);
+        background:url(../images/common/check_on.svg)no-repeat center/auto var(--primary);
+    }
+    // disabled
+    .#{$input}:disabled + label:before {
+        border: 1px solid var(--button-disabled);
+        background:url(../images/common/check_dis.svg) no-repeat center/ auto var(--button-disabled);
+    }
+}
+
+/*---------------------------------------------
 	#textarea
 ---------------------------------------------*/
 .scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea { width:100%; }

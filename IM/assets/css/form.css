@@ -49,6 +49,45 @@
 }
 
 /*---------------------------------------------
+	#check
+---------------------------------------------*/
+.check_stl_lab:before {
+  border: 1px solid var(--default);
+}
+
+.check_stl_lab::before {
+  background: url(../images/common/check_off.svg) no-repeat center/auto;
+}
+
+.radio_stl_lab:before {
+  border: 1px solid var(--default);
+}
+
+.radio_stl_lab::before {
+  background: url(../images/common/check_off.svg) no-repeat center/auto;
+}
+
+.check_stl:checked + label:before {
+  border: 1px solid var(--primary);
+  background: url(../images/common/check_on.svg) no-repeat center/auto var(--primary);
+}
+
+.check_stl:disabled + label:before {
+  border: 1px solid var(--button-disabled);
+  background: url(../images/common/check_dis.svg) no-repeat center/auto var(--button-disabled);
+}
+
+.radio_stl:checked + label:before {
+  border: 1px solid var(--primary);
+  background: url(../images/common/check_on.svg) no-repeat center/auto var(--primary);
+}
+
+.radio_stl:disabled + label:before {
+  border: 1px solid var(--button-disabled);
+  background: url(../images/common/check_dis.svg) no-repeat center/auto var(--button-disabled);
+}
+
+/*---------------------------------------------
 	#textarea
 ---------------------------------------------*/
 .scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea {

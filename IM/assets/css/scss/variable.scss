@@ -47,3 +47,11 @@ $tr: right !important;//text-align:right;
     // 나중에 지울 것
     background:var(--primary);
 }
+
+@mixin label {
+    display:inline-block;
+    width:auto;
+    // padding:5px 24px 5px 8px;
+    border-radius:14px;
+    font-size:var(--font-13);
+}

@@ -24,34 +24,34 @@
 }
 
 /***************** 라벨 *****************/
-.label {
-    display:inline-block;
-    width:auto;
-    padding:5px 24ßpx 5px 8px;
-    border-radius:14px;
-    font-size:var(--font-12);
-}
 .ico {
     padding:0 7px 0 25px !important;
-    min-width:35px; height:23px;
+    min-width:35px;
+    height:23px;
     background-position: 5px center;
     background-repeat: no-repeat;
     background-size: 18px;
     font-weight:var(--font-medium);
 }
 .true {
-    background-color:var(--true);
-    color:var(--white);
-    line-height:26px;
+    @include label();
+    padding:5px 22px;
+    border:1px solid var(--true);
+    color:var(--true);
+    background-color:#EFFCF3;
     &.ico {
-        background-image: url(../images/common/ico_list_ok.svg);
+        line-height:26px;
+        background-image:url(../images/common/ico_list_ok.svg);
+        background-size:10px;
+        background-position:10px center;
     }
 }
 .false {
-    background-color:var(--false);
+    @include label();
     color:var(--white);
-    line-height:26px;
+    background-color:var(--false);
     &.ico {
+        line-height:26px;
         background-image: url(../images/common/ico_list_erro.svg);
     }
     &_tit {
@@ -59,7 +59,7 @@
     }
 }
 
-/***************** 턉 *****************/
+/***************** 탭 *****************/
 .tab_wrap {
     border-bottom:1px solid var(--border-d);
     background:var(--body);

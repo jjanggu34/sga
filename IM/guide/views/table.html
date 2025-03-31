@@ -32,7 +32,7 @@
 	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
 	<![endif]-->
     <style>
-        .content > h2 { margin:20px 0; font-size:var(--font-16); color:#fff; }
+        .tit { margin:20px 0 10px; font-size:var(--font-16); }
         .i_icon > span,
         .extension > span { margin-right:20px; }
         .extension { margin-top:20px; }
@@ -50,488 +50,491 @@
             <!-- S: header -->
             <!-- E: header -->
             <!-- S: content -->
-            <div class="content" style="background-color:#111327;">
-                <h2>테이블 타이틀</h2>
-                <div class="tbl_list dash_table">
-                    <div class="dash_box_top">
-                        <p class="dash_title">계정 현황</p>
-                        <div class="more_btn">
-                            <a href="#javascript:void(0);">더보기</a>
+            <div class="content">
+                <h2>table</h2>
+                <section>
+                    <p class="tit">기본 테이블</p>
+                    <div class="tbl_list dash_table">
+                        <div class="dash_box_top">
+                            <p class="dash_title">계정 현황</p>
+                            <div class="more_btn">
+                                <a href="#javascript:void(0);">더보기</a>
+                            </div>
                         </div>
+                        <table class="default_tbl" role="grid">
+                            <caption>시스템, 서비스 영역 및 계정 정보를 제공하는 표</caption>
+                            <colgroup aria-hidden="true">
+                                <col width="33.33%">
+                                <col width="33.33%">
+                                <col width="33.33%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" data-tooltip="시스템명" class="gridText">시스템명</th>
+                                    <th scope="col" data-tooltip="서비스 영역" class="gridText">서비스 영역</th>
+                                    <th scope="col" data-tooltip="계정명" class="gridText">계정명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data1</td>
+                                    <td>data1</td>
+                                    <td>data1</td>
+                                </tr>
+                                <tr>
+                                    <td>data1</td>
+                                    <td>data1</td>
+                                    <td>data1</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <table class="default_tbl" role="grid">
-                        <caption>시스템, 서비스 영역 및 계정 정보를 제공하는 표</caption>
-                        <colgroup aria-hidden="true">
-                            <col width="33.33%">
-                            <col width="33.33%">
-                            <col width="33.33%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col" data-tooltip="시스템명" class="gridText">시스템명</th>
-                                <th scope="col" data-tooltip="서비스 영역" class="gridText">서비스 영역</th>
-                                <th scope="col" data-tooltip="계정명" class="gridText">계정명</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>data1</td>
-                                <td>data1</td>
-                                <td>data1</td>
-                            </tr>
-                            <tr>
-                                <td>data1</td>
-                                <td>data1</td>
-                                <td>data1</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>no data</h2>
-                <div class="tbl_list dash_table">
-                    <table class="default_tbl" role="grid">
-                        <caption>시스템, 서비스 영역 및 계정 정보를 제공하는 표</caption>
-                        <colgroup aria-hidden="true">
-                            <col width="33.33%">
-                            <col width="33.33%">
-                            <col width="33.33%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col" data-tooltip="시스템명" class="gridText">시스템명</th>
-                                <th scope="col" data-tooltip="서비스 영역" class="gridText">서비스 영역</th>
-                                <th scope="col" data-tooltip="계정명" class="gridText">계정명</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="3" class="center no_data" aria-live="polite">
-                                    <p>
-                                        <span>No Data</span>
-                                        데이터가 없습니다.
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="display: none;">
-                                <td colspan="3" class="center" aria-live="assertive">로딩중</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>row type1</h2>
-                <div class="tbl_list dash_table">
-                    <table class="default_tbl type1">
-                        <caption>사용자의 권한 범위 및 시스템 제공 서비스 정보를 나타낸 표</caption>
-                        <colgroup>
-                            <col style="width: 20%;">
-                            <col style="width: 20%;">
-                            <col style="width: 20%;">
-                            <col style="width: 20%;">
-                            <col style="width: 20%;">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row" rowspan="2" class="th-bl">권한 범위</th>
-                                <th scope="col">영역코드</th>
-                                <th scope="col">인증방법</th>
-                                <th scope="col">인가방법</th>
-                                <th scope="col">시스템 제공 서비스 자동 제공</th>
-                            </tr>
-                            <tr>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>row type1</h2>
-                <div class="tbl_list dash_table">
-                    <table class="default_tbl type1">
-                        <caption>표</caption>
-                        <colgroup>
-                            <col style="width: 25%;">
-                            <col style="width: 25%;">
-                            <col style="width: 25%;">
-                            <col style="width: 25%;">
-                        </colgroup>
-						<tbody>
-							<tr>
-								<th scope="row" rowspan="8">변경 요청 정보</th>
-								<th scope="col">항목</th>
-								<th scope="col">변경 전</th>
-								<th scope="col">변경 후</th>
-							</tr>
-							<tr>
-								<td>사용자 구분</td>
-								<td>내부직원</td>
-								<td>내부직원</td>
-							</tr>
-							<tr>
-								<td rowspan="5" class="tbl-br tbl-fff">업무</td>
-								<td>-</td>
-								<td>인터페이스 - 대외계</td>
-							</tr>
-							<tr>
-								<td>-</td>
-								<td>인터페이스 - 대내계</td>
-							</tr>
-							<tr>
-								<td>기간계 - 입금</td>
-								<td>기간계 - 입금</td>
-							</tr>
-							<tr>
-								<td>기간계 - 보전</td>
-								<td>기간계 - 보전</td>
-							</tr>
-							<tr>
-								<td>기간계 - 일반지급</td>
-								<td>-</td>
-							</tr>
-						</tbody>
-					</table>
-                </div>
-
-                <h2>check_list / more_list</h2>
-                <div class="tbl_list dash_table">
-                    <table class="default_tbl" role="grid">
-                        <caption>설정된 시스템 목록 및 상태 정보를 제공하는 표</caption>
-                        <colgroup aria-hidden="true">
-                            <col width="8%" >
-                            <col width="5%" >
-                            <col width="5%" >
-                            <col width="5%" >
-                            <col width="*" >
-                            <col width="5%" >
-                            <col width="*" >
-                            <col width="*" >
-                            <col width="*" >
-                            <col width="*" >
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col" class="tbl_num_wid">순번</th>
-                                <th scope="col" class="check_list"><input type="checkbox" name="" id="list00"
-                                        class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
-                                <th scope="col"></th>
-                                <th scope="col" class="sort_column">
-                                    <div class="">종류<span class="ascanding"></span></div>
-                                </th>
-                                <th scope="col" class="sort_column">
-                                    <div class="">모델명<span class="ascanding"></span></div>
-                                </th>
-                                <th scope="col" class="sort_column">
-                                    <div class=""><span class="ascanding"></span></div>
-                                </th>
-                                <th scope="col" class="sort_column">
-                                    <div class="">상태<span class="ascanding"></span></div>
-                                </th>
-                                <th scope="col" class="sort_column">
-                                    <div class="">설명<span class="ascanding"></span></div>
-                                </th>
-                                <th scope="col" class="sort_column">
-                                    <div class="">형식<span class="ascanding"></span></div>
-                                </th>
-                                <th scope="col" class="sort_column">
-                                    <div class="">동시 실행 허용 여부<span class="ascanding"></span></div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td class="check_list"><input type="checkbox" name="" id="list01"
-                                        class="check_stl"><label for="list01" class="check_stl_lab" aria-label="항목 1 선택"></label>
-                                </td>
-                                <td id="addslide_1" class="more_list" style="cursor: pointer;">
-                                    <button type="button"  aria-label="항목 1 상세보기"  class="icon_arrow_open"> 더보기 </button>
-                                </td>
-                                <td>OS</td>
-                                <td class="bluetxt wgt800">위임됨<span class="mandatxt"><i></i></span></td>
-                                <td class="more_list"><button type="button" title="상세보기" aria-label="항목 1 상세 정보 보기" class="btn_detailview"></button></td>
-                                <td>
-                                    <div>
-                                        <div data-tooltip="활성화" class="gridText">
-                                            <div><i class="icon_list editable_enabled"></i><span> 활성화</span></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>data1</td>
-                                <td>
-                                    <div>
-                                        <i class="icon_ff exel"></i>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div data-tooltip="true" class="gridText">
-                                            <span class="label true ico">TRUE</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td class="check_list"><input type="checkbox" name="" id="list02"
-                                        class="check_stl"><label for="list02" class="check_stl_lab" aria-label="항목 2 선택"></label></td>
-                                <td class="more_list" style="cursor: pointer;">
-                                    <button type="button" aria-label="항목 2 상세보기" class="icon_arrow_open"> 더보기 </button>
-                                </td>
-                                <td>OS</td>
-                                <td class="bluetxt wgt800">위임함<span class="mandatxt madna_ed"><i></i></span></td>
-                                <td class="more_list"><button type="button" title="상세보기" aria-label="항목 2 상세 정보 보기" class="btn_detailview"></button></td>
-                                <td>
-                                    <div>
-                                        <div data-tooltip="활성화" class="gridText">
-                                            <div><i class="icon_list sv_connect"></i><span>접속확인</span></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>공통으로 사용할 수 있는 결재라인 - 보안담당자 > 보안팀장(없으면 생략) 순으로 결재라인을 설정에 따라 자동 선택하는 모델</td>
-                                <td>
-                                    <div>
-                                        <i class="icon_ff"></i>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div>
-                                        <div data-tooltip="true" class="gridText">
-                                            <span class="label false ico">FALSE</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>dash_box 안에 테이블<span style="color:var(--border-color);"> th 안에 ascanding은 필터링</span></h2>
-                <div class="dash_box">
+    
+                    <p class="tit">no data</p>
                     <div class="tbl_list dash_table">
                         <table class="default_tbl" role="grid">
-                            <caption>운영 체제 및 관련 정보를 제공하는 표</caption>
+                            <caption>시스템, 서비스 영역 및 계정 정보를 제공하는 표</caption>
                             <colgroup aria-hidden="true">
-                                <col width="8%">
-                                <col width="5%">
-                                <col width="*">
-                                <col width="*">
-                                <col width="*">
-                                <col width="*">
-                                <col width="*">
+                                <col width="33.33%">
+                                <col width="33.33%">
+                                <col width="33.33%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" data-tooltip="시스템명" class="gridText">시스템명</th>
+                                    <th scope="col" data-tooltip="서비스 영역" class="gridText">서비스 영역</th>
+                                    <th scope="col" data-tooltip="계정명" class="gridText">계정명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" class="center no_data" aria-live="polite">
+                                        <p>
+                                            <span>No Data</span>
+                                            데이터가 없습니다.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr style="display: none;">
+                                    <td colspan="3" class="center" aria-live="assertive">로딩중</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                    <p class="tit">row type1</p>
+                    <div class="tbl_list dash_table">
+                        <table class="default_tbl type1">
+                            <caption>사용자의 권한 범위 및 시스템 제공 서비스 정보를 나타낸 표</caption>
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" rowspan="2" class="th-bl">권한 범위</th>
+                                    <th scope="col">영역코드</th>
+                                    <th scope="col">인증방법</th>
+                                    <th scope="col">인가방법</th>
+                                    <th scope="col">시스템 제공 서비스 자동 제공</th>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                    <p class="tit">row type1</p>
+                    <div class="tbl_list dash_table">
+                        <table class="default_tbl type1">
+                            <caption>표</caption>
+                            <colgroup>
+                                <col style="width: 25%;">
+                                <col style="width: 25%;">
+                                <col style="width: 25%;">
+                                <col style="width: 25%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" rowspan="8">변경 요청 정보</th>
+                                    <th scope="col">항목</th>
+                                    <th scope="col">변경 전</th>
+                                    <th scope="col">변경 후</th>
+                                </tr>
+                                <tr>
+                                    <td>사용자 구분</td>
+                                    <td>내부직원</td>
+                                    <td>내부직원</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="5" class="tbl-br tbl-fff">업무</td>
+                                    <td>-</td>
+                                    <td>인터페이스 - 대외계</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>인터페이스 - 대내계</td>
+                                </tr>
+                                <tr>
+                                    <td>기간계 - 입금</td>
+                                    <td>기간계 - 입금</td>
+                                </tr>
+                                <tr>
+                                    <td>기간계 - 보전</td>
+                                    <td>기간계 - 보전</td>
+                                </tr>
+                                <tr>
+                                    <td>기간계 - 일반지급</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                    <p class="tit">check_list / more_list</p>
+                    <div class="tbl_list dash_table">
+                        <table class="default_tbl" role="grid">
+                            <caption>설정된 시스템 목록 및 상태 정보를 제공하는 표</caption>
+                            <colgroup aria-hidden="true">
+                                <col width="8%" >
+                                <col width="5%" >
+                                <col width="5%" >
+                                <col width="5%" >
+                                <col width="*" >
+                                <col width="5%" >
+                                <col width="*" >
+                                <col width="*" >
+                                <col width="*" >
+                                <col width="*" >
                             </colgroup>
                             <thead>
                                 <tr>
                                     <th scope="col" class="tbl_num_wid">순번</th>
-                                    <th scope="col" class="check_list">
-                                        <input type="checkbox" id="list00" class="check_stl">
-                                        <label for="list00" class="check_stl_lab" aria-label="전체 선택"></label>
+                                    <th scope="col" class="check_list"><input type="checkbox" name="" id="list00"
+                                            class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
+                                    <th scope="col"></th>
+                                    <th scope="col" class="sort_column">
+                                        <div class="">종류<span class="ascanding"></span></div>
                                     </th>
                                     <th scope="col" class="sort_column">
-                                        <div>종류<span class="ascanding" aria-hidden="true"></span></div>
+                                        <div class="">모델명<span class="ascanding"></span></div>
                                     </th>
                                     <th scope="col" class="sort_column">
-                                        <div>제조사<span class="ascanding" aria-hidden="true"></span></div>
+                                        <div class=""><span class="ascanding"></span></div>
                                     </th>
                                     <th scope="col" class="sort_column">
-                                        <div>모델명<span class="ascanding" aria-hidden="true"></span></div>
+                                        <div class="">상태<span class="ascanding"></span></div>
                                     </th>
                                     <th scope="col" class="sort_column">
-                                        <div>이름<span class="ascanding" aria-hidden="true"></span></div>
+                                        <div class="">설명<span class="ascanding"></span></div>
                                     </th>
                                     <th scope="col" class="sort_column">
-                                        <div>설명<span class="ascanding" aria-hidden="true"></span></div>
+                                        <div class="">형식<span class="ascanding"></span></div>
+                                    </th>
+                                    <th scope="col" class="sort_column">
+                                        <div class="">동시 실행 허용 여부<span class="ascanding"></span></div>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td class="check_list">
-                                        <input type="checkbox" id="list01" class="check_stl">
-                                        <label for="list01" class="check_stl_lab" aria-label="항목 1 선택"></label>
+                                    <td class="check_list"><input type="checkbox" name="" id="list01" checked
+                                            class="check_stl"><label for="list01" class="check_stl_lab" aria-label="항목 1 선택"></label>
+                                    </td>
+                                    <td id="addslide_1" class="more_list" style="cursor: pointer;">
+                                        <button type="button"  aria-label="항목 1 상세보기"  class="icon_arrow_open"> 더보기 </button>
                                     </td>
                                     <td>OS</td>
-                                    <td>RedHat</td>
+                                    <td class="bluetxt wgt800">위임됨<span class="mandatxt"><i></i></span></td>
+                                    <td class="more_list"><button type="button" title="상세보기" aria-label="항목 1 상세 정보 보기" class="btn_detailview"></button></td>
+                                    <td>
+                                        <div>
+                                            <div data-tooltip="활성화" class="gridText">
+                                                <div><span class="true ico"> 활성화</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td>data1</td>
-                                    <td>CentOS(1503)</td>
-                                    <td>Linux 표준모델</td>
+                                    <td>
+                                        <div>
+                                            <i class="icon_ff exel"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <div data-tooltip="true" class="gridText">
+                                                <span class="true">TRUE</span>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td class="check_list">
-                                        <input type="checkbox" id="list02" class="check_stl">
-                                        <label for="list02" class="check_stl_lab" aria-label="항목 2 선택"></label>
+                                    <td class="check_list"><input type="checkbox" name="" id="list02" disabled
+                                            class="check_stl"><label for="list02" class="check_stl_lab" aria-label="항목 2 선택"></label></td>
+                                    <td class="more_list" style="cursor: pointer;">
+                                        <button type="button" aria-label="항목 2 상세보기" class="icon_arrow_open"> 더보기 </button>
                                     </td>
                                     <td>OS</td>
-                                    <td>RedHat</td>
-                                    <td>data1</td>
-                                    <td>CentOS(1503)</td>
-                                    <td>Linux 표준모델</td>
+                                    <td class="bluetxt wgt800">위임함<span class="mandatxt madna_ed"><i></i></span></td>
+                                    <td class="more_list"><button type="button" title="상세보기" aria-label="항목 2 상세 정보 보기" class="btn_detailview"></button></td>
+                                    <td>
+                                        <div>
+                                            <div data-tooltip="활성화" class="gridText">
+                                                <div><i class="icon_list sv_connect"></i><span>접속확인</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>공통으로 사용할 수 있는 결재라인 - 보안담당자 > 보안팀장(없으면 생략) 순으로 결재라인을 설정에 따라 자동 선택하는 모델</td>
+                                    <td>
+                                        <div>
+                                            <i class="icon_ff"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <div data-tooltip="true" class="gridText">
+                                                <span class="false ico">FALSE</span>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-
-                <h2>table 안에 accordion</h2>
-                <div class="tbl_list dash_table">
-                    <table class="default_tbl accordion_tbl" role="grid">
-                        <colgroup>
-                            <col width="50px">
-                            <col width="*">
-                            <col width="*">
-                            <col width="*">
-                        </colgroup>
-                        <thead>
-                            <tr role="row">
-                                <th scope="col"></th>
-                                <th scope="col">
-                                    <div class="headText">Framework</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="headText">Type</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="headText">ID</div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr role="row" class="accordion">
-                                <td>
-                                    <div class="view_hide_btn_icon" onclick="onoffDisplay(this)"></div>
-                                </td>
-                                <td>CIS Docker Benchmark</td>
-                                <td>DEFAULT</td>
-                                <td>CIS-1.1</td>
-                            </tr>
-                            <tr class="subtask_bundle">
-                                <td colspan="4">
-                                    <div class="row_subtask accordion">
-                                        <div class="subtask_name">
-                                            <p class="subtask_catagory_title">
-                                                <span class="view_hide_btn_icon"></span>
-                                            </p>
-                                            <p class="subtask_catagory_Result false">failed</p>
-                                            <p class="subtask_catagory_detail">
-                                                CIS-1.1.1. Ensure a separate partition for containers has been created (Automated)</p>
-                                        </div>
-                                        <div class="subtask_detail">
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Result:</div>
-                                                <div class="false_tit subtask_catagory_detail">failed</div>
+    
+                    <p class="tit">dash_box 안에 테이블<span style="color:var(--border-color);"> th 안에 ascanding은 필터링</span></p>
+                    <div class="dash_box">
+                        <div class="tbl_list dash_table">
+                            <table class="default_tbl" role="grid">
+                                <caption>운영 체제 및 관련 정보를 제공하는 표</caption>
+                                <colgroup aria-hidden="true">
+                                    <col width="8%">
+                                    <col width="5%">
+                                    <col width="*">
+                                    <col width="*">
+                                    <col width="*">
+                                    <col width="*">
+                                    <col width="*">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="tbl_num_wid">순번</th>
+                                        <th scope="col" class="check_list">
+                                            <input type="checkbox" id="list00" class="check_stl">
+                                            <label for="list00" class="check_stl_lab" aria-label="전체 선택"></label>
+                                        </th>
+                                        <th scope="col" class="sort_column">
+                                            <div>종류<span class="ascanding" aria-hidden="true"></span></div>
+                                        </th>
+                                        <th scope="col" class="sort_column">
+                                            <div>제조사<span class="ascanding" aria-hidden="true"></span></div>
+                                        </th>
+                                        <th scope="col" class="sort_column">
+                                            <div>모델명<span class="ascanding" aria-hidden="true"></span></div>
+                                        </th>
+                                        <th scope="col" class="sort_column">
+                                            <div>이름<span class="ascanding" aria-hidden="true"></span></div>
+                                        </th>
+                                        <th scope="col" class="sort_column">
+                                            <div>설명<span class="ascanding" aria-hidden="true"></span></div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td class="check_list">
+                                            <input type="checkbox" id="list01" class="check_stl">
+                                            <label for="list01" class="check_stl_lab" aria-label="항목 1 선택"></label>
+                                        </td>
+                                        <td>OS</td>
+                                        <td>RedHat</td>
+                                        <td>data1</td>
+                                        <td>CentOS(1503)</td>
+                                        <td>Linux 표준모델</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td class="check_list">
+                                            <input type="checkbox" id="list02" class="check_stl">
+                                            <label for="list02" class="check_stl_lab" aria-label="항목 2 선택"></label>
+                                        </td>
+                                        <td>OS</td>
+                                        <td>RedHat</td>
+                                        <td>data1</td>
+                                        <td>CentOS(1503)</td>
+                                        <td>Linux 표준모델</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <p class="tit">table 안에 accordion</p>
+                    <div class="tbl_list dash_table">
+                        <table class="default_tbl accordion_tbl" role="grid">
+                            <colgroup>
+                                <col width="50px">
+                                <col width="*">
+                                <col width="*">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr role="row">
+                                    <th scope="col"></th>
+                                    <th scope="col">
+                                        <div class="headText">Framework</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="headText">Type</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="headText">ID</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr role="row" class="accordion">
+                                    <td>
+                                        <div class="view_hide_btn_icon" onclick="onoffDisplay(this)"></div>
+                                    </td>
+                                    <td>CIS Docker Benchmark</td>
+                                    <td>DEFAULT</td>
+                                    <td>CIS-1.1</td>
+                                </tr>
+                                <tr class="subtask_bundle">
+                                    <td colspan="4">
+                                        <div class="row_subtask accordion">
+                                            <div class="subtask_name">
+                                                <p class="subtask_catagory_title">
+                                                    <span class="view_hide_btn_icon"></span>
+                                                </p>
+                                                <p class="subtask_catagory_Result false">failed</p>
+                                                <p class="subtask_catagory_detail">
+                                                    CIS-1.1.1. Ensure a separate partition for containers has been created (Automated)</p>
                                             </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Description: </div>
-                                                <div title="The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker." class="subtask_catagory_detail">The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker.</div>
-                                            </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Remediation:</div>
-                                                <div title="For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition." class="subtask_catagory_detail">For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition.</div>
-                                            </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Actual value:</div>
-                                                <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea">
-                                                    <div class="scroll-content">
-                                                        <textarea readonly="readonly" class="textarea-scrollbar scrollbar-outer">failedß: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
+                                            <div class="subtask_detail">
+                                                <div class="subtask_catagory">
+                                                    <div class="subtask_catagory_title">· Result:</div>
+                                                    <div class="false_tit subtask_catagory_detail">failed</div>
+                                                </div>
+                                                <div class="subtask_catagory">
+                                                    <div class="subtask_catagory_title">· Description: </div>
+                                                    <div title="The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker." class="subtask_catagory_detail">The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker.</div>
+                                                </div>
+                                                <div class="subtask_catagory">
+                                                    <div class="subtask_catagory_title">· Remediation:</div>
+                                                    <div title="For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition." class="subtask_catagory_detail">For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition.</div>
+                                                </div>
+                                                <div class="subtask_catagory">
+                                                    <div class="subtask_catagory_title">· Actual value:</div>
+                                                    <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea">
+                                                        <div class="scroll-content">
+                                                            <textarea readonly="readonly" class="textarea-scrollbar scrollbar-outer">failedß: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row_subtask accordion">
-                                        <div class="subtask_name">
-                                            <p class="subtask_catagory_title">
-                                                <span class="view_hide_btn_icon"></span>
-                                            </p>
-                                            <p class="subtask_catagory_Result false">failed</p>
-                                            <p class="subtask_catagory_detail">
-                                                CIS-1.1.1. Ensure a separate partition for containers has been created (Automated)</p>
-                                        </div>
-                                        <div class="subtask_detail">
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Result:</div>
-                                                <div class="false_tit subtask_catagory_detail">failed</div>
+    
+                                        <div class="row_subtask accordion">
+                                            <div class="subtask_name">
+                                                <p class="subtask_catagory_title">
+                                                    <span class="view_hide_btn_icon"></span>
+                                                </p>
+                                                <p class="subtask_catagory_Result false">failed</p>
+                                                <p class="subtask_catagory_detail">
+                                                    CIS-1.1.1. Ensure a separate partition for containers has been created (Automated)</p>
                                             </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Description: </div>
-                                                <div title="The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker." class="subtask_catagory_detail">The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker.</div>
-                                            </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Remediation:</div>
-                                                <div title="For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition." class="subtask_catagory_detail">For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition.</div>
-                                            </div>
-                                            <div class="subtask_catagory">
-                                                <div class="subtask_catagory_title">· Actual value:</div>
-                                                <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea">
-                                                    <div class="scroll-content">
-                                                        <textarea readonly="readonly" class="textarea-scrollbar scrollbar-outer">failed: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
+                                            <div class="subtask_detail">
+                                                <div class="subtask_catagory">
+                                                    <div class="subtask_catagory_title">· Result:</div>
+                                                    <div class="false_tit subtask_catagory_detail">failed</div>
+                                                </div>
+                                                <div class="subtask_catagory">
+                                                    <div class="subtask_catagory_title">· Description: </div>
+                                                    <div title="The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker." class="subtask_catagory_detail">The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker.</div>
+                                                </div>
+                                                <div class="subtask_catagory">
+                                                    <div class="subtask_catagory_title">· Remediation:</div>
+                                                    <div title="For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition." class="subtask_catagory_detail">For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition.</div>
+                                                </div>
+                                                <div class="subtask_catagory">
+                                                    <div class="subtask_catagory_title">· Actual value:</div>
+                                                    <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea">
+                                                        <div class="scroll-content">
+                                                            <textarea readonly="readonly" class="textarea-scrollbar scrollbar-outer">failed: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>table contents</h2>
-                <div class="dash_box" style="padding: 10px; background:#f0f3f8;">
-                    <div class="i_icon">
-                        <span><i class="icon_list none"></i>상태없음</span>
-                        <span><i class="icon_list sv_connect"></i>연결됨</span>
-                        <span><i class="icon_list icheck"></i>생성</span>
-                        <span><i class="icon_list"></i>정상</span>
-                        <span><i class="icon_list sv_disconnect"></i>연결끊김</span>
-                        <span><i class="icon_pgs inprogress_pending"></i>수정 진행중</span>
-                        <span><i class="icon_pgs inprogress_create"></i>수정 작업중</span>
-                        <span><i class="icon_pgs inprogress_ing"></i>작업 보류중</span>
-                        <span><i class="icon_list connection_compl"></i>수집완료</span>
-                        <span><i class="icon_list connection_error"></i>수집오류</span>
-                        <span><i class="icon_list iwarning"></i>작업중 오류</span>
-                        <span><i class="icon_pgs inprogress_delete"></i>삭제 진행중</span>
-                        <span><i class="icon_list idisabled"></i>삭제됨</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="extension">
-                        <span><i class="icon_ff"></i></span>
-                        <span><i class="icon_ff exel"></i></span>
-                        <span><i class="icon_ff word"></i></span>
-                        <span><i class="icon_ff csv"></i></span>
-                        <span><i class="icon_ff hwp"></i></span>
-                        <span><i class="icon_ff text"></i></span>
-                        <span><i class="icon_ff sl_ff"></i></span>
-                        <span><i class="icon_ff sl_ff exel"></i></span>
-                        <span><i class="icon_ff sl_ff word"></i></span>
-                        <span><i class="icon_ff sl_ff csv"></i></span>
-                        <span><i class="icon_ff sl_ff hwp"></i></span>
-                        <span><i class="icon_ff sl_ff text"></i></span>
+    
+                    <p class="tit">table contents</p>
+                    <div class="dash_box">
+                        <div class="i_icon">
+                            <span><i class="icon_list none"></i>상태없음</span>
+                            <span><i class="icon_list sv_connect"></i>연결됨</span>
+                            <span><i class="icon_list icheck"></i>생성</span>
+                            <span><i class="icon_list"></i>정상</span>
+                            <span><i class="icon_list sv_disconnect"></i>연결끊김</span>
+                            <span><i class="icon_pgs inprogress_pending"></i>수정 진행중</span>
+                            <span><i class="icon_pgs inprogress_create"></i>수정 작업중</span>
+                            <span><i class="icon_pgs inprogress_ing"></i>작업 보류중</span>
+                            <span><i class="icon_list connection_compl"></i>수집완료</span>
+                            <span><i class="icon_list connection_error"></i>수집오류</span>
+                            <span><i class="icon_list iwarning"></i>작업중 오류</span>
+                            <span><i class="icon_pgs inprogress_delete"></i>삭제 진행중</span>
+                            <span><i class="icon_list idisabled"></i>삭제됨</span>
+                        </div>
+                        <div class="extension">
+                            <span><i class="icon_ff"></i></span>
+                            <span><i class="icon_ff exel"></i></span>
+                            <span><i class="icon_ff word"></i></span>
+                            <span><i class="icon_ff csv"></i></span>
+                            <span><i class="icon_ff hwp"></i></span>
+                            <span><i class="icon_ff text"></i></span>
+                            <span><i class="icon_ff sl_ff"></i></span>
+                            <span><i class="icon_ff sl_ff exel"></i></span>
+                            <span><i class="icon_ff sl_ff word"></i></span>
+                            <span><i class="icon_ff sl_ff csv"></i></span>
+                            <span><i class="icon_ff sl_ff hwp"></i></span>
+                            <span><i class="icon_ff sl_ff text"></i></span>
+                        </div>
+                        <div class="mandatxt_box">
+                            <div>
+                                위임됨
+                                <span class="mandatxt"><i></i></span>
+                            </div>
+                            <div>
+                                위임함
+                                <span class="mandatxt madna_ed"><i></i></span>
+                            </div>
+                        </div>
+                        <div class="tooltip_box">
+                            <div data-tooltip="true" class="gridText">
+                                <span class="label true ico">TRUE</span>
+                            </div>
+                            <div data-tooltip="true" class="gridText">
+                                <span class="label false ico">FALSE</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mandatxt_box">
-                        <div>
-                            위임됨
-                            <span class="mandatxt"><i></i></span>
-                        </div>
-                        <div>
-                            위임함
-                            <span class="mandatxt madna_ed"><i></i></span>
-                        </div>
-                    </div>
-                    <div class="tooltip_box">
-                        <div data-tooltip="true" class="gridText">
-                            <span class="label true ico">TRUE</span>
-                        </div>
-                        <div data-tooltip="true" class="gridText">
-                            <span class="label false ico">FALSE</span>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
             <!-- E: content -->
             <!-- S: footer -->

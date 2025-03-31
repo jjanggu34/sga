@@ -5,6 +5,29 @@
 ---------------------------------------------*/
 .dash_table {
     padding:10px 0;
+    .dash_box_top {
+        @include flexsb();
+        padding:0 20px;
+        height:50px;
+        background:transparent;
+        color:var(--title);
+        border-bottom:1px solid var(--border-d);
+        .dash_title {
+            display:inline-block;
+            font-size:16px;
+            font-weight:var(--font-bold);
+        }
+        .more_btn {
+            &::after {
+                @include content(10px, 16px);
+                color:var(--title);
+                background:url("../img/common/arrow.svg") no-repeat;background-size:10px;
+            }
+            a {
+                color:var(--title);
+            }
+        }
+    }
     .d_list_tt.f_ro {
         position:absolute;
         left:12px;
@@ -18,7 +41,7 @@
         table-layout:fixed; cursor:auto;
         box-sizing:content-box;
         .tbl_br {
-            border-right:1px solid var(--border-color) !important;
+            border-right:1px solid var(--border-d) !important;
         }
         .tbl_fff {
             border-bottom:1px solid var(--white) !important;
@@ -29,11 +52,11 @@
                     height:38px;
                     padding:3px 10px;
                     border:0;
-                    border-bottom:1px solid var(--white);
+                    border-bottom:1px solid var(--border-d);
                     font-size:var(--font-14);
-                    font-weight:var(--font-bold);
-                    color:var(--white);
-                    background-color:transparent !important;
+                    font-weight:var(--font-regular);
+                    color:var(--title);
+                    background-color:var(--table-th);
                 }
                 &:hover {
                     background:transparent;
@@ -43,41 +66,43 @@
         }
         tbody {
             tr {
-                &[onclick] {
-                    cursor:pointer;
-                    &:hover {
-                        background:#000;
-                    }
-                }
-                &:hover {
-                    background: #3a424d;
-                }
+                // &[onclick] {
+                //     cursor:pointer;
+                //     &:hover {
+                //         background:#f4f4f4;
+                //     }
+                // }
+                // &:hover {
+                //     background: #f4f4f4;
+                // }
                 th {
                     border:0;
-                    border-bottom:1px solid var(--border-color);
+                    border-bottom:1px solid var(--border-d);
                     font-size:var(--font-14);
-                    font-weight:var(--font-bold);
-                    color:var(--normal-color);
+                    font-weight:var(--font-regular);
+                    color:var(--title);
                     line-height:38px;
+                    background:var(--table-th);
                 }
                 .sort_column {
                     div {
-                        color:var(--white);
+                        color:var(--content);
                     }
                 }
                 td {
                     padding:10px 0;
                     border:0;
-                    border-bottom:1px solid var(--border-color); font-size:var(--font-13);
+                    border-bottom:1px solid var(--border-d);
+                    font-size:var(--font-13);
                     font-weight:var(--font-regular);
-                    color:var(--normal-color);
+                    color:var(--content);
                     line-height:16px;
                     text-align:center;
                     text-overflow:ellipsis;
                     white-space:nowrap;
                     overflow:hidden;
                     div {
-                        color:var(--normal-color);
+                        color:var(--content);
                     }
                     &.no_data {
                         width:$wh100;
@@ -113,26 +138,6 @@
 /*---------------------------------------------
     #row type1
 ---------------------------------------------*/
-.dash_table{
-    &.type1 {
-        tbody {
-            > tr {
-                th {
-                    color:var(--white);
-                    &:first-child {
-                        @extend .tbl_br;
-                        @extend .tbl_fff;
-                    }
-                }
-                &:last-child {
-                    td {
-                        @extend .tbl_fff;
-                    }
-                }
-            }
-        }
-    }
-}
 
 /*---------------------------------------------
     #table 안에 accordion
