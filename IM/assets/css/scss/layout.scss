@@ -20,22 +20,108 @@ body {
 ---------------------------------------------*/
 #SGIM_wrap {
     .header {
-        @include flexsb;
-        padding:0 20px 0 28px;
+        padding:18px 20px 18px 26px;
         height:60px;
+        background:var(--white);
+        $btns: "btn_lnb", "btn_lnb_m";
+
+        @each $btn in $btns {
+            .#{$btn} {
+                a {
+                    @include icon(24px, 24px);
+                }
+            }
+        }
+        .btn_lnb {
+            a {
+                top:20px;
+                left:205px;
+            }
+        }
+        .btn_lnb_m {
+            a {
+                display:none;
+            }
+        }
         .header_title {
+            display:inline-block;
             padding:0;
+            line-height:24px;
+            .link_depth {
+                padding-top:0;
+                li {
+                    a {
+                        font-size:var(--font-13);
+                        color:var(--secondary);
+                        &::after {
+                            content:none;
+                        }
+                    }
+                    &::before {
+                        content:">";
+                        display:inline-block;
+                        padding:0 5px;
+                        width:5px;
+                        height:9px;
+                        color:var(--secondary);
+                    }
+                    &:last-child {
+                        a {
+                            color:var(--title);
+                        }
+                        &::before {
+                            color:var(--title);
+                        }
+                    }
+                    &:first-child {
+                        a {
+                            @include icon(18px, 18px);
+                            font-size:0;
+                            &::after {
+                                font-size:var(--font-14);
+                            }
+                        }
+                        &::before {
+                            content:none;
+                        }
+                    }
+                }
+            }
         }
         .gl_nav {
+            top:50%;
+            right:20px;
+            transform:translateY(-50%);
+            display:inline-block;
+            width:auto;
             li {
+                display:inline-block;
                 padding-left:15px;
                 &.timer{
                     position:relative;
-                    &::after {
-                        @include content(1px, 24px);
-                        margin-left:13px;
-                        background:var(--border-color-c);
+                    padding-right:13px;
+                    border-right:1px solid var(--border-d);
+                    span {
+                        color:var(--title);
+                        line-height:24px;
                     }
+                    .time_ref {
+                        @include icon(24px, 24px);
+                        margin-top:0;
+                    }
+                    i {
+                        @include icon(18px, 18px);
+                        margin-top:4px;
+                    }
+                }
+                a {
+                    @include icon(18px, 18px);
+                    color:var(--title);
+                    line-height:24px;
+                    margin-top:4px;
+                }
+                &.btn_top_user a {
+                    @include icon(auto, auto);
                 }
             }
         }
@@ -44,22 +130,11 @@ body {
         @include flexsb();
         padding:20px;
         .logo {
-            width:146px;
-            height:18px;
+            width:143px;
+            height:20px;
             img {
                 width:$wh100;
                 height:$wh100;
-            }
-        }
-        .btn_lnb {
-            a {
-                display:inline-block;
-                width:20px;
-                height:14px;
-                font-size:0;
-                background:#474;
-                // background: url('../images/common/menu.svg')no-repeat 0 0;
-                text-indent:-99999px;
             }
         }
     }
@@ -70,9 +145,9 @@ body {
             background-color:var(--white);
             &.on {
                 border:0;
-                border-bottom:2px solid var(--im);
+                border-bottom:2px solid var(--primary);
                 font-weight:var(--font-medium);
-                color:var(--im);
+                color:var(--primary);
             }
         }
     }
@@ -83,11 +158,15 @@ body {
                 &.on {
                     border-top:0;
                     border-left-color: transparent;
-                    color:var(--im);
+                    color:var(--primary);
                     background-color:var(--white);
                 }
                 i {
                     left:14px;
+                }
+                &:hover {
+                    box-shadow:none;
+                    color:var(--primary);
                 }
             }
             ul {
@@ -95,7 +174,7 @@ body {
                 padding:19px 10px 13px 19px;
                 border-left:0;
                 border-radius:11px;
-                background-color:var(--im);
+                background-color:var(--primary);
                 li {
                     a{
                         position:relative;
@@ -138,18 +217,113 @@ body {
                 display:none;
             }
         }
+        .header {
+            .btn_lnb a {
+                left:24px;
+            }
+        }
     }
 }
 /*---------------------------------------------
     #컨텐츠
 ---------------------------------------------*/
 #SGIM_wrap {
-    .content {
-        padding:25px;
-        margin:80px 20px 20px;
+    .content, .monitoring_wrap{
+        padding:0;
+        margin:60px 0 20px;
         min-height:calc(100vh - 100px);//header + 위아래 margin
+        border-radius:0;
+        box-shadow:unset;
+        > div {
+            padding:20px 24px 0;
+        }
+    }
+}
+
+/***************** 그리드 *****************/
+.dashboard_box_cont {
+    .dashboard_cont {
+        position:relative;
+        display:flex;
+        flex-wrap:wrap;
+        width:$wh100;
+        padding:0 10px 20px;
+        > li {
+            position:relative;
+            float:left;
+            border-radius:20px;
+            box-shadow:0 3px 20px rgba(0, 0, 0, .3);
+            &.w_100 {
+                width:calc(100% - 20px);
+                margin:20px 10px 0;
+            }
+            &.w_50 {
+                width:calc(50% - 20px);
+                margin:20px 10px 0;
+            }
+            &.w_25 {
+                width:calc(25% - 21px);
+                margin:20px 10px 0;
+            }
+        }
+    }
+}
+.dash_box {
+    height:auto;
+    border:1px solid var(--card-boder-color);
+    border-radius:20px;
+    background:var(--card-color01);
+    overflow:hidden;
+    .dash_box_top {
+        @include flexsb();
+        padding:0 20px;
+        height:50px;
+        background:transparent;
+        color:var(--white);
+        border-bottom:1px solid var(--border-color);
+        .dash_title {
+            display:inline-block;
+            font-size:16px;
+            font-weight:var(--font-bold);
+        }
+        .more_btn {
+            &::after {
+                @include content(10px, 16px);
+                color:var(--white);
+                background:url("../img/common/arrow.svg") no-repeat;background-size:10px;
+            }
+            a {
+                color:var(--white);
+            }
+        }
     }
 }
 /*---------------------------------------------
     #팝업 레이아웃
 ---------------------------------------------*/
+
+/*---------------------------------------------
+    #미디어쿼리
+---------------------------------------------*/
+@media screen and (max-width: 768px) {
+    #SGIM_wrap {
+        .content, .welcomeWrap {
+            margin: 20px 16px 0 16px;
+        }
+        .header {
+            .btn_lnb {
+                a {
+                    display:none;
+                }
+            }
+            .btn_lnb_m {
+                a {
+                    top:20px;
+                    left:10px;
+                    display:inline-block;
+                }
+            }
+        }
+    }
+
+}

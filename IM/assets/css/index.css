@@ -47,36 +47,38 @@
 }
 
 :root {
-    /* 색상 */
-    --body: #EEF1F7;
+    /* primary color */
+    --primary: #F9AF1C;
 
-    --card-color01: #191B1F;
+    /* ui color */
+    --true:#23AC3D;
+    --false:#FF0000;
+    --info: #F76900;
 
-    --btn-color-blue: #4863FC;
-    --btn-color-bhover: #2035AA;
-    --btn--color-dark:#242636;
-
-    --cont-color:#F4F4F4;
-
-    --card-boder-color:#3E3E3E;
-    --border-color:#FFFFFF3b;
-    --border-color2:#505764;
-    --border-color-c:#CCCCCC;
-    --border-color-d:#DDDDDD;
-
-    --sel-color:#262A37;
-    --sel-color-hover:#1A1D26;
-
-    --normal-color:#FFFFFF65;
-    --disable-color:#3D3D3D;
-
+    /* background color */
+    --body: #F3F5F7;
+    --table-th: #F8F8F8;
     --white: #fff;
-    --true:#2E6FD4;
-    --false:#FF4040;
-    --im: #F9AF1C;
 
-    --text-color1: #272727;
-    --text-color2: #4A4A4A;
+    /* text color */
+    --title: #222222;
+    --content: #454545;
+    --secondary: #757575;
+    --text-disabled: #999999;
+
+    /* border color */
+    --border-d:#DDDDDD;
+    --border-disabled: #AAB0B8;
+
+    /* button color */
+    --button: #F9AF1C;
+    --button-hover: #EFA20B;
+    --button-disabled: #EEEEEE;
+    --disabled-line-bg: #FCFCFC;
+
+    /* form color */
+    --default: #BBBBBB;
+    --sub-select: #F8FAFB;
 
     /* 폰트 */
     --font-12:12px;
@@ -86,6 +88,7 @@
     --font-18:18px;
     --font-20:20px;
     --font-28:28px;
+
     --font-regular: 400;
     --font-medium: 500;
     --font-bold: 600;

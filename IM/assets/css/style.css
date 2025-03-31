@@ -81,64 +81,31 @@
   color: var(--false) !important;
 }
 
-/***************** 그리드 *****************/
-.dashboard_box_cont .dashboard_cont {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 0 10px 20px;
+/***************** 턉 *****************/
+.tab_wrap {
+  border-bottom: 1px solid var(--border-d);
+  background: var(--body);
 }
-.dashboard_box_cont .dashboard_cont > li {
-  position: relative;
-  float: left;
-  border-radius: 20px;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+.tab_wrap .tab_list li a {
+  padding: 10px 12px 8px;
+  font-size: var(--font-13);
+  font-weight: var(--font-medium);
 }
-.dashboard_box_cont .dashboard_cont > li.w_100 {
-  width: calc(100% - 20px);
-  margin: 20px 10px 0;
+.tab_wrap .tab_list li a.on, .tab_wrap .tab_list li a:hover {
+  border-top: 1px solid var(--primary);
+  border-bottom: 0;
+  border-radius: 7px 7px 0 0;
+  color: var(--primary);
+  background: var(--white);
 }
-.dashboard_box_cont .dashboard_cont > li.w_50 {
-  width: calc(50% - 20px);
-  margin: 20px 10px 0;
-}
-.dashboard_box_cont .dashboard_cont > li.w_25 {
-  width: calc(25% - 21px);
-  margin: 20px 10px 0;
-}
-
-.dash_box {
-  height: auto;
-  border: 1px solid var(--card-boder-color);
-  border-radius: 20px;
-  background: var(--card-color01);
-  overflow: hidden;
-}
-.dash_box .dash_box_top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  height: 50px;
-  background: transparent;
-  color: var(--white);
-  border-bottom: 1px solid var(--border-color);
-}
-.dash_box .dash_box_top .dash_title {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: var(--font-bold);
-}
-.dash_box .dash_box_top .more_btn::after {
+.tab_wrap .tab_list li a.on::after, .tab_wrap .tab_list li a:hover::after {
   content: "";
   display: inline-block;
-  width: 10px;
-  height: 16px;
-  color: var(--white);
-  background: url("../img/common/arrow.svg") no-repeat;
-  background-size: 10px;
-}
-.dash_box .dash_box_top .more_btn a {
-  color: var(--white);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
 }

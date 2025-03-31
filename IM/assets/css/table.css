@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /* 변수 지정하기 */
 /* mixin 함수 선언하기 */
+/*---------------------------------------------
+    #기본 테이블
+---------------------------------------------*/
 .dash_table {
   padding: 10px 0;
 }
@@ -93,7 +96,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: url(../img/common/ico-nodata.png) no-repeat;
+  background: url(../images/common/ico-nodata.png) no-repeat;
   opacity: 0.3;
 }
 .dash_table .default_tbl tbody tr td.no_data p span {
@@ -102,9 +105,16 @@
   font-size: var(--font-18);
   font-weight: var(--font-regular);
 }
+
+/*---------------------------------------------
+    #row type1
+---------------------------------------------*/
 .dash_table.type1 tbody > tr th {
   color: var(--white);
 }
+/*---------------------------------------------
+    #table 안에 accordion
+---------------------------------------------*/
 .dash_table .accordion_tbl .accordion {
   cursor: pointer;
 }

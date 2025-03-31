@@ -46,15 +46,71 @@
             <!-- E: header -->
             <!-- S: content -->
             <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
-                <h2>form</h2>
-                <p class="tit">search</p>
-                <form>
-                    <div class="search_box">
-                        <input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
-                        <button class="btn_search" type="submit">검색</button>
-                        <button class="btn_detail_search" type="submit">상세검색</button>
+                <h2>button</h2>
+                <section>
+                    <p class="tit">list_btn</p>
+                    <div class="list_btn cl_both list_btn_stk">
+
+                        <div class="list_left_btn f_l wid50">
+
+                            <button class="primary">활성</button>
+    
+                            <button class="disabled">비활성</button>
+    
+                            <span class="divide"></span>
+    
+                            <button class="line">생성</button>
+    
+                            <button class="line_disabled">복사생성</button>
+    
+                            <button class="shadow">삭제</button>
+    
+                            <button class="shadow">Update</button>
+    
+                        </div>
+    
+                        <div class="list_right_btn f_r wid50">
+                            <button class="true icon"><i class="icon_ff sl_ff exel"></i>EXEL</button>
+                            <button class="primary icon"><i class="icon_setting"></i> 설정</button>
+                            <button class="primary icon">
+                                <i class="icon_reset"></i>
+                                새로고침
+                            </button>
+                        </div>
                     </div>
-                </form>
+
+                    <p class="tit">pagination</p>
+                    <div class="tbl_btm">
+                        <div class="page_info">1-10/50</div>
+                        <div class="pagination">
+                            <ul>
+                                <li><a href="" class="first diss"><span></span>첫페이지</a></li>
+                                <li><a href="" class="prev diss"><span></span>이전</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="" class="on">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href="">6</a></li>
+                                <li><a href="">7</a></li>
+                                <li><a href="">8</a></li>
+                                <li><a href="">9</a></li>
+                                <li><a href="">10</a></li>
+                                <li><a href="">11</a></li>
+                                <li><a href="" class="next"><span></span>다음</a></li>
+                                <li><a href="" class="last"><span></span>마지막페이지</a></li>
+                            </ul>
+                        </div>
+                        <div class="page_select">
+                            <select class="form_contrl">
+                                <option value="">10</option>
+                                <option value="">25</option>
+                                <option value="">50</option>
+                                <option value="">100</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
             </div>
             <!-- E: content -->
             <!-- S: footer -->

@@ -39,3 +39,11 @@ $tr: right !important;//text-align:right;
     font-weight:$weight;
     line-height:$line;
 }
+
+@mixin icon($width, $height) {
+    display:inline-block;
+    width:$width;
+    height:$height;
+    // 나중에 지울 것
+    background:var(--primary);
+}

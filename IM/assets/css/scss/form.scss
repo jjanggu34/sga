@@ -3,24 +3,39 @@
 /*---------------------------------------------
 	#search
 ---------------------------------------------*/
+.search_wrap {
+    background:var(--body);
+    padding:20px 24px;
+}
 .search_box {
-    max-width:450px;
+    max-width:432px;
     height:35px;
+    margin:0 auto;
     border:0;
     .search_inputbox {
+        max-width:350px;
         width:$wh100;
         height:35px;
-        border:1px solid var(--border-color-d);
+        border:1px solid var(--border-d);
         border-radius:7px;
     }
     .btn_search {
-        width:44px;
-        height:35px;
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        width:20px;
+        height:20px;
     }
     .btn_detail_search{
+        width:auto;
         height:35px;
-        border-radius:0 7px 7px 0;
-        background:var(--im);
+        padding:7px 14px 6px;
+        border-radius:7px;
+        color:var(--white);
+        line-height:16px;
+        background:var(--primary);
+    }+ .tab_wrap.cont_in_tab {
+        margin-top:auto;
     }
 }
 
