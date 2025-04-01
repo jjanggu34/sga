@@ -87,7 +87,12 @@
 
 /* N 알림 */
 .new_org {
-  background-color: var(--info);
+  margin-top: 1px;
+  margin-left: 4px;
+  border-radius: 3px;
+  font-size: var(--font-10);
+  line-height: 12px;
+  background-color: var(--text-disabled);
 }
 
 /* 나누는 선 */
@@ -107,7 +112,7 @@
   font-weight: var(--font-medium);
 }
 .tab_wrap .tab_list li a.on, .tab_wrap .tab_list li a:hover {
-  border-top: 1px solid var(--primary);
+  border-top: 2px solid var(--primary);
   border-bottom: 0;
   border-radius: 7px 7px 0 0;
   color: var(--primary);
@@ -123,4 +128,10 @@
   left: 50%;
   transform: translateX(-50%);
   background: var(--white);
+}
+.tab_wrap .tab_list li a.on .new_org {
+  background-color: var(--info);
+}
+.tab_wrap.cont_in_tab {
+  margin-bottom: 0;
 }

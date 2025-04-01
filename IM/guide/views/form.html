@@ -32,7 +32,8 @@
 	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
 	<![endif]-->
     <style>
-        .tit { margin:20px 0 10px; font-size:var(--font-16); }
+        .tit { display:inline-block; margin:30px 0 10px; font-size:var(--font-16); }
+        .tit::after { content:""; display:inline-block; width:100%; height:2px; background:var(--primary); vertical-align:top; }
         .check-wrap > div { display:inline-block; margin-right:10px; }
     </style>
 </head>
@@ -100,7 +101,9 @@
                         </dl>
                         <dl class="form_list">
                             <dt class="form_tit">
-                                <label for="onsdName">파일첨부</label>
+                                <label for="onsdName">파일첨부
+                                    <i class="i_req"></i>
+                                </label>
                             </dt>
                             <dd class="form_txt">
                                 <div class="file_upload_wrap">
@@ -110,6 +113,28 @@
                                     </div>
                                     <div class="file_upload_box">
                                         <p class="icon_file_upload"></p><p>파일을 마우스로 끌어 오세요</p>
+                                    </div>
+                                    <div class="file_upload_box upload_list scroll">
+                                        <ul>
+                                            <li>
+                                                <button class="btn_del"></button>
+                                                <i class="icon_ff sl_ff word"></i>
+                                                <p>file name.doc</p>
+                                                <p class="file_size">84kb</p>
+                                            </li>
+                                            <li>
+                                                <button class="btn_del"></button>
+                                                <i class="icon_ff sl_ff word"></i>
+                                                <p>file name223424r.doc</p>
+                                                <p class="file_size">84kb</p>
+                                            </li>
+                                            <li>
+                                                <button class="btn_del"></button>
+                                                <i class="icon_ff sl_ff word"></i>
+                                                <p>file name.doc</p>
+                                                <p class="file_size">84kb</p>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </dd>

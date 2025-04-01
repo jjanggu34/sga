@@ -9,7 +9,8 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 
 	<!-- 기존 css -->
-	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<!-- 추가 css -->
 	<link rel="stylesheet" href="assets/css/index.css">
@@ -145,13 +146,21 @@
 							</div>
 						</div>
 					</li>
-					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
+					<li class="btn_menualdown"><a href="">down</a>
+						<div class="balloon alim_pop down_pop" style="display:none">
+							<div class="alim_pop_wrap">
+								<div class="alim_top">
+									<span>menual</span>
+								</div>
+								<ul class="alim_list">
+									<li><a><i class="icon_menual"></i>menual download 01</a></li>
+									<li><a><i class="icon_menual"></i>menual download 02</a></li>
+									<li><a><i class="icon_menual"></i>menual download 03</a></li>
+								</ul>
+							</div>
+						</div>
 					</li>
+					<li class="btn_logout"><a href="">logout</a></li>
 				</ul>
 				<!-- E: 수정 -->
 			</div>
@@ -264,7 +273,7 @@
 					</ul>
 				</div>
 				<div class="list_btn">
-					<!-- S: 수정 -->
+					<!-- S: class 수정 -->
 					<div class="list_left_btn">
 						<button class="line">활성</button>
 						<button class="line">비활성</button>
@@ -288,7 +297,7 @@
 					<p class="req_txt inb"><em>6건</em>의 변경된 데이터가 있습니다.</p>
 					<table class="default_tbl">
 						<!-- S: 추가 -->
-						<colgroup>
+						<!-- <colgroup>
 							<col width="5%">
 							<col width="5%">
 							<col width="5%">
@@ -298,7 +307,7 @@
 							<col width="*%">
 							<col width="*%">
 							<col width="*%">
-						</colgroup>
+						</colgroup> -->
 						<!-- E: 추가 -->
 						<thead>
 							<tr>

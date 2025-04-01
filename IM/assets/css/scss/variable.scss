@@ -19,13 +19,13 @@ $tr: right !important;//text-align:right;
     height:$height;
 }
 
-@mixin viewHBI($background) {
+@mixin viewHBI {
     display: inline-block;
     width:20px;
     height:20px;
     margin:0 auto;
     -webkit-mask-image:url("../images/common/ico_arr.svg");
-    background-color:$background;
+    background-color:var(--content);
     background-image: none;
     mask-image: url("../images/common/ico_arr.svg");
     -webkit-mask-size:9px;

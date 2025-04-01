@@ -53,6 +53,7 @@
 .line {
   color: var(--primary);
   border: 1px solid var(--primary);
+  background: var(--white);
 }
 
 /*---------------------------------------------

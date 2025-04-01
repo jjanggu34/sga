@@ -34,7 +34,7 @@ body {
         }
         .btn_lnb {
             a {
-                top:20px;
+                top:18px;
                 left:205px;
             }
         }
@@ -75,7 +75,7 @@ body {
                     }
                     &:first-child {
                         a {
-                            @include icon(18px, 18px);
+                            @include icon(24px, 24px);
                             font-size:0;
                             &::after {
                                 font-size:var(--font-14);
@@ -110,18 +110,20 @@ body {
                         margin-top:0;
                     }
                     i {
-                        @include icon(18px, 18px);
-                        margin-top:4px;
+                        @include icon(24px, 24px);
+                        margin-top:0;
                     }
                 }
                 a {
-                    @include icon(18px, 18px);
+                    @include icon(24px, 24px);
                     color:var(--title);
                     line-height:24px;
-                    margin-top:4px;
+                    margin-top:0;
                 }
                 &.btn_top_user a {
-                    @include icon(auto, auto);
+                    width:auto;
+                    height:auto;
+                    background:none;
                 }
             }
         }
@@ -211,10 +213,15 @@ body {
     }
     &.mini_nav {
         .nav_header {
-            display:inline-block;
-            visibility:initial;
-            .logo {
-                display:none;
+            padding-bottom:20px;
+        }
+        .nav_list {
+            li {
+                a {
+                    i {
+                        left:24px;
+                    }
+                }
             }
         }
         .header {
@@ -236,6 +243,9 @@ body {
         box-shadow:unset;
         > div {
             padding:20px 24px 0;
+            &:last-child {
+                padding-bottom:20px;;
+            }
         }
     }
 }
@@ -270,7 +280,7 @@ body {
 }
 .dash_box {
     height:auto;
-    border:1px solid var(--card-boder-color);
+    border:1px solid var(--border-d);
     border-radius:20px;
     background:var(--card-color01);
     overflow:hidden;
@@ -288,6 +298,7 @@ body {
             margin: 20px 16px 0 16px;
         }
         .header {
+            padding-left:44px;
             .btn_lnb {
                 a {
                     display:none;
@@ -295,9 +306,17 @@ body {
             }
             .btn_lnb_m {
                 a {
-                    top:20px;
+                    top:18px;
                     left:10px;
                     display:inline-block;
+                }
+            }
+        }
+        &.show_nav {
+            .btn_lnb_m {
+                a {
+                    left:200px;
+                    border-radius:0;
                 }
             }
         }

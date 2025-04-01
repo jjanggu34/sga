@@ -5,29 +5,6 @@
 ---------------------------------------------*/
 .dash_table {
     padding:10px 0;
-    .dash_box_top {
-        @include flexsb();
-        padding:0 20px;
-        height:50px;
-        background:transparent;
-        color:var(--title);
-        border-bottom:1px solid var(--border-d);
-        .dash_title {
-            display:inline-block;
-            font-size:16px;
-            font-weight:var(--font-bold);
-        }
-        .more_btn {
-            &::after {
-                @include content(10px, 16px);
-                color:var(--title);
-                background:url("../images/common/arrow.svg") no-repeat;background-size:10px;
-            }
-            a {
-                color:var(--title);
-            }
-        }
-    }
     .d_list_tt.f_ro {
         position:absolute;
         left:12px;
@@ -57,8 +34,8 @@
     thead {
         tr {
             th {
-                height:38px;
-                padding:3px 10px;
+                height:35px;
+                // padding:3px 10px;
                 border:0;
                 border-bottom:1px solid var(--border-d);
                 font-size:var(--font-14);
@@ -67,6 +44,7 @@
                 background-color:var(--table-th);
                 &.sort_column {
                     div {
+                        padding:0;
                         font-weight:var(--font-regular);
                         color:var(--title);
                     }
@@ -90,12 +68,13 @@
             //     background: #f4f4f4;
             // }
             th {
+                height:35px;
                 border:0;
                 border-bottom:1px solid var(--border-d);
                 font-size:var(--font-14);
                 font-weight:var(--font-regular);
                 color:var(--title);
-                line-height:38px;
+                line-height:16px;
             }
             .sort_column {
                 div {
@@ -181,44 +160,29 @@
         .accordion {
             cursor:pointer;
             &:hover {
-                background:#121212;
+                background:#f8f9fc;
             }
             &.tr_open {
                 td {
                     border-bottom:0 !important;
-                    background:#121212;
+                    background:#f8f9fc;
                     .view_hide_btn_icon {
-                        background:var(--btn-color-blue);
                         transform:rotate(90deg);
-                        &::before{
-                            background-color:var(--white);
-                        }
                     }
                 }
             }
             &.tr_open + .subtask_bundle {
                 display:table-row;
                 td {
-                    background:#121212;
+                    background:#f8f9fc;
                 }
             }
             td {
                 .view_hide_btn_icon {
-                    position:relative;
-                    top:3px;
-                    display:inline-block;
-                    width:20px;
-                    height:20px;
-                    border-radius:50%;
-                    background:var(--white);
                     text-align:center;
-                    &:hover {
-                        background:var(--btn-color-blue);
-                        &::before { background:var(--white); }
-                    }
                     &::before{
                         content:"";
-                        @include viewHBI(#121212);
+                        @include viewHBI();
                         -webkit-mask-position:7px, 7px;
                         mask-position:7px, 7px;
                     }
@@ -248,15 +212,12 @@
                     @include flexsb(null);
                     font-weight:var(--font-medium);
                     text-align:start;
-                    * {
-                        opacity:.8;
-                    }
                     .subtask_catagory_title {
                         flex-shrink:0;
                         margin:8px;
                         font-weight:var(--font-bold);
                         .view_hide_btn_icon {
-                            @include viewHBI(var(--white));
+                            @include viewHBI();
                             -webkit-mask-position:6px, 5px; mask-position:6px, 5px;
                         }
                     }

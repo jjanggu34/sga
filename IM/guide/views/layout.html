@@ -9,17 +9,18 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 
 	<!-- 기존 css -->
-	<link rel="stylesheet" type="text/css" href="../../css/monitoring_style.css">
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../css/font.css">
-    
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+
     <!-- 추가 css -->
     <link rel="stylesheet" href="../../assets/css/index.css">
 
     <!-- jQuery 라이브러리 -->
-	<script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+    <!-- jQuery UI 라이브러리 -->
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
     <!-- js -->
-	<script type="text/javascript" charset="utf-8" src="../../js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../js/common.js"></script>
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="http://test.co.kr/respond.min.js"></script>
@@ -47,41 +48,38 @@
 							<li><a href="">사용자 관리</a></li>
 							<li><a href="" class="on">그룹정보 관리</a></li>
 							<li><a href="">조직정보 관리</a></li>
+							<li><a href="">장치관리</a></li>
 						</ul>
 					</li>
-					<li><a href="" class="depth_menu"><i class="ResourceMangement"></i><span>시스템(자원) 관리</span></a>
+					<li><a href="" class="depth_menu"><i class="ResourceMangement"></i><span>시스템 관리</span></a>
 						<ul>
 							<li><a href="">시스템</a></li>
 							<li><a href="">시스템 그룹</a></li>
 							<li><a href="">시스템 계정</a></li>
-							<li><a href="">시스템 특권권한 관리</a></li>
-							<li><a href="">시스템 정책설정 관리</a></li>
-							<li><a href="">End point/장치 관리</a></li>
+							<li><a href="">시스템 특권권한관리</a></li>
+							<li><a href="">Agent / API Key 관리</a></li>
 						</ul>
 					</li>
-					<li><a href="" class="depth_menu"><i class="ServerZoneMangement"></i><span>서비스 영역 관리</span></a>
+					<li><a href="" class="depth_menu"><i class="ServerZoneMangement"></i><span>서비스 영역</span></a>
 						<ul>
 							<li><a href="">테넌트 관리</a></li>
-							<li><a href="">서버 영역 관리</a></li>
+							<li><a href="">서버 영역</a></li>
 						</ul>
 					</li>
 					<li><a href="" class="depth_menu"><i class="RoleMangement"></i><span>역할 관리</span></a>
 						<ul>
 							<li><a href="">내부역할 관리</a></li>
 							<li><a href="">자원 접근 역할 관리</a></li>
-							<li><a href="">역할 배포 관리</a></li>
 						</ul>
 					</li>
 					<li><a href="" class="depth_menu"><i class="PolicyMangement"></i><span>접근 정책/서비스 관리</span></a>
 						<ul>
-							<li><a href="">Agent/API 관리</a></li>
-							<li><a href="">인증 서버/서비스 관리</a></li>
-							<li><a href="">인증 정책 관리</a></li>
-							<li><a href="">접근 서버/서비스 관리</a></li>
 							<li><a href="">접근 정책 관리</a></li>
+							<li><a href="">인증 정책 관리</a></li>
+							<li><a href="">인가 정책 관리</a></li>
 						</ul>
 					</li>
-					<li><a href="" class="depth_menu"><i class="SynchronizeManagment"></i><span>수집/배포 관리</span></a>
+					<li><a href="" class="depth_menu"><i class="SynchronizeManagment"></i><span>수집/배포</span></a>
 						<ul>
 							<li><a href="">수집/배포 대시보드</a></li>
 							<li><a href="">수집 정책 관리</a></li>
@@ -92,7 +90,8 @@
 					<li><a href="" class="depth_menu"><i class="WorkflowManagement"></i><span>결재/승인 관리</span></a>
 						<ul>
 							<li><a href="">워크플로우 관리</a></li>
-							<li><a href="">요청/승인 관리</a></li>
+							<li><a href="">신청/승인 관리</a></li>
+							<li><a href="">신청/승인 설정 관리</a></li>
 							<li><a href="">결재 권한 위임</a></li>
 						</ul>
 					</li>
@@ -104,7 +103,20 @@
 							<li><a href="">메시지 관리</a></li>
 						</ul>
 					</li>
-					<li><a href="" class=""><i class="System"></i><span>SGIM 설정</span></a>
+					<li><a href="" class="depth_menu"><i class="System"></i><span>SGIM 설정</span></a>
+						<ul>
+							<li><a href="">서버요약/서비스모듈 관리</a></li>
+							<li><a href="">커넥터/ONSD 관리</a></li>
+							<li><a href="">속성 관리</a></li>
+							<li><a href="">코드관리</a></li>
+							<li><a href="">스케줄 관리</a></li>
+							<li><a href="">컨텐츠 관리</a></li>
+							<li><a href="">사전 제작 자산 관리</a></li>
+							<li><a href="">UI설정 관리</a></li>
+							<li><a href="">환경변수 관리</a></li>
+							<li><a href="">라이센스 관리</a></li>
+							<li><a href="">실행 관리</a></li>
+						</ul>
 					</li>
 				</ul>
 			</div>
@@ -121,7 +133,7 @@
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_top_user"><a href=""><span>시스템관리자(ztadimin)</span></a></li>
+					<li class="btn_top_user"><a href=""><span>시스템관리자 (ztadimin)</span></a></li>
 					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
 					<li class="btn_alim"><a href="">alim<span>13</span></a>
 						<div class="balloon alim_pop" style="display:none">
@@ -161,15 +173,15 @@
 					<li class="btn_logout"><a href="">logout</a></li>
 				</ul>
 			</div>
-			<div class="content tab_cont">
+			<div class="content">
 				<div class="search_wrap">
 					<div class="search_box">
 						<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
 						<button class="btn_search" type="submit">검색</button>
-						<button class="btn_detail_search" type="submit">상세검색</button>
+						<button class="btn_detail_search" type="submit">상세정보</button>
 					</div>
 					<form class="detail_search_wrap" style="display:none">
-						<p class="detail_search_btn">상세검색<i>닫기</i></p>
+						<p class="detail_search_btn">상세정보<i>닫기</i></p>
 						<div class="search_column4">
 							<div class="col">
 								<dl>
@@ -262,12 +274,12 @@
 						</ul>
 					</div>
 				</div>
-				<div class="tab_wrap">
+				<div class="tab_wrap cont_in_tab">
 					<ul class="tab_list">
-						<li><a href="" class="on">사용자<span class="new_org">N</span></a></li>
-						<li><a href="">비활성사용자</a></li>
-						<li><a href="">사용자변경이력</a></li>
-						<li><a href="">사용자 등록장비</a></li>
+						<li><a class="on">사용자</a></li>
+						<li><a class="">비활성사용자</a></li>
+						<li><a class="">사용자변경이력</a></li>
+						<li><a class="">사용자 등록장비</a></li>
 					</ul>
 				</div>
 				<!-- 스크롤시 고정할 상단버튼 "list_btn_stk" 클래스 추가-->
@@ -412,171 +424,6 @@
 								<td><i class="icon_pgs inprogress_pending"></i>수정 진행중</td>
 								<td>CentOS(1503)</td>
 								<td><i class="icon_list locked"></i>잠금</td>
-							</tr>
-							<tr>
-								<th>7</th>
-								<td class="check_list"><input type="checkbox" name="" id="list07" class="check_stl"><label for="list07" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_pgs inprogress_ing"></i>작업 보류중</td>
-								<td>CentOS(1503)</td>
-								<td><i class="icon_list sv_connect_error"></i>접속오류</td>
-							</tr>
-							<tr>
-								<th>7</th>
-								<td class="check_list"><input type="checkbox" name="" id="list07" class="check_stl"><label for="list07" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list iwarning"></i>작업중 오류</td>
-								<td>CentOS(1503)</td>
-								<td><i class="icon_list connection_compl"></i>수집완료</td>
-							</tr>
-							<tr>
-								<th>8</th>
-								<td class="check_list"><input type="checkbox" name="" id="list08" class="check_stl"><label for="list08" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list disabled"></i>비활성</td>
-								<td>CentOS(1503)</td>
-								<td><i class="icon_list connection_error"></i>수집오류</td>
-							</tr>
-							<tr>
-								<th>9</th>
-								<td class="check_list"><input type="checkbox" name="" id="list09" class="check_stl"><label for="list09" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_pgs inprogress_delete"></i>삭제 진행중</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
-							</tr>
-							<tr>
-								<th>10</th>
-								<td class="check_list"><input type="checkbox" name="" id="list10" class="check_stl"><label for="list10" class="check_stl_lab"></label></td>
-								<td class="more_list"><span>3</span><button class="icon_arrow_open">더보기</button></td>
-								<td>OS</td>
-								<td>RedHat</td>
-								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
-								<td>CentOS(1503)</td>
-								<td>Linux 표준모델</td>
 							</tr>
 						</tbody>
 					</table>
