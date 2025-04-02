@@ -41,7 +41,11 @@
   line-height: 16px;
 }
 
-/* 라벨 */
+/*---------------------------------------------
+    #라벨
+    기본 : icon_list
+    진행중 : label_ico > icon_pgs
+---------------------------------------------*/
 .ico {
   padding: 0 7px 0 25px !important;
   min-width: 35px;
@@ -83,6 +87,73 @@
 }
 .fcolor_tit {
   color: var(--false) !important;
+}
+
+.icon_list {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+}
+
+.icon_pgs {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+}
+
+.icon_ff {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+}
+
+.label_ico.ing {
+  position: relative;
+  padding: 10px;
+  line-height: 18px;
+  text-align: center;
+  font-size: var(--font-13);
+  cursor: pointer;
+}
+.label_ico.ing .icon_pgs {
+  background: var(--primary);
+}
+.label_ico.ing::before, .label_ico.ing::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0px;
+  right: 0px;
+  bottom: 10px;
+  height: 23px;
+  border: 2px dashed var(--primary);
+  transition: all 0.5s;
+  animation: clippath 3s infinite linear;
+  border-radius: 14px;
+}
+.label_ico.ing::after {
+  animation: clippath 1.8s infinite -2.5s linear;
+}
+
+@keyframes clippath {
+  0%, 100% {
+    clip-path: inset(0 0 50% 0);
+  }
+  25% {
+    clip-path: inset(0 50% 0 0);
+  }
+  50% {
+    clip-path: inset(50% 0 0 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 50%);
+  }
+}
+.icon_list.none {
+  background: url("../images/common/ico_circleOff.svg") no-repeat center/100%;
 }
 
 /* N 알림 */
