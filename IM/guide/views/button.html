@@ -10,7 +10,7 @@
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
     <!-- 기존 css -->
-    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/app.css">
     <link rel="stylesheet" type="text/css" href="../../css/font.css">
 
     <!-- 추가 css -->
@@ -52,76 +52,72 @@
             <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
                 <h2>button</h2>
                 <ul class="info_text">
-                    <li>talbe 위 아래에 버튼 올 때: list_btn > list_ㅁㅁㅁ_btn > button.class명 ( ㅁ: left / right )</li>
-                    <li>그 외의 버튼 : btn_box > f_l/f_r > a.class명</li>
+                    <li>
+                        <p style="font-weight:500;">talbe 위 아래에 버튼 올 때: list_btn</p>
+                        <ul>
+                            <li>- 왼쪽: list_left_btn</li>
+                            <li>- 오른쪽: list_right_btn</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p style="font-weight:500;">트리 구조 안에 버튼 : align_right</p>
+                    </li>
+                    <li>
+                        <p style="font-weight:500;">그 외의 버튼 : btn_box</p>
+                        <ul>
+                            <li>- 왼쪽: f_l</li>
+                            <li>- 오른쪽: f_r</li>
+                        </ul>
+                    </li>
                 </ul>
                 <section>
-                    <p class="tit">primary / line / disabled / line_disabled</p>
+                    <p class="tit">Basic</p>
                     <div class="list_btn">
                         <div class="list_left_btn">
                             <button class="primary">primary</button>
+                            <button class="primary" style="background:var(--button-hover);">focus</button>
+                            <button class="disabled">disable</button>
+                        </div>
+                    </div>
+
+                    <p class="tit">Line</p>
+                    <div class="list_btn">
+                        <div class="list_left_btn">
                             <button class="line">line</button>
-                            <button class="disabled">disabled</button>
-                            <button class="line_disabled">line_disabled</button>
+                            <button class="line" style="color:var(--button-hover); border:1px solid var(--button-hover);">focus</button>
+                            <button class="line_disabled">disable</button>
                         </div>
                     </div>
 
-                    <p class="tit">btn_box</p>
-                    <div class="btn_box cl_both">
-                        <div class="f_l">
-                        </div>
-                        <div class="f_r">
-                            <a href="" class="line">되돌리기</a>
-                            <a href="" class="primary">확인</a>
-                            <a href="" class="primary">취소</a>
-                            <a href="" class="primary">저장</a>
+                    <p class="tit">Big(Ex. 상세검색 및 팝업 하단 버튼)</p>
+                    <div class="list_btn">
+                        <div class="list_left_btn">
+                            <button class="primary big">primary</button>
+                            <button class="primary big" style="background:var(--button-hover);">focus</button>
+                            <button class="disabled big">disable</button>
                         </div>
                     </div>
 
-                    <p class="tit">align_right / tree 구조에 들어가 있음</p>
-                    <div class="align_right">
-                        <button class="btnstl skyblue arrow">선택추가<i></i></button>
-                        <button class="btnstl shadow arrow">전체추가<i></i></button>
-                    </div>
-
-                    <p class="tit">그냥 div에 묶여있음(15_02_systemgroup_tree_layout_filelist.html)</p>
-                    <div>
-						<button class="btnstl skyblue">선택삭제</button>
-						<button class="btnstl shadow">선택다운로드</button>
-					</div>
-
-                    <p class="tit">list_btn</p>
-                    <div class="list_btn cl_both list_btn_stk">
-
-                        <div class="list_left_btn f_l wid50">
-
-                            <button class="primary">활성</button>
-    
-                            <button class="disabled">비활성</button>
-    
-                            <span class="divide"></span>
-    
-                            <button class="line_disabled">생성</button>
-    
-                            <button class="line_disabled">복사생성</button>
-    
-                            <button class="shadow">삭제</button>
-    
-                            <button class="shadow">Update</button>
-    
-                        </div>
-    
-                        <div class="list_right_btn f_r wid50">
-                            <button class="true icon"><i class="icon_ff sl_ff exel"></i>EXEL 추출</button>
-                            <button class="primary icon"><i class="icon_setting"></i> 상태초기화</button>
+                    <p class="tit">Icon button</p>
+                    <div class="list_btn">
+                        <div class="list_left_btn">
                             <button class="primary icon">
                                 <i class="icon_reset"></i>
                                 새로고침
                             </button>
+                            <button class="disabled icon">
+                                <i class="icon_reset"></i>
+                                상태초기화
+                            </button>
+                            <button class="line basics icon">
+                                <i class="icon_ff excel"></i>
+                                EXEL 추출
+                            </button>
                         </div>
                     </div>
 
-                    <div class="list_btn" style="margin-top:20px;">
+                    <p class="tit">list_btn</p>
+                    <div class="list_btn">
                         <div class="list_left_btn">
                             <button class="line">활성</button>
                             <button class="line">비활성</button>
@@ -135,11 +131,35 @@
                             <label for="chk03" class="check_stl_lab"> 삭제진행중</label></p>
                         </div>
                         <div class="list_right_btn">
-                            <button class="skyblue">자가등록</button>
-                            <button class="skyblue">수동 Recon</button>
-                            <button class="skyblue">대량등록</button>
+                            <button class="primary">자가등록</button>
+                            <button class="primary">수동 Recon</button>
+                            <button class="primary">대량등록</button>
                         </div>
                     </div>
+
+                    <p class="tit">btn_box</p>
+                    <div class="btn_box cl_both">
+                        <div class="f_l">
+                            <button class="line">되돌리기</button>
+                        </div>
+                        <div class="f_r">
+                            <button class="primary">확인</button>
+                            <button class="primary">취소</button>
+                            <button class="primary">저장</button>
+                        </div>
+                    </div>
+
+                    <p class="tit">align_right</p>
+                    <div class="align_right">
+                        <button class="btnstl primary arrow">선택추가<i></i></button>
+                        <button class="btnstl line arrow">전체추가<i></i></button>
+                    </div>
+
+                    <p class="tit">그냥 div에 묶여있음(15_02_systemgroup_tree_layout_filelist.html)</p>
+                    <div>
+						<button class="btnstl primary">선택삭제</button>
+						<button class="btnstl line">선택다운로드</button>
+					</div>
 
                     <p class="tit">table 안에 버튼</p>
                     <div class="btns_detail">

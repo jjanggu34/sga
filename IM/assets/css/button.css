@@ -13,15 +13,33 @@
 }
 
 .btn_box a {
+  padding: 0 14px;
+  font-size: var(--font-14);
   line-height: 30px;
+}
+.btn_box a.big {
+  height: 36px;
+  line-height: 36px;
 }
 
 .btn_box button {
+  padding: 0 14px;
+  font-size: var(--font-14);
   line-height: 30px;
+}
+.btn_box button.big {
+  height: 36px;
+  line-height: 36px;
 }
 
 .list_btn button {
+  padding: 0 14px;
+  font-size: var(--font-14);
   line-height: 30px;
+}
+.list_btn button.big {
+  height: 36px;
+  line-height: 36px;
 }
 
 /*---------------------------------------------
@@ -31,6 +49,9 @@
 .primary {
   color: var(--white);
   background: var(--primary);
+}
+.primary:focus-visible {
+  background: var(--button-hover);
 }
 
 /*---------------------------------------------
@@ -55,16 +76,37 @@
   border: 1px solid var(--primary);
   background: var(--white);
 }
+.line:focus-visible {
+  color: var(--button-hover);
+  border: 1px solid var(--button-hover);
+}
+.line.basics {
+  font-size: var(--font-13);
+  color: var(--title);
+  border: 1px solid var(--border-d);
+}
 
 /*---------------------------------------------
 	#button에 icon 있을 경우
 ---------------------------------------------*/
-button.true {
-  font-size: var(--font-14);
-  line-height: 18px;
-}
 button.icon {
-  padding: 0 14px 0 30px;
+  padding: 0 14px 0 8px;
+}
+button.icon i {
+  margin-top: 2px;
+}
+
+/*---------------------------------------------
+	#search button
+---------------------------------------------*/
+.search_box .btn_detail_search {
+  width: auto;
+  height: 36px;
+  padding: 7px 14px 6px;
+  border-radius: 7px;
+  color: var(--white);
+  line-height: 16px;
+  background: var(--primary);
 }
 
 /*---------------------------------------------

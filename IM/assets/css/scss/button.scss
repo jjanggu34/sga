@@ -15,7 +15,13 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 
 @each $btn in $btns {
     #{$btn} {
+        padding:0 14px;
+        font-size:var(--font-14);
         line-height: 30px;
+        &.big {
+            height:36px;
+            line-height:36px;
+        }
     }
 }
 
@@ -26,6 +32,10 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 .primary {
     color:var(--white);
     background:var(--primary);
+    // focus
+    &:focus-visible {
+        background:var(--button-hover);
+    }
 }
 
 /*---------------------------------------------
@@ -48,20 +58,42 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
     color:var(--primary);
     border:1px solid var(--primary);
     background:var(--white);
+    // focus
+    &:focus-visible {
+        color:var(--button-hover);
+        border:1px solid var(--button-hover);
+    }
+    &.basics {
+        font-size:var(--font-13);
+        color:var(--title);
+        border:1px solid var(--border-d);
+    }
 }
 
 /*---------------------------------------------
 	#button에 icon 있을 경우
 ---------------------------------------------*/
 button {
-    // 녹색
-    &.true {
-        font-size:var(--font-14);
-        line-height:18px;
-    }
     &.icon {
-    padding:0 14px 0 30px;
+    padding:0 14px 0 8px;
+        i {
+            margin-top:2px;
+        }
+    }
+}
 
+/*---------------------------------------------
+	#search button
+---------------------------------------------*/
+.search_box {
+    .btn_detail_search{
+        width:auto;
+        height:36px;
+        padding:7px 14px 6px;
+        border-radius:7px;
+        color:var(--white);
+        line-height:16px;
+        background:var(--primary);
     }
 }
 
