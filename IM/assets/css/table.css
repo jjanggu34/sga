@@ -64,7 +64,7 @@
   color: var(--content);
 }
 .default_tbl tbody tr td {
-  padding: 10px 0;
+  padding: 10px;
   border: 0;
   border-bottom: 1px solid var(--border-d);
   font-size: var(--font-13);
@@ -141,9 +141,6 @@
   border-bottom: 0 !important;
   background: #f8f9fc;
 }
-.dash_table .accordion_tbl .accordion.tr_open td .view_hide_btn_icon {
-  transform: rotate(90deg);
-}
 .dash_table .accordion_tbl .accordion.tr_open + .subtask_bundle {
   display: table-row;
 }
@@ -169,6 +166,7 @@
   mask-repeat: no-repeat;
   -webkit-mask-position: 7px, 7px;
   mask-position: 7px, 7px;
+  transform: rotate(90deg);
 }
 .dash_table .accordion_tbl .subtask_bundle {
   display: none;
@@ -234,9 +232,6 @@
 .dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name {
   padding-bottom: 7px;
   margin-bottom: 10px;
-}
-.dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_name .view_hide_btn_icon {
-  transform: rotate(90deg);
 }
 .dash_table .accordion_tbl .subtask_bundle .row_subtask.tr_open .subtask_detail {
   display: block;

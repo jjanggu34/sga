@@ -34,8 +34,7 @@
     <style>
         .tit { display:inline-block; margin:30px 0 10px; font-size:var(--font-16); }
         .tit::after { content:""; display:inline-block; width:100%; height:2px; background:var(--primary); vertical-align:super; }
-        .i_icon > span,
-        .extension > span { margin-right:20px; }
+        .i_icon > span { margin-right:20px; }
         .extension { margin-top:20px; }
         .mandatxt_box > div,
         .tooltip_box > div { display:inline-block; margin-top:20px; margin-right:20px; }
@@ -53,7 +52,7 @@
             <!-- S: content -->
             <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
                 <h2>table</h2>
-                <p class="tit">09_table_style02.html 여기 테이블</p>
+                <p class="tit">09_table_style02.html, 11_02_workflow_2line.html 여기 테이블</p>
                 <section>
                     <p class="tit">기본 테이블</p>
                     <div class="tbl_list dash_table">
@@ -480,7 +479,7 @@
                         </table>
                     </div>
 
-                    <p class="tit">table 안에 accordion</p>
+                    <p class="tit">table 안에 accordion / 02_02_sub_list_detail.html</p>
                     <div class="tbl_list">
                         <table class="default_tbl">
                             <colgroup>
@@ -525,7 +524,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list none"></i>상태없음</td>
+									<td class="circleOff"><i class="icon_list"></i>상태없음</td>
 									<td>CentOS(1503)</td>
 									<td><button class="btnstl trcolor">TRUE</button></td>
 								</tr>
@@ -536,44 +535,71 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs"></i>생성 진행중</td>
+									<td class="plugConnected"><i class="icon_list"></i>연결됨</td>
 									<td>CentOS(1503)</td>
 									<td><button class="btnstl fcolor">FALSE</button></td>
 								</tr>
 							</tbody>
 						</table>
                     </div>
+
+                    <p class="tit">popup 안에 토글 테이블</p>
+                    <div class="tbl_list" style="padding: 8px 0px;">
+                        <table class="default_tbl tblStl2 grid">
+                            <tbody>
+                                <tr>
+                                    <th class="th-bl">
+                                        <div class="tb_dt_link gridText">
+                                            <p> [2024-05-09 11:05:37] 계정 수집 </p>
+                                            <button type="button" title="상세보기" class="btn_d_arw">
+                                                <i class="btn_dtail_arrow up"></i>
+                                            </button>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="border-top: 1px solid rgb(169, 169, 169); padding: 0px;">
+                                        <div>
+                                            <div style="min-height: 50px; white-space: pre-line;"><span>'Linux-FIDO'시스템의 'bin'계정이 수집 됨</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
     
                     <p class="tit">table contents</p>
-                    <div class="dash_box">
+                    <div class="dash_box" style="padding:10px;">
                         <div class="i_icon">
-                            <span><i class="icon_list none"></i>상태없음</span>
-                            <span><i class="icon_list sv_connect"></i>연결됨</span>
-                            <span><i class="icon_list icheck"></i>생성</span>
-                            <span><i class="icon_list"></i>정상</span>
-                            <span><i class="icon_list sv_disconnect"></i>연결끊김</span>
-                            <span><i class="icon_pgs inprogress_pending"></i>수정 진행중</span>
-                            <span><i class="icon_pgs inprogress_create"></i>수정 작업중</span>
-                            <span><i class="icon_pgs inprogress_ing"></i>작업 보류중</span>
-                            <span><i class="icon_list connection_compl"></i>수집완료</span>
-                            <span><i class="icon_list connection_error"></i>수집오류</span>
-                            <span><i class="icon_list iwarning"></i>작업중 오류</span>
-                            <span><i class="icon_pgs inprogress_delete"></i>삭제 진행중</span>
-                            <span><i class="icon_list idisabled"></i>삭제됨</span>
+                            <span class="circleOff"><i class="icon_list"></i>상태없음</span>
+                            <span class="plugConnected"><i class="icon_list"></i>연결됨</span>
+                            <span class="plugZapOff"><i class="icon_list"></i>연결끊김</span>
+                            <span class="filePlus"><i class="icon_list"></i>생성</span>
+                            <span class="checkCircle"><i class="icon_list"></i>정상</span>
+                            <span class="fileEdit"><i class="icon_pgs"></i>수정 진행중</span>
+                            <span class="fileEditLoader"><i class="icon_pgs"></i>작업 보류중</span>
+                            <span class="downloadCircle"><i class="icon_list"></i>수집완료</span>
+                            <span class="pauseCircle"><i class="icon_list"></i>수집오류</span>
+                            <span class="trash"><i class="icon_list"></i>삭제</span>
+                            <span class="trash"><i class="icon_pgs"></i>삭제 진행중</span>
+                            <span class="bolt"><i class="icon_list"></i>활성화</span>
                         </div>
                         <div class="extension">
-                            <span><i class="icon_ff"></i></span>
-                            <span><i class="icon_ff exel"></i></span>
+                            <span><i class="icon_ff pdf"></i></span>
+                            <span><i class="icon_ff excel"></i></span>
                             <span><i class="icon_ff word"></i></span>
                             <span><i class="icon_ff csv"></i></span>
                             <span><i class="icon_ff hwp"></i></span>
                             <span><i class="icon_ff text"></i></span>
-                            <span><i class="icon_ff sl_ff"></i></span>
-                            <span><i class="icon_ff sl_ff exel"></i></span>
+                            <span><i class="icon_ff ppx"></i></span>
+                            <span><i class="icon_ff sl_ff pdf"></i></span>
+                            <span><i class="icon_ff sl_ff excel"></i></span>
                             <span><i class="icon_ff sl_ff word"></i></span>
                             <span><i class="icon_ff sl_ff csv"></i></span>
                             <span><i class="icon_ff sl_ff hwp"></i></span>
                             <span><i class="icon_ff sl_ff text"></i></span>
+                            <span><i class="icon_ff sl_ff ppx"></i></span>
                         </div>
                         <div class="mandatxt_box">
                             <div>
