@@ -87,6 +87,9 @@ button {
 ---------------------------------------------*/
 .search_box {
     .btn_detail_search{
+        top:50%;
+        right:5px;
+        transform:translateY(-50%);
         width:auto;
         height:36px;
         padding:7px 14px 6px;

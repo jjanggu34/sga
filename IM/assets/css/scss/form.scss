@@ -3,6 +3,13 @@
 /*---------------------------------------------
 	#input
 ---------------------------------------------*/
+/* focus */
+input:focus-visible {
+    outline:1px solid var(--primary);
+}
+.form_contrl:focus {
+    border-color:var(--primary);
+}
 /* disabled */
 .form_contrl {
     &:disabled {
@@ -18,14 +25,13 @@
     }
 }
 .search_box {
-    max-width:432px;
-    height:28px;
+    max-width:458px;
+    height:46px;
     margin:0 auto;
     border:0;
     .search_inputbox {
-        max-width:350px;
         width:$wh100;
-        height:28px;
+        height:46px;
         border:1px solid var(--border-d);
         border-radius:7px;
     }
@@ -36,15 +42,7 @@
         width:20px;
         height:20px;
     }
-    .btn_detail_search{
-        width:auto;
-        height:28px;
-        padding:7px 14px 6px;
-        border-radius:7px;
-        color:var(--white);
-        line-height:16px;
-        background:var(--primary);
-    }+ .tab_wrap.cont_in_tab {
+    &+ .tab_wrap.cont_in_tab {
         margin-top:auto;
     }
 }

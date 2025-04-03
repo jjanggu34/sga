@@ -50,11 +50,18 @@
             <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
                 <h2>form</h2>
                 <form>
-                    <p class="tit">search</p>
-                    <div class="search_box">
+                    <p class="tit">search_wrap</p>
+                    <div class="search_wrap">
+                        <div class="search_box">
+                            <input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
+                            <button class="btn_search" type="submit">검색</button>
+                            <button class="btn_detail_search" type="submit">상세검색</button>
+                        </div>
+                    </div>
+                    <p class="tit">mini_search( tree menu 안에 검색창 )</p>
+                    <div class="search_box mini_search">
                         <input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
                         <button class="btn_search" type="submit">검색</button>
-                        <button class="btn_detail_search" type="submit">상세검색</button>
                     </div>
                     <p class="tit">기본 input</p>
                     <div class="form_stl"><!-- form 태그에 넣어도 됨 -->
@@ -74,11 +81,44 @@
                                 <label for="onsdName">이름</label>
                             </dt>
                             <dd class="form_txt">
-                                <input type="text" name="" class="form_contrl" id="onsdName" placeholder="sga">
+                                <input type="text" name="" class="form_contrl" id="onsdName" placeholder="이름" value="sga">
                                 <span class="dupli_check bluetxt">
                                     <i></i>사용가능합니다.
                                 </span>
                             </dd>
+                        </dl>
+                        <dl class="form_list">
+                            <dt class="form_tit">
+                                <label for="onsdName">이름</label>
+                            </dt>
+                            <dd class="form_txt">
+                                <input type="text" name="" class="form_contrl" id="onsdName" placeholder="LinuxRecon">
+                                <div class="loader"></div>
+                            </dd>
+                        </dl>
+                        <dl class="form_list">
+                            <dt class="form_tit">
+                                <label for="">기간</label>
+                            </dt>
+                            <dd class="form_txt">
+                                <div class="form_date">
+                                    <input type="text" class="form_contrl date_ctl" value="2025-04-02" readonly="readonly">
+                                    <span> - </span>
+                                    <input type="text" class="form_contrl date_ctl" value="2025-04-02" readonly="readonly">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="form_list">
+                            <dt class="form_tit">
+                                <label for="">종류</label>
+                            </dt>
+                            <dd class="form_txt">
+								<select class="form_contrl" id="modelType">
+									<option>DB</option>
+									<option>DB</option>
+								</select>
+								<p class="req_txt">※ 설명문구</p>
+							</dd>
                         </dl>
                         <dl class="form_list">
                             <dt class="form_tit">
@@ -108,12 +148,14 @@
                             <dd class="form_txt">
                                 <div class="file_upload_wrap">
                                     <div class="file_upload_btns">
-                                        <button class="btnstl shadow">파일선택</button>
-                                        <button class="btnstl navy list_upload"><i></i>목록 업로드</button>
+                                        <button class="btnstl line">파일선택</button>
+                                        <button class="btnstl primary list_upload"><i></i>목록 업로드</button>
                                     </div>
+                                    <!-- 업로드 파일 없을 때 -->
                                     <div class="file_upload_box">
                                         <p class="icon_file_upload"></p><p>파일을 마우스로 끌어 오세요</p>
                                     </div>
+                                    <!-- 업로드 파일 있을 때 -->
                                     <div class="file_upload_box upload_list scroll">
                                         <ul>
                                             <li>
@@ -159,7 +201,7 @@
                     <div class="cl_both check2">
                         <div class="f_l">
                             <div>
-                                <input type="radio" name="rd" id="rd01" class="radio_stl"><label for="rd01" class="radio_stl_lab">Enable</label>
+                                <input type="radio" name="rd" id="rd01" class="radio_stl" checked><label for="rd01" class="radio_stl_lab">Enable</label>
                                 <p class="req_txt inbl">- 설명문구 들어갑니다.</p>
                             </div>
                         </div>
@@ -179,6 +221,28 @@
 							<option value="">100</option>
 						</select>
 					</div>
+                    <p class="tit">dropdown</p>
+                    <div class="list_btn">
+                        <div class="list_left_btn">
+                            <div class="dropdown">
+                                <button class="line basics btn_dropdown">보고서 생성
+                                    <span>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10L10 5H2L6 10Z" fill="#DDDDDD"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="dropdown_list" style="display:none">
+                                    <li>
+                                        <button><i class="icon_ff sl_ff excel"></i> EXEL</button>
+                                    </li>
+                                    <li>
+                                        <button><i class="icon_ff sl_ff pdf"></i> PDF</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
             <!-- E: content -->
