@@ -2,7 +2,7 @@
 <HTML lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>SGIM</title>
+	<title>layout</title>
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -285,36 +285,36 @@
 				<!-- 스크롤시 고정할 상단버튼 "list_btn_stk" 클래스 추가-->
 				<div class="list_btn cl_both list_btn_stk">
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">활성</button>
-						<button class="shadow">비활성</button>
+						<button class="line_disabled">활성</button>
+						<button class="line_disabled">비활성</button>
 						<span class="divide"></span>
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow">Update</button>
+						<button class="line">생성</button>
+						<button class="line_disabled">복사생성</button>
+						<button class="line_disabled">삭제</button>
+						<button class="line_disabled">Update</button>
 					</div>
 					<div class="list_right_btn f_r wid50">
 						<div class="dropdown">
-							<button class="skybluebd btn_dropdown">보고서 생성
+							<button class="primary btn_dropdown">보고서 생성
 								<span>
 									<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M6 10L10 5H2L6 10Z" fill="#2772FB"/>
+										<path d="M6 10L10 5H2L6 10Z" fill="#ffffff"/>
 									</svg>
 								</span>
 							</button>
 							<ul class="dropdown_list" style="display:none">
 								<li>
-									<button><i class="icon_ff sl_ff exel"></i> EXEL</button>
+									<button><i class="icon_ff sl_ff excel"></i> EXEL</button>
 								</li>
 								<li>
-									<button><i class="icon_ff sl_ff"></i> PDF</button>
+									<button><i class="icon_ff sl_ff pdf"></i> PDF</button>
 								</li>
 							</ul>
 						</div>
-						<button class="skybluebd"><i class="icon_ff sl_ff exel"></i>EXEL</button>
-						<button class="skybluebd"><i class="icon_ff sl_ff"></i>PDF</button>
-						<button class="skyblue"><i class="icon_setting"></i> 설정</button>
-						<button class="skyblue">새로고침</button>
+						<button class="line basics icon"><i class="icon_ff excel"></i>EXEL</button>
+						<button class="line basics icon"><i class="icon_ff pdf"></i>PDF</button>
+						<button class="disabled"><i class="icon_reset"></i>새로고침</button>
+						<button class="primary"><i class="icon_reset"></i>새로고침</button>
 					</div>
 				</div>
 				<div class="tbl_list">
@@ -350,10 +350,10 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td class="bluetxt wgt800">위임됨<span class="mandatxt"><i></i></span></td>
-								<td><i class="icon_list none"></i>상태없음</td>
+								<td class="circleOff"><i class="icon_list"></i>상태없음</td>
 								<td>
-									<i class="icon_ff"></i>
-									<i class="icon_ff exel"></i>
+									<i class="icon_ff pdf"></i>
+									<i class="icon_ff excel"></i>
 									<i class="icon_ff word"></i>
 									<i class="icon_ff csv"></i>
 									<i class="icon_ff hwp"></i>
@@ -368,10 +368,10 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td class="bluetxt wgt800">위임함<span class="mandatxt madna_ed"><i></i></span></td>
-								<td><i class="icon_pgs"></i>생성 진행중</td>
+								<td class="fileEdit"><i class="icon_pgs"></i>수정 진행중</td>
 								<td>
-									<i class="icon_ff"></i>
-									<i class="icon_ff exel"></i>
+									<i class="icon_ff pdf"></i>
+									<i class="icon_ff excel"></i>
 									<i class="icon_ff hwp"></i>
 									<i class="icon_ff text"></i>
 								</td>
@@ -384,11 +384,11 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>승인됨</td>
-								<td><i class="icon_list icheck"></i>생성</td>
+								<td class="filePlus"><i class="icon_list"></i>생성</td>
 								<td>
 									<i class="icon_ff hwp"></i>
 									<i class="icon_ff text"></i>
-									<i class="icon_ff exel"></i>
+									<i class="icon_ff excel"></i>
 								</td>
 								<td>Linux 표준모델 <i title="수신됨" class="icon_received"></i></td>
 							</tr>
@@ -399,7 +399,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>승인됨<span class="mandatxt"><i></i></span></td>
-								<td><i class="icon_list"></i>정상</td>
+								<td class="checkCircle"><i class="icon_list"></i>정상</td>
 								<td>CentOS(1503)</td>
 								<td><i class="icon_list sv_connect"></i>연결됨</td>
 							</tr>
@@ -410,7 +410,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>승인됨<span class="mandatxt madna_ed"><i></i></span></td>
-								<td><i class="icon_pgs inprogress_create"></i>수정 작업중</td>
+								<td class="fileEdit"><i class="icon_pgs"></i>수정 진행중</td>
 								<td>CentOS(1503)</td>
 								<td><i class="icon_list sv_disconnect"></i>연결끊김</td>
 							</tr>
@@ -421,7 +421,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>data1</td>
-								<td><i class="icon_pgs inprogress_pending"></i>수정 진행중</td>
+								<td class="trash"><i class="icon_pgs"></i>삭제 진행중</td>
 								<td>CentOS(1503)</td>
 								<td><i class="icon_list locked"></i>잠금</td>
 							</tr>
@@ -454,15 +454,15 @@
 				</div>
 				<div class="list_btn cl_both">
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow">Update</button>
+						<button class="line">생성</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line">Update</button>
 					</div>
 					<div class="list_right_btn f_r wid50">
-						<button class="skyblue">자가등록</button>
-						<button class="skyblue">수동 Recon</button>
-						<button class="skyblue">대량등록</button>
+						<button class="primary">자가등록</button>
+						<button class="primary">수동 Recon</button>
+						<button class="primary">대량등록</button>
 					</div>
 				</div>
 			</div>
