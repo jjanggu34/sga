@@ -122,4 +122,11 @@ button {
             }
         }
     }
+    &.mini_paging {
+        .currentpage {
+            em {
+                color:var(--primary);
+            }
+        }
+    }
 }

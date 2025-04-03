@@ -131,3 +131,6 @@ button.icon i {
   border-color: var(--primary) !important;
   background-color: var(--primary) !important;
 }
+.pagination.mini_paging .currentpage em {
+  color: var(--primary);
+}
