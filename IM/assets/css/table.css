@@ -36,7 +36,7 @@
 .default_tbl thead tr th {
   height: 35px;
   border: 0;
-  border-bottom: 1px solid var(--border-d);
+  border-bottom: 2px solid var(--border-d);
   font-size: var(--font-14);
   font-weight: var(--font-regular);
   color: var(--title);
@@ -64,13 +64,12 @@
   color: var(--content);
 }
 .default_tbl tbody tr td {
-  padding: 0 10px;
+  padding: 7px 10px;
   border: 0;
   border-bottom: 1px solid var(--border-d);
   font-size: var(--font-13);
   font-weight: var(--font-regular);
   color: var(--content);
-  line-height: 16px;
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;

@@ -35,9 +35,8 @@
         tr {
             th {
                 height:35px;
-                // padding:3px 10px;
                 border:0;
-                border-bottom:1px solid var(--border-d);
+                border-bottom:2px solid var(--border-d);
                 font-size:var(--font-14);
                 font-weight:var(--font-regular);
                 color:var(--title);
@@ -82,13 +81,12 @@
                 }
             }
             td {
-                padding:0 10px;
+                padding:7px 10px;
                 border:0;
                 border-bottom:1px solid var(--border-d);
                 font-size:var(--font-13);
                 font-weight:var(--font-regular);
                 color:var(--content);
-                line-height:16px;
                 text-align:center;
                 text-overflow:ellipsis;
                 white-space:nowrap;
