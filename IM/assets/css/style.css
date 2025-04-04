@@ -131,7 +131,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--text-disabled);
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_circleOff.svg");
   mask-image: url("../images/common/label/ico_circleOff.svg");
 }
@@ -150,7 +150,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_PlugConnected.svg");
   mask-image: url("../images/common/label/ico_PlugConnected.svg");
 }
@@ -169,7 +169,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_PlugZapOff.svg");
   mask-image: url("../images/common/label/ico_PlugZapOff.svg");
 }
@@ -188,7 +188,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_FilePlus.svg");
   mask-image: url("../images/common/label/ico_FilePlus.svg");
 }
@@ -207,7 +207,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--true);
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_checkCircle.svg");
   mask-image: url("../images/common/label/ico_checkCircle.svg");
 }
@@ -226,7 +226,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--primary);
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_FileEdit.svg");
   mask-image: url("../images/common/label/ico_FileEdit.svg");
 }
@@ -245,7 +245,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--primary);
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_FileEditLoader.svg");
   mask-image: url("../images/common/label/ico_FileEditLoader.svg");
 }
@@ -264,7 +264,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_downloadCircle.svg");
   mask-image: url("../images/common/label/ico_downloadCircle.svg");
 }
@@ -283,7 +283,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_PauseCircle.svg");
   mask-image: url("../images/common/label/ico_PauseCircle.svg");
 }
@@ -302,7 +302,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_trash.svg");
   mask-image: url("../images/common/label/ico_trash.svg");
 }
@@ -321,7 +321,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--true);
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/label/ico_bolt.svg");
   mask-image: url("../images/common/label/ico_bolt.svg");
 }
@@ -385,6 +385,30 @@
   background-color: var(--border-d);
 }
 
+/*********************************************************************
+#블릿텍스트
+*********************************************************************/
+/* . */
+.bul_dot > dt {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.bul_dot > dt::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-disabled);
+}
+
 /***************** 탭 *****************/
 .tab_wrap {
   border-bottom: 1px solid var(--border-d);
@@ -418,4 +442,28 @@
 }
 .tab_wrap.cont_in_tab {
   margin-bottom: 0;
+}
+
+/***************** 검색-상세정보 *****************/
+.detail_search_wrap {
+  margin-top: -1px;
+}
+.detail_search_wrap .detail_search_btn {
+  top: -48px;
+  width: auto;
+  height: 48px;
+  margin-left: 143px;
+  padding: 0 34px 0 20px;
+  border-radius: 0 6px 0 0;
+  line-height: 48px;
+}
+.detail_search_wrap .detail_search_btn i {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.detail_search_wrap .search_column4 {
+  padding-bottom: 10px;
+}
+.detail_search_wrap .search_column4 .col {
+  border: 0;
 }

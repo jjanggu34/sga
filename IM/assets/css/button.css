@@ -16,11 +16,12 @@
 
 .btn_box a {
   height: auto;
-  padding: 6px 14px 4px;
+  padding: 7px 14px 6px;
   font-size: var(--font-13);
   border-radius: 6px;
 }
 .btn_box a.big {
+  height: 38px;
   padding: 10px 14px;
   font-size: var(--font-14);
   font-weight: var(--font-medium);
@@ -28,11 +29,12 @@
 
 .btn_box button {
   height: auto;
-  padding: 6px 14px 4px;
+  padding: 7px 14px 6px;
   font-size: var(--font-13);
   border-radius: 6px;
 }
 .btn_box button.big {
+  height: 38px;
   padding: 10px 14px;
   font-size: var(--font-14);
   font-weight: var(--font-medium);
@@ -40,23 +42,12 @@
 
 .list_btn button {
   height: auto;
-  padding: 6px 14px 4px;
+  padding: 7px 14px 6px;
   font-size: var(--font-13);
   border-radius: 6px;
 }
 .list_btn button.big {
-  padding: 10px 14px;
-  font-size: var(--font-14);
-  font-weight: var(--font-medium);
-}
-
-button {
-  height: auto;
-  padding: 6px 14px 4px;
-  font-size: var(--font-13);
-  border-radius: 6px;
-}
-button.big {
+  height: 38px;
   padding: 10px 14px;
   font-size: var(--font-14);
   font-weight: var(--font-medium);
@@ -79,6 +70,7 @@ button.big {
 	#disabled
 ---------------------------------------------*/
 .disabled {
+  border: 1px solid var(--button-disabled);
   color: var(--text-disabled);
   background: var(--button-disabled);
 }
@@ -119,7 +111,7 @@ button.icon i.icon_reset {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #121212;
-  vertical-align: text-bottom;
+  vertical-align: sub;
   -webkit-mask-image: url("../images/common/ico_refresh.svg");
   mask-image: url("../images/common/ico_refresh.svg");
 }
@@ -128,48 +120,29 @@ button.icon i.icon_reset.init {
   transform: scaleX(-1);
 }
 button.disabled i {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
   background-color: var(--text-disabled) !important;
-  vertical-align: text-bottom;
 }
-
-/*---------------------------------------------
-	#search button
----------------------------------------------*/
-.search_box .btn_detail_search {
-  top: 50%;
-  right: 5px;
-  transform: translateY(-50%);
-  width: auto;
-  height: 36px;
-  padding: 7px 14px 6px;
-  border-radius: 7px;
-  color: var(--white);
-  line-height: 16px;
-  background: var(--primary);
-}
-
-/*---------------------------------------------
-	#select-sm
----------------------------------------------*/
-.normal {
+button.normal {
+  padding: 6px 12px;
   border: 1px solid var(--default);
+  border-radius: 6px;
   color: var(--content);
+  line-height: 16px;
   background: var(--white);
 }
-.normal.on {
+button.normal.icon_reset {
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  font-size: 0;
+  background: url("../images/common/ico_refresh.svg") no-repeat center/auto;
+}
+button.normal.on {
+  padding: 6px 12px 6px 6px;
   border: 1px solid var(--primary);
   color: var(--primary);
 }
-.normal.on::before {
+button.normal.on::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -181,9 +154,33 @@ button.disabled i {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--primary);
-  vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_check.svg");
-  mask-image: url("../images/common/ico_check.svg");
+  vertical-align: sub;
+  -webkit-mask-image: url("../images/common/ico_check_s.svg");
+  mask-image: url("../images/common/ico_check_s.svg");
+}
+
+/*---------------------------------------------
+	#search button
+---------------------------------------------*/
+.search_box .btn_search {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 95px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/common/ico_btn.svg") no-repeat center/auto;
+}
+.search_box .btn_detail_search {
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: auto;
+  height: 36px;
+  padding: 7px 14px 6px;
+  border-radius: 7px;
+  color: var(--white);
+  line-height: 16px;
+  background: var(--primary);
 }
 
 /*---------------------------------------------

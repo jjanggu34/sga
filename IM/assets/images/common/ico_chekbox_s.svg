@@ -1,14 +1,13 @@
-<svg id="ico_chekbox_s" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
   <defs>
     <clipPath id="clip-path">
-      <rect id="사각형_15229" data-name="사각형 15229" width="16" height="16" transform="translate(-4 -3)" fill="#fff" stroke="#8a8a8a" stroke-width="1.5"/>
+      <rect id="사각형_15426" data-name="사각형 15426" width="16" height="16" rx="3" transform="translate(-4 -3)" fill="none"/>
     </clipPath>
   </defs>
-  <g id="ico_chekbox_s-2" data-name="ico_chekbox_s" transform="translate(4 3)" clip-path="url(#clip-path)">
-    <g id="사각형_15263" data-name="사각형 15263" transform="translate(-4 -3)" fill="#fff" stroke="#bbb" stroke-width="1">
-      <rect width="16" height="16" rx="3" stroke="none"/>
-      <rect x="0.5" y="0.5" width="15" height="15" rx="2.5" fill="none"/>
+  <g id="ico_chekbox_s" transform="translate(4 3)" clip-path="url(#clip-path)">
+    <g id="그룹_625" data-name="그룹 625">
+      <path id="사각형_15425_-_윤곽선" data-name="사각형 15425 - 윤곽선" d="M3,1A2,2,0,0,0,1,3V13a2,2,0,0,0,2,2H13a2,2,0,0,0,2-2V3a2,2,0,0,0-2-2H3M3,0H13a3,3,0,0,1,3,3V13a3,3,0,0,1-3,3H3a3,3,0,0,1-3-3V3A3,3,0,0,1,3,0Z" transform="translate(-4 -3)" fill="#bbb"/>
+      <path id="Icon_feather-check" data-name="Icon feather-check" d="M12.315,9,7.973,13.341,6,11.368" transform="translate(-5.341 -6.47)" fill="none" stroke="#bbb" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     </g>
-    <path id="Icon_feather-check" data-name="Icon feather-check" d="M12.315,9,7.973,13.341,6,11.368" transform="translate(-5.341 -6.47)" fill="none" stroke="#bbb" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   </g>
 </svg>

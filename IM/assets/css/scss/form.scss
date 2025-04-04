@@ -26,32 +26,17 @@ input:focus-visible {
 }
 .search_box {
     max-width:458px;
-    height:46px;
+    height:48px;
     margin:0 auto;
     border:0;
     .search_inputbox {
         width:$wh100;
-        height:46px;
+        height:$wh100;
         border:1px solid var(--border-d);
         border-radius:7px;
     }
-    .btn_search {
-        position:absolute;
-        top:50%;
-        transform:translateY(-50%);
-        width:20px;
-        height:20px;
-    }
     &+ .tab_wrap.cont_in_tab {
         margin-top:auto;
-    }
-}
-
-.detail_search_wrap {
-    .detail_search_btn {
-        top:-35px;
-        height:35px;
-        margin-left:135px;
     }
 }
 
@@ -81,16 +66,16 @@ $labels: "check_stl_lab", "radio_stl_lab";
     &+label {
         color:var(--content);
         &::before {
-            content:"";
             @include state(var(--default));
-            -webkit-mask-image:url("../images/common/ico_checkbox_s.svg");
-            mask-image:url("../images/common/ico_checkbox_s.svg");
+            -webkit-mask-image:url("../images/common/ico_chekbox_s.svg");
+            mask-image:url("../images/common/ico_chekbox_s.svg");
+            border-radius:3px;
         }
     }
     &:checked {
         &+ label {
             &::before {
-                background:url(../images/common/check_on.svg)no-repeat center/auto var(--primary);
+                background-color:var(--primary);
             }
             &::after {
                 content:none;
@@ -99,7 +84,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
     }
     &:disabled {
         &+ label::before {
-            background:url(../images/common/check_dis.svg) no-repeat center/ auto var(--button-disabled);
+            background-color:var(--button-disabled);
         }
     }
 }

@@ -13,15 +13,16 @@
     }
 }
 
-$btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
+$btns: ".btn_box a", ".btn_box button", ".list_btn button";
 
 @each $btn in $btns {
     #{$btn} {
         height:auto;
-        padding:6px 14px 4px;
+        padding:7px 14px 6px;
         font-size:var(--font-13);
         border-radius:6px;
         &.big {
+            height:38px;
             padding:10px 14px;
             font-size:var(--font-14);
             font-weight:var(--font-medium);
@@ -47,6 +48,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 	#disabled
 ---------------------------------------------*/
 .disabled {
+    border:1px solid var(--button-disabled);
     color:var(--text-disabled);
     background:var(--button-disabled);
 }
@@ -90,7 +92,33 @@ button {
     }
     &.disabled {
         i {
-            @include state(var(--text-disabled)!important);
+            background-color:var(--text-disabled) !important;
+        }
+    }
+    &.normal {
+        padding:6px 12px;
+        border:1px solid var(--default);
+        border-radius:6px;
+        color:var(--content);
+        line-height:16px;
+        background:var(--white);
+        &.icon_reset {
+            width:30px;
+            height:30px;
+            padding:6px;
+            font-size:0;
+            background:url("../images/common/ico_refresh.svg")no-repeat center/auto;
+        }
+        &.on {
+            padding:6px 12px 6px 6px;
+            border:1px solid var(--primary);
+            &::before {
+                content:"";
+                @include state(var(--primary));
+                -webkit-mask-image:url("../images/common/ico_check_s.svg");
+                mask-image:url("../images/common/ico_check_s.svg");
+            }
+            color:var(--primary);
         }
     }
 }
@@ -99,6 +127,14 @@ button {
 	#search button
 ---------------------------------------------*/
 .search_box {
+    .btn_search {
+        top:50%;
+        transform:translateY(-50%);
+        right:95px;
+        width:24px;
+        height:24px;
+        background:url("../images/common/ico_btn.svg")no-repeat center/auto;
+    }
     .btn_detail_search{
         top:50%;
         right:5px;
@@ -110,26 +146,6 @@ button {
         color:var(--white);
         line-height:16px;
         background:var(--primary);
-    }
-}
-
-
-/*---------------------------------------------
-	#select-sm
----------------------------------------------*/
-.normal {
-    border:1px solid var(--default);
-    color:var(--content);
-    background:var(--white);
-    &.on {
-        border:1px solid var(--primary);
-        &::before {
-            content:"";
-            @include state(var(--primary));
-            -webkit-mask-image:url("../images/common/ico_check.svg");
-            mask-image:url("../images/common/ico_check.svg");
-        }
-        color:var(--primary);
     }
 }
 
