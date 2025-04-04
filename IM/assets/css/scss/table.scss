@@ -74,6 +74,7 @@
                 font-weight:var(--font-regular);
                 color:var(--title);
                 line-height:16px;
+                background:var(--);
             }
             .sort_column {
                 div {
@@ -135,17 +136,6 @@
             font-weight:var(--font-medium);
             color:var(--info);
             vertical-align:unset;
-        }
-    }
-}
-
-/*---------------------------------------------
-    #row type1
----------------------------------------------*/
-.default_tbl.type1 {
-    tr {
-        th {
-            background:var(--table-th);
         }
     }
 }

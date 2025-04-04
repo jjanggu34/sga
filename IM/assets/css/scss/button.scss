@@ -15,9 +15,9 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 
 @each $btn in $btns {
     #{$btn} {
-        padding:0 14px;
+        height:auto;
+        padding:6px 14px 4px;
         font-size:var(--font-14);
-        line-height: 30px;
         &.big {
             height:36px;
             line-height:36px;
@@ -30,6 +30,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 ---------------------------------------------*/
 /* im */
 .primary {
+    border:1px solid var(--primary);
     color:var(--white);
     background:var(--primary);
     // focus

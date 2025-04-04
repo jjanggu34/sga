@@ -13,9 +13,9 @@
 }
 
 .btn_box a {
-  padding: 0 14px;
+  height: auto;
+  padding: 6px 14px 4px;
   font-size: var(--font-14);
-  line-height: 30px;
 }
 .btn_box a.big {
   height: 36px;
@@ -23,9 +23,9 @@
 }
 
 .btn_box button {
-  padding: 0 14px;
+  height: auto;
+  padding: 6px 14px 4px;
   font-size: var(--font-14);
-  line-height: 30px;
 }
 .btn_box button.big {
   height: 36px;
@@ -33,9 +33,9 @@
 }
 
 .list_btn button {
-  padding: 0 14px;
+  height: auto;
+  padding: 6px 14px 4px;
   font-size: var(--font-14);
-  line-height: 30px;
 }
 .list_btn button.big {
   height: 36px;
@@ -47,6 +47,7 @@
 ---------------------------------------------*/
 /* im */
 .primary {
+  border: 1px solid var(--primary);
   color: var(--white);
   background: var(--primary);
 }

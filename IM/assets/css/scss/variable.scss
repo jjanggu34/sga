@@ -44,8 +44,9 @@ $tr: right !important;//text-align:right;
     display:inline-block;
     width:$width;
     height:$height;
-    // 나중에 지울 것
-    background:var(--primary);
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-image:none;
 }
 
 @mixin label {
@@ -54,4 +55,16 @@ $tr: right !important;//text-align:right;
     // padding:5px 24px 5px 8px;
     border-radius:14px;
     font-size:var(--font-13);
+}
+
+@mixin state($backColor) {
+    width:16px;
+    height:16px;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    -webkit-mask-size:100%;
+    mask-size:100%;
+    -webkit-mask-position:center;
+    mask-position:center;
+    background-color:$backColor;
 }

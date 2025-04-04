@@ -68,82 +68,101 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 @each $icon in $icons {
     .#{$icon} {
-        @if $icon == "icon_ff" {
-            @include icon(24px, 24px);
-        } @else {
-            @include icon(16px, 16px);
-        }
+        @include icon(24px, 24px);
     }
 }
 
 .circleOff {
-    color:var(--text-disabled);
+    color:var(--text-disabled) !important;
     .icon_list {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' stroke='%23121212' d='M0-.319h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(0 .319)'%3E%3Cg fill='none' stroke='%23999999'%3E%3Cg transform='translate(0 -.319)'%3E%3Ccircle cx='12' cy='12' r='12' stroke='none'/%3E%3Ccircle cx='12' cy='12' r='11.5'/%3E%3C/g%3E%3Cpath stroke-linecap='round' d='M18.5 12.181h-12'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        @include state(var(--text-disabled));
+        -webkit-mask-image:url("../images/common/label/ico_circleOff.svg");
+        mask-image:url("../images/common/label/ico_circleOff.svg");
     }
 }
 .plugConnected {
-    color:#1863BA;
+    color:#1863BA !important;
     .icon_list {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23121212' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg fill='%231863BA' clip-path='url(%23a)'%3E%3Cpath d='M9.936 3.973a.739.739 0 0 0-.739.739v2.909h1.479V4.712a.739.739 0 0 0-.739-.739m4.246 0a.739.739 0 0 0-.739.739v2.909h1.479V4.712a.739.739 0 0 0-.739-.739'/%3E%3Cpath d='M23.907 10.499a12 12 0 0 0-4.04-7.542 11.94 11.94 0 0 0-15.737 0 12 12 0 0 0-4.042 7.542 11.622 11.622 0 0 0 .3 4.412 12.223 12.223 0 0 0 1.853 3.974 11.7 11.7 0 0 0 3.162 3.061 10.938 10.938 0 0 0 4.233 1.647.74.74 0 1 0 .239-1.459 10.426 10.426 0 0 1-8.323-11.45A10.587 10.587 0 0 1 11.89 1.475H12a10.584 10.584 0 0 1 10.434 9.207 10.426 10.426 0 0 1-8.323 11.45.736.736 0 0 0-.08.018 1.18 1.18 0 0 1-.98-.1.618.618 0 0 1-.258-.481v-6.245h1.826a2.089 2.089 0 0 0 2.089-2.089V8.36H7.28v4.875a2.09 2.09 0 0 0 2.089 2.089h1.951v6.324a2.1 2.1 0 0 0 .881 1.61 2.431 2.431 0 0 0 1.414.428 3.033 3.033 0 0 0 .777-.1 10.938 10.938 0 0 0 4.2-1.641 11.7 11.7 0 0 0 3.162-3.061A12.222 12.222 0 0 0 23.6 14.91a11.623 11.623 0 0 0 .3-4.412'/%3E%3C/g%3E%3C/svg%3E");
+        @include state(#1863BA);
+        -webkit-mask-image:url("../images/common/label/ico_PlugConnected.svg");
+        mask-image:url("../images/common/label/ico_PlugConnected.svg");
     }
 }
 .plugZapOff {
-    color:var(--false);
+    color:var(--false) !important;
     .icon_list {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23121212' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23FF0000' d='M9.936 3.973a.739.739 0 0 0-.739.739v2.909h1.479V4.712a.739.739 0 0 0-.739-.739m4.246 0a.739.739 0 0 0-.739.739v2.909h1.479V4.712a.739.739 0 0 0-.739-.739'/%3E%3Cpath fill='%23FF0000' d='M23.907 10.499a12 12 0 0 0-4.04-7.542 11.94 11.94 0 0 0-15.737 0 12 12 0 0 0-4.042 7.542 11.622 11.622 0 0 0 .3 4.412 12.223 12.223 0 0 0 1.853 3.974 11.7 11.7 0 0 0 3.162 3.061 10.938 10.938 0 0 0 4.233 1.647.74.74 0 1 0 .239-1.459 10.426 10.426 0 0 1-8.323-11.45A10.587 10.587 0 0 1 11.89 1.475H12a10.584 10.584 0 0 1 10.434 9.207 10.426 10.426 0 0 1-8.323 11.45.736.736 0 0 0-.08.018 1.18 1.18 0 0 1-.98-.1.618.618 0 0 1-.258-.481v-6.245h1.826a2.089 2.089 0 0 0 2.089-2.089V8.36H7.28v4.875a2.09 2.09 0 0 0 2.089 2.089h1.951v6.324a2.1 2.1 0 0 0 .881 1.61 2.431 2.431 0 0 0 1.414.428 3.033 3.033 0 0 0 .777-.1 10.938 10.938 0 0 0 4.2-1.641 11.7 11.7 0 0 0 3.162-3.061A12.222 12.222 0 0 0 23.6 14.91a11.623 11.623 0 0 0 .3-4.412'/%3E%3Cpath fill='none' stroke='%23FF0000' stroke-width='1.5' d='m1.5 7.5 20 9' data-name='선 128'/%3E%3C/g%3E%3C/svg%3E");
+        @include state(var(--false));
+        -webkit-mask-image:url("../images/common/label/ico_PlugZapOff.svg");
+        mask-image:url("../images/common/label/ico_PlugZapOff.svg");
     }
 }
 .filePlus {
-    color:#1863BA;
+    color:#1863BA !important;
     .icon_list {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23121212' stroke='%23121212' stroke-width='1.5' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg fill='none' stroke='%231863BA' clip-path='url(%23a)'%3E%3Cg transform='translate(0 .043)'%3E%3Ccircle cx='11.783' cy='11.783' r='11.783' stroke='none'/%3E%3Ccircle cx='11.783' cy='11.783' r='11.283'/%3E%3C/g%3E%3Cpath stroke-linecap='round' d='M6.757 11.826H16.81M11.783 6.8v10.053'/%3E%3C/g%3E%3C/svg%3E");
+        @include state(#1863BA );
+        -webkit-mask-image:url("../images/common/label/ico_FilePlus.svg");
+        mask-image:url("../images/common/label/ico_FilePlus.svg");
     }
 }
 .checkCircle {
-    color:var(--true);
+    color:var(--true) !important;
     .icon_list {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%231276ea' stroke='%23121212' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg fill='none' stroke='%2323AC3D' clip-path='url(%23a)'%3E%3Cg transform='translate(0 .043)'%3E%3Ccircle cx='11.908' cy='11.908' r='11.908' stroke='none'/%3E%3Ccircle cx='11.908' cy='11.908' r='11.408'/%3E%3C/g%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m16.608 8.72-6.463 6.462-2.937-2.937' data-name='Icon feather-check'/%3E%3C/g%3E%3C/svg%3E");
+        @include state(var(--true));
+        -webkit-mask-image:url("../images/common/label/ico_checkCircle.svg");
+        mask-image:url("../images/common/label/ico_checkCircle.svg");
     }
 }
 .fileEdit {
-    color:var(--primary);
+    color:var(--primary) !important;
     .icon_pgs {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' stroke='%23121212' stroke-width='1.5' d='M.5.5h24v24H.5z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(-.5 -.5)'%3E%3Cpath fill='none' stroke='%23F9AF1C' stroke-linecap='round' stroke-linejoin='round' d='m1.25 23.25 2.169-7 4.959 4.959Zm2.169-7.004L16.312 3.353l4.959 4.96L8.378 21.204zM22.758 3.85l-1.983-1.984a2.1 2.1 0 0 0-2.975 0L16.312 3.35l4.958 4.959 1.488-1.488a2.1 2.1 0 0 0 0-2.971ZM1.296 23.25h22'/%3E%3C/g%3E%3C/svg%3E");
+        @include state(var(--primary));
+        -webkit-mask-image:url("../images/common/label/ico_FileEdit.svg");
+        mask-image:url("../images/common/label/ico_FileEdit.svg");
     }
 }
 .fileEditLoader {
-    color:var(--primary);
+    color:var(--primary) !important;
     .icon_pgs {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' stroke='%23121212' d='M.5.5h24v24H.5z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(-.5 -.5)'%3E%3Cg stroke='%23F9AF1C' transform='translate(2.121 1.434)'%3E%3Cpath fill='none' stroke-linecap='round' stroke-linejoin='round' d='M13.786.811v4.048a4.054 4.054 0 0 1-2.155 3.582l-1.293.686a.811.811 0 0 0 .026 1.307l1.079.5m-9.01 7.717v-4.034a4.055 4.055 0 0 1 2.348-3.678l1.1-.509a.811.811 0 0 0 .026-1.3l-1.366-.748a4.054 4.054 0 0 1-2.108-3.554V.811M.879.566h14.939M9.879 19.021h-9'/%3E%3Cpath fill='none' d='M15.024 21.186a5.406 5.406 0 1 1 5.411-5.4 5.412 5.412 0 0 1-5.411 5.4'/%3E%3Ccircle cx='5.406' cy='5.406' r='5.406' fill='none' stroke-linecap='round' stroke-linejoin='round' transform='translate(9.618 10.377)'/%3E%3Cpath fill='%23fff' d='M15.137 13.26v2.523l1.716 1.081'/%3E%3Cpath fill='none' stroke-linecap='round' stroke-linejoin='round' d='M15.137 13.26v2.523l1.716 1.081'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        @include state(var(--primary));
+        -webkit-mask-image:url("../images/common/label/ico_FileEditLoader.svg");
+        mask-image:url("../images/common/label/ico_FileEditLoader.svg");
     }
 }
 .downloadCircle {
-    color:#1863BA;
+    color:#1863BA !important;
     .icon_list {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' stroke='%23121212' stroke-width='1.5' d='M0-.319h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(0 .319)'%3E%3Cg fill='none' stroke='%231863BA' transform='translate(0 -.319)'%3E%3Ccircle cx='12' cy='12' r='12' stroke='none'/%3E%3Ccircle cx='12' cy='12' r='11.5'/%3E%3C/g%3E%3Cpath fill='none' stroke='%231863BA' stroke-miterlimit='10' d='M11.615 14.184V4.973'/%3E%3Cpath fill='%231863BA' d='m7.655 11.362 3.848 7.027 4.074-7.027Z'/%3E%3C/g%3E%3C/svg%3E");
+        @include state(#1863BA );
+        -webkit-mask-image:url("../images/common/label/ico_downloadCircle.svg");
+        mask-image:url("../images/common/label/ico_downloadCircle.svg");
     }
 }
 .pauseCircle {
-    color:var(--false);
+    color:var(--false) !important;
     .icon_list {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' stroke='%23121212' d='M0-.319h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(0 .319)'%3E%3Cg fill='none' stroke='%23FF0000'%3E%3Cg transform='translate(0 -.319)'%3E%3Ccircle cx='12' cy='12' r='12' stroke='none'/%3E%3Ccircle cx='12' cy='12' r='11.5'/%3E%3C/g%3E%3Cpath stroke-linecap='round' d='M12 5.681v12'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        @include state(var(--false) );
+        -webkit-mask-image:url("../images/common/label/ico_PauseCircle.svg");
+        mask-image:url("../images/common/label/ico_PauseCircle.svg");
     }
 }
 .trash {
-    color:var(--false);
+    color:var(--false) !important;
     .icon_list, .icon_pgs {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' stroke='%23121212' stroke-width='1.5' d='M-.148 0h24v24h-24z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(.148)'%3E%3Cg fill='none' stroke='%23FF0000'%3E%3Cpath stroke-linecap='round' stroke-miterlimit='10' d='M9.976 13.612v5.501m4.642-5.501v5.501'/%3E%3Cpath stroke-linejoin='round' d='M6.108 7.538h12.377v14.67H6.108z'/%3E%3Cpath stroke-linecap='round' stroke-miterlimit='10' d='M3.787 5.36h17.019'/%3E%3Cpath stroke-linejoin='round' d='M8.429 5.36V1.693h7.737V5.36'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        @include state(var(--false));
+        -webkit-mask-image:url("../images/common/label/ico_trash.svg");
+        mask-image:url("../images/common/label/ico_trash.svg");
     }
 }
 .bolt {
-    color:var(--true);
+    color:var(--true) !important;
     .icon_list {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='none' stroke='%23121212' d='M-.46.5h24v24h-24z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(.46 -.5)'%3E%3Cg stroke='%2323AC3D' transform='translate(1.791 1.25)'%3E%3Ccircle cx='9.013' cy='9.013' r='9.013' fill='none' stroke-linecap='round' stroke-linejoin='round' transform='translate(0 3.358)'/%3E%3Cpath fill='%23fff' d='M9.013 0v11.601'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        @include state(var(--true) );
+        -webkit-mask-image:url("../images/common/label/ico_bolt.svg");
+        mask-image:url("../images/common/label/ico_bolt.svg");
     }
 }
 
 .icon_ff {
+    background-position:center !important;
     &.pdf {
         background-image:url("../images/common/ico_pdf.svg");
     }
@@ -152,19 +171,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.word {
         background-image:url("../images/common/ico_doc.svg");
-        background-position:unset;
     }
     &.csv {
         background-image:url("../images/common/ico_csv.svg");
-        background-position:unset;
     }
     &.hwp {
         background-image:url("../images/common/ico_hwp.svg");
-        background-position:unset;
     }
     &.text {
         background-image:url("../images/common/ico_txt.svg");
-        background-position:unset;
     }
     &.ppx {
         background-image:url("../images/common/ico_ppx.svg");
@@ -176,7 +191,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
         @each $extension in $extensions {
             &.#{$extension} {
-                background-position:unset;
+                background-position:center;
             }
         }
     }
