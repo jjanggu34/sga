@@ -163,6 +163,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .icon_ff {
     background-position:center !important;
+    margin:0;
     &.pdf {
         background-image:url("../images/common/ico_pdf.svg");
     }
@@ -187,6 +188,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     &.sl_ff {
         height:16px;
         background-size:contain;
+        margin-bottom:0;
         $extensions: "word", "csv", "hwp", "text";
 
         @each $extension in $extensions {

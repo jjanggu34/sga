@@ -87,7 +87,20 @@ input:focus-visible {
   color: var(--content);
 }
 .check_stl + label::before {
-  background: url(../images/common/check_off.svg) no-repeat center/auto;
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--default);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_checkbox_s.svg");
+  mask-image: url("../images/common/ico_checkbox_s.svg");
 }
 .check_stl:checked + label::before {
   background: url(../images/common/check_on.svg) no-repeat center/auto var(--primary);

@@ -1,3 +1,5 @@
+@use 'variable' as *;
+
 /*---------------------------------------------
 	#상단 버튼
     #스크롤시 고정할 상단버튼 "list_btn_stk" 추가
@@ -11,16 +13,18 @@
     }
 }
 
-$btns: ".btn_box a", ".btn_box button", ".list_btn button";
+$btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 
 @each $btn in $btns {
     #{$btn} {
         height:auto;
         padding:6px 14px 4px;
-        font-size:var(--font-14);
+        font-size:var(--font-13);
+        border-radius:6px;
         &.big {
-            height:36px;
-            line-height:36px;
+            padding:10px 14px;
+            font-size:var(--font-14);
+            font-weight:var(--font-medium);
         }
     }
 }
@@ -31,7 +35,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 /* im */
 .primary {
     border:1px solid var(--primary);
-    color:var(--white);
+    color:#121212;
     background:var(--primary);
     // focus
     &:focus-visible {
@@ -56,18 +60,13 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 	#line
 ---------------------------------------------*/
 .line {
-    color:var(--primary);
-    border:1px solid var(--primary);
-    background:var(--white);
+    font-size:var(--font-13);
+    color:var(--content);
+    border:1px solid var(--border-d);
     // focus
     &:focus-visible {
-        color:var(--button-hover);
-        border:1px solid var(--button-hover);
-    }
-    &.basics {
-        font-size:var(--font-13);
-        color:var(--title);
-        border:1px solid var(--border-d);
+        color:#121212;
+        border:1px solid var(--content);
     }
 }
 
@@ -76,9 +75,22 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 ---------------------------------------------*/
 button {
     &.icon {
-    padding:0 14px 0 8px;
+    padding:7px 14px 6px 7px;
         i {
-            margin-top:2px;
+            &.icon_reset {
+                @include state(#121212);
+                -webkit-mask-image:url("../images/common/ico_refresh.svg");
+                mask-image:url("../images/common/ico_refresh.svg");
+                &.init {
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+    &.disabled {
+        i {
+            @include state(var(--text-disabled)!important);
         }
     }
 }
@@ -98,6 +110,26 @@ button {
         color:var(--white);
         line-height:16px;
         background:var(--primary);
+    }
+}
+
+
+/*---------------------------------------------
+	#select-sm
+---------------------------------------------*/
+.normal {
+    border:1px solid var(--default);
+    color:var(--content);
+    background:var(--white);
+    &.on {
+        border:1px solid var(--primary);
+        &::before {
+            content:"";
+            @include state(var(--primary));
+            -webkit-mask-image:url("../images/common/ico_check.svg");
+            mask-image:url("../images/common/ico_check.svg");
+        }
+        color:var(--primary);
     }
 }
 

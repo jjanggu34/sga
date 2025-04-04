@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* 변수 지정하기 */
+/* mixin 함수 선언하기 */
 /*---------------------------------------------
 	#상단 버튼
     #스크롤시 고정할 상단버튼 "list_btn_stk" 추가
@@ -15,31 +17,49 @@
 .btn_box a {
   height: auto;
   padding: 6px 14px 4px;
-  font-size: var(--font-14);
+  font-size: var(--font-13);
+  border-radius: 6px;
 }
 .btn_box a.big {
-  height: 36px;
-  line-height: 36px;
+  padding: 10px 14px;
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
 }
 
 .btn_box button {
   height: auto;
   padding: 6px 14px 4px;
-  font-size: var(--font-14);
+  font-size: var(--font-13);
+  border-radius: 6px;
 }
 .btn_box button.big {
-  height: 36px;
-  line-height: 36px;
+  padding: 10px 14px;
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
 }
 
 .list_btn button {
   height: auto;
   padding: 6px 14px 4px;
-  font-size: var(--font-14);
+  font-size: var(--font-13);
+  border-radius: 6px;
 }
 .list_btn button.big {
-  height: 36px;
-  line-height: 36px;
+  padding: 10px 14px;
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
+}
+
+button {
+  height: auto;
+  padding: 6px 14px 4px;
+  font-size: var(--font-13);
+  border-radius: 6px;
+}
+button.big {
+  padding: 10px 14px;
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
 }
 
 /*---------------------------------------------
@@ -48,7 +68,7 @@
 /* im */
 .primary {
   border: 1px solid var(--primary);
-  color: var(--white);
+  color: #121212;
   background: var(--primary);
 }
 .primary:focus-visible {
@@ -73,28 +93,52 @@
 	#line
 ---------------------------------------------*/
 .line {
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  background: var(--white);
+  font-size: var(--font-13);
+  color: var(--content);
+  border: 1px solid var(--border-d);
 }
 .line:focus-visible {
-  color: var(--button-hover);
-  border: 1px solid var(--button-hover);
-}
-.line.basics {
-  font-size: var(--font-13);
-  color: var(--title);
-  border: 1px solid var(--border-d);
+  color: #121212;
+  border: 1px solid var(--content);
 }
 
 /*---------------------------------------------
 	#button에 icon 있을 경우
 ---------------------------------------------*/
 button.icon {
-  padding: 0 14px 0 8px;
+  padding: 7px 14px 6px 7px;
 }
-button.icon i {
-  margin-top: 2px;
+button.icon i.icon_reset {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #121212;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_refresh.svg");
+  mask-image: url("../images/common/ico_refresh.svg");
+}
+button.icon i.icon_reset.init {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+button.disabled i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled) !important;
+  vertical-align: text-bottom;
 }
 
 /*---------------------------------------------
@@ -111,6 +155,35 @@ button.icon i {
   color: var(--white);
   line-height: 16px;
   background: var(--primary);
+}
+
+/*---------------------------------------------
+	#select-sm
+---------------------------------------------*/
+.normal {
+  border: 1px solid var(--default);
+  color: var(--content);
+  background: var(--white);
+}
+.normal.on {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.normal.on::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--primary);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_check.svg");
+  mask-image: url("../images/common/ico_check.svg");
 }
 
 /*---------------------------------------------

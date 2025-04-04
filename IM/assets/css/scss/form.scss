@@ -81,7 +81,10 @@ $labels: "check_stl_lab", "radio_stl_lab";
     &+label {
         color:var(--content);
         &::before {
-            background:url(../images/common/check_off.svg)no-repeat center/auto;
+            content:"";
+            @include state(var(--default));
+            -webkit-mask-image:url("../images/common/ico_checkbox_s.svg");
+            mask-image:url("../images/common/ico_checkbox_s.svg");
         }
     }
     &:checked {

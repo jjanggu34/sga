@@ -121,6 +121,7 @@
   color: var(--text-disabled) !important;
 }
 .circleOff .icon_list {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -130,6 +131,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--text-disabled);
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_circleOff.svg");
   mask-image: url("../images/common/label/ico_circleOff.svg");
 }
@@ -138,6 +140,7 @@
   color: #1863BA !important;
 }
 .plugConnected .icon_list {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -147,6 +150,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_PlugConnected.svg");
   mask-image: url("../images/common/label/ico_PlugConnected.svg");
 }
@@ -155,6 +159,7 @@
   color: var(--false) !important;
 }
 .plugZapOff .icon_list {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -164,6 +169,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_PlugZapOff.svg");
   mask-image: url("../images/common/label/ico_PlugZapOff.svg");
 }
@@ -172,6 +178,7 @@
   color: #1863BA !important;
 }
 .filePlus .icon_list {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -181,6 +188,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_FilePlus.svg");
   mask-image: url("../images/common/label/ico_FilePlus.svg");
 }
@@ -189,6 +197,7 @@
   color: var(--true) !important;
 }
 .checkCircle .icon_list {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -198,6 +207,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--true);
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_checkCircle.svg");
   mask-image: url("../images/common/label/ico_checkCircle.svg");
 }
@@ -206,6 +216,7 @@
   color: var(--primary) !important;
 }
 .fileEdit .icon_pgs {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -215,6 +226,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--primary);
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_FileEdit.svg");
   mask-image: url("../images/common/label/ico_FileEdit.svg");
 }
@@ -223,6 +235,7 @@
   color: var(--primary) !important;
 }
 .fileEditLoader .icon_pgs {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -232,6 +245,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--primary);
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_FileEditLoader.svg");
   mask-image: url("../images/common/label/ico_FileEditLoader.svg");
 }
@@ -240,6 +254,7 @@
   color: #1863BA !important;
 }
 .downloadCircle .icon_list {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -249,6 +264,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_downloadCircle.svg");
   mask-image: url("../images/common/label/ico_downloadCircle.svg");
 }
@@ -257,6 +273,7 @@
   color: var(--false) !important;
 }
 .pauseCircle .icon_list {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -266,6 +283,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_PauseCircle.svg");
   mask-image: url("../images/common/label/ico_PauseCircle.svg");
 }
@@ -274,6 +292,7 @@
   color: var(--false) !important;
 }
 .trash .icon_list, .trash .icon_pgs {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -283,6 +302,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_trash.svg");
   mask-image: url("../images/common/label/ico_trash.svg");
 }
@@ -291,6 +311,7 @@
   color: var(--true) !important;
 }
 .bolt .icon_list {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -300,12 +321,14 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--true);
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_bolt.svg");
   mask-image: url("../images/common/label/ico_bolt.svg");
 }
 
 .icon_ff {
   background-position: center !important;
+  margin: 0;
 }
 .icon_ff.pdf {
   background-image: url("../images/common/ico_pdf.svg");
@@ -331,6 +354,7 @@
 .icon_ff.sl_ff {
   height: 16px;
   background-size: contain;
+  margin-bottom: 0;
 }
 .icon_ff.sl_ff.word {
   background-position: center;
