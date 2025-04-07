@@ -74,6 +74,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 
 /*---------------------------------------------
 	#button에 icon 있을 경우
+    #그 외 버튼
 ---------------------------------------------*/
 button {
     &.icon {
@@ -121,6 +122,21 @@ button {
             color:var(--primary);
         }
     }
+    /* 테이블 안 토글 버튼 */
+    &.icon_arrow_open {
+        @include state(var(--content));
+        -webkit-mask-image:url("../images/common/icon_arrow_open.svg");
+        mask-image:url("../images/common/icon_arrow_open.svg");
+    }
+}
+
+/* close */
+$closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn", "sych_mnt_toast .btn_close";
+
+@each $close in $closes {
+    .#{$close} {
+        background:url("../images/common/close.svg")no-repeat right center;
+    }
 }
 
 /*---------------------------------------------
@@ -146,6 +162,22 @@ button {
         color:var(--white);
         line-height:16px;
         background:var(--primary);
+    }
+}
+
+.btn_box {
+    .icon_reset {
+        padding:6px 12px 6px 6px;
+        line-height:16px;
+        &::before {
+            content:"";
+            @include state(#121212);
+            -webkit-mask-image:url("../images/common/ico_refresh.svg");
+            mask-image:url("../images/common/ico_refresh.svg");
+        }
+    }
+    .primary {
+        font-weight:var(--font-medium);
     }
 }
 

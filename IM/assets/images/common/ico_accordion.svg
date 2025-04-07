@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="mask" width="16" height="16" fill="#b621ff" opacity="0.62"/>
+    </clipPath>
+  </defs>
+  <g id="ico__accordion" data-name="ico_ accordion" clip-path="url(#clip-path)">
+    <path id="passs" d="M4,4V0H0" transform="translate(10.204 6.495) rotate(135)" fill="none" stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

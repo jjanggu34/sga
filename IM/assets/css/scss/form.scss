@@ -12,6 +12,8 @@ input:focus-visible {
 }
 /* disabled */
 .form_contrl {
+    border:1px solid var(--default);
+    border-radius:6px;
     &:disabled {
         background:var(--button-disabled);
     }
@@ -26,17 +28,14 @@ input:focus-visible {
 }
 .search_box {
     max-width:458px;
-    height:48px;
+    height:50px;
     margin:0 auto;
     border:0;
     .search_inputbox {
         width:$wh100;
-        height:$wh100;
+        height:48px;
         border:1px solid var(--border-d);
         border-radius:7px;
-    }
-    &+ .tab_wrap.cont_in_tab {
-        margin-top:auto;
     }
 }
 
@@ -114,6 +113,7 @@ textarea, textarea[readonly] { background: var(--btn--color-dark); }
 ---------------------------------------------*/
 select{
     &.form_contrl {
-        background: url(../images/common/select_arrow.png) no-repeat right 50% var(--sub-select);
+        border:1px solid var(--default);
+        background: url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--white);
     }
 }

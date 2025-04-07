@@ -96,7 +96,11 @@
 
 /*---------------------------------------------
 	#button에 icon 있을 경우
+    #그 외 버튼
 ---------------------------------------------*/
+button {
+  /* 테이블 안 토글 버튼 */
+}
 button.icon {
   padding: 7px 14px 6px 7px;
 }
@@ -158,6 +162,38 @@ button.normal.on::before {
   -webkit-mask-image: url("../images/common/ico_check_s.svg");
   mask-image: url("../images/common/ico_check_s.svg");
 }
+button.icon_arrow_open {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--content);
+  vertical-align: sub;
+  -webkit-mask-image: url("../images/common/icon_arrow_open.svg");
+  mask-image: url("../images/common/icon_arrow_open.svg");
+}
+
+/* close */
+.detail_search_btn i {
+  background: url("../images/common/close.svg") no-repeat right center;
+}
+
+.entrybox .btn_entry_del:after {
+  background: url("../images/common/close.svg") no-repeat right center;
+}
+
+.small_delbtn {
+  background: url("../images/common/close.svg") no-repeat right center;
+}
+
+.sych_mnt_toast .btn_close {
+  background: url("../images/common/close.svg") no-repeat right center;
+}
 
 /*---------------------------------------------
 	#search button
@@ -181,6 +217,30 @@ button.normal.on::before {
   color: var(--white);
   line-height: 16px;
   background: var(--primary);
+}
+
+.btn_box .icon_reset {
+  padding: 6px 12px 6px 6px;
+  line-height: 16px;
+}
+.btn_box .icon_reset::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #121212;
+  vertical-align: sub;
+  -webkit-mask-image: url("../images/common/ico_refresh.svg");
+  mask-image: url("../images/common/ico_refresh.svg");
+}
+.btn_box .primary {
+  font-weight: var(--font-medium);
 }
 
 /*---------------------------------------------

@@ -29,6 +29,7 @@ body {
             .#{$Hbtn} {
                 a {
                     @include icon(24px, 24px);
+                    background-image:url("../images/common/menu.svg");
                 }
             }
         }
@@ -50,6 +51,7 @@ body {
             .link_depth {
                 padding-top:0;
                 li {
+                    height:24px;
                     a {
                         font-size:var(--font-13);
                         color:var(--secondary);
@@ -58,28 +60,26 @@ body {
                         }
                     }
                     &::before {
-                        content:">";
-                        display:inline-block;
-                        padding:0 5px;
-                        width:5px;
-                        height:9px;
-                        color:var(--secondary);
+                        content:"";
+                        @include state (var(--secondary));
+                        width:24px;
+                        height:24px;
+                        -webkit-mask-image:url("../images/common/header_arr.svg");
+                        mask-image:url("../images/common/header_arr.svg");
                     }
                     &:last-child {
                         a {
                             color:var(--title);
                         }
                         &::before {
-                            color:var(--title);
+                            background-color:var(--title);
                         }
                     }
                     &:first-child {
                         a {
                             @include icon(24px, 24px);
                             font-size:0;
-                            &::after {
-                                font-size:var(--font-14);
-                            }
+                            background-image:url("../images/common/home.png");
                         }
                         &::before {
                             content:none;
@@ -245,7 +245,7 @@ body {
         border-radius:0;
         box-shadow:unset;
         > div {
-            padding:20px 24px 0;
+            padding:30px 24px 0;
             &:last-child {
                 padding-bottom:20px;;
             }

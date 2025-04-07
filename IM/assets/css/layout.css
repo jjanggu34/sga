@@ -30,6 +30,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
+  background-image: url("../images/common/menu.svg");
 }
 #SGIM_wrap .header .btn_lnb_m a {
   display: inline-block;
@@ -38,6 +39,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
+  background-image: url("../images/common/menu.svg");
 }
 #SGIM_wrap .header .btn_lnb a {
   top: 18px;
@@ -54,6 +56,9 @@ body * {
 #SGIM_wrap .header .header_title .link_depth {
   padding-top: 0;
 }
+#SGIM_wrap .header .header_title .link_depth li {
+  height: 24px;
+}
 #SGIM_wrap .header .header_title .link_depth li a {
   font-size: var(--font-13);
   color: var(--secondary);
@@ -62,18 +67,28 @@ body * {
   content: none;
 }
 #SGIM_wrap .header .header_title .link_depth li::before {
-  content: ">";
+  content: "";
   display: inline-block;
-  padding: 0 5px;
-  width: 5px;
-  height: 9px;
-  color: var(--secondary);
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--secondary);
+  vertical-align: sub;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("../images/common/header_arr.svg");
+  mask-image: url("../images/common/header_arr.svg");
 }
 #SGIM_wrap .header .header_title .link_depth li:last-child a {
   color: var(--title);
 }
 #SGIM_wrap .header .header_title .link_depth li:last-child::before {
-  color: var(--title);
+  background-color: var(--title);
 }
 #SGIM_wrap .header .header_title .link_depth li:first-child a {
   display: inline-block;
@@ -83,9 +98,7 @@ body * {
   background-repeat: no-repeat;
   background-image: none;
   font-size: 0;
-}
-#SGIM_wrap .header .header_title .link_depth li:first-child a::after {
-  font-size: var(--font-14);
+  background-image: url("../images/common/home.png");
 }
 #SGIM_wrap .header .header_title .link_depth li:first-child::before {
   content: none;
@@ -248,7 +261,7 @@ body * {
   box-shadow: unset;
 }
 #SGIM_wrap .content > div, #SGIM_wrap .monitoring_wrap > div {
-  padding: 20px 24px 0;
+  padding: 30px 24px 0;
 }
 #SGIM_wrap .content > div:last-child, #SGIM_wrap .monitoring_wrap > div:last-child {
   padding-bottom: 20px;

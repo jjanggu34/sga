@@ -31,6 +31,9 @@
     .check_list {
         width:auto;
     }
+    .more_list {
+        padding:7px 10px;
+    }
     thead {
         tr {
             th {
@@ -70,11 +73,25 @@
                 height:35px;
                 border:0;
                 border-bottom:1px solid var(--border-d);
-                font-size:var(--font-14);
-                font-weight:var(--font-regular);
+                @include title(var(--font-14),var(--font-regular),16px);
                 color:var(--title);
-                line-height:16px;
-                background:var(--);
+                &.new {
+                    position:relative;
+                    &::after {
+                        content:"N";
+                        position:absolute;
+                        top:50%;
+                        right:10px;
+                        transform:translateY(-50%);
+                        display:inline-block;
+                        width:12px;
+                        height:12px;
+                        border-radius:3px;
+                        @include title(var(--font-12), var(--font-regular), 12px);
+                        color:var(--white);
+                        background:var(--info);
+                    }
+                }
             }
             .sort_column {
                 div {
@@ -129,10 +146,10 @@
 .tbl_list {
     .req_txt {
         margin-top:0;
-        padding-bottom:12px;
+        padding-bottom:15px;
+        font-size:var(--font-12);
         color:var(--secondary);
         em {
-            font-size:var(--font-12);
             font-weight:var(--font-medium);
             color:var(--info);
             vertical-align:unset;

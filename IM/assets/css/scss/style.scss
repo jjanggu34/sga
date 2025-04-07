@@ -53,8 +53,9 @@
 }
 .fcolor {
     @include label();
-    color:var(--white);
-    background-color:var(--false);
+    border:1px solid var(--false);
+    color:var(--false);
+    background-color:#FFEFEF;
     &.ico {
         line-height:26px;
         background-image: url(../images/common/ico_list_erro.svg);
@@ -103,6 +104,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         -webkit-mask-image:url("../images/common/label/ico_FilePlus.svg");
         mask-image:url("../images/common/label/ico_FilePlus.svg");
     }
+    .icon_pgs {
+        @include state(#1863BA);
+        -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
+        mask-image:url("../images/common/label/icon_pgs.svg");
+    }
 }
 .checkCircle {
     color:var(--true) !important;
@@ -113,19 +119,27 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .fileEdit {
-    color:var(--primary) !important;
+    color:#1863BA !important;
     .icon_pgs {
-        @include state(var(--primary));
+        @include state(#1863BA);
         -webkit-mask-image:url("../images/common/label/ico_FileEdit.svg");
         mask-image:url("../images/common/label/ico_FileEdit.svg");
+    }
+    &.ing {
+        color: var(--primary) !important;
+        .icon_pgs {
+            @include state(var(--primary));
+            -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
+            mask-image:url("../images/common/label/icon_pgs.svg");
+        }
     }
 }
 .fileEditLoader {
     color:var(--primary) !important;
     .icon_pgs {
         @include state(var(--primary));
-        -webkit-mask-image:url("../images/common/label/ico_FileEditLoader.svg");
-        mask-image:url("../images/common/label/ico_FileEditLoader.svg");
+        -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
+        mask-image:url("../images/common/label/icon_pgs.svg");
     }
 }
 .downloadCircle {
@@ -156,6 +170,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     color:var(--true) !important;
     .icon_list {
         @include state(var(--true) );
+        -webkit-mask-image:url("../images/common/label/ico_bolt.svg");
+        mask-image:url("../images/common/label/ico_bolt.svg");
+    }
+}
+.Nbolt {
+    color:var(--text-disabled) !important;
+    .icon_list {
+        @include state(var(--text-disabled) );
         -webkit-mask-image:url("../images/common/label/ico_bolt.svg");
         mask-image:url("../images/common/label/ico_bolt.svg");
     }
@@ -283,13 +305,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** 검색-상세정보 *****************/
 .detail_search_wrap {
-    margin-top:-1px;
+    margin-top:-3px;
+    margin-bottom:0;
+    padding:20px 24px;
+    border:1px solid var(--button-disabled);
+    border-radius:20px 10px 20px 10px;
     .detail_search_btn {
         top:-48px;
         width:auto;
         height:48px;
         margin-left:143px;
         padding:0 34px 0 20px;
+        border:1px solid var(--button-disabled);
+        border-bottom:0;
         border-radius:0 6px 0 0;
         line-height:48px;
         i {
@@ -298,9 +326,43 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .search_column4 {
-        padding-bottom:10px;
+        gap:10px 13px;
+        padding:0 0 10px 0;
         .col {
+            margin-top:0;
             border:0;
+            dl {
+                padding:0;
+            }
+        }
+    }
+    $search-columns: "search_column4", "search_date", "search_column1";
+
+    @each $dldt in $search-columns {
+        .#{$dldt} {
+            margin:0;
+            border-top:0;
+            dl {
+                dt {
+                    width:auto;
+                    margin:0 20px 0 0;
+                    @include title(var(--font-14), var(--font-regular), 28px);
+                    color:var(--text-disabled);
+                    label {
+                        color:var(--text-disabled);
+                    }
+                }
+            }
+        }
+    }
+    .box2 {
+        min-height:unset;
+        padding:14px 0 0 0;
+        margin:0;
+        .btn_box {
+            position:unset;
+            padding:0;
+            text-align:right;
         }
     }
 }
