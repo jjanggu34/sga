@@ -245,7 +245,7 @@ body {
         border-radius:0;
         box-shadow:unset;
         > div {
-            &:not(.search_wrap, .tab_wrap){
+            &:not(.search_wrap, .tab_wrap, .monitoring_flx){
                 padding:30px 24px 0;
                 background:var(--white);
             }

@@ -178,10 +178,11 @@
 					<div class="search_box">
 						<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
 						<button class="btn_search" type="submit">검색</button>
-						<button class="btn_detail_search" type="submit">상세정보</button>
+						<button class="btn_detail_search" type="submit">상세검색</button>
 					</div>
-					<form class="detail_search_wrap" style="display:block">
-						<p class="detail_search_btn">상세정보<i>닫기</i></p>
+					<form class="detail_search_wrap" style="display:none">
+						<p class="detail_search_btn">상세검색<i>닫기</i></p>
+						<!-- s: class명 추가 bul_dot -->
 						<div class="search_column4">
 							<div class="col">
 								<dl class="bul_dot">
@@ -196,7 +197,7 @@
 								</dl>
 							</div>
 							<div class="col">
-								<dl class="bul_dot">
+								<!-- <dl class="bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -205,6 +206,10 @@
 										<option value="">444</option>
 										<option value="">555</option>
 									</select></dd>
+								</dl> -->
+								<dl class="bul_dot">
+									<dt><label for="detail05">모델명</label></dt>
+									<dd><input type="text" name="" id="detail05" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
@@ -213,38 +218,36 @@
 									<dd><input type="text" name="" id="detail09" class="form_contrl"></dd>
 								</dl>
 							</div>
-							<div class="col">
-								<dl class="bul_dot">
-									<dt><label for="detail10">이름</label></dt>
-									<dd><input type="text" name="" id="detail10" class="form_contrl"></dd>
-								</dl>
-							</div>
 						</div>
 						<div class="search_date">
-							<dl class="flx">
+							<dl class="flx bul_dot">
 								<dt>생성일</dt>
 								<dd>
 									<div class="flx">
 										<ul class="flx month_select">
-											<li><button class="shadow">1개월</button></li>
-											<li><button class="shadow on">3개월</button></li>
-											<li><button class="shadow">6개월</button></li>
-											<li><button class="shadow">10개월</button></li>
-											<li><button class="shadow">12개월</button></li>
+											<!-- s: class명 변경 -->
+											<li><button class="normal">1개월</button></li>
+											<li><button class="normal on">3개월</button></li>
+											<li><button class="normal">6개월</button></li>
+											<li><button class="normal">10개월</button></li>
+											<li><button class="normal">12개월</button></li>
+											<!-- e: class명 변경 -->
 										</ul>
 										<div class="form_date">
 											<input type="text" class="form_contrl date_ctl" value="시작날짜" readonly="readonly">
 											<span> - </span>
 											<input type="text" class="form_contrl date_ctl" value="종료날짜" readonly="readonly">
 										</div>
-										<button class="shadow">초기화</button>
+										<!-- s: class명 변경 -->
+										<button class="normal icon_reset">초기화</button>
+										<!-- e: class명 변경 -->
 									</div>
 								</dd>
 							</dl>
 						</div>
 						<div class="search_column1">
 							<div class="col">
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -258,10 +261,11 @@
 						</div>
 						<div class="box2">
 							<p class="btn_box">
-								<a href="" class="white">초기화</a>
-								<a href="" class="gradient">검색</a>
+								<a href="" class="line icon_reset">초기화</a>
+								<a href="" class="primary">검색</a>
 							</p>
 						</div>
+						<!-- e: class명 추가 bul_dot -->
 					</form>
 					
 					<div class="related_box" style="display:none">
@@ -285,22 +289,26 @@
 				<!-- 스크롤시 고정할 상단버튼 "list_btn_stk" 클래스 추가-->
 				<div class="list_btn cl_both list_btn_stk">
 					<div class="list_left_btn f_l wid50">
-						<button class="line_disabled">활성</button>
-						<button class="line_disabled">비활성</button>
+						<!-- s: class명 변경 -->
+						<button class="line">활성</button>
+						<button class="line">비활성</button>
 						<span class="divide"></span>
 						<button class="line">생성</button>
-						<button class="line_disabled">복사생성</button>
-						<button class="line_disabled">삭제</button>
-						<button class="line_disabled">Update</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line">Update</button>
+						<!-- e: class명 변경 -->
 					</div>
+					<!-- s: class명 변경 -->
 					<div class="list_right_btn f_r wid50">
 						<div class="dropdown">
-							<button class="primary btn_dropdown">보고서 생성
-								<span>
+							<button class="line btn_dropdown">보고서 생성
+								<!-- s : background에 이미지 삽입
+								 <span>
 									<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M6 10L10 5H2L6 10Z" fill="#ffffff"/>
+										<path d="M6 10L10 5H2L6 10Z" fill="#2772FB"/>
 									</svg>
-								</span>
+								</span> e-->
 							</button>
 							<ul class="dropdown_list" style="display:none">
 								<li>
@@ -311,11 +319,21 @@
 								</li>
 							</ul>
 						</div>
-						<button class="line icon"><i class="icon_ff sl_ff excel"></i>EXEL</button>
-						<button class="line icon"><i class="icon_ff sl_ff pdf"></i>PDF</button>
-						<button class="disabled"><i class="icon_reset"></i>새로고침</button>
-						<button class="primary"><i class="icon_reset"></i>새로고침</button>
+						<button class="line icon">
+							<i class="icon_ff sl_ff excel"></i>
+							EXCEL
+						</button>
+						<button class="line icon">
+							<i class="icon_ff sl_ff pdf"></i>
+							EXCEL
+						</button>
+						<button class="primary icon"><i class="icon_reset"></i> 설정</button>
+						<button class="primary icon">
+							<i class="icon_reset"></i>
+							새로고침
+						</button>
 					</div>
+					<!-- e: class명 변경 -->
 				</div>
 				<div class="tbl_list">
 					<table class="default_tbl">
