@@ -501,7 +501,7 @@
 .detail_search_wrap {
   margin-top: -3px;
   margin-bottom: 0;
-  padding: 20px 24px;
+  padding: 20px 20px 20px 24px;
   border: 1px solid var(--button-disabled);
   border-radius: 20px 10px 20px 10px;
 }
@@ -522,7 +522,7 @@
 }
 .detail_search_wrap .search_column4 {
   gap: 10px 13px;
-  padding: 0 0 10px 0;
+  flex-wrap: nowrap;
 }
 .detail_search_wrap .search_column4 .col {
   margin-top: 0;
@@ -531,9 +531,13 @@
 .detail_search_wrap .search_column4 .col dl {
   padding: 0;
 }
+.detail_search_wrap .search_column4 .col dl dd {
+  max-width: 301px;
+}
 .detail_search_wrap .search_column4 {
   margin: 0;
   border-top: 0;
+  padding: 0 0 10px 0;
 }
 .detail_search_wrap .search_column4 dl dt {
   width: auto;
@@ -549,6 +553,7 @@
 .detail_search_wrap .search_date {
   margin: 0;
   border-top: 0;
+  padding: 0 0 10px 0;
 }
 .detail_search_wrap .search_date dl dt {
   width: auto;
@@ -564,6 +569,7 @@
 .detail_search_wrap .search_column1 {
   margin: 0;
   border-top: 0;
+  padding: 0 0 10px 0;
 }
 .detail_search_wrap .search_column1 dl dt {
   width: auto;
@@ -578,11 +584,17 @@
 }
 .detail_search_wrap .box2 {
   min-height: unset;
-  padding: 14px 0 0 0;
+  padding: 14px 10px 0 0;
   margin: 0;
 }
 .detail_search_wrap .box2 .btn_box {
   position: unset;
   padding: 0;
   text-align: right;
+}
+.detail_search_wrap .month_select {
+  padding-right: 6px;
+}
+.detail_search_wrap .month_select li {
+  padding-right: 4px;
 }

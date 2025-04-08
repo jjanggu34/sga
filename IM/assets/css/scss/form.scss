@@ -125,7 +125,6 @@ textarea, textarea[readonly] { background: var(--btn--color-dark); }
 ---------------------------------------------*/
 select{
     &.form_contrl {
-        border:1px solid var(--default);
         background: url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--white);
     }
 }
