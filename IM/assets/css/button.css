@@ -93,6 +93,10 @@
   color: #121212;
   border: 1px solid var(--content);
 }
+.line.btn_dropdown {
+  padding-right: 23px;
+  background: url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--white);
+}
 
 /*---------------------------------------------
 	#button에 icon 있을 경우

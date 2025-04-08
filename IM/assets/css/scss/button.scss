@@ -70,6 +70,10 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
         color:#121212;
         border:1px solid var(--content);
     }
+    &.btn_dropdown {
+        padding-right:23px;
+        background:url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--white);
+    }
 }
 
 /*---------------------------------------------
