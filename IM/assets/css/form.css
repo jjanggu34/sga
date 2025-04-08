@@ -5,14 +5,6 @@
 	#input
 ---------------------------------------------*/
 /* focus */
-input:focus-visible {
-  outline: 1px solid var(--primary);
-}
-
-.form_contrl:focus {
-  border-color: var(--primary);
-}
-
 /* disabled */
 .form_contrl {
   border: 1px solid var(--default);
@@ -42,6 +34,15 @@ input:focus-visible {
   height: 48px;
   border: 1px solid var(--border-d);
   border-radius: 7px;
+}
+
+/* date */
+.search_date .form_date {
+  margin-right: 4px;
+}
+.search_date .form_date .date_ctl {
+  background: url("../images/common/ico_calendar.svg") left 5px center/16px no-repeat;
+  color: var(--text-disabled);
 }
 
 /* check */
