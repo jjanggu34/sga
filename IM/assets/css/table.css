@@ -39,6 +39,7 @@
 .default_tbl thead tr th {
   height: 35px;
   border: 0;
+  border-top: 1px solid var(--border-d);
   border-bottom: 1px solid var(--secondary);
   font-size: var(--font-14);
   font-weight: var(--font-regular);

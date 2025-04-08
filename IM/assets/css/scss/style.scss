@@ -301,6 +301,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         transform:translateX(-50%);
                         background:var(--white);
                     }
+                    .new_org {
+                        background-color:var(--info);
+                    }
                 }&.on {
                     .new_org {
                         background-color:var(--info);
@@ -312,6 +315,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.cont_in_tab {
         margin-bottom:0;
+        padding:0 24px;
     }
 }
 

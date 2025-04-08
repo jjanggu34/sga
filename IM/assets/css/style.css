@@ -516,11 +516,15 @@
   transform: translateX(-50%);
   background: var(--white);
 }
+.tab_wrap .tab_list li a.on .new_org, .tab_wrap .tab_list li a:hover .new_org {
+  background-color: var(--info);
+}
 .tab_wrap .tab_list li a.on .new_org {
   background-color: var(--info);
 }
 .tab_wrap.cont_in_tab {
   margin-bottom: 0;
+  padding: 0 24px;
 }
 
 /***************** 검색-상세정보 *****************/

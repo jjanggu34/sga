@@ -16,8 +16,7 @@
 
 /* search */
 .search_wrap {
-  background: var(--body);
-  padding: 20px 24px;
+  padding: 30px 24px;
 }
 .search_wrap + .tab_wrap.cont_in_tab {
   margin-top: 0;

@@ -245,11 +245,17 @@ body {
         border-radius:0;
         box-shadow:unset;
         > div {
-            padding:30px 24px 0;
+            &:not(.search_wrap, .tab_wrap){
+                padding:30px 24px 0;
+                background:var(--white);
+            }
             &:last-child {
                 padding-bottom:20px;;
             }
         }
+    }
+    .content {
+        background-color:transparent;
     }
 }
 

@@ -260,11 +260,15 @@ body * {
   border-radius: 0;
   box-shadow: unset;
 }
-#SGIM_wrap .content > div, #SGIM_wrap .monitoring_wrap > div {
+#SGIM_wrap .content > div:not(.search_wrap, .tab_wrap), #SGIM_wrap .monitoring_wrap > div:not(.search_wrap, .tab_wrap) {
   padding: 30px 24px 0;
+  background: var(--white);
 }
 #SGIM_wrap .content > div:last-child, #SGIM_wrap .monitoring_wrap > div:last-child {
   padding-bottom: 20px;
+}
+#SGIM_wrap .content {
+  background-color: transparent;
 }
 
 /***************** 그리드 *****************/
