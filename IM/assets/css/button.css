@@ -88,6 +88,7 @@
   font-size: var(--font-13);
   color: var(--content);
   border: 1px solid var(--border-d);
+  background: var(--white);
 }
 .line:focus-visible {
   color: #121212;
@@ -106,7 +107,7 @@ button {
   /* 테이블 안 토글 버튼 */
 }
 button.icon {
-  padding: 7px 14px 6px 7px;
+  padding: 6px 14px 6px 7px;
 }
 button.icon i.icon_reset {
   display: inline-block;
@@ -119,7 +120,7 @@ button.icon i.icon_reset {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #121212;
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_refresh.svg");
   mask-image: url("../images/common/ico_refresh.svg");
 }
@@ -162,11 +163,11 @@ button.normal.on::before {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--primary);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_check_s.svg");
   mask-image: url("../images/common/ico_check_s.svg");
 }
-button.icon_arrow_open {
+button.icon_arrow_open, button.icon_arrow_close {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -177,9 +178,12 @@ button.icon_arrow_open {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--content);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/icon_arrow_open.svg");
   mask-image: url("../images/common/icon_arrow_open.svg");
+}
+button.icon_arrow_close {
+  transform: rotate(180deg);
 }
 
 /* close */
@@ -239,7 +243,7 @@ button.icon_arrow_open {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #121212;
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_refresh.svg");
   mask-image: url("../images/common/ico_refresh.svg");
 }

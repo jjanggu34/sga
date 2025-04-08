@@ -57,12 +57,23 @@
   font-weight: var(--font-medium);
 }
 
+.trcolor.btnstl {
+  width: 76px;
+  height: 26px;
+  padding: 0;
+}
+
+.fcolor.btnstl {
+  width: 76px;
+  height: 26px;
+  padding: 0;
+}
+
 .trcolor {
   display: inline-block;
   width: auto;
   border-radius: 14px;
   font-size: var(--font-13);
-  padding: 5px 22px;
   border: 1px solid var(--true);
   color: var(--true);
   background-color: #EFFCF3;
@@ -132,7 +143,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--text-disabled);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_circleOff.svg");
   mask-image: url("../images/common/label/ico_circleOff.svg");
 }
@@ -151,7 +162,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_PlugConnected.svg");
   mask-image: url("../images/common/label/ico_PlugConnected.svg");
 }
@@ -170,7 +181,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_PlugZapOff.svg");
   mask-image: url("../images/common/label/ico_PlugZapOff.svg");
 }
@@ -189,7 +200,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_FilePlus.svg");
   mask-image: url("../images/common/label/ico_FilePlus.svg");
 }
@@ -204,7 +215,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/icon_pgs.svg");
   mask-image: url("../images/common/label/icon_pgs.svg");
 }
@@ -223,7 +234,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--true);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_checkCircle.svg");
   mask-image: url("../images/common/label/ico_checkCircle.svg");
 }
@@ -242,7 +253,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_FileEdit.svg");
   mask-image: url("../images/common/label/ico_FileEdit.svg");
 }
@@ -260,7 +271,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--primary);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/icon_pgs.svg");
   mask-image: url("../images/common/label/icon_pgs.svg");
 }
@@ -279,7 +290,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--primary);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/icon_pgs.svg");
   mask-image: url("../images/common/label/icon_pgs.svg");
 }
@@ -298,7 +309,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: #1863BA;
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_downloadCircle.svg");
   mask-image: url("../images/common/label/ico_downloadCircle.svg");
 }
@@ -317,7 +328,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_PauseCircle.svg");
   mask-image: url("../images/common/label/ico_PauseCircle.svg");
 }
@@ -336,9 +347,24 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--false);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_trash.svg");
   mask-image: url("../images/common/label/ico_trash.svg");
+}
+.trash .icon_pgs {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--false);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/label/icon_pgs.svg");
+  mask-image: url("../images/common/label/icon_pgs.svg");
 }
 
 .bolt {
@@ -355,7 +381,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--true);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_bolt.svg");
   mask-image: url("../images/common/label/ico_bolt.svg");
 }
@@ -374,7 +400,7 @@
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--text-disabled);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_bolt.svg");
   mask-image: url("../images/common/label/ico_bolt.svg");
 }

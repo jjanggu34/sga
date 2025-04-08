@@ -38,9 +38,16 @@
     background-size: 18px;
     font-weight:var(--font-medium);
 }
+$btnstls: "trcolor", "fcolor";
+@each $btnstl in $btnstls {
+    .#{$btnstl}.btnstl {
+        width:76px;
+        height:26px;
+        padding:0;
+    }
+}
 .trcolor {
     @include label();
-    padding:5px 22px;
     border:1px solid var(--true);
     color:var(--true);
     background-color:#EFFCF3;
@@ -164,6 +171,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         @include state(var(--false));
         -webkit-mask-image:url("../images/common/label/ico_trash.svg");
         mask-image:url("../images/common/label/ico_trash.svg");
+    }
+    .icon_pgs {
+        @include state(var(--false));
+        -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
+        mask-image:url("../images/common/label/icon_pgs.svg");
     }
 }
 .bolt {

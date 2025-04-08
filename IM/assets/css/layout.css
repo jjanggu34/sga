@@ -78,7 +78,7 @@ body * {
   -webkit-mask-position: center;
   mask-position: center;
   background-color: var(--secondary);
-  vertical-align: sub;
+  vertical-align: text-bottom;
   width: 24px;
   height: 24px;
   -webkit-mask-image: url("../images/common/header_arr.svg");

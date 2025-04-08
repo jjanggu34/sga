@@ -65,6 +65,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
     font-size:var(--font-13);
     color:var(--content);
     border:1px solid var(--border-d);
+    background:var(--white);
     // focus
     &:focus-visible {
         color:#121212;
@@ -82,7 +83,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 ---------------------------------------------*/
 button {
     &.icon {
-    padding:7px 14px 6px 7px;
+    padding:6px 14px 6px 7px;
         i {
             &.icon_reset {
                 @include state(#121212);
@@ -131,6 +132,10 @@ button {
         @include state(var(--content));
         -webkit-mask-image:url("../images/common/icon_arrow_open.svg");
         mask-image:url("../images/common/icon_arrow_open.svg");
+    }
+    &.icon_arrow_close {
+        @extend .icon_arrow_open;
+        transform:rotate(180deg);
     }
 }
 
