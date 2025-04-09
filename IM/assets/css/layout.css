@@ -131,6 +131,7 @@ body * {
   background-repeat: no-repeat;
   background-image: none;
   margin-top: 0;
+  border: 1px solid var(--primary);
 }
 #SGIM_wrap .header .gl_nav li.timer i {
   display: inline-block;
@@ -140,6 +141,43 @@ body * {
   background-repeat: no-repeat;
   background-image: none;
   margin-top: 0;
+  border: 1px solid var(--primary);
+}
+#SGIM_wrap .header .gl_nav li.btn_alim a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  border: 1px solid var(--primary);
+}
+#SGIM_wrap .header .gl_nav li.btn_alim a::before {
+  content: none;
+}
+#SGIM_wrap .header .gl_nav li.btn_menualdown a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  border: 1px solid var(--primary);
+}
+#SGIM_wrap .header .gl_nav li.btn_menualdown a::before {
+  content: none;
+}
+#SGIM_wrap .header .gl_nav li.btn_logout a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  border: 1px solid var(--primary);
+}
+#SGIM_wrap .header .gl_nav li.btn_logout a::before {
+  content: none;
 }
 #SGIM_wrap .header .gl_nav li a {
   display: inline-block;

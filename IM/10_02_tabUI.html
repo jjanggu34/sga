@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -25,9 +28,11 @@
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
+					<!--s: 이미지 경로 변경-->
 					<a href="" class="logo">
-						<img src="img/common/logo_186x30.png">
+						<img src="assets/images/common/logo_186x30.png">
 					</a>
+					<!--e: 이미지 경로 변경-->
 				</div>
 				<div class="nav_tab">
 					<a href="" class="">사용자</a>
@@ -104,21 +109,21 @@
 			</div>
 		</div>
 		<div id="container">
+			<!-- s : 수정 -->
 			<div class="header">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>사용자 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">역할관리</a></li>
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_modetrans"><a href="">사용자 모드<i></i></a></li>
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> <span>user01</span></a></li>
-					<li class="time"><i></i><span>2020-09-11 15:35:00</span></li>
-					<li class="btn_alim"><a href="">alim<span>13</span></a>
+					<!-- <li class="btn_modetrans"><a href="">사용자 모드<i></i></a></li> -->
+					<li class="btn_top_user"><a href=""><span>시스템관리자(ztadimin)</span></a></li>
+					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
+					<li class="btn_alim"><a href="">alim</a>
 						<div class="balloon alim_pop" style="display:none">
 							<div class="alim_pop_wrap">
 								<div class="alim_top">
@@ -139,15 +144,11 @@
 							</div>
 						</div>
 					</li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
 					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
-					</li>
 				</ul>
 			</div>
+			<!-- e : 수정 -->
 			<div class="i-card_wrap">
 				<div class="dash_box">
 					<p class="i-card_title">보유 역할</p>
@@ -291,17 +292,20 @@
 				</div>
 				<div class="t_cont_in">
 					<div class="list_btn cl_both">
+						<!-- s: class명 변경 -->
 						<div class="list_left_btn f_l wid50">
-							<button class="shadow">활성</button>
-							<button class="shadow">비활성</button>
+							<button class="line">활성</button>
+							<button class="line">비활성</button>
 							<span class="divide"></span>
-							<button class="shadow">생성</button>
+							<button class="line">생성</button>
 						</div>
 						<div class="list_right_btn f_r wid50">
-							<button class="skyblue">새로고침</button>
+							<button class="primary">새로고침</button>
 						</div>
+						<!-- e: class명 변경 -->
 					</div>
 					<div class="tbl_list">
+						<!-- s: class명 변경 -->
 						<table class="default_tbl">
 							<thead>
 								<tr>
@@ -334,7 +338,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list none"></i>상태없음</td>
+									<td class="circleOff"><i class="icon_list"></i>상태없음</td>
 									<td>CentOS(1503)</td>
 									<td><button class="btnstl trcolor">TRUE</button></td>
 								</tr>
@@ -345,7 +349,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs"></i>생성 진행중</td>
+									<td class="filePlus"><i class="icon_pgs"></i>생성 진행중</td>
 									<td>CentOS(1503)</td>
 									<td><button class="btnstl fcolor">FALSE</button></td>
 								</tr>
@@ -356,7 +360,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list icheck"></i>생성</td>
+									<td class="filePlus"><i class="icon_list"></i>생성</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -367,7 +371,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list"></i>정상</td>
+									<td class="checkCircle"><i class="icon_list"></i>정상</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -378,7 +382,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs shippingcart_edit"></i>수정 작업중</td>
+									<td class="fileEdit"><i class="icon_pgs"></i>수정 작업중</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -389,7 +393,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs progress_update"></i>수정 진행중</td>
+									<td class="fileEdit ing"><i class="icon_pgs"></i>수정 진행중</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -400,7 +404,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs progress_pending"></i>작업 보류중</td>
+									<td class="fileEditLoader"><i class="icon_pgs"></i>작업 보류중</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -411,7 +415,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list iwarning"></i>작업중 오류</td>
+									<td class="pauseCircle"><i class="icon_list"></i>작업중 오류</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -422,7 +426,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list disabled"></i>비활성</td>
+									<td class="Nbolt"><i class="icon_list disabled"></i>비활성</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -433,7 +437,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs progress_del"></i>삭제 진행중</td>
+									<td class="trash"><i class="icon_pgs"></i>삭제 진행중</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -444,12 +448,13 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list idisabled"></i>삭제됨</td>
+									<td class="trash"><i class="icon_list"></i>삭제됨</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
 							</tbody>
 						</table>
+						<!-- e: class명 변경 -->
 					</div>
 					<div class="tbl_btm">
 						<div class="page_info">1-10/50</div>
@@ -476,15 +481,17 @@
 						</div>
 					</div>
 					<div class="list_btn cl_both">
+						<!-- s: class명 변경 -->
 						<div class="list_left_btn f_l wid50">
-							<button class="shadow">활성</button>
-							<button class="shadow">비활성</button>
+							<button class="line">활성</button>
+							<button class="line">비활성</button>
 							<span class="divide"></span>
-							<button class="shadow">생성</button>
+							<button class="line">생성</button>
 						</div>
 						<div class="list_right_btn f_r wid50">
-							<button class="skyblue">새로고침</button>
+							<button class="primary">새로고침</button>
 						</div>
+						<!-- e: class명 변경 -->
 					</div>
 				</div>
 			</div>

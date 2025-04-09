@@ -65,6 +65,16 @@
 .primary:focus-visible {
   background: var(--button-hover);
 }
+.primary.btn_dropdown {
+  padding-right: 23px;
+  background: url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--primary);
+}
+.primary.arrow i {
+  width: 16px;
+  height: 16px;
+  background: url("../images/common/ico_accordion.svg") no-repeat right center var(--primary);
+  transform: rotate(270deg);
+}
 
 /*---------------------------------------------
 	#disabled
@@ -128,6 +138,21 @@ button.icon i.icon_reset.init {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+button.icon i.delfile {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #121212;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/label/ico_trash.svg");
+  mask-image: url("../images/common/label/ico_trash.svg");
+}
 button.disabled i {
   background-color: var(--text-disabled) !important;
 }
@@ -144,7 +169,10 @@ button.normal.icon_reset {
   height: 28px;
   padding: 6px;
   font-size: 0;
-  background: url("../images/common/ico_refresh.svg") no-repeat center/auto;
+  background: url("../images/common/ico_refresh.svg") no-repeat center/auto var(--white);
+}
+button.normal.icon_reset::before {
+  content: none;
 }
 button.normal.on {
   padding: 6px 12px 6px 6px;
@@ -265,6 +293,59 @@ button.icon_arrow_close {
   border-radius: 6px;
   font-size: var(--font-12);
   line-height: 28px;
+}
+.pagination ul li a span {
+  margin: 0;
+  background: none;
+  transform: translate(-50%, -50%);
+}
+.pagination ul li a.next, .pagination ul li a.prev {
+  padding: 2px;
+}
+.pagination ul li a.next span, .pagination ul li a.prev span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("../images/common/prev.svg");
+  mask-image: url("../images/common/prev.svg");
+  background-position: unset;
+}
+.pagination ul li a.last, .pagination ul li a.first {
+  padding: 2px;
+}
+.pagination ul li a.last span, .pagination ul li a.first span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("../images/common/prevv.svg");
+  mask-image: url("../images/common/prevv.svg");
+  background-position: unset;
+}
+.pagination ul li a.prev {
+  transform: rotate(180deg);
+}
+.pagination ul li a.first {
+  transform: rotate(180deg);
 }
 .pagination ul li .on {
   border-color: var(--primary) !important;

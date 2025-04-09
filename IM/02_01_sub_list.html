@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -24,6 +27,7 @@
 	<div id="ONSD_wrap">
 		<div id="container">
 			<div class="content">
+				<!-- s: 수정 -->
 				<div class="search_wrap">
 					<div class="search_box">
 						<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
@@ -34,11 +38,11 @@
 						<p class="detail_search_btn">상세검색<i>닫기</i></p>
 						<div class="search_column4">
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail01">종류</label></dt>
 									<dd><input type="text" name="" id="detail01" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail02">제조사</label></dt>
 									<dd><select name="" id="detail02" class="form_contrl">
 										<option value="">전체</option>
@@ -50,17 +54,17 @@
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail04">제조사</label></dt>
 									<dd><input type="text" name="" id="detail04" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail05">도메인</label></dt>
 									<dd><input type="text" name="" id="detail05" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -70,17 +74,17 @@
 										<option value="">555</option>
 									</select></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt>관리자ID</dt>
 									<dd class="txt">admin</dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail09">이름</label></dt>
 									<dd><input type="text" name="" id="detail09" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail10">계정구분</label></dt>
 									<dd><select name="" id="detail10" class="form_contrl">
 										<option value="">전체</option>
@@ -94,12 +98,13 @@
 						</div>
 						<div class="box2">
 							<p class="btn_box">
-								<a href="" class="white">초기화</a>
-								<a href="" class="gradient">검색</a>
+								<!-- s: class 변경 -->
+								<a href="" class="line icon_reset">초기화</a>
+								<a href="" class="primary">검색</a>
+								<!-- e: class 변경 -->
 							</p>
 						</div>
 					</form>
-					<!-- 연관검색어 디자인 확인 시 display:block 하거나 display스타일을 삭제해주세요.-->
 					<div class="related_box" style="display:none">
 						<ul class="related_list">
 							<li><a href="">연관검색어1</a></li>
@@ -110,14 +115,17 @@
 						</ul>
 					</div>
 				</div>
+				<!-- e: 수정 -->
+				<!-- s: class 변경 -->
 				<div class="list_btn cl_both">
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow">Update</button>
+						<button class="line">생성</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line">Update</button>
 					</div>
 				</div>
+				<!-- e: class 변경 -->
 				<div class="tbl_list">
 					<table class="default_tbl">
 						<thead>
@@ -271,12 +279,14 @@
 					</div>
 				</div>
 				<div class="list_btn cl_both">
+					<!-- s: class 변경 -->
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow">Update</button>
+						<button class="line">생성</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line">Update</button>
 					</div>
+					<!-- s: class 변경 -->
 				</div>
 			</div>
 		</div>

@@ -8,8 +8,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 
-	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -25,10 +28,12 @@
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
+					<!--s: 이미지 경로 변경-->
 					<a href="" class="logo">
-						<img src="img/common/logo_186x30.png">
+						<img src="assets/images/common/logo_186x30.png">
 						<span>Admin</span>
 					</a>
+					<!--e: 이미지 경로 변경-->
 				</div>
 				<ul class="nav_list">
 					<li><a href="" class="depth_menu"><i class="icon_userg"></i><span>사용자 관리</span></a>
@@ -92,29 +97,46 @@
 			</div>
 		</div>
 		<div id="container">
+			<!-- s : 수정 -->
 			<div class="header">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>사용자 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">시스템 관리</a></li>
-						<li><span>상세</span></li>
+						<li><a href="">상세</a></li>
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> user01</a></li>
-					<li class="btn_alim"><a href="">alim<span>13</span></a></li>
-					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
+					<li class="btn_top_user"><a href=""><span>user01</span></a></li>
+					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
+					<li class="btn_alim"><a href="">alim</a>
+						<div class="balloon alim_pop" style="display:none">
+							<div class="alim_pop_wrap">
+								<div class="alim_top">
+									<span>새 알림</span>
+									<button class="alim_clear">모든 알림 지우기</button>
+								</div>
+								<ul class="alim_list">
+									<li><a><i></i>경고!</a></li>
+									<li><a><i></i>나한테만 오는 알람메세지이이이이 두줄일때 다음줄로 넘어갑니다 </a></li>
+									<li><a><i></i>전체적인 알람공지</a></li>
+									<li><a><i></i>SMS문자왔숑</a></li>
+									<li><a><i></i>메일왔네요</a></li>
+									<li><a><i></i>기타알람</a></li>
+								</ul>
+								<div class="allAlim">
+									<a href="" class="btn_allAlim">모두 보기 ></a>
+								</div>
+							</div>
+						</div>
 					</li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
+					<li class="btn_logout"><a href="">logout</a></li>
 				</ul>
 			</div>
+			<!-- e : 수정 -->
 			<div class="content">
 				<div class="search_wrap">
 					<div class="search_box">
@@ -122,23 +144,24 @@
 						<button class="btn_search" type="submit">검색</button>
 						<button class="btn_detail_search" type="submit">상세검색</button>
 					</div>
-					<form class="detail_search_wrap" style="display:none">
+					<form class="detail_search_wrap" style="display:none;">
 						<p class="detail_search_btn">상세검색<i>닫기</i></p>
+						<!-- s: class명 추가 bul_dot -->
 						<div class="search_column4">
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail01">종류</label></dt>
 									<dd><input type="text" name="" id="detail01" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail04">제조사</label></dt>
 									<dd><input type="text" name="" id="detail04" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -150,43 +173,43 @@
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail09">이름</label></dt>
 									<dd><input type="text" name="" id="detail09" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail10">이름</label></dt>
 									<dd><input type="text" name="" id="detail10" class="form_contrl"></dd>
 								</dl>
 							</div>
 						</div>
 						<div class="search_date">
-							<dl class="flx">
+							<dl class="flx bul_dot">
 								<dt>생성일</dt>
 								<dd>
 									<div class="flx">
 										<ul class="flx month_select">
-											<li><button class="shadow">1개월</button></li>
-											<li><button class="shadow on">3개월</button></li>
-											<li><button class="shadow">6개월</button></li>
-											<li><button class="shadow">10개월</button></li>
-											<li><button class="shadow">12개월</button></li>
+											<li><button class="normal">1개월</button></li>
+											<li><button class="normal on">3개월</button></li>
+											<li><button class="normal">6개월</button></li>
+											<li><button class="normal">10개월</button></li>
+											<li><button class="normal">12개월</button></li>
 										</ul>
 										<div class="form_date">
 											<input type="text" class="form_contrl date_ctl" value="시작날짜" readonly="readonly">
 											<span> - </span>
 											<input type="text" class="form_contrl date_ctl" value="종료날짜" readonly="readonly">
 										</div>
-										<button class="shadow">초기화</button>
+										<button class="normal icon_reset">초기화</button>
 									</div>
 								</dd>
 							</dl>
 						</div>
 						<div class="search_column1">
 							<div class="col">
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -200,10 +223,11 @@
 						</div>
 						<div class="box2">
 							<p class="btn_box">
-								<a href="" class="white">초기화</a>
-								<a href="" class="gradient">검색</a>
+								<a href="" class="line icon_reset">초기화</a>
+								<a href="" class="primary">검색</a>
 							</p>
 						</div>
+						<!-- e: class명 추가 bul_dot -->
 					</form>
 					
 					<div class="related_box" style="display:none">
@@ -280,34 +304,36 @@
 						</div>
 					</div>
 					<div class="moved_box">
+						<!-- s: class명 변경 -->
 						<div class="list_btn cl_both pdt16">
 							<div class="list_left_btn f_l wid50">
-								<button class="shadow">파일추가</button>
+								<button class="line">파일추가</button>
 							</div>
 							<div class="list_right_btn f_r wid50">
 								<div class="dropdown">
-									<button class="skyblue btn_dropdown">다운로드
-										<span>
+									<button class="primary btn_dropdown">다운로드
+										<!--s: 아이콘 변경 <span>
 											<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M6 10L10 5H2L6 10Z" fill="#2772FB"/>
 											</svg>
-										</span>
+										</span> e-->
 									</button>
 									<ul class="dropdown_list" style="display:none">
 										<li>
-											<button><i class="icon_ff sl_ff exel"></i> EXEL</button>
+											<button><i class="icon_ff sl_ff excel"></i> EXEL</button>
 										</li>
 										<li>
-											<button><i class="icon_ff sl_ff"></i> PDF</button>
+											<button><i class="icon_ff sl_ff pdf"></i> PDF</button>
 										</li>
 									</ul>
 								</div>
-								<button class="skyblue"><i class="icon_fcheck checkout"></i> 체크아웃</button>
-								<button class="skyblue"><i class="icon_fcheck checkin"></i> 체크인</button>
-								<button class="skyblue"><i class="icon_fcheck restore"></i> 복원</button>
-								<button class="skyblue"><i class="icon_fcheck delfile"></i> 삭제</button>
+								<button class="primary icon"><i class="icon_fcheck checkout"></i> 체크아웃</button>
+								<button class="primary icon"><i class="icon_fcheck checkin"></i> 체크인</button>
+								<button class="primary icon"><i class="icon_reset init"></i> 복원</button>
+								<button class="primary icon"><i class="delfile"></i> 삭제</button>
 							</div>
 						</div>
+						<!-- e: class명 변경 -->
 						<div class="tbl_list">
 							<table class="default_tbl">
 								<thead>

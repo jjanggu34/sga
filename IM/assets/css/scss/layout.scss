@@ -108,10 +108,39 @@ body {
                     .time_ref {
                         @include icon(24px, 24px);
                         margin-top:0;
+                        border:1px solid var(--primary);
                     }
                     i {
                         @include icon(24px, 24px);
                         margin-top:0;
+                        border:1px solid var(--primary);
+                    }
+                }
+                &.btn_alim {
+                    a {
+                        @include icon(24px,24px);
+                        border:1px solid var(--primary);
+                        &::before {
+                            content:none;
+                    }
+                    }
+                }
+                &.btn_menualdown {
+                    a {
+                        @include icon(24px,24px);
+                        border:1px solid var(--primary);
+                        &::before {
+                            content:none;
+                    }
+                    }
+                }
+                &.btn_logout {
+                    a {
+                        @include icon(24px,24px);
+                        border:1px solid var(--primary);
+                        &::before {
+                            content:none;
+                    }
                     }
                 }
                 a {

@@ -321,15 +321,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** 검색-상세정보 *****************/
 .detail_search_wrap {
-    margin-top:-3px;
+    margin-top:-2px;
     margin-bottom:0;
     padding:20px 20px 20px 24px;
     border:1px solid var(--button-disabled);
     border-radius:20px 10px 20px 10px;
     .detail_search_btn {
-        top:-48px;
+        top:-49px;
         width:auto;
-        height:48px;
+        height:49px;
         margin-left:143px;
         padding:0 34px 0 20px;
         border:1px solid var(--button-disabled);
@@ -343,14 +343,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .search_column4 {
         gap:10px 13px;
-        flex-wrap:nowrap;
         .col {
+            width:calc((100% - 44px) / 4);
             margin-top:0;
             border:0;
             dl {
                 padding:0;
                 dd {
                     max-width:301px;
+                }
+                &+ dl {
+                    margin-top:10px;
                 }
             }
         }
