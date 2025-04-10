@@ -8,39 +8,6 @@
   line-height: 24px;
 }
 
-/* 시스템 영역 */
-.sys-title {
-  font-size: var(--font-16);
-  font-weight: var(--font-bold);
-  line-height: 19px;
-}
-
-.text1 {
-  font-size: var(--font-13);
-  font-weight: var(--font-regular);
-  line-height: 16px;
-}
-
-/* 수치값이 있을 경우 */
-.text2 {
-  font-size: var(--font-14);
-  font-weight: var(--font-medium);
-  line-height: 18px;
-}
-
-.text2 + .num {
-  font-size: var(--font-28);
-  font-weight: var(--font-heavy);
-  line-height: 33px;
-}
-
-/* 그래프영역 별첨 */
-.graph-txt {
-  font-size: var(--font-14);
-  font-weight: var(--font-medium);
-  line-height: 16px;
-}
-
 /*---------------------------------------------
     #라벨
     기본 : icon_list
@@ -80,7 +47,7 @@
 }
 .trcolor.ico {
   line-height: 26px;
-  background-image: url(../images/common/ico_list_ok.svg);
+  background-image: url("../images/common/ico_list_ok.svg");
   background-size: 10px;
   background-position: 10px center;
 }
@@ -96,7 +63,7 @@
 }
 .fcolor.ico {
   line-height: 26px;
-  background-image: url(../images/common/ico_list_erro.svg);
+  background-image: url("../images/common/ico_list_erro.svg");
 }
 .fcolor_tit {
   color: var(--false) !important;

@@ -39,15 +39,23 @@
 }
 
 /* date */
+.form_date {
+    margin-right:4px;
+    .date_ctl {
+        background-image: url("../images/common/ico_calendar.svg");
+        background-position: left 5px center;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        color:var(--text-disabled);
+    }
+}
+
 .search_date {
     .form_date {
-        margin-right:4px;
         .date_ctl {
-            background:url("../images/common/ico_calendar.svg")left 5px center / 16px no-repeat;
-            color:var(--text-disabled);
+            background-position: left 5px center;
         }
     }
-
 }
 
 /* check */
@@ -125,5 +133,21 @@ textarea, textarea[readonly] { background: var(--btn--color-dark); }
 select{
     &.form_contrl {
         background: url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--white);
+    }
+}
+
+/*---------------------------------------------
+	#toggle
+---------------------------------------------*/
+.blue_tg_stl {
+    .tg_sch{
+        &:checked {
+            &+ label::before {
+                background-color:var(--primary);
+            }
+        }
+        &+ label::before {
+            background-color:var(--default);
+        }
     }
 }

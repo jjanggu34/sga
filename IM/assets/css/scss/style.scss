@@ -4,24 +4,6 @@
 .title {
     @include title(var(--font-20), var(--font-extrabold), 24px);
 }
-/* 시스템 영역 */
-.sys-title {
-    @include title(var(--font-16), var(--font-bold), 19px);
-}
-.text1 {
-    @include title(var(--font-13), var(--font-regular), 16px);
-}
-/* 수치값이 있을 경우 */
-.text2 {
-    @include title(var(--font-14), var(--font-medium), 18px);
-}
-.text2 + .num {
-    @include title(var(--font-28), var(--font-heavy), 33px);
-}
-/* 그래프영역 별첨 */
-.graph-txt {
-    @include title(var(--font-14), var(--font-medium), 16px);
-}
 
 /*---------------------------------------------
     #라벨
@@ -53,7 +35,7 @@ $btnstls: "trcolor", "fcolor";
     background-color:#EFFCF3;
     &.ico {
         line-height:26px;
-        background-image:url(../images/common/ico_list_ok.svg);
+        background-image:url("../images/common/ico_list_ok.svg");
         background-size:10px;
         background-position:10px center;
     }
@@ -65,7 +47,7 @@ $btnstls: "trcolor", "fcolor";
     background-color:#FFEFEF;
     &.ico {
         line-height:26px;
-        background-image: url(../images/common/ico_list_erro.svg);
+        background-image: url("../images/common/ico_list_erro.svg");
     }
     &_tit {
         color:var(--false) !important;

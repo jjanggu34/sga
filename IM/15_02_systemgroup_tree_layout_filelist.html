@@ -62,7 +62,7 @@
 			</div>
 		</div>
 		<div id="container">
-			<!-- s : 수정 -->
+			<!-- s : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="header no_navlink">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
@@ -104,7 +104,7 @@
 					<li class="btn_logout"><a href="">logout</a></li>
 				</ul>
 			</div>
-			<!-- e : 수정 -->
+			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="flx cont_wrap">
 				<div class="content">
 					<div class="worker_ch_area flx">
@@ -280,6 +280,7 @@
 						</ul>
 					</div>
 					<div class="tbl_list">
+						<!-- s: class명 변경 -->
 						<table class="default_tbl">
 							<thead>
 								<tr>
@@ -308,25 +309,25 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>승인됨<span class="mandatxt"><i></i>위임함</span></td>
-									<td><i class="icon_list"></i>정상</td>
+									<td class="checkCircle"><i class="icon_list"></i>정상</td>
 									<td>CentOS(1503)</td>
-									<td><i class="icon_list sv_connect"></i>연결됨</td>
+									<td class="plugConnected"><i class="icon_list"></i>연결됨</td>
 								</tr>
 								<tr>
 									<td class="check_list"><input type="checkbox" name="" id="list05" class="check_stl"><label for="list05" class="check_stl_lab"></label></td>
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>승인됨<span class="mandatxt madna_ed"><i></i>위임됨</span></td>
-									<td><i class="icon_pgs inprogress_create"></i>수정 작업중</td>
+									<td class="fileEdit"><i class="icon_pgs"></i>수정 작업중</td>
 									<td>CentOS(1503)</td>
-									<td><i class="icon_list sv_disconnect"></i>연결끊김</td>
+									<td class="plugZapOff"><i class="icon_list"></i>연결끊김</td>
 								</tr>
 								<tr>
 									<td class="check_list"><input type="checkbox" name="" id="list06" class="check_stl"><label for="list06" class="check_stl_lab"></label></td>
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs inprogress_pending"></i>수정 진행중</td>
+									<td class="fileEdit ing"><i class="icon_pgs"></i>수정 진행중</td>
 									<td>CentOS(1503)</td>
 									<td><i class="icon_list locked"></i>잠금</td>
 								</tr>
@@ -335,7 +336,7 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs inprogress_ing"></i>작업 보류중</td>
+									<td class="fileEditLoader"><i class="icon_pgs"></i>작업 보류중</td>
 									<td>CentOS(1503)</td>
 									<td><i class="icon_list sv_connect_error"></i>접속오류</td>
 								</tr>
@@ -344,25 +345,25 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list iwarning"></i>작업중 오류</td>
+									<td class="pauseCircle"><i class="icon_list"></i>작업중 오류</td>
 									<td>CentOS(1503)</td>
-									<td><i class="icon_list connection_compl"></i>수집완료</td>
+									<td class="downloadCircle"><i class="icon_list"></i>수집완료</td>
 								</tr>
 								<tr>
 									<td class="check_list"><input type="checkbox" name="" id="list08" class="check_stl"><label for="list08" class="check_stl_lab"></label></td>
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list disabled"></i>비활성</td>
+									<td class="Nbolt"><i class="icon_list"></i>비활성</td>
 									<td>CentOS(1503)</td>
-									<td><i class="icon_list connection_error"></i>수집오류</td>
+									<td class="pauseCircle"><i class="icon_list"></i>수집오류</td>
 								</tr>
 								<tr>
 									<td class="check_list"><input type="checkbox" name="" id="list09" class="check_stl"><label for="list09" class="check_stl_lab"></label></td>
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_pgs inprogress_delete"></i>삭제 진행중</td>
+									<td class="trash"><i class="icon_pgs"></i>삭제 진행중</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
@@ -371,12 +372,13 @@
 									<td>OS</td>
 									<td>RedHat</td>
 									<td>data1</td>
-									<td><i class="icon_list idisabled"></i>삭제됨</td>
+									<td class="trash"><i class="icon_list"></i>삭제됨</td>
 									<td>CentOS(1503)</td>
 									<td>Linux 표준모델</td>
 								</tr>
 							</tbody>
 						</table>
+						<!-- e: class명 변경 -->
 					</div>
 					<div class="tbl_btm">
 						<div class="page_info">1-10/50</div>

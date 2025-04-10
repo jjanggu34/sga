@@ -79,7 +79,7 @@ body {
                         a {
                             @include icon(24px, 24px);
                             font-size:0;
-                            background-image:url("../images/common/home.png");
+                            background-image:url("../images/common/home.svg");
                         }
                         &::before {
                             content:none;

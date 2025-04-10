@@ -98,7 +98,7 @@ body * {
   background-repeat: no-repeat;
   background-image: none;
   font-size: 0;
-  background-image: url("../images/common/home.png");
+  background-image: url("../images/common/home.svg");
 }
 #SGIM_wrap .header .header_title .link_depth li:first-child::before {
   content: none;

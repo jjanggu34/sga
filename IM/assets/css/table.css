@@ -59,7 +59,7 @@
   height: 35px;
   border: 0;
   border-bottom: 1px solid var(--border-d);
-  font-size: var(--font-14);
+  font-size: var(--font-13);
   font-weight: var(--font-regular);
   line-height: 16px;
   color: var(--title);
@@ -120,7 +120,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: url(../images/common/ico-nodata.png) no-repeat;
+  background: url("../images/common/ico-nodata.png") no-repeat;
   opacity: 0.3;
 }
 .default_tbl tbody tr td.no_data p span {
@@ -128,6 +128,19 @@
   margin-bottom: 10px;
   font-size: var(--font-18);
   font-weight: var(--font-regular);
+}
+.default_tbl.tblStl2 th {
+  background-color: var(--table-th);
+}
+.default_tbl.tblStl2 th.th-bl {
+  font-weight: var(--font-regular);
+  background-color: var(--table-th);
+}
+.default_tbl.tblStl2 th .tb_dt_link p {
+  font-weight: var(--font-regular);
+}
+.default_tbl.tblStl2 td {
+  overflow: unset;
 }
 
 /* table info */
@@ -141,6 +154,13 @@
   font-weight: var(--font-medium);
   color: var(--info);
   vertical-align: unset;
+}
+
+/* mini_tbl */
+.mini_tbl .default_tbl thead th {
+  background-color: var(--table-th);
+  border-top: 1px solid var(--border-d);
+  border-bottom: 1px solid var(--secondary);
 }
 
 /*---------------------------------------------

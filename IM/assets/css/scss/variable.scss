@@ -1,7 +1,5 @@
 /* 변수 지정하기 */
 $wh100: 100%;//width:100%, height:100%
-$tl: left !important;//text-align:left;
-$tr: right !important;//text-align:right;
 
 /* mixin 함수 선언하기 */
 @mixin flexsb($justify: space-between) {
@@ -52,7 +50,6 @@ $tr: right !important;//text-align:right;
 @mixin label {
     display:inline-block;
     width:auto;
-    // padding:5px 24px 5px 8px;
     border-radius:14px;
     font-size:var(--font-13);
 }

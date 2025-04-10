@@ -68,6 +68,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
     color:var(--text-disabled);
     background:var(--disabled-line-bg);
     border:1px solid var(--button-disabled);
+    cursor:auto;
 }
 
 /*---------------------------------------------
@@ -111,9 +112,16 @@ button {
                 -webkit-mask-image:url("../images/common/label/ico_trash.svg");
                 mask-image:url("../images/common/label/ico_trash.svg");
             }
+            &.checkout {
+                @include state(#121212);
+            }
+            &.checkin {
+                @include state(#121212);
+            }
         }
     }
     &.disabled {
+        cursor:auto;
         i {
             background-color:var(--text-disabled) !important;
         }
@@ -180,6 +188,12 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
         height:24px;
         background:url("../images/common/ico_btn.svg")no-repeat center/auto;
     }
+    &.mini_search {
+        .btn_search {
+            @extend .btn_search;
+            right:20px;
+        }
+    }
     .btn_detail_search{
         top:50%;
         right:5px;
@@ -232,6 +246,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
                 }
                 &.next {
                     padding:2px;
+                    overflow:hidden;
                     span {
                         @include state(var(--text-disabled));
                         width:24px;
@@ -243,6 +258,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
                 }
                 &.last {
                     padding:2px;
+                    overflow:hidden;
                     span {
                         @include state(var(--text-disabled));
                         width:24px;

@@ -89,6 +89,7 @@
   color: var(--text-disabled);
   background: var(--disabled-line-bg);
   border: 1px solid var(--button-disabled);
+  cursor: auto;
 }
 
 /*---------------------------------------------
@@ -152,6 +153,35 @@ button.icon i.delfile {
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_trash.svg");
   mask-image: url("../images/common/label/ico_trash.svg");
+}
+button.icon i.checkout {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #121212;
+  vertical-align: text-bottom;
+}
+button.icon i.checkin {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #121212;
+  vertical-align: text-bottom;
+}
+button.disabled {
+  cursor: auto;
 }
 button.disabled i {
   background-color: var(--text-disabled) !important;
@@ -234,13 +264,16 @@ button.icon_arrow_close {
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
-.search_box .btn_search {
+.search_box .btn_search, .search_box.mini_search .btn_search {
   top: 50%;
   transform: translateY(-50%);
   right: 95px;
   width: 24px;
   height: 24px;
   background: url("../images/common/ico_btn.svg") no-repeat center/auto;
+}
+.search_box.mini_search .btn_search {
+  right: 20px;
 }
 .search_box .btn_detail_search {
   top: 50%;
@@ -301,6 +334,7 @@ button.icon_arrow_close {
 }
 .pagination ul li a.next, .pagination ul li a.prev {
   padding: 2px;
+  overflow: hidden;
 }
 .pagination ul li a.next span, .pagination ul li a.prev span {
   display: inline-block;
@@ -322,6 +356,7 @@ button.icon_arrow_close {
 }
 .pagination ul li a.last, .pagination ul li a.first {
   padding: 2px;
+  overflow: hidden;
 }
 .pagination ul li a.last span, .pagination ul li a.first span {
   display: inline-block;
