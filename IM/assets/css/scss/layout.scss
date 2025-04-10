@@ -191,6 +191,13 @@ body {
                     border-left-color: transparent;
                     color:var(--primary);
                     background-color:var(--white);
+                    span {
+                        color:var(--primary);
+                    }
+                    &::after {
+                        transform: translateY(-50%) rotate(180deg);
+                        background-color:var(--primary);
+                    }
                 }
                 i {
                     left:14px;
@@ -198,6 +205,13 @@ body {
                 &:hover {
                     box-shadow:none;
                     color:var(--primary);
+                }
+                &::after {
+                    top:50%;
+                    transform: translateY(-50%);
+                    @include state(var(--content));
+                    -webkit-mask-image:url("../images/common/menu_arr.svg");
+                    mask-image:url("../images/common/menu_arr.svg");
                 }
             }
             ul {

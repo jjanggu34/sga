@@ -229,12 +229,36 @@ body * {
   color: var(--primary);
   background-color: var(--white);
 }
+#SGIM_wrap .nav_list > li > a.on span {
+  color: var(--primary);
+}
+#SGIM_wrap .nav_list > li > a.on::after {
+  transform: translateY(-50%) rotate(180deg);
+  background-color: var(--primary);
+}
 #SGIM_wrap .nav_list > li > a i {
   left: 14px;
 }
 #SGIM_wrap .nav_list > li > a:hover {
   box-shadow: none;
   color: var(--primary);
+}
+#SGIM_wrap .nav_list > li > a::after {
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--content);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/menu_arr.svg");
+  mask-image: url("../images/common/menu_arr.svg");
 }
 #SGIM_wrap .nav_list > li ul {
   margin: 0 13px 0 9px;
