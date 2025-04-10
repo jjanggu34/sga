@@ -72,7 +72,8 @@
     --border-disabled: #AAB0B8;
 
     /* button color */
-    --button-hover: #EFA20B;
+    --btn-hover: #EFA20B;
+    --btn-default:#162866;
     --line-hover: #797979;
     --button-disabled: #EEEEEE;
     --disabled-line-bg: #FCFCFC;

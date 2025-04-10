@@ -4,6 +4,10 @@
 /*---------------------------------------------
     #기본 테이블
 ---------------------------------------------*/
+.tbl_list {
+  padding: 0 24px 20px;
+}
+
 .dash_table {
   padding: 10px 0;
 }
@@ -131,6 +135,8 @@
 }
 .default_tbl.tblStl2 th {
   background-color: var(--table-th);
+  border: 1px solid var(--border-d);
+  border-top: 0;
 }
 .default_tbl.tblStl2 th.th-bl {
   font-weight: var(--font-regular);
@@ -141,6 +147,8 @@
 }
 .default_tbl.tblStl2 td {
   overflow: unset;
+  border: 1px solid var(--border-d);
+  border-top: 0;
 }
 
 /* table info */

@@ -3,6 +3,9 @@
 /*---------------------------------------------
     #기본 테이블
 ---------------------------------------------*/
+.tbl_list {
+    padding:0 24px 20px;
+}
 .dash_table {
     padding:10px 0;
     .d_list_tt.f_ro {
@@ -144,6 +147,8 @@
     &.tblStl2 {
         th{
             background-color:var(--table-th);
+            border:1px solid var(--border-d);
+            border-top:0;
             &.th-bl {
                 font-weight:var(--font-regular);
                 background-color:var(--table-th);
@@ -156,6 +161,8 @@
         }
         td {
             overflow:unset;
+            border:1px solid var(--border-d);
+            border-top:0;
         }
     }
 }

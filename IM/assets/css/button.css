@@ -7,7 +7,7 @@
     #tit_in_btn: absolute
 ---------------------------------------------*/
 .list_btn {
-  top: 60px;
+  padding: 15px 24px 24px;
 }
 .list_btn .opttxt {
   font-weight: var(--font-regular);
@@ -23,8 +23,11 @@
 .btn_box a.big {
   height: 38px;
   padding: 10px 14px;
+  border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
+  color: var(--title);
+  background: var(--primary);
 }
 
 .btn_box button {
@@ -36,8 +39,11 @@
 .btn_box button.big {
   height: 38px;
   padding: 10px 14px;
+  border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
+  color: var(--title);
+  background: var(--primary);
 }
 
 .list_btn button {
@@ -49,21 +55,35 @@
 .list_btn button.big {
   height: 38px;
   padding: 10px 14px;
+  border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
+  color: var(--title);
+  background: var(--primary);
 }
 
 /*---------------------------------------------
 	#기본
 ---------------------------------------------*/
 /* im */
+.basic {
+  border: 1px solid var(--btn-default);
+  color: var(--white);
+  background: var(--btn-default);
+}
+.basic:focus-visible {
+  border: 1px solid #0A153C;
+  background: #0A153C;
+}
+
 .primary {
   border: 1px solid var(--primary);
-  color: #121212;
+  color: var(--title);
   background: var(--primary);
 }
 .primary:focus-visible {
-  background: var(--button-hover);
+  border: 1px solid var(--btn-hover);
+  background: var(--btn-hover);
 }
 .primary.btn_dropdown {
   padding-right: 23px;
@@ -80,15 +100,15 @@
 	#disabled
 ---------------------------------------------*/
 .disabled {
-  border: 1px solid var(--button-disabled);
+  border: 1px solid var(--btn-disabled);
   color: var(--text-disabled);
-  background: var(--button-disabled);
+  background: var(--btn-disabled);
 }
 
 .line_disabled {
   color: var(--text-disabled);
   background: var(--disabled-line-bg);
-  border: 1px solid var(--button-disabled);
+  border: 1px solid var(--btn-disabled);
   cursor: auto;
 }
 
@@ -102,7 +122,7 @@
   background: var(--white);
 }
 .line:focus-visible {
-  color: #121212;
+  color: var(--title);
   border: 1px solid var(--content);
 }
 .line.btn_dropdown {
@@ -130,7 +150,7 @@ button.icon i.icon_reset {
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: #121212;
+  background-color: var(--title);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_refresh.svg");
   mask-image: url("../images/common/ico_refresh.svg");
@@ -149,7 +169,7 @@ button.icon i.delfile {
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: #121212;
+  background-color: var(--title);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_trash.svg");
   mask-image: url("../images/common/label/ico_trash.svg");
@@ -164,7 +184,7 @@ button.icon i.checkout {
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: #121212;
+  background-color: var(--title);
   vertical-align: text-bottom;
 }
 button.icon i.checkin {
@@ -177,7 +197,7 @@ button.icon i.checkin {
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: #121212;
+  background-color: var(--title);
   vertical-align: text-bottom;
 }
 button.disabled {
@@ -303,7 +323,7 @@ button.icon_arrow_close {
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: #121212;
+  background-color: var(--title);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_refresh.svg");
   mask-image: url("../images/common/ico_refresh.svg");

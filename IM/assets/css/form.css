@@ -11,7 +11,7 @@
   border-radius: 6px;
 }
 .form_contrl:disabled {
-  background: var(--button-disabled);
+  background: var(--btn-disabled);
 }
 
 /* search */
@@ -67,7 +67,7 @@
 }
 
 .check_stl:disabled + label:before {
-  border: 1px solid var(--button-disabled);
+  border: 1px solid var(--btn-disabled);
 }
 
 .radio_stl:checked + label:before {
@@ -75,7 +75,7 @@
 }
 
 .radio_stl:disabled + label:before {
-  border: 1px solid var(--button-disabled);
+  border: 1px solid var(--btn-disabled);
 }
 
 .check_stl + label {
@@ -104,7 +104,7 @@
   content: none;
 }
 .check_stl:disabled + label::before {
-  background-color: var(--button-disabled);
+  background-color: var(--btn-disabled);
 }
 
 .radio_stl:checked + label::before {

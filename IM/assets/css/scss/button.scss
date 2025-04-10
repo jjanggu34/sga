@@ -6,7 +6,7 @@
     #tit_in_btn: absolute
 ---------------------------------------------*/
 .list_btn {
-    top:60px;
+    padding:15px 24px 24px;
     .opttxt {
         font-weight:var(--font-regular);
         color:var(--title);
@@ -24,8 +24,11 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
         &.big {
             height:38px;
             padding:10px 14px;
+            border:1px solid var(--primary);
             font-size:var(--font-14);
             font-weight:var(--font-medium);
+            color:var(--title);
+            background:var(--primary);
         }
     }
 }
@@ -34,13 +37,24 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 	#기본
 ---------------------------------------------*/
 /* im */
+.basic {
+    border:1px solid var(--btn-default);
+    color:var(--white);
+    background:var(--btn-default);
+    &:focus-visible {
+        border:1px solid #0A153C;
+        background:#0A153C;
+    }
+}
+
 .primary {
     border:1px solid var(--primary);
-    color:#121212;
+    color:var(--title);
     background:var(--primary);
     // focus
     &:focus-visible {
-        background:var(--button-hover);
+        border:1px solid var(--btn-hover);
+        background:var(--btn-hover);
     }
     &.btn_dropdown {
         padding-right:23px;
@@ -60,14 +74,14 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 	#disabled
 ---------------------------------------------*/
 .disabled {
-    border:1px solid var(--button-disabled);
+    border:1px solid var(--btn-disabled);
     color:var(--text-disabled);
-    background:var(--button-disabled);
+    background:var(--btn-disabled);
 }
 .line_disabled {
     color:var(--text-disabled);
     background:var(--disabled-line-bg);
-    border:1px solid var(--button-disabled);
+    border:1px solid var(--btn-disabled);
     cursor:auto;
 }
 
@@ -81,7 +95,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
     background:var(--white);
     // focus
     &:focus-visible {
-        color:#121212;
+        color:var(--title);
         border:1px solid var(--content);
     }
     &.btn_dropdown {
@@ -99,7 +113,7 @@ button {
     padding:6px 14px 6px 7px;
         i {
             &.icon_reset {
-                @include state(#121212);
+                @include state(var(--title));
                 -webkit-mask-image:url("../images/common/ico_refresh.svg");
                 mask-image:url("../images/common/ico_refresh.svg");
                 &.init {
@@ -108,15 +122,15 @@ button {
                 }
             }
             &.delfile {
-                @include state(#121212);
+                @include state(var(--title));
                 -webkit-mask-image:url("../images/common/label/ico_trash.svg");
                 mask-image:url("../images/common/label/ico_trash.svg");
             }
             &.checkout {
-                @include state(#121212);
+                @include state(var(--title));
             }
             &.checkin {
-                @include state(#121212);
+                @include state(var(--title));
             }
         }
     }
@@ -214,7 +228,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
         line-height:16px;
         &::before {
             content:"";
-            @include state(#121212);
+            @include state(var(--title));
             -webkit-mask-image:url("../images/common/ico_refresh.svg");
             mask-image:url("../images/common/ico_refresh.svg");
         }

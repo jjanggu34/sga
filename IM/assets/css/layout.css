@@ -19,7 +19,7 @@ body * {
     #헤더 레이아웃
 ---------------------------------------------*/
 #SGIM_wrap .header {
-  padding: 18px 20px 18px 26px;
+  padding: 18px 20px 18px 24px;
   height: 60px;
   background: var(--white);
 }
@@ -210,6 +210,7 @@ body * {
   height: 100%;
 }
 #SGIM_wrap .nav_tab a {
+  padding: 18px 0 11px;
   font-size: var(--font-14);
   font-weight: var(--font-regular);
   background-color: var(--white);
@@ -261,8 +262,8 @@ body * {
   mask-image: url("../images/common/menu_arr.svg");
 }
 #SGIM_wrap .nav_list > li ul {
-  margin: 0 13px 0 9px;
-  padding: 19px 10px 13px 19px;
+  margin: 0 9px 0 13px;
+  padding: 28px 10px 22px 19px;
   border-left: 0;
   border-radius: 11px;
   background-color: var(--primary);
@@ -271,12 +272,12 @@ body * {
   position: relative;
   padding: 9px 0;
   font-weight: var(--font-medium);
-  color: var(--text-color1);
+  color: var(--title);
   line-height: 17px;
   opacity: 0.7;
 }
 #SGIM_wrap .nav_list > li ul li a:hover {
-  color: var(--text-color1);
+  color: var(--title);
   background-color: transparent;
   opacity: 1;
 }
@@ -299,6 +300,9 @@ body * {
   background-repeat: no-repeat;
   background-size: contain;
 }
+#SGIM_wrap .nav_list > li ul li:first-child a {
+  padding-top: 0;
+}
 #SGIM_wrap .nav_list > li ul li:last-child a {
   padding-bottom: 0;
 }
@@ -307,6 +311,9 @@ body * {
 }
 #SGIM_wrap.mini_nav .nav_list li a i {
   left: 24px;
+}
+#SGIM_wrap.mini_nav .nav_list li a.depth_menu::after {
+  display: none;
 }
 #SGIM_wrap.mini_nav .header .btn_lnb a {
   left: 24px;
@@ -323,7 +330,6 @@ body * {
   box-shadow: unset;
 }
 #SGIM_wrap .content > div:not(.search_wrap, .tab_wrap, .monitoring_flx), #SGIM_wrap .monitoring_wrap > div:not(.search_wrap, .tab_wrap, .monitoring_flx) {
-  padding: 30px 24px 0;
   background: var(--white);
 }
 #SGIM_wrap .content > div:last-child, #SGIM_wrap .monitoring_wrap > div:last-child {

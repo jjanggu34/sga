@@ -8,12 +8,44 @@
 </head>
 <body>
     <div id="moon"></div>
+    <div class="corner-line"></div>
     <style>
         #moon {
       width: 80px;
       height: 80px;
       border-radius: 50%;
       box-shadow: 15px 15px 0 0 red;
+    }
+    .corner-line {
+    position: relative;
+    width: 50px;
+    height: 60px;
+    }
+
+    /* 세로선 */
+    .corner-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: white; /* 배경과 동일 */
+    border-radius: 0 0 0 100%;
+    box-shadow: -2px 0 0 0 #888; /* 왼쪽 선 */
+    }
+
+    /* 아래쪽 바깥 곡선 */
+    .corner-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #888;
+    border-bottom: 2px solid #888;
+    border-bottom-left-radius: 20px;
     }
     </style>
 </body>
