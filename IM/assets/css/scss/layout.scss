@@ -306,6 +306,12 @@ body {
             }
         }
     }
+    #container {
+        background:var(--white);
+        .cont_wrap {
+            margin-top:60px;
+        }
+    }
     .content {
         background-color:transparent;
     }

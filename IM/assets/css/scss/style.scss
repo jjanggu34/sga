@@ -35,6 +35,30 @@ $btnstls: "trcolor", "fcolor";
     }
 }
 
+.bluetxt {
+    .mandatxt {
+        @extend %tag-base;
+        color:#6A5ACD;
+        background: #E6E2FF;
+        i {
+            @extend %imgae;
+            width:24px;
+            background-image:url("../images/common/label/ico_delegated.svg");
+        }
+    }
+
+    .madna_ed {
+        @extend %tag-base;
+        color:#5A98CD;
+        background: #DDEFFF;
+        i {
+            @extend %imgae;
+            width:34px;
+            background-image:url("../images/common/label/ico_delegating.svg");
+        }
+    }
+}
+
 $icons: "icon_list", "icon_pgs", "icon_ff";
 
 @each $icon in $icons {
@@ -240,8 +264,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** 탭 *****************/
 .tab_wrap {
-    margin-bottom:8px;
+    padding-bottom:8px;
     border-bottom:0;
+    background:var(--body);
     .tab_list {
         li {
             &+ li {
@@ -281,7 +306,21 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.cont_in_tab {
         margin-bottom:0;
-        padding:0 24px;
+        padding:8px 6px;
+        border-radius:10px;
+        background:var(--btn-disabled);
+    }
+}
+
+.tree_menu_tab {
+    button {
+        padding:16px 0 12px;
+        border:1px solid var(--border-d);
+        background:var(--btn-disabled);
+        &.on {
+            color:var(--title);
+            background:var(--white);
+        }
     }
 }
 
@@ -385,3 +424,5 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
 }
+
+/***************** 공통 *****************/

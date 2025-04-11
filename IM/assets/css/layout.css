@@ -335,6 +335,12 @@ body * {
 #SGIM_wrap .content > div:last-child, #SGIM_wrap .monitoring_wrap > div:last-child {
   padding-bottom: 20px;
 }
+#SGIM_wrap #container {
+  background: var(--white);
+}
+#SGIM_wrap #container .cont_wrap {
+  margin-top: 60px;
+}
 #SGIM_wrap .content {
   background-color: transparent;
 }

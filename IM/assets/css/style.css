@@ -1,5 +1,22 @@
 @charset "UTF-8";
 /* 변수 지정하기 */
+.bluetxt .mandatxt, .bluetxt .madna_ed {
+  display: inline-block;
+  padding: 0 8px 0 6px;
+  border-radius: 12px;
+  font-size: var(--font-13);
+  font-weight: var(--font-regular);
+  line-height: 25px;
+}
+
+.bluetxt .mandatxt i, .bluetxt .madna_ed i {
+  display: inline-block;
+  height: 24px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
 /* mixin 함수 선언하기 */
 /***************** 공통 *****************/
 .title {
@@ -47,6 +64,23 @@
 }
 .fcolor_tit {
   color: var(--false) !important;
+}
+
+.bluetxt .mandatxt {
+  color: #6A5ACD;
+  background: #E6E2FF;
+}
+.bluetxt .mandatxt i {
+  width: 24px;
+  background-image: url("../images/common/label/ico_delegated.svg");
+}
+.bluetxt .madna_ed {
+  color: #5A98CD;
+  background: #DDEFFF;
+}
+.bluetxt .madna_ed i {
+  width: 34px;
+  background-image: url("../images/common/label/ico_delegating.svg");
 }
 
 .icon_list {
@@ -438,8 +472,9 @@
 
 /***************** 탭 *****************/
 .tab_wrap {
-  margin-bottom: 8px;
+  padding-bottom: 8px;
   border-bottom: 0;
+  background: var(--body);
 }
 .tab_wrap .tab_list li + li {
   margin-left: 4px;
@@ -475,7 +510,19 @@
 }
 .tab_wrap.cont_in_tab {
   margin-bottom: 0;
-  padding: 0 24px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  background: var(--btn-disabled);
+}
+
+.tree_menu_tab button {
+  padding: 16px 0 12px;
+  border: 1px solid var(--border-d);
+  background: var(--btn-disabled);
+}
+.tree_menu_tab button.on {
+  color: var(--title);
+  background: var(--white);
 }
 
 /***************** 검색-상세정보 *****************/
@@ -615,3 +662,5 @@
 .detail_search_wrap .month_select li {
   padding-right: 4px;
 }
+
+/***************** 공통 *****************/

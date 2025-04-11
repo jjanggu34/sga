@@ -21,6 +21,7 @@
 /* search */
 .search_wrap {
     padding:30px 24px;
+    background:var(--body);
     &+ .tab_wrap.cont_in_tab {
         margin-top:0;
     }

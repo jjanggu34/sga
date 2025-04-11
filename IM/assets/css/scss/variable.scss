@@ -1,6 +1,21 @@
 /* 변수 지정하기 */
 $wh100: 100%;//width:100%, height:100%
 
+%tag-base {
+    display:inline-block;
+    padding: 0 8px 0 6px;
+    border-radius: 12px;
+    font-size:var(--font-13);
+    font-weight:var(--font-regular);
+    line-height:25px;
+}
+%imgae {
+    display:inline-block;
+    height:24px;
+    background-size:90%;
+    background-repeat:no-repeat;
+    background-position:left center;
+}
 /* mixin 함수 선언하기 */
 @mixin flexsb($justify: space-between) {
     display: flex;
