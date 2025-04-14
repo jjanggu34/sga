@@ -107,13 +107,15 @@
 			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="flx cont_wrap">
 				<div class="content">
-					<div class="worker_ch_area flx">
+					<!-- s: flx 삭제 -->
+					<div class="worker_ch_area">
 						<div class="worker_ch_box">
-							<button class="skyblue">작업자 선택</button>
+							<button class="line">작업자 선택</button>
 							<p class="worker_name">홍길동</p>
 						</div>
 						<p class="req_txt inbl">※ 미 선택시 신청자가 작업자</p>
 					</div>
+					<!-- e: flx 삭제 -->
 					<div class="tab_wrap cont_in_tab">
 						<ul class="tab_list">
 							<li><a href="" class="on">서버 목록</a></li>
@@ -137,7 +139,8 @@
 									<ul class="tree_menu_inner">
 										<li>
 											<a><i class="icon_tree folder_open"></i><span>Root</span></a>
-											<ul>
+											<!-- s: class명 추가 sub_tree_menu -->
+											<ul class="sub_tree_menu">
 												<li>
 													<a><i class="icon_tree folder"></i><span>최고관리자</span></a>
 												</li>
@@ -160,6 +163,7 @@
 													<a><i class="icon_tree file"></i><span>익명사용자</span></a>
 												</li>
 											</ul>
+											<!-- e: class명 추가 sub_tree_menu -->
 										</li>
 									</ul>
 								</div>
@@ -264,10 +268,12 @@
 								</div>
 							</div>
 						</div>
+						<!-- s: class 삭제 -->
 						<div class="align_right">
-							<button class="btnstl skyblue arrow">선택추가<i></i></button>
-							<button class="btnstl shadow arrow">전체추가<i></i></button>
+							<button class="btnstl basic">선택추가<i></i></button>
+							<button class="btnstl line">전체추가<i></i></button>
 						</div>
+						<!-- s: class 삭제 -->
 					</div>
 				</div>
 				<div class="content">
@@ -308,7 +314,9 @@
 									<td class="check_list"><input type="checkbox" name="" id="list04" class="check_stl"><label for="list04" class="check_stl_lab"></label></td>
 									<td>OS</td>
 									<td>RedHat</td>
-									<td>승인됨<span class="mandatxt"><i></i>위임함</span></td>
+									<!-- s: class 추가 bluetxt -->
+									<td class="bluetxt">승인됨<span class="madna_ed"><i></i>위임함</span></td>
+									<!-- e: class 추가 bluetxt -->
 									<td class="checkCircle"><i class="icon_list"></i>정상</td>
 									<td>CentOS(1503)</td>
 									<td class="plugConnected"><i class="icon_list"></i>연결됨</td>
@@ -317,7 +325,9 @@
 									<td class="check_list"><input type="checkbox" name="" id="list05" class="check_stl"><label for="list05" class="check_stl_lab"></label></td>
 									<td>OS</td>
 									<td>RedHat</td>
-									<td>승인됨<span class="mandatxt madna_ed"><i></i>위임됨</span></td>
+									<!-- s: class 추가 bluetxt -->
+									<td class="bluetxt">승인됨<span class="mandatxt"><i></i>위임됨</span></td>
+									<!-- e: class 추가 bluetxt -->
 									<td class="fileEdit"><i class="icon_pgs"></i>수정 작업중</td>
 									<td>CentOS(1503)</td>
 									<td class="plugZapOff"><i class="icon_list"></i>연결끊김</td>
@@ -404,33 +414,36 @@
 							</select>
 						</div>
 					</div>
-					<div>
-						<button class="btnstl skyblue">선택삭제</button>
-						<button class="btnstl shadow">선택다운로드</button>
+					<!-- s: class명 추가 및 변경 -->
+					<div class="align_left">
+						<button class="btnstl basic">선택삭제</button>
+						<button class="btnstl line">선택다운로드</button>
 					</div>
-					<div>
+					<!-- e: class명 추가 및 변경 -->
+					<!-- s: class명 추가 form_wrap -->
+					<div class="form_wrap">
 						<p class="fm_tit">신청 상세</p>
 						<div class="form_stl">
 							<ul class="form_tbl noline">
-								<li>
+								<li class="bul_dot">
 									<div class="form_tit"><label for="onsdName">신청 역할</label></div>
 									<div class="form_txt"><input type="text" name="" class="form_contrl" id="onsdName" placeholder="">
 									</div>
 								</li>
-								<li>
+								<li class="bul_dot">
 									<div class="form_tit"><label for="select07">신청사유<i class="i_req"></i></label></div>
 									<div class="form_txt">
 										<textarea class="form_contrl" id="modelExplain"></textarea>
 										<div class="ducheck_bl"><span class="dupli_check redtxt"><i></i>필수 입력 값 입니다.</span></div>
 									</div>
 								</li>
-								<li>
+								<li class="bul_dot">
 									<div class="form_tit"><label for="select07">파일첨부</label></div>
 									<div class="form_txt">
 										<div class="file_upload_wrap">
 											<div class="file_upload_btns">
 												<button class="btnstl shadow">파일선택</button>
-												<button class="btnstl navy list_upload"><i></i>목록 업로드</button>
+												<button class="btnstl basic"><i></i>목록 업로드</button>
 											</div>
 											<div class="file_upload_box upload_list scroll">
 												<ul>
@@ -460,27 +473,19 @@
 							</ul>
 						</div>
 					</div>
-					<div>
+
+					<div class="form_wrap">
 						<p class="fm_tit">예상 결재선</p>
-						<div class="workflow_box scroll">
+						<!-- s: scroll 삭제 -->
+						<div class="workflow_box">
+						<!-- e: scroll 삭제 -->
+						 	<!-- s: svg 삭제 -->
 							<div class="workflow_wrap">
 								<div class="s_e_w">
 									<div class="nav_circle">
 										<i class="i_start"></i>
 									</div>
 									<p class="wf_nm">박지민<span>신청자</span></p>
-								</div>
-								<div class="wf_arrow">
-									<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0)">
-										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#505B6E"/>
-										</g>
-										<defs>
-										<clipPath id="clip0">
-										<rect width="4.82" height="8" fill="white"/>
-										</clipPath>
-										</defs>
-									</svg>
 								</div>
 								<div class="">
 									<div class="wf_card apv_comple">
@@ -666,8 +671,10 @@
 									<p class="wf_nm">신청완료<span>2021.01.25</span></p>
 								</div>
 							</div>
+							<!-- e: svg 삭제 -->
 						</div>
 					</div>
+					<!-- e: class명 추가 form_wrap -->
 				</div>
 			</div>
 			<div class="footer">

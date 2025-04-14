@@ -82,14 +82,12 @@
                 &.new {
                     position:relative;
                     &::after {
+                        @include content(12px,12px);
                         content:"N";
                         position:absolute;
                         top:50%;
                         right:10px;
                         transform:translateY(-50%);
-                        display:inline-block;
-                        width:12px;
-                        height:12px;
                         border-radius:3px;
                         @include title(var(--font-12), var(--font-regular), 12px);
                         color:var(--white);
@@ -184,6 +182,8 @@
 
 /* mini_tbl */
 .mini_tbl {
+    border:0;
+    border-bottom:1px solid var(--border-d);
     .default_tbl {
         thead {
             th {
@@ -192,6 +192,9 @@
                 border-bottom:1px solid var(--secondary);
             }
         }
+    }
+    .mini_paging {
+        border-top:0;
     }
 }
 

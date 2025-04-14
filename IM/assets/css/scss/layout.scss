@@ -22,6 +22,7 @@ body {
     .header {
         padding:18px 20px 18px 24px;
         height:60px;
+        border-bottom:1px solid var(--border-d);
         background:var(--white);
         $Hbtns: "btn_lnb", "btn_lnb_m";
 
@@ -309,7 +310,14 @@ body {
     #container {
         background:var(--white);
         .cont_wrap {
+            gap:8px;
             margin-top:60px;
+            padding:0;
+            background:var(--body);
+            .content {
+                width:calc(100% / 2);
+                background:var(--white);
+            }
         }
     }
     .content {
@@ -354,6 +362,13 @@ body {
 /*---------------------------------------------
     #팝업 레이아웃
 ---------------------------------------------*/
+
+/*---------------------------------------------
+    #푸터 레이아웃
+---------------------------------------------*/
+.footer {
+    background:var(--body);
+}
 
 /*---------------------------------------------
     #미디어쿼리

@@ -8,7 +8,7 @@
         },
         // 더 상세하게 설정가능
         {
-            "format": "compressed",
+            "format": "expanded",
             "extensionName": ".min.css",
             "savePath": "~/.."
         }

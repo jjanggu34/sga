@@ -67,8 +67,10 @@
 ---------------------------------------------*/
 /* im */
 .basic {
-  border: 1px solid var(--btn-default);
+  border-radius: 6px;
+  font-size: var(--font-13);
   color: var(--white);
+  line-height: 16px;
   background: var(--btn-default);
 }
 .basic:focus-visible {

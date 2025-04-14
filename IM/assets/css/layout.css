@@ -21,6 +21,7 @@ body * {
 #SGIM_wrap .header {
   padding: 18px 20px 18px 24px;
   height: 60px;
+  border-bottom: 1px solid var(--border-d);
   background: var(--white);
 }
 #SGIM_wrap .header .btn_lnb a {
@@ -339,7 +340,14 @@ body * {
   background: var(--white);
 }
 #SGIM_wrap #container .cont_wrap {
+  gap: 8px;
   margin-top: 60px;
+  padding: 0;
+  background: var(--body);
+}
+#SGIM_wrap #container .cont_wrap .content {
+  width: 50%;
+  background: var(--white);
 }
 #SGIM_wrap .content {
   background-color: transparent;
@@ -382,6 +390,13 @@ body * {
 /*---------------------------------------------
     #팝업 레이아웃
 ---------------------------------------------*/
+/*---------------------------------------------
+    #푸터 레이아웃
+---------------------------------------------*/
+.footer {
+  background: var(--body);
+}
+
 /*---------------------------------------------
     #미디어쿼리
 ---------------------------------------------*/

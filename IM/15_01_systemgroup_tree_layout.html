@@ -107,13 +107,15 @@
 			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="flx cont_wrap">
 				<div class="content">
-					<div class="worker_ch_area flx">
+					<!-- s: flx 삭제 -->
+					<div class="worker_ch_area">
 						<div class="worker_ch_box">
-							<button class="skyblue">작업자 선택</button>
+							<button class="line">작업자 선택</button>
 							<p class="worker_name">홍길동</p>
 						</div>
 						<p class="req_txt inbl">※ 미 선택시 신청자가 작업자</p>
 					</div>
+					<!-- e: flx 삭제 -->
 					<div class="tab_wrap cont_in_tab">
 						<ul class="tab_list">
 							<li><a href="" class="on">서버 목록</a></li>
@@ -312,7 +314,7 @@
 									<td class="check_list"><input type="checkbox" name="" id="list04" class="check_stl"><label for="list04" class="check_stl_lab"></label></td>
 									<td>OS</td>
 									<td>RedHat</td>
-									<td>승인됨<span class="mandatxt"><i></i>위임함</span></td>
+									<td class="bluetxt">승인됨<span class="madna_ed"><i></i>위임함</span></td>
 									<td class="checkCircle"><i class="icon_list"></i>정상</td>
 									<td>CentOS(1503)</td>
 									<td class="plugConnected"><i class="icon_list"></i>연결됨</td>
@@ -321,7 +323,7 @@
 									<td class="check_list"><input type="checkbox" name="" id="list05" class="check_stl"><label for="list05" class="check_stl_lab"></label></td>
 									<td>OS</td>
 									<td>RedHat</td>
-									<td>승인됨<span class="mandatxt madna_ed"><i></i>위임됨</span></td>
+									<td class="bluetxt">승인됨<span class="mandatxt"><i></i>위임됨</span></td>
 									<td class="fileEdit"><i class="icon_pgs"></i>수정 작업중</td>
 									<td>CentOS(1503)</td>
 									<td class="plugZapOff"><i class="icon_list"></i>연결끊김</td>
@@ -408,11 +410,14 @@
 							</select>
 						</div>
 					</div>
-					<div class="">
-						<button class="btnstl skyblue">선택삭제</button>
-						<button class="btnstl shadow">선택다운로드</button>
+					<!-- s: class명 추가 및 변경 -->
+					<div class="align_left">
+						<button class="btnstl basic">선택삭제</button>
+						<button class="btnstl line">선택다운로드</button>
 					</div>
-					<div>
+					<!-- e: class명 추가 및 변경 -->
+					<!-- s: class명 추가 form_wrap -->
+					<div class="form_wrap">
 						<p class="fm_tit">신청 상세</p>
 						<div class="form_stl">
 							<ul class="form_tbl noline">
@@ -445,7 +450,7 @@
 							</ul>
 						</div>
 					</div>
-					<div>
+					<div class="form_wrap">
 						<p class="fm_tit">예상 결재선</p>
 						<div class="workflow_box scroll">
 							<!--<div class="workflow_wrap">
@@ -653,6 +658,7 @@
 							</div>-->
 						</div>
 					</div>
+					<!-- e: class명 추가 form_wrap -->
 				</div>
 			</div>
 			<div class="footer">

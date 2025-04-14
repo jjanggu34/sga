@@ -38,6 +38,13 @@
         border-radius:7px;
     }
 }
+.search_date {
+    .form_date {
+        .date_ctl {
+            background-position: left 5px center;
+        }
+    }
+}
 
 /* date */
 .form_date {
@@ -50,11 +57,14 @@
         color:var(--text-disabled);
     }
 }
-
-.search_date {
-    .form_date {
-        .date_ctl {
-            background-position: left 5px center;
+/* textarea */
+.form_stl {
+    .form_contrl {
+        width:100%;
+    }
+    textarea{
+        &.form_contrl {
+            width:100%;
         }
     }
 }
@@ -123,10 +133,6 @@ $labels: "check_stl_lab", "radio_stl_lab";
         padding:0;
     }
 }
-
-/* textarea */
-.scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea { width:100%; }
-textarea, textarea[readonly] { background: var(--btn--color-dark); }
 
 /*---------------------------------------------
 	#selectbox

@@ -36,6 +36,10 @@
   border-radius: 7px;
 }
 
+.search_date .form_date .date_ctl {
+  background-position: left 5px center;
+}
+
 /* date */
 .form_date {
   margin-right: 4px;
@@ -48,8 +52,12 @@
   color: var(--text-disabled);
 }
 
-.search_date .form_date .date_ctl {
-  background-position: left 5px center;
+/* textarea */
+.form_stl .form_contrl {
+  width: 100%;
+}
+.form_stl textarea.form_contrl {
+  width: 100%;
 }
 
 /* check */
@@ -117,15 +125,6 @@
 }
 .radio_stl + label + .req_txt {
   padding: 0;
-}
-
-/* textarea */
-.scroll-wrapper.textarea-scrollbar.scrollbar-outer.scroll-textarea {
-  width: 100%;
-}
-
-textarea, textarea[readonly] {
-  background: var(--btn--color-dark);
 }
 
 /*---------------------------------------------
