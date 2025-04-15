@@ -6,6 +6,7 @@
     기본 : icon_list
     진행중 : label_ico > icon_pgs
     #확장자 아이콘 : icon_ff.확장자명
+    서버 : icon_os
 ---------------------------------------------*/
 $btnstls: "trcolor", "fcolor";
 @each $btnstl in $btnstls {
@@ -55,6 +56,13 @@ $btnstls: "trcolor", "fcolor";
             background-image:url("../images/common/label/ico_delegating.svg");
         }
     }
+}
+
+.icon_os {
+    width:auto;
+    padding:5px 18px 4px;
+    border:$borderD;
+    @include title(var(--font-13), var(--font-regular), 16px);
 }
 
 $icons: "icon_list", "icon_pgs", "icon_ff";
@@ -282,7 +290,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     background:var(--body);
     .tab_list {
         li {
-            &+ li {
+            &+li {
                 margin-left:4px;
             }
             a {
@@ -319,12 +327,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.cont_in_tab {
         margin-bottom:0;
-        padding:20px 24px;
+        padding:20px 24px 18px;
         background:var(--white);
         .tab_list {
             padding:8px 6px;
             border-radius:10px;
             background:var(--btn-disabled);
+        }
+        &+.tbl_list {
+            margin:2px 24px 0;
         }
     }
 }
@@ -404,7 +415,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 dd {
                     max-width:301px;
                 }
-                &+ dl {
+                &+dl {
                     margin-top:10px;
                 }
             }
@@ -492,10 +503,34 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .tree_menu_wrap {
-            padding:29px 24px 20px 24px;
+            padding:0 24px 20px 24px;
+            .mini_search { // tree_menu_box 밖에 있을 때
+                &+.tree_menu_area {
+                    margin-top:28px;
+                }
+            }
             .tree_menu_area {
+                gap:18px;
                 .tree_menu_box {
                     border-radius:5px;
+                    margin-right:0;
+                    .mini_search{ // tree_menu_box 안에 있을 때
+                        height:auto;
+                        padding:13px 10px 9px 13px;
+                        margin-bottom:0;
+                        .search_inputbox {
+                            height:28px;
+                        }
+                        .btn_search {
+                            top:56%;
+                            transform:translateY(-56%);
+                            @include wh (16px,16px);
+                            background-size:contain;
+                        }
+                        &+.tree_menu_tl {
+                            padding-top:0;
+                        }
+                    }
                     .tree_menu_tl {
                         padding:20px 18px;
                         .tree_menu_inner {
@@ -504,6 +539,42 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                 span {
                                     font-weight:var(--font-regular);
                                     color:var(--title);
+                                }
+                                .icon_tree {
+                                    margin-right:4px;
+                                    @include mask(var(--text-disabled));
+                                    background-position:unset;
+                                    background-image:none;
+                                    &.folder {
+                                        -webkit-mask-image:url("../images/common/ico_folder.svg");
+                                        mask-image:url("../images/common/ico_folder.svg");
+                                        &_open {
+                                            background-color:var(--title);
+                                            -webkit-mask-image:url("../images/common/ico_folder_open.svg");
+                                            mask-image:url("../images/common/ico_folder_open.svg");
+                                        }
+                                    }
+                                    &.iuser {
+                                        -webkit-mask-image:url("../images/common/ico_member.svg");
+                                        mask-image:url("../images/common/ico_member.svg");
+                                    }
+                                    &.file {
+                                        -webkit-mask-image:url("../images/common/ico_file.svg");
+                                        mask-image:url("../images/common/ico_file.svg");
+                                    }
+                                }
+                                &.on {
+                                    border-radius:6px;
+                                    background:#FFFAEF;
+                                    span {
+                                        color:var(--primary);
+                                    }
+                                    .icon_tree {
+                                        background-color:var(--primary);
+                                    }
+                                }
+                                &:hover {
+                                    background:#FFFAEF;
                                 }
                             }
                             .sub_tree_menu {
@@ -527,8 +598,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                             border-bottom:$borderD;
                                         }
                                         &.on {
-                                            border-radius:6px;
-                                            background:#FFFAEF;
                                             span {
                                                 color:var(--primary);
                                             }
@@ -545,25 +614,50 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .mini_tbl {
                     flex:1;
                     width:$wh100;
+                    .mini_search{ //tree 안 list 위에 있을 때
+                        @include wh($wh100, auto);
+                        padding:0;
+                        margin-bottom:16px;
+                        text-align:right;
+                        .search_inputbox {
+                            max-width:278px;
+                            height:28px;
+                        }
+                        .btn_search {
+                            top:56%;
+                            transform:translateY(-56%);
+                            @include wh (16px,16px);
+                            background-size:contain;
+                        }
+                        &+.tree_menu_tl {
+                            padding-top:0;
+                        }
+                    }
                 }
             }
         }
         .tbl_list {
-            margin:0 24px;
             padding:0 0 20px;
             overflow-x:auto;
+            &::-webkit-scrollbar {
+                height:7px;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius:30px;
+                background:#EEEEEE;
+            }
         }
         .tbl_btm {
-            padding:20px 36px;
+            padding:14px 36px 20px;
         }
         .align_left {
             padding:0 24px;
             &+.form_wrap {
-                padding-top:56px;
+                padding-top:46px;
             }
         }
         .form_wrap {
-            padding:20px 24px;
+            padding:20px 24px 0;
             .fm_tit {
                 padding:0 0 15px 6px;
                 margin-top:0;
@@ -592,14 +686,33 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                             .ducheck_bl {
                                 padding-bottom:6px;
                             }
-                            .file_upload_wrap {
+                            .file_upload_wrap { //파일 첨부
                                 max-width:none;
                                 .file_upload_box {
+                                    height:83px;
+                                    margin-top:6px;
+                                    border-radius:6px;
+                                    background:var(--body);
+                                    &:has(.icon_file_upload) {
+                                        display:block;
+                                        padding:16px 0 21px;
+                                        border:1px dashed var(--border-d);
+                                        text-align:center;
+                                    }
+                                    .icon_file_upload {
+                                        display:inline-block;
+                                        @include wh (24px,24px);
+                                        @include mask(var(--text-disabled));
+                                        -webkit-mask-image:url("../images/common/ico_file_upload.svg");
+                                        mask-image:url("../images/common/ico_file_upload.svg");
+                                    }
+                                    p {
+                                        @include title(var(--font-13), var(--font-regular), 16px);
+                                        color:var(--text-disabled);
+                                    }
                                     &.upload_list {
-                                        margin-top:6px;
+                                        padding:15px 15px 11px;
                                         border:0;
-                                        border-radius:6px;
-                                        background:var(--body);
                                         li {
                                             gap:4px;
                                             padding-bottom:10px;
