@@ -5,7 +5,7 @@
 ---------------------------------------------*/
 /* focus */
 // input:focus-visible {
-//     outline:1px solid var(--primary);
+//     outline:$borderP;
 // }
 // .form_contrl:focus {
 //     border-color:var(--primary);
@@ -32,9 +32,8 @@
     margin:0 auto;
     border:0;
     .search_inputbox {
-        width:$wh100;
-        height:48px;
-        border:1px solid var(--border-d);
+        @include wh ($wh100, 48px);
+        border:$borderD;
         border-radius:7px;
     }
 }
@@ -60,12 +59,16 @@
 /* textarea */
 .form_stl {
     .form_contrl {
-        width:100%;
+        width:$wh100;
     }
     textarea{
         &.form_contrl {
-            width:100%;
+            width:$wh100;
         }
+    }
+    .file_upload_wrap {
+        max-width:none;
+        width:$wh100;
     }
 }
 
@@ -84,7 +87,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
 @each $input in $inputs {
     // checked
     .#{$input}:checked + label:before {
-        border: 1px solid var(--primary);
+        border: $borderP;
     }
     // disabled
     .#{$input}:disabled + label:before {
@@ -95,7 +98,9 @@ $labels: "check_stl_lab", "radio_stl_lab";
     &+label {
         color:var(--content);
         &::before {
-            @include state(var(--default));
+            display:inline-block;
+            @include wh (16px, 16px);
+            @include mask(var(--default));
             -webkit-mask-image:url("../images/common/ico_chekbox_s.svg");
             mask-image:url("../images/common/ico_chekbox_s.svg");
             border-radius:3px;

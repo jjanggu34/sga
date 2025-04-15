@@ -6,6 +6,7 @@
 .tbl_list {
     padding:0 24px 20px;
 }
+
 .dash_table {
     padding:10px 0;
     .d_list_tt.f_ro {
@@ -23,7 +24,7 @@
     cursor:auto;
     box-sizing:content-box;
     .tbl_br {
-        border-right:1px solid var(--border-d) !important;
+        border-right:$borderD !important;
     }
     .tbl_fff {
         border-bottom:1px solid var(--white) !important;
@@ -42,7 +43,7 @@
             th {
                 height:35px;
                 border:0;
-                border-top:1px solid var(--border-d);
+                border-top:$borderD;
                 border-bottom:1px solid var(--secondary);
                 font-size:var(--font-14);
                 font-weight:var(--font-regular);
@@ -64,24 +65,16 @@
     }
     tbody {
         tr {
-            // &[onclick] {
-            //     cursor:pointer;
-            //     &:hover {
-            //         background:#f4f4f4;
-            //     }
-            // }
-            // &:hover {
-            //     background: #f4f4f4;
-            // }
             th {
                 height:35px;
                 border:0;
-                border-bottom:1px solid var(--border-d);
+                border-bottom:$borderD;
                 @include title(var(--font-13),var(--font-regular),16px);
                 color:var(--title);
                 &.new {
                     position:relative;
                     &::after {
+                        display:inline-block;
                         @include content(12px,12px);
                         content:"N";
                         position:absolute;
@@ -103,7 +96,7 @@
             td {
                 padding:7px 10px;
                 border:0;
-                border-bottom:1px solid var(--border-d);
+                border-bottom:$borderD;
                 font-size:var(--font-13);
                 font-weight:var(--font-regular);
                 color:var(--content);
@@ -115,14 +108,14 @@
                     color:var(--content);
                 }
                 &.no_data {
-                    width:$wh100;
-                    height:$wh100;
+                    @include wh ($wh100, $wh100);
                     padding:40px 0;
                     line-height:normal;
                     p {
                         position:relative;
                         padding-top:60px;
                         &::after {
+                            display:inline-block;
                             @include content(55px, 51px);
                             position:absolute;
                             top:0;
@@ -145,7 +138,7 @@
     &.tblStl2 {
         th{
             background-color:var(--table-th);
-            border:1px solid var(--border-d);
+            border:$borderD;
             border-top:0;
             &.th-bl {
                 font-weight:var(--font-regular);
@@ -159,7 +152,7 @@
         }
         td {
             overflow:unset;
-            border:1px solid var(--border-d);
+            border:$borderD;
             border-top:0;
         }
     }
@@ -183,12 +176,12 @@
 /* mini_tbl */
 .mini_tbl {
     border:0;
-    border-bottom:1px solid var(--border-d);
+    border-bottom:$borderD;
     .default_tbl {
         thead {
             th {
                 background-color:var(--table-th);
-                border-top:1px solid var(--border-d);
+                border-top:$borderD;
                 border-bottom:1px solid var(--secondary);
             }
         }
@@ -201,108 +194,3 @@
 /*---------------------------------------------
     #table 안에 accordion
 ---------------------------------------------*/
-.dash_table {
-    .accordion_tbl {
-        .accordion {
-            cursor:pointer;
-            &:hover {
-                background:#f8f9fc;
-            }
-            &.tr_open {
-                td {
-                    border-bottom:0 !important;
-                    background:#f8f9fc;
-                }
-            }
-            &.tr_open + .subtask_bundle {
-                display:table-row;
-                td {
-                    background:#f8f9fc;
-                }
-            }
-            td {
-                .view_hide_btn_icon {
-                    text-align:center;
-                    &::before{
-                        content:"";
-                        @include viewHBI();
-                        -webkit-mask-position:7px, 7px;
-                        mask-position:7px, 7px;
-                        transform:rotate(90deg);
-                    }
-                }
-            }
-        }
-        .subtask_bundle {
-            display:none;
-            &:hover {
-                background:transparent !important;
-            }
-            td {
-                padding:10px !important;
-                border-top:0 !important;
-                font-size:var(--font-12);
-                white-space:normal !important;
-                * {
-                    font-size:var(--font-12);
-                }
-            }
-            .row_subtask {
-                padding:5px 10px;
-                margin:5px 0;
-                border-radius:7px;
-                background:var(--btn--color-dark);
-                .subtask_name {
-                    @include flexsb(null);
-                    font-weight:var(--font-medium);
-                    text-align:start;
-                    .subtask_catagory_title {
-                        flex-shrink:0;
-                        margin:8px;
-                        font-weight:var(--font-bold);
-                        .view_hide_btn_icon {
-                            @include viewHBI();
-                            -webkit-mask-position:6px, 5px;
-                            mask-position:6px, 5px;
-                        }
-                    }
-                    .subtask_catagory_detail {
-                        font-weight:var(--font-regular);
-                    }
-                    .subtask_catagory_Result {
-                        padding:0 7px;
-                        margin-right:5px;
-                        border-radius:7px;
-                    }
-                }
-                .subtask_detail {
-                    display:none;
-                    margin-left:30px;
-                    text-align:start;
-                }
-                &.tr_open {
-                    .subtask_name {
-                        padding-bottom:7px;
-                        margin-bottom:10px;
-                        @extend .tbl_br;
-                    }
-                    .subtask_detail {
-                        display:block;
-                        margin-bottom:10px;
-                        .subtask_catagory {
-                            display:flex;
-                            .subtask_catagory_title {
-                                flex-shrink:0;
-                                margin-right:8px;
-                                font-weight:var(--font-bold);
-                            }
-                            .subtask_catagory_detail {
-                                max-width:85%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}

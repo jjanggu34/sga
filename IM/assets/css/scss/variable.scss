@@ -1,5 +1,7 @@
 /* 변수 지정하기 */
 $wh100: 100%;//width:100%, height:100%
+$borderD: 1px solid var(--border-d);
+$borderP: 1px solid var(--primary);
 
 %tag-base {
     display:inline-block;
@@ -11,11 +13,11 @@ $wh100: 100%;//width:100%, height:100%
 }
 %imgae {
     display:inline-block;
-    height:24px;
     background-size:90%;
     background-repeat:no-repeat;
     background-position:left center;
 }
+
 /* mixin 함수 선언하기 */
 @mixin flexsb($justify: space-between) {
     display: flex;
@@ -27,24 +29,8 @@ $wh100: 100%;//width:100%, height:100%
 
 @mixin content($width, $height) {
     content:"";
-    display:inline-block;
     width:$width;
     height:$height;
-}
-
-@mixin viewHBI {
-    display: inline-block;
-    width:20px;
-    height:20px;
-    margin:0 auto;
-    -webkit-mask-image:url("../images/common/ico_arr.svg");
-    background-color:var(--content);
-    background-image: none;
-    mask-image: url("../images/common/ico_arr.svg");
-    -webkit-mask-size:9px;
-    mask-size:9px;
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
 }
 
 @mixin title($size, $weight, $line) {
@@ -54,7 +40,6 @@ $wh100: 100%;//width:100%, height:100%
 }
 
 @mixin icon($width, $height) {
-    display:inline-block;
     width:$width;
     height:$height;
     background-size:100%;
@@ -69,10 +54,7 @@ $wh100: 100%;//width:100%, height:100%
     font-size:var(--font-13);
 }
 
-@mixin state($backColor) {
-    display:inline-block;
-    width:16px;
-    height:16px;
+@mixin mask($backColor) {
     -webkit-mask-repeat:no-repeat;
     mask-repeat:no-repeat;
     -webkit-mask-size:100%;
@@ -81,4 +63,9 @@ $wh100: 100%;//width:100%, height:100%
     mask-position:center;
     background-color:$backColor;
     vertical-align:text-bottom;
+}
+
+@mixin wh ($width, $height) {
+    width:$width;
+    height:$height;
 }

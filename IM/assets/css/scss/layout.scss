@@ -22,13 +22,14 @@ body {
     .header {
         padding:18px 20px 18px 24px;
         height:60px;
-        border-bottom:1px solid var(--border-d);
+        border-bottom:$borderD;
         background:var(--white);
         $Hbtns: "btn_lnb", "btn_lnb_m";
 
         @each $Hbtn in $Hbtns {
             .#{$Hbtn} {
                 a {
+                    display:inline-block;
                     @include icon(24px, 24px);
                     background-image:url("../images/common/menu.svg");
                 }
@@ -61,15 +62,18 @@ body {
                         }
                     }
                     &::before {
-                        content:"";
-                        @include state (var(--secondary));
-                        width:24px;
-                        height:24px;
+                        @include content(24px,24px);
+                        display:inline-block;
+                        @include wh (16px, 16px);
+                        @include mask (var(--secondary));
                         -webkit-mask-image:url("../images/common/header_arr.svg");
                         mask-image:url("../images/common/header_arr.svg");
                     }
                     &:last-child {
                         a {
+                            color:var(--title);
+                        }
+                        span {
                             color:var(--title);
                         }
                         &::before {
@@ -78,6 +82,7 @@ body {
                     }
                     &:first-child {
                         a {
+                            display:inline-block;
                             @include icon(24px, 24px);
                             font-size:0;
                             background-image:url("../images/common/home.svg");
@@ -101,58 +106,45 @@ body {
                 &.timer{
                     position:relative;
                     padding-right:13px;
-                    border-right:1px solid var(--border-d);
+                    border-right:$borderD;
                     span {
                         color:var(--title);
                         line-height:24px;
                     }
                     .time_ref {
+                        display:inline-block;
                         @include icon(24px, 24px);
                         margin-top:0;
-                        border:1px solid var(--primary);
+                        border:$borderP;
                     }
                     i {
+                        display:inline-block;
                         @include icon(24px, 24px);
                         margin-top:0;
-                        border:1px solid var(--primary);
+                        border:$borderP;
                     }
                 }
-                &.btn_alim {
-                    a {
-                        @include icon(24px,24px);
-                        border:1px solid var(--primary);
-                        &::before {
-                            content:none;
-                    }
-                    }
-                }
-                &.btn_menualdown {
-                    a {
-                        @include icon(24px,24px);
-                        border:1px solid var(--primary);
-                        &::before {
-                            content:none;
-                    }
-                    }
-                }
+                &.btn_alim,
+                &.btn_menualdown,
                 &.btn_logout {
                     a {
-                        @include icon(24px,24px);
-                        border:1px solid var(--primary);
+                        display:inline-block;
+                        @include icon(24px, 24px);
+                        border: $borderP;
                         &::before {
-                            content:none;
-                    }
+                            content: none;
+                        }
                     }
                 }
                 a {
+                    display:inline-block;
                     @include icon(24px, 24px);
                     color:var(--title);
                     line-height:24px;
                     margin-top:0;
                 }
                 &.btn_top_user a {
-                    width:auto;
-                    height:auto;
+                    @include wh (auto, auto);
                     background:none;
                 }
             }
@@ -162,11 +154,9 @@ body {
         @include flexsb();
         padding:20px;
         .logo {
-            width:143px;
-            height:20px;
+            @include wh (143px, 20px);
             img {
-                width:$wh100;
-                height:$wh100;
+                @include wh ($wh100,$wh100);
             }
         }
     }
@@ -211,7 +201,9 @@ body {
                 &::after {
                     top:50%;
                     transform: translateY(-50%);
-                    @include state(var(--content));
+                    display:inline-block;
+                    @include wh (16px, 16px);
+                    @include mask(var(--content));
                     -webkit-mask-image:url("../images/common/menu_arr.svg");
                     mask-image:url("../images/common/menu_arr.svg");
                 }
@@ -239,16 +231,16 @@ body {
                             background-color:transparent;
                             opacity:1;
                             &::after {
+                                content:"";
                                 position:absolute;
                                 top:50%;
                                 right:0;
                                 transform:translateY(-50%);
-                                @include content(17px,17px);
+                                display:inline-block;
+                                @include icon(16px,16px);
                                 border-radius:50%;
-                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23f0f' d='M0-.043h24v24H0z' opacity='.217'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23a)' transform='translate(0 .043)'%3E%3Cpath fill='none' stroke='%23F9AF1C' stroke-linecap='round' stroke-linejoin='round' d='m16.608 8.677-6.463 6.462-2.937-2.937' data-name='ico_check'/%3E%3C/g%3E%3C/svg%3E");
+                                background-image: url("../images/common/nav_check.svg");
                                 background-color:var(--white);
-                                background-repeat:no-repeat;
-                                background-size:contain;
                             }
                         }
                     }
@@ -315,7 +307,7 @@ body {
             padding:0;
             background:var(--body);
             .content {
-                width:calc(100% / 2);
+                width:calc($wh100 / 2);
                 background:var(--white);
             }
         }
@@ -339,7 +331,7 @@ body {
             border-radius:20px;
             box-shadow:0 3px 20px rgba(0, 0, 0, .3);
             &.w_100 {
-                width:calc(100% - 20px);
+                width:calc($wh100 - 20px);
                 margin:20px 10px 0;
             }
             &.w_50 {
@@ -355,7 +347,7 @@ body {
 }
 .dash_box {
     height:auto;
-    border:1px solid var(--border-d);
+    border:$borderD;
     border-radius:20px;
     overflow:hidden;
 }

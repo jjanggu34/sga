@@ -11,7 +11,6 @@
 
 .bluetxt .mandatxt i, .bluetxt .madna_ed i {
   display: inline-block;
-  height: 24px;
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: left center;
@@ -19,12 +18,6 @@
 
 /* mixin 함수 선언하기 */
 /***************** 공통 *****************/
-.title {
-  font-size: var(--font-20);
-  font-weight: var(--font-extrabold);
-  line-height: 24px;
-}
-
 /*---------------------------------------------
     #라벨
     기본 : icon_list
@@ -77,6 +70,7 @@
 }
 .bluetxt .mandatxt i {
   width: 24px;
+  height: 24px;
   background-image: url("../images/common/label/ico_delegated.svg");
 }
 .bluetxt .madna_ed {
@@ -85,6 +79,7 @@
 }
 .bluetxt .madna_ed i {
   width: 34px;
+  height: 24px;
   background-image: url("../images/common/label/ico_delegating.svg");
 }
 
@@ -119,7 +114,6 @@
   color: var(--text-disabled) !important;
 }
 .circleOff .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -135,10 +129,9 @@
 }
 
 .plugConnected {
-  color: #1863BA !important;
+  color: var(--blue) !important;
 }
 .plugConnected .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -157,7 +150,6 @@
   color: var(--false) !important;
 }
 .plugZapOff .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -173,10 +165,9 @@
 }
 
 .filePlus {
-  color: #1863BA !important;
+  color: var(--blue) !important;
 }
 .filePlus .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -185,13 +176,12 @@
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: #1863BA;
+  background-color: var(--blue);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_FilePlus.svg");
   mask-image: url("../images/common/label/ico_FilePlus.svg");
 }
 .filePlus .icon_pgs {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -210,7 +200,6 @@
   color: var(--true) !important;
 }
 .checkCircle .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -226,10 +215,9 @@
 }
 
 .fileEdit {
-  color: #1863BA !important;
+  color: var(--blue) !important;
 }
 .fileEdit .icon_pgs {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -247,7 +235,6 @@
   color: var(--primary) !important;
 }
 .fileEdit.ing .icon_pgs {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -266,7 +253,6 @@
   color: var(--primary) !important;
 }
 .fileEditLoader .icon_pgs {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -282,10 +268,9 @@
 }
 
 .downloadCircle {
-  color: #1863BA !important;
+  color: var(--blue) !important;
 }
 .downloadCircle .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -294,7 +279,7 @@
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: #1863BA;
+  background-color: var(--blue);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/label/ico_downloadCircle.svg");
   mask-image: url("../images/common/label/ico_downloadCircle.svg");
@@ -304,7 +289,6 @@
   color: var(--false) !important;
 }
 .pauseCircle .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -323,7 +307,6 @@
   color: var(--false) !important;
 }
 .trash .icon_list, .trash .icon_pgs {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -338,7 +321,6 @@
   mask-image: url("../images/common/label/ico_trash.svg");
 }
 .trash .icon_pgs {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -357,7 +339,6 @@
   color: var(--true) !important;
 }
 .bolt .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -376,7 +357,6 @@
   color: var(--text-disabled) !important;
 }
 .Nbolt .icon_list {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -582,20 +562,20 @@
 }
 .detail_search_wrap .detail_search_btn::before {
   content: "";
-  display: inline-block;
   width: 9px;
   height: 48px;
+  display: inline-block;
   top: -1px;
   left: -9px;
 }
 .detail_search_wrap .detail_search_btn::after {
   content: "";
-  display: inline-block;
   width: 9px;
   height: 38px;
   top: 9px;
   right: -9px;
   transform: scaleX(-1);
+  display: inline-block;
 }
 .detail_search_wrap .search_column4 {
   gap: 10px 13px;
@@ -752,13 +732,13 @@
 }
 .cont_wrap .content .tree_menu_wrap .tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner .sub_tree_menu li a::before {
   content: "";
-  display: inline-block;
   width: 8px;
   height: 7px;
   position: absolute;
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
+  display: inline-block;
   border-left: 1px solid var(--border-d);
   border-bottom: 1px solid var(--border-d);
 }
@@ -950,9 +930,9 @@
   padding-bottom: 8px;
 }
 .cont_wrap .content .form_wrap .workflow_box .workflow_wrap .wf_card .wf_detail .wf_state_txt em {
+  color: var(--true);
   font-size: var(--font-12);
   font-weight: var(--font-regular);
-  color: var(--true);
   line-height: 15px;
 }
 .cont_wrap .content .form_wrap .workflow_box .workflow_wrap .wf_card .wf_detail .wf_nm {
@@ -1051,4 +1031,16 @@
 }
 .cont_wrap .content .form_wrap .workflow_box .workflow_wrap .wf_card.emty {
   border-color: var(--border-d);
+}
+
+/***************** moved_box *****************/
+.move_box {
+  padding-left: 24px;
+}
+
+.moved_box {
+  padding-right: 24px;
+}
+.moved_box .list_btn, .moved_box .tbl_list {
+  padding: 0 0 24px;
 }

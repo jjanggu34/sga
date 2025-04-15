@@ -59,6 +59,10 @@
 .form_stl textarea.form_contrl {
   width: 100%;
 }
+.form_stl .file_upload_wrap {
+  max-width: none;
+  width: 100%;
+}
 
 /* check */
 .check_stl_lab:before {

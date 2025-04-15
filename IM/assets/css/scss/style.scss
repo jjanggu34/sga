@@ -1,10 +1,6 @@
 @use 'variable' as *;
 
 /***************** 공통 *****************/
-.title {
-    @include title(var(--font-20), var(--font-extrabold), 24px);
-}
-
 /*---------------------------------------------
     #라벨
     기본 : icon_list
@@ -14,8 +10,7 @@
 $btnstls: "trcolor", "fcolor";
 @each $btnstl in $btnstls {
     .#{$btnstl}.btnstl {
-        width:76px;
-        height:26px;
+        @include wh (76px, 26px);
         padding:0;
     }
 }
@@ -44,8 +39,8 @@ $btnstls: "trcolor", "fcolor";
         background: #E6E2FF;
         vertical-align:unset;
         i {
+            @include wh (24px, 24px);
             @extend %imgae;
-            width:24px;
             background-image:url("../images/common/label/ico_delegated.svg");
         }
     }
@@ -55,8 +50,8 @@ $btnstls: "trcolor", "fcolor";
         color:#5A98CD;
         background: #DDEFFF;
         i {
+            @include wh (34px, 24px);
             @extend %imgae;
-            width:34px;
             background-image:url("../images/common/label/ico_delegating.svg");
         }
     }
@@ -66,6 +61,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 @each $icon in $icons {
     .#{$icon} {
+        display:inline-block;
         @include icon(24px, 24px);
     }
 }
@@ -73,15 +69,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .circleOff {
     color:var(--text-disabled) !important;
     .icon_list {
-        @include state(var(--text-disabled));
+        @include wh(16px,16px);
+        @include mask(var(--text-disabled));
         -webkit-mask-image:url("../images/common/label/ico_circleOff.svg");
         mask-image:url("../images/common/label/ico_circleOff.svg");
     }
 }
 .plugConnected {
-    color:#1863BA !important;
+    color:var(--blue)!important;
     .icon_list {
-        @include state(#1863BA);
+        @include wh(16px,16px);
+        @include mask(#1863BA);
         -webkit-mask-image:url("../images/common/label/ico_PlugConnected.svg");
         mask-image:url("../images/common/label/ico_PlugConnected.svg");
     }
@@ -89,20 +87,23 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .plugZapOff {
     color:var(--false) !important;
     .icon_list {
-        @include state(var(--false));
+        @include wh(16px,16px);
+        @include mask(var(--false));
         -webkit-mask-image:url("../images/common/label/ico_PlugZapOff.svg");
         mask-image:url("../images/common/label/ico_PlugZapOff.svg");
     }
 }
 .filePlus {
-    color:#1863BA !important;
+    color:var(--blue)!important;
     .icon_list {
-        @include state(#1863BA );
+        @include wh(16px,16px);
+        @include mask(var(--blue));
         -webkit-mask-image:url("../images/common/label/ico_FilePlus.svg");
         mask-image:url("../images/common/label/ico_FilePlus.svg");
     }
     .icon_pgs {
-        @include state(#1863BA);
+        @include wh(16px,16px);
+        @include mask(#1863BA);
         -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
         mask-image:url("../images/common/label/icon_pgs.svg");
     }
@@ -110,22 +111,25 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .checkCircle {
     color:var(--true) !important;
     .icon_list {
-        @include state(var(--true));
+        @include wh(16px,16px);
+        @include mask(var(--true));
         -webkit-mask-image:url("../images/common/label/ico_checkCircle.svg");
         mask-image:url("../images/common/label/ico_checkCircle.svg");
     }
 }
 .fileEdit {
-    color:#1863BA !important;
+    color:var(--blue)!important;
     .icon_pgs {
-        @include state(#1863BA);
+        @include wh(16px,16px);
+        @include mask(#1863BA);
         -webkit-mask-image:url("../images/common/label/ico_FileEdit.svg");
         mask-image:url("../images/common/label/ico_FileEdit.svg");
     }
     &.ing {
         color: var(--primary) !important;
         .icon_pgs {
-            @include state(var(--primary));
+            @include wh(16px,16px);
+            @include mask(var(--primary));
             -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
             mask-image:url("../images/common/label/icon_pgs.svg");
         }
@@ -134,15 +138,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .fileEditLoader {
     color:var(--primary) !important;
     .icon_pgs {
-        @include state(var(--primary));
+        @include wh(16px,16px);
+        @include mask(var(--primary));
         -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
         mask-image:url("../images/common/label/icon_pgs.svg");
     }
 }
 .downloadCircle {
-    color:#1863BA !important;
+    color:var(--blue)!important;
     .icon_list {
-        @include state(#1863BA );
+        @include wh(16px,16px);
+        @include mask(var(--blue));
         -webkit-mask-image:url("../images/common/label/ico_downloadCircle.svg");
         mask-image:url("../images/common/label/ico_downloadCircle.svg");
     }
@@ -150,7 +156,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .pauseCircle {
     color:var(--false) !important;
     .icon_list {
-        @include state(var(--false) );
+        @include wh(16px,16px);
+        @include mask(var(--false) );
         -webkit-mask-image:url("../images/common/label/ico_PauseCircle.svg");
         mask-image:url("../images/common/label/ico_PauseCircle.svg");
     }
@@ -158,12 +165,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .trash {
     color:var(--false) !important;
     .icon_list, .icon_pgs {
-        @include state(var(--false));
+        @include wh(16px,16px);
+        @include mask(var(--false));
         -webkit-mask-image:url("../images/common/label/ico_trash.svg");
         mask-image:url("../images/common/label/ico_trash.svg");
     }
     .icon_pgs {
-        @include state(var(--false));
+        @include wh(16px,16px);
+        @include mask(var(--false));
         -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
         mask-image:url("../images/common/label/icon_pgs.svg");
     }
@@ -171,7 +180,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .bolt {
     color:var(--true) !important;
     .icon_list {
-        @include state(var(--true) );
+        @include wh(16px,16px);
+        @include mask(var(--true) );
         -webkit-mask-image:url("../images/common/label/ico_bolt.svg");
         mask-image:url("../images/common/label/ico_bolt.svg");
     }
@@ -179,7 +189,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .Nbolt {
     color:var(--text-disabled) !important;
     .icon_list {
-        @include state(var(--text-disabled) );
+        @include wh(16px,16px);
+        @include mask(var(--text-disabled) );
         -webkit-mask-image:url("../images/common/label/ico_bolt.svg");
         mask-image:url("../images/common/label/ico_bolt.svg");
     }
@@ -225,8 +236,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /* N 알림 */
 .new_org {
-    width:15px;
-    height:15px;
+    @include wh (15px, 15px);
     border-radius:3px;
     @include title(var(--font-10),var(--font-extrabold),15px);
     background-color:var(--text-disabled);
@@ -247,7 +257,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .form_tit label {
         position:relative;
         display:inline-block;
-        width:100%;
+        width:$wh100;
         margin-bottom:10px;
         padding-left:10px;
         &::before {
@@ -257,8 +267,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             transform:translateY(-50%);
             left:0;
             display:inline-block;
-            width:3px;
-            height:3px;
+            @include wh (3px, 3px);
             border-radius:50%;
             background:var(--text-disabled);
         }
@@ -342,16 +351,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     margin-top:-3px;
     margin-bottom:0;
     padding:20px 20px 20px 24px;
-    border:1px solid var(--border-d);
+    border:$borderD;
     border-radius:20px 10px 20px 10px;
     background-color:var(--white);
     .detail_search_btn {
         top:-48px;
-        width:auto;
-        height:48px;
+        @include wh (auto, 48px);
         margin-left:143px;
         padding:0 34px 0 20px;
-        border:1px solid var(--border-d);
+        border:$borderD;
         border-bottom:0;
         border-radius:0 6px 0 0;
         line-height:48px;
@@ -366,13 +374,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &#{$content} {
                 position:absolute;
                 border-radius:0 0 8px 0;
-                border-right:1px solid var(--border-d);
+                border-right:$borderD;
                 box-sizing:border-box;
                 box-shadow:1px 17px 0 var(--white);
             }
         }
         &::before {
             @include content(9px,48px);
+            display:inline-block;
             top:-1px;
             left:-9px;
         }
@@ -381,12 +390,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             top:9px;
             right:-9px;
             transform: scaleX(-1);
+            display:inline-block;
         }
     }
     .search_column4 {
         gap:10px 13px;
         .col {
-            width:calc((100% - 44px) / 4);
+            width:calc(($wh100 - 44px) / 4);
             margin-top:0;
             border:0;
             dl {
@@ -452,8 +462,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 gap:14px;
                 padding:20px 24px 0;
                 .worker_name {
-                    width:60px;
-                    height:60px;
+                    @include wh (60px, 60px);
                     padding:20px 0;
                     border:0;
                     border-radius:50%;
@@ -513,8 +522,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                             top:50%;
                                             left:5px;
                                             transform:translateY(-50%);
-                                            border-left:1px solid var(--border-d);
-                                            border-bottom:1px solid var(--border-d);
+                                            display:inline-block;
+                                            border-left:$borderD;
+                                            border-bottom:$borderD;
                                         }
                                         &.on {
                                             border-radius:6px;
@@ -534,7 +544,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 .mini_tbl {
                     flex:1;
-                    width:100%;
+                    width:$wh100;
                 }
             }
         }
@@ -559,7 +569,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 margin-top:0;
                 border:0;
                 border-radius:0;
-                border-bottom:1px solid var(--border-d);
+                border-bottom:$borderD;
                 font-size:var(--font-18);
                 font-weight:var(--font-bold);
                 color:var(--title);
@@ -603,8 +613,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                                 }
                                             }
                                             .btn_del {
+                                                display:inline-block;
                                                 @include icon(24px,24px);
-                                                border:1px solid var(--border-d);
+                                                border:$borderD;
                                                 border-radius:6px;
                                                 background-image:url("../images/common/close.svg");
                                                 background-size:80%;
@@ -628,7 +639,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     padding:21px 0 0;
                     .s_e_w {
                         display:block;
-                        width:100%;
+                        width:$wh100;
                         text-align:left;
                         &:last-child {
                             display:inline-block;
@@ -636,14 +647,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         }
                         .nav_circle {
                             position:relative;
-                            width:62px;
-                            height:62px;
+                            @include wh (62px, 62px);
                             background:var(--btn-disabled);
                             i {
                                 position:absolute;
                                 top:50%;
                                 left:50%;
                                 transform:translate(-50%,-50%);
+                                display:inline-block;
                                 @include icon(40px,40px);
                                 margin-top:0;
                                 background-image:url("../images/common/test.svg");
@@ -670,8 +681,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                             z-index:1;
                             top:11px;
                             left:17px;
-                            width:18px;
-                            height:18px;
+                            @include wh (18px, 18px);
                             border-radius:3px;
                             background-color:#23AC3D;
                             i {
@@ -679,23 +689,23 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                 transform:translateY(-50%);
                                 left:1px;
                                 margin-top:0;
-                                @include state(var(--white));
+                                display:inline-block;
+                                @include wh (16px,16px);
+                                @include mask(var(--white));
                                 -webkit-mask-image:url("../images/common/ico_check.svg");
                                 mask-image:url("../images/common/ico_check.svg");
                                 background-position-y:unset;
                             }
                         }
                         .wf_detail {
-                            width:100%;
+                            width:$wh100;
                             padding:15px 19px;
                             .wf_state_txt {
                                 padding-left:27px;
                                 padding-bottom:8px;
                                 em {
-                                    font-size:var(--font-12);
-                                    font-weight:var(--font-regular);
                                     color:var(--true);
-                                    line-height:15px;
+                                    @include title (var(--font-12), var(--font-regular), 15px)
                                 }
                             }
                             .wf_nm {
@@ -816,5 +826,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
+    }
+}
+
+/***************** moved_box *****************/
+.move_box {
+    padding-left:24px;
+}
+.moved_box {
+    padding-right:24px;
+    .list_btn {
+        padding:0 0 24px;
+    }
+    .tbl_list {
+        @extend .list_btn;
     }
 }

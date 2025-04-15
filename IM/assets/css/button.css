@@ -143,7 +143,6 @@ button.icon {
   padding: 6px 14px 6px 7px;
 }
 button.icon i.icon_reset {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -162,7 +161,6 @@ button.icon i.icon_reset.init {
   transform: scaleX(-1);
 }
 button.icon i.delfile {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -177,7 +175,6 @@ button.icon i.delfile {
   mask-image: url("../images/common/label/ico_trash.svg");
 }
 button.icon i.checkout {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -190,7 +187,6 @@ button.icon i.checkout {
   vertical-align: text-bottom;
 }
 button.icon i.checkin {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -233,7 +229,6 @@ button.normal.on {
 }
 button.normal.on::before {
   content: "";
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -247,8 +242,14 @@ button.normal.on::before {
   -webkit-mask-image: url("../images/common/ico_check_s.svg");
   mask-image: url("../images/common/ico_check_s.svg");
 }
+button.normal.close {
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  font-size: 0;
+  background: url("../images/common/close.svg") no-repeat center/auto var(--white);
+}
 button.icon_arrow_open, button.icon_arrow_close {
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -316,7 +317,6 @@ button.icon_arrow_close {
 }
 .btn_box .icon_reset::before {
   content: "";
-  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -359,9 +359,8 @@ button.icon_arrow_close {
   overflow: hidden;
 }
 .pagination ul li a.next span, .pagination ul li a.prev span {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -370,8 +369,6 @@ button.icon_arrow_close {
   mask-position: center;
   background-color: var(--text-disabled);
   vertical-align: text-bottom;
-  width: 24px;
-  height: 24px;
   -webkit-mask-image: url("../images/common/prev.svg");
   mask-image: url("../images/common/prev.svg");
   background-position: unset;
@@ -381,9 +378,8 @@ button.icon_arrow_close {
   overflow: hidden;
 }
 .pagination ul li a.last span, .pagination ul li a.first span {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -392,8 +388,6 @@ button.icon_arrow_close {
   mask-position: center;
   background-color: var(--text-disabled);
   vertical-align: text-bottom;
-  width: 24px;
-  height: 24px;
   -webkit-mask-image: url("../images/common/prevv.svg");
   mask-image: url("../images/common/prevv.svg");
   background-position: unset;

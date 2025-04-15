@@ -277,109 +277,6 @@
                     </div>
     
                     <p class="tit">table 안에 accordion</p>
-                    <div class="tbl_list dash_table">
-                        <table class="default_tbl accordion_tbl" role="grid">
-                            <colgroup>
-                                <col width="50px">
-                                <col width="*">
-                                <col width="*">
-                                <col width="*">
-                            </colgroup>
-                            <thead>
-                                <tr role="row">
-                                    <th scope="col"></th>
-                                    <th scope="col">
-                                        <div class="headText">Framework</div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="headText">Type</div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="headText">ID</div>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr role="row" class="accordion">
-                                    <td>
-                                        <div class="view_hide_btn_icon" onclick="onoffDisplay(this)"></div>
-                                    </td>
-                                    <td>CIS Docker Benchmark</td>
-                                    <td>DEFAULT</td>
-                                    <td>CIS-1.1</td>
-                                </tr>
-                                <tr class="subtask_bundle">
-                                    <td colspan="4">
-                                        <div class="row_subtask accordion">
-                                            <div class="subtask_name">
-                                                <p class="subtask_catagory_title">
-                                                    <span class="view_hide_btn_icon"></span>
-                                                </p>
-                                                <p class="subtask_catagory_Result fcolor">failed</p>
-                                                <p class="subtask_catagory_detail">
-                                                    CIS-1.1.1. Ensure a separate partition for containers has been created (Automated)</p>
-                                            </div>
-                                            <div class="subtask_detail">
-                                                <div class="subtask_catagory">
-                                                    <div class="subtask_catagory_title">· Result:</div>
-                                                    <div class="false_tit subtask_catagory_detail">failed</div>
-                                                </div>
-                                                <div class="subtask_catagory">
-                                                    <div class="subtask_catagory_title">· Description: </div>
-                                                    <div title="The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker." class="subtask_catagory_detail">The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker.</div>
-                                                </div>
-                                                <div class="subtask_catagory">
-                                                    <div class="subtask_catagory_title">· Remediation:</div>
-                                                    <div title="For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition." class="subtask_catagory_detail">For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition.</div>
-                                                </div>
-                                                <div class="subtask_catagory">
-                                                    <div class="subtask_catagory_title">· Actual value:</div>
-                                                    <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea">
-                                                        <div class="scroll-content">
-                                                            <textarea readonly="readonly" class="textarea-scrollbar scrollbar-outer">failedß: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="row_subtask accordion">
-                                            <div class="subtask_name">
-                                                <p class="subtask_catagory_title">
-                                                    <span class="view_hide_btn_icon"></span>
-                                                </p>
-                                                <p class="subtask_catagory_Result fcolor">failed</p>
-                                                <p class="subtask_catagory_detail">
-                                                    CIS-1.1.1. Ensure a separate partition for containers has been created (Automated)</p>
-                                            </div>
-                                            <div class="subtask_detail">
-                                                <div class="subtask_catagory">
-                                                    <div class="subtask_catagory_title">· Result:</div>
-                                                    <div class="false_tit subtask_catagory_detail">failed</div>
-                                                </div>
-                                                <div class="subtask_catagory">
-                                                    <div class="subtask_catagory_title">· Description: </div>
-                                                    <div title="The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker." class="subtask_catagory_detail">The Docker daemon currently requires access to the Docker socket which is, by default, owned by the user root and the group docker.</div>
-                                                </div>
-                                                <div class="subtask_catagory">
-                                                    <div class="subtask_catagory_title">· Remediation:</div>
-                                                    <div title="For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition." class="subtask_catagory_detail">For new installations, you should create a separate partition for the /var/lib/docker mount point. For systems that have already been installed, you should use the Logical Volume Manager (LVM) within Linux to create a new partition.</div>
-                                                </div>
-                                                <div class="subtask_catagory">
-                                                    <div class="subtask_catagory_title">· Actual value:</div>
-                                                    <div class="scroll-wrapper textarea-scrollbar scrollbar-outer scroll-textarea">
-                                                        <div class="scroll-content">
-                                                            <textarea readonly="readonly" class="textarea-scrollbar scrollbar-outer">failed: [k8s-master(192.168.20.61)] failed: [k8s-worker(192.168.20.63)]</textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
 
                     <p class="tit">table 안에 accordion / 02_02_sub_list_detail.html</p>
                     <div class="tbl_list">
@@ -505,19 +402,6 @@
                             <span><i class="icon_ff sl_ff text"></i></span>
                             <span><i class="icon_ff sl_ff ppx"></i></span>
                         </div>
-                        <div class="icon_os">Lin</div>
-                        <style>
-                            .icon_os {
-                                display: inline-block;
-                                font-size: 10px;
-                                padding: 2px 5px;
-                                border: 1px solid #dbdbdb;
-                                border-radius: 12px;
-                                width: 34px;
-                                -webkit-box-sizing: border-box;
-                                box-sizing: border-box
-                            }
-                        </style>
                         <div class="mandatxt_box">
                             <div class="bluetxt">
                                 <span class="mandatxt"><i></i>위임됨</span>
