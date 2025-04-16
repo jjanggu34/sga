@@ -137,10 +137,14 @@
     #그 외 버튼
 ---------------------------------------------*/
 button {
+  border-radius: 6px;
   /* 테이블 안 토글 버튼 */
 }
 button.icon {
   padding: 6px 14px 6px 7px;
+}
+button.icon i {
+  display: inline-block;
 }
 button.icon i.icon_reset {
   width: 16px;
@@ -205,6 +209,7 @@ button.disabled i {
   background-color: var(--text-disabled) !important;
 }
 button.normal {
+  display: inline-block;
   padding: 6px 12px;
   border: 1px solid var(--default);
   border-radius: 6px;
@@ -229,6 +234,7 @@ button.normal.on {
 }
 button.normal.on::before {
   content: "";
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -250,6 +256,7 @@ button.normal.close {
   background: url("../images/common/close.svg") no-repeat center/auto var(--white);
 }
 button.icon_arrow_open, button.icon_arrow_close {
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -291,6 +298,7 @@ button.icon_arrow_close {
   top: 50%;
   transform: translateY(-50%);
   right: 95px;
+  display: inline-block;
   width: 24px;
   height: 24px;
   background: url("../images/common/ico_btn.svg") no-repeat center/auto;
@@ -302,6 +310,7 @@ button.icon_arrow_close {
   top: 50%;
   right: 5px;
   transform: translateY(-50%);
+  display: inline-block;
   width: auto;
   height: 36px;
   padding: 7px 14px 6px;
@@ -317,6 +326,7 @@ button.icon_arrow_close {
 }
 .btn_box .icon_reset::before {
   content: "";
+  display: inline-block;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -341,6 +351,7 @@ button.icon_arrow_close {
   gap: 4px;
 }
 .pagination ul li a {
+  display: inline-block;
   width: 28px;
   height: 28px;
   padding: 0;
@@ -350,6 +361,7 @@ button.icon_arrow_close {
   line-height: 28px;
 }
 .pagination ul li a span {
+  display: inline-block;
   margin: 0;
   background: none;
   transform: translate(-50%, -50%);
@@ -359,6 +371,7 @@ button.icon_arrow_close {
   overflow: hidden;
 }
 .pagination ul li a.next span, .pagination ul li a.prev span {
+  display: inline-block;
   width: 24px;
   height: 24px;
   -webkit-mask-repeat: no-repeat;

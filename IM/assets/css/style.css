@@ -424,6 +424,35 @@
   background-position: center;
 }
 
+.apply_tit {
+  padding-bottom: 25px;
+  font-size: var(--font-18);
+  font-weight: var(--font-medium);
+  color: var(--title);
+}
+.apply_tit span {
+  border-radius: 30px;
+  padding: 6px 14px 5px;
+  font-size: var(--font-13);
+  font-weight: var(--font-regular);
+}
+.apply_tit.grbox span {
+  background: #E3EEFF;
+  color: #0052CC;
+}
+.apply_tit.ppbox span {
+  background: #FFFAEF;
+  color: var(--primary);
+}
+.apply_tit.blbox span {
+  background: #EFFCF3;
+  color: #23AC3D;
+}
+.apply_tit.orgbox span {
+  background: #E0FBFF;
+  color: #00C7E6;
+}
+
 /* N 알림 */
 .new_org {
   width: 15px;
@@ -1178,4 +1207,84 @@
 }
 .moved_box .list_btn, .moved_box .tbl_list {
   padding: 0 0 24px;
+}
+/***************** apply_card *****************/
+.apply_card {
+  display: block;
+  padding: 40px 20px;
+}
+.apply_card .cont_title {
+  padding-bottom: 3px;
+}
+.apply_card .cont_title h2 {
+  font-size: var(--font-28);
+  font-weight: var(--font-medium);
+  line-height: 24px;
+  color: var(--title);
+}
+.apply_card .dash_box {
+  position: relative;
+  display: inline-block;
+  max-width: 514px;
+  width: 100%;
+  height: 210px;
+  margin: 25px 11px 0 0;
+  padding: 20px 20px 12px 34px;
+  background-color: var(--disabled-line-bg);
+  border: 1px solid rgba(221, 221, 221, 0.6509803922);
+  box-shadow: unset;
+}
+.apply_card .dash_box:hover {
+  border-color: unset;
+}
+.apply_card .dash_box:hover .arrow_apply {
+  border-color: unset;
+  background-color: unset;
+}
+.apply_card .dash_box .apply_card_w {
+  width: 100%;
+  padding: 0;
+}
+.apply_card .dash_box .apply_card_w .apply_txt p {
+  padding-bottom: 30px;
+  font-size: var(--font-14);
+  font-weight: var(--font-regular);
+  line-height: 24px;
+}
+.apply_card .dash_box .apply_card_w .apply_txt button, .apply_card .dash_box .apply_card_w .apply_txt a {
+  line-height: 16px;
+}
+.apply_card .dash_box .apply_card_w .apply_txt button .icon_applylist, .apply_card .dash_box .apply_card_w .apply_txt a .icon_applylist {
+  margin: 0 5px 0 0;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/ico_m_list.svg");
+}
+.apply_card .dash_box .apply_card_w .apply_txt a.icon {
+  padding: 6px 14px 6px 7px;
+  border-radius: 6px;
+}
+.apply_card .dash_box .help_w {
+  top: 0;
+  right: 0;
+}
+.apply_card .dash_box .arrow_apply {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  width: auto;
+  border: 0;
+  font-size: var(--font-14);
+  font-weight: var(--font-regular);
+  line-height: 24px;
+  color: var(--content);
+  background: none;
+}
+.apply_card .dash_box .arrow_apply .icon_arrapply {
+  position: unset;
+  margin: 0;
+  background: url("../images/common/arrow.svg") no-repeat center;
 }

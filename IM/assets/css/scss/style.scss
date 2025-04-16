@@ -242,6 +242,44 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
+// 역할 관리 라벨
+.apply_tit {
+    padding-bottom:25px;
+    font-size:var(--font-18);
+    font-weight:var(--font-medium);
+    color:var(--title);
+    span {
+        border-radius:30px;
+        padding:6px 14px 5px;
+        font-size:var(--font-13);
+        font-weight:var(--font-regular);
+    }
+    &.grbox { //시스템 그룹
+        span {
+            background:#E3EEFF;
+            color:#0052CC;
+        }
+    }
+    &.ppbox { //시스템 계정
+        span {
+            background:#FFFAEF;
+            color:var(--primary);
+        }
+    }
+    &.blbox { //시스템
+        span {
+            background:#EFFCF3;
+            color:#23AC3D;
+        }
+    }
+    &.orgbox { //역할
+        span {
+            background:#E0FBFF;
+            color:#00C7E6;
+        }
+    }
+}
+
 /* N 알림 */
 .new_org {
     @include wh (15px, 15px);
@@ -953,5 +991,79 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .tbl_list {
         @extend .list_btn;
+    }
+}
+
+/***************** apply_card *****************/
+.apply_card {
+    display:block;
+    padding:40px 20px;
+    .cont_title {
+        padding-bottom:3px;
+        h2 {
+            @include title (var(--font-28), var(--font-medium), 24px);
+            color:var(--title);
+        }
+    }
+    .dash_box {
+        position:relative;
+        display:inline-block;
+        max-width:514px;
+        @include wh ($wh100, 210px);
+        margin:25px 11px 0 0;
+        padding:20px 20px 12px 34px;
+        background-color:var(--disabled-line-bg);
+        border:1px solid #DDDDDDA6;
+        box-shadow:unset;
+        &:hover {
+            border-color:unset;
+            .arrow_apply {
+                border-color:unset;
+                background-color:unset;
+            }
+        }
+        .apply_card_w {
+            width:$wh100;
+            padding:0;
+            .apply_txt {
+                p {
+                    padding-bottom:30px;
+                    @include title (var(--font-14), var(--font-regular), 24px);
+                }
+                button, a {
+                    line-height:16px;
+                    .icon_applylist {
+                        margin:0 5px 0 0;
+                        @include icon(16px,16px);
+                        background-image:url("../images/common/ico_m_list.svg");
+                    }
+                }
+                a {
+                    &.icon {
+                        padding:6px 14px 6px 7px;
+                        border-radius:6px;
+                    }
+                }
+            }
+        }
+        .help_w {
+            top:0;
+            right:0;
+        }
+        .arrow_apply {
+            position:absolute;
+            right:0;
+            bottom:40px;
+            width:auto;
+            border:0;
+            @include title (var(--font-14), var(--font-regular), 24px);
+            color:var(--content);
+            background:none;
+            .icon_arrapply {
+                position:unset;
+                margin:0;
+                background:url("../images/common/arrow.svg")no-repeat center;
+            }
+        }
     }
 }

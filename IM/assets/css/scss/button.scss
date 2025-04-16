@@ -110,9 +110,11 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
     #그 외 버튼
 ---------------------------------------------*/
 button {
+    border-radius:6px;
     &.icon {
     padding:6px 14px 6px 7px;
         i {
+            display:inline-block;
             &.icon_reset {
                 @include wh (16px, 16px);
                 @include mask(var(--title));
@@ -146,6 +148,7 @@ button {
         }
     }
     &.normal {
+        display:inline-block;
         padding:6px 12px;
         border:1px solid var(--default);
         border-radius:6px;
@@ -166,6 +169,7 @@ button {
             border:$borderP;
             &::before {
                 content:"";
+                display:inline-block;
                 @include wh (16px, 16px);
                 @include mask(var(--primary));
                 -webkit-mask-image:url("../images/common/ico_check_s.svg");
@@ -182,6 +186,7 @@ button {
     }
     /* 테이블 안 토글 버튼 */
     &.icon_arrow_open {
+        display:inline-block;
         @include wh (16px, 16px);
         @include mask(var(--content));
         -webkit-mask-image:url("../images/common/icon_arrow_open.svg");
@@ -210,6 +215,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
         top:50%;
         transform:translateY(-50%);
         right:95px;
+        display:inline-block;
         @include wh (24px, 24px);
         background:url("../images/common/ico_btn.svg")no-repeat center/auto;
     }
@@ -223,6 +229,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
         top:50%;
         right:5px;
         transform:translateY(-50%);
+        display:inline-block;
         @include wh (auto, 36px);
         padding:7px 14px 6px;
         border-radius:7px;
@@ -238,6 +245,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
         line-height:16px;
         &::before {
             content:"";
+            display:inline-block;
             @include wh (16px, 16px);
             @include mask(var(--title));
             -webkit-mask-image:url("../images/common/ico_refresh.svg");
@@ -257,6 +265,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
         gap:4px;
         li {
             a {
+                display:inline-block;
                 @include wh (28px, 28px);
                 padding:0;
                 border:1px solid var(--default);
@@ -264,6 +273,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
                 font-size:var(--font-12);
                 line-height:28px;
                 span {
+                    display:inline-block;
                     margin:0;
                     background:none;
                     transform:translate(-50%, -50%);
@@ -272,6 +282,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
                     padding:2px;
                     overflow:hidden;
                     span {
+                        display:inline-block;
                         @include wh (24px, 24px);
                         @include mask(var(--text-disabled));
                         -webkit-mask-image:url("../images/common/prev.svg");

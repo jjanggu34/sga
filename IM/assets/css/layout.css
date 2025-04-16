@@ -175,6 +175,9 @@ body * {
   height: auto;
   background: none;
 }
+#SGIM_wrap .header + .dash_wrap {
+  margin-top: 100px !important;
+}
 #SGIM_wrap .nav_header {
   display: flex;
   align-items: center;
@@ -327,6 +330,16 @@ body * {
 }
 #SGIM_wrap #container .cont_wrap .content {
   width: 50%;
+  background: var(--white);
+}
+#SGIM_wrap #container:has(.dash_wrap) {
+  background: var(--body);
+}
+#SGIM_wrap #container:has(.dash_wrap) .dash_wrap {
+  min-height: calc(100vh - 100px);
+  margin-left: 24px;
+  border: 1px solid var(--border-d);
+  border-radius: 20px;
   background: var(--white);
 }
 #SGIM_wrap .content {

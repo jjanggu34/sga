@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -57,37 +60,66 @@
 			</div>
 		</div>
 		<div id="container">
+			<!-- s : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="header">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>역할 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">시스템 관리</a></li>
-						<li><span>생성</span></li>
+						<li><span>역할관리</span></li>
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> user01</a></li>
-					<li class="btn_alim"><a href="">alim<span>13</span></a></li>
-					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
+					<li class="btn_top_user"><a href=""><span>user01</span></a></li>
+					<li class="timer">
+						<i></i>
+						<span><em>00:15:00</em> 후 접속 끊김</span>
+						<button class="time_ref" title="세션 시간 새로고침"></button>
 					</li>
+					<li class="btn_alim"><a href="">alim</a>
+						<div class="balloon alim_pop" style="display:none">
+							<div class="alim_pop_wrap">
+								<div class="alim_top">
+									<span>새 알림</span>
+									<button class="alim_clear">모든 알림 지우기</button>
+								</div>
+								<ul class="alim_list">
+									<li><a><i></i>경고!</a></li>
+									<li><a><i></i>나한테만 오는 알람메세지이이이이 두줄일때 다음줄로 넘어갑니다 </a></li>
+									<li><a><i></i>전체적인 알람공지</a></li>
+									<li><a><i></i>SMS문자왔숑</a></li>
+									<li><a><i></i>메일왔네요</a></li>
+									<li><a><i></i>기타알람</a></li>
+								</ul>
+								<div class="allAlim">
+									<a href="" class="btn_allAlim">모두 보기 ></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
+					<li class="btn_logout"><a href="">logout</a></li>
 				</ul>
 			</div>
+			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="dash_wrap apply_card">
-				<div class="dash_box grbox">
+				<!-- s : cont_title 추가 -->
+				<div class="cont_title">
+					<h2>역할관리</h2>
+				</div>
+				<!-- e : cont_title 추가 -->
+				<!-- s : dash_box에 있는 각 class를 apply_tit로 옮김 -->
+				<div class="dash_box">
 					<div class="apply_card_w">
 						<div class="apply_txt_w">
-							<p class="apply_tit"><span>시스템 그룹</span>사용 신청</p>
+							<p class="apply_tit grbox"><span>시스템 그룹</span>사용 신청</p>
 							<div class="apply_txt">
 								<p>시스템의 접속하기 위한 계정의 사용 신청합니다. 신청한 계정은 필요에 따라 승인절차를 받습니다. 사용기간이 지나면 자동으로 사용권한이 회수며 사용 완료시 셀프서비스에서 즉시 반납할 수 있습니다.</p>
-								<button class="shadow"><i class="icon_applylist"></i>1개 보유</button>
+								<!-- s : class 변경 -->
+								<button class="line icon"><i class="icon_applylist"></i>1개 보유</button>
+								<!-- e : class 변경 -->
 							</div>
 						</div>
 						<div class="help_w">
@@ -98,17 +130,21 @@
 							</div>
 						</div>
 					</div>
+					<!-- s : text 추가 -->
 					<div class="arrow_apply">
-						<i class="icon_arrapply"></i>
+						바로가기<i class="icon_arrapply"></i>
 					</div>
+					<!-- e : text 추가 -->
 				</div>
-				<div class="dash_box ppbox">
+				<div class="dash_box">
 					<div class="apply_card_w">
 						<div class="apply_txt_w">
-							<p class="apply_tit"><span>시스템 계정</span>생성 및 사용신청</p>
+							<p class="apply_tit ppbox"><span>시스템 계정</span>생성 및 사용신청</p>
 							<div class="apply_txt">
 								<p>시스템의 접속하기 위한 계정의 사용 신청합니다. 신청한 계정은 필요에 따라 승인절차를 받습니다. 사용기간이 지나면 자동으로 사용권한이 회수며 사용 완료시 셀프서비스에서 즉시 반납할 수 있습니다.</p>
-								<a class="shadow"><i class="icon_applylist"></i>1개 보유</a>
+								<!-- s : class 변경 -->
+								<a class="line icon"><i class="icon_applylist"></i>1개 보유</a>
+								<!-- e : class 변경 -->
 							</div>
 						</div>
 						<div class="help_w">
@@ -119,17 +155,21 @@
 							</div>
 						</div>
 					</div>
+					<!-- s : text 추가 -->
 					<div class="arrow_apply">
-						<i class="icon_arrapply"></i>
+						바로가기<i class="icon_arrapply"></i>
 					</div>
+					<!-- e : text 추가 -->
 				</div>
-				<div class="dash_box blbox">
+				<div class="dash_box">
 					<div class="apply_card_w">
 						<div class="apply_txt_w">
-							<p class="apply_tit"><span>시스템</span>사용 신청</p>
+							<p class="apply_tit blbox"><span>시스템</span>사용 신청</p>
 							<div class="apply_txt">
 								<p>시스템의 접속하기 위한 계정의 사용 신청합니다. 신청한 계정은 필요에 따라 승인절차를 받습니다. 사용기간이 지나면 자동으로 사용권한이 회수며 사용 완료시 셀프서비스에서 즉시 반납할 수 있습니다.</p>
-								<a class="shadow"><i class="icon_applylist"></i>1개 보유</a>
+								<!-- s : class 변경 -->
+								<a class="line icon"><i class="icon_applylist"></i>1개 보유</a>
+								<!-- e : class 변경 -->
 							</div>
 						</div>
 						<div class="help_w">
@@ -140,17 +180,21 @@
 							</div>
 						</div>
 					</div>
+					<!-- s : text 추가 -->
 					<div class="arrow_apply">
-						<i class="icon_arrapply"></i>
+						바로가기<i class="icon_arrapply"></i>
 					</div>
+					<!-- e : text 추가 -->
 				</div>
-				<div class="dash_box orgbox">
+				<div class="dash_box">
 					<div class="apply_card_w">
 						<div class="apply_txt_w">
-							<p class="apply_tit"><span>역할</span>사용 신청</p>
+							<p class="apply_tit orgbox"><span>역할</span>사용 신청</p>
 							<div class="apply_txt">
 								<p>시스템의 접속하기 위한 계정의 사용 신청합니다. 신청한 계정은 필요에 따라 승인절차를 받습니다. 사용기간이 지나면 자동으로 사용권한이 회수며 사용 완료시 셀프서비스에서 즉시 반납할 수 있습니다.</p>
-								<a class="shadow"><i class="icon_applylist"></i>1개 보유</a>
+								<!-- s : class 변경 -->
+								<a class="line icon"><i class="icon_applylist"></i>1개 보유</a>
+								<!-- e : class 변경 -->
 							</div>
 						</div>
 						<div class="help_w">
@@ -161,10 +205,13 @@
 							</div>
 						</div>
 					</div>
+					<!-- s : text 추가 -->
 					<div class="arrow_apply">
-						<i class="icon_arrapply"></i>
+						바로가기<i class="icon_arrapply"></i>
 					</div>
+					<!-- e : text 추가 -->
 				</div>
+				<!-- e : dash_box에 있는 각 class를 apply_tit로 옮김 -->
 			</div>
 			<div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>

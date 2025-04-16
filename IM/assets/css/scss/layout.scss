@@ -149,6 +149,9 @@ body {
                 }
             }
         }
+        &+.dash_wrap {
+            margin-top:100px !important;
+        }
     }
     .nav_header {
         @include flexsb();
@@ -308,6 +311,16 @@ body {
             background:var(--body);
             .content {
                 width:calc($wh100 / 2);
+                background:var(--white);
+            }
+        }
+        &:has(.dash_wrap){
+            background:var(--body);
+            .dash_wrap {
+                min-height:calc(100vh - 100px);
+                margin-left:24px;
+                border:$borderD;
+                border-radius:20px;
                 background:var(--white);
             }
         }
