@@ -339,7 +339,7 @@
 									<td>data1</td>
 									<td class="fileEdit ing"><i class="icon_pgs"></i>수정 진행중</td>
 									<td>CentOS(1503)</td>
-									<td><i class="icon_list locked"></i>잠금</td>
+									<td class="locked"><i class="icon_list"></i>잠금</td>
 								</tr>
 								<tr>
 									<td class="check_list"><input type="checkbox" name="" id="list07" class="check_stl"><label for="list07" class="check_stl_lab"></label></td>
@@ -348,7 +348,7 @@
 									<td>data1</td>
 									<td class="fileEditLoader"><i class="icon_pgs"></i>작업 보류중</td>
 									<td>CentOS(1503)</td>
-									<td><i class="icon_list sv_connect_error"></i>접속오류</td>
+									<td class="pauseCircle"><i class="icon_list"></i>접속오류</td>
 								</tr>
 								<tr>
 									<td class="check_list"><input type="checkbox" name="" id="list07" class="check_stl"><label for="list07" class="check_stl_lab"></label></td>
@@ -479,13 +479,25 @@
 						<!-- s: scroll 삭제 -->
 						<div class="workflow_box">
 						<!-- e: scroll 삭제 -->
-						 	<!-- s: svg 삭제 -->
+						 	<!-- s: wf_arrow에 class 추가 -->
 							<div class="workflow_wrap">
 								<div class="s_e_w">
 									<div class="nav_circle">
 										<i class="i_start"></i>
 									</div>
 									<p class="wf_nm">박지민<span>신청자</span></p>
+								</div>
+								<div class="wf_arrow">
+									<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0)">
+										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#999999"/>
+										</g>
+										<defs>
+										<clipPath id="clip0">
+										<rect width="4.82" height="8" fill="white"/>
+										</clipPath>
+										</defs>
+									</svg>
 								</div>
 								<div class="">
 									<div class="wf_card apv_comple">
@@ -502,10 +514,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="wf_arrow">
+								<div class="wf_arrow apv_comple">
 									<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0)">
-										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#505B6E"/>
+										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#22AC3D"/>
 										</g>
 										<defs>
 										<clipPath id="clip0">
@@ -529,10 +541,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="wf_arrow">
+								<div class="wf_arrow proceeding">
 									<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0)">
-										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#505B6E"/>
+										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#2261AC"/>
 										</g>
 										<defs>
 										<clipPath id="clip0">
@@ -556,10 +568,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="wf_arrow">
+								<div class="wf_arrow mandate">
 									<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0)">
-										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#505B6E"/>
+										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#6A5ACD"/>
 										</g>
 										<defs>
 										<clipPath id="clip0">
@@ -582,10 +594,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="wf_arrow">
+								<div class="wf_arrow error">
 									<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0)">
-										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#505B6E"/>
+										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#FF0A00"/>
 										</g>
 										<defs>
 										<clipPath id="clip0">
@@ -608,10 +620,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="wf_arrow">
+								<div class="wf_arrow autopay">
 									<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0)">
-										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#505B6E"/>
+										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#999999"/>
 										</g>
 										<defs>
 										<clipPath id="clip0">
@@ -635,10 +647,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="wf_arrow dasharrow">
+								<div class="wf_arrow dasharrow reject">
 									<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0)">
-										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#9da5b1"/>
+										<path d="M0.82 8C0.61 8 0.4 7.92 0.24 7.76C-0.08 7.44 -0.08 6.92 0.24 6.6L2.84 4L0.24 1.4C-0.08 1.08 -0.08 0.56 0.24 0.24C0.56 -0.08 1.08 -0.08 1.4 0.24L4.58 3.42C4.9 3.74 4.9 4.26 4.58 4.58L1.4 7.76C1.24 7.92 1.03 8 0.82 8Z" fill="#FFC107"/>
 										</g>
 										<defs>
 										<clipPath id="clip0">
@@ -671,7 +683,7 @@
 									<p class="wf_nm">신청완료<span>2021.01.25</span></p>
 								</div>
 							</div>
-							<!-- e: svg 삭제 -->
+							<!-- e: wf_arrow에 class 추가 -->
 						</div>
 					</div>
 					<!-- e: class명 추가 form_wrap, 버튼 class 변경 -->

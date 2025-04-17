@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
   <defs>
     <clipPath id="clip-path">
-      <rect id="mask" width="24" height="24" transform="translate(0 -0.043)" fill="#f0f" opacity="0.217"/>
+      <rect id="사각형_15480" data-name="사각형 15480" width="24" height="24" transform="translate(-6 -3)" fill="#fff" stroke="#8a8a8a" stroke-width="1.5"/>
     </clipPath>
   </defs>
-  <g id="ico_check" transform="translate(0 0.043)" clip-path="url(#clip-path)">
-    <path id="ico_check-2" data-name="ico_check" d="M15.4,9,8.937,15.462,6,12.525" transform="translate(1.208 -0.323)" fill="none" stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  <g id="ico_check" transform="translate(6 3)" clip-path="url(#clip-path)">
+    <path id="Icon_feather-check" data-name="Icon feather-check" d="M22,9,11,20,6,15" transform="translate(-7.5 -5.5)" fill="none" stroke="#121212" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
   </g>
 </svg>

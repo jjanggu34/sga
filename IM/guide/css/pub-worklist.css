@@ -79,3 +79,7 @@ a:hover { color:#0000ff; }
 .stateCnt li:first-child::before { content:none; }
 .stateCnt li::before { content: '';  position:absolute; top:50%; left:0; transform: translateY(-50%); width:1px; height:20px; background: #FFFFFF; }
 .stateCnt li span { font-size: 24px; }
+
+/*--------------------------------------------------------------
+	이미지
+---------------------------------------------------------------*/

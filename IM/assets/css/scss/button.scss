@@ -134,10 +134,20 @@ button {
             &.checkout {
                 @include wh (16px, 16px);
                 @include mask(var(--title));
+                -webkit-mask-image:url("../images/common/close.svg");
+                mask-image:url("../images/common/close.svg");
             }
             &.checkin {
                 @include wh (16px, 16px);
                 @include mask(var(--title));
+                -webkit-mask-image:url("../images/common/ico_check.svg");
+                mask-image:url("../images/common/ico_check.svg");
+            }
+            &.setting {
+                @include wh (16px, 16px);
+                @include mask(var(--title));
+                -webkit-mask-image:url("../images/common/icon_setting.svg");
+                mask-image:url("../images/common/icon_setting.svg");
             }
         }
     }
