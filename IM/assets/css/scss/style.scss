@@ -415,6 +415,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             position:unset;
             display:inline-block;
             @include wh (17px, 17px);
+            margin-left:20px;
             margin-right:4px;
             font-size:var(--font-16);
             line-height:20px;
@@ -689,11 +690,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &.autopay {
                 border-color:var(--text-disabled);
             }
+            &.waiting {
+                border-color:var(--border-d);
+            }
         }
         .wf_card {
             border-radius:13px;
             $masks: "apv_comple", "proceeding", "error";
-            $icons: "mandate", "autopay", "reject";
+            $icons: "mandate", "autopay", "reject", "waiting";
 
             @each $mask in $masks {
                 &.#{$mask} {
@@ -833,6 +837,22 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                 }
             }
+            &.waiting {
+                border-color:var(--border-d);
+                .wf_state {
+                    background-color:var(--text-disabled);
+                    i {
+                        background-image:url("../images/common/ico_autopay.svg");
+                    }
+                }
+                .wf_detail {
+                    .wf_state_txt {
+                        em {
+                            color:var(--border-d);
+                        }
+                    }
+                }
+            }
             &.emty {
                 border-color:var(--border-d);
             }
@@ -867,6 +887,59 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         &:first-child {
                             padding-bottom:6px;
                         }
+                    }
+                }
+            }
+        }
+        .wf_2line {
+            .wf_arrow_ud {
+                .wf_arrow_up {
+                    &.apv_comple {
+                        border-color:#22AC3D;
+                    }
+                    &.proceeding {
+                        border-color:#2261AC;
+                    }
+                    &.mandate {
+                        border-color:#6A5ACD;
+                    }
+                    &.reject {
+                        border-color:#FFC107;
+                    }
+                    &.error {
+                        border-color:#FF0A00;
+                    }
+                    &.autopay {
+                        border-color:var(--text-disabled);
+                    }
+                    &.waiting {
+                        border-color:var(--border-d);
+                    }
+                }
+                .wf_arrw_down {
+                    &.apv_comple {
+                        border-color:#22AC3D;
+                        i {
+                            background-color:#22AC3D;
+                        }
+                    }
+                    &.proceeding {
+                        border-color:#2261AC;
+                    }
+                    &.mandate {
+                        border-color:#6A5ACD;
+                    }
+                    &.reject {
+                        border-color:#FFC107;
+                    }
+                    &.error {
+                        border-color:#FF0A00;
+                    }
+                    &.autopay {
+                        border-color:var(--text-disabled);
+                    }
+                    &.waiting {
+                        border-color:var(--border-d);
                     }
                 }
             }

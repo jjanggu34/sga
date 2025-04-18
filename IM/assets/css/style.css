@@ -601,6 +601,7 @@
   display: inline-block;
   width: 17px;
   height: 17px;
+  margin-left: 20px;
   margin-right: 4px;
   font-size: var(--font-16);
   line-height: 20px;
@@ -919,6 +920,9 @@
 .workflow_box .workflow_wrap .wf_arrow.autopay {
   border-color: var(--text-disabled);
 }
+.workflow_box .workflow_wrap .wf_arrow.waiting {
+  border-color: var(--border-d);
+}
 .workflow_box .workflow_wrap .wf_card {
   border-radius: 13px;
 }
@@ -973,6 +977,13 @@
   background-image: none;
 }
 .workflow_box .workflow_wrap .wf_card.reject .wf_state i {
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+}
+.workflow_box .workflow_wrap .wf_card.waiting .wf_state i {
   width: 16px;
   height: 16px;
   background-size: 100%;
@@ -1079,6 +1090,18 @@
 .workflow_box .workflow_wrap .wf_card.reject .wf_detail .wf_state_txt em {
   color: #FFC107;
 }
+.workflow_box .workflow_wrap .wf_card.waiting {
+  border-color: var(--border-d);
+}
+.workflow_box .workflow_wrap .wf_card.waiting .wf_state {
+  background-color: var(--text-disabled);
+}
+.workflow_box .workflow_wrap .wf_card.waiting .wf_state i {
+  background-image: url("../images/common/ico_autopay.svg");
+}
+.workflow_box .workflow_wrap .wf_card.waiting .wf_detail .wf_state_txt em {
+  color: var(--border-d);
+}
 .workflow_box .workflow_wrap .wf_card.emty {
   border-color: var(--border-d);
 }
@@ -1117,6 +1140,51 @@
 }
 .workflow_box .workflow_wrap .wf_card .wf_detail .wf_op_info p:first-child {
   padding-bottom: 6px;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.apv_comple {
+  border-color: #22AC3D;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.proceeding {
+  border-color: #2261AC;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.mandate {
+  border-color: #6A5ACD;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.reject {
+  border-color: #FFC107;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.error {
+  border-color: #FF0A00;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.autopay {
+  border-color: var(--text-disabled);
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.waiting {
+  border-color: var(--border-d);
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrw_down.apv_comple {
+  border-color: #22AC3D;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrw_down.apv_comple i {
+  background-color: #22AC3D;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrw_down.proceeding {
+  border-color: #2261AC;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrw_down.mandate {
+  border-color: #6A5ACD;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrw_down.reject {
+  border-color: #FFC107;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrw_down.error {
+  border-color: #FF0A00;
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrw_down.autopay {
+  border-color: var(--text-disabled);
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrw_down.waiting {
+  border-color: var(--border-d);
 }
 
 /***************** apply_card *****************/
