@@ -193,9 +193,11 @@ body {
                 padding:18px 0 11px;
                 font-size:var(--font-14);
                 font-weight:var(--font-regular);
+                color:var(--content);
                 background-color:var(--white);
                 &.on {
                     border:0;
+                    border-radius:0;
                     border-bottom:2px solid var(--primary);
                     font-weight:var(--font-medium);
                     color:var(--primary);
@@ -282,26 +284,28 @@ body {
                 }
             }
         }
-        &.mini_nav {
-            .nav_header {
-                padding-bottom:20px;
-            }
-            .nav_list {
-                li {
-                    a {
-                        i {
-                            left:24px;
-                        }
-                        &.depth_menu {
-                            &::after {
-                                display:none;
-                            }
+    }
+    &.mini_nav {
+        .nav_header {
+            padding-bottom:20px;
+        }
+        .nav_list {
+            li {
+                a {
+                    i {
+                        left:24px;
+                    }
+                    &.depth_menu {
+                        &::after {
+                            display:none;
                         }
                     }
                 }
             }
-            .header {
-                .btn_lnb a {
+        }
+        .header {
+            .btn_lnb {
+                a {
                     left:24px;
                 }
             }
@@ -330,6 +334,10 @@ body {
                 top:60px;
             }
         }
+        &.cont_scroll {
+            max-height:839px;
+            overflow-y:auto;
+        }
     }
     #container {
         background:var(--body);
@@ -354,6 +362,7 @@ body {
                 margin-left:24px;
                 border:$borderD;
                 border-radius:20px;
+                font-size:0;
                 background:var(--white);
             }
         }
@@ -364,6 +373,9 @@ body {
                 padding:20px 24px;
                 border:1px solid var(--border-d);
                 border-radius:20px;
+                .tbl_list {
+                    padding:0 0 10px;
+                }
             }
         }
     }
@@ -419,6 +431,61 @@ body {
 /*---------------------------------------------
     #팝업 레이아웃
 ---------------------------------------------*/
+.detail_view {
+    top:60px;
+    height:calc(100% - 60px);
+    padding:20px;
+    border:1px solid var(--border-d);
+    border-radius:13px 0 0 13px;
+    box-shadow:0 3px 6px #00000016;
+    // 팝헤더
+    .dtv_top {
+        padding:10px 0 10px 6px;
+        border-bottom-color:var(--title);
+        border-radius:13px 0 0;
+        background-color:transparent;
+        .title {
+            font-size:var(--font-18);
+            font-weight:var(--font-bold);
+            color:var(--title);
+        }
+        .btn_close {
+            top:6px;
+            @include icon(30px, 30px);
+            background-color:transparent;
+            background-image:url("../images/common/close.svg");
+        }
+    }
+    // cont
+    .dtv_cont {
+        padding:0;
+        .view_list {
+            &.bul_dot {
+                li {
+                    &::before {
+                        left:10px;
+                    }
+                }
+            }
+            li {
+                align-items: center;
+                padding:10px 20px;
+                .view_tit {
+                    p {
+                        font-size:var(--font-14);
+                        font-weight:var(--font-regular);
+                        color:var(--text-disabled);
+                    }
+                }
+                .view_txt {
+                    font-size:var(--font-13);
+                    font-weight:var(--font-medium);
+                    color:var(--title);
+                }
+            }
+        }
+    }
+}
 
 /*---------------------------------------------
     #푸터 레이아웃

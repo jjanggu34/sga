@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -25,9 +28,11 @@
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
+					<!--s: 이미지 경로 변경-->
 					<a href="" class="logo">
-						<img src="img/common/logo_186x30.png">
+						<img src="assets/images/common/logo_186x30.png">
 					</a>
+					<!--e: 이미지 경로 변경-->
 				</div>
 				<div class="nav_tab">
 					<a href="" class="">사용자</a>
@@ -104,20 +109,21 @@
 			</div>
 		</div>
 		<div id="container">
+			<!-- s : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="header">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>사용자 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">역할관리</a></li>
+						<li><a href="">사용자 관리</a></li>
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> <span>user01</span></a></li>
-					<li class="time"><i></i><span>2020-09-11 15:35:00</span></li>
-					<li class="btn_alim"><a href="">alim<span>13</span></a>
+					<li class="btn_top_user"><a href=""><span>시스템관리자(ztadimin)</span></a></li>
+					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
+					<li class="btn_alim"><a href="">alim</a>
 						<div class="balloon alim_pop" style="display:none">
 							<div class="alim_pop_wrap">
 								<div class="alim_top">
@@ -138,15 +144,11 @@
 							</div>
 						</div>
 					</li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
 					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
-					</li>
 				</ul>
 			</div>
+			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="content">
 				<div class="search_wrap">
 					<div class="search_box">
@@ -156,21 +158,22 @@
 					</div>
 					<form class="detail_search_wrap" style="display:none">
 						<p class="detail_search_btn">상세검색<i>닫기</i></p>
+						<!-- s: class명 추가 bul_dot -->
 						<div class="search_column4">
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail01">종류</label></dt>
 									<dd><input type="text" name="" id="detail01" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail04">제조사</label></dt>
 									<dd><input type="text" name="" id="detail04" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -182,43 +185,47 @@
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail09">이름</label></dt>
 									<dd><input type="text" name="" id="detail09" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail10">이름</label></dt>
 									<dd><input type="text" name="" id="detail10" class="form_contrl"></dd>
 								</dl>
 							</div>
 						</div>
 						<div class="search_date">
-							<dl class="flx">
+							<dl class="flx bul_dot">
 								<dt>생성일</dt>
 								<dd>
 									<div class="flx">
 										<ul class="flx month_select">
-											<li><button class="shadow">1개월</button></li>
-											<li><button class="shadow on">3개월</button></li>
-											<li><button class="shadow">6개월</button></li>
-											<li><button class="shadow">10개월</button></li>
-											<li><button class="shadow">12개월</button></li>
+											<!-- s: class명 변경 -->
+											<li><button class="normal">1개월</button></li>
+											<li><button class="normal on">3개월</button></li>
+											<li><button class="normal">6개월</button></li>
+											<li><button class="normal">10개월</button></li>
+											<li><button class="normal">12개월</button></li>
+											<!-- e: class명 변경 -->
 										</ul>
 										<div class="form_date">
 											<input type="text" class="form_contrl date_ctl" value="시작날짜" readonly="readonly">
 											<span> - </span>
 											<input type="text" class="form_contrl date_ctl" value="종료날짜" readonly="readonly">
 										</div>
-										<button class="shadow">초기화</button>
+										<!-- s: class명 변경 -->
+										<button class="normal icon_reset">초기화</button>
+										<!-- e: class명 변경 -->
 									</div>
 								</dd>
 							</dl>
 						</div>
 						<div class="search_column1">
 							<div class="col">
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -232,10 +239,11 @@
 						</div>
 						<div class="box2">
 							<p class="btn_box">
-								<a href="" class="white">초기화</a>
-								<a href="" class="gradient">검색</a>
+								<a href="" class="line icon_reset">초기화</a>
+								<a href="" class="primary">검색</a>
 							</p>
 						</div>
+						<!-- e: class명 추가 bul_dot -->
 					</form>
 					
 					<div class="related_box" style="display:none">
@@ -248,28 +256,37 @@
 						</ul>
 					</div>
 				</div>
+				<!-- 스크롤시 고정할 상단버튼 "list_btn_stk" 클래스 추가-->
 				<div class="list_btn cl_both">
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">활성</button>
-						<button class="shadow">비활성</button>
+						<!-- s: class명 변경 -->
+						<button class="line">활성</button>
+						<button class="line">비활성</button>
 						<span class="divide"></span>
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow">Update</button>
+						<button class="line">생성</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line">Update</button>
+						<!-- e: class명 변경 -->
 					</div>
+					<!-- s: class명 변경 -->
 					<div class="list_right_btn f_r wid50">
-						<button class="skybluebd"><i class="icon_ff sl_ff exel"></i>EXEL</button>
-						<button class="skybluebd"><i class="icon_ff sl_ff"></i>PDF</button>
-						<button class="skyblue"><i class="icon_setting"></i> 설정</button>
-						<button class="skyblue">새로고침</button>
+						<button class="line icon"><i class="icon_ff sl_ff excel"></i>EXEL</button>
+						<button class="line icon"><i class="icon_ff sl_ff pdf"></i>PDF</button>
+						<button class="line icon"><i class="icon_setting"></i> 설정</button>
+						<button class="primary icon">
+							<i class="icon_reset"></i>
+							새로고침
+						</button>
 					</div>
+					<!-- e: class명 변경 -->
 				</div>
+				<!-- s: class명 변경 -->
 				<div class="tbl_list">
 					<table class="default_tbl">
 						<thead>
 							<tr>
-								<th class="tbl_num_wid" style="width:25px"></th>
+								<th class="tbl_num_wid"></th>
 								<th class="check_list"><input type="checkbox" name="" id="list00" class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
 								<th></th>
 								<th></th>
@@ -299,11 +316,11 @@
 								<td style="width:20px"><button class="btn_detailview" title="상세보기"></button></td>
 								<td>OS</td>
 								<td>RedHat</td>
-								<td class="bluetxt wgt800">수신됨<span class="mandatxt"><i></i>위임함</span></td>
-								<td><i class="icon_list none"></i>상태없음</td>
+								<td class="bluetxt">수신됨<span class="madna_ed"><i></i>위임함</span></td>
+								<td class="circleOff"><i class="icon_list none"></i>상태없음</td>
 								<td>
-									<i class="icon_ff"></i>
-									<i class="icon_ff exel"></i>
+									<i class="icon_ff pdf"></i>
+									<i class="icon_ff excel"></i>
 									<i class="icon_ff word"></i>
 									<i class="icon_ff csv"></i>
 									<i class="icon_ff hwp"></i>
@@ -318,11 +335,11 @@
 								<td><button class="btn_detailview" title="상세보기"></button></td>
 								<td>OS</td>
 								<td>RedHat</td>
-								<td class="bluetxt wgt800">수신됨<span class="mandatxt madna_ed"><i></i>위임됨</span></td>
-								<td><i class="icon_pgs"></i>생성 진행중</td>
+								<td class="bluetxt">수신됨<span class="mandatxt"><i></i>위임됨</span></td>
+								<td class="filePlus"><i class="icon_pgs"></i>생성 진행중</td>
 								<td>
-									<i class="icon_ff"></i>
-									<i class="icon_ff exel"></i>
+									<i class="icon_ff pdf"></i>
+									<i class="icon_ff excel"></i>
 									<i class="icon_ff hwp"></i>
 									<i class="icon_ff text"></i>
 								</td>
@@ -336,11 +353,11 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>승인됨</td>
-								<td><i class="icon_list icheck"></i>생성</td>
+								<td class="filePlus"><i class="icon_list icheck"></i>생성</td>
 								<td>
 									<i class="icon_ff hwp"></i>
 									<i class="icon_ff text"></i>
-									<i class="icon_ff exel"></i>
+									<i class="icon_ff excel"></i>
 								</td>
 								<td>Linux 표준모델 <i title="수신됨" class="icon_received"></i></td>
 							</tr>
@@ -351,10 +368,10 @@
 								<td><button class="btn_detailview" title="상세보기"></button></td>
 								<td>OS</td>
 								<td>RedHat</td>
-								<td>승인됨<span class="mandatxt"><i></i>위임함</span></td>
-								<td><i class="icon_list"></i>정상</td>
+								<td class="bluetxt">승인됨<span class="madna_ed"><i></i>위임함</span></td>
+								<td class="checkCircle"><i class="icon_list"></i>정상</td>
 								<td>CentOS(1503)</td>
-								<td><i class="icon_list sv_connect"></i>연결됨</td>
+								<td class="plugConnected"><i class="icon_list"></i>연결됨</td>
 							</tr>
 							<tr>
 								<th>5</th>
@@ -363,10 +380,10 @@
 								<td><button class="btn_detailview" title="상세보기"></button></td>
 								<td>OS</td>
 								<td>RedHat</td>
-								<td>승인됨<span class="mandatxt madna_ed"><i></i>위임됨</span></td>
-								<td><i class="icon_pgs shippingcart_edit"></i>수정 작업중</td>
+								<td class="bluetxt">승인됨<span class="mandatxt"><i></i>위임됨</span></td>
+								<td class="fileEdit"><i class="icon_pgs"></i>수정 작업중</td>
 								<td>CentOS(1503)</td>
-								<td><i class="icon_list sv_disconnect"></i>연결끊김</td>
+								<td class="plugZapOff"><i class="icon_list"></i>연결끊김</td>
 							</tr>
 							<tr>
 								<th>6</th>
@@ -376,7 +393,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>data1</td>
-								<td><i class="icon_pgs progress_update"></i>수정 진행중</td>
+								<td class="fileEdit ing"><i class="icon_pgs"></i>수정 진행중</td>
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>
@@ -388,7 +405,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>data1</td>
-								<td><i class="icon_pgs progress_pending"></i>작업 보류중</td>
+								<td class="fileEditLoader"><i class="icon_pgs"></i>작업 보류중</td>
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>
@@ -400,7 +417,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>data1</td>
-								<td><i class="icon_list iwarning"></i>작업중 오류</td>
+								<td class="pauseCircle"><i class="icon_list"></i>작업중 오류</td>
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>
@@ -412,7 +429,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>data1</td>
-								<td><i class="icon_list disabled"></i>비활성</td>
+								<td class="Nbolt"><i class="icon_list disabled"></i>비활성</td>
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>
@@ -424,7 +441,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>data1</td>
-								<td><i class="icon_pgs progress_del"></i>삭제 진행중</td>
+								<td class="trash"><i class="icon_pgs"></i>삭제 진행중</td>
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>
@@ -436,13 +453,14 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>data1</td>
-								<td><i class="icon_list idisabled"></i>삭제됨</td>
+								<td class="trash"><i class="icon_list"></i>삭제됨</td>
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+				<!-- e: class명 변경 -->
 				<div class="tbl_btm">
 					<div class="page_info">1-10/50</div>
 					<div class="pagination">
@@ -467,19 +485,21 @@
 						</select>
 					</div>
 				</div>
+				<!-- s: class명 변경 -->
 				<div class="list_btn cl_both">
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow">Update</button>
+						<button class="line">생성</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line">Update</button>
 					</div>
 					<div class="list_right_btn f_r wid50">
-						<button class="skyblue">자가등록</button>
-						<button class="skyblue">수동 Recon</button>
-						<button class="skyblue">대량등록</button>
+						<button class="basic">자가등록</button>
+						<button class="basic">수동 Recon</button>
+						<button class="basic">대량등록</button>
 					</div>
 				</div>
+				<!-- e: class명 변경 -->
 			</div>
 			<div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
@@ -492,7 +512,8 @@
 				<div class="dtv_cont_wrap">
 					<div class="dtv_cont scroll">
 						<div class="view_stl">
-							<ul class="view_list">
+							<!-- s: bul_dot 추가 -->
+							<ul class="view_list bul_dot">
 								<li>
 									<div class="view_tit">
 										<p>자원종류</p>
@@ -624,16 +645,19 @@
 									<div class="view_txt"><p>계정삭제</p></div>
 								</li>	
 							</ul>
+							<!-- e: bul_dot 추가 -->
 						</div>
 					</div>
 					<div class="btn_box cl_both">
 						<div class="f_l">
 						</div>
+						<!-- s: class 변경 -->
 						<div class="f_r">
-							<a href="" class="blue">확인</a>
-							<a href="" class="skyblue">닫기</a>
-							<a href="" class="navy">수정</a>
-						</div>				
+							<a href="" class="line">확인</a>
+							<a href="" class="basic">닫기</a>
+							<a href="" class="point">수정</a>
+						</div>
+						<!-- e: class 변경 -->
 					</div>
 				</div>
 			</div>

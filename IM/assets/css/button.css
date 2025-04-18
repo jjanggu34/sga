@@ -14,6 +14,10 @@
   color: var(--title);
 }
 
+.btn_box {
+  padding: 0 0 10px;
+}
+
 .btn_box a {
   height: auto;
   padding: 7px 14px 6px;
@@ -26,7 +30,7 @@
   border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
-  color: var(--title);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -42,7 +46,7 @@
   border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
-  color: var(--title);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -58,7 +62,7 @@
   border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
-  color: var(--title);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -69,7 +73,6 @@
 .basic {
   border-radius: 6px;
   font-size: var(--font-13);
-  color: var(--white);
   line-height: 16px;
   background: var(--btn-default);
 }
@@ -80,7 +83,6 @@
 
 .primary {
   border: 1px solid var(--primary);
-  color: var(--title);
   background: var(--primary);
 }
 .primary:focus-visible {
@@ -96,6 +98,11 @@
   height: 16px;
   background: url("../images/common/ico_accordion.svg") no-repeat right center var(--primary);
   transform: rotate(270deg);
+}
+
+.point {
+  border: 1px solid var(--point);
+  background: var(--point);
 }
 
 /*---------------------------------------------
@@ -118,6 +125,7 @@
 	#line
 ---------------------------------------------*/
 .line {
+  border-radius: 6px;
   font-size: var(--font-13);
   color: var(--content);
   border: 1px solid var(--border-d);
@@ -128,25 +136,27 @@
   border: 1px solid var(--content);
 }
 .line.btn_dropdown {
-  padding-right: 23px;
-  background: url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--white);
+  padding-right: 30px;
+  background: url("../images/common/ico_accordion.svg") no-repeat right 7px center var(--white);
 }
 
 /*---------------------------------------------
 	#button에 icon 있을 경우
     #그 외 버튼
 ---------------------------------------------*/
-button {
+button, a {
   border-radius: 6px;
+  color: var(--white);
+  font-weight: var(--font-medium);
   /* 테이블 안 토글 버튼 */
 }
-button.icon {
+button.icon, a.icon {
   padding: 6px 14px 6px 7px;
 }
-button.icon i {
+button.icon i, a.icon i {
   display: inline-block;
 }
-button.icon i.icon_reset {
+button.icon i.icon_reset, a.icon i.icon_reset {
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -155,16 +165,16 @@ button.icon i.icon_reset {
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: var(--title);
+  background-color: var(--white);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_refresh.svg");
   mask-image: url("../images/common/ico_refresh.svg");
 }
-button.icon i.icon_reset.init {
+button.icon i.icon_reset.init, a.icon i.icon_reset.init {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-button.icon i.delfile {
+button.icon i.delfile, a.icon i.delfile {
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -178,7 +188,7 @@ button.icon i.delfile {
   -webkit-mask-image: url("../images/common/label/ico_trash.svg");
   mask-image: url("../images/common/label/ico_trash.svg");
 }
-button.icon i.checkout {
+button.icon i.checkout, a.icon i.checkout {
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -192,7 +202,7 @@ button.icon i.checkout {
   -webkit-mask-image: url("../images/common/close.svg");
   mask-image: url("../images/common/close.svg");
 }
-button.icon i.checkin {
+button.icon i.checkin, a.icon i.checkin {
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -206,7 +216,7 @@ button.icon i.checkin {
   -webkit-mask-image: url("../images/common/ico_check.svg");
   mask-image: url("../images/common/ico_check.svg");
 }
-button.icon i.setting {
+button.icon i.icon_setting, a.icon i.icon_setting {
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -219,38 +229,44 @@ button.icon i.setting {
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/icon_setting.svg");
   mask-image: url("../images/common/icon_setting.svg");
+  background-image: none;
 }
-button.disabled {
+button.disabled, a.disabled {
   cursor: auto;
+  border: 1px solid var(--btn-disabled);
+  color: var(--text-disabled);
+  background: var(--btn-disabled);
 }
-button.disabled i {
+button.disabled i, a.disabled i {
   background-color: var(--text-disabled) !important;
 }
-button.normal {
+button.normal, a.normal {
   display: inline-block;
   padding: 6px 12px;
   border: 1px solid var(--default);
   border-radius: 6px;
+  font-weight: var(--font-regular);
   color: var(--content);
   line-height: 16px;
   background: var(--white);
 }
-button.normal.icon_reset {
-  width: 28px;
-  height: 28px;
+button.normal.icon_reset, a.normal.icon_reset {
+  width: 30px;
+  height: 30px;
   padding: 6px;
   font-size: 0;
   background: url("../images/common/ico_refresh.svg") no-repeat center/auto var(--white);
 }
-button.normal.icon_reset::before {
+button.normal.icon_reset::before, a.normal.icon_reset::before {
   content: none;
 }
-button.normal.on {
+button.normal.on, a.normal.on {
   padding: 6px 12px 6px 6px;
   border: 1px solid var(--primary);
+  background: #FFFAEF;
   color: var(--primary);
 }
-button.normal.on::before {
+button.normal.on::before, a.normal.on::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -266,14 +282,21 @@ button.normal.on::before {
   -webkit-mask-image: url("../images/common/ico_check_s.svg");
   mask-image: url("../images/common/ico_check_s.svg");
 }
-button.normal.close {
+button.normal.close, a.normal.close {
   width: 30px;
   height: 30px;
   padding: 3px;
   font-size: 0;
   background: url("../images/common/close.svg") no-repeat center/auto var(--white);
 }
-button.icon_arrow_open, button.icon_arrow_close {
+button.normal.bottom, a.normal.bottom {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 0;
+  background: url("../images/common/ico_accordion.svg") no-repeat center/auto;
+}
+button.icon_arrow_open, button.icon_arrow_close, a.icon_arrow_open, a.icon_arrow_close {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -288,25 +311,49 @@ button.icon_arrow_open, button.icon_arrow_close {
   -webkit-mask-image: url("../images/common/icon_arrow_open.svg");
   mask-image: url("../images/common/icon_arrow_open.svg");
 }
-button.icon_arrow_close {
+button.icon_arrow_close, a.icon_arrow_close {
   transform: rotate(180deg);
 }
 
 /* close */
 .detail_search_btn i {
-  background: url("../images/common/close.svg") no-repeat right center;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/close.svg");
+  background-color: transparent;
 }
 
 .entrybox .btn_entry_del:after {
-  background: url("../images/common/close.svg") no-repeat right center;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/close.svg");
+  background-color: transparent;
 }
 
 .small_delbtn {
-  background: url("../images/common/close.svg") no-repeat right center;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/close.svg");
+  background-color: transparent;
 }
 
 .sych_mnt_toast .btn_close {
-  background: url("../images/common/close.svg") no-repeat right center;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/close.svg");
+  background-color: transparent;
 }
 
 /*---------------------------------------------
@@ -376,6 +423,7 @@ button.icon_arrow_close {
   border: 1px solid var(--default);
   border-radius: 6px;
   font-size: var(--font-12);
+  color: var(--content);
   line-height: 28px;
 }
 .pagination ul li a span {

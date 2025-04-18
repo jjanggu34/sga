@@ -12,6 +12,9 @@
         color:var(--title);
     }
 }
+.btn_box {
+    padding:0 0 10px;
+}
 
 $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 
@@ -27,7 +30,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
             border:$borderP;
             font-size:var(--font-14);
             font-weight:var(--font-medium);
-            color:var(--title);
+            color:var(--white);
             background:var(--primary);
         }
     }
@@ -40,7 +43,6 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 .basic {
     border-radius:6px;
     font-size:var(--font-13);
-    color:var(--white);
     line-height:16px;
     background:var(--btn-default);
     &:focus-visible {
@@ -51,7 +53,6 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 
 .primary {
     border:$borderP;
-    color:var(--title);
     background:var(--primary);
     // focus
     &:focus-visible {
@@ -69,6 +70,11 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
             transform:rotate(270deg);
         }
     }
+}
+
+.point {
+    border:1px solid var(--point);
+    background:var(--point);
 }
 
 /*---------------------------------------------
@@ -90,6 +96,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 	#line
 ---------------------------------------------*/
 .line {
+    border-radius:6px;
     font-size:var(--font-13);
     color:var(--content);
     border:$borderD;
@@ -100,8 +107,8 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
         border:1px solid var(--content);
     }
     &.btn_dropdown {
-        padding-right:23px;
-        background:url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--white);
+        padding-right:30px;
+        background:url("../images/common/ico_accordion.svg") no-repeat right 7px center var(--white);
     }
 }
 
@@ -109,15 +116,17 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 	#button에 icon 있을 경우
     #그 외 버튼
 ---------------------------------------------*/
-button {
+button, a {
     border-radius:6px;
+    color:var(--white);
+    font-weight:var(--font-medium);
     &.icon {
     padding:6px 14px 6px 7px;
         i {
             display:inline-block;
             &.icon_reset {
                 @include wh (16px, 16px);
-                @include mask(var(--title));
+                @include mask(var(--white));
                 -webkit-mask-image:url("../images/common/ico_refresh.svg");
                 mask-image:url("../images/common/ico_refresh.svg");
                 &.init {
@@ -143,16 +152,20 @@ button {
                 -webkit-mask-image:url("../images/common/ico_check.svg");
                 mask-image:url("../images/common/ico_check.svg");
             }
-            &.setting {
+            &.icon_setting {
                 @include wh (16px, 16px);
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/icon_setting.svg");
                 mask-image:url("../images/common/icon_setting.svg");
+                background-image:none;
             }
         }
     }
     &.disabled {
         cursor:auto;
+        border:1px solid var(--btn-disabled);
+        color:var(--text-disabled);
+        background:var(--btn-disabled);
         i {
             background-color:var(--text-disabled) !important;
         }
@@ -162,11 +175,12 @@ button {
         padding:6px 12px;
         border:1px solid var(--default);
         border-radius:6px;
+        font-weight:var(--font-regular);
         color:var(--content);
         line-height:16px;
         background:var(--white);
         &.icon_reset {
-            @include wh (28px, 28px);
+            @include wh (30px, 30px);
             padding:6px;
             font-size:0;
             background:url("../images/common/ico_refresh.svg")no-repeat center/auto var(--white);
@@ -177,6 +191,7 @@ button {
         &.on {
             padding:6px 12px 6px 6px;
             border:$borderP;
+            background:#FFFAEF;
             &::before {
                 content:"";
                 display:inline-block;
@@ -192,6 +207,12 @@ button {
             padding:3px;
             font-size:0;
             background:url("../images/common/close.svg")no-repeat center/auto var(--white);
+        }
+        &.bottom {
+            @include wh (30px,30px);
+            padding:0;
+            font-size:0;
+            background:url("../images/common/ico_accordion.svg")no-repeat center/auto;
         }
     }
     /* 테이블 안 토글 버튼 */
@@ -213,7 +234,9 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
 
 @each $close in $closes {
     .#{$close} {
-        background:url("../images/common/close.svg")no-repeat right center;
+        @include icon (16px,16px);
+        background-image:url("../images/common/close.svg");
+        background-color:transparent;
     }
 }
 
@@ -281,6 +304,7 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
                 border:1px solid var(--default);
                 border-radius:6px;
                 font-size:var(--font-12);
+                color:var(--content);
                 line-height:28px;
                 span {
                     display:inline-block;

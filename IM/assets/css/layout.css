@@ -218,10 +218,12 @@ body * {
   padding: 18px 0 11px;
   font-size: var(--font-14);
   font-weight: var(--font-regular);
+  color: var(--content);
   background-color: var(--white);
 }
 #SGIM_wrap .nav .nav_tab a.on {
   border: 0;
+  border-radius: 0;
   border-bottom: 2px solid var(--primary);
   font-weight: var(--font-medium);
   color: var(--primary);
@@ -312,16 +314,16 @@ body * {
 #SGIM_wrap .nav .nav_list > li ul li:last-child a {
   padding-bottom: 0;
 }
-#SGIM_wrap .nav.mini_nav .nav_header {
+#SGIM_wrap.mini_nav .nav_header {
   padding-bottom: 20px;
 }
-#SGIM_wrap .nav.mini_nav .nav_list li a i {
+#SGIM_wrap.mini_nav .nav_list li a i {
   left: 24px;
 }
-#SGIM_wrap .nav.mini_nav .nav_list li a.depth_menu::after {
+#SGIM_wrap.mini_nav .nav_list li a.depth_menu::after {
   display: none;
 }
-#SGIM_wrap .nav.mini_nav .header .btn_lnb a {
+#SGIM_wrap.mini_nav .header .btn_lnb a {
   left: 24px;
 }
 
@@ -343,6 +345,10 @@ body * {
 }
 #SGIM_wrap .content > div.list_btn, #SGIM_wrap .monitoring_wrap > div.list_btn {
   top: 60px;
+}
+#SGIM_wrap .content.cont_scroll, #SGIM_wrap .monitoring_wrap.cont_scroll {
+  max-height: 839px;
+  overflow-y: auto;
 }
 #SGIM_wrap #container {
   background: var(--body);
@@ -369,6 +375,7 @@ body * {
   margin-left: 24px;
   border: 1px solid var(--border-d);
   border-radius: 20px;
+  font-size: 0;
   background: var(--white);
 }
 #SGIM_wrap #container .content.only {
@@ -377,6 +384,9 @@ body * {
   padding: 20px 24px;
   border: 1px solid var(--border-d);
   border-radius: 20px;
+}
+#SGIM_wrap #container .content.only .tbl_list {
+  padding: 0 0 10px;
 }
 #SGIM_wrap .content {
   background-color: transparent;
@@ -426,6 +436,56 @@ body * {
 /*---------------------------------------------
     #팝업 레이아웃
 ---------------------------------------------*/
+.detail_view {
+  top: 60px;
+  height: calc(100% - 60px);
+  padding: 20px;
+  border: 1px solid var(--border-d);
+  border-radius: 13px 0 0 13px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.0862745098);
+}
+.detail_view .dtv_top {
+  padding: 10px 0 10px 6px;
+  border-bottom-color: var(--title);
+  border-radius: 13px 0 0;
+  background-color: transparent;
+}
+.detail_view .dtv_top .title {
+  font-size: var(--font-18);
+  font-weight: var(--font-bold);
+  color: var(--title);
+}
+.detail_view .dtv_top .btn_close {
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-color: transparent;
+  background-image: url("../images/common/close.svg");
+}
+.detail_view .dtv_cont {
+  padding: 0;
+}
+.detail_view .dtv_cont .view_list.bul_dot li::before {
+  left: 10px;
+}
+.detail_view .dtv_cont .view_list li {
+  align-items: center;
+  padding: 10px 20px;
+}
+.detail_view .dtv_cont .view_list li .view_tit p {
+  font-size: var(--font-14);
+  font-weight: var(--font-regular);
+  color: var(--text-disabled);
+}
+.detail_view .dtv_cont .view_list li .view_txt {
+  font-size: var(--font-13);
+  font-weight: var(--font-medium);
+  color: var(--title);
+}
+
 /*---------------------------------------------
     #푸터 레이아웃
 ---------------------------------------------*/

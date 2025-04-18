@@ -75,7 +75,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
-.circleOff {
+.circleOff { //상태없음
     color:var(--text-disabled) !important;
     .icon_list {
         @include wh(16px,16px);
@@ -102,7 +102,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         mask-image:url("../images/common/label/ico_PlugZapOff.svg");
     }
 }
-.filePlus {
+.filePlus { //생성
     color:var(--blue)!important;
     .icon_list {
         @include wh(16px,16px);
@@ -305,6 +305,40 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 /*********************************************************************
+#타이틀
+*********************************************************************/
+.content {
+    // form title
+    .fm_tit {
+        padding:10px 0 10px 6px;
+        margin-top:0;
+        border:0;
+        border-radius:0;
+        border-bottom:$borderD;
+        font-size:var(--font-18);
+        font-weight:var(--font-bold);
+        color:var(--title);
+        background:transparent;
+        &a {
+            .tab_arrow {
+                @include wh(24px,24px);
+            }
+        }
+    }
+    // table title
+    .def_tit {
+        font-size:var(--font-18);
+        font-weight:var(--font-extrabold);
+        color:var(--title);
+        &+.tbl_list {
+            .default_tbl {
+                border-top:1px solid var(--title);
+            }
+        }
+    }
+}
+
+/*********************************************************************
 #블릿텍스트
 *********************************************************************/
 /* . */
@@ -328,9 +362,105 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background:var(--text-disabled);
         }
     }
+    li {
+        position:relative;
+        &::before {
+            content:'';
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            left:0;
+            display:inline-block;
+            @include wh (3px, 3px);
+            border-radius:50%;
+            background:var(--text-disabled);
+        }
+    }
 }
 
 /***************** progress *****************/
+.detail_process {
+    background:var(--white);
+    border-radius:7px;
+    .flx_cell {
+        padding:8px 0;
+        margin:0;
+        margin-right:5px;
+        border-radius:7px 0 0 7px;
+        line-height:18px;
+        color:var(--text-disabled);
+        background:var(--btn-disabled);
+        box-shadow:0 0 0 2px var(--white);
+        &:first-child {
+            border-radius:7px 0 0 7px;
+        }
+        &:last-child {
+            border-radius:0 7px 7px 0;
+            &::after {
+                content:none;
+            }
+        }
+        &::after {
+            content:"";
+            position:absolute;
+            top:0;
+            right:-26px;
+            filter: drop-shadow(5px 0 0 var(--white));
+            border-radius: 7px;
+            @include icon (31px,34px);
+            background-image:url("../images/common/triangle.svg");
+            z-index:2;
+        }
+        .s_num {
+            position:unset;
+            display:inline-block;
+            @include wh (17px, 17px);
+            margin-right:4px;
+            font-size:var(--font-16);
+            line-height:20px;
+            color:var(--text-disabled);
+            background:var(--white);
+        }
+        &.pro_comple {
+            color:var(--white);
+            background:#162866;
+            &::after {
+                background-image:url("../images/common/triangle_comp.svg");
+            }
+            .s_num {
+                font-size:0;
+                &::before {
+                    content:"";
+                    display:inline-block;
+                    @include wh (17px,17px);
+                    @include mask(#162866);
+                    -webkit-mask-image:url("../images/common/ico_step.svg");
+                    mask-image:url("../images/common/ico_step.svg");
+                }
+            }
+        }
+        &.process_current {
+            color:var(--white);
+            background:var(--primary);
+            &::after {
+                background-image:url("../images/common/triangle_curr.svg");
+            }
+            .s_num {
+                color:var(--primary);
+            }
+        }
+        &.process_active {
+            color:var(--white);
+            background:var(--secondary);
+            &::after {
+                background-image:url("../images/common/triangle_active.svg");
+            }
+            .s_num {
+                color:var(--text-disabled);
+            }
+        }
+    }
+}
 
 
 /***************** 탭 *****************/
@@ -390,6 +520,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .tree_menu_tab {
     button {
         padding:16px 0 12px;
+        color:var(--text-disabled);
         background:var(--btn-disabled);
         &.on {
             color:var(--title);
@@ -406,7 +537,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** 검색-상세정보 *****************/
 .detail_search_wrap {
-    margin-top:-3px;
+    margin-top:-1px;
     margin-bottom:0;
     padding:20px 20px 20px 24px;
     border:$borderD;
@@ -521,11 +652,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background:var(--text-disabled);
                 i {
                     @include wh(40px,40px);
+                    @include mask(var(--white));
+                    margin-top:10px;
                     &.i_start {
-                        background:url("../images/common/ico_member.png")no-repeat 50%/40px auto;
+                        -webkit-mask-image:url("../images/common/ico_member.svg");
+                        mask-image:url("../images/common/ico_member.svg");
                     }
                     &.i_end {
-                        @include mask(var(--white));
                         background-position:unset;
                         -webkit-mask-image:url("../images/common/ico_check.svg");
                         mask-image:url("../images/common/ico_check.svg");
@@ -854,7 +987,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .req_txt {
                 &.inbl {
                     position:absolute;
-                    left:88px;
+                    left:67px;
                     bottom:0;
                     font-size:var(--font-13);
                     color:var(--text-disabled);
@@ -1027,22 +1160,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .content {
-    .fm_tit {
-        padding:10px 0 10px 6px;
-        margin-top:0;
-        border:0;
-        border-radius:0;
-        border-bottom:$borderD;
-        font-size:var(--font-18);
-        font-weight:var(--font-bold);
-        color:var(--title);
-        background:transparent;
-        &a {
-            .tab_arrow {
-                @include wh(24px,24px);
-            }
-        }
-    }
     .form_stl {
         margin-bottom:0;
         .form_tbl {
