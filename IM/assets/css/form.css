@@ -120,15 +120,44 @@
   background-color: var(--btn-disabled);
 }
 
+.radio_stl + label::before {
+  border: 1px solid var(--text-disabled);
+}
+.radio_stl + label::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  content: "";
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--text-disabled);
+}
+.radio_stl + label + .req_txt {
+  padding: 0;
+}
 .radio_stl:checked + label::before {
   background-color: var(--primary);
 }
 .radio_stl:checked + label::after {
+  width: 7px;
+  height: 7px;
   margin-top: 0;
+  left: 5px;
   transform: translateY(-50%);
+  background-color: var(--white);
 }
-.radio_stl + label + .req_txt {
-  padding: 0;
+.radio_stl:disabled + label::before {
+  border: 1px solid var(--btn-disabled);
+}
+.radio_stl:disabled + label::after {
+  width: 7px;
+  height: 7px;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: var(--btn-disabled);
 }
 
 /*---------------------------------------------

@@ -159,6 +159,27 @@ button, a {
                 mask-image:url("../images/common/icon_setting.svg");
                 background-image:none;
             }
+            &.icon_applylist {
+                margin:0 5px 0 0;
+                @include icon(16px,16px);
+                background-image:url("../images/common/ico_m_list.svg");
+            }
+            &.s_btn_more {
+                background:url("../images/common/arrow.svg") no-repeat center;
+            }
+        }
+        &.s_btn_more {
+            position:relative;
+            padding-right:25px;
+            color:var(--title);
+            line-height:18px;
+            &::after {
+                @include content(16px,16px);
+                position:absolute;
+                transform:rotate(-90deg);
+                display:inline-block;
+                background:url("../images/common/ico_accordion.svg")no-repeat center;
+            }
         }
     }
     &.disabled {

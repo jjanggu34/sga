@@ -231,6 +231,33 @@ button.icon i.icon_setting, a.icon i.icon_setting {
   mask-image: url("../images/common/icon_setting.svg");
   background-image: none;
 }
+button.icon i.icon_applylist, a.icon i.icon_applylist {
+  margin: 0 5px 0 0;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/ico_m_list.svg");
+}
+button.icon i.s_btn_more, a.icon i.s_btn_more {
+  background: url("../images/common/arrow.svg") no-repeat center;
+}
+button.icon.s_btn_more, a.icon.s_btn_more {
+  position: relative;
+  padding-right: 25px;
+  color: var(--title);
+  line-height: 18px;
+}
+button.icon.s_btn_more::after, a.icon.s_btn_more::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  transform: rotate(-90deg);
+  display: inline-block;
+  background: url("../images/common/ico_accordion.svg") no-repeat center;
+}
 button.disabled, a.disabled {
   cursor: auto;
   border: 1px solid var(--btn-disabled);

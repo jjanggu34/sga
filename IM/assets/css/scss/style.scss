@@ -7,6 +7,7 @@
     진행중 : label_ico > icon_pgs
     #확장자 아이콘 : icon_ff.확장자명
     서버 : icon_os
+    info : req_txt(설명문구 inbl, 경고문구 org), dupli_check
 ---------------------------------------------*/
 $btnstls: "trcolor", "fcolor";
 @each $btnstl in $btnstls {
@@ -304,6 +305,52 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     background-color:var(--border-d);
 }
 
+/* info */
+.req_txt {
+    &.org {
+        color:var(--primary);
+        &::before {
+            @include content (16px, 16px);
+            display:inline-block;
+            margin-right:7px;
+            @include mask (var(--content));
+            background-color:var(--primary);
+            -webkit-mask-image:url("../images/common/ico_info.svg");
+            mask-image:url("../images/common/ico_info.svg");
+        }
+    }
+    &.inbl {
+        color:var(--secondary);
+        &::before {
+            content:"\203B";
+            display:inline-block;
+            @include wh (16px, 16px);
+            color:var(--secondary);
+        }
+    }
+}
+
+.dupli_check {
+    i {
+        @include wh (16px, 16px);
+        @include mask (var(--content));
+        -webkit-mask-image:url("../images/common/ico_info.svg");
+        mask-image:url("../images/common/ico_info.svg");
+        background-image:none;
+    }
+    &.redtxt {
+        i {
+            background-color:var(--false);
+        }
+    }
+    &.bluetxt {
+        line-height:unset;
+        i {
+            background-color:var(--blue);
+        }
+    }
+}
+
 /*********************************************************************
 #타이틀
 *********************************************************************/
@@ -343,8 +390,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 *********************************************************************/
 /* . */
 .bul_dot {
-    &> dt,
-    .form_tit label {
+    &> dt {
         position:relative;
         display:inline-block;
         width:$wh100;
@@ -377,8 +423,33 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
 }
+.noline {
+    .form_tit label {
+        position:relative;
+        display:inline-block;
+        width:$wh100;
+        margin-bottom:10px;
+        padding-left:10px;
+        &::before {
+            content:'';
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            left:0;
+            display:inline-block;
+            @include wh (3px, 3px);
+            border-radius:50%;
+            background:var(--text-disabled);
+        }
+    }
+}
 
 /***************** progress *****************/
+.topPrss {
+    &+.form_stl {
+        padding-top:36px;
+    }
+}
 .detail_process {
     background:var(--white);
     border-radius:7px;
@@ -450,7 +521,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 color:var(--primary);
             }
         }
-        &.process_active {
+        &.process_activ {
             color:var(--white);
             background:var(--secondary);
             &::after {
@@ -458,6 +529,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             .s_num {
                 color:var(--text-disabled);
+                background-color:var(--white);
             }
         }
     }
@@ -672,6 +744,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .wf_arrow {
             border-color:var(--text-disabled);
+            svg {
+                right:-6px;
+                transform:rotate(270deg);
+                z-index:3;
+            }
             &.apv_comple {
                 border-color:#22AC3D;
             }
@@ -848,7 +925,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .wf_detail {
                     .wf_state_txt {
                         em {
-                            color:var(--border-d);
+                            color:var(--text-disabled);
                         }
                     }
                 }
@@ -889,34 +966,48 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         }
                     }
                 }
+                .wf_od {
+                    right:3px;
+                    bottom:3px;
+                    padding:7px 8px 6px 6px;
+                    border:1px solid var(--border-d);
+                    border-radius:13px;
+                    background-color:var(--white);
+                }
+            }
+            &.ab_wf_card {
+                top:unset;
+                bottom:4px;
+                right:43px;
+                &::after {
+                    content:none;
+                }
+                &.apv_comple {
+                    background-color:#DCEFE5;
+                }
             }
         }
         .wf_2line {
             .wf_arrow_ud {
-                .wf_arrow_up {
-                    &.apv_comple {
-                        border-color:#22AC3D;
-                    }
-                    &.proceeding {
-                        border-color:#2261AC;
-                    }
-                    &.mandate {
-                        border-color:#6A5ACD;
-                    }
-                    &.reject {
-                        border-color:#FFC107;
-                    }
-                    &.error {
-                        border-color:#FF0A00;
-                    }
-                    &.autopay {
-                        border-color:var(--text-disabled);
-                    }
-                    &.waiting {
-                        border-color:var(--border-d);
+                $arrows: "wf_arrow_up", "wf_arrw_down";
+
+                @each $arrow in $arrows {
+                    .#{$arrow} {
+                        i {
+                            @include wh (9px,8px);
+                            @include mask (var(--content));
+                            -webkit-mask-image:url("../images/common/ico_wf_arrow.svg");
+                            mask-image:url("../images/common/ico_wf_arrow.svg");
+                            background-image:none;
+                            z-index:3;
+                        }
                     }
                 }
-                .wf_arrw_down {
+                .wf_arrow_up {
+                    i {
+                        top:-6px;
+                        transform:rotate(180deg);
+                    }
                     &.apv_comple {
                         border-color:#22AC3D;
                         i {
@@ -925,22 +1016,103 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                     &.proceeding {
                         border-color:#2261AC;
+                        i {
+                            background-color:#2261AC;
+                        }
                     }
                     &.mandate {
                         border-color:#6A5ACD;
+                        i {
+                            background-color:#6A5ACD;
+                        }
                     }
                     &.reject {
                         border-color:#FFC107;
+                        i {
+                            background-color:#FFC107;
+                        }
                     }
                     &.error {
                         border-color:#FF0A00;
+                        i {
+                            background-color:#FF0A00;
+                        }
                     }
                     &.autopay {
                         border-color:var(--text-disabled);
+                        i {
+                            background-color:var(--text-disabled);
+                        }
                     }
                     &.waiting {
                         border-color:var(--border-d);
+                        i {
+                            background-color:var(--border-d);
+                        }
                     }
+                }
+                .wf_arrw_down {
+                    i {
+                        bottom:-6px;
+                    }
+                    &.apv_comple {
+                        border-color:#22AC3D;
+                        i {
+                            background-color:#22AC3D;
+                        }
+                    }
+                    &.proceeding {
+                        border-color:#2261AC;
+                        i {
+                            background-color:#2261AC;
+                        }
+                    }
+                    &.mandate {
+                        border-color:#6A5ACD;
+                        i {
+                            background-color:#6A5ACD;
+                        }
+                    }
+                    &.reject {
+                        border-color:#FFC107;
+                        i {
+                            background-color:#FFC107;
+                        }
+                    }
+                    &.error {
+                        border-color:#FF0A00;
+                        i {
+                            background-color:#FF0A00;
+                        }
+                    }
+                    &.autopay {
+                        border-color:var(--text-disabled);
+                        i {
+                            background-color:var(--text-disabled);
+                        }
+                    }
+                    &.waiting {
+                        border-color:var(--border-d);
+                        i {
+                            background-color:var(--border-d);
+                        }
+                    }
+                }
+            }
+        }
+        &.flow2 {
+            .wf_detail {
+                padding:11px 15px 13px;
+                height:auto;
+            }
+        }
+        .ab_wf_open {
+            .wf_card {
+                &.ab_wf_card {
+                    top:79px;
+                    bottom:unset;
+                    right:unset;
+                    background-color:var(--white);
                 }
             }
         }
@@ -985,11 +1157,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 button, a {
                     line-height:16px;
-                    .icon_applylist {
-                        margin:0 5px 0 0;
-                        @include icon(16px,16px);
-                        background-image:url("../images/common/ico_m_list.svg");
-                    }
                 }
                 a {
                     &.icon {
@@ -1002,6 +1169,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .help_w {
             top:0;
             right:0;
+            .help_btn {
+                border-color:var(--border-d);
+                color:var(--title);
+                background:var(--white);
+            }
         }
         .arrow_apply {
             position:absolute;
@@ -1308,6 +1480,40 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                 }
             }
+        }
+        .form_list {
+            display:flex;
+            align-items:center;
+            width:100%;
+            padding:11px;
+            border-bottom:1px solid var(--border-d);
+            .form_tit {
+                position:unset;
+                padding-top:0;
+                margin:0;
+                &::before {
+                    left:10px;
+                }
+            }
+            .form_txt {
+                width:100%;
+                padding:0;
+                border-bottom:0;
+                .form_contrl {
+                    width:250px;
+                }
+                textarea{
+                    &.form_contrl {
+                        width:$wh100;
+                    }
+                }
+                .radio_stl_lab {
+                    line-height:34px;
+                }
+            }
+        }
+        &+.btn_box {
+            margin-top:20px;
         }
     }
     .tbl_btm {
