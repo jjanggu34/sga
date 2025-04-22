@@ -243,6 +243,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         height:16px;
         background-size:contain;
         margin-bottom:0;
+        margin-right:4px;
         $extensions: "word", "csv", "hwp", "text";
 
         @each $extension in $extensions {
