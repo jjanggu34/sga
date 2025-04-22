@@ -736,6 +736,26 @@
   color: var(--text-disabled);
   background-color: var(--white);
 }
+.detail_process .flx_cell.process_activ:hover {
+  background: var(--secondary);
+}
+.detail_process .flx_cell.warning .s_num {
+  font-size: 0;
+  background-color: transparent;
+}
+.detail_process .flx_cell.warning .s_num::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 40px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/icon_warning.svg");
+}
 
 /***************** 탭 *****************/
 .tab_wrap {

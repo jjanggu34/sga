@@ -531,6 +531,24 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 color:var(--text-disabled);
                 background-color:var(--white);
             }
+            &:hover {
+                background:var(--secondary);
+            }
+        }
+        &.warning {
+            .s_num {
+                font-size:0;
+                background-color:transparent;
+                &::before {
+                    content:"";
+                    position:absolute;
+                    top:4px;
+                    left:40px;
+                    display:inline-block;
+                    @include icon(24px, 24px);
+                    background-image:url("../images/common/icon_warning.svg");
+                }
+            }
         }
     }
 }
