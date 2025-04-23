@@ -8,15 +8,6 @@
   padding: 0 24px 20px;
 }
 
-.dash_table {
-  padding: 10px 0;
-}
-.dash_table .d_list_tt.f_ro {
-  position: absolute;
-  left: 12px;
-  bottom: 10px;
-}
-
 .default_tbl {
   width: 100%;
   border: 0;
@@ -24,12 +15,6 @@
   word-break: break-all;
   cursor: auto;
   box-sizing: content-box;
-}
-.default_tbl .tbl_br {
-  border-right: 1px solid var(--border-d) !important;
-}
-.default_tbl .tbl_fff {
-  border-bottom: 1px solid var(--white) !important;
 }
 .default_tbl .tbl_num_wid {
   width: auto;
@@ -40,13 +25,16 @@
 .default_tbl .more_list {
   padding: 7px 10px;
 }
+.default_tbl thead tr:hover {
+  background: transparent;
+  cursor: auto;
+}
 .default_tbl thead tr th {
-  height: 35px;
+  padding: 10px 0;
   border: 0;
   border-top: 1px solid var(--border-d);
   border-bottom: 1px solid var(--secondary);
-  font-size: var(--font-14);
-  font-weight: var(--font-regular);
+  line-height: 16px;
   color: var(--title);
   background-color: var(--table-th);
 }
@@ -55,12 +43,7 @@
   font-weight: var(--font-regular);
   color: var(--title);
 }
-.default_tbl thead tr:hover {
-  background: transparent;
-  cursor: auto;
-}
 .default_tbl tbody tr th {
-  height: 35px;
   border: 0;
   border-bottom: 1px solid var(--border-d);
   font-size: var(--font-13);
@@ -92,7 +75,7 @@
   color: var(--content);
 }
 .default_tbl tbody tr td {
-  padding: 7px 10px;
+  padding: 4px 10px 5px;
   border: 0;
   border-bottom: 1px solid var(--border-d);
   font-size: var(--font-13);
@@ -132,7 +115,6 @@
   font-weight: var(--font-regular);
 }
 .default_tbl.tblStl2 tbody th.th-bl {
-  font-weight: var(--font-regular);
   background-color: var(--table-th);
 }
 .default_tbl.tblStl2 tbody th .tb_dt_link p {

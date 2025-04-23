@@ -27,11 +27,8 @@
 .btn_box a.big {
   height: 38px;
   padding: 10px 14px;
-  border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
-  color: var(--white);
-  background: var(--primary);
 }
 
 .btn_box button {
@@ -43,11 +40,8 @@
 .btn_box button.big {
   height: 38px;
   padding: 10px 14px;
-  border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
-  color: var(--white);
-  background: var(--primary);
 }
 
 .list_btn button {
@@ -59,17 +53,14 @@
 .list_btn button.big {
   height: 38px;
   padding: 10px 14px;
-  border: 1px solid var(--primary);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
-  color: var(--white);
-  background: var(--primary);
 }
 
 /*---------------------------------------------
 	#기본
 ---------------------------------------------*/
-/* im */
+/* im 기본 */
 .basic {
   border-radius: 6px;
   font-size: var(--font-13);
@@ -81,8 +72,10 @@
   background: #0A153C;
 }
 
+/* big */
 .primary {
   border: 1px solid var(--primary);
+  color: var(--white);
   background: var(--primary);
 }
 .primary:focus-visible {
@@ -100,25 +93,10 @@
   transform: rotate(270deg);
 }
 
+/* 포인트 */
 .point {
   border: 1px solid var(--point);
   background: var(--point);
-}
-
-/*---------------------------------------------
-	#disabled
----------------------------------------------*/
-.disabled {
-  border: 1px solid var(--btn-disabled);
-  color: var(--text-disabled);
-  background: var(--btn-disabled);
-}
-
-.line_disabled {
-  color: var(--text-disabled);
-  background: var(--disabled-line-bg);
-  border: 1px solid var(--btn-disabled);
-  cursor: auto;
 }
 
 /*---------------------------------------------
@@ -141,24 +119,42 @@
 }
 
 /*---------------------------------------------
+	#disabled : 기본
+    #line_disabled : line 버튼만
+---------------------------------------------*/
+.disabled {
+  border: 1px solid var(--btn-disabled);
+  color: var(--text-disabled);
+  background: var(--btn-disabled);
+}
+
+.line_disabled {
+  color: var(--text-disabled);
+  background: var(--disabled-line-bg);
+  border: 1px solid var(--btn-disabled);
+  cursor: auto;
+}
+
+/*---------------------------------------------
 	#button에 icon 있을 경우
     #그 외 버튼
 ---------------------------------------------*/
+.btnstl {
+  border-radius: 6px;
+}
+
 button, a {
   border-radius: 6px;
   color: var(--white);
   font-weight: var(--font-medium);
   /* 테이블 안 토글 버튼 */
 }
-button.icon, a.icon {
-  padding: 6px 14px 6px 7px;
-}
 button.icon i, a.icon i {
   display: inline-block;
-}
-button.icon i.icon_reset, a.icon i.icon_reset {
   width: 16px;
   height: 16px;
+}
+button.icon i.icon_reset, a.icon i.icon_reset {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -175,8 +171,6 @@ button.icon i.icon_reset.init, a.icon i.icon_reset.init {
   transform: scaleX(-1);
 }
 button.icon i.delfile, a.icon i.delfile {
-  width: 16px;
-  height: 16px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -189,8 +183,6 @@ button.icon i.delfile, a.icon i.delfile {
   mask-image: url("../images/common/label/ico_trash.svg");
 }
 button.icon i.checkout, a.icon i.checkout {
-  width: 16px;
-  height: 16px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -203,8 +195,6 @@ button.icon i.checkout, a.icon i.checkout {
   mask-image: url("../images/common/close.svg");
 }
 button.icon i.checkin, a.icon i.checkin {
-  width: 16px;
-  height: 16px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -217,8 +207,6 @@ button.icon i.checkin, a.icon i.checkin {
   mask-image: url("../images/common/ico_check.svg");
 }
 button.icon i.icon_setting, a.icon i.icon_setting {
-  width: 16px;
-  height: 16px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -233,12 +221,7 @@ button.icon i.icon_setting, a.icon i.icon_setting {
 }
 button.icon i.icon_applylist, a.icon i.icon_applylist {
   margin: 0 5px 0 0;
-  width: 16px;
-  height: 16px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: none;
-  background-image: url("../images/common/ico_m_list.svg");
+  background: url("../images/common/ico_m_list.svg") no-repeat center/100%;
 }
 button.icon i.s_btn_more, a.icon i.s_btn_more {
   background: url("../images/common/arrow.svg") no-repeat center;

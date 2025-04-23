@@ -1,14 +1,6 @@
 @use 'variable' as *;
 
 /***************** 공통 *****************/
-/*---------------------------------------------
-    #라벨
-    기본 : icon_list
-    진행중 : label_ico > icon_pgs
-    #확장자 아이콘 : icon_ff.확장자명
-    서버 : icon_os
-    info : req_txt(설명문구 inbl, 경고문구 org), dupli_check
----------------------------------------------*/
 $btnstls: "trcolor", "fcolor";
 @each $btnstl in $btnstls {
     .#{$btnstl}.btnstl {
@@ -60,6 +52,14 @@ $btnstls: "trcolor", "fcolor";
     }
 }
 
+/*---------------------------------------------
+    #라벨 테이블 안에서 사용
+    기본 : icon_list
+    진행중 : label_ico > icon_pgs
+    #확장자 아이콘 : icon_ff.확장자명
+    서버 : icon_os
+    info : req_txt(설명문구 inbl, 경고문구 org), dupli_check
+---------------------------------------------*/
 .icon_os {
     width:auto;
     padding:5px 18px 4px;
@@ -72,14 +72,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 @each $icon in $icons {
     .#{$icon} {
         display:inline-block;
-        @include icon(24px, 24px);
+        @include icon(16px, 16px);
     }
 }
 
 .circleOff { //상태없음
     color:var(--text-disabled) !important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(var(--text-disabled));
         -webkit-mask-image:url("../images/common/label/ico_circleOff.svg");
         mask-image:url("../images/common/label/ico_circleOff.svg");
@@ -88,7 +87,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .plugConnected { //연결됨
     color:var(--blue)!important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(#1863BA);
         -webkit-mask-image:url("../images/common/label/ico_PlugConnected.svg");
         mask-image:url("../images/common/label/ico_PlugConnected.svg");
@@ -97,7 +95,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .plugZapOff { //연결끊김
     color:var(--false) !important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(var(--false));
         -webkit-mask-image:url("../images/common/label/ico_PlugZapOff.svg");
         mask-image:url("../images/common/label/ico_PlugZapOff.svg");
@@ -106,13 +103,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .filePlus { //생성
     color:var(--blue)!important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(var(--blue));
         -webkit-mask-image:url("../images/common/label/ico_FilePlus.svg");
         mask-image:url("../images/common/label/ico_FilePlus.svg");
     }
     .icon_pgs {
-        @include wh(16px,16px);
         @include mask(#1863BA);
         -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
         mask-image:url("../images/common/label/icon_pgs.svg");
@@ -121,7 +116,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .checkCircle { //정상
     color:var(--true) !important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(var(--true));
         -webkit-mask-image:url("../images/common/label/ico_checkCircle.svg");
         mask-image:url("../images/common/label/ico_checkCircle.svg");
@@ -130,7 +124,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .fileEdit { //수정작업중
     color:var(--blue)!important;
     .icon_pgs {
-        @include wh(16px,16px);
         @include mask(#1863BA);
         -webkit-mask-image:url("../images/common/label/ico_FileEdit.svg");
         mask-image:url("../images/common/label/ico_FileEdit.svg");
@@ -138,7 +131,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     &.ing {
         color: var(--primary) !important;
         .icon_pgs {
-            @include wh(16px,16px);
             @include mask(var(--primary));
             -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
             mask-image:url("../images/common/label/icon_pgs.svg");
@@ -148,7 +140,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .fileEditLoader { //수정진행중, 작업보류중
     color:var(--primary) !important;
     .icon_pgs {
-        @include wh(16px,16px);
         @include mask(var(--primary));
         -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
         mask-image:url("../images/common/label/icon_pgs.svg");
@@ -157,7 +148,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .downloadCircle { //수집완료
     color:var(--blue)!important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(var(--blue));
         -webkit-mask-image:url("../images/common/label/ico_downloadCircle.svg");
         mask-image:url("../images/common/label/ico_downloadCircle.svg");
@@ -166,7 +156,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .pauseCircle { //접속오류, 작업중 오류, 수집오류
     color:var(--false) !important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(var(--false) );
         -webkit-mask-image:url("../images/common/label/ico_PauseCircle.svg");
         mask-image:url("../images/common/label/ico_PauseCircle.svg");
@@ -175,13 +164,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .trash { //삭제, 삭제됨
     color:var(--false) !important;
     .icon_list, .icon_pgs {
-        @include wh(16px,16px);
         @include mask(var(--false));
         -webkit-mask-image:url("../images/common/label/ico_trash.svg");
         mask-image:url("../images/common/label/ico_trash.svg");
     }
     .icon_pgs { //삭제진행중
-        @include wh(16px,16px);
         @include mask(var(--false));
         -webkit-mask-image:url("../images/common/label/icon_pgs.svg");
         mask-image:url("../images/common/label/icon_pgs.svg");
@@ -190,8 +177,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .bolt { //활성
     color:var(--true) !important;
     .icon_list {
-        @include wh(16px,16px);
-        @include mask(var(--true) );
+        @include mask(var(--true));
         -webkit-mask-image:url("../images/common/label/ico_bolt.svg");
         mask-image:url("../images/common/label/ico_bolt.svg");
     }
@@ -199,7 +185,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .Nbolt { //비활성
     color:var(--text-disabled) !important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(var(--text-disabled) );
         -webkit-mask-image:url("../images/common/label/ico_bolt.svg");
         mask-image:url("../images/common/label/ico_bolt.svg");
@@ -208,7 +193,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .locked { //잠금
     color:var(--text-disabled) !important;
     .icon_list {
-        @include wh(16px,16px);
         @include mask(var(--text-disabled) );
         -webkit-mask-image:url("../images/common/label/icon_locked.svg");
         mask-image:url("../images/common/label/icon_locked.svg");
@@ -216,6 +200,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .icon_ff {
+    display:inline-block;
+    @include icon (24px,24px);
     background-position:center !important;
     margin:0;
     &.pdf {
@@ -314,8 +300,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include content (16px, 16px);
             display:inline-block;
             margin-right:7px;
-            @include mask (var(--content));
-            background-color:var(--primary);
+            @include mask (var(--primary));
             -webkit-mask-image:url("../images/common/ico_info.svg");
             mask-image:url("../images/common/ico_info.svg");
         }
@@ -356,6 +341,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 #타이틀
 *********************************************************************/
 .content {
+    $tits: "fm", "def";
+    @each $tit in $tits {
+        .#{$tit}_tit {
+            font-size:var(--font-18);
+            color:var(--title);
+        }
+    }
     // form title
     .fm_tit {
         padding:10px 0 10px 6px;
@@ -363,9 +355,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border:0;
         border-radius:0;
         border-bottom:$borderD;
-        font-size:var(--font-18);
         font-weight:var(--font-bold);
-        color:var(--title);
         background:transparent;
         &a {
             .tab_arrow {
@@ -373,11 +363,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
     }
+    a {
+        &.fm_tit {
+            margin-top:28px;
+        }
+    }
     // table title
     .def_tit {
-        font-size:var(--font-18);
         font-weight:var(--font-extrabold);
-        color:var(--title);
         &+.tbl_list {
             .default_tbl {
                 border-top:1px solid var(--title);
@@ -409,7 +402,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background:var(--text-disabled);
         }
     }
-    li {
+    &>li {
         position:relative;
         &::before {
             content:'';
@@ -425,7 +418,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .noline {
-    .form_tit label {
+    .form_tit {
         position:relative;
         display:inline-block;
         width:$wh100;
@@ -466,12 +459,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &:first-child {
             border-radius:7px 0 0 7px;
         }
-        &:last-child {
-            border-radius:0 7px 7px 0;
-            &::after {
-                content:none;
-            }
-        }
         &::after {
             content:"";
             position:absolute;
@@ -483,6 +470,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-image:url("../images/common/triangle.svg");
             z-index:2;
         }
+        &:last-child {
+            border-radius:0 7px 7px 0;
+            &::after {
+                content:none;
+            }
+        }
         .s_num {
             position:unset;
             display:inline-block;
@@ -492,11 +485,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             font-size:var(--font-16);
             line-height:20px;
             color:var(--text-disabled);
-            background:var(--white);
+            background-color:var(--white);
         }
         &.pro_comple {
             color:var(--white);
-            background:#162866;
+            background-color:#162866;
             &::after {
                 background-image:url("../images/common/triangle_comp.svg");
             }
@@ -514,7 +507,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         &.process_current {
             color:var(--white);
-            background:var(--primary);
+            background-color:var(--primary);
             &::after {
                 background-image:url("../images/common/triangle_curr.svg");
             }
@@ -540,15 +533,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .s_num {
                 font-size:0;
                 background-color:transparent;
-                &::before {
-                    content:"";
-                    position:absolute;
-                    top:4px;
-                    left:40px;
-                    display:inline-block;
-                    @include icon(24px, 24px);
-                    background-image:url("../images/common/icon_warning.svg");
-                }
+                @include icon(24px, 24px);
+                background-image:url("../images/common/icon_warning.svg");
+                background-size:80%;
+                background-position:top center;
             }
         }
     }
@@ -567,7 +555,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             a {
                 padding:7px 12px;
-                font-size:var(--font-13);
                 font-weight:var(--font-medium);
                 &.on{
                     border-bottom:0;
@@ -1415,7 +1402,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .align_left {
             padding-bottom:24px;
             &+.form_wrap {
-                padding:14px 0;
+                padding:10px 0 14px;
             }
         }
         .form_wrap {

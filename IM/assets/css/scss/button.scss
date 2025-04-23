@@ -27,11 +27,8 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
         &.big {
             height:38px;
             padding:10px 14px;
-            border:$borderP;
             font-size:var(--font-14);
             font-weight:var(--font-medium);
-            color:var(--white);
-            background:var(--primary);
         }
     }
 }
@@ -39,7 +36,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 /*---------------------------------------------
 	#기본
 ---------------------------------------------*/
-/* im */
+/* im 기본 */
 .basic {
     border-radius:6px;
     font-size:var(--font-13);
@@ -51,8 +48,10 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
     }
 }
 
+/* big */
 .primary {
     border:$borderP;
+    color:var(--white);
     background:var(--primary);
     // focus
     &:focus-visible {
@@ -72,24 +71,10 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
     }
 }
 
+/* 포인트 */
 .point {
     border:1px solid var(--point);
     background:var(--point);
-}
-
-/*---------------------------------------------
-	#disabled
----------------------------------------------*/
-.disabled {
-    border:1px solid var(--btn-disabled);
-    color:var(--text-disabled);
-    background:var(--btn-disabled);
-}
-.line_disabled {
-    color:var(--text-disabled);
-    background:var(--disabled-line-bg);
-    border:1px solid var(--btn-disabled);
-    cursor:auto;
 }
 
 /*---------------------------------------------
@@ -113,19 +98,37 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button";
 }
 
 /*---------------------------------------------
+	#disabled : 기본
+    #line_disabled : line 버튼만
+---------------------------------------------*/
+.disabled {
+    border:1px solid var(--btn-disabled);
+    color:var(--text-disabled);
+    background:var(--btn-disabled);
+}
+.line_disabled {
+    color:var(--text-disabled);
+    background:var(--disabled-line-bg);
+    border:1px solid var(--btn-disabled);
+    cursor:auto;
+}
+
+/*---------------------------------------------
 	#button에 icon 있을 경우
     #그 외 버튼
 ---------------------------------------------*/
+.btnstl {
+    border-radius:6px;
+}
 button, a {
     border-radius:6px;
     color:var(--white);
     font-weight:var(--font-medium);
     &.icon {
-    padding:6px 14px 6px 7px;
         i {
             display:inline-block;
+            @include wh (16px, 16px);
             &.icon_reset {
-                @include wh (16px, 16px);
                 @include mask(var(--white));
                 -webkit-mask-image:url("../images/common/ico_refresh.svg");
                 mask-image:url("../images/common/ico_refresh.svg");
@@ -135,25 +138,21 @@ button, a {
                 }
             }
             &.delfile {
-                @include wh (16px, 16px);
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/label/ico_trash.svg");
                 mask-image:url("../images/common/label/ico_trash.svg");
             }
             &.checkout {
-                @include wh (16px, 16px);
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/close.svg");
                 mask-image:url("../images/common/close.svg");
             }
             &.checkin {
-                @include wh (16px, 16px);
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/ico_check.svg");
                 mask-image:url("../images/common/ico_check.svg");
             }
             &.icon_setting {
-                @include wh (16px, 16px);
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/icon_setting.svg");
                 mask-image:url("../images/common/icon_setting.svg");
@@ -161,8 +160,7 @@ button, a {
             }
             &.icon_applylist {
                 margin:0 5px 0 0;
-                @include icon(16px,16px);
-                background-image:url("../images/common/ico_m_list.svg");
+                background: url("../images/common/ico_m_list.svg")no-repeat center / 100%;
             }
             &.s_btn_more {
                 background:url("../images/common/arrow.svg") no-repeat center;

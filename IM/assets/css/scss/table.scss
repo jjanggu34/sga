@@ -6,29 +6,13 @@
 .tbl_list {
     padding:0 24px 20px;
 }
-
-.dash_table {
-    padding:10px 0;
-    .d_list_tt.f_ro {
-        position:absolute;
-        left:12px;
-        bottom:10px;
-    }
-}
 .default_tbl {
     width:$wh100;
     border:0;
     background:transparent;
     word-break:break-all;
-    // table-layout:fixed;
     cursor:auto;
     box-sizing:content-box;
-    .tbl_br {
-        border-right:$borderD !important;
-    }
-    .tbl_fff {
-        border-bottom:1px solid var(--white) !important;
-    }
     .tbl_num_wid {
         width:auto;
     }
@@ -40,13 +24,16 @@
     }
     thead {
         tr {
+            &:hover {
+                background:transparent;
+                cursor:auto;
+            }
             th {
-                height:35px;
+                padding:10px 0;
                 border:0;
                 border-top:$borderD;
                 border-bottom:1px solid var(--secondary);
-                font-size:var(--font-14);
-                font-weight:var(--font-regular);
+                line-height:16px;
                 color:var(--title);
                 background-color:var(--table-th);
                 &.sort_column {
@@ -57,16 +44,11 @@
                     }
                 }
             }
-            &:hover {
-                background:transparent;
-                cursor:auto;
-            }
         }
     }
     tbody {
         tr {
             th {
-                height:35px;
                 border:0;
                 border-bottom:$borderD;
                 @include title(var(--font-13),var(--font-regular),16px);
@@ -94,7 +76,7 @@
                 }
             }
             td {
-                padding:7px 10px;
+                padding:4px 10px 5px;
                 border:0;
                 border-bottom:$borderD;
                 font-size:var(--font-13);
@@ -134,7 +116,6 @@
                 border-top:0;
                 font-weight:var(--font-regular);
                 &.th-bl {
-                    font-weight:var(--font-regular);
                     background-color:var(--table-th);
                 }
                 .tb_dt_link {
