@@ -167,9 +167,22 @@ button, a {
             }
             &.icon_reset {
                 font-size:0;
-                background:url("../images/common/ico_refresh.svg")no-repeat center/auto var(--title);
+                @include mask(var(--title));
+                -webkit-mask-image:url("../images/common/ico_reset.svg");
+                mask-image:url("../images/common/ico_reset.svg");
+                background-image:none;
                 &::before {
                     content:none;
+                }
+            }
+        }
+        &.primary {
+            i {
+                &.icon_reset {
+                    @include mask(var(--white));
+                    -webkit-mask-image:url("../images/common/ico_reset.svg");
+                    mask-image:url("../images/common/ico_reset.svg");
+                    background-image:none;
                 }
             }
         }

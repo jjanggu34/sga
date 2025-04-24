@@ -276,6 +276,7 @@ body * {
   display: inline-block;
   width: 24px;
   height: 24px;
+  padding: 0;
   margin-top: 0;
   border: 0;
   -webkit-mask-repeat: no-repeat;
@@ -460,6 +461,29 @@ body * {
   font-size: var(--font-13);
   font-weight: var(--font-medium);
   color: var(--title);
+}
+
+.layer_popup .popup_title {
+  padding: 10px 20px 0 20px;
+  border-bottom-color: var(--title);
+  background-color: var(--white);
+}
+.layer_popup .popup_title h3 {
+  padding: 10px 0;
+  font-size: var(--font-18);
+  font-weight: var(--font-bold);
+  color: var(--title);
+}
+.layer_popup .popup_title .btn_close {
+  top: 12px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-color: transparent;
+  background-image: url("../images/common/close.svg");
 }
 
 /*---------------------------------------------

@@ -188,7 +188,8 @@ $labels: "check_stl_lab", "radio_stl_lab";
 ---------------------------------------------*/
 select{
     &.form_contrl {
-        background: url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--white);
+        padding-right:26px;
+        background: url("../images/common/ico_accordion.svg") no-repeat right 1px center var(--white);
     }
 }
 

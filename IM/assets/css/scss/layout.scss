@@ -262,6 +262,7 @@ body {
                     .time_ref {
                         display:inline-block;
                         @include wh(24px, 24px);
+                        padding:0;
                         margin-top:0;
                         border:0;
                         @include mask(var(--primary));
@@ -463,6 +464,27 @@ body {
                     color:var(--title);
                 }
             }
+        }
+    }
+}
+
+.layer_popup {
+    .popup_title {
+        padding:10px 20px 0 20px;
+        border-bottom-color:var(--title);
+        background-color:var(--white);
+        h3 {
+            padding:10px 0;
+            font-size:var(--font-18);
+            font-weight:var(--font-bold);
+            color:var(--title);
+        }
+        .btn_close {
+            top:12px;
+            right:20px;
+            @include icon(30px, 30px);
+            background-color:transparent;
+            background-image:url("../images/common/close.svg");
         }
     }
 }

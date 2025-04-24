@@ -1508,6 +1508,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                     .btn_del {
                                         display:inline-block;
                                         @include icon(24px,24px);
+                                        padding:0;
                                         border:$borderD;
                                         border-radius:6px;
                                         background-image:url("../images/common/close.svg");
@@ -1518,6 +1519,25 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                 }
                             }
                         }
+                    }
+                }
+            }
+            &.bul_dot {
+                li {
+                    display:flex;
+                    align-items:center;
+                    padding:11px 20px;
+                    border-bottom:$borderD;
+                    &::before {
+                        left:10px;
+                    }
+                    .form_tit {
+                        display:inline-block;
+                        padding:0;
+                        border-bottom:0;
+                    }
+                    .form_txt {
+                        @extend .form_tit;
                     }
                 }
             }
@@ -1573,5 +1593,34 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .tbl_list {
         @extend .list_btn;
+    }
+    .pcs_ctg_list {
+        li {
+            a {
+                color:var(--content);
+                &::after {
+                    top:12px;
+                    @include wh (16px,16px);
+                    margin:0;
+                    @include mask(var(--title));
+                    -webkit-mask-image:url("../images/common/menu_arr.svg");
+                    mask-image:url("../images/common/menu_arr.svg");
+                    background-position:unset;
+                    transform:rotate(-90deg);
+                }
+                &:hover {
+                    background-color:#FFFAEF;
+                    &::after {
+                        background-color:var(--primary);
+                    }
+                }
+                &.on {
+                    background-color:#FFFAEF;
+                    &::after {
+                        background-color:var(--primary);
+                    }
+                }
+            }
+        }
     }
 }
