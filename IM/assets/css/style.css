@@ -88,7 +88,7 @@
 ---------------------------------------------*/
 .icon_os {
   width: auto;
-  padding: 5px 18px 4px;
+  padding: 5px 15px 4px;
   border: 1px solid var(--border-d);
   font-size: var(--font-13);
   font-weight: var(--font-regular);
@@ -533,21 +533,40 @@
   font-size: var(--font-18);
   color: var(--title);
 }
-.content .fm_tit {
+.content a.fm_tit {
+  position: relative;
+  margin-top: 28px;
   padding: 10px 0 10px 6px;
-  margin-top: 0;
   border: 0;
   border-radius: 0;
   border-bottom: 1px solid var(--border-d);
   font-weight: var(--font-bold);
   background: transparent;
 }
-.content .fm_tita .tab_arrow {
+.content a.fm_tit:hover {
+  background-color: var(--white);
+}
+.content a.fm_tit .tab_arrow {
+  transform: translateY(-50%);
   width: 24px;
   height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/ico_accordion.svg");
+  background-position: unset;
 }
-.content a.fm_tit {
-  margin-top: 28px;
+.content a.fm_tit .tab_arrow.open {
+  transform: rotate(180deg) translateY(50%);
+}
+.content p.fm_tit {
+  margin-top: 0;
+  padding: 10px 0 10px 6px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-d);
+  font-weight: var(--font-bold);
+  background: transparent;
 }
 .content .def_tit {
   font-weight: var(--font-extrabold);
@@ -633,9 +652,6 @@
   color: var(--text-disabled);
   background: var(--btn-disabled);
   box-shadow: 0 0 0 2px var(--white);
-}
-.detail_process .flx_cell:first-child {
-  border-radius: 7px 0 0 7px;
 }
 .detail_process .flx_cell::after {
   content: "";
@@ -731,6 +747,13 @@
   background-image: url("../images/common/icon_warning.svg");
   background-size: 80%;
   background-position: top center;
+}
+.detail_process .flx_cell.warning .s_num::before {
+  content: none;
+}
+
+.longPrss .detail_process .flx_cell {
+  margin: 3px 0;
 }
 
 /***************** 탭 *****************/
@@ -1001,6 +1024,9 @@
 }
 .workflow_box .workflow_wrap .wf_arrow.autopay {
   border-color: var(--text-disabled);
+}
+.workflow_box .workflow_wrap .wf_arrow.emty {
+  border-color: var(--border-d);
 }
 .workflow_box .workflow_wrap .wf_arrow.waiting {
   border-color: var(--border-d);
@@ -1314,6 +1340,12 @@
 .workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.autopay i {
   background-color: var(--text-disabled);
 }
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.emty {
+  border-color: var(--border-d);
+}
+.workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.emty i {
+  background-color: var(--border-d);
+}
 .workflow_box .workflow_wrap .wf_2line .wf_arrow_ud .wf_arrow_up.waiting {
   border-color: var(--border-d);
 }
@@ -1431,6 +1463,7 @@
   right: 0;
 }
 .apply_card .dash_box .help_w .help_btn {
+  padding: 0;
   border-color: var(--border-d);
   color: var(--title);
   background: var(--white);
@@ -1683,6 +1716,7 @@
   margin-bottom: 0;
 }
 .content .form_stl .form_tbl.noline .form_txt {
+  width: 100%;
   padding: 0 0 10px;
 }
 .content .form_stl .form_tbl.noline .form_txt .file_upload_wrap {

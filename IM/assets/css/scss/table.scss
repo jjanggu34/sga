@@ -124,8 +124,15 @@
                     }
                     .btn_d_arw {
                         @include wh (24px, 24px);
-                        .up {
-                            margin-top:4px;
+                        padding:0;
+                        .btn_dtail_arrow {
+                            @include icon(24px, 24px);
+                            margin-top:0;
+                            background-image:url("../images/common/ico_accordion.svg");
+                            &.up {
+                                transform:rotate(180deg);
+                                background-position:unset;
+                            }
                         }
                     }
                 }
@@ -145,6 +152,21 @@
                             top:-3px;
                             left:-21px;
                             @include wh (22px,22px);
+                            &.aft_add {
+                                &::after {
+                                    background:url("../images/common/ico_add.svg")no-repeat center;
+                                }
+                            }
+                            &.aft_mod {
+                                &::after {
+                                    background:url("../images/common/ico_mod.svg")no-repeat center;
+                                }
+                            }
+                            &.aft_mns {
+                                &::after {
+                                    background:url("../images/common/ico_mns.svg")no-repeat center;
+                                }
+                            }
                         }
                     }
                 }

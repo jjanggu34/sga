@@ -51,6 +51,22 @@
   color: var(--text-disabled);
 }
 
+/* date2 -> calendar */
+.weeksTbl .week_row .diss_week {
+  background-color: var(--btn-disabled);
+}
+.weeksTbl .week_row .diss_week .btn_weekday {
+  border-radius: 0;
+  color: var(--text-disabled);
+}
+.weeksTbl .week_row .btn_weekday {
+  padding: 0;
+  color: var(--title);
+}
+.weeksTbl .week_row .btn_weekday.on {
+  background-color: var(--primary);
+}
+
 /* textarea */
 .form_stl .form_contrl {
   width: 100%;

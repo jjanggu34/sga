@@ -49,6 +49,26 @@
         color:var(--text-disabled);
     }
 }
+/* date2 -> calendar */
+.weeksTbl {
+    .week_row {
+        .diss_week {
+            background-color:var(--btn-disabled);
+            .btn_weekday {
+                border-radius:0;
+                color:var(--text-disabled);
+            }
+        }
+        .btn_weekday {
+            padding:0;
+            color:var(--title);
+            &.on {
+                background-color:var(--primary);
+            }
+        }
+    }
+}
+
 /* textarea */
 .form_stl {
     .form_contrl {

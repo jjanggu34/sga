@@ -123,9 +123,20 @@
 .default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw {
   width: 24px;
   height: 24px;
+  padding: 0;
 }
-.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .up {
-  margin-top: 4px;
+.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow {
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  margin-top: 0;
+  background-image: url("../images/common/ico_accordion.svg");
+}
+.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow.up {
+  transform: rotate(180deg);
+  background-position: unset;
 }
 .default_tbl.tblStl2 tbody td {
   overflow: unset;
@@ -146,6 +157,15 @@
   left: -21px;
   width: 22px;
   height: 22px;
+}
+.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_add::after {
+  background: url("../images/common/ico_add.svg") no-repeat center;
+}
+.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_mod::after {
+  background: url("../images/common/ico_mod.svg") no-repeat center;
+}
+.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_mns::after {
+  background: url("../images/common/ico_mns.svg") no-repeat center;
 }
 
 /* table info */

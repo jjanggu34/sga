@@ -45,6 +45,13 @@ body {
                 }
             }
         }
+        #container {
+            padding-left:0;
+            margin-left:70px;
+            .scrollPrss {
+                padding-left:70px;
+            }
+        }
     }
     .nav {
         box-shadow:none;
@@ -318,6 +325,8 @@ body {
 ---------------------------------------------*/
 #SGIM_wrap {
     #container {
+        padding-left:0;
+        margin-left:240px;
         background:var(--body);
         .dash_wrap {
             min-height:calc(100vh - 100px);
@@ -378,6 +387,14 @@ body {
                 border-radius:20px;
                 .tbl_list {
                     padding:0 0 10px;
+                }
+            }
+            &.ch_password_cont {
+                @extend .only;
+                min-height:auto;
+                &+.content {
+                    margin-top:0;
+                    min-height:auto;
                 }
             }
         }

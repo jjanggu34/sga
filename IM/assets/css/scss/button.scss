@@ -16,7 +16,7 @@
     padding:0 0 10px;
 }
 
-$btns: ".btn_box a", ".btn_box button", ".list_btn button";
+$btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 
 @each $btn in $btns {
     #{$btn} {
@@ -165,6 +165,13 @@ button, a {
             &.s_btn_more {
                 background:url("../images/common/arrow.svg") no-repeat center;
             }
+            &.icon_reset {
+                font-size:0;
+                background:url("../images/common/ico_refresh.svg")no-repeat center/auto var(--title);
+                &::before {
+                    content:none;
+                }
+            }
         }
         &.s_btn_more {
             position:relative;
@@ -238,6 +245,7 @@ button, a {
     &.icon_arrow_open {
         display:inline-block;
         @include wh (16px, 16px);
+        padding:0;
         @include mask(var(--content));
         -webkit-mask-image:url("../images/common/icon_arrow_open.svg");
         mask-image:url("../images/common/icon_arrow_open.svg");
@@ -245,6 +253,11 @@ button, a {
     &.icon_arrow_close {
         @extend .icon_arrow_open;
         transform:rotate(180deg);
+    }
+    &.icon_arrow_none {
+        @extend .icon_arrow_open;
+        -webkit-mask-image:url("../images/common/icon_arrow_none.svg");
+        mask-image:url("../images/common/icon_arrow_none.svg");
     }
 }
 

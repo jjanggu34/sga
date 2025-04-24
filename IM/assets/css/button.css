@@ -57,6 +57,19 @@
   font-weight: var(--font-medium);
 }
 
+button {
+  height: auto;
+  padding: 7px 14px 6px;
+  font-size: var(--font-13);
+  border-radius: 6px;
+}
+button.big {
+  height: 38px;
+  padding: 10px 14px;
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
+}
+
 /*---------------------------------------------
 	#기본
 ---------------------------------------------*/
@@ -226,6 +239,13 @@ button.icon i.icon_applylist, a.icon i.icon_applylist {
 button.icon i.s_btn_more, a.icon i.s_btn_more {
   background: url("../images/common/arrow.svg") no-repeat center;
 }
+button.icon i.icon_reset, a.icon i.icon_reset {
+  font-size: 0;
+  background: url("../images/common/ico_refresh.svg") no-repeat center/auto var(--title);
+}
+button.icon i.icon_reset::before, a.icon i.icon_reset::before {
+  content: none;
+}
 button.icon.s_btn_more, a.icon.s_btn_more {
   position: relative;
   padding-right: 25px;
@@ -306,10 +326,11 @@ button.normal.bottom, a.normal.bottom {
   font-size: 0;
   background: url("../images/common/ico_accordion.svg") no-repeat center/auto;
 }
-button.icon_arrow_open, button.icon_arrow_close, a.icon_arrow_open, a.icon_arrow_close {
+button.icon_arrow_open, button.icon_arrow_none, button.icon_arrow_close, a.icon_arrow_open, a.icon_arrow_none, a.icon_arrow_close {
   display: inline-block;
   width: 16px;
   height: 16px;
+  padding: 0;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -323,6 +344,10 @@ button.icon_arrow_open, button.icon_arrow_close, a.icon_arrow_open, a.icon_arrow
 }
 button.icon_arrow_close, a.icon_arrow_close {
   transform: rotate(180deg);
+}
+button.icon_arrow_none, a.icon_arrow_none {
+  -webkit-mask-image: url("../images/common/icon_arrow_none.svg");
+  mask-image: url("../images/common/icon_arrow_none.svg");
 }
 
 /* close */
