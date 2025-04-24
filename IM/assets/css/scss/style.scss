@@ -584,13 +584,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     border-bottom:0;
                     border-radius:15px;
                     color:var(--white);
-                    background:#EA9B01;
+                    background:var(--primary);
                     .new_org {
                         background-color:var(--info);
                     }
                     &:hover {
                         color:var(--white);
-                        background-color:#EA9B01;
+                        background-color:var(--primary);
                         .new_org {
                             background-color:var(--info);
                         }

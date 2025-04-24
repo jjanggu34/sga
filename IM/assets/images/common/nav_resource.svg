@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_15529" data-name="사각형 15529" width="24" height="24" transform="translate(-0.255 -0.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="nav_resource" transform="translate(0.255 0.5)" clip-path="url(#clip-path)">
+    <g id="그룹_797" data-name="그룹 797" transform="translate(2.667 2.27)">
+      <path id="패스_506" data-name="패스 506" d="M16.877,41.9v-.739H3v5.782h7.056" transform="translate(-2.422 -33.226)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_507" data-name="패스 507" d="M14.917,53.2a.771.771,0,1,0-.771.771.771.771,0,0,0,.771-.771" transform="translate(-10.797 -42.327)" fill="#283c82" stroke="#707070" stroke-width="1"/>
+      <circle id="타원_81" data-name="타원 81" cx="0.771" cy="0.771" r="0.771" transform="translate(2.578 10.106)" fill="none" stroke="#454545" stroke-miterlimit="10" stroke-width="1"/>
+      <rect id="사각형_15528" data-name="사각형 15528" width="13.877" height="5.843" transform="translate(0.73 0.73)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_508" data-name="패스 508" d="M14.917,15.046a.771.771,0,1,0-.771.771.771.771,0,0,0,.771-.771" transform="translate(-10.797 -11.524)" fill="#283c82" stroke="#707070" stroke-width="1"/>
+      <circle id="타원_82" data-name="타원 82" cx="0.771" cy="0.771" r="0.771" transform="translate(2.578 2.751)" fill="none" stroke="#454545" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="패스_509" data-name="패스 509" d="M52.565,48.666a3.394,3.394,0,0,0-.1-.813L53.5,47.1l-.812-1.406-1.169.519a3.4,3.4,0,0,0-1.409-.814l-.135-1.271H48.349L48.214,45.4a3.4,3.4,0,0,0-1.409.814l-1.169-.519L44.824,47.1l1.034.753a3.3,3.3,0,0,0,0,1.626l-1.034.753.812,1.407,1.169-.519a3.4,3.4,0,0,0,1.409.814l.135,1.271h1.624l.135-1.271a3.4,3.4,0,0,0,1.409-.814l1.169.519.812-1.407-1.034-.753A3.394,3.394,0,0,0,52.565,48.666Zm-3.4,1.446a1.446,1.446,0,1,1,1.446-1.446A1.446,1.446,0,0,1,49.161,50.111Z" transform="translate(-36.185 -35.622)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

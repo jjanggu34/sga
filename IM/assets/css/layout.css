@@ -70,13 +70,16 @@ body * {
   color: var(--primary);
 }
 #SGIM_wrap .nav_list > li > a {
-  padding-left: 38px;
+  padding-left: 43px;
 }
 #SGIM_wrap .nav_list > li > a.on {
   border-top: 0;
   border-left-color: transparent;
   color: var(--primary);
   background-color: var(--white);
+}
+#SGIM_wrap .nav_list > li > a.on i {
+  background-color: var(--primary);
 }
 #SGIM_wrap .nav_list > li > a.on span {
   color: var(--primary);
@@ -86,7 +89,55 @@ body * {
   background-color: var(--primary);
 }
 #SGIM_wrap .nav_list > li > a i {
+  top: 13px;
   left: 14px;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--content);
+  vertical-align: text-bottom;
+  background-image: none;
+}
+#SGIM_wrap .nav_list > li > a i.UserMangement {
+  -webkit-mask-image: url("../images/common/nav_user.svg");
+  mask-image: url("../images/common/nav_user.svg");
+}
+#SGIM_wrap .nav_list > li > a i.ResourceMangement {
+  -webkit-mask-image: url("../images/common/nav_resource.svg");
+  mask-image: url("../images/common/nav_resource.svg");
+}
+#SGIM_wrap .nav_list > li > a i.ServerZoneMangement {
+  -webkit-mask-image: url("../images/common/nav_server.svg");
+  mask-image: url("../images/common/nav_server.svg");
+}
+#SGIM_wrap .nav_list > li > a i.RoleManagement {
+  -webkit-mask-image: url("../images/common/nav_role.svg");
+  mask-image: url("../images/common/nav_role.svg");
+}
+#SGIM_wrap .nav_list > li > a i.AccessPolicyManagement {
+  -webkit-mask-image: url("../images/common/nav_access.svg");
+  mask-image: url("../images/common/nav_access.svg");
+}
+#SGIM_wrap .nav_list > li > a i.SynchronizeManagment {
+  -webkit-mask-image: url("../images/common/nav_synchronize.svg");
+  mask-image: url("../images/common/nav_synchronize.svg");
+}
+#SGIM_wrap .nav_list > li > a i.RequestApproveManagement {
+  -webkit-mask-image: url("../images/common/nav_request.svg");
+  mask-image: url("../images/common/nav_request.svg");
+}
+#SGIM_wrap .nav_list > li > a i.AuditingReport {
+  -webkit-mask-image: url("../images/common/nav_auditing.svg");
+  mask-image: url("../images/common/nav_auditing.svg");
+}
+#SGIM_wrap .nav_list > li > a i.SGIMManagement {
+  -webkit-mask-image: url("../images/common/nav_management.svg");
+  mask-image: url("../images/common/nav_management.svg");
 }
 #SGIM_wrap .nav_list > li > a:hover {
   box-shadow: none;
@@ -109,6 +160,10 @@ body * {
   -webkit-mask-image: url("../images/common/menu_arr.svg");
   mask-image: url("../images/common/menu_arr.svg");
 }
+#SGIM_wrap .nav_list > li > a span {
+  font-size: var(--font-13);
+  font-weight: var(--font-medium);
+}
 #SGIM_wrap .nav_list > li ul {
   margin: 0 9px 0 13px;
   padding: 28px 10px 22px 19px;
@@ -120,12 +175,12 @@ body * {
   position: relative;
   padding: 9px 0;
   font-weight: var(--font-medium);
-  color: var(--title);
+  color: var(--white);
   line-height: 17px;
   opacity: 0.7;
 }
 #SGIM_wrap .nav_list > li ul li a:hover {
-  color: var(--title);
+  color: var(--white);
   background-color: transparent;
   opacity: 1;
 }
@@ -271,6 +326,9 @@ body * {
 #SGIM_wrap .header .gl_nav li.timer span {
   padding-left: 0;
   color: var(--title);
+}
+#SGIM_wrap .header .gl_nav li.timer span em {
+  color: var(--primary);
 }
 #SGIM_wrap .header .gl_nav li.timer .time_ref, #SGIM_wrap .header .gl_nav li.timer i {
   display: inline-block;

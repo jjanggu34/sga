@@ -177,7 +177,7 @@
 }
 .tbl_list .req_txt em {
   font-weight: var(--font-medium);
-  color: var(--info);
+  color: var(--primary);
   vertical-align: unset;
 }
 

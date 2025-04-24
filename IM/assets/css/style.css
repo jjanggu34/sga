@@ -773,14 +773,14 @@
   border-bottom: 0;
   border-radius: 15px;
   color: var(--white);
-  background: #EA9B01;
+  background: var(--primary);
 }
 .tab_wrap .tab_list li a.on .new_org {
   background-color: var(--info);
 }
 .tab_wrap .tab_list li a.on:hover {
   color: var(--white);
-  background-color: #EA9B01;
+  background-color: var(--primary);
 }
 .tab_wrap .tab_list li a.on:hover .new_org {
   background-color: var(--info);

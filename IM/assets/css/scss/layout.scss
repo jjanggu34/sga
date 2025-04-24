@@ -85,12 +85,15 @@ body {
     .nav_list {
         > li {
             > a{
-                padding-left:38px;
+                padding-left:43px;
                 &.on {
                     border-top:0;
                     border-left-color: transparent;
                     color:var(--primary);
                     background-color:var(--white);
+                    i {
+                        background-color:var(--primary);
+                    }
                     span {
                         color:var(--primary);
                     }
@@ -100,7 +103,47 @@ body {
                     }
                 }
                 i {
+                    top:13px;
                     left:14px;
+                    @include wh (24px,24px);
+                    @include mask (var(--content));
+                    background-image:none;
+                    &.UserMangement {
+                        -webkit-mask-image:url("../images/common/nav_user.svg");
+                        mask-image:url("../images/common/nav_user.svg");
+                    }
+                    &.ResourceMangement {
+                        -webkit-mask-image:url("../images/common/nav_resource.svg");
+                        mask-image:url("../images/common/nav_resource.svg");
+                    }
+                    &.ServerZoneMangement {
+                        -webkit-mask-image:url("../images/common/nav_server.svg");
+                        mask-image:url("../images/common/nav_server.svg");
+                    }
+                    &.RoleManagement {
+                        -webkit-mask-image:url("../images/common/nav_role.svg");
+                        mask-image:url("../images/common/nav_role.svg");
+                    }
+                    &.AccessPolicyManagement {
+                        -webkit-mask-image:url("../images/common/nav_access.svg");
+                        mask-image:url("../images/common/nav_access.svg");
+                    }
+                    &.SynchronizeManagment {
+                        -webkit-mask-image:url("../images/common/nav_synchronize.svg");
+                        mask-image:url("../images/common/nav_synchronize.svg");
+                    }
+                    &.RequestApproveManagement {
+                        -webkit-mask-image:url("../images/common/nav_request.svg");
+                        mask-image:url("../images/common/nav_request.svg");
+                    }
+                    &.AuditingReport {
+                        -webkit-mask-image:url("../images/common/nav_auditing.svg");
+                        mask-image:url("../images/common/nav_auditing.svg");
+                    }
+                    &.SGIMManagement {
+                        -webkit-mask-image:url("../images/common/nav_management.svg");
+                        mask-image:url("../images/common/nav_management.svg");
+                    }
                 }
                 &:hover {
                     box-shadow:none;
@@ -115,6 +158,10 @@ body {
                     -webkit-mask-image:url("../images/common/menu_arr.svg");
                     mask-image:url("../images/common/menu_arr.svg");
                 }
+                span {
+                    font-size:var(--font-13);
+                    font-weight:var(--font-medium);
+                }
             }
             ul {
                 margin:0 9px 0 13px;
@@ -127,11 +174,11 @@ body {
                         position:relative;
                         padding:9px 0;
                         font-weight:var(--font-medium);
-                        color:var(--title);
+                        color:var(--white);
                         line-height:17px;
                         opacity:.7;
                         &:hover {
-                            color:var(--title);
+                            color:var(--white);
                             background-color:transparent;
                             opacity:1;
                         }
@@ -258,6 +305,9 @@ body {
                     span {
                         padding-left:0;
                         color:var(--title);
+                        em {
+                            color:var(--primary);
+                        }
                     }
                     .time_ref {
                         display:inline-block;
