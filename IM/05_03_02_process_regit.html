@@ -30,7 +30,7 @@
 				<div class="nav_header">
 					<!--s: 이미지 경로 변경-->
 					<a href="" class="logo">
-						<img src="assets/images/common/logo_186x30.png">
+						<img src="assets/images/common/logo.png">
 						<span>Admin</span>
 					</a>
 					<!--e: 이미지 경로 변경-->
@@ -126,43 +126,45 @@
 					</div>
 				</div>
 				<div class="tbl_list">
-					<table class="default_tbl">
+					<table class="default_tbl tblStl3">
 						<tbody>
 							<tr>
 								<td class="align_center"></td>
 								<td>
+									<!-- s: wid50 삭제 -->
 									<ul class="form_tbl flx_frm_tbl">
-										<li>
-											<div class="wid50 flx">
+										<!-- s: bul_dot 추가 -->
+										<li class="bul_dot">
+											<div class="flx">
 												<div class="form_tit"><label for="loginID01">Login ID (for connect)<i class="i_req"></i></label></div>
 												<div class="form_txt">
 													<input type="text" name="" class="form_contrl" id="loginID01"><!--<span class="dup li_check redtxt"><i></i>이름 중복 입니다.</span>-->
 													<span class="dupli_check bluetxt"><i></i>사용가능합니다.</span>
 												</div>
 											</div>
-											<div class="wid50 flx">
+											<div class="flx">
 												<div class="form_tit"><label for="passowrd01">Password (for connect)<i class="i_req"></i></label></div>
 												<div class="form_txt">
 													<input type="text" name="" class="form_contrl" id="passowrd01">
 												</div>
 											</div>
 										</li>
-										<li>
-											<div class="wid50 flx">
+										<li class="bul_dot">
+											<div class="flx">
 												<div class="form_tit"><label for="IPAddress01">IPAddress (or Hostname)<i class="i_req"></i></label></div>
 												<div class="form_txt">
 													<input type="text" name="" class="form_contrl" id="IPAddress01">
 												</div>
 											</div>
-											<div class="wid50 flx">
+											<div class="flx">
 												<div class="form_tit"><label for="Port01">Port<i class="i_req"></i></label></div>
 												<div class="form_txt">
 													<input type="text" name="" class="form_contrl" id="Port01">
 												</div>
 											</div>
 										</li>
-										<li>
-											<div class="wid50 flx">
+										<li class="bul_dot">
+											<div class="flx">
 												<div class="form_tit">Use SSL</div>
 												<div class="form_txt">
 													<div class="cl_both check2">
@@ -172,7 +174,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="wid50 flx">
+											<div class="flx">
 												<div class="form_tit">KeyStore</div>
 												<div class="form_txt">
 													<div class="filebox">
@@ -188,7 +190,9 @@
 												</div>
 											</div>
 										</li>
+										<!-- e: bul_dot 추가 -->
 									</ul>
+									<!-- e: wid50 삭제 -->
 								</td>
 								<td class="default_addel_btn">
 									<a title="추가" class="btn_option"></a>

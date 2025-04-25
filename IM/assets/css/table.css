@@ -167,6 +167,53 @@
 .default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_mns::after {
   background: url("../images/common/ico_mns.svg") no-repeat center;
 }
+.default_tbl.tblStl3 tbody td {
+  border: 1px solid var(--border-d);
+}
+.default_tbl.tblStl3 tbody td:nth-child(2) {
+  padding: 0;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li:first-child .flx {
+  padding: 25px 20px 10px;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li:last-child .flx {
+  padding: 0 20px 25px;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li.bul_dot .flx .form_tit {
+  position: relative;
+  padding-left: 8px;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li.bul_dot .flx .form_tit::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-disabled);
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx {
+  width: 50%;
+  padding: 0 20px 10px;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx:first-child {
+  border-right: 1px solid var(--border-d);
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_tit {
+  min-width: 185px;
+  width: auto;
+  padding: 0;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_txt {
+  width: 100%;
+  padding: 0;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_txt .form_contrl {
+  display: block;
+  width: 100%;
+}
 
 /* table info */
 .tbl_list .req_txt {

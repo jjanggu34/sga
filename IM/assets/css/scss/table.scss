@@ -173,6 +173,68 @@
             }
         }
     }
+    &.tblStl3 {
+        tbody {
+            td {
+                border:$borderD;
+                &:nth-child(2) {
+                    padding:0;
+                }
+                .flx_frm_tbl {
+                    li {
+                        &:first-child {
+                            .flx {
+                                padding:25px 20px 10px;
+                            }
+                        }
+                        &:last-child {
+                            .flx {
+                                padding:0 20px 25px;
+                            }
+                        }
+                        &.bul_dot {
+                            .flx {
+                                .form_tit {
+                                    position:relative;
+                                    padding-left:8px;
+                                    &::before {
+                                        content:'';
+                                        position:absolute;
+                                        top:5px;
+                                        left:0;
+                                        display:inline-block;
+                                        @include wh (3px, 3px);
+                                        border-radius:50%;
+                                        background:var(--text-disabled);
+                                    }
+                                }
+                            }
+                        }
+                        .flx {
+                            width:calc($wh100/2);
+                            padding:0 20px 10px;
+                            &:first-child {
+                                border-right:$borderD;
+                            }
+                            .form_tit {
+                                min-width:185px;
+                                width:auto;
+                                padding:0;
+                            }
+                            .form_txt {
+                                width:$wh100;
+                                padding:0;
+                                .form_contrl {
+                                    display:block;
+                                    width:$wh100;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* table info */

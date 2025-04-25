@@ -437,7 +437,7 @@
 }
 .apply_tit.ppbox span {
   background: #FFFAEF;
-  color: var(--primary);
+  color: #F9AF1C;
 }
 .apply_tit.blbox span {
   background: #EFFCF3;
@@ -500,26 +500,44 @@
 .dupli_check i {
   width: 16px;
   height: 16px;
+  background-image: none;
+}
+.dupli_check.redtxt i {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: var(--content);
+  background-color: var(--false);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_info.svg");
   mask-image: url("../images/common/ico_info.svg");
-  background-image: none;
-}
-.dupli_check.redtxt i {
-  background-color: var(--false);
 }
 .dupli_check.bluetxt {
   line-height: unset;
+  color: var(--true);
 }
 .dupli_check.bluetxt i {
-  background-color: var(--blue);
+  border-radius: 50%;
+  background-color: var(--true);
+}
+.dupli_check.bluetxt i::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--white);
+  vertical-align: text-bottom;
+  vertical-align: inherit;
+  -webkit-mask-image: url("../images/common/ico_check_s.svg");
+  mask-image: url("../images/common/ico_check_s.svg");
 }
 
 /*********************************************************************
@@ -688,7 +706,7 @@
 }
 .detail_process .flx_cell.pro_comple {
   color: var(--white);
-  background-color: #162866;
+  background-color: var(--btn-default);
 }
 .detail_process .flx_cell.pro_comple::after {
   background-image: url("../images/common/triangle_comp.svg");
@@ -707,7 +725,7 @@
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: #162866;
+  background-color: var(--btn-default);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_step.svg");
   mask-image: url("../images/common/ico_step.svg");
@@ -1512,7 +1530,7 @@
   line-height: 22px;
   text-align: center;
   color: var(--white);
-  background: #F70000;
+  background: var(--btn-default);
 }
 .cont_wrap .content .worker_ch_area .worker_ch_box button {
   position: unset;
@@ -1607,7 +1625,7 @@
 }
 .cont_wrap .content .tree_menu_wrap .tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a.on {
   border-radius: 6px;
-  background: #FFFAEF;
+  background: #DAFAF5;
 }
 .cont_wrap .content .tree_menu_wrap .tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a.on span {
   color: var(--primary);

@@ -261,7 +261,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     &.ppbox { //시스템 계정
         span {
             background:#FFFAEF;
-            color:var(--primary);
+            color:#F9AF1C;
         }
     }
     &.blbox { //시스템
@@ -319,20 +319,30 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .dupli_check {
     i {
         @include wh (16px, 16px);
-        @include mask (var(--content));
-        -webkit-mask-image:url("../images/common/ico_info.svg");
-        mask-image:url("../images/common/ico_info.svg");
         background-image:none;
     }
     &.redtxt {
         i {
-            background-color:var(--false);
+            @include mask (var(--false));
+            -webkit-mask-image:url("../images/common/ico_info.svg");
+            mask-image:url("../images/common/ico_info.svg");
         }
     }
     &.bluetxt {
         line-height:unset;
+        color:var(--true);
         i {
-            background-color:var(--blue);
+            border-radius:50%;
+            background-color:var(--true);
+            &::before {
+                content:"";
+                display:inline-block;
+                @include wh (16px, 16px);
+                @include mask (var(--white));
+                vertical-align:inherit;
+                -webkit-mask-image:url("../images/common/ico_check_s.svg");
+                mask-image:url("../images/common/ico_check_s.svg");
+            }
         }
     }
 }
@@ -503,7 +513,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         &.pro_comple {
             color:var(--white);
-            background-color:#162866;
+            background-color:var(--btn-default);
             &::after {
                 background-image:url("../images/common/triangle_comp.svg");
             }
@@ -513,7 +523,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     content:"";
                     display:inline-block;
                     @include wh (17px,17px);
-                    @include mask(#162866);
+                    @include mask(var(--btn-default));
                     -webkit-mask-image:url("../images/common/ico_step.svg");
                     mask-image:url("../images/common/ico_step.svg");
                 }
@@ -1257,7 +1267,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     @include title(var(--font-18), var(--font-medium), 22px);
                     text-align:center;
                     color:var(--white);
-                    background:#F70000;
+                    background:var(--btn-default);
                 }
                 button {
                     position:unset;
@@ -1348,7 +1358,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                 }
                                 &.on {
                                     border-radius:6px;
-                                    background:#FFFAEF;
+                                    background:#DAFAF5;
                                     span {
                                         color:var(--primary);
                                     }

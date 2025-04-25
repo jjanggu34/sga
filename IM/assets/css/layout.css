@@ -23,7 +23,7 @@ body * {
   padding-bottom: 20px;
 }
 #SGIM_wrap.mini_nav .nav_list li a i {
-  left: 24px;
+  left: 21px;
 }
 #SGIM_wrap.mini_nav .nav_list li a.depth_menu::after {
   display: none;
