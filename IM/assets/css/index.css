@@ -50,13 +50,14 @@
 :root {
     /* primary color */
     --primary: #27AD98;
+    --basic:#162866;
+    --basic2:#495991;
 
     /* ui color */
     --true:#23AC3D;
     --false:#FF0000;
     --info: #F76900;
     --blue: #1863BA;
-    --point: #FF6523;
 
     /* background color */
     --body: #F3F5F7;
@@ -74,8 +75,7 @@
     --border-disabled: #AAB0B8;
 
     /* button color */
-    --btn-hover: #EFA20B;
-    --btn-default:#162866;
+    --btn-hover: #138170;
     --line-hover: #797979;
     --btn-disabled: #EEEEEE;
     --disabled-line-bg: #FCFCFC;

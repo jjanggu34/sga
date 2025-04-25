@@ -6,11 +6,16 @@
 ---------------------------------------------*/
 /* disabled */
 .form_contrl {
+  height: 30px;
   border: 1px solid var(--default);
   border-radius: 6px;
+  color: var(--title);
 }
 .form_contrl:disabled {
   background: var(--btn-disabled);
+}
+.form_contrl::placeholder {
+  color: var(--text-disabled);
 }
 
 /* search */

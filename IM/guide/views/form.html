@@ -108,7 +108,7 @@
               <!-- form 태그에 넣어도 됨 -->
               <dl class="form_list">
                 <dt class="form_tit">
-                  <label for="onsdName">이름</label>
+                  <label for="onsdName">기본</label>
                 </dt>
                 <dd class="form_txt">
                   <input
@@ -125,17 +125,17 @@
               </dl>
               <dl class="form_list">
                 <dt class="form_tit">
-                  <label for="onsdName">이름</label>
+                  <label for="onsdName">Date</label>
                 </dt>
                 <dd class="form_txt">
-                  <input
-                    type="text"
-                    name=""
-                    class="form_contrl"
-                    id="onsdName"
-                    placeholder="이름"
-                    value="sga"
-                  />
+                  <div class="form_date">
+                    <input
+                      type="text"
+                      class="form_contrl date_ctl"
+                      value="2025-04-02"
+                      readonly="readonly"
+                    />
+                  </div>
                   <span class="dupli_check bluetxt">
                     <i></i>사용가능합니다.
                   </span>
@@ -143,7 +143,7 @@
               </dl>
               <dl class="form_list">
                 <dt class="form_tit">
-                  <label for="onsdName">이름</label>
+                  <label for="onsdName">file</label>
                 </dt>
                 <dd class="form_txt">
                   <input
@@ -229,7 +229,7 @@
                   <div class="file_upload_wrap">
                     <div class="file_upload_btns">
                       <button class="btnstl line">파일선택</button>
-                      <button class="btnstl primary list_upload">
+                      <button class="btnstl line list_upload">
                         <i></i>목록 업로드
                       </button>
                     </div>

@@ -19,53 +19,49 @@
 }
 
 .btn_box a {
-  height: auto;
-  padding: 7px 14px 6px;
-  font-size: var(--font-13);
+  padding: 0 14px;
   border-radius: 6px;
+  font-size: var(--font-13);
+  line-height: 30px;
 }
 .btn_box a.big {
   height: 38px;
-  padding: 10px 14px;
   font-size: var(--font-14);
   font-weight: var(--font-medium);
 }
 
 .btn_box button {
-  height: auto;
-  padding: 7px 14px 6px;
-  font-size: var(--font-13);
+  padding: 0 14px;
   border-radius: 6px;
+  font-size: var(--font-13);
+  line-height: 30px;
 }
 .btn_box button.big {
   height: 38px;
-  padding: 10px 14px;
   font-size: var(--font-14);
   font-weight: var(--font-medium);
 }
 
 .list_btn button {
-  height: auto;
-  padding: 7px 14px 6px;
-  font-size: var(--font-13);
+  padding: 0 14px;
   border-radius: 6px;
+  font-size: var(--font-13);
+  line-height: 30px;
 }
 .list_btn button.big {
   height: 38px;
-  padding: 10px 14px;
   font-size: var(--font-14);
   font-weight: var(--font-medium);
 }
 
 button {
-  height: auto;
-  padding: 7px 14px 6px;
-  font-size: var(--font-13);
+  padding: 0 14px;
   border-radius: 6px;
+  font-size: var(--font-13);
+  line-height: 30px;
 }
 button.big {
   height: 38px;
-  padding: 10px 14px;
   font-size: var(--font-14);
   font-weight: var(--font-medium);
 }
@@ -75,12 +71,25 @@ button.big {
 ---------------------------------------------*/
 /* im 기본 */
 .basic {
+  border: 1px solid var(--basic);
   border-radius: 6px;
   font-size: var(--font-13);
-  line-height: 16px;
-  background: var(--btn-default);
+  line-height: 30px;
+  background: var(--basic);
 }
 .basic:focus-visible {
+  border: 1px solid #0A153C;
+  background: #0A153C;
+}
+
+.basic2 {
+  border: 1px solid var(--basic2);
+  border-radius: 6px;
+  font-size: var(--font-13);
+  line-height: 30px;
+  background: var(--basic2);
+}
+.basic2:focus-visible {
   border: 1px solid #0A153C;
   background: #0A153C;
 }
@@ -104,12 +113,6 @@ button.big {
   height: 16px;
   background: url("../images/common/ico_accordion.svg") no-repeat right center var(--primary);
   transform: rotate(270deg);
-}
-
-/* 포인트 */
-.point {
-  border: 1px solid var(--point);
-  background: var(--point);
 }
 
 /*---------------------------------------------
@@ -153,7 +156,21 @@ button.big {
     #그 외 버튼
 ---------------------------------------------*/
 .btnstl {
+  padding: 0 14px;
+  line-height: 30px;
   border-radius: 6px;
+}
+.btnstl.list_upload i {
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/ico_uploaad.svg");
+  background-position: unset;
+}
+.btnstl.basic, .btnstl .basic2, .btnstl .line, .btnstl .primary, .btnstl .disabled, .btnstl .line_disabled {
+  border: 0;
 }
 
 button, a {
@@ -162,26 +179,15 @@ button, a {
   font-weight: var(--font-medium);
   /* 테이블 안 토글 버튼 */
 }
+button.icon, a.icon {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 5px;
+}
 button.icon i, a.icon i {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-}
-button.icon i.icon_reset, a.icon i.icon_reset {
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--white);
-  vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_refresh.svg");
-  mask-image: url("../images/common/ico_refresh.svg");
-}
-button.icon i.icon_reset.init, a.icon i.icon_reset.init {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+  width: 24px;
+  height: 24px;
 }
 button.icon i.delfile, a.icon i.delfile {
   -webkit-mask-repeat: no-repeat;
@@ -233,11 +239,8 @@ button.icon i.icon_setting, a.icon i.icon_setting {
   background-image: none;
 }
 button.icon i.icon_applylist, a.icon i.icon_applylist {
-  margin: 0 5px 0 0;
+  margin: 0;
   background: url("../images/common/ico_m_list.svg") no-repeat center/100%;
-}
-button.icon i.s_btn_more, a.icon i.s_btn_more {
-  background: url("../images/common/arrow.svg") no-repeat center;
 }
 button.icon i.icon_reset, a.icon i.icon_reset {
   font-size: 0;
@@ -280,6 +283,8 @@ button.icon.s_btn_more::after, a.icon.s_btn_more::after {
   width: 16px;
   height: 16px;
   position: absolute;
+  right: 0;
+  top: 6px;
   transform: rotate(-90deg);
   display: inline-block;
   background: url("../images/common/ico_accordion.svg") no-repeat center;
@@ -314,9 +319,8 @@ button.normal.icon_reset::before, a.normal.icon_reset::before {
   content: none;
 }
 button.normal.on, a.normal.on {
-  padding: 6px 12px 6px 6px;
   border: 1px solid var(--primary);
-  background: #FFFAEF;
+  background: #EDFFFC;
   color: var(--primary);
 }
 button.normal.on::before, a.normal.on::before {

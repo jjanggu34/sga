@@ -20,13 +20,12 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 
 @each $btn in $btns {
     #{$btn} {
-        height:auto;
-        padding:7px 14px 6px;
-        font-size:var(--font-13);
+        padding:0 14px;
         border-radius:6px;
+        font-size:var(--font-13);
+        line-height:30px;
         &.big {
             height:38px;
-            padding:10px 14px;
             font-size:var(--font-14);
             font-weight:var(--font-medium);
         }
@@ -38,10 +37,23 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 ---------------------------------------------*/
 /* im 기본 */
 .basic {
+    border:1px solid var(--basic);
     border-radius:6px;
     font-size:var(--font-13);
-    line-height:16px;
-    background:var(--btn-default);
+    line-height:30px;
+    background:var(--basic);
+    &:focus-visible {
+        border:1px solid #0A153C;
+        background:#0A153C;
+    }
+}
+
+.basic2 {
+    border:1px solid var(--basic2);
+    border-radius:6px;
+    font-size:var(--font-13);
+    line-height:30px;
+    background:var(--basic2);
     &:focus-visible {
         border:1px solid #0A153C;
         background:#0A153C;
@@ -69,12 +81,6 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
             transform:rotate(270deg);
         }
     }
-}
-
-/* 포인트 */
-.point {
-    border:1px solid var(--point);
-    background:var(--point);
 }
 
 /*---------------------------------------------
@@ -118,25 +124,31 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     #그 외 버튼
 ---------------------------------------------*/
 .btnstl {
+    padding:0 14px;
+    line-height:30px;
     border-radius:6px;
+    &.list_upload {
+        i {
+            @include icon(24px, 24px);
+            background-image:url("../images/common/ico_uploaad.svg");
+            background-position:unset;
+        }
+    }
+    &.basic, .basic2, .line, .primary, .disabled, .line_disabled  {
+        border:0;
+    }
 }
 button, a {
     border-radius:6px;
     color:var(--white);
     font-weight:var(--font-medium);
     &.icon {
+        display:inline-flex;
+        align-items:center;
+        column-gap:5px;
         i {
             display:inline-block;
-            @include wh (16px, 16px);
-            &.icon_reset {
-                @include mask(var(--white));
-                -webkit-mask-image:url("../images/common/ico_refresh.svg");
-                mask-image:url("../images/common/ico_refresh.svg");
-                &.init {
-                    -webkit-transform: scaleX(-1);
-                    transform: scaleX(-1);
-                }
-            }
+            @include wh (24px, 24px);
             &.delfile {
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/label/ico_trash.svg");
@@ -159,11 +171,8 @@ button, a {
                 background-image:none;
             }
             &.icon_applylist {
-                margin:0 5px 0 0;
+                margin:0;
                 background: url("../images/common/ico_m_list.svg")no-repeat center / 100%;
-            }
-            &.s_btn_more {
-                background:url("../images/common/arrow.svg") no-repeat center;
             }
             &.icon_reset {
                 font-size:0;
@@ -194,6 +203,8 @@ button, a {
             &::after {
                 @include content(16px,16px);
                 position:absolute;
+                right:0;
+                top:6px;
                 transform:rotate(-90deg);
                 display:inline-block;
                 background:url("../images/common/ico_accordion.svg")no-repeat center;
@@ -228,9 +239,8 @@ button, a {
             }
         }
         &.on {
-            padding:6px 12px 6px 6px;
             border:$borderP;
-            background:#FFFAEF;
+            background:#EDFFFC;
             &::before {
                 content:"";
                 display:inline-block;

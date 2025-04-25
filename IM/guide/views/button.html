@@ -10,7 +10,7 @@
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
     <!-- 기존 css -->
-    <link rel="stylesheet" type="text/css" href="../../css/app.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/font.css">
 
     <!-- 추가 css -->
@@ -74,19 +74,21 @@
                 </ul>
                 <section>
                     <p class="tit">Basic</p>
-                    <div class="list_btn">
+                    <p>height: 30px, padding:0 14px;</p>
+                    <div class="list_btn" style="padding:24px 0;">
                         <div class="list_left_btn">
-                            <button class="basic">primary</button>
+                            <button class="basic">normal</button>
                             <button class="basic" style="background:#0A153C; border:1px solid #0A153C;">focus</button>
                             <button class="basic disabled">disable</button>
-                            <button class="point">point</button>
+                            <button class="primary">point</button>
                         </div>
                     </div>
 
                     <p class="tit">Line</p>
-                    <div class="list_btn">
+                    <p>height: 30px, padding:0 14px;</p>
+                    <div class="list_btn" style="padding:24px 0;">
                         <div class="list_left_btn">
-                            <button class="line">line</button>
+                            <button class="line">normal</button>
                             <button class="line" style="color:var(--title);
                             border:1px solid var(--content);">focus</button>
                             <button class="line_disabled">disable</button>
@@ -94,157 +96,159 @@
                     </div>
 
                     <p class="tit">Big(Ex. 상세검색 및 팝업 하단 버튼)</p>
-                    <div class="list_btn">
+                    <p>height: 38px; padding: 0 14px;(Ex. 상세검색 및 팝업 하단 버튼)</p>
+                    <div class="list_btn" style="padding:24px 0;">
                         <div class="list_left_btn">
-                            <button class="primary big">primary</button>
+                            <button class="primary big">normal</button>
                             <button class="primary big" style="background:var(--btn-hover);">focus</button>
                             <button class="disabled big">disable</button>
                         </div>
                     </div>
 
                     <p class="tit">Icon button</p>
-                    <div class="list_btn">
+                    <p>height: 30px, padding: 0 14px;</p>
+                    <div class="list_btn" style="padding:24px 0;">
                         <div class="list_left_btn">
-                            <button class="primary icon">
+                            <button class="line icon">
                                 <i class="icon_reset"></i>
                                 새로고침
                             </button>
-                            <button class="disabled icon">
+                            <button class="line_disabled icon">
                                 <i class="icon_reset init"></i>
                                 상태초기화
                             </button>
+                            <button class="icon s_btn_more">바로가기</button>
                             <button class="line icon">
-                                <i class="icon_ff sl_ff excel"></i>
+                                <i class="icon_ff excel"></i>
                                 EXEL 추출
                             </button>
-                            <button class="normal close">초기화</button>
+                            <button class="line icon"><i class="icon_setting"></i> 설정</button>
                             <button class="line icon"><i class="checkout"></i> 체크아웃</button>
                             <button class="line icon"><i class="checkin"></i> 체크인</button>
-                            <button class="line icon"><i class="icon_setting"></i> 복원</button>
-                            <button class="line icon"><i class="delfile"></i> 삭제</button>
                             <button class="line icon"><i class="icon_applylist"></i>1개 보유</button>
-                            <button class="icon s_btn_more">바로가기</button>
+                            <button class="normal icon_reset">초기화</button>
+                            <button class="normal close">닫기</button>
+                            <button class="normal bottom">아래화살표</button>
+                            <button class="btnstl line list_upload"><i></i>목록 업로드</button>
                         </div>
                     </div>
 
                     <p class="tit">Select-sm</p>
-                    <div>
-                        <ul class="flx month_select">
-                            <li>
-                                <p>normal</p>
-                                <button class="normal">normal</button>
-                            </li>
-                            <li>
-                                <p>normal + on</p>
-                                <button class="normal on">active</button>
-                            </li>
-                            <li>
-                                <p>초기화</p>
-                                <button class="normal icon_reset">초기화</button>
-                            </li>
-                            <li>
-                                <p>아래화살표</p>
-                                <button class="normal bottom">아래화살표</button>
-                            </li>
-                        </ul>
+                    <div class="flx">
+                        <button class="normal">normal</button>
+                        <button class="normal on">active</button>
                     </div>
 
-                    <p class="tit">list_btn</p>
-                    <div class="list_btn">
-                        <div class="list_left_btn">
-                            <button class="line">활성</button>
-                            <button class="line">비활성</button>
-                            <span class="divide"></span>
-                            <p class="inb opttxt">상태 :</p>
-                            <p class="inb"><input type="checkbox" name="" id="chk01" class="check_stl">
-                            <label for="chk01" class="check_stl_lab"> 활성화</label></p>
-                            <p class="inb"><input type="checkbox" name="" id="chk02" class="check_stl">
-                            <label for="chk02" class="check_stl_lab"> 비활성화</label></p>
-                            <p class="inb"><input type="checkbox" name="" id="chk03" class="check_stl">
-                            <label for="chk03" class="check_stl_lab"> 삭제진행중</label></p>
+                    <h2 style="padding-top:20px; margin:20px 0 10px; border-top:1px solid #454545; font-size:20px; font-weight:500;">예시</h2>
+                    <div class="dash_box" style="padding:10px;">
+                        <p class="tit">list_btn</p>
+                        <div class="list_btn">
+                            <div class="list_left_btn">
+                                <button class="line">활성</button>
+                                <button class="line">비활성</button>
+                                <span class="divide"></span>
+                                <p class="inb opttxt">상태 :</p>
+                                <p class="inb"><input type="checkbox" name="" id="chk01" class="check_stl">
+                                <label for="chk01" class="check_stl_lab"> 활성화</label></p>
+                                <p class="inb"><input type="checkbox" name="" id="chk02" class="check_stl">
+                                <label for="chk02" class="check_stl_lab"> 비활성화</label></p>
+                                <p class="inb"><input type="checkbox" name="" id="chk03" class="check_stl">
+                                <label for="chk03" class="check_stl_lab"> 삭제진행중</label></p>
+                            </div>
+                            <div class="list_right_btn">
+                                <button class="basic">자가등록</button>
+                                <button class="basic">수동 Recon</button>
+                                <button class="primary">대량등록</button>
+                            </div>
                         </div>
-                        <div class="list_right_btn">
-                            <button class="basic">자가등록</button>
-                            <button class="basic">수동 Recon</button>
-                            <button class="basic">대량등록</button>
+
+                        <p class="tit">btn_box</p>
+                        <div class="btn_box cl_both">
+                            <div class="f_l">
+                                <button class="line">되돌리기</button>
+                            </div>
+                            <div class="f_r">
+                                <button class="basic">승인</button>
+                                <button class="line">반려</button>
+                                <button class="primary">확인</button>
+                            </div>
                         </div>
-                    </div>
 
-                    <p class="tit">btn_box</p>
-                    <div class="btn_box cl_both">
-                        <div class="f_l">
-                            <button class="line">되돌리기</button>
+                        <p class="tit">btn_box</p>
+                        <div class="btn_box cl_both">
+                            <div class="f_l">
+                                <button class="basic2">이전</button>
+                            </div>
+                            <div class="f_r">
+                                <button class="basic">다음</button>
+                                <button class="primary">저장</button>
+                                <button class="line">취소</button>
+                            </div>
                         </div>
-                        <div class="f_r">
-                            <button class="primary">확인</button>
-                            <button class="basic">취소</button>
-                            <button class="primary">저장</button>
+
+                        <p class="tit">align_right</p>
+                        <div class="align_right">
+                            <button class="btnstl basic">선택추가<i></i></button>
+                            <button class="btnstl primary">전체추가<i></i></button>
                         </div>
-                    </div>
 
-                    <p class="tit">align_right</p>
-                    <div class="align_right">
-                        <button class="btnstl basic">선택추가<i></i></button>
-                        <button class="btnstl line">전체추가<i></i></button>
-                    </div>
+                        <p class="tit">그냥 div에 묶여있음(15_02_systemgroup_tree_layout_filelist.html)</p>
+                        <div>
+                            <button class="btnstl line">선택삭제</button>
+                            <button class="btnstl basic">선택다운로드</button>
+                        </div>
 
-                    <p class="tit">그냥 div에 묶여있음(15_02_systemgroup_tree_layout_filelist.html)</p>
-                    <div>
-						<button class="btnstl primary">선택삭제</button>
-						<button class="btnstl line">선택다운로드</button>
-					</div>
+                        <p class="tit">table 안에 버튼</p>
+                        <div class="btns_detail">
+                            <ul class="cl_both">
+                                <li class="f_l wid33">
+                                    <a title="편집"></a>
+                                </li>
+                                <li class="f_l wid33">
+                                    <a title="삭제" class="del"></a>
+                                </li>
+                                <li class="f_l wid33">
+                                    <a title="테스트" class="test"></a>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <p class="tit">table 안에 버튼</p>
-                    <div class="btns_detail">
-                        <ul class="cl_both">
-                            <li class="f_l wid33">
-                                <a title="편집"></a>
-                            </li>
-                            <li class="f_l wid33">
-                                <a title="삭제" class="del"></a>
-                            </li>
-                            <li class="f_l wid33">
-                                <a title="테스트" class="test"></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <p class="tit">tit_in_btn</p>
-                    <div class="move_box">
-                        <div class="move_tit">
-                            <div class="btn_box tit_in_btn">
-                                <button class="blue">텍스트</button>
-                                <button class="navy">텍스트</button>
-                                <button class="white ref">새로고침</button>
+                        <p class="tit">tit_in_btn</p>
+                        <div class="move_box">
+                            <div class="move_tit">
+                                <div class="btn_box tit_in_btn">
+                                    <button class="blue">텍스트</button>
+                                    <button class="navy">텍스트</button>
+                                    <button class="white ref">새로고침</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tit">sych_mnt_toast toggle버튼</p>
+                        <div class="sych_mnt_toast" style="position:static;">
+                            <div class="err_toast">
+                                <div class="flx">
+                                    <p class="icon_err"></p>
+                                    <div class="sych_mnt_toast_detail">
+                                        <p>접근제어 시스템 배포오류 : <em>2</em></p>
+                                        <p>OS System 접속오류 : <em>5</em></p>
+                                        <p>결재오류 : <em>1</em></p>
+                                    </div>
+                                </div>
+                                <button class="btn_close"></button>
+                            </div>
+                            <div class="warning_toast">
+                                <div class="flx">
+                                    <p class="icon_warning"></p>
+                                    <div class="sych_mnt_toast_detail">
+                                        <p>비인가 생성 계정 : <em>15</em></p>
+                                        <p>OS System 접속오류 : <em>5</em></p>
+                                        <p>결재오류 : <em>1</em></p>
+                                    </div>
+                                </div>
+                                <button class="btn_close"></button>
                             </div>
                         </div>
                     </div>
-
-                    <p class="tit">sych_mnt_toast toggle버튼</p>
-                    <div class="sych_mnt_toast" style="position:static;">
-						<div class="err_toast">
-							<div class="flx">
-								<p class="icon_err"></p>
-								<div class="sych_mnt_toast_detail">
-									<p>접근제어 시스템 배포오류 : <em>2</em></p>
-									<p>OS System 접속오류 : <em>5</em></p>
-									<p>결재오류 : <em>1</em></p>
-								</div>
-							</div>
-							<button class="btn_close"></button>
-						</div>
-						<div class="warning_toast">
-							<div class="flx">
-								<p class="icon_warning"></p>
-								<div class="sych_mnt_toast_detail">
-									<p>비인가 생성 계정 : <em>15</em></p>
-									<p>OS System 접속오류 : <em>5</em></p>
-									<p>결재오류 : <em>1</em></p>
-								</div>
-							</div>
-							<button class="btn_close"></button>
-						</div>
-					</div>
 
                     <p class="tit">pagination</p>
                     <div class="tbl_btm">

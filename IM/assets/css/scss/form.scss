@@ -5,10 +5,15 @@
 ---------------------------------------------*/
 /* disabled */
 .form_contrl {
+    height:30px;
     border:1px solid var(--default);
     border-radius:6px;
+    color:var(--title);
     &:disabled {
         background:var(--btn-disabled);
+    }
+    &::placeholder {
+        color:var(--text-disabled);
     }
 }
 /* search */

@@ -706,7 +706,7 @@
 }
 .detail_process .flx_cell.pro_comple {
   color: var(--white);
-  background-color: var(--btn-default);
+  background-color: var(--basic);
 }
 .detail_process .flx_cell.pro_comple::after {
   background-image: url("../images/common/triangle_comp.svg");
@@ -725,7 +725,7 @@
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: var(--btn-default);
+  background-color: var(--basic);
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_step.svg");
   mask-image: url("../images/common/ico_step.svg");
@@ -778,7 +778,7 @@
 .tab_wrap {
   padding: 0 24px 10px;
   border-bottom: 0;
-  background: var(--body);
+  background-color: var(--body);
 }
 .tab_wrap .tab_list li + li {
   margin-left: 4px;
@@ -812,14 +812,31 @@
   background-color: var(--title);
 }
 .tab_wrap.cont_in_tab {
-  margin-bottom: 0;
-  padding: 20px 24px 18px;
-  background: var(--white);
-}
-.tab_wrap.cont_in_tab .tab_list {
   padding: 8px 6px;
   border-radius: 10px;
+  background-color: var(--btn-disabled);
+}
+
+.mini_tab {
+  margin-bottom: 20px;
+  background: var(--white);
+}
+.mini_tab .mtab_list {
+  padding: 4px;
+  border-radius: 7px;
   background: var(--btn-disabled);
+}
+.mini_tab .mtab_list li a {
+  font-weight: var(--font-regular);
+}
+.mini_tab .mtab_list li a.on {
+  border-radius: 3px;
+  font-weight: var(--font-regular);
+  color: var(--title);
+  background-color: var(--white);
+}
+.mini_tab.moveup {
+  margin-top: 0;
 }
 
 .tree_menu_tab button {
@@ -1530,7 +1547,7 @@
   line-height: 22px;
   text-align: center;
   color: var(--white);
-  background: var(--btn-default);
+  background: var(--basic);
 }
 .cont_wrap .content .worker_ch_area .worker_ch_box button {
   position: unset;
@@ -1547,9 +1564,6 @@
   bottom: 0;
   font-size: var(--font-13);
   color: var(--text-disabled);
-}
-.cont_wrap .content .tab_wrap.cont_in_tab {
-  padding: 20px 0;
 }
 .cont_wrap .content .tree_menu_wrap {
   padding: 0 0 20px;
@@ -1838,9 +1852,6 @@
   width: 100%;
   padding: 0;
   border-bottom: 0;
-}
-.content .form_stl .form_list .form_txt .form_contrl {
-  width: 250px;
 }
 .content .form_stl .form_list .form_txt textarea.form_contrl {
   width: 100%;

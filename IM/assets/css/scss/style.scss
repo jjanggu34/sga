@@ -513,7 +513,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         &.pro_comple {
             color:var(--white);
-            background-color:var(--btn-default);
+            background-color:var(--basic);
             &::after {
                 background-image:url("../images/common/triangle_comp.svg");
             }
@@ -523,7 +523,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     content:"";
                     display:inline-block;
                     @include wh (17px,17px);
-                    @include mask(var(--btn-default));
+                    @include mask(var(--basic));
                     -webkit-mask-image:url("../images/common/ico_step.svg");
                     mask-image:url("../images/common/ico_step.svg");
                 }
@@ -581,7 +581,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .tab_wrap {
     padding:0 24px 10px;
     border-bottom:0;
-    background:var(--body);
+    background-color:var(--body);
     .tab_list {
         li {
             &+li {
@@ -619,14 +619,33 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
     }
     &.cont_in_tab {
-        margin-bottom:0;
-        padding:20px 24px 18px;
-        background:var(--white);
-        .tab_list {
-            padding:8px 6px;
-            border-radius:10px;
-            background:var(--btn-disabled);
+        padding:8px 6px;
+        border-radius:10px;
+        background-color:var(--btn-disabled);
+    }
+}
+
+.mini_tab {
+    margin-bottom:20px;
+    background:var(--white);
+    .mtab_list {
+        padding:4px;
+        border-radius:7px;
+        background:var(--btn-disabled);
+        li {
+            a {
+                font-weight:var(--font-regular);
+                &.on {
+                    border-radius:3px;
+                    font-weight:var(--font-regular);
+                    color:var(--title);
+                    background-color:var(--white);
+                }
+            }
         }
+    }
+    &.moveup {
+        margin-top:0;
     }
 }
 
@@ -1267,7 +1286,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     @include title(var(--font-18), var(--font-medium), 22px);
                     text-align:center;
                     color:var(--white);
-                    background:var(--btn-default);
+                    background:var(--basic);
                 }
                 button {
                     position:unset;
@@ -1287,11 +1306,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     font-size:var(--font-13);
                     color:var(--text-disabled);
                 }
-            }
-        }
-        .tab_wrap {
-            &.cont_in_tab {
-                padding:20px 0;
             }
         }
         .tree_menu_wrap {
@@ -1570,9 +1584,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 width:100%;
                 padding:0;
                 border-bottom:0;
-                .form_contrl {
-                    width:250px;
-                }
+                // .form_contrl {
+                //     width:250px;
+                // }
                 textarea{
                     &.form_contrl {
                         width:$wh100;
