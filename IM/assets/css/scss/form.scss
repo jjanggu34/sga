@@ -8,6 +8,7 @@
     height:30px;
     border:1px solid var(--default);
     border-radius:6px;
+    font-size:var(--font-13);
     color:var(--title);
     &:disabled {
         background:var(--btn-disabled);
@@ -74,7 +75,49 @@
     }
 }
 
-/* textarea */
+/* 파일첨부 */
+.filebox {
+    position:relative;
+    .file_btns {
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        right:4px;
+        margin:0;
+        column-gap:5px;
+        button {
+            display:inline-block;
+            padding:3px;
+            @include icon(24px, 24px);
+            font-size:0;
+            background-size:80%;
+            background-position:center;
+            &.file {
+                background-image:url("../images/common/btn-file.svg");
+                background-color:unset;
+            }
+            &.upload{
+                border:0;
+                border-radius:6px;
+                background-image:url("../images/common/ico_upload2.svg");
+                background-color:var(--basic);
+            }
+        }
+    }
+}
+
+.file_output {
+    padding-top:6px;
+    .form_contrl {
+        border:0;
+        font-size:var(--font-13);
+        font-weight:var(--font-regular);
+        color:var(--content);
+        background-color:#F3F5F7;
+    }
+}
+
+/* textarea, file_upload_wrap */
 .form_stl {
     .form_contrl {
         width:$wh100;
@@ -143,17 +186,17 @@ $labels: "check_stl_lab", "radio_stl_lab";
 .radio_stl {
     &+ label {
         &::before {
-            border:1px solid var(--text-disabled);
+            border:1px solid var(--default);
         }
         &::after {
             position:absolute;
             top:50%;
             transform:translateY(-50%);
             left:5px;
-            @include content (7px, 7px);
+            @include content (6px, 6px);
             display:inline-block;
             border-radius:50%;
-            background-color:var(--text-disabled);
+            background-color:var(--default);
         }
         &+ .req_txt {
             padding:0;
@@ -165,7 +208,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
                 background-color:var(--primary);
             }
             &::after {
-                @include wh (7px, 7px);
+                @include wh (6px, 6px);
                 margin-top:0;
                 left:5px;
                 transform:translateY(-50%);
@@ -177,12 +220,13 @@ $labels: "check_stl_lab", "radio_stl_lab";
         &+ label {
             &::before {
                 border:1px solid var(--btn-disabled);
+                background-color:var(--btn-disabled);
             }
             &::after {
-                @include wh (7px, 7px);
+                @include wh (6px,6px);
                 left:5px;
                 transform:translateY(-50%);
-                background-color:var(--btn-disabled);
+                background-color:var(--default);
             }
         }
     }

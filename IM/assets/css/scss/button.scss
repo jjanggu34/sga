@@ -40,7 +40,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     border:1px solid var(--basic);
     border-radius:6px;
     font-size:var(--font-13);
-    line-height:30px;
+    line-height:28px;
     background:var(--basic);
     &:focus-visible {
         border:1px solid #0A153C;
@@ -52,7 +52,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     border:1px solid var(--basic2);
     border-radius:6px;
     font-size:var(--font-13);
-    line-height:30px;
+    line-height:28px;
     background:var(--basic2);
     &:focus-visible {
         border:1px solid #0A153C;
@@ -64,6 +64,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 .primary {
     border:$borderP;
     color:var(--white);
+    line-height:28px;
     background:var(--primary);
     // focus
     &:focus-visible {
@@ -91,6 +92,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     font-size:var(--font-13);
     color:var(--content);
     border:$borderD;
+    line-height:28px;
     background:var(--white);
     // focus
     &:focus-visible {
@@ -125,17 +127,13 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 ---------------------------------------------*/
 .btnstl {
     padding:0 14px;
-    line-height:30px;
     border-radius:6px;
     &.list_upload {
         i {
             @include icon(24px, 24px);
-            background-image:url("../images/common/ico_uploaad.svg");
+            background-image:url("../images/common/ico_upload.svg");
             background-position:unset;
         }
-    }
-    &.basic, .basic2, .line, .primary, .disabled, .line_disabled  {
-        border:0;
     }
 }
 button, a {
@@ -210,6 +208,27 @@ button, a {
                 background:url("../images/common/ico_accordion.svg")no-repeat center;
             }
         }
+        &.icon_reset {
+            @include wh (30px, 30px);
+            padding:6px;
+            font-size:0;
+            background:url("../images/common/ico_refresh.svg")no-repeat center/auto var(--white);
+            &::before {
+                content:none;
+            }
+        }
+        &.close {
+            @include wh (30px, 30px);
+            padding:3px;
+            font-size:0;
+            background:url("../images/common/close.svg")no-repeat center/auto var(--white);
+        }
+        &.bottom {
+            @include wh (30px,30px);
+            padding:0;
+            font-size:0;
+            background:url("../images/common/ico_accordion.svg")no-repeat center/auto;
+        }
     }
     &.disabled {
         cursor:auto;
@@ -229,15 +248,6 @@ button, a {
         color:var(--content);
         line-height:16px;
         background:var(--white);
-        &.icon_reset {
-            @include wh (30px, 30px);
-            padding:6px;
-            font-size:0;
-            background:url("../images/common/ico_refresh.svg")no-repeat center/auto var(--white);
-            &::before {
-                content:none;
-            }
-        }
         &.on {
             border:$borderP;
             background:#EDFFFC;
@@ -250,18 +260,6 @@ button, a {
                 mask-image:url("../images/common/ico_check_s.svg");
             }
             color:var(--primary);
-        }
-        &.close {
-            @include wh (30px, 30px);
-            padding:3px;
-            font-size:0;
-            background:url("../images/common/close.svg")no-repeat center/auto var(--white);
-        }
-        &.bottom {
-            @include wh (30px,30px);
-            padding:0;
-            font-size:0;
-            background:url("../images/common/ico_accordion.svg")no-repeat center/auto;
         }
     }
     /* 테이블 안 토글 버튼 */
@@ -281,6 +279,16 @@ button, a {
         @extend .icon_arrow_open;
         -webkit-mask-image:url("../images/common/icon_arrow_none.svg");
         mask-image:url("../images/common/icon_arrow_none.svg");
+    }
+}
+
+/* 옵션 */
+.default_addel_btn {
+    .btn_option {
+        right:unset;
+        @include wh(30px, 30px);
+        border:1px solid var(--basic);
+        background-color:var(--basic);
     }
 }
 

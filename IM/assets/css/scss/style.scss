@@ -306,6 +306,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     &.inbl {
+        display:block;
+        padding-left:0;
         color:var(--secondary);
         &::before {
             content:"\203B";
@@ -317,6 +319,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .dupli_check {
+    display:flex;
+    padding-left:0;
     i {
         @include wh (16px, 16px);
         background-image:none;
@@ -373,9 +377,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:var(--white);
             }
             .tab_arrow {
+                right:0;
                 transform: translateY(-50%);
-                @include icon(24px, 24px);
-                background-image:url("../images/common/ico_accordion.svg");
+                @include icon(30px, 30px);
+                background-image:url("../images/common/ico_accordion3.svg");
                 background-position:unset;
                 &.open {
                     transform:rotate(180deg) translateY(50%);
@@ -1228,8 +1233,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 a {
                     &.icon {
-                        padding:6px 14px 6px 7px;
+                        padding:0 14px;
                         border-radius:6px;
+                        line-height:30px;
                     }
                 }
             }
@@ -1277,7 +1283,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 flex-direction:row-reverse;
                 justify-content:flex-end;
                 gap:14px;
-                // padding:20px 24px 0;
+                padding-bottom:20px;
                 .worker_name {
                     @include wh (60px, 60px);
                     padding:20px 0;
@@ -1291,7 +1297,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 button {
                     position:unset;
                     height:30px;
-                    padding:7px 14px 6px;
+                    padding:0 14px;
                     border-radius:6px;
                     &.line {
                         font-size:var(--font-13);
@@ -1302,7 +1308,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &.inbl {
                     position:absolute;
                     left:67px;
-                    bottom:0;
+                    bottom:20px;
                     font-size:var(--font-13);
                     color:var(--text-disabled);
                 }

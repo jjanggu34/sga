@@ -180,8 +180,10 @@
 													<div class="filebox">
 														<input class="form_contrl" value="파일선택" disabled="disabled">
 														<div class="file_btns">
-															<button class="shadow">파일선택</button>
-															<button class="shadow">업로드</button>
+															<!-- s: class 변경 -->
+															<button class="icon file">파일선택</button>
+															<button class="basic icon upload">업로드</button>
+															<!-- e: class 변경 -->
 														</div>
 													</div>
 													<div class="file_output">
@@ -204,28 +206,29 @@
 								<td class="align_center">or</td>
 								<td>
 									<ul class="form_tbl flx_frm_tbl">
-										<li>
-											<div class="wid50 flx">
+										<!-- s: bul_dot 추가, wid50 삭제 -->
+										<li class="bul_dot">
+											<div class="flx">
 												<div class="form_tit"><label for="loginID02">Login ID (for connect)<i class="i_req"></i></label></div>
 												<div class="form_txt">
 													<input type="text" name="" class="form_contrl" id="loginID02"><span class="dupli_check redtxt"><i></i>이름 중복 입니다.</span>
 												</div>
 											</div>
-											<div class="wid50 flx">
+											<div class="flx">
 												<div class="form_tit"><label for="passowrd02">Password (for connect)<i class="i_req"></i></label></div>
 												<div class="form_txt">
 													<input type="text" name="" class="form_contrl" id="passowrd02">
 												</div>
 											</div>
 										</li>
-										<li>
-											<div class="wid50 flx">
+										<li class="bul_dot">
+											<div class="flx">
 												<div class="form_tit"><label for="IPAddress02">IPAddress (or Hostname)<i class="i_req"></i></label></div>
 												<div class="form_txt">
 													<input type="text" name="" class="form_contrl" id="IPAddress02">
 												</div>
 											</div>
-											<div class="wid50 flx">
+											<div class="flx">
 												<div class="form_tit"><label for="Port02">Port<i class="i_req"></i></label></div>
 												<div class="form_txt">
 													<p class="tg_sch_stl">
@@ -235,8 +238,8 @@
 												</div>
 											</div>
 										</li>
-										<li>
-											<div class="wid50 flx">
+										<li class="bul_dot">
+											<div class="flx">
 												<div class="form_tit">Use SSL</div>
 												<div class="form_txt">
 													<div class="cl_both check2">
@@ -246,14 +249,17 @@
 													</div>
 												</div>
 											</div>
-											<div class="wid50 flx">
+											<div class="flx">
 												<div class="form_tit">KeyStore</div>
 												<div class="form_txt">
 													<div class="filebox">
 														<input class="form_contrl" value="파일선택" disabled="disabled">
 														<div class="file_btns">
-															<button class="shadow">파일선택</button>
-															<button class="shadow">업로드</button>
+															<!-- s: class 변경 -->
+															<button class="icon file">파일선택</button>
+															<button class="basic icon upload">업로드</button>
+
+															<!-- e: class 변경 -->
 														</div>
 													</div>
 													<div class="file_output">
@@ -262,6 +268,7 @@
 												</div>
 											</div>
 										</li>
+										<!-- e: bul_dot 추가, wid50 삭제 -->
 									</ul>
 								</td>
 								<td class="default_addel_btn">
@@ -319,7 +326,7 @@
 						<li>
 							<div class="form_tit"><label for="modelType">종류(Type)<i class="i_req"></i></label></div>
 							<div class="form_txt">
-								<select class="form_contrl" id="modelType">
+								<select class="form_contrl w480" id="modelType"><!-- s: w480 추가-->
 									<option>DB</option>
 									<option>DB</option>
 								</select>
@@ -334,12 +341,12 @@
 						</li>
 						<li>
 							<div class="form_tit">모델명</div>
-							<div class="form_txt"><input type="text" name="" class="form_contrl diss" id="modelName" placeholder="CentOS" readonly="readonly"></div>
+							<div class="form_txt"><input type="text" name="" class="form_contrl disabled w480" id="modelName" placeholder="CentOS" readonly="readonly"></div><!-- s: w480 추가-->
 						</li>
 						<li>
 							<div class="form_tit"><label for="onsdName">이름</label></div>
 							<div class="form_txt">
-								<input type="text" name="" class="form_contrl" id="onsdName"><!--<span class="dupli_check redtxt"><i></i>이름 중복 입니다.</span>-->
+								<input type="text" name="" class="form_contrl w480" id="onsdName"><!--<span class="dupli_check redtxt"><i></i>이름 중복 입니다.</span>--><!-- s: w480 추가-->
 								<span class="dupli_check bluetxt"><i></i>사용가능합니다.</span>
 							</div>
 						</li>
@@ -347,14 +354,16 @@
 							<div class="form_tit">KeyStore</div>
 							<div class="form_txt">
 								<div class="filebox">
-									<input class="form_contrl" value="파일선택" disabled="disabled">
+									<input class="form_contrl w480" value="파일선택" disabled="disabled"><!-- s: w480 추가-->
 									<div class="file_btns">
-										<button class="shadow">파일선택</button>
-										<button class="shadow">업로드</button>
+										<button class="icon file">파일선택</button>
+										<button class="basic icon upload">업로드</button>
 									</div>
 								</div>
 								<div class="file_output">
-									<input class="form_contrl middle" value="{“DOC_ID”:”1000”, “FOLDER_ID”:”1000”, “CMS_ID”:”1000”}" disabled="disabled">
+									<!-- s: w480 추가, middle 삭제 -->
+									<input class="form_contrl w480" value="{“DOC_ID”:”1000”, “FOLDER_ID”:”1000”, “CMS_ID”:”1000”}" disabled="disabled">
+									<!-- e: w480 추가, middle 삭제 -->
 								</div>
 							</div>
 						</li>
@@ -363,7 +372,7 @@
 				<div class="btn_box cl_both">
 					<!-- s: class 변경 -->
 					<div class="f_l">
-						<a href="" class="basic">이전</a>
+						<a href="" class="basic2">이전</a>
 					</div>
 					<div class="f_r">
 						<a href="" class="basic">다음</a>

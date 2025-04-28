@@ -100,3 +100,5 @@
     --font-extrabold: 700;
     --font-heavy: 800;
 }
+
+.w480 { width:480px !important; }
