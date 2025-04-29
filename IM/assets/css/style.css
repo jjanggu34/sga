@@ -1738,6 +1738,11 @@
 .cont_wrap .content .form_wrap {
   padding: 20px 0;
 }
+.cont_wrap .content .treeType02 .db_detail.open .inst_list .inst_row.on .inst_name {
+  border-right-color: var(--primary);
+  color: var(--primary);
+  background-color: #DAFAF5;
+}
 
 .content .form_stl {
   margin-bottom: 0;
@@ -1760,74 +1765,6 @@
   width: 100%;
   padding: 0 0 10px;
 }
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap {
-  max-width: none;
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box {
-  height: 83px;
-  margin-top: 6px;
-  border-radius: 6px;
-  background: var(--body);
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box:has(.icon_file_upload) {
-  display: block;
-  padding: 16px 0 21px;
-  border: 1px dashed var(--border-d);
-  text-align: center;
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box .icon_file_upload {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--text-disabled);
-  vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_file_upload.svg");
-  mask-image: url("../images/common/ico_file_upload.svg");
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box p {
-  font-size: var(--font-13);
-  font-weight: var(--font-regular);
-  line-height: 16px;
-  color: var(--text-disabled);
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box.upload_list {
-  padding: 15px 15px 11px;
-  border: 0;
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box.upload_list li {
-  gap: 4px;
-  padding-bottom: 10px;
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box.upload_list li p {
-  font-size: var(--font-13);
-  color: var(--title);
-  line-height: 16px;
-  vertical-align: unset;
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box.upload_list li p.file_size {
-  color: var(--text-disabled);
-}
-.content .form_stl .form_tbl.noline .form_txt .file_upload_wrap .file_upload_box.upload_list li .btn_del {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: none;
-  padding: 0;
-  border: 1px solid var(--border-d);
-  border-radius: 6px;
-  background-image: url("../images/common/close.svg");
-  background-size: 80%;
-  background-color: var(--white);
-  background-position: center;
-}
 .content .form_stl .form_tbl.bul_dot li {
   display: flex;
   align-items: center;
@@ -1841,6 +1778,9 @@
   display: inline-block;
   padding: 0;
   border-bottom: 0;
+}
+.content .form_stl .form_tbl.bul_dot li .form_txt {
+  width: 100%;
 }
 .content .form_stl .form_list {
   display: flex;
@@ -1879,6 +1819,9 @@
 .move_box {
   padding-left: 24px;
 }
+.move_box:first-child {
+  padding-left: 0;
+}
 
 .moved_box {
   padding-right: 24px;
@@ -1907,15 +1850,155 @@
   background-position: unset;
   transform: rotate(-90deg);
 }
-.moved_box .pcs_ctg_list li a:hover {
-  background-color: #FFFAEF;
+.moved_box .pcs_ctg_list li a:hover, .moved_box .pcs_ctg_list li a .on {
+  color: var(--primary);
+  background-color: #DAFAF5;
 }
-.moved_box .pcs_ctg_list li a:hover::after {
+.moved_box .pcs_ctg_list li a:hover::after, .moved_box .pcs_ctg_list li a .on::after {
   background-color: var(--primary);
 }
 .moved_box .pcs_ctg_list li a.on {
-  background-color: #FFFAEF;
+  color: var(--primary);
+  background-color: #DAFAF5;
 }
 .moved_box .pcs_ctg_list li a.on::after {
   background-color: var(--primary);
+}
+
+/***************** i-card_wrap *****************/
+.i-card_wrap {
+  margin: 0 24px;
+  gap: 10px;
+}
+.i-card_wrap .dash_box {
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+}
+.i-card_wrap .dash_box.noicon {
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: var(--primary);
+}
+.i-card_wrap .dash_box.noicon .i-card_title {
+  padding: 0;
+  color: var(--white);
+  opacity: 0.78;
+}
+.i-card_wrap .dash_box.noicon .i-card_ct {
+  align-self: flex-end;
+  height: auto;
+}
+.i-card_wrap .dash_box.noicon .i-card_ct .i-card_list {
+  justify-content: space-between;
+  width: 73px;
+  height: auto;
+}
+.i-card_wrap .dash_box.noicon .i-card_ct .i-card_list dt, .i-card_wrap .dash_box.noicon .i-card_ct .i-card_list dd {
+  width: auto;
+  color: var(--white);
+}
+.i-card_wrap .dash_box .i-card_title:not(.noicon .i-card_title) {
+  position: absolute;
+  left: 74px;
+  padding: 0 0 0 7px;
+  font-weight: var(--font-medium);
+  color: var(--text-disabled);
+}
+.i-card_wrap .dash_box .i-card_ct {
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0;
+}
+.i-card_wrap .dash_box .i-card_ct .icon {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background-color: var(--btn-disabled);
+}
+.i-card_wrap .dash_box .i-card_ct .icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  border-radius: 0;
+  background-position: center;
+}
+.i-card_wrap .dash_box .i-card_ct .icon.role i {
+  background-image: url("../images/common/role/icon_role.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.usergp i {
+  background-image: url("../images/common/role/icon_usergp.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.belong i {
+  background-image: url("../images/common/role/icon_belong.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.opst i {
+  background-image: url("../images/common/role/icon_opst.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.adjst i {
+  background-image: url("../images/common/role/icon_adjst.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.appst i {
+  background-image: url("../images/common/role/icon_appst.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.dbst i {
+  background-image: url("../images/common/role/icon_dbst.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.networkst i {
+  background-image: url("../images/common/role/icon_networkst.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.securityact i {
+  background-image: url("../images/common/role/icon_securityact.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.ldapst i {
+  background-image: url("../images/common/role/icon_ldapst.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.etsst i {
+  background-image: url("../images/common/role/icon_etsst.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.imauth i {
+  background-image: url("../images/common/role/icon_imauth.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.aprauth i {
+  background-image: url("../images/common/role/icon_aprauth.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.systemauth i {
+  background-image: url("../images/common/role/icon_systemauth.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.osauth i {
+  background-image: url("../images/common/role/icon_osauth.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .icon.etsauth i {
+  background-image: url("../images/common/role/icon_etsauth.svg");
+}
+.i-card_wrap .dash_box .i-card_ct .num_t {
+  display: inline-block;
+  padding-right: 0;
+}
+.i-card_wrap .dash_box .acs_plc_typ {
+  padding: 0;
+}
+
+.i-card_ct .icon i {
+  background: none;
+}
+
+/***************** list style *****************/
+.view_stl .view_list.bul_dot li {
+  align-items: center;
+  padding: 10px 20px;
+}
+.view_stl .view_list.bul_dot li::before {
+  left: 10px;
+}
+.view_stl .view_list.bul_dot li .view_txt {
+  white-space: unset;
 }

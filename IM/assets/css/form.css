@@ -46,15 +46,15 @@
 }
 
 /* date */
-.form_date {
-  margin-right: 4px;
-}
 .form_date .date_ctl {
   background-image: url("../images/common/ico_calendar.svg");
   background-position: left 5px center;
   background-size: 16px;
   background-repeat: no-repeat;
   color: var(--text-disabled);
+}
+.form_date.flx {
+  gap: 4px;
 }
 
 /* date2 -> calendar */
@@ -117,6 +117,75 @@
   font-weight: var(--font-regular);
   color: var(--content);
   background-color: #F3F5F7;
+}
+
+.file_upload_wrap {
+  max-width: none;
+}
+.file_upload_wrap .file_upload_box {
+  height: 83px;
+  margin-top: 6px;
+  border-radius: 6px;
+  background: var(--body);
+}
+.file_upload_wrap .file_upload_box:has(.icon_file_upload) {
+  display: block;
+  padding: 16px 0 21px;
+  border: 1px dashed var(--border-d);
+  text-align: center;
+}
+.file_upload_wrap .file_upload_box .icon_file_upload {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_file_upload.svg");
+  mask-image: url("../images/common/ico_file_upload.svg");
+}
+.file_upload_wrap .file_upload_box p {
+  font-size: var(--font-13);
+  font-weight: var(--font-regular);
+  line-height: 16px;
+  color: var(--text-disabled);
+}
+.file_upload_wrap .file_upload_box.upload_list {
+  padding: 15px 15px 11px;
+  border: 0;
+}
+.file_upload_wrap .file_upload_box.upload_list li {
+  gap: 4px;
+  padding-bottom: 10px;
+}
+.file_upload_wrap .file_upload_box.upload_list li p {
+  font-size: var(--font-13);
+  color: var(--title);
+  line-height: 16px;
+  vertical-align: unset;
+}
+.file_upload_wrap .file_upload_box.upload_list li p.file_size {
+  color: var(--text-disabled);
+}
+.file_upload_wrap .file_upload_box.upload_list li .btn_del {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  padding: 0;
+  border: 1px solid var(--border-d);
+  border-radius: 6px;
+  background-image: url("../images/common/close.svg");
+  background-size: 80%;
+  background-color: var(--white);
+  background-position: center;
 }
 
 /* textarea, file_upload_wrap */

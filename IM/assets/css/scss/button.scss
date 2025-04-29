@@ -72,8 +72,8 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
         background:var(--btn-hover);
     }
     &.btn_dropdown {
-        padding-right:23px;
-        background:url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--primary);
+        padding-right:30px;
+        background:url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--primary);
     }
     &.arrow {
         i {
@@ -101,7 +101,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     }
     &.btn_dropdown {
         padding-right:30px;
-        background:url("../images/common/ico_accordion.svg") no-repeat right 7px center var(--white);
+        background:url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--white);
     }
 }
 

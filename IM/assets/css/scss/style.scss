@@ -1472,6 +1472,23 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .form_wrap {
             padding:20px 0;
         }
+        .treeType02 {
+            .db_detail {
+                &.open {
+                    .inst_list {
+                        .inst_row {
+                            &.on {
+                                .inst_name {
+                                    border-right-color:var(--primary);
+                                    color:var(--primary);
+                                    background-color:#DAFAF5;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .content {
@@ -1496,60 +1513,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .form_txt {
                     width:$wh100;
                     padding:0 0 10px;
-                    .file_upload_wrap { //파일 첨부
-                        max-width:none;
-                        .file_upload_box {
-                            height:83px;
-                            margin-top:6px;
-                            border-radius:6px;
-                            background:var(--body);
-                            &:has(.icon_file_upload) {
-                                display:block;
-                                padding:16px 0 21px;
-                                border:1px dashed var(--border-d);
-                                text-align:center;
-                            }
-                            .icon_file_upload {
-                                display:inline-block;
-                                @include wh (24px,24px);
-                                @include mask(var(--text-disabled));
-                                -webkit-mask-image:url("../images/common/ico_file_upload.svg");
-                                mask-image:url("../images/common/ico_file_upload.svg");
-                            }
-                            p {
-                                @include title(var(--font-13), var(--font-regular), 16px);
-                                color:var(--text-disabled);
-                            }
-                            &.upload_list {
-                                padding:15px 15px 11px;
-                                border:0;
-                                li {
-                                    gap:4px;
-                                    padding-bottom:10px;
-                                    p {
-                                        font-size:var(--font-13);
-                                        color:var(--title);
-                                        line-height:16px;
-                                        vertical-align:unset;
-                                        &.file_size {
-                                            color:var(--text-disabled);
-                                        }
-                                    }
-                                    .btn_del {
-                                        display:inline-block;
-                                        @include icon(24px,24px);
-                                        padding:0;
-                                        border:$borderD;
-                                        border-radius:6px;
-                                        background-image:url("../images/common/close.svg");
-                                        background-size:80%;
-                                        background-color:var(--white);
-                                        background-position:center;
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
             }
             &.bul_dot {
@@ -1568,6 +1531,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                     .form_txt {
                         @extend .form_tit;
+                        width:100%;
                     }
                 }
             }
@@ -1615,6 +1579,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /***************** moved_box *****************/
 .move_box {
     padding-left:24px;
+    &:first-child {
+        padding-left:0;
+    }
 }
 .moved_box {
     padding-right:24px;
@@ -1638,17 +1605,194 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     background-position:unset;
                     transform:rotate(-90deg);
                 }
-                &:hover {
-                    background-color:#FFFAEF;
+                &:hover, .on {
+                    color:var(--primary);
+                    background-color:#DAFAF5;
                     &::after {
                         background-color:var(--primary);
                     }
                 }
                 &.on {
-                    background-color:#FFFAEF;
+                    color:var(--primary);
+                    background-color:#DAFAF5;
                     &::after {
                         background-color:var(--primary);
                     }
+                }
+            }
+        }
+    }
+}
+
+/***************** i-card_wrap *****************/
+.i-card_wrap {
+    margin:0 24px;
+    gap:10px;
+    .dash_box {
+        position:relative;
+        padding:20px;
+        border-radius:20px;
+        &.noicon {
+            display:inline-flex;
+            justify-content:space-between;
+            padding:12px 20px;
+            background-color:var(--primary);
+            .i-card_title {
+                padding:0;
+                color:var(--white);
+                opacity:.78;
+            }
+            .i-card_ct {
+                align-self:flex-end;
+                height:auto;
+                .i-card_list {
+                    justify-content:space-between;
+                    width:73px;
+                    height:auto;
+                    dt,dd {
+                        width:auto;
+                        color:var(--white);
+                    }
+                }
+            }
+        }
+        .i-card_title:not(.noicon .i-card_title) {
+            position:absolute;
+            left:74px;
+            padding:0 0 0 7px;
+            font-weight:var(--font-medium);
+            color:var(--text-disabled);
+        }
+        .i-card_ct {
+            justify-content:space-between;
+            align-items:flex-end;
+            padding:0;
+            .icon {
+                position:relative;
+                @include wh(56px,56px);
+                border-radius:14px;
+                background-color:var(--btn-disabled);
+                i {
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    @include icon(34px,34px);
+                    border-radius:0;
+                    background-position:center;
+                }
+                &.role {
+                    i {
+                        background-image:url("../images/common/role/icon_role.svg");
+                    }
+                }
+                &.usergp {
+                    i {
+                        background-image:url("../images/common/role/icon_usergp.svg");
+                    }
+                }
+                &.belong {
+                    i {
+                        background-image:url("../images/common/role/icon_belong.svg");
+                    }
+                }
+                &.opst {
+                    i {
+                        background-image:url("../images/common/role/icon_opst.svg");
+                    }
+                }
+                &.adjst {
+                    i {
+                        background-image:url("../images/common/role/icon_adjst.svg");
+                    }
+                }
+                &.appst {
+                    i {
+                        background-image:url("../images/common/role/icon_appst.svg");
+                    }
+                }
+                &.dbst {
+                    i {
+                        background-image:url("../images/common/role/icon_dbst.svg");
+                    }
+                }
+                &.networkst {
+                    i {
+                        background-image:url("../images/common/role/icon_networkst.svg");
+                    }
+                }
+                &.securityact {
+                    i {
+                        background-image:url("../images/common/role/icon_securityact.svg");
+                    }
+                }
+                &.ldapst {
+                    i {
+                        background-image:url("../images/common/role/icon_ldapst.svg");
+                    }
+                }
+                &.etsst {
+                    i {
+                        background-image:url("../images/common/role/icon_etsst.svg");
+                    }
+                }
+                &.imauth {
+                    i {
+                        background-image:url("../images/common/role/icon_imauth.svg");
+                    }
+                }
+                &.aprauth {
+                    i {
+                        background-image:url("../images/common/role/icon_aprauth.svg");
+                    }
+                }
+                &.systemauth {
+                    i {
+                        background-image:url("../images/common/role/icon_systemauth.svg");
+                    }
+                }
+                &.osauth {
+                    i {
+                        background-image:url("../images/common/role/icon_osauth.svg");
+                    }
+                }
+                &.etsauth {
+                    i {
+                        background-image:url("../images/common/role/icon_etsauth.svg");
+                    }
+                }
+            }
+            .num_t {
+                display:inline-block;
+                padding-right:0;
+            }
+        }
+        .acs_plc_typ {
+            padding:0;
+        }
+    }
+}
+
+.i-card_ct {
+    .icon {
+        i {
+            background:none;
+        }
+    }
+}
+
+/***************** list style *****************/
+.view_stl {
+    .view_list {
+        &.bul_dot {
+            li {
+                align-items:center;
+                padding:10px 20px;
+                &::before {
+                    left:10px;
+                }
+                .view_txt {
+                    white-space:unset;
                 }
             }
         }

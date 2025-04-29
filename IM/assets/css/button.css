@@ -106,8 +106,8 @@ button.big {
   background: var(--btn-hover);
 }
 .primary.btn_dropdown {
-  padding-right: 23px;
-  background: url("../images/common/ico_accordion.svg") no-repeat right 6px center var(--primary);
+  padding-right: 30px;
+  background: url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--primary);
 }
 .primary.arrow i {
   width: 16px;
@@ -133,7 +133,7 @@ button.big {
 }
 .line.btn_dropdown {
   padding-right: 30px;
-  background: url("../images/common/ico_accordion.svg") no-repeat right 7px center var(--white);
+  background: url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--white);
 }
 
 /*---------------------------------------------

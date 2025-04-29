@@ -389,6 +389,9 @@ body * {
   height: auto;
   background: none;
 }
+#SGIM_wrap .header + .i-card_wrap {
+  margin: 94px 24px 0;
+}
 
 /*---------------------------------------------
     #컨텐츠
