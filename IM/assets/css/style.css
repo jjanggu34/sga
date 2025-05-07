@@ -22,12 +22,18 @@
   width: 76px;
   height: 26px;
   padding: 0;
+  border: 0;
+  border-radius: 14px;
+  line-height: 16px;
 }
 
 .fcolor.btnstl {
   width: 76px;
   height: 26px;
   padding: 0;
+  border: 0;
+  border-radius: 14px;
+  line-height: 16px;
 }
 
 .trcolor {
@@ -35,7 +41,6 @@
   width: auto;
   border-radius: 14px;
   font-size: var(--font-13);
-  border: 1px solid var(--true);
   color: var(--true);
   background-color: #EFFCF3;
 }
@@ -45,7 +50,6 @@
   width: auto;
   border-radius: 14px;
   font-size: var(--font-13);
-  border: 1px solid var(--false);
   color: var(--false);
   background-color: #FFEFEF;
 }
@@ -783,9 +787,9 @@
 
 /***************** 탭 *****************/
 .tab_wrap {
-  padding: 0 24px 10px;
+  position: relative;
+  padding: 16px 24px;
   border-bottom: 0;
-  background-color: var(--body);
 }
 .tab_wrap .tab_list li + li {
   margin-left: 4px;
@@ -818,10 +822,52 @@
 .tab_wrap .tab_list li a:hover .new_org {
   background-color: var(--title);
 }
+.tab_wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -24px;
+  width: 108.3%;
+  height: 1px;
+  background-color: var(--border-d);
+}
 .tab_wrap.cont_in_tab {
-  padding: 8px 6px;
+  padding: 16px 6px;
   border-radius: 10px;
-  background-color: var(--btn-disabled);
+  background-color: transparent;
+}
+.tab_wrap.cont_in_tab .tab_list a .tab_tree_icon {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+  background-image: none;
+}
+.tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.os {
+  -webkit-mask-image: url("../images/common/ico_os.svg");
+  mask-image: url("../images/common/ico_os.svg");
+}
+.tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.app {
+  -webkit-mask-image: url("../images/common/ico_app.svg");
+  mask-image: url("../images/common/ico_app.svg");
+}
+.tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.db {
+  -webkit-mask-image: url("../images/common/ico_db.svg");
+  mask-image: url("../images/common/ico_db.svg");
+}
+.tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.network {
+  -webkit-mask-image: url("../images/common/ico_net.svg");
+  mask-image: url("../images/common/ico_net.svg");
+}
+.tab_wrap.cont_in_tab .tab_list a.on .tab_tree_icon {
+  background-color: var(--white);
+}
+.tab_wrap.cont_in_tab.moveup {
+  margin-top: 0;
 }
 
 .mini_tab {
@@ -847,8 +893,10 @@
 }
 
 .tree_menu_tab button {
-  padding: 16px 0 12px;
+  padding: 10px 0;
+  font-size: var(--font-14);
   color: var(--text-disabled);
+  line-height: 25px;
   background: var(--btn-disabled);
 }
 .tree_menu_tab button.on {
@@ -1471,7 +1519,7 @@
   width: 100%;
   height: 210px;
   margin: 25px 11px 0 0;
-  padding: 20px 20px 12px 34px;
+  padding: 20px;
   background-color: var(--disabled-line-bg);
   border: 1px solid rgba(221, 221, 221, 0.6509803922);
   box-shadow: unset;
@@ -1484,8 +1532,12 @@
   background-color: unset;
 }
 .apply_card .dash_box .apply_card_w {
+  position: static;
   width: 100%;
   padding: 0;
+}
+.apply_card .dash_box .apply_card_w .apply_txt {
+  position: static;
 }
 .apply_card .dash_box .apply_card_w .apply_txt p {
   padding-bottom: 30px;
@@ -1497,6 +1549,9 @@
   line-height: 16px;
 }
 .apply_card .dash_box .apply_card_w .apply_txt a.icon {
+  position: absolute;
+  left: 20px;
+  bottom: 12px;
   padding: 0 14px;
   border-radius: 6px;
   line-height: 30px;
@@ -1506,6 +1561,9 @@
   right: 0;
 }
 .apply_card .dash_box .help_w .help_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   padding: 0;
   border-color: var(--border-d);
   color: var(--title);
@@ -1573,6 +1631,9 @@
   bottom: 20px;
   font-size: var(--font-13);
   color: var(--text-disabled);
+}
+.cont_wrap .content .worker_ch_area + .tab_wrap.cont_in_tab::after {
+  content: none;
 }
 .cont_wrap .content .tree_menu_wrap {
   padding: 0 0 20px;
@@ -1738,6 +1799,9 @@
 .cont_wrap .content .form_wrap {
   padding: 20px 0;
 }
+.cont_wrap .content .form_wrap .workflow_box {
+  margin-bottom: 0;
+}
 .cont_wrap .content .treeType02 .db_detail.open .inst_list .inst_row.on .inst_name {
   border-right-color: var(--primary);
   color: var(--primary);
@@ -1780,7 +1844,7 @@
   border-bottom: 0;
 }
 .content .form_stl .form_tbl.bul_dot li .form_txt {
-  width: 100%;
+  width: 100% x;
 }
 .content .form_stl .form_list {
   display: flex;
@@ -1868,6 +1932,7 @@
 /***************** i-card_wrap *****************/
 .i-card_wrap {
   margin: 0 24px;
+  padding-bottom: 14px;
   gap: 10px;
 }
 .i-card_wrap .dash_box {
@@ -1985,6 +2050,50 @@
 }
 .i-card_wrap .dash_box .acs_plc_typ {
   padding: 0;
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background-color: var(--sub-select);
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon {
+  width: 36px;
+  height: 36px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-position: unset;
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon.os {
+  background-image: url("../images/common/icon_os.svg");
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon.app {
+  background-image: url("../images/common/icon_app.svg");
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon.db {
+  background-image: url("../images/common/icon_db.svg");
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon.network {
+  background-image: url("../images/common/icon_net.svg");
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on {
+  background-color: #CBF0EA;
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on .tab_tree_icon.os {
+  background-image: url("../images/common/icon_os_on.svg");
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on .tab_tree_icon.app {
+  background-image: url("../images/common/icon_app_on.svg");
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on .tab_tree_icon.db {
+  background-image: url("../images/common/icon_db_on.svg");
+}
+.i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on .tab_tree_icon.network {
+  background-image: url("../images/common/icon_net_on.svg");
+}
+.i-card_wrap + .content.tab_cont .tab_wrap {
+  border-bottom: 1px solid var(--border-d);
 }
 
 .i-card_ct .icon i {

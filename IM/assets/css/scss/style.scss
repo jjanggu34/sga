@@ -6,17 +6,18 @@ $btnstls: "trcolor", "fcolor";
     .#{$btnstl}.btnstl {
         @include wh (76px, 26px);
         padding:0;
+        border:0;
+        border-radius:14px;
+        line-height:16px;
     }
 }
 .trcolor {
     @include label();
-    border:1px solid var(--true);
     color:var(--true);
     background-color:#EFFCF3;
 }
 .fcolor {
     @include label();
-    border:1px solid var(--false);
     color:var(--false);
     background-color:#FFEFEF;
     &_tit {
@@ -584,9 +585,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** 탭 *****************/
 .tab_wrap {
-    padding:0 24px 10px;
+    position:relative;
+    padding:16px 24px;
     border-bottom:0;
-    background-color:var(--body);
     .tab_list {
         li {
             &+li {
@@ -621,12 +622,52 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
-
+    }
+    &::after {
+        content:"";
+        position:absolute;
+        bottom:0;
+        left:-24px;
+        width:108.3%;
+        height:1px;
+        background-color:var(--border-d);
     }
     &.cont_in_tab {
-        padding:8px 6px;
+        padding:16px 6px;
         border-radius:10px;
-        background-color:var(--btn-disabled);
+        background-color:transparent;
+        .tab_list {
+            a {
+                .tab_tree_icon {
+                    @include mask(var(--text-disabled));
+                    background-image:none;
+                    &.os {
+                        -webkit-mask-image:url("../images/common/ico_os.svg");
+                        mask-image:url("../images/common/ico_os.svg");
+                    }
+                    &.app {
+                        -webkit-mask-image:url("../images/common/ico_app.svg");
+                        mask-image:url("../images/common/ico_app.svg");
+                    }
+                    &.db {
+                        -webkit-mask-image:url("../images/common/ico_db.svg");
+                        mask-image:url("../images/common/ico_db.svg");
+                    }
+                    &.network {
+                        -webkit-mask-image:url("../images/common/ico_net.svg");
+                        mask-image:url("../images/common/ico_net.svg");
+                    }
+                }
+                &.on {
+                    .tab_tree_icon {
+                        background-color:var(--white);
+                    }
+                }
+            }
+        }
+        &.moveup {
+            margin-top:0;
+        }
     }
 }
 
@@ -656,8 +697,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .tree_menu_tab {
     button {
-        padding:16px 0 12px;
+        padding:10px 0;
+        font-size:var(--font-14);
         color:var(--text-disabled);
+        line-height:25px;
         background:var(--btn-disabled);
         &.on {
             color:var(--title);
@@ -1209,7 +1252,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         max-width:514px;
         @include wh ($wh100, 210px);
         margin:25px 11px 0 0;
-        padding:20px 20px 12px 34px;
+        padding:20px;
         background-color:var(--disabled-line-bg);
         border:1px solid #DDDDDDA6;
         box-shadow:unset;
@@ -1221,9 +1264,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .apply_card_w {
+            position:static;
             width:$wh100;
             padding:0;
             .apply_txt {
+                position:static;
                 p {
                     padding-bottom:30px;
                     @include title (var(--font-14), var(--font-regular), 24px);
@@ -1233,6 +1278,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 a {
                     &.icon {
+                        position:absolute;
+                        left:20px;
+                        bottom:12px;
                         padding:0 14px;
                         border-radius:6px;
                         line-height:30px;
@@ -1244,6 +1292,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             top:0;
             right:0;
             .help_btn {
+                position:absolute;
+                top:20px;
+                right:20px;
                 padding:0;
                 border-color:var(--border-d);
                 color:var(--title);
@@ -1311,6 +1362,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     bottom:20px;
                     font-size:var(--font-13);
                     color:var(--text-disabled);
+                }
+            }
+            &+.tab_wrap.cont_in_tab{
+                &::after {
+                    content:none;
                 }
             }
         }
@@ -1471,6 +1527,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .form_wrap {
             padding:20px 0;
+            .workflow_box {
+                margin-bottom:0;
+            }
         }
         .treeType02 {
             .db_detail {
@@ -1531,7 +1590,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                     .form_txt {
                         @extend .form_tit;
-                        width:100%;
+                        width:100%x;
                     }
                 }
             }
@@ -1627,6 +1686,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /***************** i-card_wrap *****************/
 .i-card_wrap {
     margin:0 24px;
+    padding-bottom:14px;
     gap:10px;
     .dash_box {
         position:relative;
@@ -1769,6 +1829,49 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .acs_plc_typ {
             padding:0;
+            .cnt_tabmn {
+                @include wh(56px,56px);
+                border-radius:14px;
+                background-color:var(--sub-select);
+                .tab_tree_icon {
+                    @include icon(36px,36px);
+                    background-position:unset;
+                    &.os {
+                        background-image:url("../images/common/icon_os.svg");
+                    }
+                    &.app {
+                        background-image:url("../images/common/icon_app.svg");
+                    }
+                    &.db {
+                        background-image:url("../images/common/icon_db.svg");
+                    }
+                    &.network {
+                        background-image:url("../images/common/icon_net.svg");
+                    }
+                }
+                &.on {
+                    background-color:#CBF0EA;
+                    .tab_tree_icon {
+                        &.os {
+                            background-image:url("../images/common/icon_os_on.svg");
+                        }
+                        &.app {
+                            background-image:url("../images/common/icon_app_on.svg");
+                        }
+                        &.db {
+                            background-image:url("../images/common/icon_db_on.svg");
+                        }
+                        &.network {
+                            background-image:url("../images/common/icon_net_on.svg");
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &+.content.tab_cont { //list_btn이 t_cont_in으로 감싸 있어서 따로 줌
+        .tab_wrap {
+            border-bottom:$borderD;
         }
     }
 }

@@ -16,9 +16,6 @@
     .tbl_num_wid {
         width:auto;
     }
-    .check_list {
-        width:auto;
-    }
     .more_list {
         padding:7px 10px;
     }
@@ -29,7 +26,7 @@
                 cursor:auto;
             }
             th {
-                padding:10px 0;
+                padding:10px;
                 border:0;
                 border-top:$borderD;
                 border-bottom:1px solid var(--secondary);
@@ -76,7 +73,7 @@
                 }
             }
             td {
-                padding:4px 10px 5px;
+                padding:5px 20px;
                 border:0;
                 border-bottom:$borderD;
                 font-size:var(--font-13);
@@ -94,6 +91,7 @@
                     @include wh ($wh100, $wh100);
                     padding:60px 0 20px;
                     line-height:normal;
+                    color:var(--text-disabled);
                     &::after {
                         display:inline-block;
                         @include content(35px, 35px);

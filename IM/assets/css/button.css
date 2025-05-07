@@ -7,7 +7,7 @@
     #tit_in_btn: absolute
 ---------------------------------------------*/
 .list_btn {
-  padding: 15px 24px 24px;
+  padding: 20px 24px;
 }
 .list_btn .opttxt {
   font-weight: var(--font-regular);
@@ -162,8 +162,8 @@ button.big {
   border-radius: 6px;
 }
 .btnstl.list_upload i {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
@@ -435,10 +435,23 @@ button.icon_arrow_none, a.icon_arrow_none {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url("../images/common/ico_btn.svg") no-repeat center/auto;
+  padding: 0;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_btn.svg");
+  mask-image: url("../images/common/ico_btn.svg");
 }
 .search_box.mini_search .btn_search {
-  right: 20px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
 }
 .search_box .btn_detail_search {
   top: 50%;

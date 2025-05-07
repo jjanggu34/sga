@@ -19,9 +19,6 @@
 .default_tbl .tbl_num_wid {
   width: auto;
 }
-.default_tbl .check_list {
-  width: auto;
-}
 .default_tbl .more_list {
   padding: 7px 10px;
 }
@@ -30,7 +27,7 @@
   cursor: auto;
 }
 .default_tbl thead tr th {
-  padding: 10px 0;
+  padding: 10px;
   border: 0;
   border-top: 1px solid var(--border-d);
   border-bottom: 1px solid var(--secondary);
@@ -75,7 +72,7 @@
   color: var(--content);
 }
 .default_tbl tbody tr td {
-  padding: 4px 10px 5px;
+  padding: 5px 20px;
   border: 0;
   border-bottom: 1px solid var(--border-d);
   font-size: var(--font-13);
@@ -95,6 +92,7 @@
   height: 100%;
   padding: 60px 0 20px;
   line-height: normal;
+  color: var(--text-disabled);
 }
 .default_tbl tbody tr td.nodata::after {
   display: inline-block;

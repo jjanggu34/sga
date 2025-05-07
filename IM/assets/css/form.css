@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /* 변수 지정하기 */
 /* mixin 함수 선언하기 */
+.search_wrap + .list_btn {
+  border-top: 1px solid var(--border-d);
+}
+
+.tab_wrap + .list_btn {
+  border-top: 1px solid var(--border-d);
+}
+
 /*---------------------------------------------
 	#input
 ---------------------------------------------*/
@@ -39,6 +47,12 @@
   height: 48px;
   border: 1px solid var(--border-d);
   border-radius: 7px;
+}
+.search_box.mini_search {
+  height: 30px;
+}
+.search_box.mini_search .search_inputbox {
+  height: 30px;
 }
 
 .search_date .form_date .date_ctl {

@@ -1,5 +1,12 @@
 @use 'variable' as *;
 
+$borderTs: "search_wrap", "tab_wrap";
+
+@each $borderT in $borderTs {
+    .#{$borderT} + .list_btn {
+        border-top:$borderD;
+    }
+}
 /*---------------------------------------------
 	#input
 ---------------------------------------------*/
@@ -34,6 +41,12 @@
         @include wh ($wh100, 48px);
         border:$borderD;
         border-radius:7px;
+    }
+    &.mini_search {
+        height:30px;
+        .search_inputbox {
+            height:30px;
+        }
     }
 }
 .search_date {

@@ -399,27 +399,37 @@ body {
                 &:last-child{
                     padding-top:18px;
                 }
+                .tab_wrap {
+                    &.cont_in_tab {
+                        padding-top:0;
+                    }
+                }
             }
         }
         .content {
             padding:0;
             margin:60px 0 20px;
             min-height:calc(100vh - 100px);//header + 위아래 margin
-            border-radius:0;
+            border:$borderD;
+            border-radius:3px;
             box-shadow:unset;
             > div {
                 &:last-child {
-                    padding-bottom:20px;;
+                    padding-bottom:0;
                 }
                 &.list_btn {
                     top:60px;
                 }
             }
             &.cont_scroll {
-                max-height:843px;
+                max-height:759px;
                 overflow-y:auto;
+                .tab_wrap {
+                    padding-top:0;
+                }
             }
             &.tab_cont {
+                margin-top:20px;
                 .t_cont_in {
                     padding:0;
                 }
@@ -429,12 +439,20 @@ body {
                     width:100%;
                     padding:20px 24px;
                     margin-top:0;
+                    &.cont_scroll {
+                        max-height:620px;
+                    }
+                }
+                .i-card_wrap {
+                    padding-bottom:4px;
+                    .dash_box {
+                        border-radius:3px;
+                    }
                 }
             }
             &.only {
                 margin:80px 24px 20px;
                 padding:20px 24px;
-                border:$borderD;
                 border-radius:20px;
                 .tbl_list {
                     padding:0 0 10px;
