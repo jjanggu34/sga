@@ -108,7 +108,9 @@
 			<div class="flx cont_wrap">
 				<div class="content">
 					<!-- 탭 위 공간줄이기 "moveup"클래스 추가-->
-					<div class="tab_wrap cont_in_tab moveup">
+					<!-- s: bAfter 추가 -->
+					<div class="tab_wrap cont_in_tab moveup bAfter">
+					<!-- e: bAfter 추가 -->
 						<ul class="tab_list">
 							<li><a href=""><i class="tab_tree_icon os"></i>OS</a></li>
 							<li><a href=""><i class="tab_tree_icon app"></i>APP</a></li>
@@ -132,7 +134,7 @@
 									<ul class="tree_menu_inner">
 										<li>
 											<a><i class="icon_tree folder_open"></i><span>Root</span></a>
-											<ul>
+											<ul class="sub_tree_menu">
 												<li>
 													<a><i class="icon_tree folder"></i><span>최고관리자</span></a>
 												</li>
@@ -316,8 +318,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="content">
-						<div class="tab_wrap cont_in_tab moveup">
+					<!--s: cont_scroll 추가-->
+					<div class="content cont_scroll">
+						<!-- s: bAfter 추가 -->
+						<div class="tab_wrap cont_in_tab moveup bAfter">
+						<!-- e: bAfter 추가 -->
 							<ul class="tab_list">
 								<li><a href="" class="on">서버 목록</a></li>
 								<li><a href="">접근 권한</a></li>
@@ -549,7 +554,7 @@
 												<div class="file_upload_btns">
 													<!-- s: class 변경 -->
 													<button class="btnstl line">파일선택</button>
-													<button class="btnstl line list_upload"><i></i>목록 업로드</button>
+													<button class="btnstl basic list_upload"><i></i>목록 업로드</button>
 													<!-- e: class 변경 -->
 												</div>
 												<div class="file_upload_box">
@@ -567,6 +572,7 @@
 							</div>
 						</div>
 					</div>
+					<!-- e: cont_scroll 추가 -->
 				</div>
 			</div>
 			<div class="footer">

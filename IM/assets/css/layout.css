@@ -462,6 +462,9 @@ body * {
 #SGIM_wrap #container .content + .cnt_lyt_sc .content.cont_scroll {
   max-height: 620px;
 }
+#SGIM_wrap #container .content + .cnt_lyt_sc .content .tab_wrap.cont_in_tab {
+  padding: 0 0 16px 0;
+}
 #SGIM_wrap #container .content + .cnt_lyt_sc .i-card_wrap {
   padding-bottom: 4px;
 }

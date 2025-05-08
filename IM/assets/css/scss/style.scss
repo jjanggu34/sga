@@ -54,6 +54,43 @@ $btnstls: "trcolor", "fcolor";
 }
 
 /*---------------------------------------------
+    border-bottom이 after로 들어가야할 때
+---------------------------------------------*/
+.bAfter {
+    &::after {
+        content:"";
+        position:absolute;
+        bottom:0;
+        left:-24px;
+        width:108.3%;
+        height:1px;
+        background-color:var(--border-d);
+    }
+}
+
+/*---------------------------------------------
+    #loading
+    input -> loader
+---------------------------------------------*/
+.loader {
+    position:absolute;
+    top:3px;
+    right:7px;
+    @include wh(16px, 16px);
+    border:none;
+    border-radius: 50%;
+    background: conic-gradient(#27AD98 10%, #ffffff 20%, #27AD98 100%);
+    -webkit-mask: radial-gradient(farthest-side, transparent 60%, black 61%);
+    mask: radial-gradient(farthest-side, transparent 60%, black 61%);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*---------------------------------------------
     #라벨 테이블 안에서 사용
     기본 : icon_list
     진행중 : label_ico > icon_pgs
@@ -371,7 +408,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:10px 0 10px 6px;
             border:0;
             border-radius:0;
-            border-bottom:$borderD;
+            border-bottom:1px solid var(--title);
             font-weight:var(--font-bold);
             background:transparent;
             &:hover {
@@ -396,9 +433,31 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:10px 0 10px 6px;
             border:0;
             border-radius:0;
-            border-bottom:$borderD;
+            border-bottom:1px solid var(--title);
             font-weight:var(--font-bold);
             background:transparent;
+            &.add {
+                height:45px;
+                margin-bottom:40px;
+                border:1px dashed var(--border-d);
+                border-radius:6px;
+                @include title (var(--font-16), var(--font-medium), 26px);
+                text-align:center;
+                background-color:var(--table-th);
+                .btn_option {
+                    @include wh(24px,24px);
+                    border:none;
+                    background-color:var(--basic);
+                    &::after {
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                        @include icon(16px,16px);
+                        background-image:url("../images/common/btn_add.svg");
+                        background-position:center;
+                    }
+                }
+            }
         }
     }
     // table title
@@ -476,6 +535,30 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     &+.form_stl {
         padding-top:36px;
     }
+    .movbtn {
+        background:linear-gradient(90deg,rgba(250, 250, 250, 0) 41%, rgba(255, 255, 255, 1) 65%);
+        z-index:1;
+        &::after {
+            top:2px;
+            @include mask(var(--text-disabled));
+            -webkit-mask-image:url("../images/common/arr-next.svg");
+            mask-image:url("../images/common/arr-next.svg");
+            background-image:none;
+        }
+        &.prev {
+            background:linear-gradient(270deg,rgba(250, 250, 250, 0) 51%, rgba(255, 255, 255, 1) 89%);
+            &::after {
+                transform:rotate(180deg);
+            }
+        }
+        &.diss {
+            background-color:var(--white);
+            z-index:0;
+            &::after {
+                background-color:var(--btn-disabled);
+            }
+        }
+    }
 }
 .detail_process {
     background:var(--white);
@@ -501,6 +584,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             z-index:2;
         }
         &:last-child {
+            margin-right:0;
             border-radius:0 7px 7px 0;
             &::after {
                 content:none;
@@ -622,15 +706,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
-    }
-    &::after {
-        content:"";
-        position:absolute;
-        bottom:0;
-        left:-24px;
-        width:108.3%;
-        height:1px;
-        background-color:var(--border-d);
     }
     &.cont_in_tab {
         padding:16px 6px;
@@ -1381,14 +1456,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 gap:20px;
                 padding-bottom:20px;
                 .tree_menu_box {
-                    border-radius:5px;
+                    width:100%;
+                    max-width:240px;
                     margin-right:0;
+                    border-radius:5px;
                     .mini_search{ // tree_menu_box 안에 있을 때
                         height:auto;
-                        padding:13px 10px 9px 13px;
-                        margin-bottom:0;
+                        margin-bottom:10px;
                         .search_inputbox {
-                            height:28px;
+                            // height:28px;
+                            border-radius:0;
                         }
                         .btn_search {
                             top:56%;
@@ -1532,17 +1609,98 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .treeType02 {
+            flex:1;
+            border-radius:5px;
+            .tt_tit {
+                padding:15px 17px 14px;
+                border-radius:5px;
+                background-color:var(--white);
+                p {
+                    font-size:var(--font-14);
+                    font-weight:var(--font-medium);
+                    color:var(--title);
+                }
+            }
+            .search_box {
+                &.mini_search {
+                    .search_inputbox {
+                        border-radius:0;
+                    }
+                }
+            }
             .db_detail {
+                .db_server_row {
+                    padding-left:26px;
+                    &::before {
+                        position:absolute;
+                        left:8px;
+                        @include content(16px,16px);
+                        @include mask(var(--text-disabled));
+                        -webkit-mask-image:url("../images/common/ico_accordion2.svg");
+                        mask-image:url("../images/common/ico_accordion2.svg");
+                        transform:rotate(-90deg);
+                        z-index:1;
+                    }
+                    .meth {
+                        padding:6px 9px;
+                        border-radius:14px;
+                        font-size:var(--font-13);
+                        color:#074C91;
+                        background-color:#DAEAFA;
+                    }
+                    .db_server_name {
+                        font-size:var(--font-13);
+                    }
+                    .ip_add {
+                        font-size:var(--font-13);
+                        color:var(--text-disabled);
+                        &::before {
+                            background-color:var(--border-d);
+                        }
+                    }
+                }
                 &.open {
+                    .db_server_row {
+                        background-color:#F4F7FA;
+                        &::before {
+                            background-color:var(--title);
+                            transform:rotate(360deg);
+                        }
+                        .meth {
+                            color:var(--white);
+                            background-color:var(--primary);
+                        }
+                    }
                     .inst_list {
+                        background-color:#F4F7FA;
                         .inst_row {
                             &.on {
+                                .branch {
+                                    background-color:var(--primary);
+                                }
                                 .inst_name {
-                                    border-right-color:var(--primary);
+                                    border-right:unset;
+                                    font-weight:var(--font-regularz);
                                     color:var(--primary);
-                                    background-color:#DAFAF5;
+                                    background-color:unset;
                                 }
                             }
+                            .branch {
+                                height:6px;
+                                @include mask(var(--text-disabled));
+                                -webkit-mask-image:url("../images/common/branch.svg");
+                                mask-image:url("../images/common/branch.svg");
+                                background-image:none;
+                            }
+                            .inst_name {
+                                padding-left:0;
+                                font-size:var(--font-12);
+                            }
+                        }
+                        &::after {
+                            top:-15px;
+                            height:99%;
+                            background-color:var(--border-d);
                         }
                     }
                 }
@@ -1867,6 +2025,31 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                 }
             }
+            .sv_dt_info {
+                .sv_name {
+                    padding-bottom:7px;
+                    font-size:var(--font-16);
+                    font-weight:var(--font-medium);
+                    color:var(--title);
+                }
+                .sv_dt_list {
+                    &::after {
+                        height:12px;
+                        background-color:var(--border-d);
+                    }
+                }
+                .sv_dt_mng {
+                    padding-top:13px;
+                    .sq_nv_wd {
+                        li {
+                            border-radius:3px;
+                            font-size:var(--font-13);
+                            color:#0E6759;
+                            background-color:#D6EAE7;
+                        }
+                    }
+                }
+            }
         }
     }
     &+.content.tab_cont { //list_btn이 t_cont_in으로 감싸 있어서 따로 줌
@@ -1900,4 +2083,39 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
     }
+}
+
+/***************** move data *****************/
+.move_wrap {
+    padding:20px;
+    border:$borderD;
+    border-radius:6px;
+    .mini_paging {
+        position:unset;
+        padding-top:20px;
+        border:0;
+    }
+    &+.btn_box {
+        padding-top:20px;
+    }
+    .moved_box {
+        &:only-child {
+            padding-right:0;
+        }
+    }
+}
+.moved_tit {
+    padding:0 0 14px 2px;
+    border:0;
+    font-size:var(--font-16);
+    font-weight:var(--font-bold);
+    color:var(--title);
+    background-color:unset;
+}
+.move_tbl {
+    height:100%;
+    max-height:370px;//10개 기준
+    margin-top:7px;
+    border:0;
+    border-top:$borderD;
 }

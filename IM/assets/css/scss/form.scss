@@ -47,6 +47,12 @@ $borderTs: "search_wrap", "tab_wrap";
         .search_inputbox {
             height:30px;
         }
+        .btn_search {
+            background-image:none;
+        }
+    }
+    .btn_search {
+        background-image:none;
     }
 }
 .search_date {
@@ -114,7 +120,7 @@ $borderTs: "search_wrap", "tab_wrap";
             &.upload{
                 border:0;
                 border-radius:6px;
-                background-image:url("../images/common/ico_upload2.svg");
+                background-image:url("../images/common/ico_upload.svg");
                 background-color:var(--basic);
             }
         }

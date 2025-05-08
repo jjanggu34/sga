@@ -107,7 +107,9 @@
 			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="flx cont_wrap">
 				<div class="content">
-					<div class="tab_wrap cont_in_tab">
+					<!-- s: bAfter 추가 -->
+					<div class="tab_wrap cont_in_tab bAfter">
+					<!-- e: bAfter 추가 -->
 						<ul class="tab_list">
 							<li><a href="" class="on"><i class="tab_tree_icon os"></i>OS</a></li>
 							<li><a href=""><i class="tab_tree_icon app"></i>APP</a></li>
@@ -280,21 +282,23 @@
 								</div>
 								<div class="sv_dt_info">
 									<p class="sv_name">Linux</p>
+									<!-- s: txtbold 삭제 -->
 									<div class="flx sv_dt_txt">
-										<div class="sv_dt_list txtbold">표준 Linux(ONSD) Type</div>
+										<div class="sv_dt_list">표준 Linux(ONSD) Type</div>
 										<div class="sv_dt_list">
 											<p>수집상태</p>
-											<p class="txtbold">수집완료</p>
+											<p>수집완료</p>
 										</div>
 										<div class="sv_dt_list">
 											<p>OS</p>
-											<p class="txtbold">Linux</p>
+											<p>Linux</p>
 										</div>
 										<div class="sv_dt_list">
 											<p>IP</p>
-											<p class="txtbold">172.24.130.241</p>
+											<p>172.24.130.241</p>
 										</div>
 									</div>
+									<!-- e: txtbold 삭제 -->
 									<div class="flx sv_dt_mng">
 										<p>담당자/관리자</p>
 										<ul class="sq_nv_wd">
@@ -308,7 +312,7 @@
 					</div>
 					<!--s: cont_scroll 추가-->
 					<div class="content cont_scroll">
-						<div class="tab_wrap cont_in_tab moveup">
+						<div class="tab_wrap cont_in_tab moveup bAfter">
 							<ul class="tab_list">
 								<li><a href="" class="on">서버 목록</a></li>
 								<li><a href="">접근 권한</a></li>
@@ -470,7 +474,9 @@
 											<div class="file_upload_wrap">
 												<div class="file_upload_btns">
 													<button class="btnstl line">파일선택</button>
-													<button class="btnstl line list_upload"><i></i>목록 업로드</button>
+													<!-- s: class 변경 -->
+													<button class="btnstl basic list_upload"><i></i>목록 업로드</button>
+													<!-- e: class 변경 -->
 												</div>
 												<div class="file_upload_box">
 													<p class="icon_file_upload"></p><p>파일을 마우스로 끌어 오세요</p>

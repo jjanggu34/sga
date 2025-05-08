@@ -303,6 +303,34 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
     }
 }
 
+/* add button */
+.btn_columnadd {
+    height:45px;
+    border:1px dashed var(--border-d);
+    border-radius:6px;
+    background-color:var(--table-th);
+    span {
+        padding-right:30px;
+        @include title (var(--font-16), var(--font-medium), 45px);
+        .btn_option {
+            right:0;
+            transform:translateY(-50%);
+            margin-top:0;
+            @include wh(24px,24px);
+            border:none;
+            background-color:var(--basic);
+            &::after {
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                @include icon(16px,16px);
+                background-image:url("../images/common/btn_add.svg");
+                background-position:center;
+            }
+        }
+    }
+}
+
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/

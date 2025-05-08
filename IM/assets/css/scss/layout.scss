@@ -442,6 +442,11 @@ body {
                     &.cont_scroll {
                         max-height:620px;
                     }
+                    .tab_wrap {
+                        &.cont_in_tab {
+                            padding:0 0 16px 0;
+                        }
+                    }
                 }
                 .i-card_wrap {
                     padding-bottom:4px;

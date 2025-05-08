@@ -425,6 +425,41 @@ button.icon_arrow_none, a.icon_arrow_none {
   background-color: transparent;
 }
 
+/* add button */
+.btn_columnadd {
+  height: 45px;
+  border: 1px dashed var(--border-d);
+  border-radius: 6px;
+  background-color: var(--table-th);
+}
+.btn_columnadd span {
+  padding-right: 30px;
+  font-size: var(--font-16);
+  font-weight: var(--font-medium);
+  line-height: 45px;
+}
+.btn_columnadd span .btn_option {
+  right: 0;
+  transform: translateY(-50%);
+  margin-top: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: var(--basic);
+}
+.btn_columnadd span .btn_option::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/btn_add.svg");
+  background-position: center;
+}
+
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
