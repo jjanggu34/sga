@@ -261,7 +261,8 @@
 				</div>
 				<a class="fm_tit pdt16">스케줄러 셋팅<span class="tab_arrow"></span></a>
 				<div class="form_stl">
-					<ul class="form_tbl">
+					<!-- s: bul_dot 추가 -->
+					<ul class="form_tbl bul_dot">
 						<li>
 							<div class="form_tit"><label for="onsdName02">이름</label></div>
 							<div class="form_txt"><input type="text" name="" class="form_contrl" id="onsdName02" placeholder="LinuxRecon"></div>
@@ -292,7 +293,7 @@
 									<option>General</option>
 									<option>General</option>
 								</select>
-								<p class="req_txt">구분을 선택 후 업무를 선택해 주세요.</p>
+								<p class="req_txt inbl">구분을 선택 후 업무를 선택해 주세요.</p>
 								<div class="task_wrap">
 									<div class="tasklist_box">
 										<div class="tasklist">
@@ -312,6 +313,9 @@
 													<p class="task_ctg_stl">업무3</p>
 													<p class="task_ctg_stl">업무4</p>
 												</div>
+												<!-- s: 추가 -->
+												<button class="btn_g_del"></button>
+												<!-- e: 추가 -->
 											</div>
 										</div>
 									</div>
@@ -401,7 +405,9 @@
 										<div class="move_box">
 											<p class="moved_tit">담당업무</p>
 											<div class="move_tbl">
-												<p class="nodt_txt">데이터가 없습니다.</p>
+												<!-- s: nodata 추가 -->
+												<p class="nodt_txt nodata">데이터가 없습니다.</p>
+												<!-- e: nodata 추가 -->
 											</div>
 										</div>
 									</div>
@@ -416,7 +422,7 @@
 											<table class="default_tbl">
 												<tbody>
 													<tr class="newalim">
-														<td class="check_list"><input type="checkbox" name="" id="taskc1" class="check_stl"><label for="taskc1" class="check_stl_lab"></label></td>
+														<td class="check_list"><input type="checkbox" name="" id="taskc1" class="check_stl" checked><label for="taskc1" class="check_stl_lab"></label></td>
 														<td>기간계</td>
 														<td>추가업무</td>
 													</tr>
@@ -501,6 +507,7 @@
 							</div>
 						</li>
 					</ul>
+					<!-- e: bul_dot 추가 -->
 				</div>
 				<div class="btn_box cl_both">
 					<div class="f_l">

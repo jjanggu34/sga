@@ -209,11 +209,8 @@
 }
 
 /* textarea, file_upload_wrap */
-.form_stl .form_contrl {
-  width: 100%;
-}
 .form_stl textarea.form_contrl {
-  width: 100%;
+  width: 270px;
 }
 .form_stl .file_upload_wrap {
   max-width: none;
@@ -248,12 +245,27 @@
 }
 
 .check_stl + label {
+  padding-left: 20px;
   color: var(--content);
 }
-.check_stl + label::before {
+.check_stl + label::before, .check_stl + label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
   display: inline-block;
+  border-radius: 3px;
+}
+.check_stl + label::before {
   width: 16px;
   height: 16px;
+  border: 1px solid var(--default);
+  background-color: var(--white);
+}
+.check_stl + label::after {
+  width: 15px;
+  height: 15px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -262,15 +274,27 @@
   mask-position: center;
   background-color: var(--default);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_chekbox_s.svg");
-  mask-image: url("../images/common/ico_chekbox_s.svg");
-  border-radius: 3px;
+  -webkit-mask-size: 50%;
+  mask-size: 50%;
+  -webkit-mask-image: url("../images/common/icon_check_s.svg");
+  mask-image: url("../images/common/icon_check_s.svg");
 }
 .check_stl:checked + label::before {
+  width: 16px;
+  height: 16px;
   background-color: var(--primary);
+  border: 1px solid var(--primary);
+  margin: 0;
+  transform: translateY(-50%);
+  left: 0;
 }
 .check_stl:checked + label::after {
-  content: none;
+  width: 15px;
+  height: 15px;
+  background-color: var(--white);
+  background-image: none;
+  margin: 0;
+  left: 0;
 }
 .check_stl:disabled + label::before {
   background-color: var(--btn-disabled);

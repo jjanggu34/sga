@@ -195,12 +195,9 @@ $borderTs: "search_wrap", "tab_wrap";
 
 /* textarea, file_upload_wrap */
 .form_stl {
-    .form_contrl {
-        width:$wh100;
-    }
-    textarea{
+    textarea {
         &.form_contrl {
-            width:$wh100;
+            width:270px;
         }
     }
     .file_upload_wrap {
@@ -231,32 +228,55 @@ $labels: "check_stl_lab", "radio_stl_lab";
         border: 1px solid var(--btn-disabled);
     }
 }
-.check_stl{
-    &+label {
-        color:var(--content);
+.check_stl {
+    & + label {
+        padding-left: 20px;
+        color: var(--content);
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            display: inline-block;
+            border-radius: 3px;
+        }
         &::before {
-            display:inline-block;
-            @include wh (16px, 16px);
+            @include wh(16px, 16px);
+            border: 1px solid var(--default);
+            background-color: var(--white);
+        }
+        &::after {
+            @include wh(15px, 15px);
             @include mask(var(--default));
-            -webkit-mask-image:url("../images/common/ico_chekbox_s.svg");
-            mask-image:url("../images/common/ico_chekbox_s.svg");
-            border-radius:3px;
+            -webkit-mask-size: 50%;
+            mask-size: 50%;
+            -webkit-mask-image: url("../images/common/icon_check_s.svg");
+            mask-image: url("../images/common/icon_check_s.svg");
         }
     }
-    &:checked {
-        &+ label {
-            &::before {
-                background-color:var(--primary);
-            }
-            &::after {
-                content:none;
-            }
+    &:checked + label {
+        &::before {
+            @include wh(16px, 16px);
+            background-color: var(--primary);
+            border: $borderP;
+            margin: 0;
+            transform: translateY(-50%);
+            left: 0;
+        }
+
+        &::after {
+            @include wh(15px, 15px);
+            background-color: var(--white);
+            background-image: none;
+            margin: 0;
+            left: 0;
         }
     }
-    &:disabled {
-        &+ label::before {
-            background-color:var(--btn-disabled);
-        }
+
+    &:disabled + label::before {
+        background-color: var(--btn-disabled);
     }
 }
 .radio_stl {

@@ -422,7 +422,7 @@ body {
                 }
             }
             &.cont_scroll {
-                max-height:759px;
+                max-height:770px;
                 overflow-y:auto;
                 .tab_wrap {
                     padding-top:0;
@@ -513,31 +513,6 @@ body {
     // cont
     .dtv_cont {
         padding:0;
-        .view_list {
-            &.bul_dot {
-                li {
-                    &::before {
-                        left:10px;
-                    }
-                }
-            }
-            li {
-                align-items: center;
-                padding:10px 20px;
-                .view_tit {
-                    p {
-                        font-size:var(--font-14);
-                        font-weight:var(--font-regular);
-                        color:var(--text-disabled);
-                    }
-                }
-                .view_txt {
-                    font-size:var(--font-13);
-                    font-weight:var(--font-medium);
-                    color:var(--title);
-                }
-            }
-        }
     }
 }
 
