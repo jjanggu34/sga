@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/jquery-ui.js"></script>
@@ -41,11 +44,13 @@
 								</dd>
 							</dl>
 						</div>
+						<!-- s: class 변경 -->
 						<div class="btn_box f_r">
-							<a href="" class="blue">저장</a>
-							<a href="" class="darkgray">삭제</a>
-							<a href="" class="skyblue">취소</a>
+							<a href="" class="primary">저장</a>
+							<a href="" class="basic2">삭제</a>
+							<a href="" class="line">취소</a>
 						</div>
+						<!-- e: class 변경 -->
 					</div>
 					<div class="action_builder">
 						<div class="action_type scroll">
@@ -83,8 +88,9 @@
 								<li>
 								<div class="entrybox entry_connect">
 									<div class="entry_top cl_both">
-										<ul class="cl_both f_l">
-											<li class="entry-wrap f_l">
+										<!-- s: f_l 삭제 -->
+										<ul class="cl_both">
+											<li class="entry-wrap">
 												<a class="entry_name">Telnet connection
 												<button title="옵션추가" class="btn_option"></button></a>
 												<ul class="option_list balloon" style="display:none">
@@ -93,23 +99,25 @@
 												<li><a>사용자 스위치 사용</a></li>
 											</ul>
 											</li>
-											<li class="f_l">
+											<li>
 												<a class="add_option option01">Time Out
 												<button title="옵션삭제" class="btn_option"></button></a>
 											</li>
-											<li class="f_l">
+											<li>
 												<a class="add_option option02">Retry<button title="옵션삭제" class="btn_option"></button></a>
 											</li>
-											<li class="f_l">
+											<li>
 												<a class="add_option option03">사용자 스위치 사용<button title="옵션삭제" class="btn_option"></button></a>
 											</li>
 										</ul>
-										<a title="엔트리 정보입력/수정" class="f_l btn_entry_desc"></a>
+										<a title="엔트리 정보입력/수정" class=" btn_entry_desc"></a>
 										<a class="btn_entry_del" title="엔트리삭제"></a>
+										<!-- e: f_l 삭제 -->
 									</div>
 									<div class="entry_setting setting01" style="display:none">
+										<!-- s: dl 구조 수정 및 bul_dot 추가 -->
 										<div class="form_stl">
-											<dl class="form_list noline">
+											<dl class="form_list noline bul_dot">
 												<dt class="form_tit"><label for="IPAddr">IP Address</label></dt>
 												<dd class="form_txt">
 													<SELECT class="form_contrl" id="IPAddr">
@@ -120,6 +128,8 @@
 													</SELECT>
 													<span class="balloon entry_help" style="display:none">도움말입니다.</span>
 												</dd>
+											</dl>
+											<dl class="form_list noline bul_dot">
 												<dt class="form_tit"><label for="conPort">Port</label></dt>
 												<dd class="form_txt">
 													<SELECT class="form_contrl" id="conPort">
@@ -131,6 +141,8 @@
 													<a class="btn_entry_help" title="도움말"></a>
 													<span class="balloon entry_help02" style="display:none">도움말입니다.도움말입니다.</span>
 												</dd>
+											</dl>
+											<dl class="form_list noline bul_dot">
 												<dt class="form_tit"><label for="conAccNm">Login ID</label></dt>
 												<dd class="form_txt">
 													<SELECT class="form_contrl" id="conAccNm">
@@ -140,6 +152,8 @@
 														<option>[Received.conAccNm]</option>
 													</SELECT>
 												</dd>
+											</dl>
+											<dl class="form_list noline bul_dot">
 												<dt class="form_tit"><label for="conAccPwd">Login PWD</label></dt>
 												<dd class="form_txt">
 													<SELECT class="form_contrl" id="conAccPwd">
@@ -151,14 +165,18 @@
 												</dd>
 											</dl>
 										</div>
+										<!-- e: dl 구조 수정 -->
 									</div>
 									<div class="entry_setting setting02" style="display:none">
+										<!-- s: dl 구조 수정 -->
 										<div class="form_stl">
 											<dl class="form_list noline">
 												<dt class="form_tit"><label for="comm">Command</label></dt>
 												<dd class="form_txt">
 													<input type="text" name="" class="form_contrl" id="comm" placeholder="su">
 												</dd>
+											</dl>
+											<dl class="form_list noline">
 												<dt class="form_tit"><label for="accNm">Login ID</label></dt>
 												<dd class="form_txt">
 													<SELECT class="form_contrl" id="accNm">
@@ -168,6 +186,8 @@
 														<option>[Received.accNm]</option>
 													</SELECT>
 												</dd>
+											</dl>
+											<dl class="form_list noline">
 												<dt class="form_tit"><label for="accPwd">Login PWD</label></dt>
 												<dd class="form_txt">
 													<SELECT class="form_contrl" id="accPwd">
@@ -179,6 +199,7 @@
 												</dd>
 											</dl>
 										</div>
+										<!-- e: dl 구조 수정 -->
 									</div>
 									<div class="entry_setting setting03" style="display:none">
 										<div class="form_stl">
@@ -191,22 +212,28 @@
 										</div>
 									</div>
 									<div class="entry_setting setting04" style="display:none">
+										<!-- s: dl 구조 수정 -->
 										<div class="form_stl">
 											<dl class="form_list noline">
 												<dt class="form_tit"><label for="repeat01">반복 회수</label></dt>
 												<dd class="form_txt">
 													<input type="text" name="" class="form_contrl" id="repeat01" placeholder="5">
 												</dd>
+											</dl>
+											<dl class="form_list noline">
 												<dt class="form_tit"><label for="repeat02">반복 간격(mSEC)</label></dt>
 												<dd class="form_txt">
 													<input type="text" name="" class="form_contrl" id="repeat02" placeholder="3000">
 												</dd>
+											</dl>
+											<dl class="form_list noline">
 												<dt class="form_tit"><label for="repeat03">반복 간격 증가</label></dt>
 												<dd class="form_txt">
 													<input type="checkbox" name="" id="ck01" class="check_stl"><label for="ck01" class="check_stl_lab"> 반복 간격 증가</label>
 												</dd>
 											</dl>
 										</div>
+										<!-- e: dl 구조 수정 -->
 									</div>
 								</div>
 								<div class="ac_depth">

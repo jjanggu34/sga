@@ -73,7 +73,7 @@
                 }
             }
             td {
-                padding:5px 20px;
+                padding:8px 20px;
                 border:0;
                 border-bottom:$borderD;
                 font-size:var(--font-13);
@@ -226,6 +226,39 @@
                                 .form_contrl {
                                     display:block;
                                     width:$wh100;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detail_open {
+        background-color:var(--body);
+        &>td {
+            padding:20px 35px;
+            .detail_open_cont {
+                padding:0;
+                p {
+                    padding-bottom:20px;
+                    font-size:var(--font-14);
+                }
+                .tbl_list {
+                    padding:0;
+                    margin-bottom:20px;
+                    border:$borderD;
+                    border-radius:6px;
+                    background-color:var(--white);
+                    .default_tbl {
+                        tr {
+                            td {
+                                border:0;
+                                border-bottom:$borderD;
+                            }
+                            &:last-child {
+                                td {
+                                    border-bottom:0;
                                 }
                             }
                         }

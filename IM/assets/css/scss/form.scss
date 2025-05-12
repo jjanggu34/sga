@@ -74,6 +74,11 @@ $borderTs: "search_wrap", "tab_wrap";
     }
     &.flx {
         gap:4px;
+        .form_contrl{
+            &.date_ctl { //인풋 너비 변경될 때 같이 변경되어야 함
+                width:calc((270px - 16px) / 2);
+            }
+        }
     }
 }
 /* date2 -> calendar */

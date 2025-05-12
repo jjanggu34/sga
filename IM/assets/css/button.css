@@ -395,16 +395,6 @@ button.icon_arrow_none, a.icon_arrow_none {
   background-color: transparent;
 }
 
-.entrybox .btn_entry_del:after {
-  width: 16px;
-  height: 16px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: none;
-  background-image: url("../images/common/close.svg");
-  background-color: transparent;
-}
-
 .small_delbtn {
   width: 16px;
   height: 16px;
@@ -457,6 +447,35 @@ button.icon_arrow_none, a.icon_arrow_none {
   background-repeat: no-repeat;
   background-image: none;
   background-image: url("../images/common/btn_add.svg");
+  background-position: center;
+}
+
+/* detail_open 안에 button */
+.btns_detail ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+}
+.btns_detail ul li {
+  padding: 2px;
+  border: 1px solid var(--border-d);
+  border-radius: 6px;
+  background: none;
+}
+.btns_detail ul li a {
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/label/ico_FileEdit.svg");
+}
+.btns_detail ul li a.del {
+  background-image: url("../images/common/label/ico_trash.svg");
+  background-position: center;
+}
+.btns_detail ul li a.test {
+  background-image: url("../images/common/ico_code.svg");
   background-position: center;
 }
 

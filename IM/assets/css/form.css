@@ -76,6 +76,9 @@
 .form_date.flx {
   gap: 4px;
 }
+.form_date.flx .form_contrl.date_ctl {
+  width: 127px;
+}
 
 /* date2 -> calendar */
 .weeksTbl .week_row .diss_week {

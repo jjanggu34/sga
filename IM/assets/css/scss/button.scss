@@ -293,7 +293,7 @@ button, a {
 }
 
 /* close */
-$closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn", "sych_mnt_toast .btn_close";
+$closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 
 @each $close in $closes {
     .#{$close} {
@@ -326,6 +326,33 @@ $closes: "detail_search_btn i", "entrybox .btn_entry_del:after", "small_delbtn",
                 @include icon(16px,16px);
                 background-image:url("../images/common/btn_add.svg");
                 background-position:center;
+            }
+        }
+    }
+}
+
+/* detail_open 안에 button */
+.btns_detail {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 15px;
+        li {
+            padding:2px;
+            border:$borderD;
+            border-radius:6px;
+            background:none;
+            a {
+                @include icon(24px, 24px);
+                background-image:url("../images/common/label/ico_FileEdit.svg");
+                &.del {
+                    background-image:url("../images/common/label/ico_trash.svg");
+                    background-position:center;
+                }
+                &.test {
+                    background-image:url("../images/common/ico_code.svg");
+                    background-position:center;
+                }
             }
         }
     }

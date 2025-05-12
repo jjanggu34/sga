@@ -876,6 +876,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             position:unset;
             padding:0;
             text-align:right;
+            .icon.icon_reset {
+                @include wh(auto, auto);
+                padding-left:25px;
+                font-size:var(--font-13);
+                background-position:left center;
+            }
         }
     }
     .month_select {
@@ -1785,6 +1791,320 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .tbl_btm {
         padding:0 24px 20px;
+    }
+}
+
+.action_tree_wrap {
+    .action_tree_top {
+        padding:10px 20px;
+        .form_stl {
+            margin:0;
+            .form_list {
+                align-items: center;
+                padding:0;
+                border-bottom:0;
+                &.noline {
+                    .form_tit {
+                        width:auto;
+                        min-width:unset;
+                        padding:0;
+                    }
+                    .form_txt {
+                        min-height:auto;
+                        padding-left:30px;
+                    }
+                }
+            }
+        }
+        .btn_box {
+            padding:0;
+            margin-top:0;
+        }
+    }
+    .action_type {
+        &>ul {
+            padding:14px 0;
+            &>li {
+                border:0;
+                border-radius:0;
+                &:hover {
+                    box-shadow:none;
+                }
+                &:not(:has(ul)) {
+                    a {
+                        &::after {
+                            content:none;
+                        }
+                    }
+                }
+                &>a {
+                    margin:0 16px;
+                    border-radius:0;
+                    &::after {
+                        top:4px;
+                        @include wh(16px,16px);
+                        @include mask(var(--text-disabled));
+                        -webkit-mask-image:url("../images/common/ico_accordion2.svg");
+                        mask-image:url("../images/common/ico_accordion2.svg");
+                    }
+                    &.on {
+                        &::after {
+                            transform:rotate(-180deg);
+                        }
+                    }
+                }
+                &>ul {
+                    margin-top:10px;
+                    border:0;
+                    &::after {
+                        content:"";
+                        display:inline-block;
+                        width:calc(100% - 32px);
+                        height:1px;
+                        margin-left:16px;
+                        background-color:var(--border-d);
+                    }
+                    &>li {
+                        a {
+                            position:relative;
+                            padding:8px 0 8px 43px;
+                            font-weight:var(--font-regular);
+                            color:var(--content);
+                            &:hover {
+                                border-radius:0;
+                            }
+                            &::before {
+                                @include content(8px, 7px);
+                                position:absolute;
+                                top:50%;
+                                left:28px;
+                                transform:translateY(-50%);
+                                display:inline-block;
+                                border-left:1px solid var(--secondary);
+                                border-bottom:1px solid var(--secondary);
+                            }
+                        }
+                    }
+                }
+                &.btn_connect {
+                    &>ul {
+                        border:0;
+                        &>li {
+                            a {
+                                &:hover {
+                                    color:#2159F7;
+                                    background-color:#E5F2FF;
+                                    &::before {
+                                        border-left:1px solid #2159F7;
+                                        border-bottom:1px solid #2159F7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.btn_gather {
+                    &>ul {
+                        border:0;
+                        &>li {
+                            a {
+                                &:hover {
+                                    color:#981DFA;
+                                    background-color:#F1EFFF;
+                                    &::before {
+                                        border-left:1px solid #981DFA;
+                                        border-bottom:1px solid #981DFA;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.btn_execute {
+                    &>ul {
+                        &>li {
+                            a {
+                                &:hover {
+                                    color:#FFAB0F;
+                                    background-color:#FFFBE5;
+                                    &::before {
+                                        border-left:1px solid #FFAB0F;
+                                        border-bottom:1px solid #FFAB0F;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.btn_disconnect {
+                    &>ul {
+                        border:0;
+                        &>li {
+                            a {
+                                &:hover {
+                                    color:#F11D1D;
+                                    background-color:#FFE5E5;
+                                    &::before {
+                                        border-left:1px solid #F11D1D;
+                                        border-bottom:1px solid #F11D1D;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        a {
+            color:var(--content);
+        }
+    }
+    .action_list {
+        padding:20px 24px;
+        .entry_top {
+            padding:0 0 0 38px;
+            border:1px solid var(--btn-disabled);
+            &>ul {
+                display:inline-block;
+                margin:6px 0;
+                &>li {
+                    display:inline-block;
+                    a {
+                        border-radius:6px;
+                        font-size:var(--font-12);
+                        font-weight:var(--font-medium);
+                    }
+                }
+            }
+            &>a {
+                display:inline-block;
+            }
+            .btn_entry_desc {
+                @include wh(30px, 30px);
+                margin:6px 25px 0 0;
+                border:$borderD;
+                border-radius:6px;
+                text-indent:0;
+                background:none;
+                &::after {
+                    content:"";
+                    display:inline-block;
+                    @include icon(30px, 30px);
+                    background-size:60%;
+                    background-position:center;
+                    background-image:url("../images/common/ico_document.svg");
+                }
+            }
+        }
+        .btn_option {
+            top:5px;
+            @include wh (18px, 18px);
+            padding:0;
+            border:0;
+            border-radius:0;
+            background-color:transparent;
+            &::after {
+                top:0;
+                left:0;
+                @include wh (18px, 18px);
+                @include mask (var(--text-disabled));
+                background-position:center;
+                background-image:none;
+            }
+        }
+        .entry_name {
+            height:30px;
+            line-height:30px;
+            .btn_option {
+                top:2px;
+                right:0;
+                @include wh (24px, 24px);
+                &::after {
+                    top:0;
+                    left:0;
+                    @include wh(24px, 24px);
+                    -webkit-mask-image:url("../images/common/ico_Kebab.svg");
+                    mask-image:url("../images/common/ico_Kebab.svg");
+                }
+            }
+        }
+        .add_option {
+            height:30px;
+            line-height:30px;
+            .btn_option {
+                border-radius:6px;
+                background-color:var(--text-disabled);
+                &::after {
+                    background-color:var(--white);
+                    -webkit-mask-image:url("../images/common/icon_arrow_none.svg");
+                    mask-image:url("../images/common/icon_arrow_none.svg");
+                }
+            }
+        }
+        .entrybox { //on 되었을 때
+            &.entry_connect {
+                .entry_top {
+                    border-left:5px solid #2159F7;
+                }
+                .entry_name {
+                    &.on {
+                        color:#2159F7;
+                        .btn_option {
+                            &::after {
+                                background-color:#2159F7;
+                            }
+                        }
+                    }
+                }
+                .add_option {
+                    &.on {
+                        .btn_option {
+                            background-color:var(--basic);
+                        }
+                    }
+                }
+            }
+            .btn_entry_del {
+                position:relative;
+                top:0;
+                right:0;
+                @include wh(42px, 42px);
+                border:0;
+                border-radius:0 4px 4px 0;
+                background:var(--btn-disabled);
+                &::after {
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    @include wh (24px, 24px);
+                    @include mask(var(--text-disabled));
+                    background-image:none;
+                    -webkit-mask-image:url("../images/common/close.svg");
+                    mask-image:url("../images/common/close.svg");
+                }
+            }
+            .entry_setting {
+                margin-top:4px;
+                padding:9px 38px;
+                border-radius:4px;
+                &::before {
+                    content:none;
+                }
+                .form_stl {
+                    .form_list {
+                        &.noline {
+                            border-bottom:0;
+                            .form_tit {
+                                padding-top:0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        a {
+            color:var(--content);
+        }
     }
 }
 
