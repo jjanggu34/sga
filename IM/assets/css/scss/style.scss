@@ -2058,8 +2058,78 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 .add_option {
                     &.on {
+                        color:#2159F7;
                         .btn_option {
                             background-color:var(--basic);
+                        }
+                    }
+                }
+            }
+            &.entry_gather {
+                .entry_top {
+                    border-left:5px solid #981DFA;
+                }
+                .entry_name {
+                    &.on {
+                        color:#981DFA;
+                        .btn_option {
+                            &::after {
+                                background-color:#981DFA;
+                            }
+                        }
+                    }
+                }
+                .add_option {
+                    &.on {
+                        color:#981DFA;
+                        .btn_option {
+                            background-color:#981DFA;
+                        }
+                    }
+                }
+            }
+            &.entry_execute, &.entry_execute_err {
+                .entry_top {
+                    border-left:5px solid #FFAB0F;
+                }
+                .entry_name {
+                    &.on {
+                        color:#FFAB0F;
+                        .btn_option {
+                            &::after {
+                                background-color:#FFAB0F;
+                            }
+                        }
+                    }
+                }
+                .add_option {
+                    &.on {
+                        color:#FFAB0F;
+                        .btn_option {
+                            background-color:#FFAB0F;
+                        }
+                    }
+                }
+            }
+            &.entry_disconnect {
+                .entry_top {
+                    border-left:5px solid #F11D1E;
+                }
+                .entry_name {
+                    &.on {
+                        color:#F11D1E;
+                        .btn_option {
+                            &::after {
+                                background-color:#F11D1E;
+                            }
+                        }
+                    }
+                }
+                .add_option {
+                    &.on {
+                        color:#F11D1E;
+                        .btn_option {
+                            background-color:#F11D1E;
                         }
                     }
                 }
@@ -2092,18 +2162,134 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 .form_stl {
                     .form_list {
+                        margin-top:10px;
+                        padding:0 11px;
+                        &:first-child {
+                            margin-top:0;
+                        }
                         &.noline {
                             border-bottom:0;
                             .form_tit {
                                 padding-top:0;
                             }
+                            .form_txt {
+                                padding-left:0;
+                            }
+                        }
+                        &.bul_dot {
+                            align-items:center;
+                            &>dt {
+                                position:relative;
+                                &::before {
+                                    top:50%;
+                                    left:0;
+                                    transform:translateY(-50%);
+                                }
+                            }
+                        }
+                        &.topline {
+                            padding-top:10px;
                         }
                     }
+                    .form_row {
+                        .adddel_bts {
+                            margin-top:0;
+                            padding-top:0;
+                            .btn_option {
+                                top:0;
+                                @include wh(30px, 30px);
+                                border-radius:6px;
+                                background-color:var(--basic);
+                                &::after {
+                                    top:50%;
+                                    left:50%;
+                                    transform:translate(-50%,-50%);
+                                    @include wh(24px, 24px);
+                                    background-color:var(--white);
+                                    -webkit-mask-image:url("../images/common/btn_add.svg");
+                                    mask-image:url("../images/common/btn_add.svg");
+                                }
+                                &.btn_del_option {
+                                    &::after {
+                                        -webkit-mask-image:url("../images/common/btn_minus.svg");
+                                        mask-image:url("../images/common/btn_minus.svg");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    p {
+                        &.entry_txt {
+                            &.bul_dot {
+                                position:relative;
+                                padding:0 0 0 11px;
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    left: 0;
+                                    display: inline-block;
+                                    width: 3px;
+                                    height: 3px;
+                                    border-radius: 50%;
+                                    background: var(--content);
+                                }
+                            }
+                        }
+                    }
+                    div {
+                        &.form_list {
+                            display:grid;
+                            grid-template-columns: 1fr 1fr;
+                            &.bul_dot {
+                                .form_tit {
+                                    position:relative;
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        left: 0;
+                                        display: inline-block;
+                                        width: 3px;
+                                        height: 3px;
+                                        border-radius: 50%;
+                                        background: var(--content);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn_box {
+                    padding:0;
                 }
             }
         }
         a {
             color:var(--content);
+        }
+        .btn_columnadd {
+            height:45px;
+            margin-top:10px;
+            border:1px dashed var(--border-d);
+            border-radius:6px;
+            background-color:var(--table-th);
+            .btn_option {
+                top:10px;
+                transform:unset;
+                @include wh(24px, 24px);
+                border:none;
+                border-radius:6px;
+                background-color:var(--basic);
+                &::after {
+                    top:12px;
+                    left:12px;
+                    background-color:transparent;
+                    background-image:url("../images/common/btn_add.svg");
+                }
+            }
         }
     }
 }
@@ -2181,8 +2367,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /***************** moved_box *****************/
 .move_box {
     padding-left:24px;
-    &:first-child {
-        padding-left:0;
+    border:$borderD;
+    border-radius:6px;
+    padding:20px;
+    .moved_tit {
+        .tit_in_btn {
+            right:0;
+            button {
+                height:30px;
+                &:last-child {
+                    margin-right:0;
+                }
+            }
+        }
     }
 }
 .moved_box {
@@ -2480,9 +2677,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** move data *****************/
 .move_wrap {
-    padding:20px;
-    border:$borderD;
-    border-radius:6px;
     .mini_paging {
         position:unset;
         padding-top:20px;
@@ -2492,6 +2686,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding-top:20px;
     }
     .moved_box {
+        padding:20px;
+        border:$borderD;
+        border-radius:6px;
         &:only-child {
             padding-right:0;
         }

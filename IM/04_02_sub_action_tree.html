@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/jquery-ui.js"></script>
@@ -26,10 +29,12 @@
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
+					<!--s: 이미지 경로 및 이미지 변경-->
 					<a href="" class="logo">
-						<img src="img/common/logo_186x30.png">
+						<img src="img/common/logo.png">
 						<span>Admin</span>
 					</a>
+					<!--e: 이미지 경로 및 이미지 변경-->
 				</div>
 				<ul class="nav_list">
 					<li><a href="" class=""><i class="icon_user"></i><span>사용자</span></a></li>
@@ -58,11 +63,11 @@
 			</div>
 		</div>
 		<div id="container">
+			<!-- s: header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="header">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>시스템 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">시스템 관리</a></li>
@@ -70,41 +75,68 @@
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> user01</a></li>
-					<li class="btn_alim"><a href="">alim<span>13</span></a></li>
-					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
+					<li class="btn_top_user"><a href="">user01</a></li>
+					<li class="timer">
+						<i></i>
+						<span><em>00:15:00</em> 후 접속 끊김</span>
+						<button class="time_ref" title="세션 시간 새로고침"></button>
 					</li>
+					<li class="btn_alim"><a href="">alim</a>
+						<div class="balloon alim_pop" style="display:none">
+							<div class="alim_pop_wrap">
+								<div class="alim_top">
+									<span>새 알림</span>
+									<button class="alim_clear">모든 알림 지우기</button>
+								</div>
+								<ul class="alim_list">
+									<li><a><i></i>경고!</a></li>
+									<li><a><i></i>나한테만 오는 알람메세지이이이이 두줄일때 다음줄로 넘어갑니다 </a></li>
+									<li><a><i></i>전체적인 알람공지</a></li>
+									<li><a><i></i>SMS문자왔숑</a></li>
+									<li><a><i></i>메일왔네요</a></li>
+									<li><a><i></i>기타알람</a></li>
+								</ul>
+								<div class="allAlim">
+									<a href="" class="btn_allAlim">모두 보기 ></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
+					<li class="btn_logout"><a href="">logout</a></li>
 				</ul>
 			</div>
-			<div class="content">
+			<!-- e: header_title 내용 수정 및 gl_nav 수정 -->
+			<!-- s: class 추가 -->
+			<div class="content only">
+			<!-- e: class 추가 -->
 				<div class="topPrss">
 					<div class="inner_topPrss">
+						<!-- s: class변경 -->
 						<div class="detail_process">
 							<ul class="flx">
-								<li class="flx_cell process_comple"><span class="s_num">1</span>기본 정보</li>
-								<li class="flx_cell process_comple"><span class="s_num">2</span>서버 정보</li>
-								<li class="flx_cell process_comple"><span class="s_num">3</span>사용자 속성</li>
-								<li class="flx_cell process_comple"><span class="s_num">4</span>그룹 속성</li>
-								<li class="flx_cell process_comple"><span class="s_num">5</span>조직 속성</li>
+								<li class="flx_cell pro_comple"><span class="s_num">1</span>기본 정보</li>
+								<li class="flx_cell pro_comple"><span class="s_num">2</span>서버 정보</li>
+								<li class="flx_cell pro_comple"><span class="s_num">3</span>사용자 속성</li>
+								<li class="flx_cell pro_comple"><span class="s_num">4</span>그룹 속성</li>
+								<li class="flx_cell pro_comple"><span class="s_num">5</span>조직 속성</li>
 								<li class="flx_cell process_current"><span class="s_num">6</span>조정 정책</li>
 							</ul>
 						</div>
+						<!-- e: class변경 -->
 					</div>
 				</div>
 				<div class="btn_box cl_both">
 					<div class="f_l">
 					</div>
 					<div class="f_r">
-						<a href="" class="white">되돌리기</a>
-						<a href="" class="blue">확인</a>
-						<a href="" class="skyblue">취소</a>
-						<a href="" class="navy">저장</a>
-					</div>				
+						<!-- s: class 변경 -->
+						<a href="" class="line icon_reset">되돌리기</a>
+						<a href="" class="basic">확인</a>
+						<a href="" class="line">취소</a>
+						<a href="" class="primary">저장</a>
+						<!-- e: class 변경 -->
+					</div>
 				</div>
 				<div class="action_tree_wrap">
 					<div class="action_tree_top cl_both">
@@ -185,7 +217,8 @@
 									<div>
 										<div class="entry_setting setting01" style="display:none">
 											<div class="form_stl">
-												<dl class="form_list noline">
+												<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="IPAddr">IP Address</label></dt>
 													<dd class="form_txt">
 														<SELECT class="form_contrl" id="IPAddr">
@@ -196,6 +229,8 @@
 														</SELECT>
 														<span class="balloon entry_help" style="display:none">도움말입니다.</span>
 													</dd>
+												</dl>
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="conPort">Port</label></dt>
 													<dd class="form_txt">
 														<SELECT class="form_contrl" id="conPort">
@@ -207,6 +242,8 @@
 														<a class="btn_entry_help" title="도움말"></a>
 														<span class="balloon entry_help02" style="display:none">도움말입니다.도움말입니다.</span>
 													</dd>
+												</dl>
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="conAccNm">Login ID</label></dt>
 													<dd class="form_txt">
 														<SELECT class="form_contrl" id="conAccNm">
@@ -216,6 +253,8 @@
 															<option>[Received.conAccNm]</option>
 														</SELECT>
 													</dd>
+												</dl>
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="conAccPwd">Login PWD</label></dt>
 													<dd class="form_txt">
 														<SELECT class="form_contrl" id="conAccPwd">
@@ -226,17 +265,21 @@
 														</SELECT>
 													</dd>
 												</dl>
+												<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 											</div>
 										</div>
 									</div>
 									<div>
 										<div class="entry_setting setting02" style="display:none">
 											<div class="form_stl">
-												<dl class="form_list noline">
+												<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="comm">Command</label></dt>
 													<dd class="form_txt">
 														<input type="text" name="" class="form_contrl" id="comm" placeholder="su">
 													</dd>
+												</dl>
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="accNm">Login ID</label></dt>
 													<dd class="form_txt">
 														<SELECT class="form_contrl" id="accNm">
@@ -246,6 +289,8 @@
 															<option>[Received.accNm]</option>
 														</SELECT>
 													</dd>
+												</dl>
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="accPwd">Login PWD</label></dt>
 													<dd class="form_txt">
 														<SELECT class="form_contrl" id="accPwd">
@@ -256,38 +301,47 @@
 														</SELECT>
 													</dd>
 												</dl>
+												<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 											</div>
 										</div>
 									</div>
 									<div>
 										<div class="entry_setting setting03" style="display:none">
 											<div class="form_stl">
-												<dl class="form_list noline">
+												<!-- s: bul_dot 추가 -->
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="waittime">대기 시간(mSEC)</label></dt>
 													<dd class="form_txt">
 														<input type="text" name="" class="form_contrl" id="waittime" placeholder="1000">
 													</dd>
 												</dl>
+												<!-- s: bul_dot 추가 -->
 											</div>
 										</div>
 									</div>
 									<div>
 										<div class="entry_setting setting04" style="display:none">
 											<div class="form_stl">
-												<dl class="form_list noline">
+												<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="repeat01">반복 회수</label></dt>
 													<dd class="form_txt">
 														<input type="text" name="" class="form_contrl" id="repeat01" placeholder="5">
 													</dd>
+												</dl>
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="repeat02">반복 간격(mSEC)</label></dt>
 													<dd class="form_txt">
 														<input type="text" name="" class="form_contrl" id="repeat02" placeholder="3000">
 													</dd>
+												</dl>
+												<dl class="form_list noline bul_dot">
 													<dt class="form_tit"><label for="repeat03">반복 간격 증가</label></dt>
 													<dd class="form_txt">
 														<input type="checkbox" name="" id="ck01" class="check_stl"><label for="ck01" class="check_stl_lab"> 반복 간격 증가</label>
 													</dd>
 												</dl>
+												<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 											</div>
 										</div>
 									</div>
@@ -316,7 +370,8 @@
 										<div>
 											<div class="entry_setting setting01" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- s: bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="">종류(Type)</label></dt>
 														<dd class="form_txt">
 															<SELECT class="form_contrl" id="">
@@ -327,6 +382,7 @@
 															</SELECT>
 														</dd>
 													</dl>
+													<!-- e: bul_dot 추가 -->
 													<ul class="cl_both form_row">
 														<li class="">
 															<SELECT class="form_contrl" id="">
@@ -368,7 +424,8 @@
 										<div>
 											<div class="entry_setting setting02" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- s: bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="">Command</label></dt>
 														<dd class="form_txt">
 															<ul class="cl_both form_row">
@@ -525,11 +582,15 @@
 															</ul>
 														</dd>
 													</dl>
-													<dl class="form_list noline topline">
+													<!-- e: bul_dot 추가 -->
+													<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+													<dl class="form_list noline topline bul_dot">
 														<dt class="form_tit"><label for="">실행결과 수집</label></dt>
 														<dd class="form_txt">
 															<input type="checkbox" name="" id="ck02" class="check_stl"><label for="ck02" class="check_stl_lab"> 결과수집</label>
 														</dd>
+													</dl>
+													<dl class="form_list noline  bul_dot">
 														<dt class="form_tit"><label for="">결과 판단 기준</label></dt>
 														<dd class="form_txt">
 															<SELECT class="form_contrl" id="">
@@ -540,6 +601,7 @@
 															</SELECT>
 														</dd>
 													</dl>
+													<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 													<ul class="cl_both form_row">
 														<li class="">
 															<SELECT class="form_contrl" id="">
@@ -581,7 +643,9 @@
 										<div>
 											<div class="entry_setting setting03" style="display:none">
 												<div class="form_stl">
-													<p class="entry_txt">수집 값(변수 정의)</p>
+													<!-- s: bul_dot 추가 -->
+													<p class="entry_txt bul_dot">수집 값(변수 정의)</p>
+													<!-- e: bul_dot 추가 -->
 													<ul class="form_row">
 														<li class="">
 															<input type="text" class="form_contrl" name="" placeholder="hasHomeFolder">
@@ -763,7 +827,8 @@
 										<div>
 											<div class="entry_setting setting01" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="execute01">종류(Type)</label></dt>
 														<dd class="form_txt">
 															<ul class="cl_both form_row">
@@ -780,22 +845,28 @@
 																</li>
 															</ul>
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit">대기 시간</dt>
 														<dd class="form_txt">
 															<input type="checkbox" name="" id="exe03" class="check_stl"><label for="exe03" class="check_stl_lab"> 대기 최대 시간 설정</label>
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="execute02">대기 시간(mSEC)</label></dt>
 														<dd class="form_txt">
 															<input type="text" name="" class="form_contrl" id="execute02" placeholder="300000">
 														</dd>
 													</dl>
+													<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 												</div>
 											</div>
 										</div>
 										<div>
 											<div class="entry_setting setting02" style="display:none">
 												<div class="form_stl conditionline_wrap">
-													<div class="form_list noline">
+													<!-- s: bul_dot 추가 -->
+													<div class="form_list noline bul_dot">
 														<div class="form_tit"><label for="">명령줄</label></div>
 														<div class="form_txt">
 															<ul class="cl_both form_row">
@@ -843,7 +914,7 @@
 															<button class="line_del" title="삭제"></button>
 														</div>
 													</div>
-													<div class="form_list noline">
+													<div class="form_list topline noline bul_dot">
 														<div class="form_tit"><label for="">명령줄</label></div>
 														<div class="form_txt">
 															<ul class="cl_both form_row">
@@ -891,6 +962,7 @@
 															<button class="line_del" title="삭제"></button>
 														</div>
 													</div>
+													<!-- e: bul_dot 추가 -->
 												</div>
 												<div>
 													<a class="btn_columnadd">
@@ -902,7 +974,8 @@
 										<div>
 											<div class="entry_setting setting03" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="execute01">종류(Type)</label></dt>
 														<dd class="form_txt">
 															<ul class="cl_both form_row">
@@ -919,15 +992,20 @@
 																</li>
 															</ul>
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit">대기 시간</dt>
 														<dd class="form_txt">
 															<input type="checkbox" name="" id="exe03" class="check_stl"><label for="exe03" class="check_stl_lab"> 대기 최대 시간 설정</label>
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="execute02">대기 시간(mSEC)</label></dt>
 														<dd class="form_txt">
 															<input type="text" name="" class="form_contrl" id="execute02" placeholder="300000">
 														</dd>
 													</dl>
+													<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 												</div>
 											</div>
 										</div>
@@ -952,16 +1030,20 @@
 										<div>
 											<div class="entry_setting setting01" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="error01">Error Code</label></dt>
 														<dd class="form_txt">
 															<input type="text" name="" class="form_contrl" id="error01" placeholder="-32111">
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="error02">Error Message</label></dt>
 														<dd class="form_txt">
 															<textarea class="form_contrl"></textarea>
 														</dd>
 													</dl>
+													<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 												</div>
 											</div>
 										</div>
@@ -1013,7 +1095,8 @@
 										<div>
 											<div class="entry_setting setting01" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="IPAddr">IP Address</label></dt>
 														<dd class="form_txt">
 															<SELECT class="form_contrl" id="IPAddr">
@@ -1024,6 +1107,8 @@
 															</SELECT>
 															<span class="balloon entry_help" style="display:none">도움말입니다.</span>
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="conPort">Port</label></dt>
 														<dd class="form_txt">
 															<SELECT class="form_contrl" id="conPort">
@@ -1035,6 +1120,8 @@
 															<a class="btn_entry_help" title="도움말"></a>
 															<span class="balloon entry_help02" style="display:none">도움말입니다.도움말입니다.</span>
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="conAccNm">Login ID</label></dt>
 														<dd class="form_txt">
 															<SELECT class="form_contrl" id="conAccNm">
@@ -1044,6 +1131,8 @@
 																<option>[Received.conAccNm]</option>
 															</SELECT>
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="conAccPwd">Login PWD</label></dt>
 														<dd class="form_txt">
 															<SELECT class="form_contrl" id="conAccPwd">
@@ -1054,17 +1143,21 @@
 															</SELECT>
 														</dd>
 													</dl>
+													<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 												</div>
 											</div>
 										</div>
 										<div>
 											<div class="entry_setting setting02" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- s: dl 구조 수정 및 bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="comm">Command</label></dt>
 														<dd class="form_txt">
 															<input type="text" name="" class="form_contrl" id="comm" placeholder="su">
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="accNm">Login ID</label></dt>
 														<dd class="form_txt">
 															<SELECT class="form_contrl" id="accNm">
@@ -1074,6 +1167,8 @@
 																<option>[Received.accNm]</option>
 															</SELECT>
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="accPwd">Login PWD</label></dt>
 														<dd class="form_txt">
 															<SELECT class="form_contrl" id="accPwd">
@@ -1084,38 +1179,47 @@
 															</SELECT>
 														</dd>
 													</dl>
+													<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 												</div>
 											</div>
 										</div>
 										<div>
 											<div class="entry_setting setting03" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- s: bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="waittime">대기 시간(mSEC)</label></dt>
 														<dd class="form_txt">
 															<input type="text" name="" class="form_contrl" id="waittime" placeholder="1000">
 														</dd>
 													</dl>
+													<!-- e: bul_dot 추가 -->
 												</div>
 											</div>
 										</div>
 										<div>
 											<div class="entry_setting setting04" style="display:none">
 												<div class="form_stl">
-													<dl class="form_list noline">
+													<!-- ㄴ: dl 구조 수정 및 bul_dot 추가 -->
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="repeat01">반복 회수</label></dt>
 														<dd class="form_txt">
 															<input type="text" name="" class="form_contrl" id="repeat01" placeholder="5">
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="repeat02">반복 간격(mSEC)</label></dt>
 														<dd class="form_txt">
 															<input type="text" name="" class="form_contrl" id="repeat02" placeholder="3000">
 														</dd>
+													</dl>
+													<dl class="form_list noline bul_dot">
 														<dt class="form_tit"><label for="repeat03">반복 간격 증가</label></dt>
 														<dd class="form_txt">
 															<input type="checkbox" name="" id="ck01" class="check_stl"><label for="ck01" class="check_stl_lab"> 반복 간격 증가</label>
 														</dd>
 													</dl>
+													<!-- e: dl 구조 수정 및 bul_dot 추가 -->
 												</div>
 											</div>
 										</div>
@@ -1145,11 +1249,13 @@
 					<div class="f_l">
 					</div>
 					<div class="f_r">
-						<a href="" class="white">되돌리기</a>
-						<a href="" class="blue">확인</a>
-						<a href="" class="skyblue">취소</a>
-						<a href="" class="navy">저장</a>
-					</div>				
+						<!-- s: class 변경 -->
+						<a href="" class="line icon_reset">되돌리기</a>
+						<a href="" class="basic">확인</a>
+						<a href="" class="line">취소</a>
+						<a href="" class="primary">저장</a>
+						<!-- e: class 변경 -->
+					</div>
 				</div>
 			</div>
 			<div class="footer">
