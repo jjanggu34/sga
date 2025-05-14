@@ -85,14 +85,9 @@
 /*---------------------------------------------
     border-bottom이 after로 들어가야할 때
 ---------------------------------------------*/
-.bAfter::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -24px;
-  width: 108.3%;
-  height: 1px;
-  background-color: var(--border-d);
+.bBorder {
+  border-bottom: 1px solid var(--border-d) !important;
+  border-radius: 0 !important;
 }
 
 /*---------------------------------------------
@@ -132,7 +127,7 @@
   border: 1px solid var(--border-d);
   font-size: var(--font-13);
   font-weight: var(--font-regular);
-  line-height: 16px;
+  line-height: 1;
 }
 
 .icon_list {
@@ -541,6 +536,7 @@
 
 .dupli_check {
   display: flex;
+  padding-top: 5px;
   padding-left: 0;
 }
 .dupli_check i {
@@ -706,7 +702,7 @@
   background: var(--content);
 }
 
-.noline .form_tit, .noline .content .form_stl .form_tbl.bul_dot li .form_txt, .content .form_stl .form_tbl.bul_dot li .noline .form_txt {
+.noline .form_tit, .noline .content .form_stl .form_tbl.bul_dot > li .form_txt, .content .form_stl .form_tbl.bul_dot > li .noline .form_txt {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -905,7 +901,7 @@
   background-color: var(--title);
 }
 .tab_wrap.cont_in_tab {
-  padding: 16px 6px;
+  padding: 16px 30px;
   border-radius: 10px;
   background-color: transparent;
 }
@@ -1056,7 +1052,7 @@
 .detail_search_wrap .search_column4 .col dl + dl {
   margin-top: 10px;
 }
-.detail_search_wrap .search_column4 .col dl.bul_dot dt::before {
+.detail_search_wrap dl.bul_dot dt::before {
   top: 12px;
   left: 0;
 }
@@ -1678,7 +1674,7 @@
 .cont_wrap .content .worker_ch_area {
   position: relative;
   display: block;
-  padding-bottom: 0;
+  padding: 0 24px;
 }
 .cont_wrap .content .worker_ch_area .worker_ch_box {
   display: flex;
@@ -1711,16 +1707,13 @@
 }
 .cont_wrap .content .worker_ch_area .req_txt.inbl {
   position: absolute;
-  left: 67px;
+  left: 97px;
   bottom: 20px;
   font-size: var(--font-13);
   color: var(--text-disabled);
 }
-.cont_wrap .content .worker_ch_area + .tab_wrap.cont_in_tab::after {
-  content: none;
-}
 .cont_wrap .content .tree_menu_wrap {
-  padding: 0 0 20px;
+  padding: 0 24px 20px;
 }
 .cont_wrap .content .tree_menu_wrap .mini_search + .tree_menu_area {
   margin-top: 20px;
@@ -1844,7 +1837,7 @@
   width: 100%;
   height: auto;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   text-align: right;
 }
 .cont_wrap .content .tree_menu_wrap .tree_menu_area .mini_tbl .mini_search .search_inputbox {
@@ -1863,6 +1856,7 @@
 }
 .cont_wrap .content .tbl_list {
   padding: 0 0 10px;
+  margin: 0 24px;
   overflow-x: auto;
 }
 .cont_wrap .content .tbl_list::-webkit-scrollbar {
@@ -1873,16 +1867,16 @@
   background: #EEEEEE;
 }
 .cont_wrap .content .tbl_btm {
-  padding: 10px 10px 20px;
+  padding: 10px 34px 20px;
 }
 .cont_wrap .content .align_left {
-  padding-bottom: 24px;
+  padding: 0 24px 24px;
 }
 .cont_wrap .content .align_left + .form_wrap {
-  padding: 10px 0 14px;
+  padding: 10px 24px 14px;
 }
 .cont_wrap .content .form_wrap {
-  padding: 20px 0;
+  padding: 20px 24px;
 }
 .cont_wrap .content .form_wrap .workflow_box {
   margin-bottom: 0;
@@ -2002,12 +1996,12 @@
 .content .form_stl .form_tbl.noline li:last-child .form_txt {
   padding-bottom: 0;
 }
-.content .form_stl .form_tbl.noline .form_tit, .content .form_stl .form_tbl.noline .form_tbl.bul_dot li .form_txt, .content .form_stl .form_tbl.bul_dot li .form_tbl.noline .form_txt {
+.content .form_stl .form_tbl.noline .form_tit, .content .form_stl .form_tbl.noline .form_tbl.bul_dot > li .form_txt, .content .form_stl .form_tbl.bul_dot > li .form_tbl.noline .form_txt {
   min-width: 100px;
   width: 150px;
   padding: 10px;
 }
-.content .form_stl .form_tbl.noline .form_tit label, .content .form_stl .form_tbl.noline .form_tbl.bul_dot li .form_txt label, .content .form_stl .form_tbl.bul_dot li .form_tbl.noline .form_txt label {
+.content .form_stl .form_tbl.noline .form_tit label, .content .form_stl .form_tbl.noline .form_tbl.bul_dot > li .form_txt label, .content .form_stl .form_tbl.bul_dot > li .form_tbl.noline .form_txt label {
   margin-bottom: 0;
 }
 .content .form_stl .form_tbl.noline .form_txt {
@@ -2017,20 +2011,23 @@
 .content .form_stl .form_tbl.noline .form_txt .cl_both .f_l {
   margin-right: 10px;
 }
-.content .form_stl .form_tbl.bul_dot li {
+.content .form_stl .form_tbl.bul_dot > li {
   display: flex;
   padding: 11px 20px;
 }
-.content .form_stl .form_tbl.bul_dot li .form_tit, .content .form_stl .form_tbl.bul_dot li .form_txt {
+.content .form_stl .form_tbl.bul_dot > li .form_tit, .content .form_stl .form_tbl.bul_dot > li .form_txt {
   display: inline-block;
   padding: 0;
   border-bottom: 0;
 }
-.content .form_stl .form_tbl.bul_dot li .form_txt {
+.content .form_stl .form_tbl.bul_dot > li .form_txt {
   width: 100%;
 }
 .content .form_stl .form_tbl li {
   display: flex;
+}
+.content .form_stl .form_tbl li .form_tit, .content .form_stl .form_tbl.bul_dot > li li .form_txt {
+  font-weight: var(--font-regular);
 }
 .content .form_stl .form_list {
   display: flex;
@@ -2038,12 +2035,12 @@
   padding: 11px;
   border-bottom: 1px solid var(--border-d);
 }
-.content .form_stl .form_list .form_tit, .content .form_stl .form_list .form_tbl.bul_dot li .form_txt, .content .form_stl .form_tbl.bul_dot li .form_list .form_txt {
+.content .form_stl .form_list .form_tit, .content .form_stl .form_list .form_tbl.bul_dot > li .form_txt, .content .form_stl .form_tbl.bul_dot > li .form_list .form_txt {
   position: unset;
   padding-top: 0;
   margin: 0;
 }
-.content .form_stl .form_list .form_tit::before, .content .form_stl .form_list .form_tbl.bul_dot li .form_txt::before, .content .form_stl .form_tbl.bul_dot li .form_list .form_txt::before {
+.content .form_stl .form_list .form_tit::before, .content .form_stl .form_list .form_tbl.bul_dot > li .form_txt::before, .content .form_stl .form_tbl.bul_dot > li .form_list .form_txt::before {
   left: 10px;
 }
 .content .form_stl .form_list .form_txt {
@@ -2076,7 +2073,7 @@
   padding: 0;
   border-bottom: 0;
 }
-.action_tree_wrap .action_tree_top .form_stl .form_list.noline .form_tit, .action_tree_wrap .action_tree_top .content .form_stl .form_list.noline .form_tbl.bul_dot li .form_txt, .content .action_tree_wrap .action_tree_top .form_stl .form_list.noline .form_tbl.bul_dot li .form_txt, .action_tree_wrap .action_tree_top .content .form_stl .form_tbl.bul_dot li .form_list.noline .form_txt, .content .action_tree_wrap .action_tree_top .form_stl .form_tbl.bul_dot li .form_list.noline .form_txt {
+.action_tree_wrap .action_tree_top .form_stl .form_list.noline .form_tit, .action_tree_wrap .action_tree_top .content .form_stl .form_list.noline .form_tbl.bul_dot > li .form_txt, .content .action_tree_wrap .action_tree_top .form_stl .form_list.noline .form_tbl.bul_dot > li .form_txt, .action_tree_wrap .action_tree_top .content .form_stl .form_tbl.bul_dot > li .form_list.noline .form_txt, .content .action_tree_wrap .action_tree_top .form_stl .form_tbl.bul_dot > li .form_list.noline .form_txt {
   width: auto;
   min-width: unset;
   padding: 0;
@@ -2406,7 +2403,7 @@
 .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline {
   border-bottom: 0;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline .form_tit, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl .form_list.noline .form_tbl.bul_dot li .form_txt, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline .form_tbl.bul_dot li .form_txt, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl .form_tbl.bul_dot li .form_list.noline .form_txt, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot li .form_list.noline .form_txt {
+.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline .form_tit, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl .form_list.noline .form_tbl.bul_dot > li .form_txt, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline .form_tbl.bul_dot > li .form_txt, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl .form_tbl.bul_dot > li .form_list.noline .form_txt, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot > li .form_list.noline .form_txt {
   padding-top: 0;
 }
 .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline .form_txt {
@@ -2471,10 +2468,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tit, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl div.form_list.bul_dot .form_tbl.bul_dot li .form_txt, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot li .form_txt, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl .form_tbl.bul_dot li div.form_list.bul_dot .form_txt, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot li div.form_list.bul_dot .form_txt {
+.action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tit, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt {
   position: relative;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tit::before, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl div.form_list.bul_dot .form_tbl.bul_dot li .form_txt::before, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot li .form_txt::before, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl .form_tbl.bul_dot li div.form_list.bul_dot .form_txt::before, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot li div.form_list.bul_dot .form_txt::before {
+.action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tit::before, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt::before, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt::before, .action_tree_wrap .action_list .entrybox .entry_setting .content .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt::before, .content .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2660,6 +2657,9 @@
 }
 .moved_box .pcs_ctg_list li a.on::after {
   background-color: var(--primary);
+}
+.moved_box .moved_list {
+  border-radius: 0;
 }
 
 /***************** i-card_wrap *****************/

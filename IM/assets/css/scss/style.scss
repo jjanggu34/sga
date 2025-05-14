@@ -56,16 +56,9 @@ $btnstls: "trcolor", "fcolor";
 /*---------------------------------------------
     border-bottom이 after로 들어가야할 때
 ---------------------------------------------*/
-.bAfter {
-    &::after {
-        content:"";
-        position:absolute;
-        bottom:0;
-        left:-24px;
-        width:108.3%;
-        height:1px;
-        background-color:var(--border-d);
-    }
+.bBorder {
+    border-bottom:$borderD !important;
+    border-radius:0 !important;
 }
 
 /*---------------------------------------------
@@ -102,7 +95,7 @@ $btnstls: "trcolor", "fcolor";
     width:auto;
     padding:5px 15px 4px;
     border:$borderD;
-    @include title(var(--font-13), var(--font-regular), 16px);
+    @include title(var(--font-13), var(--font-regular), 1);
 }
 
 $icons: "icon_list", "icon_pgs", "icon_ff";
@@ -358,6 +351,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .dupli_check {
     display:flex;
+    padding-top:5px;
     padding-left:0;
     i {
         @include wh (16px, 16px);
@@ -694,7 +688,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     &.cont_in_tab {
-        padding:16px 6px;
+        padding:16px 30px;
         border-radius:10px;
         background-color:transparent;
         .tab_list {
@@ -837,13 +831,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &+dl {
                     margin-top:10px;
                 }
-                &.bul_dot {
-                    dt {
-                        &::before {
-                            top:12px;
-                            left:0;
-                        }
-                    }
+            }
+        }
+    }
+    dl {
+        &.bul_dot {
+            dt {
+                &::before {
+                    top:12px;
+                    left:0;
                 }
             }
         }
@@ -1403,7 +1399,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .worker_ch_area {
             position:relative;
             display:block;
-            padding-bottom:0;
+            padding:0 24px;
             .worker_ch_box {
                 display:flex;
                 flex-direction:row-reverse;
@@ -1433,20 +1429,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .req_txt {
                 &.inbl {
                     position:absolute;
-                    left:67px;
+                    left:97px;
                     bottom:20px;
                     font-size:var(--font-13);
                     color:var(--text-disabled);
                 }
             }
-            &+.tab_wrap.cont_in_tab{
-                &::after {
-                    content:none;
-                }
-            }
         }
         .tree_menu_wrap {
-            padding:0 0 20px;
+            padding:0 24px 20px;
             .mini_search { // tree_menu_box 밖에 있을 때
                 &+.tree_menu_area {
                     margin-top:20px;
@@ -1563,7 +1554,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     .mini_search{ //tree 안 list 위에 있을 때
                         @include wh($wh100, auto);
                         padding:0;
-                        margin-bottom:20px;
+                        margin-bottom:14px;
                         text-align:right;
                         .search_inputbox {
                             max-width:278px;
@@ -1584,6 +1575,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .tbl_list {
             padding:0 0 10px;
+            margin:0 24px;
             overflow-x:auto;
             &::-webkit-scrollbar {
                 height:7px;
@@ -1594,16 +1586,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .tbl_btm {
-            padding:10px 10px 20px;
+            padding:10px 34px 20px;
         }
         .align_left {
-            padding-bottom:24px;
+            padding:0 24px 24px;
             &+.form_wrap {
-                padding:10px 0 14px;
+                padding:10px 24px 14px;
             }
         }
         .form_wrap {
-            padding:20px 0;
+            padding:20px 24px;
             .workflow_box {
                 margin-bottom:0;
             }
@@ -1739,7 +1731,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             &.bul_dot {
-                li {
+                &>li {
                     display:flex;
                     padding:11px 20px;
                     .form_tit {
@@ -1755,6 +1747,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             li {
                 display:flex;
+                .form_tit {
+                    font-weight:var(--font-regular);
+                }
             }
         }
         .form_list {
@@ -2420,6 +2415,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
+    }
+    .moved_list {
+        border-radius:0;
     }
 }
 

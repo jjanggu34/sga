@@ -5,6 +5,7 @@
 ---------------------------------------------*/
 body {
     // min-width:1600px;   
+    height:100%;
     background:var(--body);
     overflow:auto;
     * {
@@ -27,21 +28,14 @@ body {
         .nav_list {
             li {
                 a {
-                    i {
-                        left:21px;
-                    }
                     &.depth_menu {
                         &::after {
                             display:none;
                         }
                     }
-                }
-            }
-        }
-        .header {
-            .btn_lnb {
-                a {
-                    left:24px;
+                    i {
+                        left:21px;
+                    }
                 }
             }
         }
@@ -52,8 +46,16 @@ body {
                 padding-left:70px;
             }
         }
+        .header {
+            .btn_lnb {
+                a {
+                    left:24px;
+                }
+            }
+        }
     }
     .nav {
+        border-right:$borderD;
         box-shadow:none;
     }
     .nav_header {
@@ -102,6 +104,19 @@ body {
                         background-color:var(--primary);
                     }
                 }
+                &:hover {
+                    box-shadow:none;
+                    color:var(--primary);
+                }
+                &::after {
+                    top:50%;
+                    transform: translateY(-50%);
+                    display:inline-block;
+                    @include wh (16px, 16px);
+                    @include mask(var(--content));
+                    -webkit-mask-image:url("../images/common/menu_arr.svg");
+                    mask-image:url("../images/common/menu_arr.svg");
+                }
                 i {
                     top:13px;
                     left:14px;
@@ -144,19 +159,6 @@ body {
                         -webkit-mask-image:url("../images/common/nav_management.svg");
                         mask-image:url("../images/common/nav_management.svg");
                     }
-                }
-                &:hover {
-                    box-shadow:none;
-                    color:var(--primary);
-                }
-                &::after {
-                    top:50%;
-                    transform: translateY(-50%);
-                    display:inline-block;
-                    @include wh (16px, 16px);
-                    @include mask(var(--content));
-                    -webkit-mask-image:url("../images/common/menu_arr.svg");
-                    mask-image:url("../images/common/menu_arr.svg");
                 }
                 span {
                     font-size:var(--font-13);
@@ -292,20 +294,32 @@ body {
             top:50%;
             right:20px;
             transform:translateY(-50%);
-            display:inline-block;
+            display:inline-flex;
+            align-items:center;
             width:auto;
             font-size:0;
             li {
                 display:inline-block;
-                padding-left:15px;
+                padding-left:10px;
+                font-size:0;
                 &.timer{
                     position:relative;
-                    padding-right:13px;
-                    border-right:$borderD;
+                    padding-right:10px;
+                    &::after {
+                        content:"";
+                        position:absolute;
+                        top:-18px;
+                        right:0;
+                        display:inline-block;
+                        @include wh (1px, 60px);
+                        background-color:var(--border-d);
+                    }
                     span {
                         padding-left:0;
                         color:var(--title);
+                        line-height:24px;
                         em {
+                            padding-left:20px;
                             color:var(--primary);
                         }
                     }
@@ -322,8 +336,9 @@ body {
                     }
                     i {
                         @extend .time_ref;
-                        -webkit-mask-size:70%;
-                        mask-size:70%;
+                        position:absolute;
+                        top:3px;
+                        @include wh (16px, 16px);
                         -webkit-mask-image:url("../images/common/ico_time.svg");
                         mask-image:url("../images/common/ico_time.svg");
                     }
@@ -361,7 +376,12 @@ body {
                 }
                 &.btn_top_user a {
                     @include wh (auto, auto);
+                    font-weight:var(--font-regular);
+                    color:var(--title);
                     background:none;
+                }
+                a {
+                    line-height:24px;
                 }
             }
         }
@@ -394,7 +414,7 @@ body {
             background:var(--body);
             .content:not(.cnt_lyt_sc .content) {
                 width:calc(($wh100 - 8px) / 2);
-                padding:20px 24px;
+                padding:20px 0;
                 margin-top:0;
                 &:last-child{
                     padding-top:18px;
@@ -408,13 +428,14 @@ body {
         }
         .content {
             padding:0;
-            margin:60px 0 20px;
-            min-height:calc(100vh - 100px);//header + 위아래 margin
+            // margin:60px 0 20px;
+            height:100%;
+            min-height:calc(100vh - 80px);//header + 위아래 margin
             border:$borderD;
             border-radius:3px;
             box-shadow:unset;
             > div {
-                &:last-child {
+                &:last-child:not(.list_btn) {
                     padding-bottom:0;
                 }
                 &.list_btn {
@@ -422,7 +443,8 @@ body {
                 }
             }
             &.cont_scroll {
-                max-height:770px;
+                height:100%;
+                max-height:741px;
                 overflow-y:auto;
                 .tab_wrap {
                     padding-top:0;
@@ -440,7 +462,9 @@ body {
                     padding:20px 24px;
                     margin-top:0;
                     &.cont_scroll {
-                        max-height:620px;
+                        height:100%;
+                        min-height:auto;
+                        max-height:544px;
                     }
                     .tab_wrap {
                         &.cont_in_tab {
@@ -551,7 +575,8 @@ body {
     #SGIM_wrap {
         #container {
             .cont_wrap {
-                margin:4px 4px 0;
+                margin:0 4px;
+                padding:64px 0 0;
                 .content {
                     margin:0;
                 }

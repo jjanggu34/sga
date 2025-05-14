@@ -36,12 +36,13 @@
 					<form class="detail_search_wrap" style="display:none">
 						<p class="detail_search_btn">상세검색<i>닫기</i></p>
 						<div class="search_column4">
+							<!-- s: class명 추가 bul_dot -->
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail01">종류</label></dt>
 									<dd><input type="text" name="" id="detail01" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail02">제조사</label></dt>
 									<dd><select name="" id="detail02" class="form_contrl">
 										<option value="">전체</option>
@@ -53,17 +54,17 @@
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail04">제조사</label></dt>
 									<dd><input type="text" name="" id="detail04" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail05">도메인</label></dt>
 									<dd><input type="text" name="" id="detail05" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -73,17 +74,17 @@
 										<option value="">555</option>
 									</select></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt>관리자ID</dt>
 									<dd class="txt">admin</dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail09">이름</label></dt>
 									<dd><input type="text" name="" id="detail09" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail10">계정구분</label></dt>
 									<dd><select name="" id="detail10" class="form_contrl">
 										<option value="">전체</option>
@@ -94,11 +95,14 @@
 									</select></dd>
 								</dl>
 							</div>
+							<!-- e: class명 추가 bul_dot -->
 						</div>
 						<div class="box2">
 							<p class="btn_box">
-								<a href="" class="white">초기화</a>
-								<a href="" class="blue">검색</a>
+								<!-- s: class 변경 -->
+								<a href="" class="line icon icon_reset">초기화</a>
+								<a href="" class="primary">검색</a>
+								<!-- e: class 변경 -->
 							</p>
 						</div>
 					</form>
@@ -162,10 +166,9 @@
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>
+							<!-- s: td 삭제 후 colsapn="7"로 변경 -->
 							<tr class="detail_open">
-								<td></td>
-								<td><i class="icon_detail"></i></td>
-								<td colspan="5">
+								<td colspan="7">
 									<div class="detail_open_cont">
 										<p>내용 없음</p>
 										<div class="tbl_list">
@@ -175,51 +178,63 @@
 													<td>Account Read</td>
 													<td>SGIM</td>
 													<td>V1.0 (2019.08.31)</td>
-													<td class="btns_detail"><ul class="cl_both">
-														<li class="f_l wid33">
-															<a title="편집"></a>
-														</li>
-														<li class="f_l wid33">
-															<a title="삭제" class="del"></a>
-														</li>
-														<li class="f_l wid33">
-															<a title="테스트" class="test"></a>
-														</li>
-													</ul></td>
+													<td class="btns_detail">
+														<!-- s: wid33 삭제 -->
+														<ul class="cl_both">
+															<li class="f_l">
+																<a title="편집"></a>
+															</li>
+															<li class="f_l">
+																<a title="삭제" class="del"></a>
+															</li>
+															<li class="f_l">
+																<a title="테스트" class="test"></a>
+															</li>
+														</ul>
+														<!-- e: wid33 삭제 -->
+													</td>
 												</tr>
 												<tr>
 													<td class="check_list"><input type="checkbox" name="" id="list03_02" class="check_stl"><label for="list03_02" class="check_stl_lab"></label></td>
 													<td>Account Read</td>
 													<td>SGIM</td>
 													<td>V1.0 (2019.08.31)</td>
-													<td class="btns_detail"><ul class="cl_both">
-														<li class="f_l wid33">
-															<a title="편집"></a>
-														</li>
-														<li class="f_l wid33">
-															<a title="삭제" class="del"></a>
-														</li>
-														<li class="f_l wid33">
-															<a title="테스트" class="test"></a>
-														</li>
-													</ul></td>
+													<td class="btns_detail">
+														<!-- s: wid33 삭제 -->
+														<ul class="cl_both">
+															<li class="f_l">
+																<a title="편집"></a>
+															</li>
+															<li class="f_l">
+																<a title="삭제" class="del"></a>
+															</li>
+															<li class="f_l">
+																<a title="테스트" class="test"></a>
+															</li>
+														</ul>
+														<!-- e: wid33 삭제 -->
+													</td>
 												</tr>
 												<tr>
 													<td class="check_list"><input type="checkbox" name="" id="list03_03" class="check_stl"><label for="list03_03" class="check_stl_lab"></label></td>
 													<td>Account Read</td>
 													<td>SGIM</td>
 													<td>V1.0 (2019.08.31)</td>
-													<td class="btns_detail"><ul class="cl_both">
-														<li class="f_l wid33">
-															<a title="편집"></a>
-														</li>
-														<li class="f_l wid33">
-															<a title="삭제" class="del"></a>
-														</li>
-														<li class="f_l wid33">
-															<a title="테스트" class="test"></a>
-														</li>
-													</ul></td>
+													<td class="btns_detail">
+														<!-- s: wid33 삭제 -->
+														<ul class="cl_both">
+															<li class="f_l">
+																<a title="편집"></a>
+															</li>
+															<li class="f_l">
+																<a title="삭제" class="del"></a>
+															</li>
+															<li class="f_l">
+																<a title="테스트" class="test"></a>
+															</li>
+														</ul>
+														<!-- e: wid33 삭제 -->
+													</td>
 												</tr>
 											</table>
 										</div>
@@ -231,6 +246,7 @@
 									</div>
 								</td>
 							</tr>
+							<!-- e: td 삭제 후 colsapn="7"로 변경 -->
 							<tr>
 								<td class="check_list"><input type="checkbox" name="" id="list04" class="check_stl"><label for="list04" class="check_stl_lab"></label></td>
 								<td class="more_list"><button class="icon_arrow_open">더보기</button></td>
@@ -323,10 +339,12 @@
 				</div>
 				<div class="list_btn cl_both">
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow" id="btn_update">Update</button>
+						<!-- s: class 변경 -->
+						<button class="line">생성</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line" id="btn_update">Update</button>
+						<!-- e: class 변경 -->
 					</div>
 				</div>
 			</div>

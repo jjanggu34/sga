@@ -338,11 +338,16 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 15px;
         li {
-            padding:2px;
+            position:relative;
+            @include wh (30px, 30px);
             border:$borderD;
             border-radius:6px;
             background:none;
             a {
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
                 @include icon(24px, 24px);
                 background-image:url("../images/common/label/ico_FileEdit.svg");
                 &.del {

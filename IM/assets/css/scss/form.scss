@@ -170,6 +170,9 @@ $borderTs: "search_wrap", "tab_wrap";
         &.upload_list {
             padding:15px 15px 11px;
             border:0;
+            &:hover {
+                background-color:var(--body);
+            }
             li {
                 gap:4px;
                 padding-bottom:10px;
@@ -200,9 +203,12 @@ $borderTs: "search_wrap", "tab_wrap";
 
 /* textarea, file_upload_wrap */
 .form_stl {
+    .form_contrl {
+        width:$wh100;
+    }
     textarea {
         &.form_contrl {
-            width:270px;
+            width:$wh100;
         }
     }
     .file_upload_wrap {
@@ -338,6 +344,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
 ---------------------------------------------*/
 select{
     &.form_contrl {
+        width:270px;
         padding-right:26px;
         background: url("../images/common/ico_accordion.svg") no-repeat right 1px center var(--white);
     }
@@ -346,7 +353,7 @@ select{
 /*---------------------------------------------
 	#toggle
 ---------------------------------------------*/
-.blue_tg_stl {
+.tg_sch_stl {
     .tg_sch{
         &:checked {
             &+ label::before {
@@ -354,7 +361,7 @@ select{
             }
         }
         &+ label::before {
-            background-color:var(--default);
+            background-color:var(--btn-disabled);
         }
     }
 }

@@ -182,6 +182,9 @@
   padding: 15px 15px 11px;
   border: 0;
 }
+.file_upload_wrap .file_upload_box.upload_list:hover {
+  background-color: var(--body);
+}
 .file_upload_wrap .file_upload_box.upload_list li {
   gap: 4px;
   padding-bottom: 10px;
@@ -212,8 +215,11 @@
 }
 
 /* textarea, file_upload_wrap */
+.form_stl .form_contrl {
+  width: 100%;
+}
 .form_stl textarea.form_contrl {
-  width: 270px;
+  width: 100%;
 }
 .form_stl .file_upload_wrap {
   max-width: none;
@@ -348,6 +354,7 @@
 	#selectbox
 ---------------------------------------------*/
 select.form_contrl {
+  width: 270px;
   padding-right: 26px;
   background: url("../images/common/ico_accordion.svg") no-repeat right 1px center var(--white);
 }
@@ -355,9 +362,9 @@ select.form_contrl {
 /*---------------------------------------------
 	#toggle
 ---------------------------------------------*/
-.blue_tg_stl .tg_sch:checked + label::before {
+.tg_sch_stl .tg_sch:checked + label::before {
   background-color: var(--primary);
 }
-.blue_tg_stl .tg_sch + label::before {
-  background-color: var(--default);
+.tg_sch_stl .tg_sch + label::before {
+  background-color: var(--btn-disabled);
 }
