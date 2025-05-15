@@ -106,11 +106,21 @@
   background: url("../images/common/icon-nodata.svg") no-repeat;
   opacity: 0.3;
 }
+.default_tbl.tblStl2 {
+  border-top: 0;
+}
 .default_tbl.tblStl2 tbody th {
   background-color: #F0F0F0;
-  border: 1px solid var(--border-d);
-  border-top: 0;
+  border-top: 1px solid var(--border-d);
+  border-right: 1px solid var(--border-d);
   font-weight: var(--font-regular);
+  text-align: center;
+}
+.default_tbl.tblStl2 tbody th:first-child {
+  text-align: left;
+}
+.default_tbl.tblStl2 tbody th:last-child {
+  border-right: 0;
 }
 .default_tbl.tblStl2 tbody th.th-bl {
   background-color: var(--table-th);
@@ -141,6 +151,9 @@
   border: 1px solid var(--border-d);
   border-top: 0;
   font-weight: var(--font-medium);
+}
+.default_tbl.tblStl2 tbody td:last-child {
+  border-right: 0;
 }
 .default_tbl.tblStl2 tbody td.aft_cont {
   background: var(--disabled-line-bg);

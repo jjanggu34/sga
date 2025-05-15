@@ -326,7 +326,7 @@
 						<li>
 							<div class="form_tit"><label for="modelType">종류(Type)<i class="i_req"></i></label></div>
 							<div class="form_txt">
-								<select class="form_contrl w480" id="modelType"><!-- s: w480 추가-->
+								<select class="form_contrl" id="modelType">
 									<option>DB</option>
 									<option>DB</option>
 								</select>
@@ -341,12 +341,12 @@
 						</li>
 						<li>
 							<div class="form_tit">모델명</div>
-							<div class="form_txt"><input type="text" name="" class="form_contrl disabled w480" id="modelName" placeholder="CentOS" readonly="readonly"></div><!-- s: w480 추가-->
+							<div class="form_txt"><input type="text" name="" class="form_contrl disabled" id="modelName" placeholder="CentOS" readonly="readonly"></div>
 						</li>
 						<li>
 							<div class="form_tit"><label for="onsdName">이름</label></div>
 							<div class="form_txt">
-								<input type="text" name="" class="form_contrl w480" id="onsdName"><!--<span class="dupli_check redtxt"><i></i>이름 중복 입니다.</span>--><!-- s: w480 추가-->
+								<input type="text" name="" class="form_contrl" id="onsdName"><!--<span class="dupli_check redtxt"><i></i>이름 중복 입니다.</span>-->
 								<span class="dupli_check bluetxt"><i></i>사용가능합니다.</span>
 							</div>
 						</li>
@@ -354,16 +354,16 @@
 							<div class="form_tit">KeyStore</div>
 							<div class="form_txt">
 								<div class="filebox">
-									<input class="form_contrl w480" value="파일선택" disabled="disabled"><!-- s: w480 추가-->
+									<input class="form_contrl" value="파일선택" disabled="disabled">
 									<div class="file_btns">
 										<button class="icon file">파일선택</button>
 										<button class="basic icon upload">업로드</button>
 									</div>
 								</div>
 								<div class="file_output">
-									<!-- s: w480 추가, middle 삭제 -->
-									<input class="form_contrl w480" value="{“DOC_ID”:”1000”, “FOLDER_ID”:”1000”, “CMS_ID”:”1000”}" disabled="disabled">
-									<!-- e: w480 추가, middle 삭제 -->
+									<!-- s: middle 삭제 -->
+									<input class="form_contrl" value="{“DOC_ID”:”1000”, “FOLDER_ID”:”1000”, “CMS_ID”:”1000”}" disabled="disabled">
+									<!-- e: middle 삭제 -->
 								</div>
 							</div>
 						</li>
@@ -381,9 +381,9 @@
 					<!-- e: class 변경 -->
 				</div>
 			</div>
-			<div class="footer">
+			<!-- nav로 이동 <div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </body>

@@ -107,12 +107,20 @@
         }
     }
     &.tblStl2 {
+        border-top:0;
         tbody {
             th{
                 background-color:#F0F0F0;
-                border:$borderD;
-                border-top:0;
+                border-top:$borderD;
+                border-right:$borderD;
                 font-weight:var(--font-regular);
+                text-align:center;
+                &:first-child {
+                    text-align:left;
+                }
+                &:last-child {
+                    border-right:0;
+                }
                 &.th-bl {
                     background-color:var(--table-th);
                 }
@@ -140,6 +148,9 @@
                 border:$borderD;
                 border-top:0;
                 font-weight:var(--font-medium);
+                &:last-child {
+                    border-right:0;
+                }
                 &.aft_cont {
                     background:var(--disabled-line-bg);
                     .aft_ir {

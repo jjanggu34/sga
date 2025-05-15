@@ -74,11 +74,6 @@ $borderTs: "search_wrap", "tab_wrap";
     }
     &.flx {
         gap:4px;
-        .form_contrl{
-            &.date_ctl { //인풋 너비 변경될 때 같이 변경되어야 함
-                width:calc((270px - 16px) / 2);
-            }
-        }
     }
 }
 /* date2 -> calendar */
@@ -215,6 +210,11 @@ $borderTs: "search_wrap", "tab_wrap";
         max-width:none;
         width:$wh100;
     }
+    select {
+        &.form_contrl {
+            width:270px;
+        }
+    }
 }
 
 /* check */
@@ -224,6 +224,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
 // default
 @each $label in $labels {
     .#{$label}:before {
+        margin-top:0;
         margin-right:5px;
         border: 1px solid var(--default);
     }
@@ -344,7 +345,6 @@ $labels: "check_stl_lab", "radio_stl_lab";
 ---------------------------------------------*/
 select{
     &.form_contrl {
-        width:270px;
         padding-right:26px;
         background: url("../images/common/ico_accordion.svg") no-repeat right 1px center var(--white);
     }

@@ -3,10 +3,10 @@
 /* mixin 함수 선언하기 */
 /*---------------------------------------------
 	#상단 버튼
-    #스크롤시 고정할 상단버튼 "list_btn_stk" 추가
     #tit_in_btn: absolute
 ---------------------------------------------*/
 .list_btn {
+  position: unset;
   padding: 20px 24px;
 }
 .list_btn .opttxt {
@@ -19,7 +19,7 @@
 }
 
 .btn_box a {
-  padding: 0 14px;
+  padding: 0 10px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -31,7 +31,7 @@
 }
 
 .btn_box button {
-  padding: 0 14px;
+  padding: 0 10px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -43,7 +43,7 @@
 }
 
 .list_btn button {
-  padding: 0 14px;
+  padding: 0 10px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -55,7 +55,7 @@
 }
 
 button {
-  padding: 0 14px;
+  padding: 0 10px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -180,7 +180,7 @@ button, a {
 button.icon, a.icon {
   display: inline-flex;
   align-items: center;
-  column-gap: 5px;
+  column-gap: 2px;
 }
 button.icon i, a.icon i {
   display: inline-block;
@@ -235,6 +235,8 @@ button.icon i.icon_setting, a.icon i.icon_setting {
   -webkit-mask-image: url("../images/common/icon_setting.svg");
   mask-image: url("../images/common/icon_setting.svg");
   background-image: none;
+  -webkit-mask-size: 80%;
+  mask-size: 80%;
 }
 button.icon i.icon_applylist, a.icon i.icon_applylist {
   margin: 0;
@@ -252,6 +254,8 @@ button.icon i.icon_reset, a.icon i.icon_reset {
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_reset.svg");
   mask-image: url("../images/common/ico_reset.svg");
+  -webkit-mask-size: 80%;
+  mask-size: 80%;
   background-image: none;
 }
 button.icon i.icon_reset::before, a.icon i.icon_reset::before {
@@ -485,6 +489,11 @@ button.icon_arrow_none, a.icon_arrow_none {
   background-position: center;
 }
 
+/* scroll button */
+.scroll_btns {
+  z-index: 100;
+}
+
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
@@ -557,16 +566,21 @@ button.icon_arrow_none, a.icon_arrow_none {
 .pagination ul {
   gap: 4px;
 }
+.pagination ul li {
+  width: 30px;
+  height: 30px;
+}
 .pagination ul li a {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   border: 1px solid var(--default);
   border-radius: 6px;
   font-size: var(--font-12);
+  font-weight: var(--font-regular);
   color: var(--content);
-  line-height: 28px;
+  line-height: 30px;
 }
 .pagination ul li a span {
   display: inline-block;
@@ -622,6 +636,10 @@ button.icon_arrow_none, a.icon_arrow_none {
 .pagination ul li .on {
   border-color: var(--primary) !important;
   background-color: var(--primary) !important;
+}
+.pagination.mini_paging .currentpage {
+  width: auto;
+  height: auto;
 }
 .pagination.mini_paging .currentpage em {
   color: var(--primary);

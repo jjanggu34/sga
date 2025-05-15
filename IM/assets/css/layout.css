@@ -4,8 +4,11 @@
 /*---------------------------------------------
 	#기본 레이아웃
 ---------------------------------------------*/
-body {
+body, html {
   height: 100%;
+}
+
+body {
   background: var(--body);
   overflow: auto;
 }
@@ -72,7 +75,7 @@ body * {
   color: var(--primary);
 }
 #SGIM_wrap .nav_list > li > a {
-  padding-left: 43px;
+  padding: 18px 42px;
 }
 #SGIM_wrap .nav_list > li > a.on {
   border-top: 0;
@@ -426,7 +429,8 @@ body * {
 }
 #SGIM_wrap #container .dash_wrap {
   min-height: calc(100vh - 100px);
-  margin: 80px 24px 0;
+  height: 100%;
+  margin: 80px 24px 0 !important;
   border: 1px solid var(--border-d);
   border-radius: 20px;
   font-size: 0;
@@ -449,11 +453,16 @@ body * {
 #SGIM_wrap #container .cont_wrap .content:not(.cnt_lyt_sc .content) .tab_wrap.cont_in_tab {
   padding-top: 0;
 }
+#SGIM_wrap #container .cont_wrap .content {
+  min-height: calc(100vh - 80px);
+  border: 1px solid var(--border-d);
+}
 #SGIM_wrap #container .content {
   padding: 0;
   height: 100%;
-  min-height: calc(100vh - 80px);
-  border: 1px solid var(--border-d);
+  min-height: calc(100% - 80px);
+  margin: 84px 0 0;
+  border-top: 0;
   border-radius: 3px;
   box-shadow: unset;
 }
@@ -468,6 +477,17 @@ body * {
   max-height: 741px;
   overflow-y: auto;
 }
+#SGIM_wrap #container .content.cont_scroll::-webkit-scrollbar {
+  width: 7px;
+}
+#SGIM_wrap #container .content.cont_scroll::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background-color: var(--border-d);
+}
+#SGIM_wrap #container .content.cont_scroll::-webkit-scrollbar-track {
+  border: 0;
+  background-color: transparent;
+}
 #SGIM_wrap #container .content.cont_scroll .tab_wrap {
   padding-top: 0;
 }
@@ -479,16 +499,22 @@ body * {
 }
 #SGIM_wrap #container .content + .cnt_lyt_sc .content {
   width: 100%;
-  padding: 20px 24px;
+  padding: 20px 0;
   margin-top: 0;
 }
 #SGIM_wrap #container .content + .cnt_lyt_sc .content.cont_scroll {
   height: 100%;
   min-height: auto;
-  max-height: 544px;
+  max-height: 624px;
 }
 #SGIM_wrap #container .content + .cnt_lyt_sc .content .tab_wrap.cont_in_tab {
-  padding: 0 0 16px 0;
+  padding: 0 24px 16px;
+}
+#SGIM_wrap #container .content + .cnt_lyt_sc .content .btn_box {
+  padding: 0 24px 10px;
+}
+#SGIM_wrap #container .content + .cnt_lyt_sc .content .form_wrap {
+  padding: 0 24px;
 }
 #SGIM_wrap #container .content + .cnt_lyt_sc .i-card_wrap {
   padding-bottom: 4px;
@@ -499,6 +525,7 @@ body * {
 #SGIM_wrap #container .content.only, #SGIM_wrap #container .content.ch_password_cont {
   margin: 80px 24px 20px;
   padding: 20px 24px;
+  border: 1px solid var(--border-d);
   border-radius: 20px;
 }
 #SGIM_wrap #container .content.only .tbl_list, #SGIM_wrap #container .content.ch_password_cont .tbl_list {
@@ -551,6 +578,20 @@ body * {
 }
 .detail_view .dtv_cont {
   padding: 0;
+}
+.detail_view .dtv_cont.scroll {
+  scrollbar-width: unset;
+}
+.detail_view .dtv_cont.scroll::-webkit-scrollbar {
+  height: 7px;
+}
+.detail_view .dtv_cont.scroll::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: var(--border-d);
+}
+.detail_view .dtv_cont.scroll::-webkit-scrollbar-track {
+  border: 0;
+  background-color: transparent;
 }
 
 .layer_popup .popup_title {

@@ -54,7 +54,8 @@
 					<li>완료 <span id="compCnt"></span>개</li>
 				</ul>
 				<ul class="etc">
-					<li>테이블 열 진행 클래스(tr에 적용) : 완료 [comp], 비활성화 [non], 진행중 [ing] <br>** 진행중인 화면 : 테이블, 탭, 버튼, 아이콘, 헤더, 메뉴, 페이지네이션 적용 **</li>
+					<li>테이블 열 진행 클래스(tr에 적용) : 완료 [comp], 비활성화 [non], 진행중 [ing]</li>
+					<li style="color:yellow;">비어있는 아이콘은 나중에 넣을 예정</li>
 				</ul>
 			</div>
 
@@ -214,7 +215,7 @@
 					<caption></caption>
 					<colgroup>
 						<col width="8%"><col width="14%"><col width="14%"><col width="4%">
-						<col width="15%"><col width="4%"><col width="4%"><col width="4%">
+						<col width="15%"><col width="4%"><col width="4%"><col width="6%">
 						<col width="15%"><col width="*">
 					</colgroup>
 					<thead>
@@ -316,7 +317,7 @@
 							<td>테넌트 이동 화면</td>
 						</tr>
 
-                        <tr class="comp">
+                        <tr class="almost">
 							<td rowspan="2">신청화면</td>
 							<td>15_02_systemgroup_tree_layout_filelist</td>
 							<td></td>
@@ -325,10 +326,10 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td>[2025.05.13]<br>오른쪽 content 하단에 스크롤 없애기, body scroll 없애기, 파일첨부 스크롤 그대로 사용, input 너비 100%, footer 삭제</td>
+							<td>[2025.05.13]<br>오른쪽 content 하단에 스크롤 없애기, body scroll 없애기, 파일첨부 스크롤 그대로 사용, input 너비 100%, footer 삭제 nav로 이동 예정</td>
 							<td>시스템 트리 선택 후 신청 화면</td>
 						</tr>
-						<tr class="comp">
+						<tr class="almost">
 							<td>15_01_systemgroup_tree_layout</td>
 							<td></td>
 							<td></td>
@@ -340,7 +341,7 @@
 							<td>시스템 트리 선택 후 시청 화면</td>
 						</tr>
 
-						<tr class="comp">
+						<tr class="almost">
 							<td>결재목록</td>
 							<td>07_08_End-User_apply</td>
 							<td></td>
@@ -349,7 +350,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정</td>
 							<td>결재 항목 리스트</td>
 						</tr>
 
@@ -362,11 +363,11 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td>[2025.05.13]<br>scrollPrss 삭제(fixed 되어 있었음)</td>
+							<td>[2025.05.13]<br>scrollPrss 삭제(fixed 되어 있었음)<br>[2025.05.14]<br>테이블 상단 보더 다시 잡음, table 보더 양쪽 없앰, footer 삭제 nav로 이동 예정</td>
 							<td>기본 결재 화면</td>
 						</tr>
 
-                        <tr class="comp">
+                        <tr class="ing">
 							<td rowspan="4">결재선</td>
 							<td>03_09_layerPopup_detailview</td>
 							<td></td>
@@ -375,7 +376,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정</td>
 							<td>결재 시 수신/위임 하는 아이콘 확인</td>
 						</tr>
 						<tr class="ing">
@@ -386,7 +387,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>테이블 th 안에 center정렬, footer 삭제 nav로 이동 예정</td>
 							<td>결재가 두라인 이상으로 될 경우의 화면</td>
 						</tr>
 						<tr class="ing">
@@ -397,7 +398,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정</td>
 							<td>여러 사람의 결재가 필요할 시의 화면</td>
 						</tr>
 						<tr class="ing">
@@ -408,7 +409,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정</td>
 							<td>기본 결재선 확인</td>
 						</tr>
 
@@ -421,7 +422,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정, 프로그래스 숫자 정렬</td>
 							<td>기본 input 등 확인. 저장/확인 등의 버튼 확인</td>
 						</tr>
 						<tr class="ing">
@@ -435,7 +436,7 @@
 							<td>input 사이즈 나중</td>
 							<td>상단 탭 확인. 중간중간 로딩하는 원이나 하단 기한 부분 확인. 새로운속성추가 부분</td>
 						</tr>
-						<tr class="comp">
+						<tr class="ing">
 							<td>03_09_layerPopup_detailview</td>
 							<td></td>
 							<td></td>
@@ -443,10 +444,10 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정</td>
 							<td>우측 디테일 확인용</td>
 						</tr>
-						<tr class="comp">
+						<tr class="ing">
 							<td>15_04_Access_policy_management</td>
 							<td></td>
 							<td></td>
@@ -454,10 +455,10 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td>ETC 아이콘 나중에</td>
+							<td>ETC 아이콘 나중에<br>[2025.05.14]<br>footer 삭제 nav로 이동 예정</td>
 							<td>여러 시스템 분류별로 확인하는 화면</td>
 						</tr>
-						<tr class="comp">
+						<tr class="ing">
 							<td>15_05_DBMS</td>
 							<td></td>
 							<td></td>
@@ -465,10 +466,10 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td>ETC 아이콘 나중에</td>
+							<td>ETC 아이콘 나중에<br>[2025.05.14]<br>footer 삭제 nav로 이동 예정</td>
 							<td>DB시스템의 확인 화면(여러 시스템 분류별 확인 2)</td>
 						</tr>
-						<tr class="comp">
+						<tr class="ing">
 							<td>05_03_02_process_regit</td>
 							<td></td>
 							<td></td>
@@ -476,7 +477,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정, input 너비 100%로 변경</td>
 							<td>접속정보 화면. 파일 업로드/다운로드 화면</td>
 						</tr>
 						<tr class="ing">
@@ -487,7 +488,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td>input 사이즈 나중</td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정, input 너비 변경</td>
 							<td></td>
 						</tr>
 						<tr class="ing">
@@ -498,7 +499,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정</td>
 							<td>좌측에 항목이 있는 상세 페이지</td>
 						</tr>
 
@@ -511,7 +512,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td>con_tit 디자인에서 빠져있음</td>
+							<td></td>
 							<td>이동이나 움직이는 부분은 코딩으로 처리</td>
 						</tr>
                         <tr class="ing">
@@ -522,11 +523,11 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td>아이콘 그대로 사용할지?</td>
+							<td></td>
 							<td>이동이나 움직이는 부분은 코딩으로 처리</td>
 						</tr>
 
-                        <tr class="comp">
+                        <tr class="ing">
 							<td rowspan="7">표</td>
 							<td>02_01_sub_list</td>
 							<td></td>
@@ -538,7 +539,7 @@
 							<td></td>
 							<td>값이 있을 경우의 표</td>
 						</tr>
-                        <tr class="comp">
+                        <tr class="ing">
 							<td>02_01_sub_list_nodata</td>
 							<td></td>
 							<td></td>
@@ -549,7 +550,7 @@
 							<td></td>
 							<td>값이 있을 경우의 표</td>
 						</tr>
-                        <tr class="comp">
+                        <tr class="ing">
 							<td>10_03_table_tab</td>
 							<td></td>
 							<td></td>
@@ -560,7 +561,7 @@
 							<td></td>
 							<td>기본 표. 상단 탭이 있을 경우, 새로운 내용이 있을경우 아이콘. 메시지 확인 UI확인.<br><br>비고: nav,header 부분 보류</td>
 						</tr>
-                        <tr class="comp">
+                        <tr class="ing">
 							<td>10_02_tabUI</td>
 							<td></td>
 							<td></td>
@@ -571,7 +572,7 @@
 							<td></td>
 							<td>테이블 상단에 유형별로 정리하는 탭 UI</td>
 						</tr>
-                        <tr class="comp">
+                        <tr class="ing">
 							<td>03_09_layerPopup_detailview</td>
 							<td></td>
 							<td></td>
@@ -582,7 +583,7 @@
 							<td></td>
 							<td>표 내부 버튼 등 확인. 상태 부분의 아이콘 확인</td>
 						</tr>
-                        <tr class="comp">
+                        <tr class="ing">
 							<td>02_02_sub_list_detail</td>
 							<td></td>
 							<td></td>
@@ -593,7 +594,7 @@
 							<td></td>
 							<td>좌측 화살표 버튼을 눌러 표 상세내용을 확인하는 용</td>
 						</tr>
-                        <tr class="ing">
+                        <tr class="almost">
 							<td>05_01_layout</td>
 							<td></td>
 							<td></td>
@@ -601,11 +602,11 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>스크롤 했을 때 버튼 움직임 삭제, 스크롤 버튼 z-index 수정, footer 삭제 nav로 이동 예정</td>
 							<td>내부의 아이콘 확인.(파일 등)</td>
 						</tr>
 
-                        <tr class="comp">
+                        <tr class="ing">
 							<td rowspan="3">작은표</td>
 							<td>05_06_list2</td>
 							<td></td>
@@ -617,7 +618,7 @@
 							<td></td>
 							<td>작은표 두가지, 좌측/우측에 내용을 옮기는 용</td>
 						</tr>
-                        <tr class="comp">
+                        <tr class="ing">
 							<td>03_08_layerPopup_table02</td>
 							<td></td>
 							<td></td>
@@ -628,7 +629,7 @@
 							<td></td>
 							<td>작은표 두가지, 좌측/우측에 내용을 옮기는 용</td>
 						</tr>
-                        <tr class="ing">
+                        <tr class="almost">
 							<td>05_03_08_process_regit</td>
 							<td></td>
 							<td></td>
@@ -636,7 +637,7 @@
 							<td></td>
 							<td></td>
 							<td class="state"></td>
-							<td></td>
+							<td>[2025.05.14]<br>테이블 오른쪽 padding값 수정,footer 삭제 nav로 이동 예정</td>
 							<td>수정일 때에는 위 리스트 폼을 보여주고, 상세내용일 때는 이 화면을 보여줌. 상단 헤더도 참조</td>
 						</tr>
 
@@ -1152,6 +1153,12 @@
 								delCnt++;
 							} else if ($row.hasClass("ing")) {
 								$stateCell.html("<span>진행 중</span>");
+								progressCnt++;
+							} else if ($row.hasClass("half")) {
+								$stateCell.html("<span>50% 진행</span>");
+								progressCnt++;
+							} else if ($row.hasClass("almost")) {
+								$stateCell.html("<span>80% 진행</span>");
 								progressCnt++;
 							} else if ($row.hasClass("comp")) {
 								$stateCell.html("<span>완료</span>");

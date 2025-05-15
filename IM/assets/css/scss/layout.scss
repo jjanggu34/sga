@@ -3,9 +3,11 @@
 /*---------------------------------------------
 	#기본 레이아웃
 ---------------------------------------------*/
+body, html {
+    height:100%;
+}
 body {
     // min-width:1600px;   
-    height:100%;
     background:var(--body);
     overflow:auto;
     * {
@@ -87,7 +89,7 @@ body {
     .nav_list {
         > li {
             > a{
-                padding-left:43px;
+                padding:18px 42px;
                 &.on {
                     border-top:0;
                     border-left-color: transparent;
@@ -401,7 +403,8 @@ body {
         background:var(--body);
         .dash_wrap {
             min-height:calc(100vh - 100px);
-            margin:80px 24px 0;
+            height:100%;
+            margin:80px 24px 0 !important;
             border:$borderD;
             border-radius:20px;
             font-size:0;
@@ -425,13 +428,18 @@ body {
                     }
                 }
             }
+            .content {
+                min-height:calc(100vh - 80px);//header + 위아래 margin
+                border:$borderD;
+            }
         }
         .content {
             padding:0;
             // margin:60px 0 20px;
             height:100%;
-            min-height:calc(100vh - 80px);//header + 위아래 margin
-            border:$borderD;
+            min-height:calc(100% - 80px);//header + 위아래 margin
+            margin:84px 0 0 ;
+            border-top:0;
             border-radius:3px;
             box-shadow:unset;
             > div {
@@ -446,6 +454,17 @@ body {
                 height:100%;
                 max-height:741px;
                 overflow-y:auto;
+                &::-webkit-scrollbar {
+                    width:7px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius:30px;
+                    background-color:var(--border-d);
+                }
+                &::-webkit-scrollbar-track {
+                    border:0;
+                    background-color:transparent;
+                }
                 .tab_wrap {
                     padding-top:0;
                 }
@@ -459,17 +478,23 @@ body {
             &+.cnt_lyt_sc {
                 .content {
                     width:100%;
-                    padding:20px 24px;
+                    padding:20px 0;
                     margin-top:0;
                     &.cont_scroll {
                         height:100%;
                         min-height:auto;
-                        max-height:544px;
+                        max-height:624px;
                     }
                     .tab_wrap {
                         &.cont_in_tab {
-                            padding:0 0 16px 0;
+                            padding:0 24px 16px;
                         }
+                    }
+                    .btn_box {
+                        padding:0 24px 10px;
+                    }
+                    .form_wrap {
+                        padding:0 24px;
                     }
                 }
                 .i-card_wrap {
@@ -482,6 +507,7 @@ body {
             &.only {
                 margin:80px 24px 20px;
                 padding:20px 24px;
+                border:$borderD;
                 border-radius:20px;
                 .tbl_list {
                     padding:0 0 10px;
@@ -537,6 +563,20 @@ body {
     // cont
     .dtv_cont {
         padding:0;
+        &.scroll {
+            scrollbar-width:unset;
+            &::-webkit-scrollbar {
+                height:7px;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius:30px;
+                background:var(--border-d);
+            }
+            &::-webkit-scrollbar-track {
+                border:0;
+                background-color:transparent;
+            }
+        }
     }
 }
 

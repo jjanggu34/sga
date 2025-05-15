@@ -2,10 +2,13 @@
 
 /*---------------------------------------------
 	#상단 버튼
-    #스크롤시 고정할 상단버튼 "list_btn_stk" 추가
     #tit_in_btn: absolute
 ---------------------------------------------*/
+// .list_btn_stk {
+//     position:unset;
+// }
 .list_btn {
+    position:unset;
     padding:20px 24px;
     .opttxt {
         font-weight:var(--font-regular);
@@ -20,7 +23,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 
 @each $btn in $btns {
     #{$btn} {
-        padding:0 14px;
+        padding:0 10px;
         border-radius:6px;
         font-size:var(--font-13);
         line-height:30px;
@@ -143,7 +146,7 @@ button, a {
     &.icon {
         display:inline-flex;
         align-items:center;
-        column-gap:5px;
+        column-gap:2px;
         i {
             display:inline-block;
             @include wh (24px, 24px);
@@ -167,6 +170,8 @@ button, a {
                 -webkit-mask-image:url("../images/common/icon_setting.svg");
                 mask-image:url("../images/common/icon_setting.svg");
                 background-image:none;
+                -webkit-mask-size: 80%;
+                mask-size: 80%;
             }
             &.icon_applylist {
                 margin:0;
@@ -177,6 +182,8 @@ button, a {
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/ico_reset.svg");
                 mask-image:url("../images/common/ico_reset.svg");
+                -webkit-mask-size: 80%;
+                mask-size: 80%;
                 background-image:none;
                 &::before {
                     content:none;
@@ -363,6 +370,11 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     }
 }
 
+/* scroll button */
+.scroll_btns {
+    z-index:100;
+}
+
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
@@ -425,15 +437,17 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     ul {
         gap:4px;
         li {
+            @include wh(30px, 30px);
             a {
                 display:inline-block;
-                @include wh (28px, 28px);
+                @include wh (30px, 30px);
                 padding:0;
                 border:1px solid var(--default);
                 border-radius:6px;
                 font-size:var(--font-12);
+                font-weight:var(--font-regular);
                 color:var(--content);
-                line-height:28px;
+                line-height:30px;
                 span {
                     display:inline-block;
                     margin:0;
@@ -480,6 +494,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     }
     &.mini_paging {
         .currentpage {
+            @include wh(auto, auto);
             em {
                 color:var(--primary);
             }

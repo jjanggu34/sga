@@ -252,8 +252,9 @@
 						</ul>
 					</div>
 				</div>
-				<!-- 스크롤시 고정할 상단버튼 "list_btn_stk" 클래스 추가-->
-				<div class="list_btn cl_both list_btn_stk">
+				<!-- s: list_btn_stk 스크롤 시 상단에 붙는 효과 삭제-->
+				<div class="list_btn cl_both">
+				<!-- e: list_btn_stk 스크롤 시 상단에 붙는 효과 삭제-->
 					<div class="list_left_btn f_l wid50">
 						<!-- s: class명 변경 -->
 						<button class="line">활성</button>
@@ -286,11 +287,11 @@
 							</ul>
 						</div>
 						<button class="line icon">
-							<i class="icon_ff excel"></i>
+							<i class="icon_ff sl_ff excel"></i>
 							EXCEL
 						</button>
 						<button class="line icon">
-							<i class="icon_ff pdf"></i>
+							<i class="icon_ff sl_ff pdf"></i>
 							EXCEL
 						</button>
 						<button class="line icon"><i class="icon_setting"></i> 설정</button>
@@ -627,9 +628,9 @@
 				</div>
 				<!-- e: class명 변경 -->
 			</div>
-			<div class="footer">
+			<!-- nav로 이동 <div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-			</div>
+			</div> -->
 		</div>
 		<div class="scroll_btns" style="display:none">
 			<button class="btn_toTheTop"></button>
@@ -646,14 +647,14 @@
 			    $(".scroll_btns").show();
 			  }
 			});
-			$(window).scroll(function () { 
-				var scrollValue = $(document).scrollTop(); 
-			    if (scrollValue > 65){
-			    	$(".list_btn_stk").addClass("btnarea");
-			    } else {
-			    	$(".list_btn_stk").removeClass("btnarea");
-			    }
-			});
+			// $(window).scroll(function () { 
+			// 	var scrollValue = $(document).scrollTop(); 
+			//     if (scrollValue > 65){
+			//     	$(".list_btn_stk").addClass("btnarea");
+			//     } else {
+			//     	$(".list_btn_stk").removeClass("btnarea");
+			//     }
+			// });
 		</script>
 	</div>
 </body>

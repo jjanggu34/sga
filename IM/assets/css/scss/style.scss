@@ -457,9 +457,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     // table title
     .def_tit {
         font-weight:var(--font-extrabold);
+        border-bottom:1px solid var(--title);
         &+.tbl_list {
             .default_tbl {
-                border-top:1px solid var(--title);
+                border-top:0;
+                &.tblStl2 {
+                    th {
+                        border-top:0;
+                    }
+                }
             }
         }
     }
@@ -576,8 +582,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include wh (17px, 17px);
             margin-left:20px;
             margin-right:4px;
-            font-size:var(--font-16);
-            line-height:20px;
+            font-size:var(--font-12);
+            line-height:1.5;
             color:var(--text-disabled);
             background-color:var(--white);
         }
@@ -728,6 +734,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .mini_tab {
     margin-bottom:20px;
+    padding:0 24px;
     background:var(--white);
     .mtab_list {
         padding:4px;
@@ -895,6 +902,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .workflow_box {
     margin-bottom:20px;
     background-color:var(--table-th);
+    &::-webkit-scrollbar {
+        height:7px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius:30px;
+        background-color:var(--border-d);
+    }
+    &::-webkit-scrollbar-track {
+        border:0;
+        background-color:transparent;
+    }
     .workflow_wrap {
         padding:20px;
         .s_e_w {
@@ -1352,6 +1370,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         position:absolute;
                         left:20px;
                         bottom:12px;
+                        column-gap:5px;
                         padding:0 14px;
                         border-radius:6px;
                         line-height:30px;
@@ -1623,6 +1642,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .db_detail {
                 .db_server_row {
                     padding-left:26px;
+                    flex-wrap:wrap;
                     &::before {
                         position:absolute;
                         left:8px;
@@ -1734,13 +1754,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &>li {
                     display:flex;
                     padding:11px 20px;
+                    &::before {
+                        top:24px;
+                    }
                     .form_tit {
                         display:inline-block;
-                        padding:0;
+                        padding:8px 0 0;
                         border-bottom:0;
                     }
                     .form_txt {
                         @extend .form_tit;
+                        padding:0;
                         width:100%;
                     }
                 }
@@ -1759,16 +1783,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-bottom:1px solid var(--border-d);
             .form_tit {
                 position:unset;
-                padding-top:0;
+                padding-top:5px;
                 margin:0;
                 &::before {
                     left:10px;
+                    top:21px;
                 }
             }
             .form_txt {
                 width:100%;
+                min-height:unset;
                 padding:0;
                 border-bottom:0;
+                font-size:0;
                 line-height:normal;
                 textarea{
                     &.form_contrl {
@@ -1777,6 +1804,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 .radio_stl_lab {
                     line-height:34px;
+                }
+                .check_stl_lab {
+                    margin-left:13px;
+                    line-height:30px;
                 }
             }
         }
@@ -2185,6 +2216,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         &.topline {
                             padding-top:10px;
                         }
+                        .form_txt {
+                            .check_stl_lab {
+                                margin-left:0;
+                            }
+                        }
                     }
                     .form_row {
                         .adddel_bts {
@@ -2295,6 +2331,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     padding:10px 13px;
     border-radius:6px;
     background-color:var(--body);
+    .tasklist_box {
+        &:first-child {
+            padding-top:0;
+        }
+    }
     .tasklist {
         padding:0 0 0 12px;
         border:$borderD;
@@ -2653,6 +2694,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &.bul_dot {
             li {
                 padding:10px 20px;
+                border-bottom:$borderD;
                 .view_tit {
                     p {
                         font-size:var(--font-14);
@@ -2687,9 +2729,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:20px;
         border:$borderD;
         border-radius:6px;
-        &:only-child {
-            padding-right:0;
-        }
     }
 }
 .moved_tit {
@@ -2713,11 +2752,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:0;
         border:0;
         .move2_box {
+            margin-right:0;
             border:$borderD;
             border-radius:6px;
             .move_box {
                 padding:0;
                 margin:0;
+                border:0;
+                border-radius:0;
                 &:first-child {
                     border-right:$borderD;
                     .moved_tit {
@@ -2738,7 +2780,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 .move_tbl {
                     height:auto;
-                    max-height:270px;
+                    max-height:272px;
                     margin-top:0;
                     border-top:0;
                     overflow-y:auto;
@@ -2813,13 +2855,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .pcs_ctg_wrap {
     .moved_box {
+        margin-top:0;
         .moved_tit {
-            padding:10px 16px;
+            padding:10px 20px;
             border:$borderD;
             border-radius:6px 6px 0 0;
-            font-size:var(--font-13);
+            font-size:var(--font-18);
             font-weight:var(--font-medium);
             background-color:var(--disabled-line-bg);
+        }
+    }
+    .pcs_ctg_nxt {
+        .fm_tit {
+            margin-top:0;
         }
     }
 }

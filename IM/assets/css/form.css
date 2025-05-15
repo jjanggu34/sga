@@ -76,9 +76,6 @@
 .form_date.flx {
   gap: 4px;
 }
-.form_date.flx .form_contrl.date_ctl {
-  width: 127px;
-}
 
 /* date2 -> calendar */
 .weeksTbl .week_row .diss_week {
@@ -225,14 +222,19 @@
   max-width: none;
   width: 100%;
 }
+.form_stl select.form_contrl {
+  width: 270px;
+}
 
 /* check */
 .check_stl_lab:before {
+  margin-top: 0;
   margin-right: 5px;
   border: 1px solid var(--default);
 }
 
 .radio_stl_lab:before {
+  margin-top: 0;
   margin-right: 5px;
   border: 1px solid var(--default);
 }
@@ -354,7 +356,6 @@
 	#selectbox
 ---------------------------------------------*/
 select.form_contrl {
-  width: 270px;
   padding-right: 26px;
   background: url("../images/common/ico_accordion.svg") no-repeat right 1px center var(--white);
 }
