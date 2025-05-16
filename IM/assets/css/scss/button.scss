@@ -370,8 +370,24 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     }
 }
 
+/* tree_arrow */
+.tree_arrow {
+    @include wh(30px, 30px);
+    @include mask(var(--text-disabled));
+    -webkit-mask-image:url("../images/common/ico_accordion2.svg");
+    mask-image:url("../images/common/ico_accordion2.svg");
+    background-image:none;
+    transform:rotate(-90deg);
+    &.open {
+        background-color:var(--title);
+        background-position:center;
+        transform:rotate(0deg);
+    }
+}
+
 /* scroll button */
 .scroll_btns {
+    bottom:55px;
     z-index:100;
 }
 

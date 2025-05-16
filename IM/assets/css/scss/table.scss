@@ -129,14 +129,19 @@
                         font-weight:var(--font-regular);
                     }
                     .btn_d_arw {
+                        position:relative;
                         @include wh (24px, 24px);
                         padding:0;
                         .btn_dtail_arrow {
+                            position:absolute;
+                            top:50%;
+                            left:50%;
+                            transform:translate(-50%,-50%);
                             @include icon(24px, 24px);
                             margin-top:0;
                             background-image:url("../images/common/ico_accordion.svg");
                             &.up {
-                                transform:rotate(180deg);
+                                transform:translate(-50%,-50%) rotate(180deg);
                                 background-position:unset;
                             }
                         }
@@ -261,6 +266,13 @@
                     border:$borderD;
                     border-radius:6px;
                     background-color:var(--white);
+                    &::-webkit-scrollbar {
+                        height:7px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius:30px;
+                        background:#EEEEEE;
+                    }
                     .default_tbl {
                         tr {
                             td {
@@ -274,6 +286,9 @@
                             }
                         }
                     }
+                }
+                .tbl_btm {
+                    padding:10px 34px 20px;
                 }
             }
         }
@@ -310,6 +325,39 @@
     }
     .mini_paging {
         border-top:0;
+    }
+}
+
+/* move_tbl2 */
+.move_tbl2 {
+    .default_tbl {
+        thead {
+            tr {
+                th {
+                    padding:8px 10px;
+                    font-weight:var(--font-regular);
+                    color:var(--content);
+                    &:nth-child(3) {
+                        text-align:center;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding:8px 10px;
+                    color:var(--content);
+                    &:nth-child(2) {
+                        text-align:left;
+                    }
+                }
+            }
+        }
+        .btn_dtail_list {
+            width:70px;
+            text-align:center;
+        }
     }
 }
 

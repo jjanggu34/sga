@@ -204,6 +204,7 @@ $borderTs: "search_wrap", "tab_wrap";
     textarea {
         &.form_contrl {
             width:$wh100;
+            max-width:675px;
         }
     }
     .file_upload_wrap {
@@ -240,8 +241,9 @@ $labels: "check_stl_lab", "radio_stl_lab";
         border: 1px solid var(--btn-disabled);
     }
 }
+
 .check_stl {
-    & + label {
+    & + label.check_stl_lab {
         padding-left: 20px;
         color: var(--content);
         &::before,
@@ -268,7 +270,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
             mask-image: url("../images/common/icon_check_s.svg");
         }
     }
-    &:checked + label {
+    &:checked + label.check_stl_lab {
         &::before {
             @include wh(16px, 16px);
             background-color: var(--primary);
@@ -286,8 +288,62 @@ $labels: "check_stl_lab", "radio_stl_lab";
             left: 0;
         }
     }
-
-    &:disabled + label::before {
+    &:disabled + label.check_stl_lab::before {
+        background-color: var(--btn-disabled);
+    }
+    & + label.check_stl_lab2 {
+        color:var(--text-disabled);
+        i {
+            @include wh (16px,16px);
+            border:0;
+            border-radius:0;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                left: 50%;
+                display: inline-block;
+                border-radius: 3px;
+            }
+            &::before {
+                @include wh(16px, 16px);
+                border: 1px solid var(--default);
+                background-color: var(--white);
+            }
+            &::after {
+                @include wh(15px, 15px);
+                @include mask(var(--default));
+                -webkit-mask-size: 50%;
+                mask-size: 50%;
+                -webkit-mask-image: url("../images/common/icon_check_s.svg");
+                mask-image: url("../images/common/icon_check_s.svg");
+            }
+        }
+    }
+    &:checked + label.check_stl_lab2 {
+        color:var(--content);
+        i {
+            &::before {
+                @include wh(16px, 16px);
+                background-color: var(--primary);
+                border: $borderP;
+                margin: 0;
+                transform: translate(-50%,-50%);
+                left:50%;
+            }
+    
+            &::after {
+                @include wh(15px, 15px);
+                background-color: var(--white);
+                background-image: none;
+                margin: 0;
+                left: 50%;
+            }
+        }
+    }
+    &:disabled + label.check_stl_lab2::before {
         background-color: var(--btn-disabled);
     }
 }

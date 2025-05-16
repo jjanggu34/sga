@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<HTML lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>menu</title>
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <!-- 기존 css -->
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+
+    <!-- 추가 css -->
+    <link rel="stylesheet" href="../../css/jquery.scrollbar.css">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+
+    <!-- jQuery 라이브러리 -->
+    <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+    <!-- jQuery UI 라이브러리 -->
+    <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+    <!-- js -->
+    <script type="text/javascript" charset="utf-8" src="../../js/common.js"></script>
+
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <!--[if (gte IE 7)&(lte IE 8)]>
+	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
+	<![endif]-->
+    <style>
+        h2 { font-size:30px; border-bottom:2px solid #222222; }
+        .tit { display:inline-block; margin:20px 0 10px; padding:10px 5px; font-size:var(--font-16); background-color:#6ebda8; color:#fff; }
+        /* .accordion { position: relative; }
+        .accordion::after { position:absolute; top:50%; transform:translateY(-50%); content:""; display:inline-block; width:24px; height:24px; background:url("../../assets/images/common/ico_accordion2.svg")no-repeat center/auto; }
+        .accordion + .tree_menu_wrap { display:none; }
+        .accordion.tr_open::after { transform:translateY(-50%) rotate(-180deg); }
+        .accordion.tr_open + .tree_menu_wrap { display:block; } */
+    </style>
+</head>
+
+<body>
+    <div id="SGIM_wrap" class="mini_nav">
+        <!-- S: side nav -->
+        <!-- E: side nav -->
+        <!-- S: container -->
+        <div id="container" style="padding:0 !important;">
+            <!-- S: header -->
+            <!-- E: header -->
+            <!-- S: content -->
+            <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
+                <h2>menu</h2>
+                <section>
+                    <p class="tit">tree_menu_box 기본</p>
+                    <div class="tree_menu_wrap">
+                        <div class="flx tree_menu_area">
+                            <div class="tree_menu_box">
+                                <div class="tree_menu_tab flx">
+                                    <button class="on">그룹</button>
+                                    <button>OS타입</button>
+                                </div>
+                                <div class="tree_menu_tl">
+                                    <ul class="tree_menu_inner">
+                                        <li>
+                                            <a><i class="icon_tree folder_open"></i><span>Root</span></a>
+                                            <!-- s: class명 추가 sub_tree_menu -->
+                                            <ul class="sub_tree_menu">
+                                                <li>
+                                                    <a><i class="icon_tree folder"></i><span>최고관리자</span></a>
+                                                </li>
+                                                <li>
+                                                    <a><i class="icon_tree folder"></i><span>관리자</span></a>
+                                                </li>
+                                                <li>
+                                                    <a><i class="icon_tree folder"></i><span>헬프데스크</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="on"><i class="icon_tree iuser"></i><span>매니저</span></a>
+                                                </li>
+                                                <li>
+                                                    <a><i class="icon_tree iuser"></i><span>일반사용자</span></a>
+                                                </li>
+                                                <li>
+                                                    <a><i class="icon_tree file"></i><span>JWT사용자</span></a>
+                                                </li>
+                                                <li>
+                                                    <a><i class="icon_tree file"></i><span>익명사용자</span></a>
+                                                </li>
+                                            </ul>
+                                            <!-- e: class명 추가 sub_tree_menu -->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tit">tree_menu_box + search</p>
+                    <div class="tree_menu_wrap">
+						<div class="flx tree_menu_area">
+							<div class="tree_menu_box">
+								<div class="tree_menu_tab flx">
+									<button class="on">그룹</button>
+									<button>OS타입</button>
+								</div>
+								<div class="search_box mini_search">
+									<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox">
+									<button class="btn_search" type="submit">검색</button>
+								</div>
+								<div class="tree_menu_tl">
+									<ul class="tree_menu_inner">
+										<li>
+											<a><i class="icon_tree folder_open"></i><span>Root</span></a>
+											<ul class="sub_tree_menu">
+												<li>
+													<a><i class="icon_tree folder"></i><span>최고관리자</span></a>
+												</li>
+												<li>
+													<a><i class="icon_tree folder"></i><span>관리자</span></a>
+												</li>
+												<li>
+													<a><i class="icon_tree folder"></i><span>헬프데스크</span></a>
+												</li>
+												<li>
+													<a class="on"><i class="icon_tree iuser"></i><span>매니저</span></a>
+												</li>
+												<li>
+													<a class="diss"><i class="icon_tree iuser"></i><span>일반사용자</span></a>
+												</li>
+												<li>
+													<a><i class="icon_tree file"></i><span>JWT사용자</span></a>
+												</li>
+												<li>
+													<a><i class="icon_tree file"></i><span>익명사용자</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                    <p class="tit">treeType02</p>
+                    <div class="tree_menu_wrap">
+						<div class="flx tree_menu_area">
+							<div class="treeType02" style="flex:0;"z>
+								<div class="flx tt_tit">
+									<p>서버</p>
+									<p class="branch"></p>
+									<p>인스턴스</p>
+								</div>
+								<div class="search_box mini_search">
+									<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox">
+									<button class="btn_search" type="submit">검색</button>
+								</div>
+								<div class="db_list">
+									<!-- 해당줄 선택하면 "on" 클래스 추가 -->
+									<div class="db_detail open">
+										<div class="db_server_row">
+											<p class="meth">Oracle</p>
+											<p class="db_server_name">InsaDB01</p>
+											<p class="ip_add flx">192.168.127.1:3306</p>
+										</div>
+										<div class="inst_list">
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+											<div class="inst_row on">
+												<i class="branch"></i>
+												<p class="inst_name">SharedDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+										</div>
+									</div>
+									<div class="db_detail">
+										<div class="db_server_row">
+											<p class="meth">MSSQL</p>
+											<p class="db_server_name">InsaDB01</p>
+											<p class="ip_add flx">192.168.127.1:3306</p>
+										</div>
+										<div class="inst_list">
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">SharedDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+										</div>
+									</div>
+									<div class="db_detail open">
+										<div class="db_server_row">
+											<p class="meth">TmaxTibero</p>
+											<p class="db_server_name">InsaDB01</p>
+											<p class="ip_add flx">192.168.127.1:3306</p>
+										</div>
+										<div class="inst_list">
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">SharedDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">SharedDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+											<div class="inst_row">
+												<i class="branch"></i>
+												<p class="inst_name">InsaDB</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                    <p class="tit">workflow_2line</p>
+
+                    <p class="tit">workflow_2line_multi</p>
+
+                </section>
+            </div>
+            <!-- E: content -->
+            <!-- S: footer -->
+            <!-- E: footer -->
+        </div>
+        <div class="scroll_btns" style="display:none">
+            <button class="btn_toTheTop"></button>
+            <button class="btn_toThebottom"></button>
+        </div>
+        <script>
+            $("body").on("mousewheel", function (e) {
+                var wheel = e.originalEvent.wheelDelta;
+
+                if (wheel > 0) {
+                    //스크롤 올릴때
+                } else {
+                    //스크롤 내릴때
+                    $(".scroll_btns").show();
+                }
+            });
+            $(window).scroll(function () {
+                var scrollValue = $(document).scrollTop();
+                if (scrollValue > 65) {
+                    $(".list_btn_stk").addClass("btnarea");
+                } else {
+                    $(".list_btn_stk").removeClass("btnarea");
+                }
+            });
+        </script>
+
+        <!-- s : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
+        <script>
+            $(document).ready(function(){
+        
+                $('.accordion').on('click',  function() {
+                    $(this).toggleClass("tr_open");
+                });
+            });
+
+        </script>	
+        <!-- e : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
+    </div>
+</body>
+
+</HTML>

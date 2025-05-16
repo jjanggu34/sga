@@ -3,11 +3,9 @@
 /*---------------------------------------------
 	#기본 레이아웃
 ---------------------------------------------*/
-body, html {
-    height:100%;
-}
 body {
-    // min-width:1600px;   
+    // min-width:1600px;
+    height:100%;
     background:var(--body);
     overflow:auto;
     * {
@@ -30,6 +28,7 @@ body {
         .nav_list {
             li {
                 a {
+                    padding:24px 18px 32px 21px;
                     &.depth_menu {
                         &::after {
                             display:none;
@@ -90,6 +89,7 @@ body {
         > li {
             > a{
                 padding:18px 42px;
+                border-left:0;
                 &.on {
                     border-top:0;
                     border-left-color: transparent;
@@ -437,7 +437,7 @@ body {
             padding:0;
             // margin:60px 0 20px;
             height:100%;
-            min-height:calc(100% - 80px);//header + 위아래 margin
+            min-height:calc(100vh - 80px);//header + 위아래 margin
             margin:84px 0 0 ;
             border-top:0;
             border-radius:3px;
@@ -454,19 +454,20 @@ body {
                 height:100%;
                 max-height:741px;
                 overflow-y:auto;
-                &::-webkit-scrollbar {
-                    width:7px;
-                }
                 &::-webkit-scrollbar-thumb {
                     border-radius:30px;
                     background-color:var(--border-d);
                 }
-                &::-webkit-scrollbar-track {
-                    border:0;
-                    background-color:transparent;
-                }
                 .tab_wrap {
                     padding-top:0;
+                }
+                .tbl_list { //table
+                    padding:0 0 10px;
+                    margin:0 24px;
+                    overflow-x:auto;
+                }
+                .tbl_btm { //table 아래 pagination
+                    padding:10px 34px 20px;
                 }
             }
             &.tab_cont {
@@ -564,17 +565,9 @@ body {
     .dtv_cont {
         padding:0;
         &.scroll {
-            scrollbar-width:unset;
-            &::-webkit-scrollbar {
-                height:7px;
-            }
             &::-webkit-scrollbar-thumb {
                 border-radius:30px;
                 background:var(--border-d);
-            }
-            &::-webkit-scrollbar-track {
-                border:0;
-                background-color:transparent;
             }
         }
     }
