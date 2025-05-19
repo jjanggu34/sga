@@ -30,6 +30,8 @@ $borderTs: "search_wrap", "tab_wrap";
     background:var(--body);
     &+ .tab_wrap.cont_in_tab {
         margin-top:0;
+        border-radius:0;
+        background-color:var(--body);
     }
 }
 .search_box {
@@ -40,7 +42,7 @@ $borderTs: "search_wrap", "tab_wrap";
     .search_inputbox {
         @include wh ($wh100, 48px);
         border:$borderD;
-        border-radius:7px;
+        border-radius:6px;
     }
     &.mini_search {
         height:30px;
@@ -204,7 +206,7 @@ $borderTs: "search_wrap", "tab_wrap";
     textarea {
         &.form_contrl {
             width:$wh100;
-            max-width:675px;
+            // max-width:675px;
         }
     }
     .file_upload_wrap {

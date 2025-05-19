@@ -268,6 +268,15 @@
 .default_tbl .detail_open > td .detail_open_cont .tbl_btm {
   padding: 10px 34px 20px;
 }
+.default_tbl tr.on, .default_tbl tr:hover {
+  background-color: var(--body);
+}
+.default_tbl tr.on td {
+  border-bottom: 0;
+}
+.default_tbl .dt_view {
+  border-top: 0;
+}
 
 /* table info */
 .tbl_list .req_txt {
@@ -312,9 +321,50 @@
 .move_tbl2 .default_tbl tbody tr td:nth-child(2) {
   text-align: left;
 }
+.move_tbl2 .default_tbl tbody tr td.depth2:not(.dt_view .depth2)::before {
+  content: "ㄴ";
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  color: var(--text-disabled);
+}
 .move_tbl2 .default_tbl .btn_dtail_list {
   width: 70px;
   text-align: center;
+}
+.move_tbl2 .add_option {
+  height: 30px;
+  border-radius: 6px;
+  font-size: var(--font-12);
+  line-height: 30px;
+  color: var(--content);
+}
+.move_tbl2 .add_option .btn_option {
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background-color: var(--text-disabled);
+}
+.move_tbl2 .add_option .btn_option::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--white);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/icon_arrow_none.svg");
+  mask-image: url("../images/common/icon_arrow_none.svg");
 }
 
 /*---------------------------------------------

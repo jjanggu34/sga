@@ -34,6 +34,8 @@
 }
 .search_wrap + .tab_wrap.cont_in_tab {
   margin-top: 0;
+  border-radius: 0;
+  background-color: var(--body);
 }
 
 .search_box {
@@ -46,7 +48,7 @@
   width: 100%;
   height: 48px;
   border: 1px solid var(--border-d);
-  border-radius: 7px;
+  border-radius: 6px;
 }
 .search_box.mini_search {
   height: 30px;
@@ -217,7 +219,6 @@
 }
 .form_stl textarea.form_contrl {
   width: 100%;
-  max-width: 675px;
 }
 .form_stl .file_upload_wrap {
   max-width: none;

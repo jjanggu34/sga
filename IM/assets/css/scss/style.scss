@@ -1648,6 +1648,138 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
 }
+.tree_wrap {
+    border:0;
+    border-radius:0;
+    .tree_list {
+        padding:10px 0;
+        ul {
+            li {
+                ul {
+                    li {
+                        padding-left:20px;
+                        padding-bottom:6px;
+                    }
+                }
+            }
+        }
+        li {
+            a {
+                position:relative;
+                padding-left:32px;
+                line-height:16px;
+                color:var(--text-disabled);
+                font-weight:var(--font-regular);
+                .icon_folder {
+                    position:absolute;
+                    top:50%;
+                    left:0;
+                    transform:translateY(-50%);
+                    @include wh(24px, 24px);
+                    @include mask (var(--text-disabled));
+                    -webkit-mask-image: url("../images/common/ico_folder.svg");
+                    mask-image: url("../images/common/ico_folder.svg");
+                    background-image:none;
+                    &.open {
+                        background-color: var(--title);
+                        -webkit-mask-image: url("../images/common/ico_folder_open.svg");
+                        mask-image: url("../images/common/ico_folder_open.svg");
+                    }
+                }
+                &:has(.open) {
+                    color:var(--title);
+                }
+            }
+            .tree_arrow {
+                margin-top:0;
+                padding:0;
+                font-weight:var(--font-regular);
+                background:none;
+                &::before {
+                    content:"ㄴ";
+                    display:inline-block;
+                    @include wh (auto, auto);
+                    color:var(--border-d);
+                }
+                &.open {
+                    &::before {
+                        content:none;
+                    }
+                }
+            }
+            .sub_tree_menu {
+                margin-top:4px;
+                li {
+                    padding-left:0;
+                    a {
+                        padding-left:50px;
+                        &::before {
+                            content:"ㄴ";
+                            position:absolute;
+                            top:50%;
+                            left:7px;
+                            transform:translateY(-50%);
+                            display:inline-block;
+                            @include wh (auto, auto);
+                            color:var(--text-disabled);
+                        }
+                        &.selected {
+                            position:relative;
+                            border:0;
+                            border-radius:6px;
+                            color:var(--primary);
+                            background-color:#DAFAF5;
+                            &::before {
+                                color:var(--primary);
+                            }
+                            .icon_folder {
+                                left:20px;
+                                background-color:var(--primary);
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .tree_more_wrap {
+        top:0;
+        right:0;
+        .btn_tree_more {
+            @include mask (var(--text-disabled));
+            -webkit-mask-image: url("../images/common/ico_Kebab.svg");
+            mask-image: url("../images/common/ico_Kebab.svg");
+            background-image:none;
+        }
+        .tree_more_list {
+            right:9px;
+            margin-top:4px;
+            .tmlist {
+                padding:7px 5px;
+                border-radius:0;
+                @include title (var(--font-12),var(--font-regular),unset);
+                color:var(--content);
+                &:hover {
+                    position: relative;
+                    color:var(--primary);
+                    background-color:#DAFAF5;
+                    &::after {
+                        @include content(24px, 24px);
+                        position:absolute;
+                        top:50%;
+                        transform:translateY(-50%);
+                        right:0;
+                        display:inline-block;
+                        @include mask(var(--primary));
+                        -webkit-mask-image: url("../images/common/ico_check.svg");
+                        mask-image: url("../images/common/ico_check.svg");
+                    }
+                }
+            }
+        }
+    }
+}
 /*********************************************************************
 #스타일
 *********************************************************************/
@@ -1800,6 +1932,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &+.btn_box {
         margin-top:20px;
+    }
+    .btn_columnadd {
+        margin-top:9px;
     }
 }
 .tbl_btm {
@@ -2398,18 +2533,26 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** moved_box *****************/
 .move_wrap {
-    .mini_paging {
-        position:unset;
-        padding-top:20px;
-        border:0;
-    }
     &+.btn_box {
         padding-top:20px;
+    }
+    &.treeview {
+        margin:4px 24px 0;
+        .moved_box {
+            padding:0;
+            border:0;
+            border-radius:0;
+        }
     }
     .moved_box {
         padding:20px;
         border:$borderD;
         border-radius:6px;
+    }
+    .mini_paging {
+        position:unset;
+        padding-top:20px;
+        border:0;
     }
 }
 
@@ -2426,6 +2569,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &:last-child {
                     margin-right:0;
                 }
+            }
+        }
+        &+.search_box.mini_search {
+            height:35px;
+            margin-top:0;
+            .search_inputbox {
+                height:35px;
             }
         }
     }
@@ -2678,6 +2828,21 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             ul {
                 padding:4px 0 0 40px;
+            }
+        }
+        .tree_arrow {
+            @include wh(30px, 30px);
+            @include mask(var(--text-disabled));
+            -webkit-mask-size: 70%;
+            mask-size: 70%;
+            -webkit-mask-image:url("../images/common/ico_accordion2.svg");
+            mask-image:url("../images/common/ico_accordion2.svg");
+            background-image:none;
+            transform:rotate(-90deg);
+            &.open {
+                background-color:var(--title);
+                background-position:center;
+                transform:rotate(0deg);
             }
         }
     }

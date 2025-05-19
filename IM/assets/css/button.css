@@ -133,6 +133,7 @@ button.big {
 }
 .line.btn_dropdown {
   padding-right: 30px;
+  padding-bottom: 0;
   background: url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--white);
 }
 
@@ -186,18 +187,6 @@ button.icon i, a.icon i {
   display: inline-block;
   width: 24px;
   height: 24px;
-}
-button.icon i.delfile, a.icon i.delfile {
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: var(--title);
-  vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_trash.svg");
-  mask-image: url("../images/common/label/ico_trash.svg");
 }
 button.icon i.checkout, a.icon i.checkout {
   -webkit-mask-repeat: no-repeat;
@@ -489,27 +478,44 @@ button.icon_arrow_none, a.icon_arrow_none {
   background-position: center;
 }
 
-/* tree_arrow */
-.tree_arrow {
+/* treem_btn */
+.treem_btn {
+  color: var(--content);
+}
+
+/* btn_dtail */
+.btn_dtail {
   width: 30px;
   height: 30px;
+  border: 1px solid var(--border-d);
+}
+.btn_dtail .btn_dtail_arrow {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-position: center;
   mask-position: center;
-  background-color: var(--text-disabled);
-  vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_accordion2.svg");
-  mask-image: url("../images/common/ico_accordion2.svg");
-  background-image: none;
-  transform: rotate(-90deg);
-}
-.tree_arrow.open {
   background-color: var(--title);
-  background-position: center;
-  transform: rotate(0deg);
+  vertical-align: text-bottom;
+  background-size: contain;
+  -webkit-mask-image: url("../images/common/ico_accordion.svg");
+  mask-image: url("../images/common/ico_accordion.svg");
+}
+.btn_dtail.on {
+  border: 1px solid var(--basic);
+  background-color: var(--basic);
+}
+.btn_dtail.on .btn_dtail_arrow {
+  top: 50%;
+  background-position: unset;
+  background-color: var(--white);
+  transform: translate(-50%, -50%) rotate(180deg);
 }
 
 /* scroll button */

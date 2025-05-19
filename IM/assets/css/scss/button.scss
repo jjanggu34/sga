@@ -104,6 +104,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     }
     &.btn_dropdown {
         padding-right:30px;
+        padding-bottom:0;
         background:url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--white);
     }
 }
@@ -150,11 +151,6 @@ button, a {
         i {
             display:inline-block;
             @include wh (24px, 24px);
-            &.delfile {
-                @include mask(var(--title));
-                -webkit-mask-image:url("../images/common/label/ico_trash.svg");
-                mask-image:url("../images/common/label/ico_trash.svg");
-            }
             &.checkout {
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/close.svg");
@@ -370,18 +366,34 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     }
 }
 
-/* tree_arrow */
-.tree_arrow {
+/* treem_btn */
+.treem_btn {
+    color:var(--content);
+}
+
+/* btn_dtail */
+.btn_dtail {
     @include wh(30px, 30px);
-    @include mask(var(--text-disabled));
-    -webkit-mask-image:url("../images/common/ico_accordion2.svg");
-    mask-image:url("../images/common/ico_accordion2.svg");
-    background-image:none;
-    transform:rotate(-90deg);
-    &.open {
-        background-color:var(--title);
-        background-position:center;
-        transform:rotate(0deg);
+    border:$borderD;
+    .btn_dtail_arrow {
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        @include wh(24px, 24px);
+        @include mask(var(--title));
+        background-size:contain;
+        -webkit-mask-image:url("../images/common/ico_accordion.svg");
+        mask-image:url("../images/common/ico_accordion.svg");
+    }
+    &.on {
+        border:1px solid var(--basic);
+        background-color:var(--basic);
+        .btn_dtail_arrow {
+            top:50%;
+            background-position:unset;
+            background-color:var(--white);
+            transform:translate(-50%,-50%) rotate(180deg);
+        }
     }
 }
 

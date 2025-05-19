@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -25,9 +28,11 @@
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
+					<!--s: 이미지 경로 및 이미지 변경-->
 					<a href="" class="logo">
-						<img src="img/common/logo_186x30.png">
+						<img src="assets/images/common/logo.png">
 					</a>
+					<!--e: 이미지 경로 및 이미지 변경-->
 				</div>
 				<div class="nav_tab">
 					<a href="" class="">사용자</a>
@@ -99,15 +104,14 @@
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>사용자 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">역할관리</a></li>
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_modetrans"><a href="">사용자 모드<i></i></a></li>
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> <span>user01</span></a></li>
+					<li class="btn_top_user"><a href=""><span>user01</span></a></li>
+					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
 					<li class="btn_alim"><a href="">alim<span>13</span></a>
 						<div class="balloon alim_pop">
 							<div class="alim_pop_wrap">
@@ -133,13 +137,8 @@
 							<p class="newalim_txt">새 알림 <em>6건</em> 있습니다.</p>
 						</div>
 					</li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
 					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
-					</li>
 				</ul>
 			</div>
 			<div class="content">

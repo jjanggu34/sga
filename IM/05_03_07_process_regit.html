@@ -24,7 +24,7 @@
 	<![endif]-->
 </head>
 <body>
-	<div id="SGIM_wrap" class="mini_nav">
+	<div id="SGIM_wrap" class="">
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
@@ -80,7 +80,7 @@
 						<span><em>00:15:00</em> 후 접속 끊김</span>
 						<button class="time_ref" title="세션 시간 새로고침"></button>
 					</li>
-					<li class="btn_alim"><a href="">alim</a>
+					<li class="btn_alim"><a href="">alim<span>13</span></a>
 						<div class="balloon alim_pop" style="display:none">
 							<div class="alim_pop_wrap">
 								<div class="alim_top">
@@ -208,7 +208,9 @@
 											<td class="check_list"><input type="checkbox" name="" id="r01" class="check_stl" checked><label for="r01" class="check_stl_lab"></label></td>
 											<td class="check_list"><input type="checkbox" name="" id="u01" class="check_stl"><label for="u01" class="check_stl_lab"></label></td>
 											<td class="check_list"><input type="checkbox" name="" id="d01" class="check_stl"><label for="d01" class="check_stl_lab"></label></td>
-											<td class="btn_dtail_list"><button class="shadow btn_dtail" title="상세권한보기"><i class="btn_dtail_arrow"></i></button></td>
+											<!-- s: class 변경 -->
+											<td class="btn_dtail_list"><button class="line btn_dtail" title="상세권한보기"><i class="btn_dtail_arrow"></i></button></td>
+											<!-- e: class 변경 -->
 										</tr>
 										<tr>
 											<td class="check_list"><input type="checkbox" name="" id="list02" class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
@@ -218,7 +220,9 @@
 											<td class="check_list"><input type="checkbox" name="" id="r02" class="check_stl" checked><label for="r02" class="check_stl_lab"></label></td>
 											<td class="check_list"><input type="checkbox" name="" id="u02" class="check_stl"><label for="u02" class="check_stl_lab"></label></td>
 											<td class="check_list"><input type="checkbox" name="" id="d02" class="check_stl"><label for="d02" class="check_stl_lab"></label></td>
-											<td class="btn_dtail_list"><button class="shadow btn_dtail" title="상세권한보기"><i class="btn_dtail_arrow"></i></button></td>
+											<!-- s: class 변경 -->
+											<td class="btn_dtail_list"><button class="line btn_dtail" title="상세권한보기"><i class="btn_dtail_arrow"></i></button></td>
+											<!-- e: class 변경 -->
 										</tr>
 										<tr>
 											<td class="check_list"><input type="checkbox" name="" id="list03" class="check_stl"><label for="list03" class="check_stl_lab"></label></td>
@@ -228,7 +232,9 @@
 											<td class="check_list"><input type="checkbox" name="" id="r03" class="check_stl" checked><label for="r03" class="check_stl_lab"></label></td>
 											<td class="check_list"><input type="checkbox" name="" id="u03" class="check_stl"><label for="u03" class="check_stl_lab"></label></td>
 											<td class="check_list"><input type="checkbox" name="" id="d03" class="check_stl"><label for="d03" class="check_stl_lab"></label></td>
-											<td class="btn_dtail_list"><button class="shadow btn_dtail" title="상세권한보기"><i class="btn_dtail_arrow"></i></button></td>
+											<!-- s: class 변경 -->
+											<td class="btn_dtail_list"><button class="line btn_dtail" title="상세권한보기"><i class="btn_dtail_arrow"></i></button></td>
+											<!-- e: class 변경 -->
 										</tr>
 										<tr class="on">
 											<td class="check_list"><input type="checkbox" name="" id="list04" class="check_stl"><label for="list04" class="check_stl_lab"></label></td>
@@ -238,11 +244,13 @@
 											<td class="check_list"><input type="checkbox" name="" id="r04" class="check_stl" checked><label for="r04" class="check_stl_lab"></label></td>
 											<td class="check_list"><input type="checkbox" name="" id="u04" class="check_stl"><label for="u04" class="check_stl_lab"></label></td>
 											<td class="check_list"><input type="checkbox" name="" id="d04" class="check_stl"><label for="d04" class="check_stl_lab"></label></td>
-											<td class="btn_dtail_list"><button class="shadow btn_dtail on" title="상세권한보기"><i class="btn_dtail_arrow"></i></button></td>
+											<!-- s: class 변경 -->
+											<td class="btn_dtail_list"><button class="line btn_dtail on" title="상세권한보기"><i class="btn_dtail_arrow"></i></button></td>
+											<!-- e: class 변경 -->
 										</tr>
+										<!-- s: colspan="8"로 변경, td 삭제 -->
 										<tr class="on dt_view">
-											<td></td>
-											<td colspan="7" class="depth2">
+											<td colspan="8" class="depth2">
 												<div>
 													<a class="add_option w_t">Eliminate<button title="삭제" class="btn_option"></button></a>
 													<a class="add_option w_t">M001.Eliminate<button title="삭제" class="btn_option"></button></a>
@@ -279,9 +287,9 @@
 					<!-- e: class 변경 -->
 				</div>
 			</div>
-			<div class="footer">
+			<!-- nav로 이동 <div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </body>

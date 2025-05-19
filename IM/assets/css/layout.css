@@ -376,7 +376,7 @@ body * {
   -webkit-mask-image: url("../images/common/ico_time.svg");
   mask-image: url("../images/common/ico_time.svg");
 }
-#SGIM_wrap .header .gl_nav li.btn_alim a, #SGIM_wrap .header .gl_nav li.btn_menualdown a, #SGIM_wrap .header .gl_nav li.btn_logout a {
+#SGIM_wrap .header .gl_nav li.btn_menualdown a, #SGIM_wrap .header .gl_nav li.btn_logout a {
   width: 24px;
   height: 24px;
   -webkit-mask-repeat: no-repeat;
@@ -390,12 +390,16 @@ body * {
   margin-top: 0;
   background-image: none;
 }
-#SGIM_wrap .header .gl_nav li.btn_alim a::before, #SGIM_wrap .header .gl_nav li.btn_menualdown a::before, #SGIM_wrap .header .gl_nav li.btn_logout a::before {
+#SGIM_wrap .header .gl_nav li.btn_menualdown a::before, #SGIM_wrap .header .gl_nav li.btn_logout a::before {
   content: none;
 }
 #SGIM_wrap .header .gl_nav li.btn_alim a {
-  -webkit-mask-image: url("../images/common/icon-alarm.svg");
-  mask-image: url("../images/common/icon-alarm.svg");
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/icon-alarm.svg");
 }
 #SGIM_wrap .header .gl_nav li.btn_menualdown a {
   -webkit-mask-image: url("../images/common/icon_download.svg");
@@ -414,6 +418,31 @@ body * {
 }
 #SGIM_wrap .header .gl_nav li a {
   line-height: 24px;
+}
+#SGIM_wrap .header .balloon {
+  border: 1px solid var(--border-d);
+  border-radius: 6px;
+}
+#SGIM_wrap .header .balloon::before {
+  border-bottom: 8px solid var(--border-d);
+}
+#SGIM_wrap .header .alim_pop_wrap .alim_top {
+  padding: 24px 24px 18px;
+}
+#SGIM_wrap .header .alim_pop_wrap .alim_top span {
+  font-size: var(--font-16);
+  font-weight: var(--font-bold);
+  color: var(--title);
+}
+#SGIM_wrap .header .alim_pop_wrap .alim_top .alim_clear {
+  top: unset;
+  right: 24px;
+  bottom: 10px;
+  padding: 0;
+  font-size: var(--font-14);
+  font-weight: var(--font-regular);
+  line-height: unset;
+  color: var(--content);
 }
 #SGIM_wrap .header + .i-card_wrap {
   margin: 94px 24px 0;

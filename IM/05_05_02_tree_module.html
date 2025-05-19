@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 
-	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<!-- s : 추가 -->
 	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
@@ -24,13 +24,13 @@
 	<![endif]-->
 </head>
 <body>
-	<div id="SGIM_wrap" class="">
+	<div id="SGIM_wrap" class="mini_nav">
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
 					<!--s: 이미지 경로 및 이미지 변경-->
 					<a href="" class="logo">
-						<img src="assets/images/common/logo_186x30.png">
+						<img src="assets/images/common/logo.png">
 						<span>Admin</span>
 					</a>
 					<!--e: 이미지 경로 및 이미지 변경-->
@@ -111,7 +111,7 @@
 				<ul class="gl_nav">
 					<li class="btn_top_user"><a href=""><span>user01</span></a></li>
 					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
-					<li class="btn_alim"><a href="">alim</a>
+					<li class="btn_alim"><a href="">alim<span>13</span></a>
 						<div class="balloon alim_pop" style="display:none">
 							<div class="alim_pop_wrap">
 								<div class="alim_top">
@@ -249,13 +249,14 @@
 				<div class="move_wrap treeview">
 					<div class="move_box">
 						<div class="moved_tit flx">
+							<!-- s: class 추가 및 변경 -->
 							<div class="dropdown">
-								<button class="btn_dropdown">저장소
-									<span>
+								<button class="line btn_dropdown">저장소
+									<!-- s : background에 이미지 삽입 <span>
 										<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M6 10L10 5H2L6 10Z" fill="#494949"/>
 										</svg>
-									</span>
+									</span> -->
 								</button>
 								<ul class="dropdown_list" style="min-width:318px;display:none;">
 									<li>
@@ -272,6 +273,7 @@
 								<button class="treem_btn">수정</button>
 								<button class="treem_btn">삭제</button>
 							</div>
+							<!-- e: class 추가 및 변경 -->
 						</div>
 						<div class="search_box mini_search">
 							<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
@@ -280,9 +282,11 @@
 						<div class="scroll tree_wrap">
 							<ul class="tree_list">
 								<li><a href=""><i class="icon_folder open"></i>Tenant Store</a>
-									<ul>
+									<ul >
 										<li><button class="tree_arrow open"></button><a href=""><i class="icon_folder open"></i>Tenant A</a>
-											<ul>
+											<!-- s: sub_tree_menu 추가 -->
+											<ul class="sub_tree_menu">
+											<!-- e: sub_tree_menu 추가 -->
 												<li>
 													<a href="" class="selected"><i class="icon_folder"></i>JSP</a>
 													<div class="tree_more_wrap">
@@ -311,7 +315,7 @@
 							</div>
 							<div class="list_right_btn f_r wid50">
 								<div class="dropdown">
-									<button class="primary btn_dropdown">다운로드
+									<button class="line btn_dropdown">다운로드
 										<!--s: 아이콘 변경 <span>
 											<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M6 10L10 5H2L6 10Z" fill="#2772FB"/>
@@ -332,7 +336,7 @@
 								<button class="line icon"><i class="checkin"></i> 체크인</button>
 								<!-- e: class 삭제 -->
 								<button class="line icon"><i class="icon_reset init"></i> 복원</button>
-								<button class="line icon"><i class="delfile"></i> 삭제</button>
+								<button class="line"><i class="delfile"></i> 삭제</button>
 							</div>
 						</div>
 						<!-- e: class명 변경 -->
@@ -491,9 +495,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer">
+			<!-- nav로 이동 <div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </body>
