@@ -23,7 +23,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 
 @each $btn in $btns {
     #{$btn} {
-        padding:0 10px;
+        padding:0 7px;
         border-radius:6px;
         font-size:var(--font-13);
         line-height:30px;
@@ -176,10 +176,10 @@ button, a {
             &.icon_reset {
                 font-size:0;
                 @include mask(var(--title));
-                -webkit-mask-image:url("../images/common/ico_reset.svg");
-                mask-image:url("../images/common/ico_reset.svg");
-                -webkit-mask-size: 80%;
-                mask-size: 80%;
+                -webkit-mask-image:url("../images/common/ico_refresh.svg");
+                mask-image:url("../images/common/ico_refresh.svg");
+                -webkit-mask-size: 90%;
+                mask-size: 90%;
                 background-image:none;
                 &::before {
                     content:none;
@@ -236,7 +236,7 @@ button, a {
     &.disabled {
         cursor:auto;
         border:1px solid var(--btn-disabled);
-        color:var(--text-disabled);
+        color:var(--text-disabled) !important;
         background:var(--btn-disabled);
         i {
             background-color:var(--text-disabled) !important;
@@ -330,6 +330,22 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 background-image:url("../images/common/btn_add.svg");
                 background-position:center;
             }
+        }
+    }
+}
+
+/* 더보기+ button */
+.allAlim {
+    padding:20px 0;
+    text-align:center;
+    a {
+        &.icon_plus {
+            display:inline-block;
+            padding:0 23px 0 14px;
+            line-height:28px;
+            color:var(--white);
+            background:url("../images/common/icon_plus.svg")no-repeat center right 4px;
+            background-color:var(--basic);
         }
     }
 }

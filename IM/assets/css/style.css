@@ -82,6 +82,32 @@
   background-image: url("../images/common/label/ico_delegating.svg");
 }
 
+.icon_alim {
+  top: 10px;
+  left: 7px;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+}
+.icon_alim.icon_receive {
+  background-image: url("../images/common/icon_receive.svg");
+}
+.icon_alim.icon_notice {
+  background-image: url("../images/common/icon_notice.svg");
+}
+.icon_alim.icon_message {
+  background-image: url("../images/common/icon_message.svg");
+}
+.icon_alim.icon_caution {
+  background-image: url("../images/common/icon_caution.svg");
+}
+
+.content_infotxt em {
+  color: var(--primary);
+}
+
 /*---------------------------------------------
     border-bottom이 after로 들어가야할 때
 ---------------------------------------------*/
@@ -2149,6 +2175,11 @@
   margin-bottom: 0;
 }
 
+/* cdt_box */
+.cdt_box .form_stl .form_list .form_tit label, .cdt_box .form_stl .form_list .form_tbl.bul_dot > li .form_txt label, .cdt_box .form_stl .form_tbl.bul_dot > li .form_list .form_txt label {
+  line-height: 2.3;
+}
+
 /* noline */
 .form_stl {
   margin-bottom: 0;
@@ -2199,6 +2230,9 @@
 .form_stl .form_tbl li .form_tit, .form_stl .form_tbl.bul_dot > li li .form_txt {
   font-weight: var(--font-regular);
 }
+.form_stl .form_tbl .form_txt {
+  width: 100%;
+}
 .form_stl .form_list {
   display: flex;
   width: 100%;
@@ -2209,6 +2243,7 @@
   position: unset;
   padding-top: 5px;
   margin: 0;
+  font-weight: var(--font-regular);
 }
 .form_stl .form_list .form_tit::before, .form_stl .form_list .form_tbl.bul_dot > li .form_txt::before, .form_stl .form_tbl.bul_dot > li .form_list .form_txt::before {
   left: 10px;
@@ -2570,59 +2605,60 @@
   -webkit-mask-image: url("../images/common/close.svg");
   mask-image: url("../images/common/close.svg");
 }
-.action_tree_wrap .action_list .entrybox .entry_setting {
+.action_tree_wrap .action_list .entry_setting {
   margin-top: 4px;
   padding: 9px 38px;
   border-radius: 4px;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting::before {
+.action_tree_wrap .action_list .entry_setting::before {
   content: none;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list {
   margin-top: 10px;
   padding: 0 11px;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list:first-child {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list:first-child {
   margin-top: 0;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list.noline {
   border-bottom: 0;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline .form_tit, .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline .form_tbl.bul_dot > li .form_txt, .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot > li .form_list.noline .form_txt {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list.noline .form_tit, .action_tree_wrap .action_list .entry_setting .form_stl .form_list.noline .form_tbl.bul_dot > li .form_txt, .action_tree_wrap .action_list .entry_setting .form_stl .form_tbl.bul_dot > li .form_list.noline .form_txt {
   padding-top: 0;
+  font-weight: var(--font-regular);
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.noline .form_txt {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list.noline .form_txt {
   padding-left: 0;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.bul_dot {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list.bul_dot {
   align-items: center;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.bul_dot > dt {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list.bul_dot > dt {
   position: relative;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.bul_dot > dt::before {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list.bul_dot > dt::before {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list.topline {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list.topline {
   padding-top: 10px;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_list .form_txt .check_stl_lab {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_list .form_txt .check_stl_lab {
   margin-left: 0;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_row .adddel_bts {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_row .adddel_bts {
   margin-top: 0;
   padding-top: 0;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_row .adddel_bts .btn_option {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option {
   top: 0;
   width: 30px;
   height: 30px;
   border-radius: 6px;
   background-color: var(--basic);
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_row .adddel_bts .btn_option::after {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2632,15 +2668,15 @@
   -webkit-mask-image: url("../images/common/btn_add.svg");
   mask-image: url("../images/common/btn_add.svg");
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_row .adddel_bts .btn_option.btn_del_option::after {
+.action_tree_wrap .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option.btn_del_option::after {
   -webkit-mask-image: url("../images/common/btn_minus.svg");
   mask-image: url("../images/common/btn_minus.svg");
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl p.entry_txt.bul_dot {
+.action_tree_wrap .action_list .entry_setting .form_stl p.entry_txt.bul_dot {
   position: relative;
   padding: 0 0 0 11px;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl p.entry_txt.bul_dot::before {
+.action_tree_wrap .action_list .entry_setting .form_stl p.entry_txt.bul_dot::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2652,14 +2688,14 @@
   border-radius: 50%;
   background: var(--content);
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list {
+.action_tree_wrap .action_list .entry_setting .form_stl div.form_list {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tit, .action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt, .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt {
+.action_tree_wrap .action_list .entry_setting .form_stl div.form_list.bul_dot .form_tit, .action_tree_wrap .action_list .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt, .action_tree_wrap .action_list .entry_setting .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt {
   position: relative;
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tit::before, .action_tree_wrap .action_list .entrybox .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt::before, .action_tree_wrap .action_list .entrybox .entry_setting .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt::before {
+.action_tree_wrap .action_list .entry_setting .form_stl div.form_list.bul_dot .form_tit::before, .action_tree_wrap .action_list .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt::before, .action_tree_wrap .action_list .entry_setting .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2671,7 +2707,7 @@
   border-radius: 50%;
   background: var(--content);
 }
-.action_tree_wrap .action_list .entrybox .entry_setting .btn_box {
+.action_tree_wrap .action_list .entry_setting .btn_box {
   padding: 0;
 }
 .action_tree_wrap .action_list a {
@@ -2815,10 +2851,11 @@
 }
 
 .move_box {
+  min-width: 300px;
   padding-left: 24px;
+  padding: 20px;
   border: 1px solid var(--border-d);
   border-radius: 6px;
-  padding: 20px;
 }
 .move_box .moved_tit .tit_in_btn {
   right: 0;

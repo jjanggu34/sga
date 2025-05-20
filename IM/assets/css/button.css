@@ -19,7 +19,7 @@
 }
 
 .btn_box a {
-  padding: 0 10px;
+  padding: 0 7px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -31,7 +31,7 @@
 }
 
 .btn_box button {
-  padding: 0 10px;
+  padding: 0 7px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -43,7 +43,7 @@
 }
 
 .list_btn button {
-  padding: 0 10px;
+  padding: 0 7px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -55,7 +55,7 @@
 }
 
 button {
-  padding: 0 10px;
+  padding: 0 7px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -241,10 +241,10 @@ button.icon i.icon_reset, a.icon i.icon_reset {
   mask-position: center;
   background-color: var(--title);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_reset.svg");
-  mask-image: url("../images/common/ico_reset.svg");
-  -webkit-mask-size: 80%;
-  mask-size: 80%;
+  -webkit-mask-image: url("../images/common/ico_refresh.svg");
+  mask-image: url("../images/common/ico_refresh.svg");
+  -webkit-mask-size: 90%;
+  mask-size: 90%;
   background-image: none;
 }
 button.icon i.icon_reset::before, a.icon i.icon_reset::before {
@@ -307,7 +307,7 @@ button.icon.bottom, a.icon.bottom {
 button.disabled, a.disabled {
   cursor: auto;
   border: 1px solid var(--btn-disabled);
-  color: var(--text-disabled);
+  color: var(--text-disabled) !important;
   background: var(--btn-disabled);
 }
 button.disabled i, a.disabled i {
@@ -441,6 +441,20 @@ button.icon_arrow_none, a.icon_arrow_none {
   background-image: none;
   background-image: url("../images/common/btn_add.svg");
   background-position: center;
+}
+
+/* 더보기+ button */
+.allAlim {
+  padding: 20px 0;
+  text-align: center;
+}
+.allAlim a.icon_plus {
+  display: inline-block;
+  padding: 0 23px 0 14px;
+  line-height: 28px;
+  color: var(--white);
+  background: url("../images/common/icon_plus.svg") no-repeat center right 4px;
+  background-color: var(--basic);
 }
 
 /* detail_open 안에 button */

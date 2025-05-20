@@ -53,6 +53,30 @@ $btnstls: "trcolor", "fcolor";
     }
 }
 
+.icon_alim {
+    top:10px;
+    left:7px;
+    @include icon (16px, 16px);
+    &.icon_receive {
+        background-image:url("../images/common/icon_receive.svg");
+    }
+    &.icon_notice {
+        background-image:url("../images/common/icon_notice.svg");
+    }
+    &.icon_message {
+        background-image:url("../images/common/icon_message.svg");
+    }
+    &.icon_caution {
+        background-image:url("../images/common/icon_caution.svg");
+    }
+}
+
+.content_infotxt {
+    em {
+        color:var(--primary);
+    }
+}
+
 /*---------------------------------------------
     border-bottom이 after로 들어가야할 때
 ---------------------------------------------*/
@@ -1839,6 +1863,18 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
+/* cdt_box */
+.cdt_box {
+    .form_stl {
+        .form_list {
+            .form_tit {
+                label {
+                    line-height:2.3;
+                }
+            }
+        }
+    }
+}
 /* noline */
 .form_stl {
     margin-bottom:0;
@@ -1894,6 +1930,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 font-weight:var(--font-regular);
             }
         }
+        .form_txt {
+            width:$wh100;
+        }
     }
     .form_list {
         display:flex;
@@ -1904,6 +1943,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             position:unset;
             padding-top:5px;
             margin:0;
+            font-weight:var(--font-regular);
             &::before {
                 left:10px;
                 top:21px;
@@ -2310,81 +2350,105 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     mask-image:url("../images/common/close.svg");
                 }
             }
-            .entry_setting {
-                margin-top:4px;
-                padding:9px 38px;
-                border-radius:4px;
-                &::before {
-                    content:none;
-                }
-                .form_stl {
-                    .form_list {
-                        margin-top:10px;
-                        padding:0 11px;
-                        &:first-child {
-                            margin-top:0;
-                        }
-                        &.noline {
-                            border-bottom:0;
-                            .form_tit {
-                                padding-top:0;
-                            }
-                            .form_txt {
-                                padding-left:0;
-                            }
-                        }
-                        &.bul_dot {
-                            align-items:center;
-                            &>dt {
-                                position:relative;
-                                &::before {
-                                    top:50%;
-                                    left:0;
-                                    transform:translateY(-50%);
-                                }
-                            }
-                        }
-                        &.topline {
-                            padding-top:10px;
+        }
+        .entry_setting {
+            margin-top:4px;
+            padding:9px 38px;
+            border-radius:4px;
+            &::before {
+                content:none;
+            }
+            .form_stl {
+                .form_list {
+                    margin-top:10px;
+                    padding:0 11px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    &.noline {
+                        border-bottom:0;
+                        .form_tit {
+                            padding-top:0;
+                            font-weight:var(--font-regular);
                         }
                         .form_txt {
-                            .check_stl_lab {
-                                margin-left:0;
+                            padding-left:0;
+                        }
+                    }
+                    &.bul_dot {
+                        align-items:center;
+                        &>dt {
+                            position:relative;
+                            &::before {
+                                top:50%;
+                                left:0;
+                                transform:translateY(-50%);
                             }
                         }
                     }
-                    .form_row {
-                        .adddel_bts {
-                            margin-top:0;
-                            padding-top:0;
-                            .btn_option {
-                                top:0;
-                                @include wh(30px, 30px);
-                                border-radius:6px;
-                                background-color:var(--basic);
+                    &.topline {
+                        padding-top:10px;
+                    }
+                    .form_txt {
+                        .check_stl_lab {
+                            margin-left:0;
+                        }
+                    }
+                }
+                .form_row {
+                    .adddel_bts {
+                        margin-top:0;
+                        padding-top:0;
+                        .btn_option {
+                            top:0;
+                            @include wh(30px, 30px);
+                            border-radius:6px;
+                            background-color:var(--basic);
+                            &::after {
+                                top:50%;
+                                left:50%;
+                                transform:translate(-50%,-50%);
+                                @include wh(24px, 24px);
+                                background-color:var(--white);
+                                -webkit-mask-image:url("../images/common/btn_add.svg");
+                                mask-image:url("../images/common/btn_add.svg");
+                            }
+                            &.btn_del_option {
                                 &::after {
-                                    top:50%;
-                                    left:50%;
-                                    transform:translate(-50%,-50%);
-                                    @include wh(24px, 24px);
-                                    background-color:var(--white);
-                                    -webkit-mask-image:url("../images/common/btn_add.svg");
-                                    mask-image:url("../images/common/btn_add.svg");
-                                }
-                                &.btn_del_option {
-                                    &::after {
-                                        -webkit-mask-image:url("../images/common/btn_minus.svg");
-                                        mask-image:url("../images/common/btn_minus.svg");
-                                    }
+                                    -webkit-mask-image:url("../images/common/btn_minus.svg");
+                                    mask-image:url("../images/common/btn_minus.svg");
                                 }
                             }
                         }
                     }
-                    p {
-                        &.entry_txt {
-                            &.bul_dot {
+                }
+                p {
+                    &.entry_txt {
+                        &.bul_dot {
+                            position:relative;
+                            padding:0 0 0 11px;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: 0;
+                                display: inline-block;
+                                width: 3px;
+                                height: 3px;
+                                border-radius: 50%;
+                                background: var(--content);
+                            }
+                        }
+                    }
+                }
+                div {
+                    &.form_list {
+                        display:grid;
+                        grid-template-columns: 1fr 1fr;
+                        &.bul_dot {
+                            .form_tit {
                                 position:relative;
-                                padding:0 0 0 11px;
                                 &::before {
                                     content: "";
                                     position: absolute;
@@ -2400,33 +2464,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                             }
                         }
                     }
-                    div {
-                        &.form_list {
-                            display:grid;
-                            grid-template-columns: 1fr 1fr;
-                            &.bul_dot {
-                                .form_tit {
-                                    position:relative;
-                                    &::before {
-                                        content: "";
-                                        position: absolute;
-                                        top: 50%;
-                                        transform: translateY(-50%);
-                                        left: 0;
-                                        display: inline-block;
-                                        width: 3px;
-                                        height: 3px;
-                                        border-radius: 50%;
-                                        background: var(--content);
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
-                .btn_box {
-                    padding:0;
-                }
+            }
+            .btn_box {
+                padding:0;
             }
         }
         a {
@@ -2557,10 +2598,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .move_box {
+    min-width:300px;
     padding-left:24px;
+    padding:20px;
     border:$borderD;
     border-radius:6px;
-    padding:20px;
     .moved_tit {
         .tit_in_btn {
             right:0;
@@ -2580,6 +2622,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
 }
+
 .moved_box {
     padding-right:24px;
     .list_btn {
@@ -2633,6 +2676,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     color:var(--title);
     background-color:unset;
 }
+
 .move_tbl {
     height:100%;
     max-height:370px;//10개 기준
@@ -2777,6 +2821,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
 }
+
 /* move button */
 .move_ctrl {
     a {

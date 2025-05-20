@@ -358,9 +358,14 @@ body {
                     }
                 }
                 &.btn_alim {
-                    a {
+                    &>a {
                         @include icon (24px,24px);
                         background-image:url("../images/common/icon-alarm.svg");
+                        &>span {
+                            line-height:20px;
+                            color:var(--white);
+                            background-color:#F76900;
+                        }
                     }
                 }
                 &.btn_menualdown {
@@ -381,7 +386,7 @@ body {
                     color:var(--title);
                     background:none;
                 }
-                a {
+                &>a {
                     line-height:24px;
                 }
             }
@@ -390,24 +395,81 @@ body {
             border:$borderD;
             border-radius:6px;
             &::before {
+                right:72px;
                 border-bottom:8px solid var(--border-d);
             }
-        }
-        .alim_pop_wrap {
-            .alim_top {
-                padding:24px 24px 18px;
-                span {
-                    font-size:var(--font-16);
-                    font-weight:var(--font-bold);
-                    color:var(--title);
+            &::after {
+                right:73px;
+            }
+            &.alim_toast {
+                .newalim_txt {
+                    em {
+                        color:var(--primary);
+                    }
                 }
-                .alim_clear {
-                    top:unset;
-                    right:24px;
-                    bottom:10px;
-                    padding:0;
-                    @include title(var(--font-14),var(--font-regular),unset);
-                    color:var(--content);
+            }
+        }
+        .alim_pop {
+            top:60px;
+            right:-69px;
+            .alim_pop_wrap {
+                .alim_top {
+                    padding:24px 24px 8px;
+                    border-bottom:0;
+                    span {
+                        font-size:var(--font-16);
+                        font-weight:var(--font-bold);
+                        color:var(--title);
+                    }
+                    .alim_clear {
+                        top:unset;
+                        right:24px;
+                        bottom:0;
+                        padding:0;
+                        @include title(var(--font-14),var(--font-regular),unset);
+                        color:var(--content);
+                    }
+                }
+                .alim_list {
+                    padding:0 20px 0 14px;
+                    li {
+                        display:block;
+                        padding:0;
+                        margin-top:10px;
+                        border:$borderD;
+                        border-radius:9px;
+                        a {
+                            padding:11px 7px 11px 30px;
+                            font-weight:var(--font-regular);
+                            line-height:16px;
+                            color:var(--content);
+                            background-color:transparent;
+                            .icon_alim {
+                                top:10px;
+                                left:7px;
+                            }
+                        }
+                        &.no_msg {
+                            position:relative;
+                            padding:50px 7px 11px;
+                            text-align:center;
+                            line-height:normal;
+                            color:var(--text-disabled);
+                            &::before {
+                                display:inline-block;
+                                @include content(24px, 24px);
+                                position:absolute;
+                                top:15px;
+                                left:50%;
+                                transform:translateX(-50%);
+                                background: url("../images/common/icon-nodata.svg") no-repeat  center / cover;
+                            }
+                            a {
+                                padding:0;
+                                color:var(--text-disabled);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -614,6 +676,30 @@ body {
             @include icon(30px, 30px);
             background-color:transparent;
             background-image:url("../images/common/close.svg");
+        }
+    }
+}
+
+/***************** balloon *****************/
+.b_pwd {
+    &.balloon {
+        left:0;
+        top:48px;
+        &::before {
+            top:-15px;
+            left:50%;
+            transform:translateX(-50%);
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 10px solid var(--border-d);
+        }
+        &::after {
+            top:-14px;
+            left:50%;
+            transform:translateX(-50%);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 10px solid #fff;
         }
     }
 }
