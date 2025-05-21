@@ -29,7 +29,7 @@
 .default_tbl thead tr th {
   padding: 10px;
   border: 0;
-  border-top: 1px solid var(--border-d);
+  border-top: 1px solid var(--list-border);
   border-bottom: 1px solid var(--secondary);
   line-height: 16px;
   color: var(--title);
@@ -42,7 +42,7 @@
 }
 .default_tbl tbody tr th {
   border: 0;
-  border-bottom: 1px solid var(--border-d);
+  border-bottom: 1px solid var(--list-border);
   font-size: var(--font-13);
   font-weight: var(--font-regular);
   line-height: 16px;
@@ -74,7 +74,7 @@
 .default_tbl tbody tr td {
   padding: 5px 20px 6px;
   border: 0;
-  border-bottom: 1px solid var(--border-d);
+  border-bottom: 1px solid var(--list-border);
   font-size: var(--font-13);
   font-weight: var(--font-regular);
   color: var(--content);
@@ -271,9 +271,6 @@
 .default_tbl tr.on, .default_tbl tr:hover {
   background-color: var(--body);
 }
-.default_tbl tr.on td {
-  border-bottom: 0;
-}
 .default_tbl .dt_view {
   border-top: 0;
 }
@@ -329,6 +326,9 @@
   margin-right: 10px;
   color: var(--text-disabled);
 }
+.move_tbl2 .default_tbl tr.on td {
+  border-bottom: 0;
+}
 .move_tbl2 .default_tbl .btn_dtail_list {
   width: 70px;
   text-align: center;
@@ -367,6 +367,10 @@
   mask-image: url("../images/common/icon_arrow_none.svg");
 }
 
-/*---------------------------------------------
-    #table 안에 accordion
----------------------------------------------*/
+.move_tbl {
+  height: 100%;
+  max-height: 370px;
+  margin-top: 7px;
+  border: 0;
+  border-top: 1px solid var(--list-border);
+}

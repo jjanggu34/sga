@@ -24,6 +24,7 @@ $borderTs: "search_wrap", "tab_wrap";
         color:var(--text-disabled);
     }
 }
+
 /* search */
 .search_wrap {
     padding:20px 24px;
@@ -78,6 +79,7 @@ $borderTs: "search_wrap", "tab_wrap";
         gap:4px;
     }
 }
+
 /* date2 -> calendar */
 .weeksTbl {
     .week_row {
@@ -128,7 +130,6 @@ $borderTs: "search_wrap", "tab_wrap";
         }
     }
 }
-
 .file_output {
     padding-top:6px;
     .form_contrl {
@@ -139,7 +140,6 @@ $borderTs: "search_wrap", "tab_wrap";
         background-color:#F3F5F7;
     }
 }
-
 .file_upload_wrap { //파일 첨부
     max-width:none;
     .file_upload_box {
@@ -420,6 +420,40 @@ select{
         }
         &+ label::before {
             background-color:var(--btn-disabled);
+        }
+    }
+}
+
+/*---------------------------------------------
+	#dropdown
+---------------------------------------------*/
+.dropdown {
+    display:block;
+    width:100%;
+    padding-bottom:10px;
+    border-bottom:$borderD;
+    .btn_dropdown {
+        width:100%;
+        padding:0;
+        border:0;
+        text-align:left;
+    }
+}
+.moved_tit {
+    .dropdown_list {
+        top:43px;
+        left:0;
+        border-radius:6px;
+        background-color:var(--white);
+        z-index:1;
+    }
+}
+.dropdown_list {
+    border:$borderD;
+    li {
+        border-bottom:$borderD;
+        button {
+            color:var(--content);
         }
     }
 }

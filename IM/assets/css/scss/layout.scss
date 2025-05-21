@@ -58,10 +58,14 @@ body {
     .nav {
         border-right:$borderD;
         box-shadow:none;
+        .nav_inner {
+            background-color:#F9FBFD;
+        }
     }
     .nav_header {
         @include flexsb();
         padding:20px;
+        background-color:var(--white);
         .logo {
             @include wh (143px, 20px);
             img {
@@ -72,12 +76,14 @@ body {
     .nav_tab {
         a {
             padding:18px 0 11px;
+            border:0;
+            border-bottom:$borderD;
+            border-radius:0;
             font-size:var(--font-14);
             font-weight:var(--font-regular);
             color:var(--content);
-            background-color:var(--white);
+            background-color:#F9FBFD;
             &.on {
-                border:0;
                 border-radius:0;
                 border-bottom:2px solid var(--primary);
                 font-weight:var(--font-medium);
@@ -86,20 +92,22 @@ body {
         }
     }
     .nav_list {
+        padding:0 10px 10px;
         > li {
+            margin-top:10px;
             > a{
-                padding:18px 42px;
+                padding:12px 42px;
                 border-left:0;
                 &.on {
                     border-top:0;
                     border-left-color: transparent;
-                    color:var(--primary);
-                    background-color:var(--white);
+                    color:var(--white);
+                    background-color:var(--primary);
                     i {
-                        background-color:var(--primary);
+                        background-color:var(--white);
                     }
                     span {
-                        color:var(--primary);
+                        color:var(--white);
                     }
                     &::after {
                         transform: translateY(-50%) rotate(180deg);
@@ -111,17 +119,11 @@ body {
                     color:var(--primary);
                 }
                 &::after {
-                    top:50%;
-                    transform: translateY(-50%);
-                    display:inline-block;
-                    @include wh (16px, 16px);
-                    @include mask(var(--content));
-                    -webkit-mask-image:url("../images/common/menu_arr.svg");
-                    mask-image:url("../images/common/menu_arr.svg");
+                    content:none;
                 }
                 i {
-                    top:13px;
-                    left:14px;
+                    top:8px;
+                    left:12px;
                     @include wh (24px,24px);
                     @include mask (var(--content));
                     background-image:none;
@@ -168,46 +170,43 @@ body {
                 }
             }
             ul {
-                margin:0 9px 0 13px;
-                padding:28px 10px 22px 19px;
-                border-left:0;
+                margin:10px 0 0;
+                border:0;
                 border-radius:11px;
-                background-color:var(--primary);
+                background-color:transparent;
                 li {
+                    padding:8px 10px 7px 14px;
+                    border-bottom:$borderD;
                     a{
                         position:relative;
-                        padding:9px 0;
+                        padding:0;
                         font-weight:var(--font-medium);
-                        color:var(--white);
+                        color:var(--text-disabled);
                         line-height:17px;
-                        opacity:.7;
                         &:hover {
-                            color:var(--white);
+                            color:var(--primary);
                             background-color:transparent;
                             opacity:1;
+                        }
+                        &::after {
+                            content:"";
+                            position:absolute;
+                            top:50%;
+                            right:0;
+                            transform:translateY(-50%);
+                            display:inline-block;
+                            @include wh (16px,16px);
+                            @include mask(var(--text-disabled));
+                            -webkit-mask-image:url("../images/common/nav_arr.svg");
+                            mask-image:url("../images/common/nav_arr.svg");
                         }
                         &.on {
+                            color:var(--primary);
                             background-color:transparent;
-                            opacity:1;
                             &::after {
-                                content:"";
-                                position:absolute;
-                                top:50%;
-                                right:0;
-                                transform:translateY(-50%);
-                                display:inline-block;
-                                @include icon(16px,16px);
-                                border-radius:50%;
-                                background-image: url("../images/common/nav_check.svg");
-                                background-color:var(--white);
+                                background-color:var(--primary);
                             }
                         }
-                    }
-                    &:first-child a {
-                        padding-top:0;
-                    }
-                    &:last-child a {
-                        padding-bottom:0;
                     }
                 }
             }
@@ -258,12 +257,11 @@ body {
                         }
                     }
                     &::before {
-                        @include content(24px,24px);
+                        @include content(16px,16px);
                         display:inline-block;
                         @include mask (var(--secondary));
-                        transform:rotate(-90deg);
-                        -webkit-mask-image:url("../images/common/ico_accordion.svg");
-                        mask-image:url("../images/common/ico_accordion.svg");
+                        -webkit-mask-image:url("../images/common/header_arr.svg");
+                        mask-image:url("../images/common/header_arr.svg");
                     }
                     &:last-child {
                         a {
@@ -622,6 +620,7 @@ body {
 /*---------------------------------------------
     #팝업 레이아웃
 ---------------------------------------------*/
+/***************** side popup *****************/
 .detail_view {
     top:60px;
     height:calc(100% - 60px);
@@ -659,6 +658,7 @@ body {
     }
 }
 
+/***************** center popup *****************/
 .layer_popup {
     .popup_title {
         padding:10px 20px 0 20px;

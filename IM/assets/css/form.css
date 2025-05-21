@@ -434,3 +434,37 @@ select.form_contrl {
 .tg_sch_stl .tg_sch + label::before {
   background-color: var(--btn-disabled);
 }
+
+/*---------------------------------------------
+	#dropdown
+---------------------------------------------*/
+.dropdown {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-d);
+}
+.dropdown .btn_dropdown {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  text-align: left;
+}
+
+.moved_tit .dropdown_list {
+  top: 43px;
+  left: 0;
+  border-radius: 6px;
+  background-color: var(--white);
+  z-index: 1;
+}
+
+.dropdown_list {
+  border: 1px solid var(--border-d);
+}
+.dropdown_list li {
+  border-bottom: 1px solid var(--border-d);
+}
+.dropdown_list li button {
+  color: var(--content);
+}

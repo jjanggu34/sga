@@ -62,7 +62,7 @@
     /* background color */
     --body: #F3F5F7;
     --table-th: #F8F8F8;
-    --white: #fff;
+    --white: #FFFFFF;
 
     /* text color */
     --title: #222222;
@@ -73,6 +73,7 @@
     /* border color */
     --border-d:#DDDDDD;
     --border-disabled: #AAB0B8;
+    --list-border:#C9C9C9;
 
     /* button color */
     --btn-hover: #138170;
