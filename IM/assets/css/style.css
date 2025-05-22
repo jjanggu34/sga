@@ -82,6 +82,10 @@
   background-image: url("../images/common/label/ico_delegating.svg");
 }
 
+.redtxt {
+  color: var(--false);
+}
+
 .icon_alim {
   top: 10px;
   left: 7px;
@@ -990,6 +994,32 @@
 }
 .mini_tab.moveup {
   margin-top: 0;
+}
+
+/* 모니터링 탭 */
+.mod_cont .tab_wrap {
+  margin: 0 0 16px;
+}
+.mod_cont .tab_wrap .tab_list li a {
+  padding: 8px 12px;
+  margin: 0;
+  font-size: var(--font-14);
+  color: var(--text-disabled);
+}
+.mod_cont .tab_wrap .tab_list li a.on {
+  color: var(--white);
+}
+.mod_cont .tab_wrap .tab_list li a .tab_stt {
+  width: 15px;
+  height: 15px;
+  margin-bottom: 1px;
+  font-size: var(--font-10);
+  color: var(--white);
+  background-color: var(--text-disabled);
+}
+.mod_cont .tab_wrap .tab_list li a .tab_stt.new_org {
+  padding-top: 1px;
+  background-color: var(--info);
 }
 
 /*********************************************************************

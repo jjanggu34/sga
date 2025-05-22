@@ -53,6 +53,10 @@ $btnstls: "trcolor", "fcolor";
     }
 }
 
+.redtxt {
+    color:var(--false);
+}
+
 .icon_alim {
     top:10px;
     left:7px;
@@ -778,6 +782,37 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.moveup {
         margin-top:0;
+    }
+}
+
+/* 모니터링 탭 */
+.mod_cont {
+    .tab_wrap {
+        margin:0 0 16px;
+        .tab_list {
+            li {
+                a {
+                    padding:8px 12px;
+                    margin:0;
+                    font-size:var(--font-14);
+                    color:var(--text-disabled);
+                    &.on {
+                        color:var(--white);
+                    }
+                    .tab_stt {
+                        @include wh (15px, 15px);
+                        margin-bottom:1px;
+                        font-size:var(--font-10);
+                        color:var(--white);
+                        background-color:var(--text-disabled);
+                        &.new_org {
+                            padding-top:1px;
+                            background-color:var(--info);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
