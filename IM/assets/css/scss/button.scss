@@ -91,6 +91,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 	#line
 ---------------------------------------------*/
 .line {
+    padding-bottom:0;
     border-radius:6px;
     font-size:var(--font-13);
     color:var(--content);

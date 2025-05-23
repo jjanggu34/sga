@@ -24,7 +24,7 @@
 	<![endif]-->
 </head>
 <body>
-	<div id="SGIM_wrap" class="mini_nav">
+	<div id="SGIM_wrap" class="">
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
@@ -119,6 +119,17 @@
 						</div>
 						<div class="mod_cont">
 							<div class="data_cht_row">
+								<!-- s: 게이지 차트와 data_cht_info 순서 변경 -->
+								<!-- 게이지 챠트 -->
+								<div class="gauge_box wid50">
+									<canvas id="view-gauge" width="180px" height="180px">
+							        </canvas>
+							        <ul class="gauge-legend">
+							        	<li class="min">0</li>
+							        	<li class="max">100</li>
+							        </ul>
+							        <div class="preview-textfield"><em>50</em>%</div>
+								</div>
 								<div class="wid50">
 									<!-- s: bul_dot 추가 -->
 									<dl class="data_cht_info bul_dot">
@@ -135,16 +146,7 @@
 									</dl>
 									<!-- e: bul_dot 추가 -->
 								</div>
-								<!-- 게이지 챠트 -->
-								<div class="gauge_box wid50">
-									<canvas id="view-gauge" width="180px" height="180px">
-							        </canvas>
-							        <ul class="gauge-legend">
-							        	<li class="min">0</li>
-							        	<li class="max">100</li>
-							        </ul>
-							        <div class="preview-textfield"><em>50</em>%</div>
-								</div>
+								<!-- e: 게이지 차트와 data_cht_info 순서 변경 -->
 							</div>
 						</div>
 					</div>
@@ -164,18 +166,23 @@
 							        	<li class="min">0</li>
 							        	<li class="max">100</li>
 							        </ul>
-							        <div class="preview-textfield" style="padding-top:6px"><span class="gg_opt">메모리</span><em>12</em>%</div>
+									<!-- s: style 삭제(padding-top:6px;) -->
+							        <div class="preview-textfield"><span class="gg_opt">메모리</span><em>12</em>%</div>
+									<!-- e: style 삭제(padding-top:6px;) -->
 								</div>
-								<div class="wid50 gauge_box">
+							    <!-- s: 주의"bg-yel" 경고"bg-red" 클래스 위치 변경 -->
+								<div class="wid50 gauge_box bg-yel">
 									<canvas id="view-gauge03" width="180px" height="180px">
 							        </canvas>
 							        <ul class="gauge-legend">
 							        	<li class="min">0</li>
 							        	<li class="max">100</li>
 							        </ul>
-							        <!-- 주의"bg-yel" 경고"bg-red" 클래스 --> 
-							        <div class="preview-textfield bg-yel" style="padding-top:6px"><span class="gg_opt">스왑공간</span><em>70</em>%</div>
+									<!-- s: style 삭제(padding-top:6px;) -->
+							        <div class="preview-textfield"><span class="gg_opt">스왑공간</span><em>70</em>%</div>
+									<!-- e: style 삭제(padding-top:6px;) -->
 								</div>
+								<!-- e: 주의"bg-yel" 경고"bg-red" 클래스 위치 변경 -->
 							</div>
 						</div>
 					</div>
@@ -186,14 +193,15 @@
 							</p>
 						</div>
 						<div class="mod_cont">
+							<!-- s: bar_chart 수정/진행률을 before로 넣고 disk01,2,3 클래스 위치 변경 -->
 							<div class="hrz_bar_lyt">
 								<div class="hrz_bar_legend">
 									<p class="legend_name">Disk1</p>
 									<p class="legend_info">D:/</p>
 								</div>
 								<div class="hrz_bar_inner">
-									<div class="bar_chart_bg">
-										<div class="bar_value disk01"></div>
+									<div class="bar_chart_bg disk01">
+										<div class="bar_value"></div>
 									</div>
 									<p class="bar_dtail">3,7206.0GB 중 6,682.6GB 사용 가능</p>
 								</div>
@@ -204,8 +212,8 @@
 									<p class="legend_info">E:/</p>
 								</div>
 								<div class="hrz_bar_inner">
-									<div class="bar_chart_bg">
-										<div class="bar_value disk02"></div>
+									<div class="bar_chart_bg disk02">
+										<div class="bar_value"></div>
 									</div>
 									<p class="bar_dtail">3,7206.0GB 중 6,682.6GB 사용 가능</p>
 								</div>
@@ -216,16 +224,16 @@
 									<p class="legend_info">F:/</p>
 								</div>
 								<div class="hrz_bar_inner">
-									<div class="bar_chart_bg">
-										<div class="bar_value disk03"></div>
+									<div class="bar_chart_bg disk03">
+										<div class="bar_value"></div>
 									</div>
 									<p class="bar_dtail">3,7206.0GB 중 6,682.6GB 사용 가능</p>
 								</div>
 							</div>
 							<style type="text/css">
-								.bar_value.disk01 {animation:barchart01 .8s ease-out forwards;}
-								.bar_value.disk02 {animation:barchart02 .8s ease-out forwards;}
-								.bar_value.disk03 {animation:barchart03 .8s ease-out forwards;}
+								.bar_chart_bg.disk01::before {animation:barchart01 .8s ease-out forwards;}
+								.bar_chart_bg.disk02::before {animation:barchart02 .8s ease-out forwards;}
+								.bar_chart_bg.disk03::before {animation:barchart03 .8s ease-out forwards;}
 								@keyframes barchart01 {
 									0% {width: 0%}
 									100% {width:10%}
@@ -239,6 +247,7 @@
 									100% {width:40%}
 								}
 							</style>
+							<!-- e: bar_chart 수정/진행률을 before로 넣고 disk01,2,3 클래스 위치 변경 -->
 						</div>
 					</div>
 					<div class="mod_stl">
@@ -660,14 +669,16 @@
 									<dd>16</dd>
 								</dl>
 								<div class="flx">
-									<dl class="data_cht_info">
+									<!-- s: class 추가 -->
+									<dl class="data_cht_info activation">
 										<dt>생성</dt>
 										<dd class="bluetxt">4</dd>
 									</dl>
-									<dl class="data_cht_info">
+									<dl class="data_cht_info fail">
 										<dt>삭제</dt>
 										<dd class="orttxt">7</dd>
 									</dl>
+									<!-- e: class 추가 -->
 								</div>
 							</div>
 							<div class="d-chart">
@@ -681,7 +692,7 @@
 					<div class="contrl_wrap">
 						<div class="contrl_tit">
 							<p>대시보드 컨트롤러</p>
-							<button class="bluetxt resetbtn">초기화</button>
+							<button class="line icon_reset">초기화</button>
 						</div>
 						<div class="contrl_cont">
 							<ul class="contrl_list">
@@ -743,16 +754,18 @@
 								</li>
 							</ul>
 							<div class="btn_box">
-								<button class="blue">상태저장</button>
-								<button class="skyblue ctrl_close">닫기</button>
+								<!-- s: class 변경 -->
+								<button class="basic">상태저장</button>
+								<button class="line ctrl_close">닫기</button>
+								<!-- e: class 변경 -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="footer">
+			<!-- nav로 이동 <div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 

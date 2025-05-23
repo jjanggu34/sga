@@ -120,6 +120,7 @@ button.big {
 	#line
 ---------------------------------------------*/
 .line {
+  padding-bottom: 0;
   border-radius: 6px;
   font-size: var(--font-13);
   color: var(--content);

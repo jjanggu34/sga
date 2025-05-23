@@ -50,86 +50,6 @@
     </style>
     <div class="clip"></div>
     <div class="ribbon">정보</div>
-    <!-- <style>
-      .clip {
-        width: 100px;
-        height: 100px;
-        clip-path: path(
-          "M10,10 Q50,0 90,10 Q100,50 90,90 Q50,100 10,90 Q0,50 10,10 Z"
-        );
-        background-color: violet;
-      }
-      .ribbon {
-  width: 285px;
-  height: 32px;
-  background: #162866;
-  color: #fff;
-  text-align: center;
-  line-height: 32px;
-  font-weight: bold;
-  border: 1px solid #fff;
-
-  clip-path: polygon(
-    0% 0%,
-    94% 0%,
-    100% 50%,
-    94% 100%,
-    0% 100%
-  );
-}
-    </style>
-    <div class="progress">
-        <div class="step active"><div class="inner">기본 정보</div></div>
-        <div class="step"><div class="inner">시험 정보</div></div>
-        <div class="step"><div class="inner">사용자 생성</div></div>
-        <div class="step"><div class="inner">그룹 생성</div></div>
-        <div class="step"><div class="inner">조직 생성</div></div>
-        <div class="step last"><div class="inner">조직 완료</div></div>
-      </div>
-    <style>
-        .progress {
-  display: flex;
-  width: 100%;
-  font-family: sans-serif;
-  font-size: 12px;
-  text-align: center;
-  color: white;
-}
-
-.step {
-  position: relative;
-  flex: 1;
-  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
-  margin-left: -20px;
-  z-index: 1;
-}
-
-.step:first-child {
-  margin-left: 0;
-}
-
-.step.last {
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
-}
-
-/* 안쪽 박스 */
-.step .inner {
-  background: #0d1b46;
-  border: 1px solid #fff;
-  clip-path: inherit;
-  padding: 10px 0;
-}
-
-/* active 단계 강조 */
-.step.active .inner {
-  background: #2048a0;
-}
-
-/* 마지막 스텝 색상 변경 */
-.step.last .inner {
-  background: #e6921e;
-}
-    </style> -->
     <div class="triangle"></div>
     <style>
         .triangle {
@@ -137,6 +57,27 @@
             height: 200px;
             background: #3498db;
             clip-path: path("M22.138 10.369c3.097 1.43 3.097 5.832 0 7.262L0 27.856V.144l22.138 10.225Z");}
+    </style>
+
+    <div class="progress-bar"></div>
+    <style>
+      .progress-bar {
+        width: 100%;
+        height: 20px;
+        background-color: #e0e5ec;
+        border-radius: 10px;
+        overflow: hidden;
+
+      }
+      .progress-bar::before {
+        content: "";
+        display:inline-block;
+        height: 100%;
+        width: 70%;
+        background-color: #27ae94;
+        border-radius: 10px;
+        transition: width 0.4s ease;
+      }
     </style>
   </body>
 </html>
