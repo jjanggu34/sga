@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* 변수 지정하기 */
 /* mixin 함수 선언하기 */
+/* 변수 지정하기 */
 /*---------------------------------------------
 	#상단 버튼
     #tit_in_btn: absolute
@@ -133,7 +133,7 @@ button.big {
   border: 1px solid var(--content);
 }
 .line.btn_dropdown {
-  padding-right: 30px;
+  padding: 0 30px 0 10px;
   padding-bottom: 0;
   background: url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--white);
 }
@@ -382,31 +382,49 @@ button.icon_arrow_none, a.icon_arrow_none {
 .detail_search_btn i {
   width: 16px;
   height: 16px;
-  background-size: 100%;
-  background-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--title);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/close.svg");
+  mask-image: url("../images/common/close.svg");
   background-image: none;
-  background-image: url("../images/common/close.svg");
-  background-color: transparent;
 }
 
 .small_delbtn {
   width: 16px;
   height: 16px;
-  background-size: 100%;
-  background-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--title);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/close.svg");
+  mask-image: url("../images/common/close.svg");
   background-image: none;
-  background-image: url("../images/common/close.svg");
-  background-color: transparent;
 }
 
 .sych_mnt_toast .btn_close {
   width: 16px;
   height: 16px;
-  background-size: 100%;
-  background-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--title);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/close.svg");
+  mask-image: url("../images/common/close.svg");
   background-image: none;
-  background-image: url("../images/common/close.svg");
-  background-color: transparent;
 }
 
 /* add button */

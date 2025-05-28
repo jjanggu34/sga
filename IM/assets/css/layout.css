@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* 변수 지정하기 */
 /* mixin 함수 선언하기 */
+/* 변수 지정하기 */
 /*---------------------------------------------
 	#기본 레이아웃
 ---------------------------------------------*/
@@ -570,7 +570,7 @@ body * {
   border-radius: 3px;
   box-shadow: unset;
 }
-#SGIM_wrap #container .content > div:last-child:not(.list_btn) {
+#SGIM_wrap #container .content > div:last-child:not(.list_btn, .sych_mnt_wrap) {
   padding-bottom: 0;
 }
 #SGIM_wrap #container .content > div.list_btn {

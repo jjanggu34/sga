@@ -543,7 +543,7 @@ body {
             border-radius:3px;
             box-shadow:unset;
             > div {
-                &:last-child:not(.list_btn) {
+                &:last-child:not(.list_btn, .sych_mnt_wrap) {
                     padding-bottom:0;
                 }
                 &.list_btn {

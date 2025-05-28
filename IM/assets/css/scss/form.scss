@@ -77,6 +77,7 @@ $borderTs: "search_wrap", "tab_wrap";
     }
     &.flx {
         gap:4px;
+        align-items:center;
     }
 }
 
@@ -407,6 +408,17 @@ select{
         background: url("../images/common/ico_accordion.svg") no-repeat right 1px center var(--white);
     }
 }
+.tbl_btm {
+    .page_select {
+        color:var(--text-disabled);
+        .form_contrl {
+            width:70px;
+            height:30px;
+            border:1px solid var(--default);
+            border-radius:6px;
+        }
+    }
+}
 
 /*---------------------------------------------
 	#toggle
@@ -428,32 +440,58 @@ select{
 	#dropdown
 ---------------------------------------------*/
 .dropdown {
-    display:block;
-    width:100%;
-    padding-bottom:10px;
-    border-bottom:$borderD;
     .btn_dropdown {
         width:100%;
+        margin:0;
         padding:0;
-        border:0;
+        border:$borderD;
         text-align:left;
     }
+    .dropdown_list {
+        top:25px;
+        margin:0;
+        border:$borderD;
+        border-top:0;
+        border-radius:0 0 6px 6px;
+        li {
+            border-bottom:0;
+            &:first-child {
+                margin-top:5px;
+                border-top:$borderD;
+            }
+            button {
+                color:var(--content);
+            }
+        }
+    }
 }
+
 .moved_tit {
+    .dropdown {
+        display:block;
+        width:100%;
+        padding-bottom:10px;
+        border:0;
+        border-bottom:$borderD;
+        border-radius:0;
+        .btn_dropdown {
+            border:0;
+        }
+    }
     .dropdown_list {
         top:43px;
         left:0;
+        margin-top:2px;
+        border-top:$borderD;
         border-radius:6px;
         background-color:var(--white);
         z-index:1;
-    }
-}
-.dropdown_list {
-    border:$borderD;
-    li {
-        border-bottom:$borderD;
-        button {
-            color:var(--content);
+        li {
+            border-bottom:0;
+            &:first-child {
+                margin-top:0;
+                border-top:0;
+            }
         }
     }
 }

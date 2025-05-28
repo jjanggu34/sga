@@ -104,7 +104,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
         border:1px solid var(--content);
     }
     &.btn_dropdown {
-        padding-right:30px;
+        padding:0 30px 0 10px;
         padding-bottom:0;
         background:url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--white);
     }
@@ -301,9 +301,11 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 
 @each $close in $closes {
     .#{$close} {
-        @include icon (16px,16px);
-        background-image:url("../images/common/close.svg");
-        background-color:transparent;
+        @include wh (16px,16px);
+        @include mask(var(--title));
+        -webkit-mask-image:url("../images/common/close.svg");
+        mask-image:url("../images/common/close.svg");
+        background-image:none;
     }
 }
 

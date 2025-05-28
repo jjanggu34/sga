@@ -93,6 +93,11 @@ $btnstls: "trcolor", "fcolor";
     #loading
 ---------------------------------------------*/
 /* input loader */
+.form_txt {
+    &:has(.loader) {
+        position: relative;
+    }
+}
 input {
     &+.loader {
         position:absolute;
@@ -146,10 +151,10 @@ input {
     }
 }
 /* 30*30 */
-$loadings: "msv_loading", "server_loading";
+$loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
 
 @each $loading in $loadings {
-    .#{$loading} {
+    #{$loading} {
         border:0;
         background-color:#D6E9FF;
         .loader {
@@ -542,9 +547,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     border:none;
                     background-color:var(--basic);
                     &::after {
-                        top:50%;
-                        left:50%;
-                        transform:translate(-50%,-50%);
+                        @extend %positon_center;
                         @include icon(16px,16px);
                         background-image:url("../images/common/btn_add.svg");
                         background-position:center;
@@ -1969,9 +1972,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:var(--btn-disabled);
                 i {
                     position:absolute;
-                    top:50%;
-                    left:50%;
-                    transform:translate(-50%,-50%);
+                    @extend %positon_center;
                     @include icon(34px,34px);
                     border-radius:0;
                     background-position:center;
@@ -3044,9 +3045,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-radius:0 4px 4px 0;
             background:var(--btn-disabled);
             &::after {
-                top:50%;
-                left:50%;
-                transform:translate(-50%,-50%);
+                @extend %positon_center;
                 @include wh (24px, 24px);
                 @include mask(var(--text-disabled));
                 background-image:none;
@@ -3112,9 +3111,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         border-radius:6px;
                         background-color:var(--basic);
                         &::after {
-                            top:50%;
-                            left:50%;
-                            transform:translate(-50%,-50%);
+                            @extend %positon_center;
                             @include wh(24px, 24px);
                             background-color:var(--white);
                             -webkit-mask-image:url("../images/common/btn_add.svg");
@@ -3715,14 +3712,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 ---------------------------------------------*/
 .sych_mnt_wrap {
     height: 100%;
+    padding:54px 48px 160px 32px;
     border: 0;
     border-radius: 20px;
     background-color: #E8EDF3;
+    .sych_set_btns {
+        top:20px;
+        right:20px;
+    }
     .sych_mnt_top {
         margin-bottom:18px;
         p {
             font-size:var(--font-16);
-            font-weight:var(--font-bold);
+            font-weight:var(--font-medium);
             color:var(--title);
         }
     }
@@ -3738,12 +3740,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /* sync_wrap */
 .server_box {
     margin:20px 0 0;
+    &:first-child {
+        margin-top:0;
+    }
     .server_box_bg {
         border-radius:6px;
         background-color:var(--true);
     }
     .server_box_white {
-        padding:10px 15px 15px 10px;
+        min-height:60px;
+        padding:10px 15px 10px 10px;
+        box-shadow:0 3px 3px #00000016;
     }
     .system_name_box {
         .system_icon {
@@ -3821,23 +3828,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
 }
-.sych_mnt_setting {
-    .sync_system_list {
-        min-height:466px;
-        padding:10px;
-        border:1px dashed #A1B6CC;
-        border-radius:6px;
-        background-color:#EFF3F7;
-        .server_box {
-            &:first-child {
-                margin-top:0;
-            }
-        }
-        .system_name_box {
-            display:block;
-        }
-    }
-}
 
 /* syc_server_wrap */
 .server_info {
@@ -3859,6 +3849,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .main_server_box {
+    box-shadow:0 3px 3px #00000016;
     .main_server_dt {
         padding:10px;
         border-top:$borderD;
@@ -3910,6 +3901,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &.device {
                 background-position:unset;
                 background-image:url("../images/common/ico_device.svg");
+            }
+            &.Auth {
+                background-position:unset;
+                background-image:none;
+            }
+            &.distb {
+                background-position:unset;
+                background-image:none;
             }
         }
         .ms_server_name {
@@ -4000,9 +3999,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &::before {
                     content:"";
                     position:absolute;
-                    top:50%;
-                    left:50%;
-                    transform:translate(-50%,-50%);
+                    @extend %positon_center;
                     display:inline-block;
                     @include wh(24px,24px);
                     @include mask(var(--white));
@@ -4144,10 +4141,23 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-image:none;
                 background-position:unset;
             }
+            .sych_mnt_toast_detail {
+                p {
+                    line-height:24px;
+                }
+            }
             &.open {
+                min-width:unset;
+                max-width:760px;
+                width:$wh100;
                 .sych_mnt_toast_detail {
                     align-items:center;
                 }
+            }
+            .btn_close {
+                top:19px;
+                @include wh(24px,24px);
+                padding:0;
             }
         }
     }
@@ -4157,6 +4167,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             -webkit-mask-image:url("../images/common/ico_info.svg");
             mask-image:url("../images/common/ico_info.svg");
         }
+        .sych_mnt_toast_detail {
+            p, em {
+                color:var(--false);
+            }
+        }
+        .btn_close {
+            background-color:var(--false);
+        }
     }
     .warning_toast {
         background-color:#FFEBDD;
@@ -4164,6 +4182,184 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-color:var(--info);
             -webkit-mask-image:url("../images/common/ico_warning.svg");
             mask-image:url("../images/common/ico_warning.svg");
+        }
+        .sych_mnt_toast_detail {
+            p, em {
+                color:var(--info);
+            }
+        }
+        .btn_close {
+            background-color:var(--info);
+        }
+    }
+}
+
+/***************** setting 버전 *****************/
+.sych_mnt_setting {
+    .sync_system_list {
+        min-height:466px;
+        padding:10px;
+        border:1px dashed #A1B6CC;
+        border-radius:6px;
+        background-color:#EFF3F7;
+        .server_box {
+            &:first-child {
+                margin-top:0;
+            }
+        }
+        .system_name_box {
+            display:block;
+            .system_icon {
+                position:absolute;
+            }
+            .system_name_tit {
+                display:block;
+                width:$wh100;
+                padding-left:0;
+                .system_name {
+                    padding-top:13px;
+                    padding-left:46px;
+                }
+                .user_view_slt {
+                    padding:30px 0 0;
+                    .form_contrl {
+                        font-size:var(--font-13);
+                        height:30px;
+                    }
+                }
+            }
+        }
+    }
+    .syc_server_list {
+        max-width:330px;
+        padding:10px;
+        border:1px dashed #A1B6CC;
+        border-radius:6px;
+        background-color:#EFF3F7;
+        .main_server_box {
+            margin:0;
+            width:$wh100;
+        }
+        .rdd_server_set_list {
+            padding:0;
+            border:0;
+            background-color:#EFF3F7;
+            .rdd_server_box {
+                box-shadow:0 3px 3px #00000016;
+                &.set_hide_box {
+                    box-shadow:none;
+                }
+            }
+        }
+    }
+    .dstb_system_list {
+        padding:10px;
+        border:1px dashed #707070;
+        border-radius:6px;
+        background-color:#EFF3F7;
+    }
+}
+
+.box_showbtn {
+    right:20px;
+    top:10px;
+    @include wh(30px, 30px);
+    padding:0;
+    border:$borderD;
+    border-radius:6px;
+    background-image:none;
+    box-shadow:none;
+    &::before {
+        content:"";
+        position:absolute;
+        @extend %positon_center;
+        display:inline-block;
+        @include wh(24px,24px);
+        @include mask(var(--title));
+        -webkit-mask-image:url("../images/common/ico_show.svg");
+        mask-image:url("../images/common/ico_show.svg");
+    }
+    &.hide {
+        &::after {
+            content:"";
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%) rotate(-45deg);
+            display:block;
+            @include wh(1px,24px);
+            background-color:var(--false);
+        }
+    }
+}
+.set_hide_box {
+    .server_box_white {
+        box-shadow: none;
+    }
+    .box_showbtn {
+        @extend %box_showbtn_common;
+    }
+    & + .box_showbtn {
+        @extend %box_showbtn_common;
+    }
+}
+
+/***************** ICAM_board_wrap *****************/
+.ICAM_board_wrap {
+    padding:68px 48px 160px 32px;
+}
+.icam_b_list {
+    padding:0;
+    border:$borderD;
+    border-radius:6px;
+    background-color:var(--white);
+    .icam_pp {
+        padding:15px 10px;
+        border-bottom:$borderD;
+    }
+    .icam_b_stl {
+        margin:15px 10px;
+        border:1px solid var(--list-border);
+        border-left:3px solid var(--primary);
+        border-radius:10px;
+        .sicam_icon {
+            @include wh(40px,40px);
+            border-radius:7px;
+            background-color:var(--btn-disabled);
+            background-position:center;
+            background-image:none;
+        }
+        .sicam_name {
+            font-size:var(--font-14);
+        }
+        .server_loading {
+            top:15px;
+            @include wh(30px, 30px);
+            padding:0;
+        }
+        .btn_refsh_s {
+            top:15px;
+            width: 30px;
+            height: 30px;
+            background-position: unset;
+            border: 1px solid var(--border-d);
+            border-radius: 6px;
+            background: url(../images/common/ico_reset.svg) no-repeat center;
+        }
+    }
+    &.btm_b_area {
+        .icam_b_stl {
+            .btn_refsh_s {
+                top:5px;
+            }
+        }
+    }
+}
+
+.btm_icam_fw {
+    .icam_b_stl {
+        .btn_refsh_s {
+            top:5px;
         }
     }
 }

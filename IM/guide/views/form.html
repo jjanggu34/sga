@@ -40,8 +40,11 @@
       ></script>
     <![endif]-->
     <style>
+      .info_text { margin-top:10px; padding:10px; border-radius:14px; background:#ffd582; }
+      .info_text li { margin-bottom:5px; }
+      .info_text li:last-child { margin-bottom:0; }
       h2 { font-size:30px; border-bottom:2px solid #222222; }
-      .tit { display:inline-block; margin:20px 0 10px; padding:10px 5px; font-size:var(--font-16); background-color:#6ebda8; color:#fff; }
+      .tit { display:block; margin:20px 0; padding:10px 5px; font-size:var(--font-16); background-color:#6ebda8; color:#fff; }
       .check-wrap > div {
         display: inline-block;
         margin-right: 10px;
@@ -58,16 +61,16 @@
         <!-- S: header -->
         <!-- E: header -->
         <!-- S: content -->
-        <div
-          class="content"
-          style="
-            border-radius: 10px;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-          "
-        >
+        <div class="content" style="border-radius: 10px; margin: 20px; padding: 20px; background-color: #fff;">
           <h2>form</h2>
+          <ul class="info_text">
+            <li>
+                input : width 100%(search 예외)
+            </li>
+            <li>
+                select : width 270px
+            </li>
+        </ul>
           <form>
             <p class="tit">search_wrap</p>
             <div class="search_wrap">
@@ -338,13 +341,15 @@
               </div>
             </div>
             <p class="tit">selectbox</p>
-            <div class="page_select">
-              <select class="form_contrl">
-                <option value="">10</option>
-                <option value="">25</option>
-                <option value="">50</option>
-                <option value="">100</option>
-              </select>
+            <div class="tbl_btm">
+              <div class="page_select">
+                <select class="form_contrl">
+                  <option value="">10</option>
+                  <option value="">25</option>
+                  <option value="">50</option>
+                  <option value="">100</option>
+                </select>
+              </div>
             </div>
             <p class="tit">dropdown</p>
             <div class="list_btn">
@@ -368,137 +373,6 @@
                     </li>
                   </ul>
                 </div>
-              </div>
-            </div>
-            <p class="tit">multiselect</p>
-            <div
-              tabindex="-1"
-              role="combobox"
-              aria-owns="listbox-selectBox_1_ACC_TYPE"
-              class="multiselect"
-              autocomplete="off"
-            >
-              <div class="multiselect__select"></div>
-              <div class="multiselect__tags">
-                <div class="multiselect__tags-wrap" style="display: none"></div>
-                <!---->
-                <div class="multiselect__spinner" style="display: none"></div>
-                <input
-                    name="selectBox_1_ACC_TYPE"
-                    id="selectBox_1_ACC_TYPE"
-                    type="text"
-                    autocomplete="off"
-                    spellcheck="false"
-                    placeholder="선택 또는 검색하세요."
-                    tabindex="0"
-                    aria-controls="listbox-selectBox_1_ACC_TYPE"
-                    class="multiselect__input"
-                    aria-activedescendant="selectBox_1_ACC_TYPE-0"
-                    style="width: 0px; position: absolute; padding: 0px"
-                    />
-                    <span class="multiselect__single">시스템 계정</span>
-                    <!---->
-                </div>
-                <div
-                    tabindex="-1"
-                    class="multiselect__content-wrapper"
-                    style="max-height: 280px; display: none"
-                >
-                    <ul
-                    role="listbox"
-                    id="listbox-selectBox_1_ACC_TYPE"
-                    class="multiselect__content"
-                    style="display: inline-block"
-                    >
-                    <!---->
-                    <li
-                        id="selectBox_1_ACC_TYPE-0"
-                        role="option"
-                        class="multiselect__element"
-                    >
-                        <span
-                        data-select=""
-                        data-selected=""
-                        data-deselect=""
-                        class="multiselect__option multiselect__option--highlight"
-                        ><span>미분류</span></span
-                        >
-                        <!---->
-                    </li>
-                    <li
-                        id="selectBox_1_ACC_TYPE-1"
-                        role="option"
-                        class="multiselect__element"
-                    >
-                        <span
-                        data-select=""
-                        data-selected=""
-                        data-deselect=""
-                        class="multiselect__option multiselect__option--selected"
-                        ><span>시스템 계정</span></span
-                        >
-                        <!---->
-                    </li>
-                    <li
-                        id="selectBox_1_ACC_TYPE-2"
-                        role="option"
-                        class="multiselect__element"
-                    >
-                        <span
-                        data-select=""
-                        data-selected=""
-                        data-deselect=""
-                        class="multiselect__option"
-                        ><span>공유 계정</span></span
-                        >
-                        <!---->
-                    </li>
-                    <li
-                        id="selectBox_1_ACC_TYPE-3"
-                        role="option"
-                        class="multiselect__element"
-                    >
-                        <span
-                        data-select=""
-                        data-selected=""
-                        data-deselect=""
-                        class="multiselect__option"
-                        ><span>비할당 계정</span></span
-                        >
-                        <!---->
-                    </li>
-                    <li
-                        id="selectBox_1_ACC_TYPE-4"
-                        role="option"
-                        class="multiselect__element">
-                        <span data-select="" data-selected="" data-deselect="" class="multiselect__option"><span>사용자연결 계정</span></span>
-                    </li>
-                    <li d="selectBox_1_ACC_TYPE-5" role="option" class="multiselect__element">
-                        <span data-select="" data-selected="" data-deselect="" class="multiselect__option"><span>삭제 권고</span></span>
-                    </li>
-                    <li id="selectBox_1_ACC_TYPE-6" role="option" class="multiselect__element">
-                        <span data-select="" data-selected="" data-deselect="" lass="multiselect__option"><span>비인가 삭제</span></span
-                        >
-                    </li>
-                    <li
-                        id="selectBox_1_ACC_TYPE-7"
-                        role="option"
-                        class="multiselect__element"
-                    >
-                        <span
-                        data-select=""
-                        data-selected=""
-                        data-deselect=""
-                        class="multiselect__option"
-                        ><span>삭제된 계정</span></span>
-                    </li>
-                    <li style="display: none">
-                        <span class="multiselect__option">No elements found. Consider changing the search query.</span>
-                    </li>
-                    <li style="display: none">
-                        <span class="multiselect__option">List is empty.</span>
-                    </li>
-                </ul>
               </div>
             </div>
             <p class="tit">toggle 버튼</p>

@@ -35,8 +35,8 @@
         .info_text { margin-top:10px; padding:10px; border-radius:14px; background:#ffd582; }
         .info_text li { margin-bottom:5px; }
         .info_text li:last-child { margin-bottom:0; }
-        h2 { font-size:30px; border-bottom:2px solid #222222; }
-        .tit { display:inline-block; margin:20px 0 10px; padding:10px 5px; font-size:var(--font-16); background-color:#6ebda8; color:#fff; }
+        h2 { font-size:30px; }
+        .tit { display:block; margin:20px 0; padding:10px 5px; font-size:var(--font-16); background-color:#6ebda8; color:#fff; }
 
         .month_select li { margin-right:10px; text-align:center; }
     </style>
@@ -144,7 +144,51 @@
                         <button class="normal on">active</button>
                     </div>
 
-                    <h2 style="padding-top:20px; margin:20px 0 10px; border-top:1px solid #454545; font-size:20px; font-weight:500;">예시</h2>
+                    <p class="tit">pagination</p>
+                    <div class="tbl_btm">
+                        <div class="pagination">
+                            <ul>
+                                <li><a href="" class="first diss"><span></span>첫페이지</a></li>
+                                <li><a href="" class="prev diss"><span></span>이전</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="" class="on">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href="">6</a></li>
+                                <li><a href="">7</a></li>
+                                <li><a href="">8</a></li>
+                                <li><a href="">9</a></li>
+                                <li><a href="">10</a></li>
+                                <li><a href="">11</a></li>
+                                <li><a href="" class="next"><span></span>다음</a></li>
+                                <li><a href="" class="last"><span></span>마지막페이지</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="tit">pagination mini</p>
+                    <div class="pagination mini_paging">
+                        <ul>
+                            <li>
+                                <a href="" class="first diss"><span></span>처음</a>
+                            </li>
+                            <li>
+                                <a href="" class="prev diss"><span></span>이전</a>
+                            </li>
+                            <li class="currentpage">
+                                <p><em>1</em> / 1</p>
+                            </li>
+                            <li>
+                                <a href="" class="next diss"><span></span>다음</a>
+                            </li>
+                            <li>
+                                <a href="" class="last diss"><span></span>마지막</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2 style="padding-top:20px; margin:20px 0 10px; border-top:1px solid #454545; font-size:20px; font-weight:500; border-bottom:0;">예시</h2>
                     <div class="dash_box" style="padding:10px;">
                         <p class="tit">list_btn</p>
                         <div class="list_btn">
@@ -219,16 +263,19 @@
                         </div>
 
                         <p class="tit">tit_in_btn</p>
-                        <div class="move_box">
-                            <div class="move_tit">
-                                <div class="btn_box tit_in_btn">
-                                    <button class="blue">텍스트</button>
-                                    <button class="navy">텍스트</button>
-                                    <button class="white ref">새로고침</button>
+                        <div class="move_wrap list_stl">
+                            <div class="move_box">
+                                <div class="moved_tit">
+                                    List01
+                                    <div class="btn_box tit_in_btn">
+                                        <button class="basic">텍스트</button>
+                                        <button class="primary">텍스트</button>
+                                        <button class="line icon icon_reset">새로고침</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="tit">sych_mnt_toast toggle버튼</p>
+                        <p class="tit">sych_mnt_toast 버튼</p>
                         <div class="sych_mnt_toast" style="position:static;">
                             <div class="err_toast">
                                 <div class="flx">
@@ -253,50 +300,6 @@
                                 <button class="btn_close"></button>
                             </div>
                         </div>
-                    </div>
-
-                    <p class="tit">pagination</p>
-                    <div class="tbl_btm">
-                        <div class="pagination">
-                            <ul>
-                                <li><a href="" class="first diss"><span></span>첫페이지</a></li>
-                                <li><a href="" class="prev diss"><span></span>이전</a></li>
-                                <li><a href="">1</a></li>
-                                <li><a href="" class="on">2</a></li>
-                                <li><a href="">3</a></li>
-                                <li><a href="">4</a></li>
-                                <li><a href="">5</a></li>
-                                <li><a href="">6</a></li>
-                                <li><a href="">7</a></li>
-                                <li><a href="">8</a></li>
-                                <li><a href="">9</a></li>
-                                <li><a href="">10</a></li>
-                                <li><a href="">11</a></li>
-                                <li><a href="" class="next"><span></span>다음</a></li>
-                                <li><a href="" class="last"><span></span>마지막페이지</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <p class="tit">pagination mini</p>
-                    <div class="pagination mini_paging">
-                        <ul>
-                            <li>
-                                <a href="" class="first diss"><span></span>처음</a>
-                            </li>
-                            <li>
-                                <a href="" class="prev diss"><span></span>이전</a>
-                            </li>
-                            <li class="currentpage">
-                                <p><em>1</em> / 1</p>
-                            </li>
-                            <li>
-                                <a href="" class="next diss"><span></span>다음</a>
-                            </li>
-                            <li>
-                                <a href="" class="last diss"><span></span>마지막</a>
-                            </li>
-                        </ul>
                     </div>
                 </section>
             </div>
