@@ -438,6 +438,7 @@ button.icon_arrow_none, a.icon_arrow_none {
   padding-right: 30px;
   font-size: var(--font-16);
   font-weight: var(--font-medium);
+  color: var(--title);
   line-height: 45px;
 }
 .btn_columnadd span .btn_option {
@@ -563,7 +564,7 @@ button.icon_arrow_none, a.icon_arrow_none {
 .search_box .btn_search, .search_box.mini_search .btn_search {
   top: 50%;
   transform: translateY(-50%);
-  right: 95px;
+  right: 110px;
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -587,12 +588,12 @@ button.icon_arrow_none, a.icon_arrow_none {
 }
 .search_box .btn_detail_search {
   top: 50%;
-  right: 5px;
+  right: 9px;
   transform: translateY(-50%);
   display: inline-block;
   width: auto;
   height: 36px;
-  padding: 7px 14px 6px;
+  padding: 7px 20px 6px;
   border-radius: 7px;
   color: var(--white);
   line-height: 16px;
@@ -630,12 +631,12 @@ button.icon_arrow_none, a.icon_arrow_none {
   gap: 4px;
 }
 .pagination ul li {
-  width: 30px;
+  width: auto;
   height: 30px;
 }
 .pagination ul li a {
   display: inline-block;
-  width: 30px;
+  width: 38px;
   height: 30px;
   padding: 0;
   border: 1px solid var(--default);
@@ -644,6 +645,7 @@ button.icon_arrow_none, a.icon_arrow_none {
   font-weight: var(--font-regular);
   color: var(--content);
   line-height: 30px;
+  text-align: center;
 }
 .pagination ul li a span {
   display: inline-block;
@@ -651,11 +653,80 @@ button.icon_arrow_none, a.icon_arrow_none {
   background: none;
   transform: translate(-50%, -50%);
 }
-.pagination ul li a.next, .pagination ul li a.prev {
+.pagination ul li a.next, .pagination.mini_paging ul li a.prev, .pagination ul li a.prev {
+  width: 30px;
+  height: 30px;
   padding: 2px;
   overflow: hidden;
 }
-.pagination ul li a.next span, .pagination ul li a.prev span {
+.pagination ul li a.next span, .pagination.mini_paging ul li a.prev span, .pagination ul li a.prev span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_prev.svg");
+  mask-image: url("../images/common/ico_prev.svg");
+  background-position: unset;
+}
+.pagination ul li a.last, .pagination ul li a.first {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  overflow: hidden;
+}
+.pagination ul li a.last span, .pagination ul li a.first span {
+  width: 24px;
+  height: 24px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_pprev.svg");
+  mask-image: url("../images/common/ico_pprev.svg");
+  background-position: unset;
+}
+.pagination ul li a.prev {
+  width: 30px;
+  height: 30px;
+  transform: rotate(-180deg);
+}
+.pagination ul li a.first {
+  width: 30px;
+  height: 30px;
+  transform: rotate(180deg);
+}
+.pagination ul li .on {
+  border-color: var(--primary) !important;
+  background-color: var(--primary) !important;
+}
+.pagination.mini_paging ul li.currentpage {
+  width: auto;
+  height: auto;
+}
+.pagination.mini_paging ul li.currentpage em {
+  color: var(--primary);
+}
+.pagination.mini_paging ul li a.prev {
+  transform: rotate(180deg);
+}
+.pagination.mini_paging ul li a.next, .pagination.mini_paging ul li a.prev {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  overflow: hidden;
+}
+.pagination.mini_paging ul li a.next span, .pagination.mini_paging ul li a.prev span {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -671,11 +742,13 @@ button.icon_arrow_none, a.icon_arrow_none {
   mask-image: url("../images/common/prev.svg");
   background-position: unset;
 }
-.pagination ul li a.last, .pagination ul li a.first {
+.pagination.mini_paging ul li a.last, .pagination.mini_paging ul li a.first {
+  width: 30px;
+  height: 30px;
   padding: 2px;
   overflow: hidden;
 }
-.pagination ul li a.last span, .pagination ul li a.first span {
+.pagination.mini_paging ul li a.last span, .pagination.mini_paging ul li a.first span {
   width: 24px;
   height: 24px;
   -webkit-mask-repeat: no-repeat;
@@ -689,21 +762,4 @@ button.icon_arrow_none, a.icon_arrow_none {
   -webkit-mask-image: url("../images/common/prevv.svg");
   mask-image: url("../images/common/prevv.svg");
   background-position: unset;
-}
-.pagination ul li a.prev {
-  transform: rotate(180deg);
-}
-.pagination ul li a.first {
-  transform: rotate(180deg);
-}
-.pagination ul li .on {
-  border-color: var(--primary) !important;
-  background-color: var(--primary) !important;
-}
-.pagination.mini_paging .currentpage {
-  width: auto;
-  height: auto;
-}
-.pagination.mini_paging .currentpage em {
-  color: var(--primary);
 }

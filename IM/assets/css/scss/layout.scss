@@ -70,8 +70,8 @@ body {
             &>p {
                 display:block;
                 padding:24px 22px;
-                @include title (var(--font-12), var(--font-medium), 18px);
-                color:var(--text-disabled);
+                @include title (var(--font-12), var(--font-medium), var(--text-disabled));
+                line-height:18px;
             }
         }
     }
@@ -440,8 +440,8 @@ body {
                         right:24px;
                         bottom:0;
                         padding:0;
-                        @include title(var(--font-14),var(--font-regular),unset);
-                        color:var(--content);
+                        @include title(var(--font-14),var(--font-regular),var(--content));
+                        line-height:unset;
                     }
                 }
                 .alim_list {
@@ -529,7 +529,7 @@ body {
                 }
             }
             .content {
-                min-height:calc(100vh - 80px);//header + 위아래 margin
+                // min-height:calc(100vh - 80px);//header + 위아래 margin
                 border:$borderD;
             }
         }
@@ -537,7 +537,7 @@ body {
             padding:0;
             // margin:60px 0 20px;
             height:100%;
-            min-height:calc(100vh - 80px);//header + 위아래 margin
+            min-height:calc(100vh - 70px);//header + 위아래 margin
             margin:84px 0 0 ;
             border-top:0;
             border-radius:3px;
@@ -549,6 +549,10 @@ body {
                 &.list_btn {
                     top:60px;
                 }
+            }
+            &:has(.search_wrap) {
+                margin:60px 0 0 ;
+                padding-top:30px;
             }
             &.cont_scroll {
                 height:100%;
@@ -563,11 +567,11 @@ body {
                 }
                 .tbl_list { //table
                     padding:0 0 10px;
-                    margin:0 24px;
+                    margin:0 20px;
                     overflow-x:auto;
                 }
                 .tbl_btm { //table 아래 pagination
-                    padding:10px 34px 20px;
+                    padding:10px 20px 20px;
                 }
             }
             &.tab_cont {
@@ -631,7 +635,7 @@ body {
 
 #ONSD_wrap {
     .content {
-        padding:0;
+        padding:30px 0 0;
     }
 }
 
@@ -653,9 +657,7 @@ body {
         border-radius:13px 0 0;
         background-color:transparent;
         .title {
-            font-size:var(--font-18);
-            font-weight:var(--font-bold);
-            color:var(--title);
+            @include title (var(--font-18), var(--font-bold), var(--title));
         }
         .btn_close {
             top:6px;
@@ -684,9 +686,7 @@ body {
         background-color:var(--white);
         h3 {
             padding:10px 0;
-            font-size:var(--font-18);
-            font-weight:var(--font-bold);
-            color:var(--title);
+            @include title (var(--font-18), var(--font-bold), var(--title));
         }
         .btn_close {
             top:12px;

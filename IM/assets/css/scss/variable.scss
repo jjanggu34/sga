@@ -13,10 +13,10 @@
     height:$height;
 }
 
-@mixin title($size, $weight, $line) {
+@mixin title($size, $weight, $color) {
     font-size:$size;
     font-weight:$weight;
-    line-height:$line;
+    color:$color;
 }
 
 @mixin icon($width, $height) {
@@ -58,6 +58,7 @@ $borderP: 1px solid var(--primary);
 %tag-base {
     display:inline-block;
     padding: 0 8px 0 6px;
+    margin-top:5px;
     border-radius: 12px;
     font-size:var(--font-13);
     font-weight:var(--font-regular);

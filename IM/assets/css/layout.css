@@ -57,8 +57,8 @@ body * {
   padding: 24px 22px;
   font-size: var(--font-12);
   font-weight: var(--font-medium);
-  line-height: 18px;
   color: var(--text-disabled);
+  line-height: 18px;
 }
 #SGIM_wrap .nav_header {
   display: flex;
@@ -472,8 +472,8 @@ body * {
   padding: 0;
   font-size: var(--font-14);
   font-weight: var(--font-regular);
-  line-height: unset;
   color: var(--content);
+  line-height: unset;
 }
 #SGIM_wrap .header .alim_pop .alim_pop_wrap .alim_list {
   padding: 0 20px 0 14px;
@@ -558,13 +558,12 @@ body * {
   padding-top: 0;
 }
 #SGIM_wrap #container .cont_wrap .content {
-  min-height: calc(100vh - 80px);
   border: 1px solid var(--border-d);
 }
 #SGIM_wrap #container .content {
   padding: 0;
   height: 100%;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 70px);
   margin: 84px 0 0;
   border-top: 0;
   border-radius: 3px;
@@ -575,6 +574,10 @@ body * {
 }
 #SGIM_wrap #container .content > div.list_btn {
   top: 60px;
+}
+#SGIM_wrap #container .content:has(.search_wrap) {
+  margin: 60px 0 0;
+  padding-top: 30px;
 }
 #SGIM_wrap #container .content.cont_scroll {
   height: 100%;
@@ -590,11 +593,11 @@ body * {
 }
 #SGIM_wrap #container .content.cont_scroll .tbl_list {
   padding: 0 0 10px;
-  margin: 0 24px;
+  margin: 0 20px;
   overflow-x: auto;
 }
 #SGIM_wrap #container .content.cont_scroll .tbl_btm {
-  padding: 10px 34px 20px;
+  padding: 10px 20px 20px;
 }
 #SGIM_wrap #container .content.tab_cont {
   margin-top: 20px;
@@ -648,7 +651,7 @@ body * {
 }
 
 #ONSD_wrap .content {
-  padding: 0;
+  padding: 30px 0 0;
 }
 
 /*---------------------------------------------

@@ -317,7 +317,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     background-color:var(--table-th);
     span {
         padding-right:30px;
-        @include title (var(--font-16), var(--font-medium), 45px);
+        @include title (var(--font-16), var(--font-medium), var(--title));
+        line-height:45px;
         .btn_option {
             right:0;
             transform:translateY(-50%);
@@ -429,7 +430,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     .btn_search {
         top:50%;
         transform:translateY(-50%);
-        right:95px;
+        right:110px;
         display:inline-block;
         @include wh (24px, 24px);
         padding:0;
@@ -447,11 +448,11 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     }
     .btn_detail_search{
         top:50%;
-        right:5px;
+        right:9px;
         transform:translateY(-50%);
         display:inline-block;
         @include wh (auto, 36px);
-        padding:7px 14px 6px;
+        padding:7px 20px 6px;
         border-radius:7px;
         color:var(--white);
         line-height:16px;
@@ -484,10 +485,10 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     ul {
         gap:4px;
         li {
-            @include wh(30px, 30px);
+            @include wh(auto, 30px);
             a {
                 display:inline-block;
-                @include wh (30px, 30px);
+                @include wh (38px, 30px);
                 padding:0;
                 border:1px solid var(--default);
                 border-radius:6px;
@@ -495,6 +496,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 font-weight:var(--font-regular);
                 color:var(--content);
                 line-height:30px;
+                text-align:center;
                 span {
                     display:inline-block;
                     margin:0;
@@ -502,33 +504,37 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                     transform:translate(-50%, -50%);
                 }
                 &.next {
+                    @include wh (30px, 30px);
                     padding:2px;
                     overflow:hidden;
                     span {
                         display:inline-block;
                         @include wh (24px, 24px);
                         @include mask(var(--text-disabled));
-                        -webkit-mask-image:url("../images/common/prev.svg");
-                        mask-image:url("../images/common/prev.svg");
+                        -webkit-mask-image:url("../images/common/ico_prev.svg");
+                        mask-image:url("../images/common/ico_prev.svg");
                         background-position:unset;
                     }
                 }
                 &.last {
+                    @include wh (30px, 30px);
                     padding:2px;
                     overflow:hidden;
                     span {
                         @include wh (24px, 24px);
                         @include mask(var(--text-disabled));
-                        -webkit-mask-image:url("../images/common/prevv.svg");
-                        mask-image:url("../images/common/prevv.svg");
+                        -webkit-mask-image:url("../images/common/ico_pprev.svg");
+                        mask-image:url("../images/common/ico_pprev.svg");
                         background-position:unset;
                     }
                 }
                 &.prev {
+                    @include wh (30px, 30px);
                     @extend .next;
-                    transform:rotate(180deg);
+                    transform:rotate(-180deg);
                 }
                 &.first {
+                    @include wh (30px, 30px);
                     @extend .last;
                     transform:rotate(180deg);
                 }
@@ -540,10 +546,45 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         }
     }
     &.mini_paging {
-        .currentpage {
-            @include wh(auto, auto);
-            em {
-                color:var(--primary);
+        ul {
+            li {
+                &.currentpage {
+                    @include wh(auto, auto);
+                    em {
+                        color:var(--primary);
+                    }
+                }
+                a {
+                    &.prev {
+                        @extend .next;
+                        transform:rotate(180deg);
+                    }
+                    &.next {
+                        @include wh (30px, 30px);
+                        padding:2px;
+                        overflow:hidden;
+                        span {
+                            display:inline-block;
+                            @include wh (24px, 24px);
+                            @include mask(var(--text-disabled));
+                            -webkit-mask-image:url("../images/common/prev.svg");
+                            mask-image:url("../images/common/prev.svg");
+                            background-position:unset;
+                        }
+                    }
+                    &.last {
+                        @include wh (30px, 30px);
+                        padding:2px;
+                        overflow:hidden;
+                        span {
+                            @include wh (24px, 24px);
+                            @include mask(var(--text-disabled));
+                            -webkit-mask-image:url("../images/common/prevv.svg");
+                            mask-image:url("../images/common/prevv.svg");
+                            background-position:unset;
+                        }
+                    }
+                }
             }
         }
     }

@@ -18,6 +18,9 @@
     }
     .more_list {
         padding:7px 10px;
+        span {
+            width:auto;
+        }
     }
     thead {
         tr {
@@ -48,8 +51,8 @@
             th {
                 border:0;
                 border-bottom:1px solid var(--list-border);
-                @include title(var(--font-13),var(--font-regular),16px);
-                color:var(--title);
+                @include title(var(--font-13),var(--font-regular),var(--title));
+                line-height:16px;
                 &.new {
                     position:relative;
                     &::after {
@@ -61,8 +64,8 @@
                         right:10px;
                         transform:translateY(-50%);
                         border-radius:3px;
-                        @include title(var(--font-12), var(--font-regular), 12px);
-                        color:var(--white);
+                        @include title(var(--font-12), var(--font-regular), var(--white));
+                        line-height:12px;
                         background:var(--info);
                     }
                 }
@@ -73,11 +76,12 @@
                 }
             }
             td {
-                padding:5px 20px 6px;
+                padding:0 20px;
                 border:0;
                 border-bottom:1px solid var(--list-border);
                 font-size:var(--font-13);
                 font-weight:var(--font-regular);
+                line-height:35px;
                 color:var(--content);
                 text-align:center;
                 text-overflow:ellipsis;

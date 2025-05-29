@@ -71,21 +71,101 @@
                 select : width 270px
             </li>
         </ul>
-          <form>
-            <p class="tit">search_wrap</p>
-            <div class="search_wrap">
-              <div class="search_box">
-                <input
-                  type="text"
-                  placeholder="검색어를 입력해주세요"
-                  class="search_inputbox"
-                />
-                <button class="btn_search" type="submit">검색</button>
-                <button class="btn_detail_search" type="submit">
-                  상세검색
-                </button>
+        <p class="tit">search_wrap</p>
+        <div class="search_wrap">
+          <div class="search_box">
+            <input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
+            <button class="btn_search" type="submit">검색</button>
+            <button class="btn_detail_search" type="submit">상세검색</button>
+          </div>
+          <form class="detail_search_wrap" style="display:none">
+            <p class="detail_search_btn">상세검색<i>닫기</i></p>
+            <!-- s: class명 추가 bul_dot -->
+            <div class="search_column4">
+              <div class="col">
+                <dl class="bul_dot">
+                  <dt><label for="detail01">종류</label></dt>
+                  <dd><input type="text" name="" id="detail01" class="form_contrl"></dd>
+                </dl>
+              </div>
+              <div class="col">
+                <dl class="bul_dot">
+                  <dt><label for="detail04">제조사</label></dt>
+                  <dd><input type="text" name="" id="detail04" class="form_contrl"></dd>
+                </dl>
+              </div>
+              <div class="col">
+                <dl class="bul_dot">
+                  <dt><label for="detail05">모델명</label></dt>
+                  <dd><input type="text" name="" id="detail05" class="form_contrl"></dd>
+                </dl>
+              </div>
+              <div class="col">
+                <dl class="bul_dot">
+                  <dt><label for="detail09">이름</label></dt>
+                  <dd><input type="text" name="" id="detail09" class="form_contrl"></dd>
+                </dl>
               </div>
             </div>
+            <div class="search_date">
+              <dl class="flx bul_dot">
+                <dt>생성일</dt>
+                <dd>
+                  <div class="flx">
+                    <ul class="flx month_select">
+                      <!-- s: class명 변경 -->
+                      <li><button class="normal">1개월</button></li>
+                      <li><button class="normal on">3개월</button></li>
+                      <li><button class="normal">6개월</button></li>
+                      <li><button class="normal">10개월</button></li>
+                      <li><button class="normal">12개월</button></li>
+                      <!-- e: class명 변경 -->
+                    </ul>
+                    <div class="form_date">
+                      <input type="text" class="form_contrl date_ctl" value="시작날짜" readonly="readonly">
+                      <span> - </span>
+                      <input type="text" class="form_contrl date_ctl" value="종료날짜" readonly="readonly">
+                    </div>
+                    <!-- s: class명 변경 -->
+                    <button class="normal icon_reset">초기화</button>
+                    <!-- e: class명 변경 -->
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="search_column1">
+              <div class="col">
+                <dl class="flx bul_dot">
+                  <dt><label for="detail07">모델명</label></dt>
+                  <dd><select name="" id="detail07" class="form_contrl">
+                    <option value="">전체</option>
+                    <option value="">222</option>
+                    <option value="">333</option>
+                    <option value="">444</option>
+                    <option value="">555</option>
+                  </select></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="box2">
+              <p class="btn_box">
+                <a href="" class="line icon_reset">초기화</a>
+                <a href="" class="primary">검색</a>
+              </p>
+            </div>
+            <!-- e: class명 추가 bul_dot -->
+          </form>
+          <div class="related_box" style="display:none">
+            <ul class="related_list">
+              <li><a href="">연관검색어1</a></li>
+              <li><a href="">연관검색어2</a></li>
+              <li><a href="">연관검색어3</a></li>
+              <li><a href="">연관검색어4</a></li>
+              <li><a href="">연관검색어5</a></li>
+            </ul>
+          </div>
+        </div>
+          <form>
             <p class="tit">mini_search( tree menu 안에 검색창 )</p>
             <div class="search_box mini_search">
               <input
@@ -237,7 +317,7 @@
                   <div class="file_upload_wrap">
                     <div class="file_upload_btns">
                       <button class="btnstl line">파일선택</button>
-                      <button class="btnstl line list_upload">
+                      <button class="btnstl basic list_upload">
                         <i></i>목록 업로드
                       </button>
                     </div>

@@ -27,8 +27,11 @@ $borderTs: "search_wrap", "tab_wrap";
 
 /* search */
 .search_wrap {
-    padding:20px 24px;
-    background:var(--body);
+    padding:0;
+    margin:0 24px 37px;
+    border:$borderD;
+    border-radius:20px;
+    background:#F9F9F9;
     &+ .tab_wrap.cont_in_tab {
         margin-top:0;
         border-radius:0;
@@ -38,10 +41,11 @@ $borderTs: "search_wrap", "tab_wrap";
 .search_box {
     max-width:458px;
     height:48px;
-    margin:0 auto;
+    margin:20px auto;
     border:0;
     .search_inputbox {
         @include wh ($wh100, 48px);
+        padding:6px 9px 6px 14px;
         border:$borderD;
         border-radius:6px;
     }
@@ -135,9 +139,7 @@ $borderTs: "search_wrap", "tab_wrap";
     padding-top:6px;
     .form_contrl {
         border:0;
-        font-size:var(--font-13);
-        font-weight:var(--font-regular);
-        color:var(--content);
+        @include title(var(--font-13), var(--font-regular), var(--content));
         background-color:#F3F5F7;
     }
 }
@@ -145,7 +147,7 @@ $borderTs: "search_wrap", "tab_wrap";
     max-width:none;
     .file_upload_box {
         height:83px;
-        margin-top:6px;
+        margin-top:13px;
         border-radius:6px;
         background:var(--body);
         &:has(.icon_file_upload) {
@@ -162,8 +164,8 @@ $borderTs: "search_wrap", "tab_wrap";
             mask-image:url("../images/common/ico_file_upload.svg");
         }
         p {
-            @include title(var(--font-13), var(--font-regular), 16px);
-            color:var(--text-disabled);
+            @include title(var(--font-13), var(--font-regular), var(--text-disabled));
+            line-height:16px;
         }
         &.upload_list {
             padding:15px 15px 11px;
