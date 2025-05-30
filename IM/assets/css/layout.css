@@ -11,7 +11,7 @@ body {
 }
 body * {
   font-family: "S-CoreDream";
-  font-size: 13px;
+  font-size: var(--font-13);
   font-weight: var(--font-regular);
   color: var(--content);
   box-sizing: border-box;
@@ -38,9 +38,6 @@ body * {
 #SGIM_wrap.mini_nav #container {
   padding-left: 0;
   margin-left: 70px;
-}
-#SGIM_wrap.mini_nav #container .scrollPrss {
-  padding-left: 70px;
 }
 #SGIM_wrap.mini_nav .header .btn_lnb a {
   left: 24px;
@@ -204,13 +201,13 @@ body * {
 }
 #SGIM_wrap .nav_list > li ul li a::after {
   content: "";
+  width: 16px;
+  height: 16px;
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
   display: inline-block;
-  width: 16px;
-  height: 16px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;
@@ -344,12 +341,12 @@ body * {
 }
 #SGIM_wrap .header .gl_nav li.timer::after {
   content: "";
+  width: 1px;
+  height: 60px;
   position: absolute;
   top: -18px;
   right: 0;
   display: inline-block;
-  width: 1px;
-  height: 60px;
   background-color: var(--border-d);
 }
 #SGIM_wrap .header .gl_nav li.timer span {
@@ -653,6 +650,9 @@ body * {
 #ONSD_wrap .content {
   padding: 30px 0 0;
 }
+#ONSD_wrap .content .con_tit {
+  padding-left: 24px;
+}
 
 /*---------------------------------------------
     #팝업 레이아웃
@@ -693,6 +693,12 @@ body * {
 .detail_view .dtv_cont.scroll::-webkit-scrollbar-thumb {
   border-radius: 30px;
   background: var(--border-d);
+}
+.detail_view .dtv_cont .view_list {
+  padding-bottom: 0;
+}
+.detail_view .dtv_cont_wrap .btn_box {
+  border-top: 0;
 }
 
 /***************** center popup *****************/
@@ -757,6 +763,34 @@ body * {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-bottom: 10px solid #fff;
+}
+
+.help_w .balloon {
+  top: 48px;
+  right: 16px;
+  border: 1px solid var(--border-d);
+  border-radius: 6px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.0862745098);
+}
+.help_w .balloon::before {
+  top: -8px;
+  border-bottom: 8px solid var(--border-d);
+}
+.help_w .balloon::after {
+  top: -7px;
+}
+
+.option_list.balloon {
+  top: 32px;
+  border: 1px solid var(--border-d);
+  border-radius: 6px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.0862745098);
+}
+.option_list.balloon::before {
+  border-bottom: 8px solid var(--border-d);
+}
+.option_list.balloon a {
+  font-weight: var(--font-regular);
 }
 
 /*---------------------------------------------

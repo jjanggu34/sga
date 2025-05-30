@@ -19,7 +19,7 @@
 }
 
 .btn_box a {
-  padding: 0 7px;
+  padding: 0 14px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -31,7 +31,7 @@
 }
 
 .btn_box button {
-  padding: 0 7px;
+  padding: 0 14px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -43,7 +43,7 @@
 }
 
 .list_btn button {
-  padding: 0 7px;
+  padding: 0 14px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -55,7 +55,7 @@
 }
 
 button {
-  padding: 0 7px;
+  padding: 0 14px;
   border-radius: 6px;
   font-size: var(--font-13);
   line-height: 30px;
@@ -174,7 +174,6 @@ button.big {
 }
 
 button, a {
-  border-radius: 6px;
   color: var(--white);
   font-weight: var(--font-medium);
   /* 테이블 안 토글 버튼 */
@@ -558,6 +557,28 @@ button.icon_arrow_none, a.icon_arrow_none {
   z-index: 100;
 }
 
+/* 상세보기 */
+.btn_detailview {
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--title);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_document.svg");
+  mask-image: url("../images/common/ico_document.svg");
+  -webkit-mask-size: auto;
+  mask-size: auto;
+  background-image: none;
+}
+.btn_detailview.on {
+  background-color: var(--primary);
+}
+
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
@@ -606,9 +627,9 @@ button.icon_arrow_none, a.icon_arrow_none {
 }
 .btn_box .icon_reset::before {
   content: "";
-  display: inline-block;
   width: 16px;
   height: 16px;
+  display: inline-block;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;

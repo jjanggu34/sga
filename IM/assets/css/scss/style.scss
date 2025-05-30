@@ -81,6 +81,10 @@ $btnstls: "trcolor", "fcolor";
     }
 }
 
+.align_left {
+    text-align:left !important;
+}
+
 /*---------------------------------------------
     border-bottom이 after로 들어가야할 때
 ---------------------------------------------*/
@@ -476,9 +480,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-radius:50%;
             background-color:var(--true);
             &::before {
-                content:"";
+                @include content(16px, 16px);
                 display:inline-block;
-                @include wh (16px, 16px);
                 @include mask (var(--white));
                 vertical-align:inherit;
                 -webkit-mask-image:url("../images/common/ico_check_s.svg");
@@ -587,12 +590,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         margin-bottom:10px;
         padding-left:10px;
         &::before {
-            content:'';
+            @include content (3px, 3px);
             position:absolute;
             top:16px;
             left:10px;
             display:inline-block;
-            @include wh (3px, 3px);
             border-radius:50%;
             background:var(--content);
         }
@@ -600,12 +602,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     &>li {
         position:relative;
         &::before {
-            content:'';
+            @include content (3px, 3px);
             position:absolute;
             top:16px;
             left:10px;
             display:inline-block;
-            @include wh (3px, 3px);
             border-radius:50%;
             background:var(--content);
         }
@@ -622,6 +623,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** progress *****************/
 .topPrss {
+    height:54px;
+    &.scrollPrss {
+        &+div {
+            margin-top:54px;
+        }
+    }
     &+.form_stl {
         padding-top:36px;
     }
@@ -700,9 +707,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .s_num {
                 font-size:0;
                 &::before {
-                    content:"";
+                    @include content(17px,17px);
                     display:inline-block;
-                    @include wh (17px,17px);
                     @include mask(var(--basic));
                     -webkit-mask-image:url("../images/common/ico_step.svg");
                     mask-image:url("../images/common/ico_step.svg");
@@ -1264,12 +1270,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .tree_more_list {
             right:9px;
+            width:110px;
             margin-top:4px;
             .tmlist {
-                padding:7px 5px;
+                padding:8px 5px;
                 border-radius:0;
                 @include title (var(--font-12),var(--font-regular),var(--content));
                 color:unset;
+                line-height:unset
+                ;
                 &:hover {
                     position: relative;
                     color:var(--primary);
@@ -1405,7 +1414,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .workflow_wrap {
-    padding:20px;
+    padding:20px 10px;
     .s_e_w {
         .nav_circle {
             @include wh (62px, 62px);
@@ -1811,6 +1820,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 right:unset;
                 background-color:var(--white);
             }
+            &:hover {
+                &~.wf_card.ab_wf_card {
+                    top:79px;
+                }
+            }
         }
     }
 }
@@ -2133,7 +2147,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 border-bottom:1px solid var(--list-border);
                 .view_tit {
                     p {
-                        @include title (var(--font-14), var(--font-14), var(--content));
+                        @include title (var(--font-14), var(--font-regular), var(--content));
                     }
                 }
                 .view_txt {
@@ -2169,6 +2183,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding-top:10px;
                 .treem_btn {
                     font-weight:var(--font-regular);
+                    line-height:unset;
                 }
             }
         }
@@ -2817,7 +2832,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             margin:6px 0;
             &>li {
                 display:inline-block;
-                a {
+                &>a {
                     border-radius:6px;
                     font-size:var(--font-12);
                     font-weight:var(--font-medium);
@@ -2893,20 +2908,23 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &.entry_connect {
             .entry_top {
                 border-left:5px solid #2159F7;
+                font-size:0;
+                .cl_both {
+                    font-size:0;
+                }
             }
             .entry_setting {
                 border-left:5px solid #2159F7;
                 &::before {
-                    content:"";
-                    @include wh (2px, 5px);
+                    @include content (2px,5px);
                     margin-left:18px;
                     background-color:#707A88;
                 }
                 .form_stl {
                     .form_list {
                         .form_tit {
-                            min-width: 175px;
-                            width:100%;
+                            min-width:160px;
+                            width:auto;
                         }
                     }
                 }
@@ -3005,6 +3023,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             .entry_setting {
+                min-width:272px;
+                width:min-content;
                 border-left:5px solid #F11D1E;
             }
         }
@@ -3027,7 +3047,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .entry_setting {
-        min-width:662px;
+        min-width:643px;
         margin-top:4px;
         padding:9px 38px;
         border:1px solid var(--btn-disabled);
@@ -3104,14 +3124,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         position:relative;
                         padding:0 0 0 11px;
                         &::before {
-                            content: "";
+                            @include content (3px, 3px);
                             position: absolute;
                             top: 50%;
                             transform: translateY(-50%);
                             left: 0;
                             display: inline-block;
-                            width: 3px;
-                            height: 3px;
                             border-radius: 50%;
                             background: var(--content);
                         }
@@ -3126,14 +3144,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         .form_tit {
                             position:relative;
                             &::before {
-                                content: "";
+                                @include content (3px,3px);
                                 position: absolute;
                                 top: 50%;
                                 transform: translateY(-50%);
                                 left: 0;
                                 display: inline-block;
-                                width: 3px;
-                                height: 3px;
                                 border-radius: 50%;
                                 background: var(--content);
                             }
@@ -3400,8 +3416,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .data_txt_stl {
-            display:flex;
-            align-items:center;
+            @include flexsb(null);
             width:100%;
             padding-left:5px;
             dt {
@@ -3489,9 +3504,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         gap:10px;
         padding:0;
         .data_txt_stl {
-            display:flex;
+            @include flexsb(null);
             flex-wrap:wrap;
-            align-items:center;
             width:calc(50% - 5px);
             height:80px;
             padding:10px;
@@ -3558,8 +3572,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .data_total {
             width:100%;
             &::before {
-                content:"";
-                @include wh (24px, 24px);
+                @include content(24px,24px);
                 margin-right:3px;
                 @include mask (var(--text-disabled));
                 -webkit-mask-image:url("../images/common/moni/ico_status.svg");
@@ -3739,9 +3752,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-image:none;
             background-position:unset;
             &::before {
-                content:"";
+                @include content(24px,24px);
                 display:inline-block;
-                @include wh(24px, 24px);
                 @include mask(var(--title));
                 -webkit-mask-image:url("../images/common/ico_play.svg");
                 mask-image:url("../images/common/ico_play.svg");
@@ -3949,11 +3961,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-image:none;
                 text-indent:0;
                 &::before {
-                    content:"";
+                    @include content(24px,24px);
                     position:absolute;
                     @extend %positon_center;
                     display:inline-block;
-                    @include wh(24px,24px);
                     @include mask(var(--white));
                 }
             }
@@ -4222,24 +4233,22 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     background-image:none;
     box-shadow:none;
     &::before {
-        content:"";
+        @include content(24px,24px);
         position:absolute;
         @extend %positon_center;
         display:inline-block;
-        @include wh(24px,24px);
         @include mask(var(--title));
         -webkit-mask-image:url("../images/common/ico_show.svg");
         mask-image:url("../images/common/ico_show.svg");
     }
     &.hide {
         &::after {
-            content:"";
+            @include content(1px,24px);
             position:absolute;
             top:50%;
             left:50%;
             transform:translate(-50%,-50%) rotate(-45deg);
             display:block;
-            @include wh(1px,24px);
             background-color:var(--false);
         }
     }

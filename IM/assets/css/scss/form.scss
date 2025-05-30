@@ -219,6 +219,8 @@ $borderTs: "search_wrap", "tab_wrap";
     select {
         &.form_contrl {
             width:270px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
 }

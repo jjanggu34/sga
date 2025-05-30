@@ -10,9 +10,7 @@ body {
     overflow:auto;
     * {
         font-family:"S-CoreDream";
-        font-size:13px;
-        font-weight:var(--font-regular);
-        color:var(--content);
+        @include title (var(--font-13), var(--font-regular), var(--content));
         box-sizing:border-box;
     }
 }
@@ -50,9 +48,6 @@ body {
         #container {
             padding-left:0;
             margin-left:70px;
-            .scrollPrss {
-                padding-left:70px;
-            }
         }
         .header {
             .btn_lnb {
@@ -92,9 +87,7 @@ body {
             border:0;
             border-bottom:$borderD;
             border-radius:0;
-            font-size:var(--font-14);
-            font-weight:var(--font-regular);
-            color:var(--content);
+            @include title (var(--font-14), var(--font-regular), var(--content));
             background-color:#F9FBFD;
             &.on {
                 border-radius:0;
@@ -203,13 +196,12 @@ body {
                             opacity:1;
                         }
                         &::after {
-                            content:"";
+                            @include content(16px,16px);
                             position:absolute;
                             top:50%;
                             right:0;
                             transform:translateY(-50%);
                             display:inline-block;
-                            @include wh (16px,16px);
                             @include mask(var(--text-disabled));
                             -webkit-mask-image:url("../images/common/nav_arr.svg");
                             mask-image:url("../images/common/nav_arr.svg");
@@ -262,9 +254,7 @@ body {
                 li {
                     height:24px;
                     a {
-                        font-size:var(--font-13);
-                        font-weight:var(--font-regular);
-                        color:var(--secondary);
+                        @include title (var(--font-13), var(--font-regular), var(--secondary));
                         line-height:26px;
                         &::after {
                             content:none;
@@ -320,12 +310,11 @@ body {
                     position:relative;
                     padding-right:10px;
                     &::after {
-                        content:"";
+                        @include content(1px,60px);
                         position:absolute;
                         top:-18px;
                         right:0;
                         display:inline-block;
-                        @include wh (1px, 60px);
                         background-color:var(--border-d);
                     }
                     span {
@@ -431,9 +420,7 @@ body {
                     padding:24px 24px 8px;
                     border-bottom:0;
                     span {
-                        font-size:var(--font-16);
-                        font-weight:var(--font-bold);
-                        color:var(--title);
+                        @include title (var(--font-16), var(--font-bold), var(--title));
                     }
                     .alim_clear {
                         top:unset;
@@ -636,6 +623,9 @@ body {
 #ONSD_wrap {
     .content {
         padding:30px 0 0;
+        .con_tit {
+            padding-left: 24px;
+        }
     }
 }
 
@@ -674,6 +664,14 @@ body {
                 border-radius:30px;
                 background:var(--border-d);
             }
+        }
+        .view_list {
+            padding-bottom:0;
+        }
+    }
+    .dtv_cont_wrap {
+        .btn_box {
+            border-top:0;
         }
     }
 }
@@ -746,6 +744,38 @@ body {
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
             border-bottom: 10px solid #fff;
+        }
+    }
+}
+
+.help_w {
+    .balloon {
+        top:48px;
+        right:16px;
+        border:$borderD;
+        border-radius:6px;
+        box-shadow:0 3px 3px #00000016;
+        &::before {
+            top:-8px;
+            border-bottom:8px solid var(--border-d);
+        }
+        &::after {
+            top:-7px;
+        }
+    }
+}
+
+.option_list {
+    &.balloon {
+        top:32px;
+        border:$borderD;
+        border-radius:6px;
+        box-shadow:0 3px 3px #00000016;
+        &::before {
+            border-bottom:8px solid var(--border-d);
+        }
+        a {
+            font-weight:var(--font-regular);
         }
     }
 }

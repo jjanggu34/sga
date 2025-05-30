@@ -23,7 +23,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 
 @each $btn in $btns {
     #{$btn} {
-        padding:0 7px;
+        padding:0 14px;
         border-radius:6px;
         font-size:var(--font-13);
         line-height:30px;
@@ -142,7 +142,6 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     }
 }
 button, a {
-    border-radius:6px;
     color:var(--white);
     font-weight:var(--font-medium);
     &.icon {
@@ -423,6 +422,20 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     z-index:100;
 }
 
+/* 상세보기 */
+.btn_detailview {
+    @include wh (16px,16px);
+    @include mask(var(--title));
+    -webkit-mask-image:url("../images/common/ico_document.svg");
+    mask-image:url("../images/common/ico_document.svg");
+    -webkit-mask-size:auto;
+    mask-size:auto;
+    background-image:none;
+    &.on {
+        background-color:var(--primary);
+    }
+}
+
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
@@ -465,9 +478,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         padding:6px 12px 6px 6px;
         line-height:16px;
         &::before {
-            content:"";
+            @include content(16px,16px);
             display:inline-block;
-            @include wh (16px, 16px);
             @include mask(var(--title));
             -webkit-mask-image:url("../images/common/ico_refresh.svg");
             mask-image:url("../images/common/ico_refresh.svg");
@@ -492,9 +504,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 padding:0;
                 border:1px solid var(--default);
                 border-radius:6px;
-                font-size:var(--font-12);
-                font-weight:var(--font-regular);
-                color:var(--content);
+                @include title (var(--font-12), var(--font-regular), var(--content));
                 line-height:30px;
                 text-align:center;
                 span {

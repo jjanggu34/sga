@@ -231,6 +231,8 @@
 }
 .form_stl select.form_contrl {
   width: 270px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* check */

@@ -84,7 +84,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="comp">
+						<tr class="Gcomp">
 							<td>레이아웃</td>
 							<td></td>
 							<td></td>
@@ -108,7 +108,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr class="almost">
+						<tr class="Gcomp">
 							<td>menu</td>
 							<td></td>
 							<td></td>
@@ -155,7 +155,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr class="comp">
+						<tr class="Gcomp">
 							<td>form</td>
 							<td></td>
 							<td></td>
@@ -167,7 +167,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr class="comp">
+						<tr class="Gcomp">
 							<td>button</td>
 							<td></td>
 							<td></td>
@@ -191,7 +191,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr class="comp">
+						<tr class="Gcomp">
 							<td>progress</td>
 							<td></td>
 							<td></td>
@@ -203,7 +203,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr class="comp">
+						<tr class="Gcomp">
 							<td>state</td>
 							<td></td>
 							<td></td>
@@ -238,7 +238,7 @@
 					<caption></caption>
 					<colgroup>
 						<col width="8%"><col width="14%"><col width="14%"><col width="4%">
-						<col width="15%"><col width="4%"><col width="4%"><col width="6%">
+						<col width="15%"><col width="4%"><col width="4%"><col width="7%">
 						<col width="15%"><col width="*">
 					</colgroup>
 					<thead>
@@ -364,7 +364,7 @@
 							<td>시스템 트리 선택 후 시청 화면</td>
 						</tr>
 
-						<tr class="almost">
+						<tr class="comp">
 							<td>결재목록</td>
 							<td>07_08_End-User_apply</td>
 							<td></td>
@@ -377,7 +377,7 @@
 							<td>결재 항목 리스트</td>
 						</tr>
 
-						<tr class="almost">
+						<tr class="comp">
 							<td>결재내용 확인</td>
 							<td>09_table_style02</td>
 							<td></td>
@@ -390,7 +390,7 @@
 							<td>기본 결재 화면</td>
 						</tr>
 
-                        <tr class="almost">
+                        <tr class="comp">
 							<td rowspan="4">결재선</td>
 							<td>03_09_layerPopup_detailview</td>
 							<td></td>
@@ -402,7 +402,7 @@
 							<td>[2025.05.14]<br>footer 삭제 nav로 이동 예정<br>[2025.05.23]<br>copyright, nav로 이동 완료</td>
 							<td>결재 시 수신/위임 하는 아이콘 확인</td>
 						</tr>
-						<tr class="almost">
+						<tr class="comp">
 							<td>11_02_workflow_2line</td>
 							<td></td>
 							<td></td>
@@ -436,7 +436,7 @@
 							<td>기본 결재선 확인</td>
 						</tr>
 
-                        <tr class="almost">
+                        <tr class="comp">
 							<td rowspan="8">기본폼</td>
 							<td>05_03_01_proccess_regit</td>
 							<td></td>
@@ -1184,6 +1184,9 @@
 								$stateCell.html("<span>80% 진행</span>");
 								progressCnt++;
 							} else if ($row.hasClass("comp")) {
+								$stateCell.html("<span>완료(메뉴 제외)</span>");
+								compCnt++;
+							} else if ($row.hasClass("Gcomp")) {
 								$stateCell.html("<span>완료</span>");
 								compCnt++;
 							} else {

@@ -79,16 +79,18 @@
                 padding:0 20px;
                 border:0;
                 border-bottom:1px solid var(--list-border);
-                font-size:var(--font-13);
-                font-weight:var(--font-regular);
+                @include title (var(--font-13), var(--font-regular), var(--content));
                 line-height:35px;
-                color:var(--content);
                 text-align:center;
                 text-overflow:ellipsis;
                 white-space:nowrap;
                 overflow:hidden;
                 div {
                     color:var(--content);
+                }
+                &:has(.form_contrl) {
+                    padding:5px 10px;
+                    line-height:unset;
                 }
                 &.nodata {
                     position:relative;
@@ -163,11 +165,9 @@
                 &.aft_cont {
                     background:var(--disabled-line-bg);
                     .aft_ir {
-                        font-size:var(--font-13);
-                        font-weight:var(--font-medium);
-                        color:#0052CC;
+                        @include title (var(--font-13), var(--font-medium), #0052CC);
                         .aft_i {
-                            top:-3px;
+                            top:7px;
                             left:-32px;
                             @include wh (22px,22px);
                             &.aft_add {
@@ -217,12 +217,11 @@
                                     position:relative;
                                     padding-left:8px;
                                     &::before {
-                                        content:'';
+                                        @include content(3px,3px);
                                         position:absolute;
                                         top:5px;
                                         left:0;
                                         display:inline-block;
-                                        @include wh (3px, 3px);
                                         border-radius:50%;
                                         background:var(--text-disabled);
                                     }
