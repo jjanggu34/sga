@@ -447,6 +447,7 @@ button.icon_arrow_none, a.icon_arrow_none {
   width: 24px;
   height: 24px;
   border: none;
+  border-radius: 6px;
   background-color: var(--basic);
 }
 .btn_columnadd span .btn_option::after {
@@ -500,10 +501,10 @@ button.icon_arrow_none, a.icon_arrow_none {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/label/ico_FileEdit.svg");
+  background-image: url("../images/label/ico_FileEdit.svg");
 }
 .btns_detail ul li a.del {
-  background-image: url("../images/common/label/ico_trash.svg");
+  background-image: url("../images/label/ico_trash.svg");
   background-position: center;
 }
 .btns_detail ul li a.test {

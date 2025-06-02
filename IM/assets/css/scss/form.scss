@@ -10,6 +10,12 @@ $borderTs: "search_wrap", "tab_wrap";
 /*---------------------------------------------
 	#input
 ---------------------------------------------*/
+/* focus */
+.form_contrl {
+    &:focus-visible, &:focus {
+        border:1px solid var(--primary);
+    }
+}
 /* disabled */
 .form_contrl {
     height:30px;
@@ -86,6 +92,26 @@ $borderTs: "search_wrap", "tab_wrap";
 }
 
 /* date2 -> calendar */
+.calendarUI {
+    border:$borderD;
+    border-radius:6px;
+    box-shadow:0 3px 3px #00000016;
+    .cld_month_pop {
+        li {
+            button {
+                padding:0 10px;
+                color:var(--content);
+                font-weight:var(--font-regular);
+                line-height:30px;
+                &.on {
+                    font-weight:var(--font-medium);
+                    color:var(--white);
+                    background-color:var(--primary);
+                }
+            }
+        }
+    }
+}
 .weeksTbl {
     .week_row {
         .diss_week {
@@ -97,8 +123,10 @@ $borderTs: "search_wrap", "tab_wrap";
         }
         .btn_weekday {
             padding:0;
-            color:var(--title);
+            font-weight:var(--font-regular);
+            color:var(--content);
             &.on {
+                font-weight:var(--font-medium);
                 background-color:var(--primary);
             }
         }
@@ -162,6 +190,7 @@ $borderTs: "search_wrap", "tab_wrap";
             @include mask(var(--text-disabled));
             -webkit-mask-image:url("../images/common/ico_file_upload.svg");
             mask-image:url("../images/common/ico_file_upload.svg");
+            background-image:none;
         }
         p {
             @include title(var(--font-13), var(--font-regular), var(--text-disabled));
@@ -340,7 +369,6 @@ $labels: "check_stl_lab", "radio_stl_lab";
                 transform: translate(-50%,-50%);
                 left:50%;
             }
-    
             &::after {
                 @include wh(15px, 15px);
                 background-color: var(--white);
@@ -357,17 +385,10 @@ $labels: "check_stl_lab", "radio_stl_lab";
 .radio_stl {
     &+ label {
         &::before {
-            border:1px solid var(--default);
+            @include mask(var(--default));
         }
         &::after {
-            position:absolute;
-            top:50%;
-            transform:translateY(-50%);
-            left:5px;
-            @include content (6px, 6px);
-            display:inline-block;
-            border-radius:50%;
-            background-color:var(--default);
+            content:none;
         }
         &+ .req_txt {
             padding:0;
@@ -379,25 +400,17 @@ $labels: "check_stl_lab", "radio_stl_lab";
                 background-color:var(--primary);
             }
             &::after {
-                @include wh (6px, 6px);
-                margin-top:0;
-                left:5px;
-                transform:translateY(-50%);
-                background-color:var(--white);
+                content:none;
             }
         }
     }
     &:disabled {
         &+ label {
             &::before {
-                border:1px solid var(--btn-disabled);
                 background-color:var(--btn-disabled);
             }
             &::after {
-                @include wh (6px,6px);
-                left:5px;
-                transform:translateY(-50%);
-                background-color:var(--default);
+                content:none;
             }
         }
     }
@@ -430,12 +443,24 @@ select{
 .tg_sch_stl {
     .tg_sch{
         &:checked {
-            &+ label::before {
-                background-color:var(--primary);
+            &+ label {
+                &::before {
+                    background-color:var(--primary);
+                }
+                &::after {
+                    left:8px;
+                }
             }
         }
-        &+ label::before {
-            background-color:var(--btn-disabled);
+        &+ label {
+            &::before {
+                @include wh(53px,28px);
+                background-color:var(--btn-disabled);
+            }
+            &::after {
+                left:3px;
+                @include wh(24px,24px);
+            }
         }
     }
 }

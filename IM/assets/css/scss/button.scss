@@ -324,6 +324,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
             margin-top:0;
             @include wh(24px,24px);
             border:none;
+            border-radius:6px;
             background-color:var(--basic);
             &::after {
                 top:50%;
@@ -371,9 +372,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 left:50%;
                 transform:translate(-50%,-50%);
                 @include icon(24px, 24px);
-                background-image:url("../images/common/label/ico_FileEdit.svg");
+                background-image:url("../images/label/ico_FileEdit.svg");
                 &.del {
-                    background-image:url("../images/common/label/ico_trash.svg");
+                    background-image:url("../images/label/ico_trash.svg");
                     background-position:center;
                 }
                 &.test {

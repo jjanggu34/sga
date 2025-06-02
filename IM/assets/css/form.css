@@ -12,6 +12,11 @@
 /*---------------------------------------------
 	#input
 ---------------------------------------------*/
+/* focus */
+.form_contrl:focus-visible, .form_contrl:focus {
+  border: 1px solid var(--primary);
+}
+
 /* disabled */
 .form_contrl {
   height: 30px;
@@ -85,6 +90,23 @@
 }
 
 /* date2 -> calendar */
+.calendarUI {
+  border: 1px solid var(--border-d);
+  border-radius: 6px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.0862745098);
+}
+.calendarUI .cld_month_pop li button {
+  padding: 0 10px;
+  color: var(--content);
+  font-weight: var(--font-regular);
+  line-height: 30px;
+}
+.calendarUI .cld_month_pop li button.on {
+  font-weight: var(--font-medium);
+  color: var(--white);
+  background-color: var(--primary);
+}
+
 .weeksTbl .week_row .diss_week {
   background-color: var(--btn-disabled);
 }
@@ -94,9 +116,11 @@
 }
 .weeksTbl .week_row .btn_weekday {
   padding: 0;
-  color: var(--title);
+  font-weight: var(--font-regular);
+  color: var(--content);
 }
 .weeksTbl .week_row .btn_weekday.on {
+  font-weight: var(--font-medium);
   background-color: var(--primary);
 }
 
@@ -175,6 +199,7 @@
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_file_upload.svg");
   mask-image: url("../images/common/ico_file_upload.svg");
+  background-image: none;
 }
 .file_upload_wrap .file_upload_box p {
   font-size: var(--font-13);
@@ -384,19 +409,17 @@
 }
 
 .radio_stl + label::before {
-  border: 1px solid var(--default);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--default);
+  vertical-align: text-bottom;
 }
 .radio_stl + label::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 5px;
-  content: "";
-  width: 6px;
-  height: 6px;
-  display: inline-block;
-  border-radius: 50%;
-  background-color: var(--default);
+  content: none;
 }
 .radio_stl + label + .req_txt {
   padding: 0;
@@ -405,23 +428,13 @@
   background-color: var(--primary);
 }
 .radio_stl:checked + label::after {
-  width: 6px;
-  height: 6px;
-  margin-top: 0;
-  left: 5px;
-  transform: translateY(-50%);
-  background-color: var(--white);
+  content: none;
 }
 .radio_stl:disabled + label::before {
-  border: 1px solid var(--btn-disabled);
   background-color: var(--btn-disabled);
 }
 .radio_stl:disabled + label::after {
-  width: 6px;
-  height: 6px;
-  left: 5px;
-  transform: translateY(-50%);
-  background-color: var(--default);
+  content: none;
 }
 
 /*---------------------------------------------
@@ -448,8 +461,18 @@ select.form_contrl {
 .tg_sch_stl .tg_sch:checked + label::before {
   background-color: var(--primary);
 }
+.tg_sch_stl .tg_sch:checked + label::after {
+  left: 8px;
+}
 .tg_sch_stl .tg_sch + label::before {
+  width: 53px;
+  height: 28px;
   background-color: var(--btn-disabled);
+}
+.tg_sch_stl .tg_sch + label::after {
+  left: 3px;
+  width: 24px;
+  height: 24px;
 }
 
 /*---------------------------------------------

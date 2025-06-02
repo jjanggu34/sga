@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_103" data-name="사각형 103" width="24" height="24" fill="none" stroke="#454545" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <g id="nav_user" clip-path="url(#clip-path)">
+    <g id="icon" transform="translate(0.719 0.719)">
+      <circle id="타원_20" data-name="타원 20" cx="5.029" cy="5.029" r="5.029" transform="translate(2.847)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="패스_116" data-name="패스 116" d="M3,52.252a7.9,7.9,0,0,1,13.956-4.4" transform="translate(-3 -34.942)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="패스_117" data-name="패스 117" d="M57.593,55.757a4.217,4.217,0,0,0-.126-1.01l1.285-.936-1.009-1.748-1.452.645A4.223,4.223,0,0,0,54.54,51.7l-.168-1.579H52.355L52.187,51.7a4.218,4.218,0,0,0-1.75,1.011l-1.452-.645-1.009,1.748,1.285.936a4.1,4.1,0,0,0,0,2.02l-1.285.936,1.009,1.748,1.452-.645a4.223,4.223,0,0,0,1.75,1.011l.168,1.579h2.018l.168-1.579a4.223,4.223,0,0,0,1.75-1.011l1.452.645L58.752,57.7l-1.285-.936A4.217,4.217,0,0,0,57.593,55.757Zm-4.23,1.8a1.8,1.8,0,1,1,1.8-1.8A1.8,1.8,0,0,1,53.363,57.554Z" transform="translate(-37.204 -38.834)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

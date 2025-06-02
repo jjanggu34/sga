@@ -42,6 +42,9 @@ body * {
 #SGIM_wrap.mini_nav .header .btn_lnb a {
   left: 24px;
 }
+#SGIM_wrap.mini_nav .scrollPrss {
+  padding-left: 70px;
+}
 #SGIM_wrap .nav {
   border-right: 1px solid var(--border-d);
   box-shadow: none;
@@ -138,40 +141,48 @@ body * {
   background-image: none;
 }
 #SGIM_wrap .nav_list > li > a i.UserMangement {
-  -webkit-mask-image: url("../images/common/nav_user.svg");
-  mask-image: url("../images/common/nav_user.svg");
+  -webkit-mask-image: url("../images/nav/nav_user.svg");
+  mask-image: url("../images/nav/nav_user.svg");
 }
 #SGIM_wrap .nav_list > li > a i.ResourceMangement {
-  -webkit-mask-image: url("../images/common/nav_resource.svg");
-  mask-image: url("../images/common/nav_resource.svg");
+  -webkit-mask-image: url("../images/nav/nav_resource.svg");
+  mask-image: url("../images/nav/nav_resource.svg");
 }
 #SGIM_wrap .nav_list > li > a i.ServerZoneMangement {
-  -webkit-mask-image: url("../images/common/nav_server.svg");
-  mask-image: url("../images/common/nav_server.svg");
+  -webkit-mask-image: url("../images/nav/nav_server.svg");
+  mask-image: url("../images/nav/nav_server.svg");
 }
-#SGIM_wrap .nav_list > li > a i.RoleManagement {
-  -webkit-mask-image: url("../images/common/nav_role.svg");
-  mask-image: url("../images/common/nav_role.svg");
+#SGIM_wrap .nav_list > li > a i.RoleMangement {
+  -webkit-mask-image: url("../images/nav/nav_role.svg");
+  mask-image: url("../images/nav/nav_role.svg");
 }
 #SGIM_wrap .nav_list > li > a i.AccessPolicyManagement {
-  -webkit-mask-image: url("../images/common/nav_access.svg");
-  mask-image: url("../images/common/nav_access.svg");
+  -webkit-mask-image: url("../images/nav/nav_access.svg");
+  mask-image: url("../images/nav/nav_access.svg");
 }
 #SGIM_wrap .nav_list > li > a i.SynchronizeManagment {
-  -webkit-mask-image: url("../images/common/nav_synchronize.svg");
-  mask-image: url("../images/common/nav_synchronize.svg");
-}
-#SGIM_wrap .nav_list > li > a i.RequestApproveManagement {
-  -webkit-mask-image: url("../images/common/nav_request.svg");
-  mask-image: url("../images/common/nav_request.svg");
+  -webkit-mask-image: url("../images/nav/nav_synchronize.svg");
+  mask-image: url("../images/nav/nav_synchronize.svg");
 }
 #SGIM_wrap .nav_list > li > a i.AuditingReport {
-  -webkit-mask-image: url("../images/common/nav_auditing.svg");
-  mask-image: url("../images/common/nav_auditing.svg");
+  -webkit-mask-image: url("../images/nav/nav_auditing.svg");
+  mask-image: url("../images/nav/nav_auditing.svg");
 }
 #SGIM_wrap .nav_list > li > a i.SGIMManagement {
-  -webkit-mask-image: url("../images/common/nav_management.svg");
-  mask-image: url("../images/common/nav_management.svg");
+  -webkit-mask-image: url("../images/nav/nav_management.svg");
+  mask-image: url("../images/nav/nav_management.svg");
+}
+#SGIM_wrap .nav_list > li > a i.WorkflowManagement {
+  -webkit-mask-image: url("../images/nav/nav_workflow.svg");
+  mask-image: url("../images/nav/nav_workflow.svg");
+}
+#SGIM_wrap .nav_list > li > a i.PolicyMangement {
+  -webkit-mask-image: url("../images/nav/nav_policy.svg");
+  mask-image: url("../images/nav/nav_policy.svg");
+}
+#SGIM_wrap .nav_list > li > a i.System {
+  -webkit-mask-image: url("../images/nav/nav_system.svg");
+  mask-image: url("../images/nav/nav_system.svg");
 }
 #SGIM_wrap .nav_list > li > a span {
   font-size: var(--font-13);
@@ -555,7 +566,7 @@ body * {
   padding-top: 0;
 }
 #SGIM_wrap #container .cont_wrap .content {
-  border: 1px solid var(--border-d);
+  border: 1px solid var(--list-border);
 }
 #SGIM_wrap #container .content {
   padding: 0;
@@ -610,7 +621,7 @@ body * {
 #SGIM_wrap #container .content + .cnt_lyt_sc .content.cont_scroll {
   height: 100%;
   min-height: auto;
-  max-height: 624px;
+  max-height: calc(100vh - 191px);
 }
 #SGIM_wrap #container .content + .cnt_lyt_sc .content .tab_wrap.cont_in_tab {
   padding: 0 24px 16px;
@@ -619,7 +630,7 @@ body * {
   padding: 0 24px 10px;
 }
 #SGIM_wrap #container .content + .cnt_lyt_sc .content .form_wrap {
-  padding: 0 24px;
+  padding: 0 20px;
 }
 #SGIM_wrap #container .content + .cnt_lyt_sc .i-card_wrap {
   padding-bottom: 4px;
@@ -698,7 +709,7 @@ body * {
   padding-bottom: 0;
 }
 .detail_view .dtv_cont_wrap .btn_box {
-  border-top: 0;
+  border-top: 1px solid var(--list-border);
 }
 
 /***************** center popup *****************/

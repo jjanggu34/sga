@@ -56,6 +56,9 @@ body {
                 }
             }
         }
+        .scrollPrss {
+            padding-left:70px;
+        }
     }
     .nav {
         border-right:$borderD;
@@ -135,40 +138,48 @@ body {
                     @include mask (var(--content));
                     background-image:none;
                     &.UserMangement {
-                        -webkit-mask-image:url("../images/common/nav_user.svg");
-                        mask-image:url("../images/common/nav_user.svg");
+                        -webkit-mask-image:url("../images/nav/nav_user.svg");
+                        mask-image:url("../images/nav/nav_user.svg");
                     }
                     &.ResourceMangement {
-                        -webkit-mask-image:url("../images/common/nav_resource.svg");
-                        mask-image:url("../images/common/nav_resource.svg");
+                        -webkit-mask-image:url("../images/nav/nav_resource.svg");
+                        mask-image:url("../images/nav/nav_resource.svg");
                     }
                     &.ServerZoneMangement {
-                        -webkit-mask-image:url("../images/common/nav_server.svg");
-                        mask-image:url("../images/common/nav_server.svg");
+                        -webkit-mask-image:url("../images/nav/nav_server.svg");
+                        mask-image:url("../images/nav/nav_server.svg");
                     }
-                    &.RoleManagement {
-                        -webkit-mask-image:url("../images/common/nav_role.svg");
-                        mask-image:url("../images/common/nav_role.svg");
+                    &.RoleMangement {
+                        -webkit-mask-image:url("../images/nav/nav_role.svg");
+                        mask-image:url("../images/nav/nav_role.svg");
                     }
                     &.AccessPolicyManagement {
-                        -webkit-mask-image:url("../images/common/nav_access.svg");
-                        mask-image:url("../images/common/nav_access.svg");
+                        -webkit-mask-image:url("../images/nav/nav_access.svg");
+                        mask-image:url("../images/nav/nav_access.svg");
                     }
                     &.SynchronizeManagment {
-                        -webkit-mask-image:url("../images/common/nav_synchronize.svg");
-                        mask-image:url("../images/common/nav_synchronize.svg");
-                    }
-                    &.RequestApproveManagement {
-                        -webkit-mask-image:url("../images/common/nav_request.svg");
-                        mask-image:url("../images/common/nav_request.svg");
+                        -webkit-mask-image:url("../images/nav/nav_synchronize.svg");
+                        mask-image:url("../images/nav/nav_synchronize.svg");
                     }
                     &.AuditingReport {
-                        -webkit-mask-image:url("../images/common/nav_auditing.svg");
-                        mask-image:url("../images/common/nav_auditing.svg");
+                        -webkit-mask-image:url("../images/nav/nav_auditing.svg");
+                        mask-image:url("../images/nav/nav_auditing.svg");
                     }
                     &.SGIMManagement {
-                        -webkit-mask-image:url("../images/common/nav_management.svg");
-                        mask-image:url("../images/common/nav_management.svg");
+                        -webkit-mask-image:url("../images/nav/nav_management.svg");
+                        mask-image:url("../images/nav/nav_management.svg");
+                    }
+                    &.WorkflowManagement {
+                        -webkit-mask-image:url("../images/nav/nav_workflow.svg");
+                        mask-image:url("../images/nav/nav_workflow.svg");
+                    }
+                    &.PolicyMangement {
+                        -webkit-mask-image:url("../images/nav/nav_policy.svg");
+                        mask-image:url("../images/nav/nav_policy.svg");
+                    }
+                    &.System {
+                        -webkit-mask-image:url("../images/nav/nav_system.svg");
+                        mask-image:url("../images/nav/nav_system.svg");
                     }
                 }
                 span {
@@ -517,7 +528,7 @@ body {
             }
             .content {
                 // min-height:calc(100vh - 80px);//header + 위아래 margin
-                border:$borderD;
+                border:1px solid var(--list-border);
             }
         }
         .content {
@@ -575,7 +586,8 @@ body {
                     &.cont_scroll {
                         height:100%;
                         min-height:auto;
-                        max-height:624px;
+                        // max-height:624px;
+                        max-height:calc(100vh - 191px);
                     }
                     .tab_wrap {
                         &.cont_in_tab {
@@ -586,7 +598,7 @@ body {
                         padding:0 24px 10px;
                     }
                     .form_wrap {
-                        padding:0 24px;
+                        padding:0 20px;
                     }
                 }
                 .i-card_wrap {
@@ -671,7 +683,7 @@ body {
     }
     .dtv_cont_wrap {
         .btn_box {
-            border-top:0;
+            border-top:1px solid var(--list-border);
         }
     }
 }

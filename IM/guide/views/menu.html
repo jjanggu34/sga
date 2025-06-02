@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <HTML lang="ko">
-
 <head>
-    <meta charset="utf-8">
-    <title>menu</title>
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-    <!-- 기존 css -->
+	<meta charset="utf-8">
+	<title>SGIM</title>
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+	<!-- 기존 css -->
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/font.css">
 
@@ -23,335 +22,172 @@
     <script type="text/javascript" src="../../js/jquery-ui.js"></script>
     <!-- js -->
     <script type="text/javascript" charset="utf-8" src="../../js/common.js"></script>
-
-    <!--[if lt IE 9]>
+	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<script src="http://test.co.kr/respond.min.js"></script>
 	<![endif]-->
-    <!--[if (gte IE 7)&(lte IE 8)]>
+	<!--[if (gte IE 7)&(lte IE 8)]>
 	<script type="text/javascript" src="http://test.co.kr/respond.min.js"></script>
 	<![endif]-->
-    <style>
-        h2 { font-size:30px; }
-        .tit { display:block; margin:20px 0; padding:10px 5px; font-size:var(--font-16); background-color:#6ebda8; color:#fff; }
-        /* .accordion { position: relative; }
-        .accordion::after { position:absolute; top:50%; transform:translateY(-50%); content:""; display:inline-block; width:24px; height:24px; background:url("../../assets/images/common/ico_accordion2.svg")no-repeat center/auto; }
-        .accordion + .tree_menu_wrap { display:none; }
-        .accordion.tr_open::after { transform:translateY(-50%) rotate(-180deg); }
-        .accordion.tr_open + .tree_menu_wrap { display:block; } */
-    </style>
 </head>
-
 <body>
-    <div id="SGIM_wrap" class="mini_nav">
-        <!-- S: side nav -->
-        <!-- E: side nav -->
-        <!-- S: container -->
-        <div id="container" style="padding:0 !important;">
-            <!-- S: header -->
-            <!-- E: header -->
-            <!-- S: content -->
-            <div class="content" style="border-radius:10px; margin:20px; padding:20px;">
-                <h2>menu</h2>
-                <section>
-                    <p class="tit">tree_menu_box 기본</p>
-                    <div class="tree_menu_wrap">
-                        <div class="flx tree_menu_area">
-                            <div class="tree_menu_box">
-                                <div class="tree_menu_tab flx">
-                                    <button class="on">그룹</button>
-                                    <button>OS타입</button>
-                                </div>
-                                <div class="tree_menu_tl">
-                                    <ul class="tree_menu_inner">
-                                        <li>
-                                            <a><i class="icon_tree folder_open"></i><span>Root</span></a>
-                                            <!-- s: class명 추가 sub_tree_menu -->
-                                            <ul class="sub_tree_menu">
-                                                <li>
-                                                    <a><i class="icon_tree folder"></i><span>최고관리자</span></a>
-                                                </li>
-                                                <li>
-                                                    <a><i class="icon_tree folder"></i><span>관리자</span></a>
-                                                </li>
-                                                <li>
-                                                    <a><i class="icon_tree folder"></i><span>헬프데스크</span></a>
-                                                </li>
-                                                <li>
-                                                    <a class="on"><i class="icon_tree iuser"></i><span>매니저</span></a>
-                                                </li>
-                                                <li>
-                                                    <a><i class="icon_tree iuser"></i><span>일반사용자</span></a>
-                                                </li>
-                                                <li>
-                                                    <a><i class="icon_tree file"></i><span>JWT사용자</span></a>
-                                                </li>
-                                                <li>
-                                                    <a><i class="icon_tree file"></i><span>익명사용자</span></a>
-                                                </li>
-                                            </ul>
-                                            <!-- e: class명 추가 sub_tree_menu -->
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="tit">tree_menu_box + search</p>
-                    <div class="tree_menu_wrap">
-						<div class="flx tree_menu_area">
-							<div class="tree_menu_box">
-								<div class="tree_menu_tab flx">
-									<button class="on">그룹</button>
-									<button>OS타입</button>
+	<div id="SGIM_wrap" class="">
+		<div class="nav">
+			<div class="nav_inner scroll">
+				<div class="nav_header">
+					<!--s: 이미지 경로 및 이미지 변경-->
+					<a href="" class="logo">
+						<img src="../../assets/images/common/logo.png">
+					</a>
+					<!--e: 이미지 경로 및 이미지 변경-->
+				</div>
+				<div class="nav_tab">
+					<a href="" class="">사용자</a>
+					<a href="" class="on">관리자</a>
+				</div>
+				<ul class="nav_list">
+					<li><a href="" class="depth_menu"><i class="UserMangement"></i><span>사용자 정보 관리</span></a>
+						<ul>
+							<li><a href="">사용자 관리</a></li>
+							<li><a href="" class="on">그룹정보 관리</a></li>
+							<li><a href="">조직정보 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="ResourceMangement"></i><span>시스템(자원) 관리</span></a>
+						<ul>
+							<li><a href="">시스템</a></li>
+							<li><a href="">시스템 그룹</a></li>
+							<li><a href="">시스템 계정</a></li>
+							<li><a href="">시스템 특권권한 관리</a></li>
+							<li><a href="">시스템 정책설정 관리</a></li>
+							<li><a href="">End point/장치 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="ServerZoneMangement"></i><span>서비스 영역 관리</span></a>
+						<ul>
+							<li><a href="">테넌트 관리</a></li>
+							<li><a href="">서버 영역 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="RoleMangement"></i><span>역할 관리</span></a>
+						<ul>
+							<li><a href="">내부역할 관리</a></li>
+							<li><a href="">자원 접근 역할 관리</a></li>
+							<li><a href="">역할 배포 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="PolicyMangement"></i><span>접근 정책/서비스 관리</span></a>
+						<ul>
+							<li><a href="">Agent/API 관리</a></li>
+							<li><a href="">인증 서버/서비스 관리</a></li>
+							<li><a href="">인증 정책 관리</a></li>
+							<li><a href="">접근 서버/서비스 관리</a></li>
+							<li><a href="">접근 정책 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="SynchronizeManagment"></i><span>수집/배포 관리</span></a>
+						<ul>
+							<li><a href="">수집/배포 대시보드</a></li>
+							<li><a href="">수집 정책 관리</a></li>
+							<li><a href="">배포 정책 관리</a></li>
+							<li><a href="">배포 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="WorkflowManagement"></i><span>결재/승인 관리</span></a>
+						<ul>
+							<li><a href="">워크플로우 관리</a></li>
+							<li><a href="">요청/승인 관리</a></li>
+							<li><a href="">결재 권한 위임</a></li>
+						</ul>
+					</li>
+					<li><a href="" class="depth_menu"><i class="AuditingReport"></i><span>모니터링 및 감사/보고서</span></a>
+						<ul>
+							<li><a href="">모니터링 대시보드</a></li>
+							<li><a href="">감사 로그 조회</a></li>
+							<li><a href="">보고서 관리</a></li>
+							<li><a href="">메시지 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="" class=""><i class="System"></i><span>SGIM 설정</span></a>
+					</li>
+				</ul>
+				<!-- s: copyright 추가 -->
+				<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
+				<!-- e: copyright 추가 -->
+			</div>
+		</div>
+		<div id="container">
+			<!-- s : header_title 내용 수정 및 gl_nav 수정 -->
+			<div class="header">
+				<div class="btn_lnb"><a>메뉴</a></div>
+				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
+				<div class="header_title">
+					<ol class="link_depth">
+						<li><a href="">HOME</a></li>
+						<li><a href="">역할관리</a></li>
+					</ol>
+				</div>
+				<ul class="gl_nav">
+					<!-- <li class="btn_modetrans"><a href="">사용자 모드<i></i></a></li> -->
+					<li class="btn_top_user"><a href=""><span>시스템관리자(ztadimin)</span></a></li>
+					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
+					<li class="btn_alim"><a href="">alim<span>13</span></a>
+						<div class="balloon alim_pop" style="display:none">
+							<div class="alim_pop_wrap">
+								<div class="alim_top">
+									<span>새 알림</span>
+									<button class="alim_clear">모든 알림 지우기</button>
 								</div>
-								<div class="search_box mini_search">
-									<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox">
-									<button class="btn_search" type="submit">검색</button>
-								</div>
-								<div class="tree_menu_tl">
-									<ul class="tree_menu_inner">
-										<li>
-											<a><i class="icon_tree folder_open"></i><span>Root</span></a>
-											<ul class="sub_tree_menu">
-												<li>
-													<a><i class="icon_tree folder"></i><span>최고관리자</span></a>
-												</li>
-												<li>
-													<a><i class="icon_tree folder"></i><span>관리자</span></a>
-												</li>
-												<li>
-													<a><i class="icon_tree folder"></i><span>헬프데스크</span></a>
-												</li>
-												<li>
-													<a class="on"><i class="icon_tree iuser"></i><span>매니저</span></a>
-												</li>
-												<li>
-													<a class="diss"><i class="icon_tree iuser"></i><span>일반사용자</span></a>
-												</li>
-												<li>
-													<a><i class="icon_tree file"></i><span>JWT사용자</span></a>
-												</li>
-												<li>
-													<a><i class="icon_tree file"></i><span>익명사용자</span></a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-                    <p class="tit">treeType02</p>
-                    <div class="tree_menu_wrap">
-						<div class="flx tree_menu_area">
-							<div class="treeType02" style="flex:0;"z>
-								<div class="flx tt_tit">
-									<p>서버</p>
-									<p class="branch"></p>
-									<p>인스턴스</p>
-								</div>
-								<div class="search_box mini_search">
-									<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox">
-									<button class="btn_search" type="submit">검색</button>
-								</div>
-								<div class="db_list">
-									<!-- 해당줄 선택하면 "on" 클래스 추가 -->
-									<div class="db_detail open">
-										<div class="db_server_row">
-											<p class="meth">Oracle</p>
-											<p class="db_server_name">InsaDB01</p>
-											<p class="ip_add flx">192.168.127.1:3306</p>
-										</div>
-										<div class="inst_list">
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-											<div class="inst_row on">
-												<i class="branch"></i>
-												<p class="inst_name">SharedDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-										</div>
-									</div>
-									<div class="db_detail">
-										<div class="db_server_row">
-											<p class="meth">MSSQL</p>
-											<p class="db_server_name">InsaDB01</p>
-											<p class="ip_add flx">192.168.127.1:3306</p>
-										</div>
-										<div class="inst_list">
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">SharedDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-										</div>
-									</div>
-									<div class="db_detail open">
-										<div class="db_server_row">
-											<p class="meth">TmaxTibero</p>
-											<p class="db_server_name">InsaDB01</p>
-											<p class="ip_add flx">192.168.127.1:3306</p>
-										</div>
-										<div class="inst_list">
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">SharedDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">SharedDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-											<div class="inst_row">
-												<i class="branch"></i>
-												<p class="inst_name">InsaDB</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-                    <p class="tit">treeview</p>
-					<div class="move_wrap treeview" style="width:320px; height:500px;">
-						<div class="move_box">
-							<div class="moved_tit flx">
-								<!-- s: class 추가 및 변경 -->
-								<div class="dropdown">
-									<button class="line btn_dropdown">저장소
-										<!-- s : background에 이미지 삽입 <span>
-											<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M6 10L10 5H2L6 10Z" fill="#494949"/>
-											</svg>
-										</span> -->
-									</button>
-									<!-- s: min-width 스타일 삭제 -> css로 옮김 -->
-									<ul class="dropdown_list" style="display:none;">
-										<li>
-											<button>저장소 이름1</button>
-										</li>
-										<li>
-											<button>저장소 이름2</button>
-										</li>
-									</ul>
-									<!-- e: min-width 스타일 삭제 -> css로 옮김 -->
-								</div>
-								<div class="flx treem_btn_lyt">
-									<button class="treem_btn">추가</button>
-									<button class="treem_btn">상세정보</button>
-									<button class="treem_btn">수정</button>
-									<button class="treem_btn">삭제</button>
-								</div>
-								<!-- e: class 추가 및 변경 -->
-							</div>
-							<div class="search_box mini_search">
-								<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
-								<button class="btn_search" type="submit">검색</button>
-							</div>
-							<div class="scroll tree_wrap">
-								<ul class="tree_list">
-									<li><a href=""><i class="icon_folder open"></i>Tenant Store</a>
-										<ul >
-											<li><button class="tree_arrow open"></button><a href=""><i class="icon_folder open"></i>Tenant A</a>
-												<!-- s: sub_tree_menu 추가 -->
-												<ul class="sub_tree_menu">
-												<!-- e: sub_tree_menu 추가 -->
-													<li>
-														<a href="" class="selected"><i class="icon_folder"></i>JSP</a>
-														<div class="tree_more_wrap">
-															<button class="btn_tree_more" title="더보기"></button>
-															<div class="tree_more_list" style="">
-																<button class="tmlist">새폴더 생성</button>
-																<button class="tmlist">이름 변경</button>
-																<button class="tmlist">상세보기</button>
-																<button class="tmlist">삭제</button>
-															</div>
-														</div>
-													</li>
-												</ul>
-											</li>
-											<li><button class="tree_arrow"></button><a href=""><i class="icon_folder"></i>Tenant B</a></li>
-										</ul>
-									</li>
+								<ul class="alim_list">
+									<li><a><i></i>경고!</a></li>
+									<li><a><i></i>나한테만 오는 알람메세지이이이이 두줄일때 다음줄로 넘어갑니다 </a></li>
+									<li><a><i></i>전체적인 알람공지</a></li>
+									<li><a><i></i>SMS문자왔숑</a></li>
+									<li><a><i></i>메일왔네요</a></li>
+									<li><a><i></i>기타알람</a></li>
 								</ul>
+								<div class="allAlim">
+									<a href="" class="btn_allAlim">모두 보기 ></a>
+								</div>
 							</div>
 						</div>
-					</div>
+					</li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
+					<li class="btn_logout"><a href="">logout</a></li>
+				</ul>
+			</div>
+			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
+			<div class="content only">
+                내용내용내용
+			</div>
+			<!-- nav로 이동 <div class="footer">
+				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
+			</div> -->
+		</div>
+		<div class="scroll_btns" style="display:none">
+			<button class="btn_toTheTop"></button>
+			<button class="btn_toThebottom"></button>
+		</div>
+		<script>
+			$("body").on("mousewheel", function (e) {
+			  var wheel = e.originalEvent.wheelDelta;
 
-                </section>
-            </div>
-            <!-- E: content -->
-            <!-- S: footer -->
-            <!-- E: footer -->
-        </div>
-        <div class="scroll_btns" style="display:none">
-            <button class="btn_toTheTop"></button>
-            <button class="btn_toThebottom"></button>
-        </div>
-        <script>
-            $("body").on("mousewheel", function (e) {
-                var wheel = e.originalEvent.wheelDelta;
-
-                if (wheel > 0) {
-                    //스크롤 올릴때
-                } else {
-                    //스크롤 내릴때
-                    $(".scroll_btns").show();
-                }
-            });
-            $(window).scroll(function () {
-                var scrollValue = $(document).scrollTop();
-                if (scrollValue > 65) {
-                    $(".list_btn_stk").addClass("btnarea");
-                } else {
-                    $(".list_btn_stk").removeClass("btnarea");
-                }
-            });
-        </script>
-
-        <!-- s : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
-        <script>
-            $(document).ready(function(){
-        
-                $('.accordion').on('click',  function() {
-                    $(this).toggleClass("tr_open");
-                });
-            });
-
-        </script>	
-        <!-- e : 퍼블확인용 스크립트, 확인후 기존 스크립트로 교체 필요-->
-    </div>
+			  if (wheel > 0) {
+			  	//스크롤 올릴때
+			  } else {
+			    //스크롤 내릴때
+			    $(".scroll_btns").show();
+			  }
+			});
+			// $(window).scroll(function () { 
+			// 	var scrollValue = $(document).scrollTop(); 
+			//     if (scrollValue > 65){
+			//     	$(".list_btn_stk").addClass("btnarea");
+			//     } else {
+			//     	$(".list_btn_stk").removeClass("btnarea");
+			//     }
+			// });
+		</script>
+	</div>
 </body>
-
 </HTML>

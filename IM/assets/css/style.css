@@ -94,7 +94,7 @@
 .bluetxt .mandatxt i {
   width: 24px;
   height: 24px;
-  background-image: url("../images/common/label/ico_delegated.svg");
+  background-image: url("../images/label/ico_delegated.svg");
 }
 .bluetxt .madna_ed {
   margin-left: 4px;
@@ -104,7 +104,7 @@
 .bluetxt .madna_ed i {
   width: 34px;
   height: 24px;
-  background-image: url("../images/common/label/ico_delegating.svg");
+  background-image: url("../images/label/ico_delegating.svg");
 }
 
 .redtxt {
@@ -343,8 +343,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--text-disabled);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_circleOff.svg");
-  mask-image: url("../images/common/label/ico_circleOff.svg");
+  -webkit-mask-image: url("../images/label/ico_circleOff.svg");
+  mask-image: url("../images/label/ico_circleOff.svg");
 }
 
 .plugConnected {
@@ -359,8 +359,8 @@ input + .loader {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_PlugConnected.svg");
-  mask-image: url("../images/common/label/ico_PlugConnected.svg");
+  -webkit-mask-image: url("../images/label/ico_PlugConnected.svg");
+  mask-image: url("../images/label/ico_PlugConnected.svg");
 }
 
 .plugZapOff {
@@ -375,8 +375,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--false);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_PlugZapOff.svg");
-  mask-image: url("../images/common/label/ico_PlugZapOff.svg");
+  -webkit-mask-image: url("../images/label/ico_PlugZapOff.svg");
+  mask-image: url("../images/label/ico_PlugZapOff.svg");
 }
 
 .filePlus {
@@ -391,8 +391,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--blue);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_FilePlus.svg");
-  mask-image: url("../images/common/label/ico_FilePlus.svg");
+  -webkit-mask-image: url("../images/label/ico_FilePlus.svg");
+  mask-image: url("../images/label/ico_FilePlus.svg");
 }
 .filePlus .icon_pgs {
   -webkit-mask-repeat: no-repeat;
@@ -403,8 +403,8 @@ input + .loader {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/icon_pgs.svg");
-  mask-image: url("../images/common/label/icon_pgs.svg");
+  -webkit-mask-image: url("../images/label/icon_pgs.svg");
+  mask-image: url("../images/label/icon_pgs.svg");
 }
 
 .checkCircle {
@@ -419,8 +419,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--true);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_checkCircle.svg");
-  mask-image: url("../images/common/label/ico_checkCircle.svg");
+  -webkit-mask-image: url("../images/label/ico_checkCircle.svg");
+  mask-image: url("../images/label/ico_checkCircle.svg");
 }
 
 .fileEdit {
@@ -435,8 +435,8 @@ input + .loader {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_FileEdit.svg");
-  mask-image: url("../images/common/label/ico_FileEdit.svg");
+  -webkit-mask-image: url("../images/label/ico_FileEdit.svg");
+  mask-image: url("../images/label/ico_FileEdit.svg");
 }
 .fileEdit.ing {
   color: var(--primary) !important;
@@ -450,8 +450,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--primary);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/icon_pgs.svg");
-  mask-image: url("../images/common/label/icon_pgs.svg");
+  -webkit-mask-image: url("../images/label/icon_pgs.svg");
+  mask-image: url("../images/label/icon_pgs.svg");
 }
 
 .fileEditLoader {
@@ -466,8 +466,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--primary);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/icon_pgs.svg");
-  mask-image: url("../images/common/label/icon_pgs.svg");
+  -webkit-mask-image: url("../images/label/icon_pgs.svg");
+  mask-image: url("../images/label/icon_pgs.svg");
 }
 
 .downloadCircle {
@@ -482,8 +482,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--blue);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_downloadCircle.svg");
-  mask-image: url("../images/common/label/ico_downloadCircle.svg");
+  -webkit-mask-image: url("../images/label/ico_downloadCircle.svg");
+  mask-image: url("../images/label/ico_downloadCircle.svg");
 }
 
 .pauseCircle {
@@ -498,8 +498,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--false);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_PauseCircle.svg");
-  mask-image: url("../images/common/label/ico_PauseCircle.svg");
+  -webkit-mask-image: url("../images/label/ico_PauseCircle.svg");
+  mask-image: url("../images/label/ico_PauseCircle.svg");
 }
 
 .trash {
@@ -514,8 +514,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--false);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_trash.svg");
-  mask-image: url("../images/common/label/ico_trash.svg");
+  -webkit-mask-image: url("../images/label/ico_trash.svg");
+  mask-image: url("../images/label/ico_trash.svg");
 }
 .trash .icon_pgs {
   -webkit-mask-repeat: no-repeat;
@@ -526,8 +526,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--false);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/icon_pgs.svg");
-  mask-image: url("../images/common/label/icon_pgs.svg");
+  -webkit-mask-image: url("../images/label/icon_pgs.svg");
+  mask-image: url("../images/label/icon_pgs.svg");
 }
 
 .bolt {
@@ -542,8 +542,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--true);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_bolt.svg");
-  mask-image: url("../images/common/label/ico_bolt.svg");
+  -webkit-mask-image: url("../images/label/ico_bolt.svg");
+  mask-image: url("../images/label/ico_bolt.svg");
 }
 
 .Nbolt {
@@ -558,8 +558,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--text-disabled);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/ico_bolt.svg");
-  mask-image: url("../images/common/label/ico_bolt.svg");
+  -webkit-mask-image: url("../images/label/ico_bolt.svg");
+  mask-image: url("../images/label/ico_bolt.svg");
 }
 
 .locked {
@@ -574,8 +574,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--text-disabled);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/label/icon_locked.svg");
-  mask-image: url("../images/common/label/icon_locked.svg");
+  -webkit-mask-image: url("../images/label/icon_locked.svg");
+  mask-image: url("../images/label/icon_locked.svg");
 }
 
 .icon_ff {
@@ -840,6 +840,9 @@ input + .loader {
 }
 .content .def_tit + .tbl_list .default_tbl.tblStl2 th {
   border-top: 0;
+}
+.content .def_tit + .tbl_list + .btn_box {
+  padding-top: 14px;
 }
 
 /*********************************************************************
@@ -1120,6 +1123,7 @@ input + .loader {
 }
 .tab_wrap.cont_in_tab.moveup {
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .mini_tab {
@@ -1182,12 +1186,13 @@ input + .loader {
 }
 
 .tree_menu_area {
-  gap: 20px;
+  gap: 15px;
   padding-bottom: 20px;
 }
 .tree_menu_area .tree_menu_box {
   width: 100%;
   max-width: 240px;
+  border: 1px solid var(--border-d);
   margin-right: 0;
   border-radius: 5px;
 }
@@ -1212,7 +1217,7 @@ input + .loader {
   border-top: 0;
 }
 .tree_menu_area .tree_menu_box .tree_menu_tl {
-  padding: 20px 18px;
+  padding: 20px 13px;
   border-top: 1px solid var(--border-d);
 }
 .tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a {
@@ -1280,8 +1285,8 @@ input + .loader {
 }
 .tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner .sub_tree_menu li a::before {
   content: "";
-  width: 8px;
-  height: 7px;
+  width: 7px;
+  height: 8px;
   position: absolute;
   top: 50%;
   left: 5px;
@@ -1342,6 +1347,7 @@ input + .loader {
 
 .treeType02 {
   flex: 1;
+  border: 1px solid var(--list-border);
   border-radius: 5px;
 }
 .treeType02 .tt_tit {
@@ -2288,7 +2294,9 @@ input + .loader {
 .i-card_wrap .dash_box {
   position: relative;
   padding: 20px;
+  border: 1px solid var(--list-border);
   border-radius: 20px;
+  box-shadow: unset;
 }
 .i-card_wrap .dash_box.noicon {
   display: inline-flex;
@@ -2344,52 +2352,52 @@ input + .loader {
   background-position: center;
 }
 .i-card_wrap .dash_box .i-card_ct .icon.role i {
-  background-image: url("../images/common/role/icon_role.svg");
+  background-image: url("../images/role/icon_role.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.usergp i {
-  background-image: url("../images/common/role/icon_usergp.svg");
+  background-image: url("../images/role/icon_usergp.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.belong i {
-  background-image: url("../images/common/role/icon_belong.svg");
+  background-image: url("../images/role/icon_belong.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.opst i {
-  background-image: url("../images/common/role/icon_opst.svg");
+  background-image: url("../images/role/icon_opst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.adjst i {
-  background-image: url("../images/common/role/icon_adjst.svg");
+  background-image: url("../images/role/icon_adjst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.appst i {
-  background-image: url("../images/common/role/icon_appst.svg");
+  background-image: url("../images/role/icon_appst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.dbst i {
-  background-image: url("../images/common/role/icon_dbst.svg");
+  background-image: url("../images/role/icon_dbst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.networkst i {
-  background-image: url("../images/common/role/icon_networkst.svg");
+  background-image: url("../images/role/icon_networkst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.securityact i {
-  background-image: url("../images/common/role/icon_securityact.svg");
+  background-image: url("../images/role/icon_securityact.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.ldapst i {
-  background-image: url("../images/common/role/icon_ldapst.svg");
+  background-image: url("../images/role/icon_ldapst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.etsst i {
-  background-image: url("../images/common/role/icon_etsst.svg");
+  background-image: url("../images/role/icon_etsst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.imauth i {
-  background-image: url("../images/common/role/icon_imauth.svg");
+  background-image: url("../images/role/icon_imauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.aprauth i {
-  background-image: url("../images/common/role/icon_aprauth.svg");
+  background-image: url("../images/role/icon_aprauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.systemauth i {
-  background-image: url("../images/common/role/icon_systemauth.svg");
+  background-image: url("../images/role/icon_systemauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.osauth i {
-  background-image: url("../images/common/role/icon_osauth.svg");
+  background-image: url("../images/role/icon_osauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.etsauth i {
-  background-image: url("../images/common/role/icon_etsauth.svg");
+  background-image: url("../images/role/icon_etsauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .num_t {
   display: inline-block;
@@ -2445,6 +2453,9 @@ input + .loader {
   font-weight: var(--font-medium);
   color: var(--title);
 }
+.i-card_wrap .dash_box .acs_plc_typ .sv_dt_info .sv_dt_list {
+  gap: 5px;
+}
 .i-card_wrap .dash_box .acs_plc_typ .sv_dt_info .sv_dt_list::after {
   height: 12px;
   background-color: var(--border-d);
@@ -2458,6 +2469,9 @@ input + .loader {
   line-height: 15px;
   color: #0E6759;
   background-color: #D6EAE7;
+}
+.i-card_wrap .dash_box .acs_plc_typ .sv_dt_info .flx.sv_dt_txt {
+  gap: 5px;
 }
 .i-card_wrap + .content.tab_cont .tab_wrap {
   border-bottom: 1px solid var(--border-d);
@@ -2484,6 +2498,9 @@ input + .loader {
   font-size: var(--font-13);
   font-weight: var(--font-medium);
   color: var(--title);
+}
+.view_stl .view_list.bul_dot li:last-child {
+  border-bottom: 0;
 }
 
 /*********************************************************************
@@ -2881,6 +2898,7 @@ input + .loader {
 
 /* noline */
 .form_stl {
+  display: block;
   margin-bottom: 0;
 }
 .form_stl .form_tbl {
@@ -2888,6 +2906,12 @@ input + .loader {
 }
 .form_stl .form_tbl.noline {
   padding-top: 20px;
+}
+.form_stl .form_tbl.noline li:first-child {
+  padding-top: 0;
+}
+.form_stl .form_tbl.noline li:first-child::before {
+  top: 13px;
 }
 .form_stl .form_tbl.noline li:last-child .form_txt {
   padding-bottom: 0;
@@ -2971,6 +2995,9 @@ input + .loader {
 }
 .form_stl .btn_columnadd {
   margin-top: 9px;
+}
+.form_stl.hideform {
+  display: none;
 }
 
 .tbl_btm {
@@ -3685,25 +3712,25 @@ input + .loader {
   background-position: unset;
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_user {
-  background-image: url("../images/common/moni/ico_user.svg");
+  background-image: url("../images/moni/ico_user.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_server {
-  background-image: url("../images/common/moni/ico_server.svg");
+  background-image: url("../images/moni/ico_server.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_system {
-  background-image: url("../images/common/moni/ico_system.svg");
+  background-image: url("../images/moni/ico_system.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_connect {
-  background-image: url("../images/common/moni/ico_check_server.svg");
+  background-image: url("../images/moni/ico_check_server.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_unauthorized {
-  background-image: url("../images/common/moni/ico_unauthorized.svg");
+  background-image: url("../images/moni/ico_unauthorized.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_task {
-  background-image: url("../images/common/moni/ico_work.svg");
+  background-image: url("../images/moni/ico_work.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_role {
-  background-image: url("../images/common/moni/ico_role.svg");
+  background-image: url("../images/moni/ico_role.svg");
 }
 .mod_cont .data_ico_mod .data_txt_stl {
   display: flex;
@@ -3894,8 +3921,8 @@ input + .loader {
   mask-position: center;
   background-color: var(--text-disabled);
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/moni/ico_status.svg");
-  mask-image: url("../images/common/moni/ico_status.svg");
+  -webkit-mask-image: url("../images/moni/ico_status.svg");
+  mask-image: url("../images/moni/ico_status.svg");
 }
 .mod_cont .chart_info_lyt .data_total dt {
   width: auto;
@@ -4254,8 +4281,8 @@ input + .loader {
   background-position: unset;
 }
 .syc_server_list .rdd_server_wrap.disct .rdd_server_box .rdd_server_stt_icon::before {
-  -webkit-mask-image: url("../images/common/label/ico_PlugZapOff.svg");
-  mask-image: url("../images/common/label/ico_PlugZapOff.svg");
+  -webkit-mask-image: url("../images/label/ico_PlugZapOff.svg");
+  mask-image: url("../images/label/ico_PlugZapOff.svg");
 }
 .syc_server_list .rdd_server_wrap.disct .rdd_server_box .server_info_name {
   color: var(--false);
@@ -4265,8 +4292,8 @@ input + .loader {
   background-position: unset;
 }
 .syc_server_list .rdd_server_wrap.connect .rdd_server_box .rdd_server_stt_icon::before {
-  -webkit-mask-image: url("../images/common/label/ico_PlugConnected.svg");
-  mask-image: url("../images/common/label/ico_PlugConnected.svg");
+  -webkit-mask-image: url("../images/label/ico_PlugConnected.svg");
+  mask-image: url("../images/label/ico_PlugConnected.svg");
 }
 .syc_server_list .rdd_server_wrap.connect .rdd_server_box .server_info_txt .server_info_name {
   color: var(--blue);
@@ -4318,7 +4345,7 @@ input + .loader {
   background-color: var(--btn-disabled);
 }
 .system_name_box .system_icon.AMsystem {
-  background-image: url("../images/common/role/icon_securityact.svg");
+  background-image: url("../images/role/icon_securityact.svg");
   background-position: center;
   background-size: 70%;
 }
@@ -4327,12 +4354,12 @@ input + .loader {
   background-position: center;
 }
 .system_name_box .system_icon.Application {
-  background-image: url("../images/common/role/icon_appst.svg");
+  background-image: url("../images/role/icon_appst.svg");
   background-position: center;
   background-size: 70%;
 }
 .system_name_box .system_icon.DBconnectaccount {
-  background-image: url("../images/common/role/icon_dbst.svg");
+  background-image: url("../images/role/icon_dbst.svg");
   background-position: center;
   background-size: 70%;
 }
@@ -4655,10 +4682,15 @@ input + .loader {
 .icam_b_list .icam_b_stl .sicam_icon {
   width: 40px;
   height: 40px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
   border-radius: 7px;
   background-color: var(--btn-disabled);
   background-position: center;
-  background-image: none;
+}
+.icam_b_list .icam_b_stl .sicam_icon.ActLog {
+  background-image: url("../images/common/ico_actLog.svg");
 }
 .icam_b_list .icam_b_stl .sicam_name {
   font-size: var(--font-14);

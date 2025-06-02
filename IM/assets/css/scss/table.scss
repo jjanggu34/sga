@@ -156,7 +156,7 @@
             }
             td {
                 overflow:unset;
-                border:$borderD;
+                border:1px solid var(--list-border);
                 border-top:0;
                 font-weight:var(--font-medium);
                 &:last-child {
@@ -199,54 +199,58 @@
                 &:nth-child(2) {
                     padding:0;
                 }
-                .flx_frm_tbl {
-                    li {
-                        &:first-child {
-                            .flx {
-                                padding:25px 20px 10px;
+                &.default_addel_btn {
+                    padding:5px 20px 0px;
+                }
+            }
+        }
+        .flx_frm_tbl {
+            li {
+                &:first-child {
+                    .flx {
+                        padding:25px 20px 10px;
+                    }
+                }
+                &:last-child {
+                    .flx {
+                        padding:0 20px 25px;
+                    }
+                }
+                &.bul_dot {
+                    .flx {
+                        .form_tit {
+                            position:relative;
+                            padding:7px 0 0 8px;
+                            font-weight:var(--font-regular);
+                            &::before {
+                                @include content(3px,3px);
+                                position:absolute;
+                                top:12px;
+                                left:0;
+                                display:inline-block;
+                                border-radius:50%;
+                                background:var(--text-disabled);
                             }
                         }
-                        &:last-child {
-                            .flx {
-                                padding:0 20px 25px;
-                            }
-                        }
-                        &.bul_dot {
-                            .flx {
-                                .form_tit {
-                                    position:relative;
-                                    padding-left:8px;
-                                    &::before {
-                                        @include content(3px,3px);
-                                        position:absolute;
-                                        top:5px;
-                                        left:0;
-                                        display:inline-block;
-                                        border-radius:50%;
-                                        background:var(--text-disabled);
-                                    }
-                                }
-                            }
-                        }
-                        .flx {
-                            width:calc($wh100/2);
-                            padding:0 20px 10px;
-                            &:first-child {
-                                border-right:$borderD;
-                            }
-                            .form_tit {
-                                min-width:185px;
-                                width:auto;
-                                padding:0;
-                            }
-                            .form_txt {
-                                width:$wh100;
-                                padding:0;
-                                .form_contrl {
-                                    display:block;
-                                    width:$wh100;
-                                }
-                            }
+                    }
+                }
+                .flx {
+                    width:calc($wh100/2);
+                    padding:0 20px 10px;
+                    &:first-child {
+                        border-right:$borderD;
+                    }
+                    .form_tit {
+                        min-width:185px;
+                        width:auto;
+                        padding:0;
+                    }
+                    .form_txt {
+                        width:$wh100;
+                        padding:0;
+                        .form_contrl {
+                            display:block;
+                            width:$wh100;
                         }
                     }
                 }
