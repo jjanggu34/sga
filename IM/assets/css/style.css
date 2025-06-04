@@ -36,7 +36,7 @@
   background-color: var(--text-disabled);
 }
 
-.content p.fm_tit.add .btn_option::after, .i-card_wrap .dash_box .i-card_ct .icon i, .action_list .entrybox .btn_entry_del::after, .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option::after, .syc_server_list .rdd_server_wrap .rdd_server_box .rdd_server_stt_icon::before, .box_showbtn::before {
+.content p.fm_tit.add .btn_option::after, .i-card_wrap .dash_box .i-card_ct .icon i, .action_list .entrybox .btn_entry_del::after, .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option::after, .syc_server_list .rdd_server_wrap .rdd_server_box .rdd_server_stt_icon::before, .box_showbtn::before, .icam_b_list .icam_b_stl .sicam_icon::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -4163,6 +4163,11 @@ input + .loader {
   font-size: var(--font-14);
   font-weight: var(--font-medium);
 }
+.server_info .server_info_txt .server_info_name img {
+  width: 142px;
+  height: 21px;
+  margin-bottom: 4px;
+}
 .server_info .server_info_txt .server_info_date {
   color: var(--secondary);
 }
@@ -4231,11 +4236,13 @@ input + .loader {
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.Auth {
   background-position: unset;
-  background-image: none;
+  background-image: url("../images/common/ico_auth.svg");
+  background-size: 100%;
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.distb {
   background-position: unset;
-  background-image: none;
+  background-image: url("../images/common/ico_distribution.svg");
+  background-size: 100%;
 }
 .main_server_dt .main_server_dt_info .ms_server_name {
   font-weight: var(--font-regular);
@@ -4333,6 +4340,36 @@ input + .loader {
 }
 .syc_server_list .rdd_server_wrap .rdd_server_box .server_info .btn_refsh, .syc_server_list .rdd_server_wrap .rdd_server_box .server_info .msv_loading {
   top: -5px;
+}
+
+.meth {
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: var(--font-12);
+  color: var(--primary);
+  background-color: #DAFAF5;
+}
+
+.fw_dt {
+  border: 1px solid var(--list-border);
+  border-radius: 10px;
+}
+.fw_dt .icon_fw {
+  width: 24px;
+  height: 24px;
+  background-position: unset;
+}
+.fw_dt .icon_fw.fw_NAC {
+  background-position: unset;
+  background-image: url("../images/common/ico_nac.svg");
+}
+.fw_dt .icon_fw.fw_fw {
+  background-position: unset;
+  background-image: url("../images/common/ico_fw.svg");
+}
+.fw_dt .icon_fw.fw_VPN {
+  background-position: unset;
+  background-image: url("../images/common/ico_vpn.svg");
 }
 
 /* dstb_wrap */
@@ -4672,25 +4709,72 @@ input + .loader {
 .icam_b_list .icam_pp {
   padding: 15px 10px;
   border-bottom: 1px solid var(--border-d);
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
+  color: var(--title);
+}
+.icam_b_list .icam_pp > p {
+  font-size: var(--font-14);
+  font-weight: var(--font-medium);
+  color: var(--title);
 }
 .icam_b_list .icam_b_stl {
   margin: 15px 10px;
   border: 1px solid var(--list-border);
-  border-left: 3px solid var(--primary);
+  border-left: 3px solid var(--true);
   border-radius: 10px;
 }
 .icam_b_list .icam_b_stl .sicam_icon {
+  position: relative;
   width: 40px;
   height: 40px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: none;
   border-radius: 7px;
   background-color: var(--btn-disabled);
   background-position: center;
+  background-image: none;
 }
-.icam_b_list .icam_b_stl .sicam_icon.ActLog {
+.icam_b_list .icam_b_stl .sicam_icon::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+}
+.icam_b_list .icam_b_stl .sicam_icon.ActLog::before {
   background-image: url("../images/common/ico_actLog.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.ThreatIntelli::before {
+  background-image: url("../images/common/ico_threatIntelligence.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.SIEM::before {
+  background-image: url("../images/common/icon_siem.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.HRsystem::before {
+  background-image: url("../images/common/ico_HRsystem.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.devMng::before {
+  background-image: url("../images/common/icon_deviceManager.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.OSSystem::before {
+  background-image: url("../images/common/icon_OSSystem.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.DataBase::before {
+  background-image: url("../images/role/icon_dbst.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.application::before {
+  background-image: url("../images/role/icon_appst.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.network::before {
+  background-image: url("../images/role/icon_networkst.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.cloud::before {
+  background-image: url("../images/role/ico_cloud.svg");
+}
+.icam_b_list .icam_b_stl .sicam_icon.etcSystem::before {
+  background-image: url("../images/role/icon_etsst.svg");
 }
 .icam_b_list .icam_b_stl .sicam_name {
   font-size: var(--font-14);
@@ -4710,10 +4794,103 @@ input + .loader {
   border-radius: 6px;
   background: url(../images/common/ico_reset.svg) no-repeat center;
 }
+.icam_b_list .icam_b_stl .sync_stt_dtl .sync_ctg_name {
+  color: var(--secondary);
+}
+.icam_b_list .icam_b_stl .sync_stt_dtl .user_numb {
+  font-size: var(--font-16);
+  font-weight: var(--font-extrabold);
+  color: var(--title);
+}
+.icam_b_list .icam_b_stl .sicam_icon_s {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background-position: unset;
+}
+.icam_b_list .icam_b_stl .sicam_icon_s.PAMGateway {
+  background-image: url("../images/common/ico_pAMGateway.svg");
+  background-position: unset;
+}
+.icam_b_list .icam_b_stl .sicam_icon_s.DBAM {
+  background-image: url("../images/common/ico_accessControl.svg");
+  background-position: unset;
+}
+.icam_b_list .icam_b_stl .sicam_icon_s.WebEAM {
+  background-image: url("../images/common/ico_webEAM.svg");
+  background-position: unset;
+}
+.icam_b_list .icam_b_stl.b_stl_s .sicam_name_tit {
+  justify-content: space-between;
+  width: calc(100% - 70px);
+}
+.icam_b_list .icam_b_stl.b_stl_s .sicam_name_tit .errtxt {
+  padding-left: 0;
+}
+.icam_b_list .icam_b_stl.b_stl_s .sicam_name_tit .errtxt i {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--false);
+  vertical-align: text-bottom;
+  margin: 0;
+  -webkit-mask-image: url(../images/common/ico_info.svg);
+  mask-image: url(../images/common/ico_info.svg);
+}
+.icam_b_list .icam_b_stl .dstb_stt .flx dt {
+  width: auto;
+  margin-bottom: 0;
+  font-size: var(--font-13);
+  color: var(--secondary);
+}
+.icam_b_list .icam_b_stl .dstb_stt .flx .user_numb {
+  width: auto;
+  color: var(--title);
+}
 .icam_b_list.btm_b_area .icam_b_stl .btn_refsh_s {
   top: 5px;
+}
+.icam_b_list .progress_txt {
+  font-size: var(--font-13);
+  font-weight: var(--font-regular);
+  color: var(--text-disabled);
+  padding: 0 0 0 4px;
+  line-height: 16px;
+}
+.icam_b_list .progress_txt .icon_progress.icon_realtime {
+  width: 16px;
+  height: 16px;
+  background-position: unset;
+  background-image: url("../images/common/icon_time.svg");
+}
+.icam_b_list .sicam_icon_s {
+  width: 20px;
+  height: 20px;
+}
+.icam_b_list .sicam_icon_s.admins {
+  background-image: url("../images/common/ico_member.svg");
+  background-position: unset;
+}
+.icam_b_list .sicam_icon_s.UEMClient {
+  background-image: url("../images/common/ico_ume.svg");
+  background-position: unset;
+}
+.icam_b_list .sicam_icon_s.NACClient {
+  background-image: url("../images/common/ico_nac.svg");
+  background-position: unset;
+}
+.icam_b_list .sicam_icon_s.PAMClient {
+  background-image: url("../images/common/ico_pam.svg");
+  background-position: unset;
 }
 
 .btm_icam_fw .icam_b_stl .btn_refsh_s {
   top: 5px;
+}
+.btm_icam_fw .fw_list {
+  border: 1px solid var(--border-d);
+  background-color: var(--white);
 }

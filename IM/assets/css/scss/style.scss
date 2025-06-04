@@ -3832,6 +3832,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding-bottom:0;
             font-size:var(--font-14);
             font-weight:var(--font-medium);
+            img {
+                @include wh(142px,21px);
+                margin-bottom:4px  ;
+            }
         }
         .server_info_date {
             color:var(--secondary);
@@ -3899,11 +3903,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             &.Auth {
                 background-position:unset;
-                background-image:none;
+                background-image:url("../images/common/ico_auth.svg");
+                background-size: 100%;
             }
             &.distb {
                 background-position:unset;
-                background-image:none;
+                background-image:url("../images/common/ico_distribution.svg");
+                background-size: 100%;
             }
         }
         .ms_server_name {
@@ -4004,6 +4010,35 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     top:-5px;
                 }
             }
+        }
+    }
+}
+
+.meth {
+    padding:3px 5px;
+    border-radius:3px;
+    font-size:var(--font-12);
+    color:var(--primary);
+    background-color:#DAFAF5;
+}
+
+.fw_dt {
+    border:1px solid var(--list-border);
+    border-radius:10px;
+    .icon_fw {
+        @include wh(24px,24px);
+        background-position:unset;
+        &.fw_NAC {
+            background-position:unset;
+            background-image:url("../images/common/ico_nac.svg");
+        }
+        &.fw_fw {
+            background-position:unset;
+            background-image:url("../images/common/ico_fw.svg");
+        }
+        &.fw_VPN {
+            background-position:unset;
+            background-image:url("../images/common/ico_vpn.svg");
         }
     }
 }
@@ -4306,19 +4341,84 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .icam_pp {
         padding:15px 10px;
         border-bottom:$borderD;
+        @include title(var(--font-14),var(--font-medium),var(--title));
+        &>p{
+            @include title(var(--font-14),var(--font-medium),var(--title));
+        }
     }
     .icam_b_stl {
         margin:15px 10px;
         border:1px solid var(--list-border);
-        border-left:3px solid var(--primary);
+        border-left:3px solid var(--true);
         border-radius:10px;
         .sicam_icon {
-            @include icon(40px,40px);
+            position: relative;
+            @include wh(40px,40px);
             border-radius:7px;
             background-color:var(--btn-disabled);
             background-position:center;
+            background-image:none;
+            &::before {
+                content:"";
+                position:absolute;
+                @extend %positon_center;
+                display:inline-block;
+                @include icon(24px,24px);
+            }
             &.ActLog {
-                background-image:url("../images/common/ico_actLog.svg");
+                &::before {
+                    background-image:url("../images/common/ico_actLog.svg");
+                }
+            }
+            &.ThreatIntelli {
+                &::before {
+                    background-image:url("../images/common/ico_threatIntelligence.svg");
+                }
+            }
+            &.SIEM {
+                &::before {
+                    background-image:url("../images/common/icon_siem.svg");
+                }
+            }
+            &.HRsystem {
+                &::before {
+                    background-image:url("../images/common/ico_HRsystem.svg");
+                }
+            }
+            &.devMng {
+                &::before {
+                    background-image:url("../images/common/icon_deviceManager.svg");
+                }
+            }
+            &.OSSystem {
+                &::before {
+                    background-image:url("../images/common/icon_OSSystem.svg");
+                }
+            }
+            &.DataBase {
+                &::before {
+                    background-image:url("../images/role/icon_dbst.svg");
+                }
+            }
+            &.application {
+                &::before {
+                    background-image:url("../images/role/icon_appst.svg");
+                }
+            }
+            &.network {
+                &::before {
+                    background-image:url("../images/role/icon_networkst.svg");
+                }
+            }
+            &.cloud {
+                &::before {
+                    background-image:url("../images/role/ico_cloud.svg");
+                }
+            }
+            &.etcSystem {
+                &::before {
+                    background-image:url("../images/role/icon_etsst.svg");
+                }
             }
         }
         .sicam_name {
@@ -4338,12 +4438,97 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-radius: 6px;
             background: url(../images/common/ico_reset.svg) no-repeat center;
         }
+        .sync_stt_dtl {
+            .sync_ctg_name {
+                color:var(--secondary);
+            }
+            .user_numb {
+                @include title(var(--font-16),var(--font-extrabold),var(--title));
+            }
+        }
+        .sicam_icon_s {
+            @include wh(20px,20px);
+            margin:0;
+            background-position:unset;
+            &.PAMGateway {
+                background-image:url("../images/common/ico_pAMGateway.svg");
+                background-position:unset;
+            }
+            &.DBAM {
+                background-image:url("../images/common/ico_accessControl.svg");
+                background-position:unset;
+            }
+            &.WebEAM {
+                background-image:url("../images/common/ico_webEAM.svg");
+                background-position:unset;
+            }
+        }
+        &.b_stl_s {
+            .sicam_name_tit {
+                justify-content:space-between;
+                width:calc(100% - 70px);
+                .errtxt {
+                    padding-left:0;
+                    i {
+                        @include mask (var(--false));
+                        margin:0;
+                        -webkit-mask-image: url(../images/common/ico_info.svg);
+                        mask-image: url(../images/common/ico_info.svg);
+                    }
+                }
+            }
+        }
+        .dstb_stt {
+            .flx {
+                dt {
+                    width:auto;
+                    margin-bottom:0;
+                    font-size:var(--font-13);
+                    color:var(--secondary);
+                }
+                .user_numb {
+                    width:auto;
+                    color:var(--title);
+                }
+            }
+        }
     }
     &.btm_b_area {
         .icam_b_stl {
             .btn_refsh_s {
                 top:5px;
             }
+        }
+    }
+    .progress_txt {
+        @include title(var(--font-13),var(--font-regular),var(--text-disabled));
+        padding:0 0 0 4px;
+        line-height:16px;
+        .icon_progress {
+            &.icon_realtime {
+                @include wh(16px,16px);
+                background-position:unset;
+                background-image:url("../images/common/icon_time.svg");
+            }
+        }
+    }
+    .sicam_icon_s {
+        @include wh(20px,20px);
+        &.admins {
+            background-image:url("../images/common/ico_member.svg");
+            background-position:unset;
+        }
+        &.UEMClient {
+            background-image:url("../images/common/ico_ume.svg");
+            background-position:unset;
+        }
+        &.NACClient {
+            background-image:url("../images/common/ico_nac.svg");
+            background-position:unset;
+        }
+        &.PAMClient {
+            background-image:url("../images/common/ico_pam.svg");
+            background-position:unset;
         }
     }
 }
@@ -4353,5 +4538,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .btn_refsh_s {
             top:5px;
         }
+    }
+    .fw_list {
+        border:$borderD;
+        background-color:var(--white);
     }
 }
