@@ -439,6 +439,8 @@ select{
 
 /*---------------------------------------------
 	#toggle
+    tg_sch_stl = 기본 사이즈 토글
+    tg_sch_stl_s = content 안 토글
 ---------------------------------------------*/
 .tg_sch_stl {
     .tg_sch{
@@ -459,7 +461,33 @@ select{
             }
             &::after {
                 left:3px;
+                bottom:2px;
                 @include wh(24px,24px);
+            }
+        }
+    }
+    &.mini {
+        .tg_sch{
+            &:checked {
+                &+ label {
+                    &::before {
+                        background-color:var(--primary);
+                    }
+                    &::after {
+                        left:8px;
+                    }
+                }
+            }
+            &+ label {
+                &::before {
+                    @include wh(40px,18px);
+                    background-color:var(--btn-disabled);
+                }
+                &::after {
+                    left:3px;
+                    bottom:2px;
+                    @include wh(14px,14px);
+                }
             }
         }
     }

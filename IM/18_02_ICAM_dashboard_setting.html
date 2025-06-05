@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -21,13 +24,15 @@
 	<![endif]-->
 </head>
 <body>
-	<div id="SGIM_wrap" class="">
+	<div id="SGIM_wrap" class="mini_nav">
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
+					<!--s: 이미지 경로 및 이미지 변경-->
 					<a href="" class="logo">
-						<img src="img/common/logo_186x30.png">
+						<img src="assets/images/common/logo.png">
 					</a>
+					<!--e: 이미지 경로 및 이미지 변경-->
 				</div>
 				<div class="nav_tab">
 					<a href="" class="">사용자</a>
@@ -118,23 +123,29 @@
 						</ul>
 					</li>
 				</ul>
+				<!-- s: copyright 추가 -->
+				<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
+				<!-- e: copyright 추가 -->
 			</div>
 		</div>
 		<div id="container">
+			<!-- s : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="header">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>사용자 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">역할관리</a></li>
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> <span>user01</span></a></li>
-					<li class="time"><i></i><span>2020-09-11 15:35:00</span></li>
-					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
+					<li class="btn_top_user"><a href=""><span>user01</span></a></li>
+					<li class="timer">
+						<i></i>
+						<span><em>00:15:00</em> 후 접속 끊김</span>
+						<button class="time_ref" title="세션 시간 새로고침"></button>
+					</li>
 					<li class="btn_alim"><a href="">alim<span>13</span></a>
 						<div class="balloon alim_pop" style="display:none">
 							<div class="alim_pop_wrap">
@@ -171,19 +182,18 @@
 						</div>
 					</li>
 					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
-					</li>
 				</ul>
 			</div>
-			<div class="content">
+			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
+			<!-- s: only 추가 -->
+			<div class="content only">
+			<!-- e: only 추가 -->
 				<div class="sych_mnt_wrap ICAM_board_wrap ICAM_board_setting">
 					<div class="sych_set_btns">
-						<button class="btnStl white">취소</button>
-						<button class="btnStl navy">상태 저장</button>
+						<!-- s: class 변경 -->
+						<button class="btnStl line">취소</button>
+						<button class="btnStl primary">상태 저장</button>
+						<!-- e: class 변경 -->
 					</div>
 					<div class="left_wrap">
 						<div class="icam_b_list">
@@ -292,7 +302,7 @@
 										<div class="server_info_txt">
 											<p class="server_info_name">
 												<!--<img src="img/common/dashboard_logo_ZTAforICAM.svg" alt="SGA ZTA for ICAM">-->
-												<img src="img/common/dashboard_logo_ICAM.svg" alt="SecureGuard ICAM"></p>
+												<img src="assets/images/common/logo.png" alt="SecureGuard ICAM"></p>
 											<p class="server_info_date">2022.07.20 21:40:30</p>
 										</div>
 										<button class="btn_refsh"></button>
@@ -304,7 +314,7 @@
 												<p class="ms_server_name">인증</p>
 											</div>
 											<div class="flx">
-												<p class="tg_sch_stl blue_tg_stl">
+												<p class="tg_sch_stl blue_tg_stl mini">
 													<input type="checkbox" class="tg_sch" id="dbcontrl01" name="" checked="checked">
 													<label for="dbcontrl01" class="tg_sch_lab"></label>
 												</p>
@@ -316,7 +326,7 @@
 												<p class="ms_server_name">사용자</p>
 											</div>
 											<div class="flx">
-												<p class="tg_sch_stl blue_tg_stl">
+												<p class="tg_sch_stl blue_tg_stl mini">
 													<input type="checkbox" class="tg_sch" id="dbcontrl01" name="" checked="checked">
 													<label for="dbcontrl01" class="tg_sch_lab"></label>
 												</p>
@@ -328,7 +338,7 @@
 												<p class="ms_server_name">장치</p>
 											</div>
 											<div class="flx">
-												<p class="tg_sch_stl blue_tg_stl">
+												<p class="tg_sch_stl blue_tg_stl mini">
 													<input type="checkbox" class="tg_sch" id="dbcontrl01" name="" checked="checked">
 													<label for="dbcontrl01" class="tg_sch_lab"></label>
 												</p>
@@ -340,7 +350,7 @@
 												<p class="ms_server_name">정책</p>
 											</div>
 											<div class="flx">
-												<p class="tg_sch_stl blue_tg_stl">
+												<p class="tg_sch_stl blue_tg_stl mini">
 													<input type="checkbox" class="tg_sch" id="dbcontrl01" name="" checked="checked">
 													<label for="dbcontrl01" class="tg_sch_lab"></label>
 												</p>
@@ -352,7 +362,7 @@
 												<p class="ms_server_name">배포</p>
 											</div>
 											<div class="flx">
-												<p class="tg_sch_stl blue_tg_stl">
+												<p class="tg_sch_stl blue_tg_stl  mini">
 													<input type="checkbox" class="tg_sch" id="dbcontrl01" name="" checked="checked">
 													<label for="dbcontrl01" class="tg_sch_lab"></label>
 												</p>
@@ -425,7 +435,8 @@
 								</div>
 							</div>
 							<div class="dstb_stt">
-								<dl class="flx">
+								<!-- s: bul_dot 추가 -->
+								<dl class="flx bul_dot">
 									<dt>시스템 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -434,7 +445,7 @@
 										</p>
 									</dd>
 								</dl>
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt>계정 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -443,6 +454,7 @@
 										</p>
 									</dd>
 								</dl>
+								<!-- e: bul_dot 추가 -->
 							</div>
 							<button class="box_showbtn hide" title="가리기"></button>
 						</div>
@@ -454,7 +466,8 @@
 								</div>
 							</div>
 							<div class="dstb_stt">
-								<dl class="flx">
+								<!-- s: bul_dot 추가 -->
+								<dl class="flx bul_dot">
 									<dt>시스템 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -463,7 +476,7 @@
 										</p>
 									</dd>
 								</dl>
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt>계정 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -472,6 +485,7 @@
 										</p>
 									</dd>
 								</dl>
+								<!-- e: bul_dot 추가 -->
 							</div>
 							<button class="box_showbtn hide" title="가리기"></button>
 						</div>
@@ -483,7 +497,8 @@
 								</div>
 							</div>
 							<div class="dstb_stt">
-								<dl class="flx">
+								<!-- s: bul_dot 추가 -->
+								<dl class="flx bul_dot">
 									<dt>시스템 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -492,7 +507,7 @@
 										</p>
 									</dd>
 								</dl>
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt>계정 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -501,6 +516,7 @@
 										</p>
 									</dd>
 								</dl>
+								<!-- e: bul_dot 추가 -->
 							</div>
 							<button class="box_showbtn hide" title="가리기"></button>
 						</div>
@@ -512,7 +528,8 @@
 								</div>
 							</div>
 							<div class="dstb_stt">
-								<dl class="flx">
+								<!-- s: bul_dot 추가 -->
+								<dl class="flx bul_dot">
 									<dt>시스템 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -521,7 +538,7 @@
 										</p>
 									</dd>
 								</dl>
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt>계정 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -530,6 +547,7 @@
 										</p>
 									</dd>
 								</dl>
+								<!-- e: bul_dot 추가 -->
 							</div>
 							<button class="box_showbtn hide" title="가리기"></button>
 						</div>
@@ -541,7 +559,8 @@
 								</div>
 							</div>
 							<div class="dstb_stt">
-								<dl class="flx">
+								<!-- s: bul_dot 추가 -->
+								<dl class="flx bul_dot">
 									<dt>시스템 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -550,7 +569,7 @@
 										</p>
 									</dd>
 								</dl>
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt>계정 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -559,6 +578,7 @@
 										</p>
 									</dd>
 								</dl>
+								<!-- e: bul_dot 추가 -->
 							</div>
 							<button class="box_showbtn hide" title="가리기"></button>
 						</div>
@@ -570,7 +590,8 @@
 								</div>
 							</div>
 							<div class="dstb_stt">
-								<dl class="flx">
+								<!-- s: bul_dot 추가 -->
+								<dl class="flx bul_dot">
 									<dt>시스템 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -579,7 +600,7 @@
 										</p>
 									</dd>
 								</dl>
-								<dl class="flx">
+								<dl class="flx bul_dot">
 									<dt>계정 수</dt>
 									<dd class="user_numb">
 										<p class="tg_sch_stl blue_tg_stl mini">
@@ -588,6 +609,7 @@
 										</p>
 									</dd>
 								</dl>
+								<!-- e: bul_dot 추가 -->
 							</div>
 							<button class="box_showbtn" title="보이기"></button>
 						</div>

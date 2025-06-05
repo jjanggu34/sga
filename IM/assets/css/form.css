@@ -457,6 +457,8 @@ select.form_contrl {
 
 /*---------------------------------------------
 	#toggle
+    tg_sch_stl = 기본 사이즈 토글
+    tg_sch_stl_s = content 안 토글
 ---------------------------------------------*/
 .tg_sch_stl .tg_sch:checked + label::before {
   background-color: var(--primary);
@@ -471,8 +473,26 @@ select.form_contrl {
 }
 .tg_sch_stl .tg_sch + label::after {
   left: 3px;
+  bottom: 2px;
   width: 24px;
   height: 24px;
+}
+.tg_sch_stl.mini .tg_sch:checked + label::before {
+  background-color: var(--primary);
+}
+.tg_sch_stl.mini .tg_sch:checked + label::after {
+  left: 8px;
+}
+.tg_sch_stl.mini .tg_sch + label::before {
+  width: 40px;
+  height: 18px;
+  background-color: var(--btn-disabled);
+}
+.tg_sch_stl.mini .tg_sch + label::after {
+  left: 3px;
+  bottom: 2px;
+  width: 14px;
+  height: 14px;
 }
 
 /*---------------------------------------------

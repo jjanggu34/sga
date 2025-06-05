@@ -3930,8 +3930,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .user_numb {
             &.ms_numb {
-                font-weight:var(--font-extrabold);
-                color:var(--title);
+                @include title (var(--font-13), var(--font-extrabold), var(--title));
             }
         }
     }
@@ -4028,6 +4027,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .icon_fw {
         @include wh(24px,24px);
         background-position:unset;
+        background-size:contain;
         &.fw_NAC {
             background-position:unset;
             background-image:url("../images/common/ico_nac.svg");
@@ -4288,7 +4288,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .box_showbtn {
-    right:20px;
+    right:15px;
     top:10px;
     @include wh(30px, 30px);
     padding:0;
@@ -4331,7 +4331,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** ICAM_board_wrap *****************/
 .ICAM_board_wrap {
-    padding:68px 48px 160px 32px;
+    padding:68px 90px 160px 90px;
 }
 .icam_b_list {
     padding:0;
@@ -4340,6 +4340,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     background-color:var(--white);
     .icam_pp {
         padding:15px 10px;
+        margin-bottom:15px;
         border-bottom:$borderD;
         @include title(var(--font-14),var(--font-medium),var(--title));
         &>p{
@@ -4347,9 +4348,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .icam_b_stl {
-        margin:15px 10px;
+        margin:0 10px 10px;
         border:1px solid var(--list-border);
-        border-left:3px solid var(--true);
+        border-left:6px solid var(--true);
         border-radius:10px;
         .sicam_icon {
             position: relative;
@@ -4478,8 +4479,45 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
+        .sicam_name_box {
+            padding:17px 15px;
+            gap:4px;
+            &+.dstb_stt {
+                padding-top:20px;
+            }
+        }
+        .sicam_name_tit {
+            justify-content:space-between;
+            width:calc(100% - 90px);
+            .errtxt {
+                padding-left:0;
+                i {
+                    @include mask (var(--false));
+                    margin:0;
+                    -webkit-mask-image: url(../images/common/ico_info.svg);
+                    mask-image: url(../images/common/ico_info.svg);
+                }
+            }
+        }
         .dstb_stt {
+            padding:0 15px 0 9px;
+            justify-content:space-between;
+            column-gap:10px;
             .flx {
+                justify-content:space-between;
+                width:calc(50% - 10px);
+                padding:0 0 8px 0;
+                &:last-child {
+                    padding-right:0;
+                }
+                &.bul_dot {
+                    dt {
+                        &::before {
+                            top:6px;
+                            left:0;
+                        }
+                    }
+                }
                 dt {
                     width:auto;
                     margin-bottom:0;
@@ -4514,6 +4552,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .sicam_icon_s {
         @include wh(20px,20px);
+        background-size:contain;
         &.admins {
             background-image:url("../images/common/ico_member.svg");
             background-position:unset;
@@ -4534,13 +4573,179 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .btm_icam_fw {
+    .icam_b_list {
+        width:auto;
+    }
     .icam_b_stl {
         .btn_refsh_s {
             top:5px;
         }
     }
     .fw_list {
+        gap:10px;
+        justify-content:space-between;
+        height:100%;
         border:$borderD;
+        border-radius:6px;
         background-color:var(--white);
+    }
+}
+
+.secure_score {
+    top:36px;
+    left:21px;
+    .simple_scoring {
+        @include wh (94px,94px);
+        padding:0;
+        border:0;
+        box-shadow:0 6px 6px #00000002;
+    }
+    .donut {
+        @include wh (88px,88px);
+        background-image:url("../images/common/donut.svg");
+        background-position:unset;
+        em {
+            font-size:var(--font-28);
+            font-weight:var(--font-heavy);
+            line-height:94px;
+        }
+    }
+}
+.secure_score_box {
+    top:48px;
+    left:48px;
+    padding:34px 20px 20px 36px;
+    border:none;
+    border-radius:20px;
+    box-shadow:0 6px 6px #00000016;
+    .secure_score_tit {
+        flex-direction: column;
+        align-items: flex-start;
+        .sub {
+            font-size:var(--font-13);
+            color:var(--secondary);
+        }
+    }
+    .score_progress {
+        padding-bottom:20px;
+        .score_numb {
+            padding-bottom:10px;
+            p {
+                @include title (20px, var(--font-heavy), var(--content));
+                span {
+                    font-weight:var(--font-medium);
+                    color:var(--secondary);
+                }
+            }
+        }
+    }
+    .progress_bar {
+        height:14px;
+        border-radius:10px;
+        overflow:hidden;
+        .pgBar {
+            height:14px;
+            border-radius:0;
+            background: linear-gradient(to right, #FF0000 0 18%, #FFA120 18% 36%, #FED35F 36% 55%, #FFFF38 55% 73%, #7DE57B 73% 90%, #23AC3D 90% 100%);
+        }
+    }
+    .score_rst {
+        gap:4px;
+        p {
+            font-size:var(--font-14);
+            color:var(--true);
+            &.icon_stt {
+                @include wh (18px,18px);
+                border-radius:50%;
+                background-color:var(--true);
+                &::before {
+                    content:"";
+                    display:inline-block;
+                    @include wh (18px,18px);
+                    @include mask (var(--white));
+                    -webkit-mask-image: url(../images/common/ico_check_s.svg);
+                    mask-image: url(../images/common/ico_check_s.svg);
+                }
+            }
+        }
+    }
+}
+
+.set_hide_box {
+    background-color:var(--disabled-line-bg) !important;
+}
+/***************** ICAM_board_setting *****************/
+.ICAM_board_setting {
+    padding:68px 48px 160px 32px;
+    .icam_b_list {
+        max-width:300px;
+        width:100%;
+        padding:15px 10px;
+        border:1px dashed #A1B6CC;
+        border-radius:6px;
+        background-color:#EFF3F7;
+    }
+    .icam_pp {
+        padding:0;
+        border-bottom:0;
+    }
+    .icam_b_stl {
+        margin:0 0 10px;
+        &:last-child {
+            margin-bottom:0;
+        }
+    }
+    .box_showbtn {
+        top:50%;
+        transform:translateY(-50%);
+        &.hide {
+            border-color:var(--border-d);
+        }
+    }
+    .icam_b_stl:has(select) {
+        min-height: 60px;
+        .sicam_name_box {
+            display:block;
+            .sicam_icon {
+                position:absolute;
+            }
+        }
+        .sicam_name_tit {
+            width:100%;
+        }
+        .sicam_name {
+            padding:13px 0 0 46px;
+        }
+        .user_view_slt {
+            padding:30px 0 0;
+            .form_contrl {
+                width:100%;
+                height:30px;
+                font-size:var(--font-13);
+            }
+        }
+        .box_showbtn {
+            top:15px;
+            transform:unset;
+        }
+    }
+    .btm_icam_fw {
+        margin-left:85px;
+    }
+    .fw_list {
+        left:-126px;
+        padding:20px 10px;
+        border:1px dashed #A1B6CC;
+        background-color:#EFF3F7;
+        .fw_dt {
+            padding:9px 50px 9px 10px;
+        }
+        .box_showbtn {
+            right:10px;
+            border-color:var(--border-d);
+            &.hide {
+                border-color:var(--border-d);
+            }
+        }
     }
 }

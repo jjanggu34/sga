@@ -4263,6 +4263,7 @@ input + .loader {
   color: var(--false);
 }
 .main_server_dt .main_server_dt_info .user_numb.ms_numb {
+  font-size: var(--font-13);
   font-weight: var(--font-extrabold);
   color: var(--title);
 }
@@ -4358,6 +4359,7 @@ input + .loader {
   width: 24px;
   height: 24px;
   background-position: unset;
+  background-size: contain;
 }
 .fw_dt .icon_fw.fw_NAC {
   background-position: unset;
@@ -4653,7 +4655,7 @@ input + .loader {
 }
 
 .box_showbtn {
-  right: 20px;
+  right: 15px;
   top: 10px;
   width: 30px;
   height: 30px;
@@ -4697,7 +4699,7 @@ input + .loader {
 }
 /***************** ICAM_board_wrap *****************/
 .ICAM_board_wrap {
-  padding: 68px 48px 160px 32px;
+  padding: 68px 90px 160px 90px;
 }
 
 .icam_b_list {
@@ -4708,6 +4710,7 @@ input + .loader {
 }
 .icam_b_list .icam_pp {
   padding: 15px 10px;
+  margin-bottom: 15px;
   border-bottom: 1px solid var(--border-d);
   font-size: var(--font-14);
   font-weight: var(--font-medium);
@@ -4719,9 +4722,9 @@ input + .loader {
   color: var(--title);
 }
 .icam_b_list .icam_b_stl {
-  margin: 15px 10px;
+  margin: 0 10px 10px;
   border: 1px solid var(--list-border);
-  border-left: 3px solid var(--true);
+  border-left: 6px solid var(--true);
   border-radius: 10px;
 }
 .icam_b_list .icam_b_stl .sicam_icon {
@@ -4840,6 +4843,50 @@ input + .loader {
   -webkit-mask-image: url(../images/common/ico_info.svg);
   mask-image: url(../images/common/ico_info.svg);
 }
+.icam_b_list .icam_b_stl .sicam_name_box {
+  padding: 17px 15px;
+  gap: 4px;
+}
+.icam_b_list .icam_b_stl .sicam_name_box + .dstb_stt {
+  padding-top: 20px;
+}
+.icam_b_list .icam_b_stl .sicam_name_tit {
+  justify-content: space-between;
+  width: calc(100% - 90px);
+}
+.icam_b_list .icam_b_stl .sicam_name_tit .errtxt {
+  padding-left: 0;
+}
+.icam_b_list .icam_b_stl .sicam_name_tit .errtxt i {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--false);
+  vertical-align: text-bottom;
+  margin: 0;
+  -webkit-mask-image: url(../images/common/ico_info.svg);
+  mask-image: url(../images/common/ico_info.svg);
+}
+.icam_b_list .icam_b_stl .dstb_stt {
+  padding: 0 15px 0 9px;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+.icam_b_list .icam_b_stl .dstb_stt .flx {
+  justify-content: space-between;
+  width: calc(50% - 10px);
+  padding: 0 0 8px 0;
+}
+.icam_b_list .icam_b_stl .dstb_stt .flx:last-child {
+  padding-right: 0;
+}
+.icam_b_list .icam_b_stl .dstb_stt .flx.bul_dot dt::before {
+  top: 6px;
+  left: 0;
+}
 .icam_b_list .icam_b_stl .dstb_stt .flx dt {
   width: auto;
   margin-bottom: 0;
@@ -4869,6 +4916,7 @@ input + .loader {
 .icam_b_list .sicam_icon_s {
   width: 20px;
   height: 20px;
+  background-size: contain;
 }
 .icam_b_list .sicam_icon_s.admins {
   background-image: url("../images/common/ico_member.svg");
@@ -4887,10 +4935,191 @@ input + .loader {
   background-position: unset;
 }
 
+.btm_icam_fw .icam_b_list {
+  width: auto;
+}
 .btm_icam_fw .icam_b_stl .btn_refsh_s {
   top: 5px;
 }
 .btm_icam_fw .fw_list {
+  gap: 10px;
+  justify-content: space-between;
+  height: 100%;
   border: 1px solid var(--border-d);
+  border-radius: 6px;
   background-color: var(--white);
+}
+
+.secure_score {
+  top: 36px;
+  left: 21px;
+}
+.secure_score .simple_scoring {
+  width: 94px;
+  height: 94px;
+  padding: 0;
+  border: 0;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.0078431373);
+}
+.secure_score .donut {
+  width: 88px;
+  height: 88px;
+  background-image: url("../images/common/donut.svg");
+  background-position: unset;
+}
+.secure_score .donut em {
+  font-size: var(--font-28);
+  font-weight: var(--font-heavy);
+  line-height: 94px;
+}
+
+.secure_score_box {
+  top: 48px;
+  left: 48px;
+  padding: 34px 20px 20px 36px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.0862745098);
+}
+.secure_score_box .secure_score_tit {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.secure_score_box .secure_score_tit .sub {
+  font-size: var(--font-13);
+  color: var(--secondary);
+}
+.secure_score_box .score_progress {
+  padding-bottom: 20px;
+}
+.secure_score_box .score_progress .score_numb {
+  padding-bottom: 10px;
+}
+.secure_score_box .score_progress .score_numb p {
+  font-size: 20px;
+  font-weight: var(--font-heavy);
+  color: var(--content);
+}
+.secure_score_box .score_progress .score_numb p span {
+  font-weight: var(--font-medium);
+  color: var(--secondary);
+}
+.secure_score_box .progress_bar {
+  height: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.secure_score_box .progress_bar .pgBar {
+  height: 14px;
+  border-radius: 0;
+  background: linear-gradient(to right, #FF0000 0 18%, #FFA120 18% 36%, #FED35F 36% 55%, #FFFF38 55% 73%, #7DE57B 73% 90%, #23AC3D 90% 100%);
+}
+.secure_score_box .score_rst {
+  gap: 4px;
+}
+.secure_score_box .score_rst p {
+  font-size: var(--font-14);
+  color: var(--true);
+}
+.secure_score_box .score_rst p.icon_stt {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--true);
+}
+.secure_score_box .score_rst p.icon_stt::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--white);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url(../images/common/ico_check_s.svg);
+  mask-image: url(../images/common/ico_check_s.svg);
+}
+
+.set_hide_box {
+  background-color: var(--disabled-line-bg) !important;
+}
+
+/***************** ICAM_board_setting *****************/
+.ICAM_board_setting {
+  padding: 68px 48px 160px 32px;
+}
+.ICAM_board_setting .icam_b_list {
+  max-width: 300px;
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px dashed #A1B6CC;
+  border-radius: 6px;
+  background-color: #EFF3F7;
+}
+.ICAM_board_setting .icam_pp {
+  padding: 0;
+  border-bottom: 0;
+}
+.ICAM_board_setting .icam_b_stl {
+  margin: 0 0 10px;
+}
+.ICAM_board_setting .icam_b_stl:last-child {
+  margin-bottom: 0;
+}
+.ICAM_board_setting .box_showbtn {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ICAM_board_setting .box_showbtn.hide {
+  border-color: var(--border-d);
+}
+.ICAM_board_setting .icam_b_stl:has(select) {
+  min-height: 60px;
+}
+.ICAM_board_setting .icam_b_stl:has(select) .sicam_name_box {
+  display: block;
+}
+.ICAM_board_setting .icam_b_stl:has(select) .sicam_name_box .sicam_icon {
+  position: absolute;
+}
+.ICAM_board_setting .icam_b_stl:has(select) .sicam_name_tit {
+  width: 100%;
+}
+.ICAM_board_setting .icam_b_stl:has(select) .sicam_name {
+  padding: 13px 0 0 46px;
+}
+.ICAM_board_setting .icam_b_stl:has(select) .user_view_slt {
+  padding: 30px 0 0;
+}
+.ICAM_board_setting .icam_b_stl:has(select) .user_view_slt .form_contrl {
+  width: 100%;
+  height: 30px;
+  font-size: var(--font-13);
+}
+.ICAM_board_setting .icam_b_stl:has(select) .box_showbtn {
+  top: 15px;
+  transform: unset;
+}
+.ICAM_board_setting .btm_icam_fw {
+  margin-left: 85px;
+}
+.ICAM_board_setting .fw_list {
+  left: -126px;
+  padding: 20px 10px;
+  border: 1px dashed #A1B6CC;
+  background-color: #EFF3F7;
+}
+.ICAM_board_setting .fw_list .fw_dt {
+  padding: 9px 50px 9px 10px;
+}
+.ICAM_board_setting .fw_list .box_showbtn {
+  right: 10px;
+  border-color: var(--border-d);
+}
+.ICAM_board_setting .fw_list .box_showbtn.hide {
+  border-color: var(--border-d);
 }
