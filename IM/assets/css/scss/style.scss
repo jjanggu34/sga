@@ -4331,7 +4331,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** ICAM_board_wrap *****************/
 .ICAM_board_wrap {
-    padding:68px 90px 160px 90px;
+    padding:107px 65px 160px 65px;
 }
 .icam_b_list {
     padding:0;
@@ -4592,8 +4592,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .secure_score {
-    top:36px;
-    left:21px;
+    top:24px;
+    left:15px;
     .simple_scoring {
         @include wh (94px,94px);
         padding:0;

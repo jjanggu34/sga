@@ -4699,7 +4699,7 @@ input + .loader {
 }
 /***************** ICAM_board_wrap *****************/
 .ICAM_board_wrap {
-  padding: 68px 90px 160px 90px;
+  padding: 107px 65px 160px 65px;
 }
 
 .icam_b_list {
@@ -4951,8 +4951,8 @@ input + .loader {
 }
 
 .secure_score {
-  top: 36px;
-  left: 21px;
+  top: 24px;
+  left: 15px;
 }
 .secure_score .simple_scoring {
   width: 94px;

@@ -20,12 +20,352 @@ body * {
 /*---------------------------------------------
     #로그인 레이아웃
 ---------------------------------------------*/
+/* login */
+#IMwrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F9FBFD;
+}
+#IMwrap #login_wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 200px;
+}
 #IMwrap .logo img {
   width: 100%;
   height: 100%;
 }
+#IMwrap .login_input .id_input {
+  position: relative;
+}
 #IMwrap .login_input .id_input label {
-  background-image: url("../../images/common/ico_ume.svg");
+  top: 11px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+}
+#IMwrap .login_input .pw_input {
+  position: relative;
+}
+#IMwrap .login_input .pw_input label {
+  top: 11px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+}
+#IMwrap .login_input .userID {
+  position: relative;
+}
+#IMwrap .login_input .userID label {
+  top: 11px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+}
+#IMwrap .login_input .userPWD {
+  position: relative;
+}
+#IMwrap .login_input .userPWD label {
+  top: 11px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+}
+#IMwrap .login_input p {
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+#IMwrap .login_input .id_input label, #IMwrap .login_input .userID label {
+  -webkit-mask-image: url(../images/common/ico_member.svg);
+  mask-image: url(../images/common/ico_member.svg);
+}
+#IMwrap .login_input .pw_input label, #IMwrap .login_input .userPWD label {
+  -webkit-mask-image: url(../images/common/icon_locked.svg);
+  mask-image: url(../images/common/icon_locked.svg);
+}
+#IMwrap .login_input .pw_input .fas, #IMwrap .login_input .userPWD .fas {
+  transform: translateY(-50%);
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  padding-top: 0;
+  margin: 0;
+}
+#IMwrap .login_input .pw_input .fas::before, #IMwrap .login_input .userPWD .fas::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/ico_login_show.svg");
+}
+#IMwrap .login_input .pw_input .fas.hide::before, #IMwrap .login_input .userPWD .fas.hide::before {
+  background-image: url("../images/common/ico_login_hide.svg");
+  background-position: unset;
+}
+#IMwrap .login_input .form_contrl {
+  padding-left: 40px;
+}
+#IMwrap .login_input .form_contrl.form_warning {
+  border-color: var(--false);
+}
+#IMwrap .login_input .warning_txt {
+  position: relative;
+  padding: 0 22px 10px 22px;
+  font-size: var(--font-12);
+  color: var(--false);
+}
+#IMwrap .login_input .warning_txt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--false);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url(../images/common/ico_info.svg);
+  mask-image: url(../images/common/ico_info.svg);
+}
+#IMwrap .login_input .dupli_check {
+  padding-top: 0;
+}
+#IMwrap .login_input .dupli_check .txt {
+  color: var(--false);
+}
+#IMwrap #footer {
+  width: 100%;
+  padding-top: 0;
+  margin-top: auto;
+}
+#IMwrap #footer .copy, #IMwrap #footer .copy span {
+  color: var(--text-disabled);
+}
+/* column2 */
+.column2 .logo img {
+  width: 100%;
+  height: 100%;
+}
+.column2 .login_exps {
+  gap: 50px;
+  margin-top: 53px;
+  padding-top: 0;
+  border: 0;
+  border-radius: 0;
+}
+.column2 .login_exps .login_exps_left > p {
+  padding-bottom: 20px;
+  font-size: 35px;
+  font-weight: var(--font-bold);
+  color: var(--title);
+}
+.column2 .login_exps .login_exps_right {
+  padding: 30px 20px;
+  border-radius: 20px;
+  background-color: var(--primary);
+}
+
+/* 왼쪽 */
+.tn_slt {
+  padding-bottom: 10px;
+}
+.tn_slt .fm_tit {
+  border: 1px solid var(--default);
+  font-weight: var(--font-regular);
+  color: var(--title);
+  background-color: var(--white);
+}
+.tn_slt .fm_tit .tab_arrow {
+  right: 10px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--text-disabled);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url(../images/common/ico_accordion.svg);
+  mask-image: url(../images/common/ico_accordion.svg);
+}
+.tn_slt .fm_tit .tab_arrow.open {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.login_btmmsg {
+  margin-top: 10px;
+  padding: 21px 20px;
+  border: 1px solid var(--border-d);
+  border-radius: 6px;
+  background-color: var(--body);
+}
+.login_btmmsg .msgstl {
+  height: 100%;
+}
+.login_btmmsg .msgstl p {
+  position: relative;
+  padding-left: 34px;
+  font-size: var(--font-14);
+  text-align: left;
+}
+.login_btmmsg .msgstl p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/ico_msg.svg");
+}
+
+.security_pledge {
+  flex-direction: column-reverse;
+  row-gap: 12px;
+  margin-top: 26px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+.security_pledge .balloonStl2 {
+  position: unset;
+  justify-content: space-between;
+  padding: 9px 13px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #D6E9FF;
+}
+.security_pledge .balloonStl2 .bluetxt {
+  font-size: var(--font-12);
+  font-weight: var(--font-regular);
+  color: var(--blue);
+}
+.security_pledge .balloonStl2 .btn_del {
+  width: 24px;
+  height: 24px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--blue);
+  vertical-align: text-bottom;
+  -webkit-mask-image: url(../images/common/close.svg);
+  mask-image: url(../images/common/close.svg);
+  background-image: none;
+}
+
+.txtbtns_devide {
+  gap: 4px;
+}
+
+/* 오른쪽 */
+.login_notice {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+.login_notice > p {
+  padding-bottom: 22px;
+  font-size: var(--font-18);
+  font-weight: var(--font-bold);
+  color: var(--white);
+}
+.login_notice .notice_list li {
+  padding: 0 0 13px;
+}
+.login_notice .notice_list li:last-child {
+  padding: 0;
+}
+.login_notice .notice_list li a {
+  font-size: var(--font-14);
+}
+
+.cl_txt {
+  padding: 20px 0;
+}
+.cl_txt em {
+  padding: 0 16px;
+  font-size: var(--font-14);
+  font-weight: var(--font-regular);
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.client_down_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.client_down_list .clientBtn {
+  flex-direction: column;
+  margin-top: 0;
+  font-size: var(--font-16);
+}
+.client_down_list .clientBtn.AMClient {
+  color: var(--content);
+}
+.client_down_list .clientBtn.OTP {
+  color: var(--content);
+}
+.client_down_list .clientBtn.FIDO {
+  color: var(--content);
+}
+.client_down_list .clientBtn.UEM {
+  color: var(--content);
 }
 
 /*---------------------------------------------

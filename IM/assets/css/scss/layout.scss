@@ -18,17 +18,267 @@ body {
 /*---------------------------------------------
     #로그인 레이아웃
 ---------------------------------------------*/
+/* login */
 #IMwrap {
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+    background-color:#F9FBFD;
+    #login_wrap {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top:200px;
+    }
     .logo {
         img {
             @include wh ($wh100,$wh100);
         }
     }
     .login_input {
-        .id_input {
-            label {
-                background-image:url("../../images/common/ico_ume.svg");
+        $idPws: "id_input", "pw_input", "userID", "userPWD";
+        @each $idPwl in $idPws {
+            .#{$idPwl} {
+                position:relative;
+                label {
+                    top:11px;
+                    left:17px;
+                    @include wh(20px,20px);
+                    @include mask(var(--text-disabled));
+                }
             }
+        }
+        p {
+            padding-bottom:0;
+            margin-bottom:10px;
+        }
+        .id_input, .userID {
+            label {
+                -webkit-mask-image: url(../images/common/ico_member.svg);
+                mask-image: url(../images/common/ico_member.svg);
+            }
+        }
+        .pw_input, .userPWD {
+            label {
+                -webkit-mask-image: url(../images/common/icon_locked.svg);
+                mask-image: url(../images/common/icon_locked.svg);
+            }
+            .fas {
+                transform:translateY(-50%);
+                right:14px;
+                @include wh (20px, 20px);
+                padding-top:0;
+                margin:0;
+                &::before {
+                    content:"";
+                    display:inline-block;
+                    @include icon (20px,20px);
+                    background-image:url("../images/common/ico_login_show.svg");
+                }
+                &.hide {
+                    &::before {
+                        background-image:url("../images/common/ico_login_hide.svg");
+                        background-position:unset;
+                    }
+                }
+            }
+        }
+        .form_contrl {
+            padding-left:40px;
+            &.form_warning {
+                border-color:var(--false);
+            }
+        }
+        .warning_txt {
+            position:relative;;
+            padding:0 22px 10px 22px;
+            font-size:var(--font-12 );
+            color:var(--false);
+            &::before {
+                content:"";
+                position:absolute;
+                left:0;
+                display:inline-block;
+                @include wh(18px,18px);
+                @include mask(var(--false));
+                -webkit-mask-image: url(../images/common/ico_info.svg);
+                mask-image: url(../images/common/ico_info.svg);
+            }
+        }
+        .dupli_check {
+            padding-top:0;
+            .txt {
+                color:var(--false);
+            }
+        }
+    }
+    #footer {
+        width:$wh100;
+        padding-top:0;
+        margin-top:auto;
+        .copy {
+            color:var(--text-disabled);
+            span {
+                @extend .copy;
+            }
+        }
+    }
+}
+
+/* column2 */
+.column2 {
+    .logo {
+        img {
+            @include wh ($wh100, $wh100);
+        }
+    }
+    .login_exps {
+        gap:50px;
+        margin-top:53px;
+        padding-top:0;
+        border:0;
+        border-radius:0;
+        .login_exps_left {
+            &> p {
+                padding-bottom:20px;
+                @include title (35px, var(--font-bold), var(--title));
+            }
+        }
+        .login_exps_right {
+            padding:30px 20px;
+            border-radius:20px;
+            background-color:var(--primary);
+        }
+    }
+}
+/* 왼쪽 */
+.tn_slt {
+    padding-bottom:10px;
+    .fm_tit {
+        border:1px solid var(--default);
+        font-weight:var(--font-regular);
+        color:var(--title);
+        background-color:var(--white);
+        .tab_arrow {
+            right:10px;
+            transform:translateY(-50%);
+            @include wh (24px,24px);
+            margin:0;
+            @include mask (var(--text-disabled));
+            -webkit-mask-image: url(../images/common/ico_accordion.svg);
+            mask-image: url(../images/common/ico_accordion.svg);
+            &.open {
+                transform:translateY(-50%) rotate(-180deg);
+            }
+        }
+    }
+}
+.login_btmmsg {
+    margin-top:10px;
+    padding:21px 20px;
+    border:$borderD;
+    border-radius:6px;
+    background-color:var(--body);
+    .msgstl {
+        height:100%;
+        p {
+            position:relative;
+            padding-left:34px;
+            font-size:var(--font-14);
+            text-align:left;
+            &::before {
+                content:"";
+                position:absolute;
+                top:50%;
+                left:0;
+                transform:translateY(-50%);
+                display:inline-block;
+                @include icon (24px,24px);
+                background-image:url("../images/common/ico_msg.svg");
+            }
+        }
+    }
+}
+.security_pledge {
+    flex-direction: column-reverse;
+    row-gap:12px;
+    margin-top:26px;
+    padding:0;
+    border:0;
+    border-radius:0;
+    background-color:transparent;
+    .balloonStl2 {
+        position:unset;
+        justify-content:space-between;
+        padding:9px 13px;
+        border:0;
+        border-radius:10px;
+        background-color:#D6E9FF;
+        .bluetxt {
+            @include title (var(--font-12), var(--font-regular), var(--blue));
+        }
+        .btn_del {
+            @include wh (24px, 24px);
+            @include mask (var(--blue));
+            -webkit-mask-image: url(../images/common/close.svg);
+            mask-image: url(../images/common/close.svg);
+            background-image:none;
+        }
+    }
+}
+.txtbtns_devide {
+    gap:4px;
+}
+
+/* 오른쪽 */
+.login_notice {
+    padding:0;
+    margin-bottom:0;
+    background-color:transparent;
+    &>p {
+        padding-bottom:22px;
+        @include title (var(--font-18), var(--font-bold), var(--white));
+    }
+    .notice_list {
+        li {
+            padding:0 0 13px;
+            &:last-child {
+                padding:0;
+            }
+            a {
+                font-size:var(--font-14);
+            }
+        }
+    }
+}
+.cl_txt {
+    padding:20px 0;
+    em {
+        padding:0 16px;
+        @include title (var(--font-14), var(--font-regular), var(--white));
+        background-color:var(--primary);
+    }
+}
+.client_down_list {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    .clientBtn {
+        flex-direction:column;
+        margin-top:0;
+        font-size:var(--font-16);
+        &.AMClient {
+            color:var(--content);
+        }
+        &.OTP {
+            color:var(--content);
+        }
+        &.FIDO {
+            color:var(--content);
+        }
+        &.UEM {
+            color:var(--content);
         }
     }
 }

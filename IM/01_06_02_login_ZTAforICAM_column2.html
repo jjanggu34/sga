@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -26,11 +29,14 @@
 		<div id="login_wrap" class="column2">
 			<div class="logo_box">
 				<div class="logo">
-					<img src="img/common/login_logo_ZTA_ICAM.png">
+					<img src="assets/images/common/column2_logo.svg">
 				</div>
 			</div>
 			<div class="login_exps">
 				<div class="login_exps_left">
+					<!-- s: 로그인 텍스트 추가 -->
+					<p>로그인</p>
+					<!-- e: 로그인 텍스트 추가 -->
 					<div class="tn_slt">
 						<button class="fm_tit">Tenant<span class="tab_arrow open"></span></button> 
 						<ul class="slt_list" style="display:none">
@@ -54,7 +60,9 @@
 						</div>
 					</div>
 					<div class="btn_box login_btn">
-						<a class="gradient">로그인</a>
+						<!-- s: class 변경 -->
+						<a class="primary">로그인</a>
+						<!-- e: class 변경 -->
 					</div>
 					<div class="login_btmmsg">
 						<div class="msgstl"><p>하단 메시지</p></div>
@@ -65,17 +73,22 @@
 							<button class="btn_del">닫기</button>
 						</div>
 						<div class="flx pledge_btns">
-							<button class="btnstl blue">보안서약 확인</button>
+							<!-- s: class 변경 및 devide 주석 -->
+							<button class="btnstl basic">보안서약 확인</button>
 							<div class="flx txtbtns_devide">
-								<button class="txtbtn">신규등록</button>
-								<span class="devide"></span>
-								<button class="txtbtn">사용신청</button>
+								<button class="line">신규등록</button>
+								<!-- <span class="devide"></span> -->
+								<button class="line">사용신청</button>
 							</div>
+							<!-- e: class 변경 및 devide 주석 -->
 						</div>
 					</div>
 				</div>
 				<div class="login_exps_right">
 					<div class="login_notice">
+						<!-- s: 공지사항 텍스트 추가 -->
+						<p>공지사항</p>
+						<!-- e: 공지사항 텍스트 추가 -->
 						<ul class="notice_list">
 							<li>
 								<a href="">&middot; 계정관리 솔루션 관련 공지사항입니다 공지사항입니다.</a>
@@ -90,12 +103,14 @@
 					</div>
 					<div class="cl_down_wrap">
 						<p class="cl_txt"><span></span><em>Client Download</em></p>
+						<!-- s: <i class="download"></i> 삭제 -->
 						<div class="client_down_list">
-							<button class="clientBtn AMClient"><i class="icon_client"></i>AM Client<i class="download"></i></button>
-							<button class="clientBtn OTP"><i class="icon_client"></i>OTP<i class="download"></i></button>
-							<button class="clientBtn FIDO"><i class="icon_client"></i>FIDO<i class="download"></i></button>
-							<button class="clientBtn UEM"><i class="icon_client"></i>UEM<i class="download"></i></button>
+							<button class="clientBtn AMClient"><i class="icon_client"></i>AM Client</button>
+							<button class="clientBtn OTP"><i class="icon_client"></i>OTP</button>
+							<button class="clientBtn FIDO"><i class="icon_client"></i>FIDO</button>
+							<button class="clientBtn UEM"><i class="icon_client"></i>UEM</button>
 						</div>
+						<!-- e: <i class="download"></i> 삭제 -->
 					</div>
 				</div>
 			</div>

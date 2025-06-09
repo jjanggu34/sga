@@ -437,6 +437,17 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     }
 }
 
+/* 로그인 */
+.btn_box  {
+    &.login_btn {
+        a {
+            height:45px;
+            font-size:var(--font-16);
+            font-weight:var(--font-bold);
+            line-height:45px;
+        }
+    }
+}
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
