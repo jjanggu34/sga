@@ -1,4 +1,5 @@
-@use 'variable' as *;
+@use './variable' as *;
+@use './mixin' as *;
 
 /*---------------------------------------------
 	#상단 버튼
@@ -11,7 +12,7 @@
     position:unset;
     padding:20px 24px;
     .opttxt {
-        font-weight:var(--font-regular);
+        font-weight:$font-w-r;
         color:var(--title);
     }
 }
@@ -25,12 +26,12 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     #{$btn} {
         padding:0 14px;
         border-radius:6px;
-        font-size:var(--font-13);
+        font-size:$font13;
         line-height:30px;
         &.big {
             height:38px;
-            font-size:var(--font-14);
-            font-weight:var(--font-medium);
+            font-size:$font14;
+            font-weight:$font-w-m;
         }
     }
 }
@@ -42,7 +43,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 .basic {
     border:1px solid var(--basic);
     border-radius:6px;
-    font-size:var(--font-13);
+    font-size:$font13;
     line-height:28px;
     background:var(--basic);
     &:focus-visible {
@@ -54,7 +55,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 .basic2 {
     border:1px solid var(--basic2);
     border-radius:6px;
-    font-size:var(--font-13);
+    font-size:$font13;
     line-height:28px;
     background:var(--basic2);
     &:focus-visible {
@@ -93,7 +94,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 .line {
     padding-bottom:0;
     border-radius:6px;
-    font-size:var(--font-13);
+    font-size:$font13;
     color:var(--content);
     border:$borderD;
     line-height:28px;
@@ -143,11 +144,12 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 }
 button, a {
     color:var(--white);
-    font-weight:var(--font-medium);
+    font-weight:$font-w-m;
     &.icon {
         display:inline-flex;
         align-items:center;
         column-gap:2px;
+        padding:0 014px 0 7px;
         i {
             display:inline-block;
             @include wh (24px, 24px);
@@ -183,16 +185,6 @@ button, a {
                 background-image:none;
                 &::before {
                     content:none;
-                }
-            }
-        }
-        &.primary {
-            i {
-                &.icon_reset {
-                    @include mask(var(--white));
-                    -webkit-mask-image:url("../images/common/ico_reset.svg");
-                    mask-image:url("../images/common/ico_reset.svg");
-                    background-image:none;
                 }
             }
         }
@@ -247,7 +239,7 @@ button, a {
         padding:6px 12px;
         border:1px solid var(--default);
         border-radius:6px;
-        font-weight:var(--font-regular);
+        font-weight:$font-w-r;
         color:var(--content);
         line-height:16px;
         background:var(--white);
@@ -283,6 +275,27 @@ button, a {
         -webkit-mask-image:url("../images/common/icon_arrow_none.svg");
         mask-image:url("../images/common/icon_arrow_none.svg");
     }
+    /* 텍스트 + 아이콘 */
+    &.text {
+        position:relative;
+        padding:0 14px 0 24px;
+        font-size:13px;
+        color:var(--title);
+        &::before {
+            content:"";
+            display:inline-block;
+            position:absolute;
+            left:0;
+            top:1px;
+            @include icon(24px,24px);
+        }
+        &.icon_reset {
+            &::before {
+                background-image:url("../images/common/ico_refresh.svg");
+                transform:scaleX(-1);
+            }
+        }
+    }
 }
 
 /* 옵션 */
@@ -316,7 +329,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     background-color:var(--table-th);
     span {
         padding-right:30px;
-        @include title (var(--font-16), var(--font-medium), var(--title));
+        @include title ($font16, $font-w-m, var(--title));
         line-height:45px;
         .btn_option {
             right:0;
@@ -442,12 +455,13 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     &.login_btn {
         a {
             height:45px;
-            font-size:var(--font-16);
-            font-weight:var(--font-bold);
+            font-size:$font16;
+            font-weight:$font-w-b;
             line-height:45px;
         }
     }
 }
+
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
@@ -498,7 +512,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         }
     }
     .primary {
-        font-weight:var(--font-medium);
+        font-weight:$font-w-m;
     }
 }
 
@@ -516,7 +530,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 padding:0;
                 border:1px solid var(--default);
                 border-radius:6px;
-                @include title (var(--font-12), var(--font-regular), var(--content));
+                @include title ($font12, $font-w-r, var(--content));
                 line-height:30px;
                 text-align:center;
                 span {

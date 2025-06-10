@@ -1,4 +1,5 @@
-@use 'variable' as *;
+@use './variable' as *;
+@use './mixin' as *;
 
 /***************** 공통 *****************/
 $btnstls: "trcolor", "fcolor";
@@ -204,7 +205,7 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
     padding:5px 15px 4px;
     margin-top:5px;
     border:$borderD;
-    @include title(var(--font-13), var(--font-regular), var(--content));
+    @include title($font13, $font-w-r, var(--content));
     line-height:14px;
 }
 
@@ -384,12 +385,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 // 역할 관리 라벨
 .apply_tit {
     padding-bottom:25px;
-    @include title (var(--font-18), var(--font-medium), var(--title));
+    @include title ($font18, $font-w-m, var(--title));
     span {
         border-radius:30px;
         padding:6px 14px 5px;
-        font-size:var(--font-13);
-        font-weight:var(--font-regular);
+        font-size:$font13;
+        font-weight:$font-w-r;
     }
     &.grbox { //시스템 그룹
         span {
@@ -421,7 +422,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .new_org {
     @include wh (15px, 15px);
     border-radius:3px;
-    @include title(var(--font-10),var(--font-extrabold),var(--white));
+    @include title($font10,$font-w-e,var(--white));
     line-height:15px;
     background-color:var(--text-disabled);
 }
@@ -434,6 +435,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /* info */
 .req_txt {
+    font-size:$font14;
     &.org {
         color:var(--primary);
         &::before {
@@ -462,6 +464,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     display:flex;
     padding-top:5px;
     padding-left:0;
+    font-size:$font14;
     i {
         @include wh (16px, 16px);
         background-image:none;
@@ -498,7 +501,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     $tits: "fm", "def";
     @each $tit in $tits {
         .#{$tit}_tit {
-            font-size:var(--font-18);
+            font-size:$font18;
             color:var(--title);
         }
     }
@@ -511,7 +514,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border:0;
             border-radius:0;
             border-bottom:1px solid var(--title);
-            font-weight:var(--font-bold);
+            font-weight:$font-w-b;
             background:transparent;
             &:hover {
                 background-color:var(--white);
@@ -536,14 +539,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border:0;
             border-radius:0;
             border-bottom:1px solid var(--title);
-            font-weight:var(--font-bold);
+            font-weight:$font-w-b;
             background:transparent;
             &.add {
                 height:45px;
                 margin-bottom:40px;
                 border:1px dashed var(--border-d);
                 border-radius:6px;
-                @include title (var(--font-16), var(--font-medium), var(--title));
+                @include title ($font16, $font-w-m, var(--title));
                 line-height:26px;
                 text-align:center;
                 background-color:var(--table-th);
@@ -563,7 +566,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     // table title
     .def_tit {
-        font-weight:var(--font-extrabold);
+        font-weight:$font-w-e;
         border-bottom:1px solid var(--title);
         &+.tbl_list {
             .default_tbl {
@@ -695,7 +698,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include wh (17px, 17px);
             margin-left:20px;
             margin-right:4px;
-            font-size:var(--font-12);
+            font-size:$font12;
             line-height:1.5;
             color:var(--text-disabled);
             background-color:var(--white);
@@ -777,7 +780,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             a {
                 padding:7px 12px;
-                font-weight:var(--font-medium);
+                font-weight:$font-w-m;
                 &.on{
                     border-bottom:0;
                     border-radius:15px;
@@ -855,10 +858,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         background:var(--btn-disabled);
         li {
             a {
-                font-weight:var(--font-regular);
+                font-weight:$font-w-r;
                 &.on {
                     border-radius:3px;
-                    font-weight:var(--font-regular);
+                    font-weight:$font-w-r;
                     color:var(--title);
                     background-color:var(--white);
                 }
@@ -879,7 +882,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 a {
                     padding:8px 12px;
                     margin:0;
-                    font-size:var(--font-14);
+                    font-size:$font14;
                     color:var(--text-disabled);
                     &.on {
                         color:var(--white);
@@ -887,7 +890,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     .tab_stt {
                         @include wh (15px, 15px);
                         margin-bottom:1px;
-                        font-size:var(--font-10);
+                        font-size:$font10;
                         color:var(--white);
                         background-color:var(--text-disabled);
                         &.new_org {
@@ -949,7 +952,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 a {
                     padding:0;
                     span {
-                        font-weight:var(--font-regular);
+                        font-weight:$font-w-r;
                         color:var(--title);
                     }
                     .icon_tree {
@@ -1051,7 +1054,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .tree_menu_tab {
     button {
         padding:10px 0;
-        font-size:var(--font-14);
+        font-size:$font14;
         color:var(--text-disabled);
         line-height:25px;
         background:var(--btn-disabled);
@@ -1077,7 +1080,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border-radius:5px;
         background-color:var(--white);
         p {
-            @include title (var(--font-14), var(--font-medium), var(--title));
+            @include title ($font14, $font-w-m, var(--title));
         }
     }
     .search_box {
@@ -1106,15 +1109,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .meth {
                 padding:6px 9px;
                 border-radius:14px;
-                font-size:var(--font-13);
+                font-size:$font13;
                 color:#074C91;
                 background-color:#DAEAFA;
             }
             .db_server_name {
-                font-size:var(--font-13);
+                font-size:$font13;
             }
             .ip_add {
-                font-size:var(--font-13);
+                font-size:$font13;
                 color:var(--text-disabled);
                 &::before {
                     background-color:var(--border-d);
@@ -1142,7 +1145,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         }
                         .inst_name {
                             border-right:unset;
-                            font-weight:var(--font-regular);
+                            font-weight:$font-w-r;
                             color:var(--primary);
                             background-color:unset;
                         }
@@ -1156,7 +1159,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                     .inst_name {
                         padding-left:0;
-                        font-size:var(--font-12);
+                        font-size:$font12;
                     }
                 }
                 &::after {
@@ -1190,7 +1193,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding-left:32px;
                 line-height:16px;
                 color:var(--text-disabled);
-                font-weight:var(--font-regular);
+                font-weight:$font-w-r;
                 .icon_folder {
                     position:absolute;
                     top:50%;
@@ -1214,7 +1217,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .tree_arrow {
                 margin-top:0;
                 padding:0;
-                font-weight:var(--font-regular);
+                font-weight:$font-w-r;
                 background:none;
                 &::before {
                     content:"ㄴ";
@@ -1280,7 +1283,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .tmlist {
                 padding:8px 5px;
                 border-radius:0;
-                @include title (var(--font-12),var(--font-regular),var(--content));
+                @include title ($font12,$font-w-r,var(--content));
                 color:unset;
                 line-height:unset
                 ;
@@ -1321,7 +1324,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:10px 28px 10px 15px;
         border:$borderD;
         border-radius:6px;
-        font-weight:var(--font-medium);
+        font-weight:$font-w-m;
         color:var(--title);
         line-height:18px;
         background-color:#F9F9F9;
@@ -1369,7 +1372,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 dt {
                     width:auto;
                     margin:0 20px 0 0;
-                    @include title(var(--font-14), var(--font-regular), var(--text-disabled));
+                    @include title($font14, $font-w-r, var(--text-disabled));
                     line-height:28px;
                     label {
                         color:var(--text-disabled);
@@ -1390,7 +1393,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .icon.icon_reset {
                 @include wh(auto, auto);
                 padding-left:25px;
-                font-size:var(--font-13);
+                font-size:$font13;
                 background-position:left center;
             }
         }
@@ -1654,22 +1657,22 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding-bottom:8px;
                 em {
                     color:var(--true);
-                    @include title (var(--font-12), var(--font-regular), var(--content));
+                    @include title ($font12, $font-w-r, var(--content));
                     line-height:15px;
                 }
             }
             .wf_nm {
                 padding-bottom:6px;
-                @include title (var(--font-14), var(--font-regular), var(--title));
+                @include title ($font14, $font-w-r, var(--title));
                 span {
-                    font-size:var(--font-14);
+                    font-size:$font14;
                     color:var(--text-disabled);
                 }
             }
             .wf_op_info {
                 padding-bottom:0;
                 p {
-                    font-size:var(--font-12);
+                    font-size:$font12;
                     color:var(--text-disabled);
                     padding-bottom:0;
                     &:first-child {
@@ -1850,7 +1853,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .cont_title {
         padding-bottom:3px;
         h2 {
-            @include title (var(--font-28), var(--font-medium), var(--title));
+            @include title ($font28, $font-w-m, var(--title));
             line-height:24px;
         }
     }
@@ -1879,7 +1882,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 position:static;
                 p {
                     padding-bottom:30px;
-                    @include title (var(--font-14), var(--font-regular), var(--content));
+                    @include title ($font14, $font-w-r, var(--content));
                     line-height:24px;
                 }
                 button, a {
@@ -1917,7 +1920,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             bottom:40px;
             width:auto;
             border:0;
-            @include title (var(--font-14), var(--font-regular), var(--content));
+            @include title ($font14, $font-w-r, var(--content));
             line-height:24px;
             background:none;
             .icon_arrapply {
@@ -1964,12 +1967,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
-        .i-card_title:not(.noicon .i-card_title) {
-            position:absolute;
-            left:74px;
-            padding:0 0 0 7px;
-            font-weight:var(--font-medium);
-            color:var(--text-disabled);
+        &.in_role {
+            .i-card_title {
+                position:absolute;
+                left:74px;
+                padding:0 0 0 7px;
+                font-weight:$font-w-m;
+                color:var(--text-disabled);
+            }
         }
         .i-card_ct {
             justify-content:space-between;
@@ -2116,7 +2121,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .sv_dt_info {
                 .sv_name {
                     padding-bottom:7px;
-                    @include title(var(--font-16), var(--font-medium), var(--title));
+                    @include title($font16, $font-w-m, var(--title));
                 }
                 .sv_dt_list {
                     gap:5px;
@@ -2130,7 +2135,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     .sq_nv_wd {
                         li {
                             border-radius:3px;
-                            font-size:var(--font-13);
+                            font-size:$font13;
                             line-height:15px;
                             color:#0E6759;
                             background-color:#D6EAE7;
@@ -2160,22 +2165,30 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
+/* server zone */
+.card_link {
+    padding:20px 30px;
+    .i-card_title {
+        @include title ($font14, $font-w-b, var(--title));
+    }
+}
+
 /***************** 팝업 리스트 *****************/
 .view_stl {
     .view_list {
         &.bul_dot {
             li {
-                padding:10px 20px;
+                padding:13px 20px;
                 border-bottom:1px solid var(--list-border);
                 .view_tit {
                     p {
-                        @include title (var(--font-14), var(--font-regular), var(--content));
+                        @include title ($font14, $font-w-r, var(--content));
                     }
                 }
                 .view_txt {
                     white-space:unset;
                     p {
-                        @include title (var(--font-13), var(--font-medium), var(--title));
+                        @include title ($font14, $font-w-m, var(--title));
                     }
                 }
                 &:last-child {
@@ -2207,7 +2220,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 width:100%;
                 padding-top:10px;
                 .treem_btn {
-                    font-weight:var(--font-regular);
+                    font-weight:$font-w-r;
                     line-height:unset;
                 }
             }
@@ -2281,6 +2294,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                 }
                 &.on {
+                    border-radius:9px;
                     color:var(--primary);
                     background-color:#DAFAF5;
                     &::after {
@@ -2299,7 +2313,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .moved_tit {
     padding:0 0 14px;
     border:0;
-    @include title (var(--font-16), var(--font-bold), var(--title));
+    @include title ($font16, $font-w-b, var(--title));
     background-color:unset;
 }
 
@@ -2330,8 +2344,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .moved_tit {
                     padding:10px 16px;
                     border-bottom:1px solid var(--title);
-                    font-size:var(--font-13);
-                    font-weight:var(--font-medium);
+                    font-size:$font13;
+                    font-weight:$font-w-m;
                     background-color:var(--disabled-line-bg);
                 }
                 .move_tbl {
@@ -2377,8 +2391,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding:10px 16px;
                 border-bottom:1px solid var(--title);
                 border-radius:6px 6px 0 0;
-                font-size:var(--font-13);
-                font-weight:var(--font-medium);
+                font-size:$font13;
+                font-weight:$font-w-m;
                 background-color:var(--disabled-line-bg);
             }
             .move_tbl {
@@ -2414,14 +2428,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         width:350px;
         margin-top:0;
         margin-right:20px;
-        padding:0 20px;
+        padding:0 15px;
         border:$borderD;
         border-radius:6px;
         .moved_tit {
             padding:10px 0;
             border-bottom:$borderD;
-            font-size:var(--font-18);
-            font-weight:var(--font-medium);
+            font-size:$font18;
+            font-weight:$font-w-m;
         }
         .pcs_ctg_list {
             padding-top:25px;
@@ -2529,7 +2543,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:20px 0;
             border:0;
             border-radius:50%;
-            @include title(var(--font-18), var(--font-medium), var(--white));
+            @include title($font18, $font-w-m, var(--white));
             text-align:center;
             line-height:22px;
             background:var(--basic);
@@ -2540,7 +2554,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:0 14px;
             border-radius:6px;
             &.line {
-                font-size:var(--font-13);
+                font-size:$font13;
             }
         }
     }
@@ -2549,7 +2563,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             position:absolute;
             left:97px;
             bottom:20px;
-            font-size:var(--font-13);
+            font-size:$font13;
             color:var(--text-disabled);
         }
     }
@@ -2638,7 +2652,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         li {
             display:flex;
             .form_tit {
-                font-weight:var(--font-regular);
+                font-weight:$font-w-r;
             }
         }
         .form_txt {
@@ -2654,7 +2668,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             position:unset;
             padding-top:5px;
             margin:0;
-            font-weight:var(--font-regular);
+            font-weight:$font-w-r;
             &::before {
                 left:10px;
                 top:21px;
@@ -2771,7 +2785,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     a {
                         position:relative;
                         padding:8px 0 8px 43px;
-                        font-weight:var(--font-regular);
+                        font-weight:$font-w-r;
                         color:var(--content);
                         &:hover {
                             border-radius:0;
@@ -2871,8 +2885,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 display:inline-block;
                 &>a {
                     border-radius:6px;
-                    font-size:var(--font-12);
-                    font-weight:var(--font-medium);
+                    font-size:$font12;
+                    font-weight:$font-w-m;
                 }
             }
         }
@@ -3104,7 +3118,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     border-bottom:0;
                     .form_tit {
                         padding-top:0;
-                        font-weight:var(--font-regular);
+                        font-weight:$font-w-r;
                     }
                     .form_txt {
                         padding-left:0;
@@ -3240,7 +3254,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .tasklist {
-        padding:0 0 0 12px;
+        padding:4px 0 4px 12px;
         border:$borderD;
         border-radius:6px;
         background-color:var(--white);
@@ -3249,14 +3263,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .dvs_t {
             padding:0 6px;
-            font-weight:var(--font-medium);
+            font-weight:$font-w-m;
             color:var(--title);
         }
         .task_ctg {
             .task_ctg_stl {
                 padding:4px 6px;
                 border-radius:3px;
-                font-size:var(--font-12);
+                font-size:$font12;
                 color:var(--white);
                 background-color:var(--basic);
                 .btn_w_del {
@@ -3289,15 +3303,24 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .btn_g_del {
             @include wh(32px, 30px);
-            margin-left:0;
+            margin:0 5px 0 3px;
             padding:0;
-            border-left:$borderD;
             border-radius:0 6px 6px 0;
             background-color:var(--white);
             &::after {
                 @include wh(24px,24px);
                 -webkit-mask-size:90%;
                 mask-size:90%;
+            }
+            &::before {
+                content:"";
+                position:absolute;
+                left:-4px;
+                top:50%;
+                transform:translateY(-50%);
+                display:inline-block;
+                @include wh (1px,40px);
+                background-color:var(--border-d);
             }
         }
     }
@@ -3322,7 +3345,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:20px 20px 12px;
         border-bottom:$borderD;
         border-radius:0;
-        @include title (var(--font-16), var(--font-bold), var(--title));
+        @include title ($font16, $font-w-b, var(--title));
     }
 }
 
@@ -3346,7 +3369,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .data_cht_info {
             align-items:center;
             padding-bottom:10px;
-            font-weight:var(--font-medium);
+            font-weight:$font-w-m;
             color:var(--content);
             &.bul_dot {
                 dt {
@@ -3361,15 +3384,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding-left:10px;
             }
             dd {
-                font-size:var(--font-15);
-                font-weight:var(--font-extrabold);
+                font-size:$font15;
+                font-weight:$font-w-e;
             }
         }
     }
     .hrz_bar_lyt { //디스크 사용 현황
+        padding:0 0 20px;
         .legend_name {
             margin-bottom:12px;
-            font-weight:var(--font-medium);
+            font-weight:$font-w-m;
             line-height:16px;
             color:var(--title);
         }
@@ -3397,17 +3421,18 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .bar_dtail {
-        font-size:var(--font-13);
-        font-weight:var(--font-medium);
+        font-size:$font13;
+        font-weight:$font-w-m;
         text-align:right;
     }
     .mod_cont_df { //기본 타이틀
+        padding:7px 0 0;
         .bul_dot {
             column-gap:90px;
             dt {
                 padding-left:10px;
                 margin-bottom:0;
-                font-weight:var(--font-medium);
+                font-weight:$font-w-m;
                 color:var(--content);
                 line-height:18px;
                 &::before {
@@ -3416,7 +3441,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             dd {
-                @include title (var(--font-15), var(--font-extrabold), var(--title));
+                @include title ($font15, $font-w-e, var(--title));
             }
         }
     }
@@ -3459,11 +3484,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             dt {
                 padding-top:4px;
                 padding-right:10px;
-                font-weight:var(--font-medium);
+                font-weight:$font-w-m;
                 color:var(--text-disabled);
             }
             dd {
-                @include title (var(--font-27), var(--font-heavy), var(--title));
+                @include title ($font27, $font-w-h, var(--title));
             }
         }
         &.no_dt_info {
@@ -3492,11 +3517,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-color:#EDF0F4;
             dt {
                 width:100%;
-                font-size:var(--font-14);
+                font-size:$font14;
             }
             dd {
                 width:100%;
-                @include title (var(--font-16), var(--font-extrabold), var(--true));
+                @include title ($font16, $font-w-e, var(--true));
                 text-align:right;
             }
         }
@@ -3526,7 +3551,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &.on {
                 background-color:#DAFAF5;
                 .use_name_txt {
-                    font-size:var(--font-14);
+                    font-size:$font14;
                     color:var(--primary);
                 }
                 .use_onoff_icon {
@@ -3550,7 +3575,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-color:#EDF0F4;
             dt {
                 width:$wh100;
-                font-size:var(--font-14);
+                font-size:$font14;
             }
             dd {
                 width:$wh100;
@@ -3558,14 +3583,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 text-align:right;
                 vertical-align:bottom;
                 em {
-                    font-size:var(--font-16);
+                    font-size:$font16;
                     color:var(--true);
                     &.orttxt {
                         color:var(--false);
                     }
                 }
                 span {
-                    font-size:var(--font-14);
+                    font-size:$font14;
                 }
             }
         }
@@ -3578,7 +3603,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     line-height:18px;
                 }
                 dd {
-                    font-weight:var(--font-extrabold);
+                    font-weight:$font-w-e;
                 }
             }
         }
@@ -3618,11 +3643,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             dt {
                 width:auto;
                 margin-right:9px;
-                font-weight:var(--font-medium);
+                font-weight:$font-w-m;
                 color:var(--text-disabled);
             }
             dd {
-                @include title (var(--font-27), var(--font-heavy), var(--title));
+                @include title ($font27, $font-w-h, var(--title));
             }
         }
         .flx {
@@ -3636,12 +3661,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:#EDF0F4;
                 dt {
                     width:$wh100;
-                    font-size:var(--font-14);
+                    font-size:$font14;
                 }
                 dd {
                     width:$wh100;
-                    font-size:var(--font-16);
-                    font-weight:var(--font-extrabold);
+                    font-size:$font16;
+                    font-weight:$font-w-e;
                     text-align:right;
                 }
             }
@@ -3686,7 +3711,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .gauge-legend {
     top:-31px;
     .min, .max {
-        @include title (var(--font-18), var(--font-medium), var(--text-disabled));
+        @include title ($font18, $font-w-m, var(--text-disabled));
     }
     .min {
         margin-left:-46px;
@@ -3701,17 +3726,58 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     @include wh (auto,auto);
     margin:0;
     border-radius:0;
-    @include title (var(--font-27), var(--font-heavy), var(--content));
+    @include title ($font27, $font-w-h, var(--content));
     line-height:unset;
     background-color:transparent;
     .gg_opt {
         position:unset;
         margin-bottom:10px;
-        font-weight:var(--font-medium);
+        font-weight:$font-w-m;
         color:var(--text-disabled);
     }
     em {
-        @include title (var(--font-27), var(--font-heavy), var(--content));
+        @include title ($font27, $font-w-h, var(--content));
+    }
+}
+
+/***************** dash_contrl *****************/
+.dash_contrl {
+    top:60px;
+    right:-336px;
+    height:calc($wh100 - 60px);
+    .btn_dbcontrl {
+        left:-35px;
+        @include wh (35px,35px);
+        background:url("../images/common/ico_dbcontrl.svg")no-repeat center var(--basic);
+    }
+    .contrl_wrap {
+        width:335px;
+        height:$wh100;
+        padding:23px 20px 0;
+    }
+}
+.contrl_cont {
+    padding:10px 0;
+    .contrl_list {
+        margin-bottom:10px;
+        border-bottom:$borderD;
+        li {
+            padding:10px 0;
+        }
+    }
+    .btn_box {
+        text-align:right;
+    }
+}
+.contrl_tit {
+    padding:10px 7px;
+    &>p {
+        @include title ($font18, $font-w-b, var(--title));
+    }
+    .icon_reset {
+        position:absolute;
+        bottom:3px;
+        right:0;
     }
 }
 
@@ -3731,7 +3797,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .sych_mnt_top {
         margin-bottom:18px;
         p {
-            @include title (var(--font-16), var(--font-medium), var(--title));
+            @include title ($font16, $font-w-m, var(--title));
         }
     }
     .btn_set {
@@ -3773,11 +3839,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .system_name_tit {
             .system_name {
-                font-size:var(--font-14);
+                font-size:$font14;
             }
             .db_pp {
                 padding-top:0;
-                font-size:var(--font-12);
+                font-size:$font12;
                 color:var(--secondary);
             }
         }
@@ -3809,7 +3875,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:13px 0 0;
         .progress_txt {
             padding-bottom:0;
-            @include title(var(--font-13), var(--font-regular), var(--secondary));
+            @include title($font13, $font-w-r, var(--secondary));
             line-height:16px;
             .loader {
                 left:0;
@@ -3826,7 +3892,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .user_numb {
             margin-top:7px;
-            @include title (24px, var(--font-extrabold), var(--title));
+            @include title (24px, $font-w-e, var(--title));
             text-align:right;
         }
     }
@@ -3838,8 +3904,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .server_info_txt {
         .server_info_name {
             padding-bottom:0;
-            font-size:var(--font-14);
-            font-weight:var(--font-medium);
+            font-size:$font14;
+            font-weight:$font-w-m;
             img {
                 @include wh(142px,21px);
                 margin-bottom:4px  ;
@@ -3852,7 +3918,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .btn_refsh {
         border:$borderD;
         border-radius:6px;
-        background:url("../images/common/ico_reset.svg")no-repeat center;
+        background:url("../images/common/ico_refresh.svg")no-repeat center;
     }
 }
 .main_server_box {
@@ -3867,7 +3933,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         p {
             padding:9px 0 8px;
             border-radius:8px;
-            font-size:var(--font-13);
+            font-size:$font13;
             background-color:var(--basic);
         }
     }
@@ -3921,24 +3987,24 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .ms_server_name {
-            font-weight:var(--font-regular);
+            font-weight:$font-w-r;
         }
         .stt_24h {
             padding-right:8px;
-            @include title (var(--font-13), var(--font-regular), var(--secondary));
+            @include title ($font13, $font-w-r, var(--secondary));
             .plus_cl {
-                font-weight:var(--font-regular);
+                font-weight:$font-w-r;
                 color:#386AEE;
             }
             .minus_cl {
                 padding-left:4px;
-                font-weight:var(--font-regular);
+                font-weight:$font-w-r;
                 color:var(--false);
             }
         }
         .user_numb {
             &.ms_numb {
-                @include title (var(--font-13), var(--font-extrabold), var(--title));
+                @include title ($font13, $font-w-e, var(--title));
             }
         }
     }
@@ -4024,7 +4090,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .meth {
     padding:3px 5px;
     border-radius:3px;
-    font-size:var(--font-12);
+    font-size:$font12;
     color:var(--primary);
     background-color:#DAFAF5;
 }
@@ -4110,8 +4176,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 i {
                     @include wh(18px,18px);
                     @include mask(var(--info));
-                    -webkit-mask-image: url(../images/common/ico_warning.svg);
-                    mask-image: url(../images/common/ico_warning.svg);
+                    -webkit-mask-image: url("../images/common/ico_warning.svg");
+                    mask-image: url("../images/common/ico_warning.svg");
                 }
             }
         }
@@ -4121,7 +4187,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         background-position:unset;
         border: 1px solid var(--border-d);
         border-radius: 6px;
-        background: url(../images/common/ico_reset.svg) no-repeat center;
+        background: url("../images/common/ico_refresh.svg") no-repeat center;
     }
     .server_loading {
         @include wh(30px, 30px);
@@ -4142,7 +4208,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             dt {
                 width:auto;
                 margin-bottom:0;
-                font-size:var(--font-13);
+                font-size:$font13;
                 color:var(--secondary);
             }
             .user_numb {
@@ -4258,7 +4324,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .user_view_slt {
                     padding:30px 0 0;
                     .form_contrl {
-                        font-size:var(--font-13);
+                        font-size:$font13;
                         height:30px;
                     }
                 }
@@ -4350,9 +4416,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:15px 10px;
         margin-bottom:15px;
         border-bottom:$borderD;
-        @include title(var(--font-14),var(--font-medium),var(--title));
+        @include title($font14,$font-w-m,var(--title));
         &>p{
-            @include title(var(--font-14),var(--font-medium),var(--title));
+            @include title($font14,$font-w-m,var(--title));
         }
     }
     .icam_b_stl {
@@ -4431,7 +4497,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .sicam_name {
-            font-size:var(--font-14);
+            font-size:$font14;
         }
         .server_loading {
             top:15px;
@@ -4445,14 +4511,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-position: unset;
             border: 1px solid var(--border-d);
             border-radius: 6px;
-            background: url(../images/common/ico_reset.svg) no-repeat center;
+            background: url("../images/common/ico_refresh.svg") no-repeat center;
         }
         .sync_stt_dtl {
             .sync_ctg_name {
                 color:var(--secondary);
             }
             .user_numb {
-                @include title(var(--font-16),var(--font-extrabold),var(--title));
+                @include title($font16,$font-w-e,var(--title));
             }
         }
         .sicam_icon_s {
@@ -4529,7 +4595,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 dt {
                     width:auto;
                     margin-bottom:0;
-                    font-size:var(--font-13);
+                    font-size:$font13;
                     color:var(--secondary);
                 }
                 .user_numb {
@@ -4547,7 +4613,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .progress_txt {
-        @include title(var(--font-13),var(--font-regular),var(--text-disabled));
+        @include title($font13,$font-w-r,var(--text-disabled));
         padding:0 0 0 4px;
         line-height:16px;
         .icon_progress {
@@ -4613,8 +4679,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         background-image:url("../images/common/donut.svg");
         background-position:unset;
         em {
-            font-size:var(--font-28);
-            font-weight:var(--font-heavy);
+            font-size:$font28;
+            font-weight:$font-w-h;
             line-height:94px;
         }
     }
@@ -4630,7 +4696,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         flex-direction: column;
         align-items: flex-start;
         .sub {
-            font-size:var(--font-13);
+            font-size:$font13;
             color:var(--secondary);
         }
     }
@@ -4639,9 +4705,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .score_numb {
             padding-bottom:10px;
             p {
-                @include title (20px, var(--font-heavy), var(--content));
+                @include title (20px, $font-w-h, var(--content));
                 span {
-                    font-weight:var(--font-medium);
+                    font-weight:$font-w-m;
                     color:var(--secondary);
                 }
             }
@@ -4660,7 +4726,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .score_rst {
         gap:4px;
         p {
-            font-size:var(--font-14);
+            font-size:$font14;
             color:var(--true);
             &.icon_stt {
                 @include wh (18px,18px);
@@ -4729,7 +4795,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .form_contrl {
                 width:100%;
                 height:30px;
-                font-size:var(--font-13);
+                font-size:$font13;
             }
         }
         .box_showbtn {

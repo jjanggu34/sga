@@ -1,4 +1,5 @@
-@use 'variable' as *;
+@use './variable' as *;
+@use './mixin' as *;
 
 $borderTs: "search_wrap", "tab_wrap";
 
@@ -14,6 +15,7 @@ $borderTs: "search_wrap", "tab_wrap";
 .form_contrl {
     &:focus-visible, &:focus {
         border:1px solid var(--primary);
+        color:var(--title);
     }
 }
 /* disabled */
@@ -21,8 +23,8 @@ $borderTs: "search_wrap", "tab_wrap";
     height:30px;
     border:1px solid var(--default);
     border-radius:6px;
-    font-size:var(--font-13);
-    color:var(--title);
+    font-size:$font13;
+    color:var(--text-disabled);
     &:disabled {
         background:var(--btn-disabled);
         border:$borderD;
@@ -102,10 +104,10 @@ $borderTs: "search_wrap", "tab_wrap";
             button {
                 padding:0 10px;
                 color:var(--content);
-                font-weight:var(--font-regular);
+                font-weight:$font-w-r;
                 line-height:30px;
                 &.on {
-                    font-weight:var(--font-medium);
+                    font-weight:$font-w-m;
                     color:var(--white);
                     background-color:var(--primary);
                 }
@@ -124,10 +126,10 @@ $borderTs: "search_wrap", "tab_wrap";
         }
         .btn_weekday {
             padding:0;
-            font-weight:var(--font-regular);
+            font-weight:$font-w-r;
             color:var(--content);
             &.on {
-                font-weight:var(--font-medium);
+                font-weight:$font-w-m;
                 background-color:var(--primary);
             }
         }
@@ -168,7 +170,7 @@ $borderTs: "search_wrap", "tab_wrap";
     padding-top:6px;
     .form_contrl {
         border:0;
-        @include title(var(--font-13), var(--font-regular), var(--content));
+        @include title($font13, $font-w-r, var(--content));
         background-color:#F3F5F7;
     }
 }
@@ -194,7 +196,7 @@ $borderTs: "search_wrap", "tab_wrap";
             background-image:none;
         }
         p {
-            @include title(var(--font-13), var(--font-regular), var(--text-disabled));
+            @include title($font13, $font-w-r, var(--text-disabled));
             line-height:16px;
         }
         &.upload_list {
@@ -207,7 +209,7 @@ $borderTs: "search_wrap", "tab_wrap";
                 gap:4px;
                 padding-bottom:10px;
                 p {
-                    font-size:var(--font-13);
+                    font-size:$font13;
                     color:var(--title);
                     line-height:16px;
                     vertical-align:unset;
@@ -301,8 +303,8 @@ $labels: "check_stl_lab", "radio_stl_lab";
         &::after {
             @include wh(15px, 15px);
             @include mask(var(--default));
-            -webkit-mask-size: 50%;
-            mask-size: 50%;
+            -webkit-mask-size: 60%;
+            mask-size: 60%;
             -webkit-mask-image: url("../images/common/icon_check_s.svg");
             mask-image: url("../images/common/icon_check_s.svg");
         }
@@ -423,6 +425,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
 select{
     &.form_contrl {
         padding-right:26px;
+        font-size:$font14;
         background: url("../images/common/ico_accordion.svg") no-repeat right 1px center var(--white);
     }
 }
