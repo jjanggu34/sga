@@ -626,10 +626,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 /***************** progress *****************/
 .topPrss {
-    height:54px;
     &.scrollPrss {
         &+div {
-            margin-top:54px;
+            margin-top:52px;
         }
     }
     &+.form_stl {
@@ -1415,6 +1414,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border-radius:30px;
         background-color:var(--text-disabled);
     }
+    &::-webkit-scrollbar {
+        height:10px;
+    }
     &:has(.flow2) {
         height:207px
     }
@@ -1498,6 +1500,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         @include icon(16px,16px);
                     }
                 }
+            }
+        }
+        &:hover {
+            &~.wf_card.ab_wf_card {
+                bottom:-4px;
             }
         }
         .wf_state {
@@ -1829,6 +1836,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &:hover {
                 &~.wf_card.ab_wf_card {
                     top:79px;
+                    bottom:unset;
                 }
             }
         }

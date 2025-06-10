@@ -890,11 +890,8 @@ input + .loader {
 }
 
 /***************** progress *****************/
-.topPrss {
-  height: 54px;
-}
 .topPrss.scrollPrss + div {
-  margin-top: 54px;
+  margin-top: 52px;
 }
 .topPrss + .form_stl {
   padding-top: 36px;
@@ -1738,6 +1735,9 @@ input + .loader {
   border-radius: 30px;
   background-color: var(--text-disabled);
 }
+.workflow_box::-webkit-scrollbar {
+  height: 10px;
+}
 .workflow_box:has(.flow2) {
   height: 207px;
 }
@@ -1873,6 +1873,9 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
+}
+.workflow_wrap .wf_card:hover ~ .wf_card.ab_wf_card {
+  bottom: -4px;
 }
 .workflow_wrap .wf_card .wf_state {
   position: absolute;
@@ -2192,6 +2195,7 @@ input + .loader {
 }
 .workflow_wrap .ab_wf_open .wf_card:hover ~ .wf_card.ab_wf_card {
   top: 79px;
+  bottom: unset;
 }
 
 /***************** apply_card *****************/

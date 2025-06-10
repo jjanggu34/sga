@@ -25,6 +25,7 @@ $borderTs: "search_wrap", "tab_wrap";
     color:var(--title);
     &:disabled {
         background:var(--btn-disabled);
+        border:$borderD;
     }
     &::placeholder {
         color:var(--text-disabled);

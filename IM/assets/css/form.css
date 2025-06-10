@@ -27,6 +27,7 @@
 }
 .form_contrl:disabled {
   background: var(--btn-disabled);
+  border: 1px solid var(--border-d);
 }
 .form_contrl::placeholder {
   color: var(--text-disabled);
