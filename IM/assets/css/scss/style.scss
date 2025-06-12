@@ -53,7 +53,7 @@ $btnstls: "trcolor", "fcolor";
 }
 
 .redtxt {
-    color:$false;
+    color:$false!important;
 }
 
 .txtbg {
@@ -70,6 +70,19 @@ $btnstls: "trcolor", "fcolor";
             @include mask(#F9AF1C);
             -webkit-mask-image:url("../images/label/icon_pgs.svg");
             mask-image:url("../images/label/icon_pgs.svg");
+        }
+    }
+}
+.status {
+    &.yelltxt {
+        border:0;
+        background-color:#FFF9ED;
+        &::before {
+            content:none;
+        }
+        .icon_list {
+            @include icon(16px,16px);
+            background-image:url("../images/label/ico_hourglass.svg");
         }
     }
 }
@@ -2236,7 +2249,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     // synchronize_card
-    .system_tab {
+    .dash_box.system_tab {
+        width:calc((100% - 170px) / 6);
         padding:14px 22px;
         &.on {
             border:0;
@@ -2244,6 +2258,70 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .i-card_title {
                 color:$white;
             }
+            .system_info {
+                p {
+                    color:$white;
+                }
+            }
+        }
+        .i-card_title {
+            padding:0 0 10px;
+            @include title($font16,$font-w-b,$title);
+        }
+        .system_info {
+            padding:0;
+            p {
+                padding-bottom:10px;
+                color:$secondary;
+                &:last-child {
+                    padding-bottom:0;
+                }
+            }
+        }
+    }
+    .more_list_tab {
+        width:82px;
+        background-color:$basic;
+    }
+    .btn_more_list {
+        transform:translateY(-50%);
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:0;
+        font-size:$font18;
+        font-weight:$font-w-e;
+        .more_plus {
+            @include icon(24px,24px);
+            background-image:url("../images/common/icon_plus.svg");
+            background-position:unset;
+        }
+    }
+    .balloon.list_pop {
+        border-radius:6px;
+        border-color:$list-border;
+        box-shadow:0 3px 3px #00000016;
+        .move_box {
+            padding:15px 23px;
+            border:0;
+            .search_box {
+                text-align:right;
+                .search_inputbox {
+                    width:273px;
+                }
+            }
+        }
+        .move_tbl {
+            border-bottom:$borderD;
+        }
+        .mini_paging {
+            margin-top:16px;
+        }
+    }
+    &+.content.only {
+        margin:57px 24px 20px !important;;
+        .pcs_ctg_wrap {
+            margin-top:30px;
         }
     }
 }
@@ -2521,7 +2599,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             font-weight:$font-w-m;
         }
         .pcs_ctg_list {
-            padding-top:25px;
+            padding-top:14px;
             border:0;
             li {
                 border-bottom:0;
@@ -2532,6 +2610,23 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .pcs_ctg_nxt {
         .fm_tit {
             margin-top:0;
+        }
+        .tab_wrap.cont_in_tab {
+            padding:0 0 16px;
+        }
+        .search_wrap {
+            margin:0 0 20px;
+            border-radius:6px;
+            &+.list_btn {
+                padding:0 0 22px;
+                border-top:0;
+            }
+        }
+        .tbl_btm {
+            padding:10px 20px 20px;
+        }
+        .list_btn {
+            padding:0;
         }
     }
 }
@@ -4944,7 +5039,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             color:$title;
         }
         &:last-child {
-            dt {
+            dt:not(.inb) {
                 display:none;
             }
         }
@@ -5036,6 +5131,76 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .checkCircle {
                 font-weight:$font-w-m;
             }
+        }
+    }
+}
+
+/*---------------------------------------------
+    #calender_time_table
+---------------------------------------------*/
+.list_stl {
+    .move_box:not(.move_wrap.list_stl .move_box) {
+        height:auto;
+        padding:23px 0 0;
+        border:0;
+    }
+    .cld_weekday_tbl {
+        background-color:$table-th;
+        td {
+            font-weight:$font-w-m;
+            color:$title;
+        }
+    }
+    .cld_weekday {
+        border:0;
+        border-bottom:1px solid $title;
+    }
+    .cld_col {
+        max-height:480px;
+        border:0;
+        border-bottom:1px solid $list-border;
+    }
+    .cld_time_list {
+        li {
+            .cld_time_sp {
+                font-size:$font12;
+            }
+        }
+    }
+    .week_time_schedule {
+        margin:0;
+        border:0;
+        border-left:2px solid $primary;
+        background-color:#DAFAF5;
+        .time_txt {
+            padding:4px 7px;
+            font-weight:$font-w-m;
+            color:$primary;
+        }
+        .small_delbtn {
+            top:1px;
+            padding:0;
+            background-color:$primary;
+            -webkit-mask-image: url("../images/common/ico_cld_close.svg");
+            mask-image: url("../images/common/ico_cld_close.svg");
+        }
+    }
+    .mini_popup {
+        border-radius:12px;
+        border:$borderD;
+        box-shadow:0 6px 6px #00000016;
+        .popup_title {
+            border-radius:12px 12px 0 0;
+            @include title($font14,$font-w-m,$title);
+            background-color:$white;
+        }
+        .fm_list {
+            padding-bottom:17px;
+        }
+        .btn_box {
+            padding:10px 0 0;
+            border-top:$borderD;
+            text-align:right;
         }
     }
 }

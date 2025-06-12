@@ -30,7 +30,7 @@
 				<div class="nav_header">
 					<!--s: 이미지 경로 및 이미지 변경-->
 					<a href="" class="logo">
-						<img src="assets/images/common/logo_186x30.png">
+						<img src="assets/images/common/logo.png">
 						<span>Admin</span>
 					</a>
 					<!--e: 이미지 경로 및 이미지 변경-->
@@ -59,6 +59,9 @@
 					<li><a href=""><i class="icon_monitor"></i><span>모니터링</span></a></li>
 					<li><a href=""><i class="icon_report"></i><span>리포트</span></a></li>
 				</ul>
+				<!-- s: copyright 추가 -->
+				<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
+				<!-- e: copyright 추가 -->
 			</div>
 		</div>
 		<div id="container">
@@ -88,15 +91,19 @@
 									<button class="alim_clear">모든 알림 지우기</button>
 								</div>
 								<ul class="alim_list">
-									<li><a><i></i>경고!</a></li>
-									<li><a><i></i>나한테만 오는 알람메세지이이이이 두줄일때 다음줄로 넘어갑니다 </a></li>
-									<li><a><i></i>전체적인 알람공지</a></li>
-									<li><a><i></i>SMS문자왔숑</a></li>
-									<li><a><i></i>메일왔네요</a></li>
-									<li><a><i></i>기타알람</a></li>
+									<!-- s: class 변경 -->
+									<li><a><i class="icon_alim icon_caution"></i>경고!</a></li>
+									<li><a><i class="icon_alim icon_message"></i>나한테만 오는 알람메세지이이이이 두줄일때 다음줄로 넘어갑니다 </a></li>
+									<li><a><i class="icon_alim icon_notice"></i>전체적인 알람공지</a></li>
+									<li><a><i class="icon_alim icon_receive"></i>SMS문자왔숑</a></li>
+									<li><a><i class="icon_alim icon_caution"></i>메일왔네요</a></li>
+									<li><a><i class="icon_alim icon_caution"></i>기타알람</a></li>
+									<!-- e: class 변경 -->
 								</ul>
 								<div class="allAlim">
-									<a href="" class="btn_allAlim">모두 보기 ></a>
+									<!-- s: class 변경 -->
+									<a href="" class="basic icon_plus">모두 보기</a>
+									<!-- e: class 변경 -->
 								</div>
 							</div>
 						</div>
@@ -284,7 +291,9 @@
 						<li>
 							<div class="form_tit"><label for="select06">Executed Class</label></div>
 							<div class="form_txt">
-								<SELECT class="form_contrl middle" id="select06">
+								<!-- s: middle 삭제 -->
+								<SELECT class="form_contrl" id="select06">
+								<!-- e: middle 삭제 -->
 									<option>kr.co.sgni.im.reconciliation.ReconcileExecuteSchedulerController</option>
 									<option>kr.co.sgni.im.reconciliation.ReconcileExecuteSchedulerController</option>
 									<option>kr.co.sgni.im.reconciliation.ReconcileExecuteSchedulerController</option>
@@ -295,7 +304,9 @@
 						<li>
 							<div class="form_tit"><label for="select06">Executed Class Executed Class</label></div>
 							<div class="form_txt">
-								<SELECT class="form_contrl large" id="select06">
+								<!-- s: large 삭제 -->
+								<SELECT class="form_contrl" id="select06">
+								<!-- e: large 삭제 -->
 									<option>kr.co.sgni.im.reconciliation.ReconcileExecuteSchedulerController</option>
 									<option>kr.co.sgni.im.reconciliation.ReconcileExecuteSchedulerController</option>
 									<option>kr.co.sgni.im.reconciliation.ReconcileExecuteSchedulerController</option>
@@ -321,7 +332,9 @@
 						<li>
 							<div class="form_tit">기한</div>
 							<div class="form_txt">
-								<div class="form_date">
+								<!-- s: flx 추가 -->
+								<div class="form_date flx">
+								<!-- e: flx 추가 -->
 									<input type="text" class="form_contrl date_ctl" value="2019-10-11" readonly="readonly">
 									<span> ~ </span>
 									<input type="text" class="form_contrl date_ctl" value="2019-10-18" readonly="readonly">
@@ -465,9 +478,9 @@
 					</div>					
 				</div>
 			</div>
-			<div class="footer">
+			<!-- nav로 이동 <div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </body>
