@@ -1,5 +1,4 @@
-@use './variable' as *;
-@use './mixin' as *;
+@use 'variable' as *;
 
 /*---------------------------------------------
 	#기본 레이아웃
@@ -7,11 +6,11 @@
 body {
     // min-width:1600px;
     height:100%;
-    background:var(--body);
+    background:$body;
     overflow:auto;
     * {
         font-family:"S-CoreDream";
-        @include title ($font13, $font-w-r, var(--content));
+        @include title ($font13, $font-w-r, $content);
         box-sizing:border-box;
     }
 }
@@ -49,13 +48,13 @@ body {
     }
     .login_tit {
         padding-bottom:20px;
-        @include title (35px, $font-w-b, var(--title));
+        @include title (35px, $font-w-b, $title);
         line-height:1;
     }
     .login_exps_right {
         padding:20px 21px;
         border-radius:20px;
-        background-color:var(--primary);
+        background-color:$primary;
     }
     .login_input {
         padding-top:40px;
@@ -67,7 +66,7 @@ body {
                     top:11px;
                     left:17px;
                     @include wh(20px,20px);
-                    @include mask(var(--text-disabled));
+                    @include mask($text-disabled);
                 }
             }
         }
@@ -112,21 +111,21 @@ body {
         .form_contrl {
             padding-left:40px;
             &.form_warning {
-                border-color:var(--false);
+                border-color:$false;
             }
         }
         .warning_txt {
             position:relative;;
             padding:0 22px 0 22px;
-            font-size:$font12;
-            color:var(--false);
+            font-size:var(--font-12 );
+            color:$false;
             &::before {
                 content:"";
                 position:absolute;
                 left:0;
                 display:inline-block;
                 @include wh(18px,18px);
-                @include mask(var(--false));
+                @include mask($false);
                 -webkit-mask-image: url(../images/common/ico_info.svg);
                 mask-image: url(../images/common/ico_info.svg);
             }
@@ -134,7 +133,7 @@ body {
         .dupli_check {
             padding-top:0;
             .txt {
-                color:var(--false);
+                color:$false;
             }
         }
     }
@@ -143,7 +142,7 @@ body {
         padding-top:0;
         margin-top:auto;
         .copy {
-            color:var(--text-disabled);
+            color:$text-disabled;
             span {
                 @extend .copy;
             }
@@ -175,7 +174,7 @@ body {
             width:$wh100;
             padding:30px 20px;
             border-radius:20px;
-            background-color:var(--primary);
+            background-color:$primary;
         }
     }
 }
@@ -183,16 +182,16 @@ body {
 .tn_slt {
     padding-bottom:10px;
     .fm_tit {
-        border:1px solid var(--default);
+        border:1px solid $default;
         font-weight:$font-w-r;
-        color:var(--title);
-        background-color:var(--white);
+        color:$title;
+        background-color:$white;
         .tab_arrow {
             right:10px;
             transform:translateY(-50%);
             @include wh (24px,24px);
             margin:0;
-            @include mask (var(--text-disabled));
+            @include mask ($text-disabled);
             -webkit-mask-image: url(../images/common/ico_accordion.svg);
             mask-image: url(../images/common/ico_accordion.svg);
             &.open {
@@ -209,7 +208,7 @@ body {
     padding:21px 20px;
     border:$borderD;
     border-radius:6px;
-    background-color:var(--body);
+    background-color:$body;
     .msgstl {
         height:100%;
         p {
@@ -248,11 +247,11 @@ body {
         background-color:#D6E9FF;
         box-shadow:unset;
         .bluetxt {
-            @include title ($font12, $font-w-r, var(--blue));
+            @include title ($font12, $font-w-r, $blue);
         }
         .btn_del {
             @include wh (24px, 24px);
-            @include mask (var(--blue));
+            @include mask ($blue);
             -webkit-mask-image: url(../images/common/close.svg);
             mask-image: url(../images/common/close.svg);
             background-image:none;
@@ -270,7 +269,7 @@ body {
     background-color:transparent;
     &>p {
         padding-bottom:22px;
-        @include title ($font18, $font-w-b, var(--white));
+        @include title ($font18, $font-w-b, $white);
     }
     .notice_list {
         li {
@@ -289,8 +288,8 @@ body {
     padding:20px 0;
     em {
         padding:0 16px;
-        @include title ($font14, $font-w-r, var(--white));
-        background-color:var(--primary);
+        @include title ($font14, $font-w-r, $white);
+        background-color:$primary;
     }
 }
 .client_down_list {
@@ -304,7 +303,7 @@ body {
         font-size:$font16;
         &.AMClient {
             border:0;
-            color:var(--content);
+            color:$content;
             .icon_client {
                 @include icon(60px,40px);
                 background-image:url("../images/common/ico_am.svg");
@@ -312,7 +311,7 @@ body {
         }
         &.OTP {
             border:0;
-            color:var(--content);
+            color:$content;
             .icon_client {
                 @include icon(60px,40px);
                 background-image:url("../images/common/ico_otp.svg");
@@ -321,7 +320,7 @@ body {
         }
         &.FIDO {
             border:0;
-            color:var(--content);
+            color:$content;
             .icon_client {
                 @include icon(60px,45px);
                 background-image:url("../images/common/ico_uem.svg");
@@ -330,7 +329,7 @@ body {
         }
         &.UEM {
             border:0;
-            color:var(--content);
+            color:$content;
             .icon_client {
                 @include icon(60px,45px);
                 background-image:url("../images/common/ico_fido.svg");
@@ -376,6 +375,7 @@ body {
         }
     }
 }
+
 /*---------------------------------------------
     #헤더 레이아웃
 ---------------------------------------------*/
@@ -429,7 +429,7 @@ body {
             &>p {
                 display:block;
                 padding:24px 22px;
-                @include title ($font12, $font-w-m, var(--text-disabled));
+                @include title ($font12, $font-w-m, $text-disabled);
                 line-height:18px;
             }
         }
@@ -437,8 +437,8 @@ body {
     .nav_header {
         @include flexsb();
         padding:15px 20px 16px;
-        border-bottom:1px solid var(--text-disabled);
-        background-color:var(--white);
+        border-bottom:1px solid $text-disabled;
+        background-color:$white;
         .logo {
             @include wh (171px, 28px);
             img {
@@ -452,13 +452,13 @@ body {
             border:0;
             border-bottom:$borderD;
             border-radius:0;
-            @include title ($font14, $font-w-r, var(--content));
+            @include title ($font14, $font-w-r, $content);
             background-color:#F9FBFD;
             &.on {
                 border-radius:0;
-                border-bottom:2px solid var(--primary);
+                border-bottom:2px solid $primary;
                 font-weight:$font-w-m;
-                color:var(--primary);
+                color:$primary;
             }
         }
     }
@@ -473,22 +473,22 @@ body {
                 &.on {
                     border-top:0;
                     border-left-color: transparent;
-                    color:var(--white);
-                    background-color:var(--primary);
+                    color:$white;
+                    background-color:$primary;
                     i {
-                        background-color:var(--white);
+                        background-color:$white;
                     }
                     span {
-                        color:var(--white);
+                        color:$white;
                     }
                     &::after {
                         transform: translateY(-50%) rotate(180deg);
-                        background-color:var(--primary);
+                        background-color:$primary;
                     }
                 }
                 &:hover {
                     box-shadow:none;
-                    color:var(--primary);
+                    color:$primary;
                 }
                 &::after {
                     content:none;
@@ -497,7 +497,7 @@ body {
                     top:8px;
                     left:12px;
                     @include wh (24px,24px);
-                    @include mask (var(--content));
+                    @include mask ($content);
                     background-image:none;
                     &.UserMangement {
                         -webkit-mask-image:url("../images/nav/nav_user.svg");
@@ -561,10 +561,10 @@ body {
                         position:relative;
                         padding:0;
                         font-weight:$font-w-m;
-                        color:var(--text-disabled);
+                        color:$text-disabled;
                         line-height:17px;
                         &:hover {
-                            color:var(--primary);
+                            color:$primary;
                             background-color:transparent;
                             opacity:1;
                         }
@@ -575,15 +575,15 @@ body {
                             right:0;
                             transform:translateY(-50%);
                             display:inline-block;
-                            @include mask(var(--text-disabled));
+                            @include mask($text-disabled);
                             -webkit-mask-image:url("../images/common/nav_arr.svg");
                             mask-image:url("../images/common/nav_arr.svg");
                         }
                         &.on {
-                            color:var(--primary);
+                            color:$primary;
                             background-color:transparent;
                             &::after {
-                                background-color:var(--primary);
+                                background-color:$primary;
                             }
                         }
                     }
@@ -594,8 +594,8 @@ body {
     .header {
         padding:18px 20px 18px 24px;
         height:60px;
-        border-bottom:1px solid var(--text-disabled);
-        background:var(--white);
+        border-bottom:1px solid $text-disabled;
+        background:$white;
         $Hbtns: "btn_lnb", "btn_lnb_m";
 
         @each $Hbtn in $Hbtns {
@@ -627,7 +627,7 @@ body {
                 li {
                     height:24px;
                     a {
-                        @include title ($font13, $font-w-r, var(--secondary));
+                        @include title ($font13, $font-w-r, $secondary);
                         line-height:26px;
                         &::after {
                             content:none;
@@ -636,26 +636,26 @@ body {
                     &::before {
                         @include content(16px,16px);
                         display:inline-block;
-                        @include mask (var(--secondary));
+                        @include mask ($secondary);
                         -webkit-mask-image:url("../images/common/header_arr.svg");
                         mask-image:url("../images/common/header_arr.svg");
                     }
                     &:last-child {
                         a {
-                            color:var(--title);
+                            color:$title;
                         }
                         span {
-                            color:var(--title);
+                            color:$title;
                         }
                         &::before {
-                            background-color:var(--title);
+                            background-color:$title;
                         }
                     }
                     &:first-child {
                         a {
                             display:inline-block;
                             @include wh(24px, 24px);
-                            @include mask(var(--secondary));
+                            @include mask($secondary);
                             font-size:0;
                             -webkit-mask-image:url("../images/common/home.svg");
                             mask-image:url("../images/common/home.svg");
@@ -688,15 +688,15 @@ body {
                         top:-18px;
                         right:0;
                         display:inline-block;
-                        background-color:var(--border-d);
+                        background-color:$border-d;
                     }
                     span {
                         padding-left:0;
-                        color:var(--title);
+                        color:$title;
                         line-height:24px;
                         em {
                             padding-left:20px;
-                            color:var(--primary);
+                            color:$primary;
                         }
                     }
                     .time_ref {
@@ -705,7 +705,7 @@ body {
                         padding:0;
                         margin-top:0;
                         border:0;
-                        @include mask(var(--primary));
+                        @include mask($primary);
                         -webkit-mask-image:url("../images/common/icon_refresh.svg");
                         mask-image:url("../images/common/icon_refresh.svg");
                         background-image:none;
@@ -723,7 +723,7 @@ body {
                 &.btn_logout {
                     a {
                         @include wh(24px,24px);
-                        @include mask(var(--primary));
+                        @include mask($primary);
                         margin-top:0;
                         background-image:none;
                         &::before {
@@ -737,7 +737,7 @@ body {
                         background-image:url("../images/common/icon-alarm.svg");
                         &>span {
                             line-height:20px;
-                            color:var(--white);
+                            color:$white;
                             background-color:#F76900;
                         }
                     }
@@ -757,7 +757,7 @@ body {
                 &.btn_top_user a {
                     @include wh (auto, auto);
                     font-weight:$font-w-r;
-                    color:var(--title);
+                    color:$title;
                     background:none;
                 }
                 &>a {
@@ -771,7 +771,7 @@ body {
             &::before {
                 top:-8px;
                 right:72px;
-                border-bottom:8px solid var(--border-d);
+                border-bottom:8px solid $border-d;
             }
             &::after {
                 top:-7px;
@@ -780,7 +780,7 @@ body {
             &.alim_toast {
                 .newalim_txt {
                     em {
-                        color:var(--primary);
+                        color:$primary;
                     }
                 }
             }
@@ -793,14 +793,14 @@ body {
                     padding:24px 24px 8px;
                     border-bottom:0;
                     span {
-                        @include title ($font16, $font-w-b, var(--title));
+                        @include title ($font16, $font-w-b, $title);
                     }
                     .alim_clear {
                         top:unset;
                         right:24px;
                         bottom:0;
                         padding:0;
-                        @include title($font14,$font-w-r,var(--content));
+                        @include title($font14,$font-w-r,$content);
                         line-height:unset;
                     }
                 }
@@ -816,7 +816,7 @@ body {
                             padding:11px 7px 11px 30px;
                             font-weight:$font-w-r;
                             line-height:16px;
-                            color:var(--content);
+                            color:$content;
                             background-color:transparent;
                             .icon_alim {
                                 top:10px;
@@ -828,7 +828,7 @@ body {
                             padding:50px 7px 11px;
                             text-align:center;
                             line-height:normal;
-                            color:var(--text-disabled);
+                            color:$text-disabled;
                             &::before {
                                 display:inline-block;
                                 @include content(24px, 24px);
@@ -840,7 +840,7 @@ body {
                             }
                             a {
                                 padding:0;
-                                color:var(--text-disabled);
+                                color:$text-disabled;
                             }
                         }
                     }
@@ -852,6 +852,7 @@ body {
         }
     }
 }
+
 /*---------------------------------------------
     #컨텐츠
     content 안에 search 들어갈 때에는 padding 없음
@@ -860,7 +861,7 @@ body {
     #container {
         padding-left:0;
         margin-left:240px;
-        background:var(--body);
+        background:$body;
         .dash_wrap {
             min-height:calc(100vh - 100px);
             height:100%;
@@ -868,13 +869,13 @@ body {
             border:$borderD;
             border-radius:20px;
             font-size:0;
-            background:var(--white);
+            background:$white;
         }
         .cont_wrap {
             gap:10px;
             margin:64px 4px 0;
             padding:0;
-            background:var(--body);
+            background:$body;
             .content:not(.cnt_lyt_sc .content) {
                 width:calc(($wh100 - 8px) / 2);
                 padding:20px 0;
@@ -890,7 +891,10 @@ body {
             }
             .content {
                 // min-height:calc(100vh - 80px);//header + 위아래 margin
-                border:1px solid var(--list-border);
+                border:1px solid $list-border;
+                .default_tbl tbody tr td {
+                    line-height:34px;
+                }
             }
         }
         .content {
@@ -920,7 +924,7 @@ body {
                 overflow-y:auto;
                 &::-webkit-scrollbar-thumb {
                     border-radius:30px;
-                    background-color:var(--border-d);
+                    background-color:$border-d;
                 }
                 .tab_wrap {
                     padding-top:0;
@@ -929,6 +933,13 @@ body {
                     padding:0 0 10px;
                     margin:0 20px;
                     overflow-x:auto;
+                    &::-webkit-scrollbar-thumb {
+                        border-radius:30px;
+                        background-color:$border-d;
+                    }
+                    &::-webkit-scrollbar {
+                        height:10px;
+                    }
                 }
                 .tbl_btm { //table 아래 pagination
                     padding:10px 20px 20px;
@@ -1011,17 +1022,17 @@ body {
     top:60px;
     height:calc(100% - 60px);
     padding:20px;
-    border:1px solid var(--border-d);
+    border:1px solid $border-d;
     border-radius:13px 0 0 13px;
     box-shadow:0 3px 6px #00000016;
     // 팝헤더
     .dtv_top {
         padding:10px 0 10px 6px;
-        border-bottom-color:var(--title);
+        border-bottom-color:$title;
         border-radius:13px 0 0;
         background-color:transparent;
         .title {
-            @include title ($font18, $font-w-b, var(--title));
+            @include title ($font18, $font-w-b, $title);
         }
         .btn_close {
             top:6px;
@@ -1036,7 +1047,7 @@ body {
         &.scroll {
             &::-webkit-scrollbar-thumb {
                 border-radius:30px;
-                background:var(--border-d);
+                background:$border-d;
             }
         }
         .view_list {
@@ -1045,7 +1056,7 @@ body {
     }
     .dtv_cont_wrap {
         .btn_box {
-            border-top:1px solid var(--list-border);
+            border-top:1px solid $list-border;
         }
     }
 }
@@ -1054,11 +1065,11 @@ body {
 .layer_popup {
     .popup_title {
         padding:10px 20px 0 20px;
-        border-bottom-color:var(--title);
-        background-color:var(--white);
+        border-bottom-color:$title;
+        background-color:$white;
         h3 {
             padding:10px 0;
-            @include title ($font18, $font-w-b, var(--title));
+            @include title ($font18, $font-w-b, $title);
         }
         .btn_close {
             top:12px;
@@ -1077,8 +1088,8 @@ body {
             height:100%;
             padding-bottom:0;
             margin-bottom:24px;
-            border-top:1px solid var(--list-border);
-            border-bottom:1px solid var(--list-border);
+            border-top:1px solid $list-border;
+            border-bottom:1px solid $list-border;
             overflow-y:auto;
             thead {
                 tr {
@@ -1109,7 +1120,7 @@ body {
             transform:translateX(-50%);
             border-left: 7px solid transparent;
             border-right: 7px solid transparent;
-            border-bottom: 10px solid var(--border-d);
+            border-bottom: 10px solid $border-d;
         }
         &::after {
             top:-14px;
@@ -1131,7 +1142,7 @@ body {
         box-shadow:0 3px 3px #00000016;
         &::before {
             top:-8px;
-            border-bottom:8px solid var(--border-d);
+            border-bottom:8px solid $border-d;
         }
         &::after {
             top:-7px;
@@ -1146,19 +1157,12 @@ body {
         border-radius:6px;
         box-shadow:0 3px 3px #00000016;
         &::before {
-            border-bottom:8px solid var(--border-d);
+            border-bottom:8px solid $border-d;
         }
         a {
             font-weight:$font-w-r;
         }
     }
-}
-
-/*---------------------------------------------
-    #푸터 레이아웃
----------------------------------------------*/
-.footer {
-    background:var(--body);
 }
 
 /*---------------------------------------------

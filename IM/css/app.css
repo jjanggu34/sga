@@ -12,7 +12,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 body {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 400;
     line-height: 1.2
 }
@@ -82,7 +82,7 @@ a,button {
 button {
     padding: 0;
     outline: none;
-    font-size: 13px;
+    font-size: var(--font-13);
     background-color: initial
 }
 
@@ -292,7 +292,7 @@ a:focus,a:hover {
 .txtbg {
     padding: 2px 12px;
     border-radius: 18px;
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 500
 }
 
@@ -670,7 +670,7 @@ a:focus,a:hover {
 
 .header .btn_lnb a {
     position: fixed;
-    top: 13px;
+    top: var(--font-13);
     left: 218px;
     display: block;
     z-index: 2001
@@ -744,7 +744,7 @@ a:focus,a:hover {
     color: #fff;
     line-height: 28px;
     display: block;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .gl_nav .btn_top_user a img {
@@ -967,7 +967,7 @@ a:focus,a:hover {
     display: block;
     padding: 12px 12px 12px 35px;
     position: relative;
-    font-size: 13px;
+    font-size: var(--font-13);
     background-color: #f8f9fc
 }
 
@@ -977,7 +977,7 @@ a:focus,a:hover {
 
 .alim_list li a .icon_alim,.alim_list li a .icon_menual {
     position: absolute;
-    top: 13px;
+    top: var(--font-13);
     left: 12px
 }
 
@@ -990,7 +990,7 @@ a:focus,a:hover {
     text-align: center;
     padding: 12px 0;
     color: #2772fb;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .newalim_txt {
@@ -1312,7 +1312,7 @@ a:focus,a:hover {
     background-color: #efefef;
     margin-top: 16px;
     border-left: 4px solid #518dfb;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .line {
@@ -1433,7 +1433,7 @@ a.fm_tit:hover {
 }
 
 .dash_box .dash_tit {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 700;
     padding: 10px 12px;
     border-bottom: 1px solid #dbdbdb;
@@ -1845,7 +1845,7 @@ select.form_contrl {
 
 .tbl_list .req_txt em {
     font-weight: 700;
-    font-size: 13px;
+    font-size: var(--font-13);
     vertical-align: text-bottom
 }
 
@@ -1876,7 +1876,7 @@ select.form_contrl {
 }
 
 .form_stl .form_list .form_tit.form_tit_lg {
-    padding-top: 13px
+    padding-top: var(--font-13)
 }
 
 .form_stl .form_list .form_txt {
@@ -2039,7 +2039,7 @@ select.form_contrl {
 .form_tbl .form_tit {
     width: 176px;
     min-width: 200px;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .form_tbl .form_tit,.form_tbl .form_tit.large {
@@ -2360,8 +2360,8 @@ select.form_contrl {
 
 .detail_search_btn i {
     position: absolute;
-    width: 13px;
-    height: 13px;
+    width: var(--font-13);
+    height: var(--font-13);
     background-color: #fcfcfc;
     top: 12px;
     right: 12px;
@@ -2657,7 +2657,7 @@ select.form_contrl {
 }
 
 .btn_dtail.on .btn_dtail_arrow {
-    background-position-y: -13px;
+    background-position-y: -var(--font-13);
     top: 7px
 }
 
@@ -3012,7 +3012,7 @@ td.aft_cont {
 }
 
 .icon_ff.sl_ff.text {
-    background-position-x: -113px
+    background-position-x: -1var(--font-13)
 }
 
 .mandatxt {
@@ -3255,7 +3255,7 @@ td ul.flx {
 }
 
 .tbl_btm .page_info,.tbl_btm .page_select,.tbl_btm .pagination {
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .tbl_btm .page_select .form_contrl {
@@ -3415,7 +3415,7 @@ td ul.flx {
     text-align: center;
     border-radius: 5px;
     height: 30px;
-    font-size: 13px;
+    font-size: var(--font-13);
     vertical-align: middle;
     margin: 0 1px
 }
@@ -3678,7 +3678,7 @@ td.default_addel_btn {
     display: block;
     height: 28px;
     line-height: 28px;
-    font-size: 13px;
+    font-size: var(--font-13);
     padding: 0 12px;
     background-color: #fff
 }
@@ -3957,7 +3957,7 @@ i.icon_search {
     font-weight: 500;
     color: #909090;
     position: relative;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .tab_list li a:hover {
@@ -5053,7 +5053,7 @@ i.icon_search {
 
 .notice_tit a {
     padding-right: 12px;
-    font-size: 13px;
+    font-size: var(--font-13);
     display: inline-block;
     font-weight: 600;
     background-position: right 50%
@@ -5159,7 +5159,7 @@ i.icon_search {
 
 .action_type ul li a {
     display: block;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .action_type>ul>li {
@@ -5903,7 +5903,7 @@ i.icon_search {
     border-bottom: 6px solid transparent;
     border-right: 8px solid #fff;
     top: 50%;
-    left: -13px;
+    left: -var(--font-13);
     margin-top: -7px
 }
 
@@ -6581,7 +6581,7 @@ i.icon_search {
     border-bottom: 1px solid #bdbdbd;
     width: 100%;
     text-align: left;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .tree_more_list .tmlist:first-child {
@@ -6615,7 +6615,7 @@ i.icon_search {
     padding: 4px 8px;
     border-radius: 3px;
     line-height: 18px;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .tree_list li a:hover {
@@ -7225,7 +7225,7 @@ li ul li .tree_arrow {
 
 .c-legend p {
     line-height: 1.6;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .c-legend em {
@@ -7292,7 +7292,7 @@ li ul li .tree_arrow {
 }
 
 .contrl_tit p {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 700
 }
 
@@ -7300,7 +7300,7 @@ li ul li .tree_arrow {
     position: absolute;
     right: 10px;
     top: 10px;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .contrl_cont .btn_box {
@@ -7409,7 +7409,7 @@ li ul li .tree_arrow {
 }
 
 .contrl_list li .stxt {
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .tabstl02 {
@@ -7493,7 +7493,7 @@ li ul li .tree_arrow {
 
 .tabbtn .tab_info p span {
     display: block;
-    font-size: 13px;
+    font-size: var(--font-13);
     padding-bottom: 3px
 }
 
@@ -7632,7 +7632,7 @@ li ul li .tree_arrow {
     padding: 10px;
     right: -4px;
     top: 30px;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .help_w .balloon:after {
@@ -7777,7 +7777,7 @@ li ul li .tree_arrow {
 }
 
 .safe .safe_txt {
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .safe .safe_txt span:after {
@@ -7933,7 +7933,7 @@ li ul li .tree_arrow {
 .i-card_title {
     font-weight: 700;
     padding: 10px 12px;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .i-card_list {
@@ -7953,7 +7953,7 @@ li ul li .tree_arrow {
 
 .i-card_list dd,.i-card_list dt {
     width: 50%;
-    font-size: 13px;
+    font-size: var(--font-13);
     padding-bottom: 2px
 }
 
@@ -8074,7 +8074,7 @@ li ul li .tree_arrow {
 }
 
 .i-card_wrap .system_info p {
-    font-size: 13px;
+    font-size: var(--font-13);
     color: #000;
     font-weight: lighter;
     line-height: 1.6;
@@ -8276,7 +8276,7 @@ li ul li .tree_arrow {
 }
 
 .home_d_tit {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 700;
     padding: 10px 12px;
     background-color: #fff;
@@ -8320,14 +8320,14 @@ li ul li .tree_arrow {
 }
 
 .notice_box .noti_tit {
-    font-size: 13px;
+    font-size: var(--font-13);
     color: #4e6999;
     font-weight: 700;
     padding-right: 10px
 }
 
 .notice_box .recent_notice a {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 500
 }
 
@@ -8382,7 +8382,7 @@ li ul li .tree_arrow {
 }
 
 .pf_info_wrap dl dd,.pf_info_wrap dl dt {
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .pf_info_wrap dl dt {
@@ -8545,7 +8545,7 @@ li ul li .tree_arrow {
 }
 
 .h_i_w_tit {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 500;
     color: #6f6f6f
 }
@@ -8876,7 +8876,7 @@ li ul li .tree_arrow {
 }
 
 .wf_detail .wf_nm {
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .wf_state_txt em {
@@ -9060,7 +9060,7 @@ li ul li .tree_arrow {
 }
 
 .tasklist .dvs_t {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 700;
     line-height: 18px;
     padding-right: 12px;
@@ -9127,7 +9127,7 @@ li ul li .tree_arrow {
 .cld_weekday_tbl td {
     vertical-align: middle;
     text-align: center;
-    font-size: 13px;
+    font-size: var(--font-13);
     padding: 5px 0;
     font-weight: 700;
     table-layout: fixed
@@ -9270,7 +9270,7 @@ li ul li .tree_arrow {
 
 .mini_popup .popup_title .title_txt {
     font-weight: 700;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .mini_popup .popup_title .btn_close {
@@ -9280,7 +9280,7 @@ li ul li .tree_arrow {
 
 .mini_popup .popup_content {
     padding: 10px 12px;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .hypn {
@@ -9394,7 +9394,7 @@ li ul li .tree_arrow {
     width: 40px;
     text-align: center;
     line-height: 40px;
-    font-size: 13px
+    font-size: var(--font-13)
 }
 
 .weeksTbl .week_row .btn_weekday:hover {
@@ -9635,7 +9635,7 @@ li ul li .tree_arrow {
     border-radius: 3px;
     border: 1px solid #314c7a;
     color: #314c7a;
-    font-size: 13px;
+    font-size: var(--font-13);
     line-height: 26px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -9699,8 +9699,8 @@ li ul li .tree_arrow {
     position: absolute;
     top: 22px;
     right: 20px;
-    width: 13px;
-    height: 13px;
+    width: var(--font-13);
+    height: var(--font-13);
     display: none
 }
 
@@ -9745,7 +9745,7 @@ li ul li .tree_arrow {
 }
 
 .sych_mnt_wrap .sych_mnt_top p {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 700
 }
 
@@ -10136,7 +10136,7 @@ li ul li .tree_arrow {
 }
 
 .icam_b_stl .dstb_stt .flx .user_numb,.server_box_white .dstb_stt .flx .user_numb {
-    font-size: 13px;
+    font-size: var(--font-13);
     text-align: right;
     width: calc(100% - 53px)
 }
@@ -10295,7 +10295,7 @@ li ul li .tree_arrow {
 }
 
 .main_server_dt .main_server_dt_info .ms_server_name {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 500
 }
 
@@ -11268,7 +11268,7 @@ li ul li .tree_arrow {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 13px;
+    font-size: var(--font-13);
     leter-spacing: -.39px;
     padding: 0 4px;
     -webkit-box-align: center;
@@ -11606,7 +11606,7 @@ li ul li .tree_arrow {
 }
 
 .exp_perid_wrap .tit,.li_gt_info .tit {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 600
 }
 
@@ -11872,7 +11872,7 @@ li ul li .tree_arrow {
 }
 
 .sv_dt_info .sv_name {
-    font-size: 13px;
+    font-size: var(--font-13);
     font-weight: 600;
     line-height: 20px
 }
@@ -12443,7 +12443,7 @@ li ul li .tree_arrow {
 
 .pf_edit_box .edit_tit {
     font-weight: 700;
-    font-size: 13px;
+    font-size: var(--font-13);
     padding-top: 16px
 }
 
@@ -13398,7 +13398,7 @@ body.dg-open {
     text-align: center;
     border-radius: 5px;
     height: 30px;
-    font-size: 13px;
+    font-size: var(--font-13);
     vertical-align: middle
 }
 

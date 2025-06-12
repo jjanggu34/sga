@@ -120,10 +120,10 @@
 .wk_tab .btn_d_arw i {background-size: 8px;width: 8px;height: 8px;margin-top: 5px}
 .wk_tab .btn_d_arw i.up {background-position-y: -8px;margin-top:4px}
 .wk_tab p {font-size:12px}
-.wk_tab.bgopen .wk_tab {border-top:1px solid #cbcbcb;border-bottom:0 none;margin-left:13px;padding-left:8px}
+.wk_tab.bgopen .wk_tab {border-top:1px solid #cbcbcb;border-bottom:0 none;margin-left:var(--font-13);padding-left:8px}
 .on_color {color:#3067da}
 
-.wk_tab_small {border-top:1px solid #c1c1c1;margin-left:13px}
+.wk_tab_small {border-top:1px solid #c1c1c1;margin-left:var(--font-13)}
 .wk_tab_small>.wk_tab_small {margin-left:17px}
 .wk_gr_type {position:relative;padding:4px 4px 4px 8px;display:flex;align-items:center;cursor:pointer;font-weight:bold}
 .wk_gr_type .wk_gr_arw {display:inline-block;width:18px;height:18px;}
@@ -133,7 +133,7 @@
 .wk_tab_small.open {background-color:#dbdfe9}
 
 .wk_tab+.wk_form {border-top: 1px solid #cbcbcb}
-.wk_form {margin-left:13px}
+.wk_form {margin-left:var(--font-13)}
 .wk_form .form_tbl .form_tit,.wk_form .form_tbl .form_txt { padding: 4px;border:none}
 .wk_form .form_tbl .form_tit {width: 140px;font-size:11px;padding:11px 4px 0px 16px}
 .wk_form .form_tbl .form_txt {font-size:12px;line-height:24px}
@@ -187,16 +187,16 @@
 .t_tr > .wk_tab:before {width:20px;left: -12px;}
 
 .wk_gr_type.open, .wk_gr_type.open + .wk_form{background-color: #dbdfe9;}
-.d_default .wk_tab + div > div {background-color: #eaecf3; padding-left:13px;}
-.d_default .wk_tab.bgopen + div:before, .d_default .wk_tab + div > div > .wk_form:before {content: ""; display: block; width: 1px; height: 100%; position: absolute; left: 13px; border-left: 1px dashed #a9a9a9;z-index: 100;}
+.d_default .wk_tab + div > div {background-color: #eaecf3; padding-left:var(--font-13);}
+.d_default .wk_tab.bgopen + div:before, .d_default .wk_tab + div > div > .wk_form:before {content: ""; display: block; width: 1px; height: 100%; position: absolute; left: var(--font-13); border-left: 1px dashed #a9a9a9;z-index: 100;}
 .d_default .wk_tab + div > div > .wk_form:before {left: 16px;}
 
 .t_tr .wk_tab .tb_dt_link > p:hover {color:#3067da; text-decoration: none;}
 .t_tr .bgopen, .t_tr .wk_form {background-color: #dbdfe9;}
 
 .d_default > div > div > div.wk_form > ul.form_tbl > li:last-child > .t_tr > .form_tit:before {left: 0;}
-.d_default > .wk_tab.bgopen + div.wk_form > ul.form_tbl:before, .d_default > .wk_tab.bgopen + div > div:last-child:before {content: ""; display: block; width: 1px; height: 15px; bottom: 0;position: absolute; left: 13px; border-left: 1px dashed #a9a9a9;z-index: 100;}
+.d_default > .wk_tab.bgopen + div.wk_form > ul.form_tbl:before, .d_default > .wk_tab.bgopen + div > div:last-child:before {content: ""; display: block; width: 1px; height: 15px; bottom: 0;position: absolute; left: var(--font-13); border-left: 1px dashed #a9a9a9;z-index: 100;}
 .t_top_border{border-top: 1px solid #c1c1c1;}
 
-.d_default .wk_tab.bgopen:after { content: ""; display: block; left: 13px; border-left: 1px dashed #a9a9a9; position: absolute; height: 10px; top: 50%;}
+.d_default .wk_tab.bgopen:after { content: ""; display: block; left: var(--font-13); border-left: 1px dashed #a9a9a9; position: absolute; height: 10px; top: 50%;}
 .wk_gr_type.open + .wk_form:after { content: ""; display: block; left: 16px; border-left: 1px dashed #a9a9a9; position: absolute; height: 10px; top: -7px;}

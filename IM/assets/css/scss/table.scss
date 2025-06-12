@@ -1,5 +1,4 @@
-@use './variable' as *;
-@use './mixin' as *;
+@use 'variable' as *;
 
 /*---------------------------------------------
     #기본 테이블
@@ -32,16 +31,16 @@
             th {
                 padding:10px;
                 border:0;
-                border-top:1px solid var(--list-border);
-                border-bottom:1px solid var(--secondary);
+                border-top:1px solid $list-border;
+                border-bottom:1px solid $secondary;
                 line-height:16px;
-                color:var(--title);
-                background-color:var(--table-th);
+                color:$title;
+                background-color:$table-th;
                 &.sort_column {
                     div {
                         padding:0;
                         font-weight:$font-w-r;
-                        color:var(--title);
+                        color:$title;
                     }
                 }
             }
@@ -51,8 +50,8 @@
         tr {
             th {
                 border:0;
-                border-bottom:1px solid var(--list-border);
-                @include title($font13,$font-w-r,var(--title));
+                border-bottom:1px solid $list-border;
+                @include title($font13,$font-w-r,$title);
                 line-height:16px;
                 &.new {
                     position:relative;
@@ -65,29 +64,29 @@
                         right:10px;
                         transform:translateY(-50%);
                         border-radius:3px;
-                        @include title($font12, $font-w-r, var(--white));
+                        @include title($font12, $font-w-r, $white);
                         line-height:12px;
-                        background:var(--info);
+                        background:$info;
                     }
                 }
             }
             .sort_column {
                 div {
-                    color:var(--content);
+                    color:$content;
                 }
             }
             td {
                 padding:0 20px;
                 border:0;
-                border-bottom:1px solid var(--list-border);
-                @include title ($font13, $font-w-r, var(--content));
-                line-height:35px;
+                border-bottom:1px solid $list-border;
+                @include title ($font13, $font-w-r, $content);
+                line-height:20px;
                 text-align:center;
                 text-overflow:ellipsis;
                 white-space:nowrap;
                 overflow:hidden;
                 div {
-                    color:var(--content);
+                    color:$content;
                 }
                 &:has(.form_contrl) {
                     padding:5px 10px;
@@ -98,7 +97,7 @@
                     @include wh ($wh100, $wh100);
                     padding:60px 0 20px;
                     line-height:normal;
-                    color:var(--text-disabled);
+                    color:$text-disabled;
                     &::after {
                         display:inline-block;
                         @include content(35px, 35px);
@@ -129,7 +128,7 @@
                     border-right:0;
                 }
                 &.th-bl {
-                    background-color:var(--table-th);
+                    background-color:$table-th;
                 }
                 .tb_dt_link {
                     p {
@@ -157,14 +156,14 @@
             }
             td {
                 overflow:unset;
-                border:1px solid var(--list-border);
+                border:$borderD;
                 border-top:0;
                 font-weight:$font-w-m;
                 &:last-child {
                     border-right:0;
                 }
                 &.aft_cont {
-                    background:var(--disabled-line-bg);
+                    background:$disabled-line-bg;
                     .aft_ir {
                         @include title ($font13, $font-w-m, #0052CC);
                         .aft_i {
@@ -200,58 +199,54 @@
                 &:nth-child(2) {
                     padding:0;
                 }
-                &.default_addel_btn {
-                    padding:5px 20px 0px;
-                }
-            }
-        }
-        .flx_frm_tbl {
-            li {
-                &:first-child {
-                    .flx {
-                        padding:25px 20px 10px;
-                    }
-                }
-                &:last-child {
-                    .flx {
-                        padding:0 20px 25px;
-                    }
-                }
-                &.bul_dot {
-                    .flx {
-                        .form_tit {
-                            position:relative;
-                            padding:7px 0 0 8px;
-                            font-weight:$font-w-r;
-                            &::before {
-                                @include content(3px,3px);
-                                position:absolute;
-                                top:12px;
-                                left:0;
-                                display:inline-block;
-                                border-radius:50%;
-                                background:var(--text-disabled);
+                .flx_frm_tbl {
+                    li {
+                        &:first-child {
+                            .flx {
+                                padding:25px 20px 10px;
                             }
                         }
-                    }
-                }
-                .flx {
-                    width:calc($wh100/2);
-                    padding:0 20px 10px;
-                    &:first-child {
-                        border-right:$borderD;
-                    }
-                    .form_tit {
-                        min-width:185px;
-                        width:auto;
-                        padding:0;
-                    }
-                    .form_txt {
-                        width:$wh100;
-                        padding:0;
-                        .form_contrl {
-                            display:block;
-                            width:$wh100;
+                        &:last-child {
+                            .flx {
+                                padding:0 20px 25px;
+                            }
+                        }
+                        &.bul_dot {
+                            .flx {
+                                .form_tit {
+                                    position:relative;
+                                    padding-left:8px;
+                                    &::before {
+                                        @include content(3px,3px);
+                                        position:absolute;
+                                        top:5px;
+                                        left:0;
+                                        display:inline-block;
+                                        border-radius:50%;
+                                        background:$text-disabled;
+                                    }
+                                }
+                            }
+                        }
+                        .flx {
+                            width:calc($wh100/2);
+                            padding:0 20px 10px;
+                            &:first-child {
+                                border-right:$borderD;
+                            }
+                            .form_tit {
+                                min-width:185px;
+                                width:auto;
+                                padding:0;
+                            }
+                            .form_txt {
+                                width:$wh100;
+                                padding:0;
+                                .form_contrl {
+                                    display:block;
+                                    width:$wh100;
+                                }
+                            }
                         }
                     }
                 }
@@ -259,7 +254,7 @@
         }
     }
     .detail_open {
-        background-color:var(--body);
+        background-color:$body;
         &>td {
             padding:20px 35px;
             .detail_open_cont {
@@ -273,7 +268,7 @@
                     margin-bottom:20px;
                     border:$borderD;
                     border-radius:6px;
-                    background-color:var(--white);
+                    background-color:$white;
                     &::-webkit-scrollbar {
                         height:7px;
                     }
@@ -304,7 +299,7 @@
     tr {
         &.on,
         &:hover {
-            background-color:var(--body);
+            background-color:$body;
         }
     }
     .dt_view {
@@ -318,10 +313,10 @@
         margin-top:0;
         padding-bottom:15px;
         font-size:$font12;
-        color:var(--secondary);
+        color:$secondary;
         em {
             font-weight:$font-w-m;
-            color:var(--primary);
+            color:$primary;
             vertical-align:unset;
         }
     }
@@ -334,9 +329,9 @@
     .default_tbl {
         thead {
             th {
-                background-color:var(--table-th);
+                background-color:$table-th;
                 border-top:$borderD;
-                border-bottom:1px solid var(--secondary);
+                border-bottom:1px solid $secondary;
             }
         }
     }
@@ -353,7 +348,7 @@
                 th {
                     padding:8px 10px;
                     font-weight:$font-w-r;
-                    color:var(--content);
+                    color:$content;
                     &:nth-child(3) {
                         text-align:center;
                     }
@@ -364,7 +359,7 @@
             tr {
                 td {
                     padding:8px 10px;
-                    color:var(--content);
+                    color:$content;
                     &:nth-child(2) {
                         text-align:left;
                     }
@@ -374,7 +369,7 @@
                             display:inline-block;
                             @include wh(auto, auto);
                             margin-right:10px;
-                            color:var(--text-disabled);
+                            color:$text-disabled;
                         }
                     }
                 }
@@ -390,6 +385,9 @@
         .btn_dtail_list {
             width:70px;
             text-align:center;
+            .btn_dtail {
+                @include wh (30px,30px);
+            }
         }
     }
     .add_option {
@@ -397,20 +395,20 @@
         border-radius:6px;
         font-size:$font12;
         line-height:30px;
-        color:var(--content);
+        color:$content;
         .btn_option {
             top:5px;
             @include wh (18px, 18px);
             padding:0;
             border:0;
             border-radius:6px;
-            background-color:var(--text-disabled);
+            background-color:$text-disabled;
             &::after {
                 top:50%;
                 left:50%;
                 transform:translate(-50%, -50%);
                 @include wh (18px, 18px);
-                @include mask (var(--white));
+                @include mask ($white);
                 -webkit-mask-image:url("../images/common/icon_arrow_none.svg");
                 mask-image:url("../images/common/icon_arrow_none.svg");
             }
@@ -423,6 +421,9 @@
     max-height:370px;//10개 기준
     margin-top:7px;
     border:0;
-    border-top:1px solid var(--list-border);
+    border-top:1px solid $list-border;
+    .default_tbl tbody tr td {
+        line-height:34px;
+    }
 }
 

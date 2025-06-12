@@ -47,43 +47,4 @@
     font-style: normal;
 }
 
-:root {
-    /* primary color */
-    --primary: #27AD98;
-    --basic:#162866;
-    --basic2:#495991;
-
-    /* ui color */
-    --true:#23AC3D;
-    --false:#FF0000;
-    --info: #F76900;
-    --blue: #1863BA;
-
-    /* background color */
-    --body: #F3F5F7;
-    --table-th: #F8F8F8;
-    --white: #FFFFFF;
-
-    /* text color */
-    --title: #222222;
-    --content: #454545;
-    --secondary: #757575;
-    --text-disabled: #999999;
-
-    /* border color */
-    --border-d:#DDDDDD;
-    --border-disabled: #AAB0B8;
-    --list-border:#C9C9C9;
-
-    /* button color */
-    --btn-hover: #138170;
-    --line-hover: #797979;
-    --btn-disabled: #EEEEEE;
-    --disabled-line-bg: #FCFCFC;
-
-    /* form color */
-    --default: #BBBBBB;
-    --sub-select: #F8FAFB;
-}
-
 .align_left { text-align:left !important; }

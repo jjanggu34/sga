@@ -1,5 +1,4 @@
-@use './variable' as *;
-@use './mixin' as *;
+@use 'variable' as *;
 
 /***************** 공통 *****************/
 $btnstls: "trcolor", "fcolor";
@@ -14,15 +13,15 @@ $btnstls: "trcolor", "fcolor";
 }
 .trcolor {
     @include label();
-    color:var(--true);
+    color:$true;
     background-color:#EFFCF3;
 }
 .fcolor {
     @include label();
-    color:var(--false);
+    color:$false;
     background-color:#FFEFEF;
     &_tit {
-        color:var(--false) !important;
+        color:$false !important;
     }
 }
 
@@ -33,7 +32,6 @@ $btnstls: "trcolor", "fcolor";
         border:0;
         color:#6A5ACD;
         background: #E6E2FF;
-        vertical-align:unset;
         i {
             @include wh (24px, 24px);
             @extend %imgae;
@@ -55,7 +53,25 @@ $btnstls: "trcolor", "fcolor";
 }
 
 .redtxt {
-    color:var(--false);
+    color:$false;
+}
+
+.txtbg {
+    border-radius:14px;
+    background-color:#FFF5E0;
+    &.yelltxt {
+        padding:5px 14px;
+        color:#F9AF1C;
+        &::before {
+            content:"";
+            display:inline-block;
+            @include wh (16px,16px);
+            margin-right:4px;
+            @include mask(#F9AF1C);
+            -webkit-mask-image:url("../images/label/icon_pgs.svg");
+            mask-image:url("../images/label/icon_pgs.svg");
+        }
+    }
 }
 
 .icon_alim {
@@ -78,7 +94,7 @@ $btnstls: "trcolor", "fcolor";
 
 .content_infotxt {
     em {
-        color:var(--primary);
+        color:$primary;
     }
 }
 
@@ -205,7 +221,7 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
     padding:5px 15px 4px;
     margin-top:5px;
     border:$borderD;
-    @include title($font13, $font-w-r, var(--content));
+    @include title($font13, $font-w-r, $content);
     line-height:14px;
 }
 
@@ -219,15 +235,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .circleOff { //상태없음
-    color:var(--text-disabled) !important;
+    color:$text-disabled !important;
     .icon_list {
-        @include mask(var(--text-disabled));
+        @include mask($text-disabled);
         -webkit-mask-image:url("../images/label/ico_circleOff.svg");
         mask-image:url("../images/label/ico_circleOff.svg");
     }
 }
 .plugConnected { //연결됨
-    color:var(--blue)!important;
+    color:$blue!important;
     .icon_list {
         @include mask(#1863BA);
         -webkit-mask-image:url("../images/label/ico_PlugConnected.svg");
@@ -235,17 +251,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .plugZapOff { //연결끊김
-    color:var(--false) !important;
+    color:$false !important;
     .icon_list {
-        @include mask(var(--false));
+        @include mask($false);
         -webkit-mask-image:url("../images/label/ico_PlugZapOff.svg");
         mask-image:url("../images/label/ico_PlugZapOff.svg");
     }
 }
 .filePlus { //생성
-    color:var(--blue)!important;
+    color:$blue!important;
     .icon_list {
-        @include mask(var(--blue));
+        @include mask($blue);
         -webkit-mask-image:url("../images/label/ico_FilePlus.svg");
         mask-image:url("../images/label/ico_FilePlus.svg");
     }
@@ -256,86 +272,86 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .checkCircle { //정상
-    color:var(--true) !important;
+    color:$true !important;
     .icon_list {
-        @include mask(var(--true));
+        @include mask($true);
         -webkit-mask-image:url("../images/label/ico_checkCircle.svg");
         mask-image:url("../images/label/ico_checkCircle.svg");
     }
 }
 .fileEdit { //수정작업중
-    color:var(--blue)!important;
+    color:$blue!important;
     .icon_pgs {
         @include mask(#1863BA);
         -webkit-mask-image:url("../images/label/ico_FileEdit.svg");
         mask-image:url("../images/label/ico_FileEdit.svg");
     }
     &.ing {
-        color: var(--primary) !important;
+        color: $primary !important;
         .icon_pgs {
-            @include mask(var(--primary));
+            @include mask($primary);
             -webkit-mask-image:url("../images/label/icon_pgs.svg");
             mask-image:url("../images/label/icon_pgs.svg");
         }
     }
 }
 .fileEditLoader { //수정진행중, 작업보류중
-    color:var(--primary) !important;
+    color:$primary !important;
     .icon_pgs {
-        @include mask(var(--primary));
+        @include mask($primary);
         -webkit-mask-image:url("../images/label/icon_pgs.svg");
         mask-image:url("../images/label/icon_pgs.svg");
     }
 }
 .downloadCircle { //수집완료
-    color:var(--blue)!important;
+    color:$blue!important;
     .icon_list {
-        @include mask(var(--blue));
+        @include mask($blue);
         -webkit-mask-image:url("../images/label/ico_downloadCircle.svg");
         mask-image:url("../images/label/ico_downloadCircle.svg");
     }
 }
 .pauseCircle { //접속오류, 작업중 오류, 수집오류
-    color:var(--false) !important;
+    color:$false !important;
     .icon_list {
-        @include mask(var(--false) );
+        @include mask($false );
         -webkit-mask-image:url("../images/label/ico_PauseCircle.svg");
         mask-image:url("../images/label/ico_PauseCircle.svg");
     }
 }
 .trash { //삭제, 삭제됨
-    color:var(--false) !important;
+    color:$false !important;
     .icon_list, .icon_pgs {
-        @include mask(var(--false));
+        @include mask($false);
         -webkit-mask-image:url("../images/label/ico_trash.svg");
         mask-image:url("../images/label/ico_trash.svg");
     }
     .icon_pgs { //삭제진행중
-        @include mask(var(--false));
+        @include mask($false);
         -webkit-mask-image:url("../images/label/icon_pgs.svg");
         mask-image:url("../images/label/icon_pgs.svg");
     }
 }
 .bolt { //활성
-    color:var(--true) !important;
+    color:$true !important;
     .icon_list {
-        @include mask(var(--true));
+        @include mask($true);
         -webkit-mask-image:url("../images/label/ico_bolt.svg");
         mask-image:url("../images/label/ico_bolt.svg");
     }
 }
 .Nbolt { //비활성
-    color:var(--text-disabled) !important;
+    color:$text-disabled !important;
     .icon_list {
-        @include mask(var(--text-disabled) );
+        @include mask($text-disabled );
         -webkit-mask-image:url("../images/label/ico_bolt.svg");
         mask-image:url("../images/label/ico_bolt.svg");
     }
 }
 .locked { //잠금
-    color:var(--text-disabled) !important;
+    color:$text-disabled !important;
     .icon_list {
-        @include mask(var(--text-disabled) );
+        @include mask($text-disabled );
         -webkit-mask-image:url("../images/label/icon_locked.svg");
         mask-image:url("../images/label/icon_locked.svg");
     }
@@ -345,7 +361,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     display:inline-block;
     @include icon (24px,24px);
     background-position:center !important;
-    margin:0;
+    margin:0 !important;
     &.pdf {
         background-image:url("../images/common/ico_pdf.svg");
     }
@@ -385,7 +401,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 // 역할 관리 라벨
 .apply_tit {
     padding-bottom:25px;
-    @include title ($font18, $font-w-m, var(--title));
+    @include title ($font18, $font-w-m, $title);
     span {
         border-radius:30px;
         padding:6px 14px 5px;
@@ -422,27 +438,27 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .new_org {
     @include wh (15px, 15px);
     border-radius:3px;
-    @include title($font10,$font-w-e,var(--white));
+    @include title($font10,$font-w-e,$white);
     line-height:15px;
-    background-color:var(--text-disabled);
+    background-color:$text-disabled;
 }
 
 /* 나누는 선 */
 .divide {
     height:10px;
-    background-color:var(--border-d);
+    background-color:$border-d;
 }
 
 /* info */
 .req_txt {
     font-size:$font14;
     &.org {
-        color:var(--primary);
+        color:$primary;
         &::before {
             @include content (16px, 16px);
             display:inline-block;
             margin-right:7px;
-            @include mask (var(--primary));
+            @include mask ($primary);
             -webkit-mask-image:url("../images/common/ico_info.svg");
             mask-image:url("../images/common/ico_info.svg");
         }
@@ -450,12 +466,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     &.inbl {
         display:block;
         padding-left:0;
-        color:var(--secondary);
+        color:$secondary;
         &::before {
             content:"\203B";
             display:inline-block;
             @include wh (16px, 16px);
-            color:var(--secondary);
+            color:$secondary;
         }
     }
 }
@@ -471,21 +487,21 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.redtxt {
         i {
-            @include mask (var(--false));
+            @include mask ($false);
             -webkit-mask-image:url("../images/common/ico_info.svg");
             mask-image:url("../images/common/ico_info.svg");
         }
     }
     &.bluetxt {
         line-height:unset;
-        color:var(--true);
+        color:$true;
         i {
             border-radius:50%;
-            background-color:var(--true);
+            background-color:$true;
             &::before {
                 @include content(16px, 16px);
                 display:inline-block;
-                @include mask (var(--white));
+                @include mask ($white);
                 vertical-align:inherit;
                 -webkit-mask-image:url("../images/common/ico_check_s.svg");
                 mask-image:url("../images/common/ico_check_s.svg");
@@ -502,7 +518,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     @each $tit in $tits {
         .#{$tit}_tit {
             font-size:$font18;
-            color:var(--title);
+            color:$title;
         }
     }
     // a링크 form title
@@ -513,11 +529,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:10px 0 10px 6px;
             border:0;
             border-radius:0;
-            border-bottom:1px solid var(--title);
+            border-bottom:1px solid $title;
             font-weight:$font-w-b;
             background:transparent;
             &:hover {
-                background-color:var(--white);
+                background-color:$white;
             }
             .tab_arrow {
                 right:0;
@@ -538,22 +554,22 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:10px 0 10px 6px;
             border:0;
             border-radius:0;
-            border-bottom:1px solid var(--title);
+            border-bottom:1px solid $title;
             font-weight:$font-w-b;
             background:transparent;
             &.add {
                 height:45px;
                 margin-bottom:40px;
-                border:1px dashed var(--border-d);
+                border:1px dashed $border-d;
                 border-radius:6px;
-                @include title ($font16, $font-w-m, var(--title));
+                @include title ($font16, $font-w-m, $title);
                 line-height:26px;
                 text-align:center;
-                background-color:var(--table-th);
+                background-color:$table-th;
                 .btn_option {
                     @include wh(24px,24px);
                     border:none;
-                    background-color:var(--basic);
+                    background-color:$basic;
                     &::after {
                         @extend %positon_center;
                         @include icon(16px,16px);
@@ -567,7 +583,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     // table title
     .def_tit {
         font-weight:$font-w-e;
-        border-bottom:1px solid var(--title);
+        border-bottom:1px solid $title;
         &+.tbl_list {
             .default_tbl {
                 border-top:0;
@@ -602,7 +618,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             left:10px;
             display:inline-block;
             border-radius:50%;
-            background:var(--content);
+            background:$content;
         }
     }
     &>li {
@@ -614,7 +630,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             left:10px;
             display:inline-block;
             border-radius:50%;
-            background:var(--content);
+            background:$content;
         }
     }
 }
@@ -642,7 +658,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         z-index:1;
         &::after {
             top:2px;
-            @include mask(var(--text-disabled));
+            @include mask($text-disabled);
             -webkit-mask-image:url("../images/common/arr-next.svg");
             mask-image:url("../images/common/arr-next.svg");
             background-image:none;
@@ -654,16 +670,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         &.diss {
-            background-color:var(--white);
+            background-color:$white;
             z-index:0;
             &::after {
-                background-color:var(--btn-disabled);
+                background-color:$btn-disabled;
             }
         }
     }
 }
 .detail_process {
-    background:var(--white);
+    background:$white;
     border-radius:7px;
     .flx_cell {
         padding:8px 0;
@@ -671,15 +687,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         margin-right:5px;
         border-radius:7px 0 0 7px;
         line-height:18px;
-        color:var(--text-disabled);
-        background:var(--btn-disabled);
-        box-shadow:0 0 0 2px var(--white);
+        color:$text-disabled;
+        background:$btn-disabled;
+        box-shadow:0 0 0 2px $white;
         &::after {
             content:"";
             position:absolute;
             top:0;
             right:-26px;
-            filter: drop-shadow(5px 0 0 var(--white));
+            filter: drop-shadow(5px 0 0 $white);
             border-radius: 7px;
             @include icon (31px,34px);
             background-image:url("../images/common/triangle.svg");
@@ -700,12 +716,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             margin-right:4px;
             font-size:$font12;
             line-height:1.5;
-            color:var(--text-disabled);
-            background-color:var(--white);
+            color:$text-disabled;
+            background-color:$white;
         }
         &.pro_comple {
-            color:var(--white);
-            background-color:var(--basic);
+            color:$white;
+            background-color:$basic;
             &::after {
                 background-image:url("../images/common/triangle_comp.svg");
             }
@@ -714,34 +730,34 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &::before {
                     @include content(17px,17px);
                     display:inline-block;
-                    @include mask(var(--basic));
+                    @include mask($basic);
                     -webkit-mask-image:url("../images/common/ico_step.svg");
                     mask-image:url("../images/common/ico_step.svg");
                 }
             }
         }
         &.process_current {
-            color:var(--white);
-            background-color:var(--primary);
+            color:$white;
+            background-color:$primary;
             &::after {
                 background-image:url("../images/common/triangle_curr.svg");
             }
             .s_num {
-                color:var(--primary);
+                color:$primary;
             }
         }
         &.process_activ {
-            color:var(--white);
-            background:var(--secondary);
+            color:$white;
+            background:$secondary;
             &::after {
                 background-image:url("../images/common/triangle_active.svg");
             }
             .s_num {
-                color:var(--text-disabled);
-                background-color:var(--white);
+                color:$text-disabled;
+                background-color:$white;
             }
             &:hover {
-                background:var(--secondary);
+                background:$secondary;
             }
         }
         &.warning {
@@ -784,25 +800,25 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &.on{
                     border-bottom:0;
                     border-radius:15px;
-                    color:var(--white);
-                    background:var(--primary);
+                    color:$white;
+                    background:$primary;
                     .new_org {
-                        background-color:var(--info);
+                        background-color:$info;
                     }
                     &:hover {
-                        color:var(--white);
-                        background-color:var(--primary);
+                        color:$white;
+                        background-color:$primary;
                         .new_org {
-                            background-color:var(--info);
+                            background-color:$info;
                         }
                     }
                 }
                 &:hover {
-                    color:var(--title);
+                    color:$title;
                     background-color:transparent;
                     border-bottom:0;
                     .new_org {
-                        background-color:var(--title);
+                        background-color:$title;
                     }
                 }
             }
@@ -815,7 +831,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .tab_list {
             a {
                 .tab_tree_icon {
-                    @include mask(var(--text-disabled));
+                    @include mask($text-disabled);
                     background-image:none;
                     &.os {
                         -webkit-mask-image:url("../images/common/ico_os.svg");
@@ -836,7 +852,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 &.on {
                     .tab_tree_icon {
-                        background-color:var(--white);
+                        background-color:$white;
                     }
                 }
             }
@@ -851,19 +867,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .mini_tab {
     margin-bottom:20px;
     padding:0 24px;
-    background:var(--white);
+    background:$white;
     .mtab_list {
         padding:4px;
         border-radius:7px;
-        background:var(--btn-disabled);
+        background:$btn-disabled;
         li {
             a {
                 font-weight:$font-w-r;
                 &.on {
                     border-radius:3px;
                     font-weight:$font-w-r;
-                    color:var(--title);
-                    background-color:var(--white);
+                    color:$title;
+                    background-color:$white;
                 }
             }
         }
@@ -883,19 +899,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     padding:8px 12px;
                     margin:0;
                     font-size:$font14;
-                    color:var(--text-disabled);
+                    color:$text-disabled;
                     &.on {
-                        color:var(--white);
+                        color:$white;
                     }
                     .tab_stt {
                         @include wh (15px, 15px);
                         margin-bottom:1px;
                         font-size:$font10;
-                        color:var(--white);
-                        background-color:var(--text-disabled);
+                        color:$white;
+                        background-color:$text-disabled;
                         &.new_org {
                             padding-top:1px;
-                            background-color:var(--info);
+                            background-color:$info;
                         }
                     }
                 }
@@ -953,18 +969,18 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     padding:0;
                     span {
                         font-weight:$font-w-r;
-                        color:var(--title);
+                        color:$title;
                     }
                     .icon_tree {
                         margin-right:4px;
-                        @include mask(var(--text-disabled));
+                        @include mask($text-disabled);
                         background-position:unset;
                         background-image:none;
                         &.folder {
                             -webkit-mask-image:url("../images/common/ico_folder.svg");
                             mask-image:url("../images/common/ico_folder.svg");
                             &_open {
-                                background-color:var(--title);
+                                background-color:$title;
                                 -webkit-mask-image:url("../images/common/ico_folder_open.svg");
                                 mask-image:url("../images/common/ico_folder_open.svg");
                             }
@@ -982,10 +998,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         border-radius:6px;
                         background:#DAFAF5;
                         span {
-                            color:var(--primary);
+                            color:$primary;
                         }
                         .icon_tree {
-                            background-color:var(--primary);
+                            background-color:$primary;
                         }
                     }
                     &:hover {
@@ -1000,7 +1016,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         a {
                             padding:0 10px 0 14px;
                             span {
-                                color:var(--text-disabled);
+                                color:$text-disabled;
                             }
                             &::before {
                                 @include content(7px, 8px);
@@ -1014,10 +1030,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                             }
                             &.on {
                                 span {
-                                    color:var(--primary);
+                                    color:$primary;
                                 }
                                 &::before {
-                                    border-color:var(--primary);
+                                    border-color:$primary;
                                 }
                             }
                         }
@@ -1055,12 +1071,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     button {
         padding:10px 0;
         font-size:$font14;
-        color:var(--text-disabled);
+        color:$text-disabled;
         line-height:25px;
-        background:var(--btn-disabled);
+        background:$btn-disabled;
         &.on {
-            color:var(--title);
-            background:var(--white);
+            color:$title;
+            background:$white;
         }
         &:first-child {
             border-radius:5px 0 0 0;
@@ -1073,14 +1089,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .treeType02 {
     flex:1;
-    border:1px solid var(--list-border);
+    border:1px solid $list-border;
     border-radius:5px;
     .tt_tit {
         padding:15px 17px 14px;
         border-radius:5px;
-        background-color:var(--white);
+        background-color:$white;
         p {
-            @include title ($font14, $font-w-m, var(--title));
+            @include title ($font14, $font-w-m, $title);
         }
     }
     .search_box {
@@ -1100,7 +1116,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 position:absolute;
                 left:8px;
                 @include content(16px,16px);
-                @include mask(var(--text-disabled));
+                @include mask($text-disabled);
                 -webkit-mask-image:url("../images/common/ico_accordion2.svg");
                 mask-image:url("../images/common/ico_accordion2.svg");
                 transform:rotate(-90deg);
@@ -1118,9 +1134,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             .ip_add {
                 font-size:$font13;
-                color:var(--text-disabled);
+                color:$text-disabled;
                 &::before {
-                    background-color:var(--border-d);
+                    background-color:$border-d;
                 }
             }
         }
@@ -1128,12 +1144,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .db_server_row {
                 background-color:#F4F7FA;
                 &::before {
-                    background-color:var(--title);
+                    background-color:$title;
                     transform:rotate(360deg);
                 }
                 .meth {
-                    color:var(--white);
-                    background-color:var(--primary);
+                    color:$white;
+                    background-color:$primary;
                 }
             }
             .inst_list {
@@ -1141,18 +1157,18 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .inst_row {
                     &.on {
                         .branch {
-                            background-color:var(--primary);
+                            background-color:$primary;
                         }
                         .inst_name {
                             border-right:unset;
                             font-weight:$font-w-r;
-                            color:var(--primary);
+                            color:$primary;
                             background-color:unset;
                         }
                     }
                     .branch {
                         height:6px;
-                        @include mask(var(--text-disabled));
+                        @include mask($text-disabled);
                         -webkit-mask-image:url("../images/common/branch.svg");
                         mask-image:url("../images/common/branch.svg");
                         background-image:none;
@@ -1165,7 +1181,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &::after {
                     top:-15px;
                     height:99%;
-                    background-color:var(--border-d);
+                    background-color:$border-d;
                 }
             }
         }
@@ -1192,7 +1208,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 position:relative;
                 padding-left:32px;
                 line-height:16px;
-                color:var(--text-disabled);
+                color:$text-disabled;
                 font-weight:$font-w-r;
                 .icon_folder {
                     position:absolute;
@@ -1200,18 +1216,18 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     left:0;
                     transform:translateY(-50%);
                     @include wh(24px, 24px);
-                    @include mask (var(--text-disabled));
+                    @include mask ($text-disabled);
                     -webkit-mask-image: url("../images/common/ico_folder.svg");
                     mask-image: url("../images/common/ico_folder.svg");
                     background-image:none;
                     &.open {
-                        background-color: var(--title);
+                        background-color: $title;
                         -webkit-mask-image: url("../images/common/ico_folder_open.svg");
                         mask-image: url("../images/common/ico_folder_open.svg");
                     }
                 }
                 &:has(.open) {
-                    color:var(--title);
+                    color:$title;
                 }
             }
             .tree_arrow {
@@ -1223,7 +1239,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     content:"ㄴ";
                     display:inline-block;
                     @include wh (auto, auto);
-                    color:var(--border-d);
+                    color:$border-d;
                 }
                 &.open {
                     &::before {
@@ -1245,20 +1261,20 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                             transform:translateY(-50%);
                             display:inline-block;
                             @include wh (auto, auto);
-                            color:var(--text-disabled);
+                            color:$text-disabled;
                         }
                         &.selected {
                             position:relative;
                             border:0;
                             border-radius:6px;
-                            color:var(--primary);
+                            color:$primary;
                             background-color:#DAFAF5;
                             &::before {
-                                color:var(--primary);
+                                color:$primary;
                             }
                             .icon_folder {
                                 left:20px;
-                                background-color:var(--primary);
+                                background-color:$primary;
                             }
                         }
                     }
@@ -1271,7 +1287,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         top:0;
         right:0;
         .btn_tree_more {
-            @include mask (var(--text-disabled));
+            @include mask ($text-disabled);
             -webkit-mask-image: url("../images/common/ico_Kebab.svg");
             mask-image: url("../images/common/ico_Kebab.svg");
             background-image:none;
@@ -1283,13 +1299,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .tmlist {
                 padding:8px 5px;
                 border-radius:0;
-                @include title ($font12,$font-w-r,var(--content));
+                @include title ($font12,$font-w-r,$content);
                 color:unset;
                 line-height:unset
                 ;
                 &:hover {
                     position: relative;
-                    color:var(--primary);
+                    color:$primary;
                     background-color:#DAFAF5;
                     &::after {
                         @include content(24px, 24px);
@@ -1298,7 +1314,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         transform:translateY(-50%);
                         right:0;
                         display:inline-block;
-                        @include mask(var(--primary));
+                        @include mask($primary);
                         -webkit-mask-image: url("../images/common/ico_check.svg");
                         mask-image: url("../images/common/ico_check.svg");
                     }
@@ -1325,7 +1341,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border:$borderD;
         border-radius:6px;
         font-weight:$font-w-m;
-        color:var(--title);
+        color:$title;
         line-height:18px;
         background-color:#F9F9F9;
         i {
@@ -1372,10 +1388,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 dt {
                     width:auto;
                     margin:0 20px 0 0;
-                    @include title($font14, $font-w-r, var(--text-disabled));
+                    @include title($font14, $font-w-r, $text-disabled);
                     line-height:28px;
                     label {
-                        color:var(--text-disabled);
+                        color:$text-disabled;
                     }
                 }
             }
@@ -1412,10 +1428,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /***************** workflow_box *****************/
 .workflow_box {
     margin-bottom:20px;
-    background-color:var(--table-th);
+    background-color:$table-th;
     &::-webkit-scrollbar-thumb {
         border-radius:30px;
-        background-color:var(--text-disabled);
+        background-color:$text-disabled;
     }
     &::-webkit-scrollbar {
         height:10px;
@@ -1429,10 +1445,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .s_e_w {
         .nav_circle {
             @include wh (62px, 62px);
-            background:var(--text-disabled);
+            background:$text-disabled;
             i {
                 @include wh(40px,40px);
-                @include mask(var(--white));
+                @include mask($white);
                 margin-top:10px;
                 &.i_start {
                     -webkit-mask-image:url("../images/common/ico_member.svg");
@@ -1445,12 +1461,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             &:has(.i_end) {
-                background-color:var(--primary);
+                background-color:$primary;
             }
         }
     }
     .wf_arrow {
-        border-color:var(--text-disabled);
+        border-color:$text-disabled;
         svg {
             right:-6px;
             transform:rotate(270deg);
@@ -1472,13 +1488,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-color:#FF0A00;
         }
         &.autopay {
-            border-color:var(--text-disabled);
+            border-color:$text-disabled;
         }
         &.emty {
-            border-color:var(--border-d);
+            border-color:$border-d;
         }
         &.waiting {
-            border-color:var(--border-d);
+            border-color:$border-d;
         }
     }
     .wf_card {
@@ -1491,7 +1507,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .wf_state{
                     i {
                         @include wh (16px,16px);
-                        @include mask(var(--white));
+                        @include mask($white);
                     }
                 }
             }
@@ -1578,11 +1594,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         &.error {
-            border-color:var(--false);
+            border-color:$false;
             .wf_state {
-                background-color:var(--false);
+                background-color:$false;
                 i {
-                    color:var(--white);
+                    color:$white;
                     -webkit-mask-image:url("../images/common/ico_error.svg");
                     mask-image:url("../images/common/ico_error.svg");
                 }
@@ -1592,15 +1608,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     @include flexsb();
                     align-items:flex-start;
                     em {
-                        color:var(--false);
+                        color:$false;
                     }
                 }
             }
         }
         &.autopay {
-            border-color:var(--border-d);
+            border-color:$border-d;
             .wf_state {
-                background-color:var(--text-disabled);
+                background-color:$text-disabled;
                 i {
                     background-image:url("../images/common/ico_autopay.svg");
                 }
@@ -1608,7 +1624,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .wf_detail {
                 .wf_state_txt {
                     em {
-                        color:var(--text-disabled);
+                        color:$text-disabled;
                     }
                 }
             }
@@ -1630,9 +1646,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         &.waiting {
-            border-color:var(--border-d);
+            border-color:$border-d;
             .wf_state {
-                background-color:var(--text-disabled);
+                background-color:$text-disabled;
                 i {
                     background-image:url("../images/common/ico_autopay.svg");
                 }
@@ -1640,13 +1656,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .wf_detail {
                 .wf_state_txt {
                     em {
-                        color:var(--text-disabled);
+                        color:$text-disabled;
                     }
                 }
             }
         }
         &.emty {
-            border-color:var(--border-d);
+            border-color:$border-d;
         }
         .wf_detail {
             width:$wh100;
@@ -1656,24 +1672,24 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding-left:27px;
                 padding-bottom:8px;
                 em {
-                    color:var(--true);
-                    @include title ($font12, $font-w-r, var(--content));
+                    color:$true;
+                    @include title ($font12, $font-w-r, $content);
                     line-height:15px;
                 }
             }
             .wf_nm {
                 padding-bottom:6px;
-                @include title ($font14, $font-w-r, var(--title));
+                @include title ($font14, $font-w-r, $title);
                 span {
                     font-size:$font14;
-                    color:var(--text-disabled);
+                    color:$text-disabled;
                 }
             }
             .wf_op_info {
                 padding-bottom:0;
                 p {
                     font-size:$font12;
-                    color:var(--text-disabled);
+                    color:$text-disabled;
                     padding-bottom:0;
                     &:first-child {
                         padding-bottom:6px;
@@ -1684,9 +1700,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 right:3px;
                 bottom:3px;
                 padding:7px 8px 6px 6px;
-                border:1px solid var(--border-d);
+                border:1px solid $border-d;
                 border-radius:13px;
-                background-color:var(--white);
+                background-color:$white;
             }
         }
         &.ab_wf_card {
@@ -1709,7 +1725,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .#{$arrow} {
                     i {
                         @include wh (9px,8px);
-                        @include mask (var(--content));
+                        @include mask ($content);
                         -webkit-mask-image:url("../images/common/ico_wf_arrow.svg");
                         mask-image:url("../images/common/ico_wf_arrow.svg");
                         background-image:none;
@@ -1754,21 +1770,21 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                 }
                 &.autopay {
-                    border-color:var(--text-disabled);
+                    border-color:$text-disabled;
                     i {
-                        background-color:var(--text-disabled);
+                        background-color:$text-disabled;
                     }
                 }
                 &.emty {
-                    border-color:var(--border-d);
+                    border-color:$border-d;
                     i {
-                        background-color:var(--border-d);
+                        background-color:$border-d;
                     }
                 }
                 &.waiting {
-                    border-color:var(--border-d);
+                    border-color:$border-d;
                     i {
-                        background-color:var(--border-d);
+                        background-color:$border-d;
                     }
                 }
             }
@@ -1808,15 +1824,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                 }
                 &.autopay {
-                    border-color:var(--text-disabled);
+                    border-color:$text-disabled;
                     i {
-                        background-color:var(--text-disabled);
+                        background-color:$text-disabled;
                     }
                 }
                 &.waiting {
-                    border-color:var(--border-d);
+                    border-color:$border-d;
                     i {
-                        background-color:var(--border-d);
+                        background-color:$border-d;
                     }
                 }
             }
@@ -1834,7 +1850,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 top:79px;
                 bottom:unset;
                 right:unset;
-                background-color:var(--white);
+                background-color:$white;
             }
             &:hover {
                 &~.wf_card.ab_wf_card {
@@ -1853,7 +1869,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .cont_title {
         padding-bottom:3px;
         h2 {
-            @include title ($font28, $font-w-m, var(--title));
+            @include title ($font28, $font-w-m, $title);
             line-height:24px;
         }
     }
@@ -1864,7 +1880,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         @include wh ($wh100, 210px);
         margin:25px 11px 0 0;
         padding:20px;
-        background-color:var(--disabled-line-bg);
+        background-color:$disabled-line-bg;
         border:1px solid #DDDDDDA6;
         box-shadow:unset;
         &:hover {
@@ -1882,7 +1898,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 position:static;
                 p {
                     padding-bottom:30px;
-                    @include title ($font14, $font-w-r, var(--content));
+                    @include title ($font14, $font-w-r, $content);
                     line-height:24px;
                 }
                 button, a {
@@ -1909,9 +1925,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 top:20px;
                 right:20px;
                 padding:0;
-                border-color:var(--border-d);
-                color:var(--title);
-                background:var(--white);
+                border-color:$border-d;
+                color:$title;
+                background:$white;
             }
         }
         .arrow_apply {
@@ -1920,7 +1936,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             bottom:40px;
             width:auto;
             border:0;
-            @include title ($font14, $font-w-r, var(--content));
+            @include title ($font14, $font-w-r, $content);
             line-height:24px;
             background:none;
             .icon_arrapply {
@@ -1940,17 +1956,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .dash_box {
         position:relative;
         padding:20px;
-        border:1px solid var(--list-border);
+        border:1px solid $list-border;
         border-radius:20px;
         box-shadow:unset;
         &.noicon {
             display:inline-flex;
             justify-content:space-between;
             padding:12px 20px;
-            background-color:var(--primary);
+            background-color:$primary;
             .i-card_title {
                 padding:0;
-                color:var(--white);
+                color:$white;
                 opacity:.78;
             }
             .i-card_ct {
@@ -1962,7 +1978,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     height:auto;
                     dt,dd {
                         width:auto;
-                        color:var(--white);
+                        color:$white;
                     }
                 }
             }
@@ -1973,7 +1989,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 left:74px;
                 padding:0 0 0 7px;
                 font-weight:$font-w-m;
-                color:var(--text-disabled);
+                color:$text-disabled;
             }
         }
         .i-card_ct {
@@ -1984,7 +2000,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 position:relative;
                 @include wh(56px,56px);
                 border-radius:14px;
-                background-color:var(--btn-disabled);
+                background-color:$btn-disabled;
                 i {
                     position:absolute;
                     @extend %positon_center;
@@ -2083,7 +2099,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .cnt_tabmn {
                 @include wh(56px,56px);
                 border-radius:14px;
-                background-color:var(--sub-select);
+                background-color:$sub-select;
                 .tab_tree_icon {
                     @include icon(36px,36px);
                     background-position:unset;
@@ -2121,13 +2137,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .sv_dt_info {
                 .sv_name {
                     padding-bottom:7px;
-                    @include title($font16, $font-w-m, var(--title));
+                    @include title($font16, $font-w-m, $title);
                 }
                 .sv_dt_list {
                     gap:5px;
                     &::after {
                         height:12px;
-                        background-color:var(--border-d);
+                        background-color:$border-d;
                     }
                 }
                 .sv_dt_mng {
@@ -2155,6 +2171,81 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-bottom:$borderD;
         }
     }
+    /* server zone */
+    .card_link {
+        padding:14px 18px 0 24px;
+        .i-card_title {
+            padding:0 0 17px;
+            @include title ($font14, $font-w-b, $content);
+        }
+        .add_btn {
+            @include icon (22px,22px);
+            padding:0;
+            background-color:$basic;
+            background-image:url("../images/common/icon_plus_s.svg");
+            background-position:center;
+            background-size:80%;
+        }
+        .i-card_ct {
+            .server_icon {
+                &.local-network {
+                    i {
+                        background:url("../images/moni/local-network.png")no-repeat 50%/100px auto;
+                    }
+                }
+                &.aws {
+                    i {
+                        background:url("../images/moni/amazon.png")no-repeat 50%/100px auto;
+                    }
+                }
+                &.m-azure {
+                    i {
+                        background:url("../images/moni/microsoft-azure.png")no-repeat 50%/100px auto;
+                    }
+                }
+                &.nhn {
+                    i {
+                        background:url("../images/moni/nhn.png")no-repeat 50%/100px auto;
+                    }
+                }
+                &.ac-directory {
+                    i {
+                        background:url("../images/moni/active-directory.png")no-repeat 50%/100px auto;
+                    }
+                }
+                &.oci {
+                    i {
+                        background:url("../images/moni/OCI.png")no-repeat 50%/100px auto;
+                    }
+                }
+                &.azure {
+                    i {
+                        background:url("../images/moni/azure-active-directory.png")no-repeat 50%/100px auto;
+                    }
+                }
+                &.SCP {
+                    i {
+                        background:url("../images/moni/SCP.png")no-repeat 50%/100px auto;
+                    }
+                }
+            }
+            .num_t {
+                padding:43px 0;
+                @include title (24px , $font-w-e, $title);
+            }
+        }
+    }
+    // synchronize_card
+    .system_tab {
+        padding:14px 22px;
+        &.on {
+            border:0;
+            background-color:$primary;
+            .i-card_title {
+                color:$white;
+            }
+        }
+    }
 }
 
 .i-card_ct {
@@ -2165,30 +2256,22 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
-/* server zone */
-.card_link {
-    padding:20px 30px;
-    .i-card_title {
-        @include title ($font14, $font-w-b, var(--title));
-    }
-}
-
 /***************** 팝업 리스트 *****************/
 .view_stl {
     .view_list {
         &.bul_dot {
             li {
-                padding:13px 20px;
-                border-bottom:1px solid var(--list-border);
+                padding:10px 20px;
+                border-bottom:1px solid $list-border;
                 .view_tit {
                     p {
-                        @include title ($font14, $font-w-r, var(--content));
+                        @include title ($font14, $font-w-r, $content);
                     }
                 }
                 .view_txt {
                     white-space:unset;
                     p {
-                        @include title ($font14, $font-w-m, var(--title));
+                        @include title ($font13, $font-w-m, $title);
                     }
                 }
                 &:last-child {
@@ -2275,30 +2358,30 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .pcs_ctg_list {
         li {
             a {
-                color:var(--content);
+                color:$content;
                 &::after {
                     top:12px;
                     @include wh (16px,16px);
                     margin:0;
-                    @include mask(var(--title));
+                    @include mask($title);
                     -webkit-mask-image:url("../images/common/menu_arr.svg");
                     mask-image:url("../images/common/menu_arr.svg");
                     background-position:unset;
                     transform:rotate(-90deg);
                 }
                 &:hover, .on {
-                    color:var(--primary);
+                    color:$primary;
                     background-color:#DAFAF5;
                     &::after {
-                        background-color:var(--primary);
+                        background-color:$primary;
                     }
                 }
                 &.on {
                     border-radius:9px;
-                    color:var(--primary);
+                    color:$primary;
                     background-color:#DAFAF5;
                     &::after {
-                        background-color:var(--primary);
+                        background-color:$primary;
                     }
                 }
             }
@@ -2313,7 +2396,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .moved_tit {
     padding:0 0 14px;
     border:0;
-    @include title ($font16, $font-w-b, var(--title));
+    @include title ($font16, $font-w-b, $title);
     background-color:unset;
 }
 
@@ -2343,10 +2426,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 .moved_tit {
                     padding:10px 16px;
-                    border-bottom:1px solid var(--title);
+                    border-bottom:1px solid $title;
                     font-size:$font13;
                     font-weight:$font-w-m;
-                    background-color:var(--disabled-line-bg);
+                    background-color:$disabled-line-bg;
                 }
                 .move_tbl {
                     height:auto;
@@ -2368,7 +2451,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         transform:translateY(-58%);
                         padding:0;
                         line-height:normal;
-                        color:var(--text-disabled);
+                        color:$text-disabled;
                         &::before {
                             display:inline-block;
                             @include content(35px, 35px);
@@ -2389,11 +2472,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-radius:6px;
             .moved_tit {
                 padding:10px 16px;
-                border-bottom:1px solid var(--title);
+                border-bottom:1px solid $title;
                 border-radius:6px 6px 0 0;
                 font-size:$font13;
                 font-weight:$font-w-m;
-                background-color:var(--disabled-line-bg);
+                background-color:$disabled-line-bg;
             }
             .move_tbl {
                 height:270px;
@@ -2406,14 +2489,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
                         }
                         td {
-                            color:var(--text-disabled);
+                            color:$text-disabled;
                             &.check_list {
                                 padding:7px 10px;
                             }
                         }
                         &:has(td input:checked) {
                             td {
-                                color:var(--title);
+                                color:$title;
                             }
                         }
                     }
@@ -2457,7 +2540,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .move_ctrl {
     a {
         @include wh(30px, 30px);
-        border:1px solid var(--default);
+        border:1px solid $default;
         border-radius:6px;
     }
     $mos: "mo_add", "mo_del";
@@ -2508,7 +2591,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .tree_arrow {
             @include wh(30px, 30px);
-            @include mask(var(--text-disabled));
+            @include mask($text-disabled);
             -webkit-mask-size: 70%;
             mask-size: 70%;
             -webkit-mask-image:url("../images/common/ico_accordion2.svg");
@@ -2516,7 +2599,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-image:none;
             transform:rotate(-90deg);
             &.open {
-                background-color:var(--title);
+                background-color:$title;
                 background-position:center;
                 transform:rotate(0deg);
             }
@@ -2543,10 +2626,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:20px 0;
             border:0;
             border-radius:50%;
-            @include title($font18, $font-w-m, var(--white));
+            @include title($font18, $font-w-m, $white);
             text-align:center;
             line-height:22px;
-            background:var(--basic);
+            background:$basic;
         }
         button {
             position:unset;
@@ -2564,7 +2647,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             left:97px;
             bottom:20px;
             font-size:$font13;
-            color:var(--text-disabled);
+            color:$text-disabled;
         }
     }
 }
@@ -2663,7 +2746,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         display:flex;
         width:100%;
         padding:11px;
-        border-bottom:1px solid var(--border-d);
+        border-bottom:1px solid $border-d;
         .form_tit {
             position:unset;
             padding-top:5px;
@@ -2760,7 +2843,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &::after {
                     top:4px;
                     @include wh(16px,16px);
-                    @include mask(var(--text-disabled));
+                    @include mask($text-disabled);
                     -webkit-mask-image:url("../images/common/ico_accordion2.svg");
                     mask-image:url("../images/common/ico_accordion2.svg");
                 }
@@ -2779,14 +2862,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     width:calc(100% - 32px);
                     height:1px;
                     margin-left:16px;
-                    background-color:var(--border-d);
+                    background-color:$border-d;
                 }
                 &>li {
                     a {
                         position:relative;
                         padding:8px 0 8px 43px;
                         font-weight:$font-w-r;
-                        color:var(--content);
+                        color:$content;
                         &:hover {
                             border-radius:0;
                         }
@@ -2867,7 +2950,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     a {
-        color:var(--content);
+        color:$content;
     }
 }
 /* action_tree list */
@@ -2877,7 +2960,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     background-color:#EFF6FC;
     .entry_top {
         padding:0 0 0 38px;
-        border:1px solid var(--btn-disabled);
+        border:1px solid $btn-disabled;
         &>ul {
             display:inline-block;
             margin:6px 0;
@@ -2921,7 +3004,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             top:0;
             left:0;
             @include wh (18px, 18px);
-            @include mask (var(--text-disabled));
+            @include mask ($text-disabled);
             background-position:center;
             background-image:none;
         }
@@ -2947,9 +3030,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         line-height:30px;
         .btn_option {
             border-radius:6px;
-            background-color:var(--text-disabled);
+            background-color:$text-disabled;
             &::after {
-                background-color:var(--white);
+                background-color:$white;
                 -webkit-mask-image:url("../images/common/icon_arrow_none.svg");
                 mask-image:url("../images/common/icon_arrow_none.svg");
             }
@@ -2994,7 +3077,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &.on {
                     color:#2159F7;
                     .btn_option {
-                        background-color:var(--basic);
+                        background-color:$basic;
                     }
                 }
             }
@@ -3086,11 +3169,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include wh(42px, 42px);
             border:0;
             border-radius:0 4px 4px 0;
-            background:var(--btn-disabled);
+            background:$btn-disabled;
             &::after {
                 @extend %positon_center;
                 @include wh (24px, 24px);
-                @include mask(var(--text-disabled));
+                @include mask($text-disabled);
                 background-image:none;
                 -webkit-mask-image:url("../images/common/close.svg");
                 mask-image:url("../images/common/close.svg");
@@ -3101,9 +3184,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         min-width:643px;
         margin-top:4px;
         padding:9px 38px;
-        border:1px solid var(--btn-disabled);
+        border:1px solid $btn-disabled;
         border-radius:4px;
-        background-color:var(--white);
+        background-color:$white;
         &::before {
             content:none;
         }
@@ -3152,11 +3235,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         top:0;
                         @include wh(30px, 30px);
                         border-radius:6px;
-                        background-color:var(--basic);
+                        background-color:$basic;
                         &::after {
                             @extend %positon_center;
                             @include wh(24px, 24px);
-                            background-color:var(--white);
+                            background-color:$white;
                             -webkit-mask-image:url("../images/common/btn_add.svg");
                             mask-image:url("../images/common/btn_add.svg");
                         }
@@ -3182,7 +3265,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                             left: 0;
                             display: inline-block;
                             border-radius: 50%;
-                            background: var(--content);
+                            background: $content;
                         }
                     }
                 }
@@ -3202,7 +3285,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                                 left: 0;
                                 display: inline-block;
                                 border-radius: 50%;
-                                background: var(--content);
+                                background: $content;
                             }
                         }
                     }
@@ -3214,21 +3297,21 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     a {
-        color:var(--content);
+        color:$content;
     }
     .btn_columnadd {
         height:45px;
         margin-top:10px;
-        border:1px dashed var(--border-d);
+        border:1px dashed $border-d;
         border-radius:6px;
-        background-color:var(--table-th);
+        background-color:$table-th;
         .btn_option {
             top:10px;
             transform:unset;
             @include wh(24px, 24px);
             border:none;
             border-radius:6px;
-            background-color:var(--basic);
+            background-color:$basic;
             &::after {
                 top:12px;
                 left:12px;
@@ -3247,7 +3330,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     margin-top:17px;
     padding:10px 13px;
     border-radius:6px;
-    background-color:var(--body);
+    background-color:$body;
     .tasklist_box {
         &:first-child {
             padding-top:0;
@@ -3257,22 +3340,22 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:4px 0 4px 12px;
         border:$borderD;
         border-radius:6px;
-        background-color:var(--white);
+        background-color:$white;
         .flx {
             gap:10px;
         }
         .dvs_t {
             padding:0 6px;
             font-weight:$font-w-m;
-            color:var(--title);
+            color:$title;
         }
         .task_ctg {
             .task_ctg_stl {
                 padding:4px 6px;
                 border-radius:3px;
                 font-size:$font12;
-                color:var(--white);
-                background-color:var(--basic);
+                color:$white;
+                background-color:$basic;
                 .btn_w_del {
                     @include wh(14px, 14px);
                     margin:0 0 0 6px;
@@ -3282,7 +3365,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         @include wh($wh100, $wh100);
                         -webkit-mask-size:100%;
                         mask-size:100%;
-                        background-color:var(--white);
+                        background-color:$white;
                     }
                 }
             }
@@ -3294,7 +3377,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &::after {
                     transform: translate(-50%, -50%);
                     margin: 0;
-                    @include mask(var(--title));
+                    @include mask($title);
                     -webkit-mask-image:url("../images/common/close.svg");
                     mask-image:url("../images/common/close.svg");
                     background-image:none;
@@ -3305,8 +3388,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include wh(32px, 30px);
             margin:0 5px 0 3px;
             padding:0;
+            border-left:$borderD;
             border-radius:0 6px 6px 0;
-            background-color:var(--white);
+            background-color:$white;
             &::after {
                 @include wh(24px,24px);
                 -webkit-mask-size:90%;
@@ -3320,7 +3404,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 transform:translateY(-50%);
                 display:inline-block;
                 @include wh (1px,40px);
-                background-color:var(--border-d);
+                background-color:$border-d;
             }
         }
     }
@@ -3345,7 +3429,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:20px 20px 12px;
         border-bottom:$borderD;
         border-radius:0;
-        @include title ($font16, $font-w-b, var(--title));
+        @include title ($font16, $font-w-b, $title);
     }
 }
 
@@ -3359,9 +3443,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:10px;
             &.bg-yel {
                 .preview-textfield {
-                    color:var(--info);
+                    color:$info;
                     em {
-                        color:var(--info);
+                        color:$info;
                     }
                 }
             }
@@ -3370,7 +3454,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             align-items:center;
             padding-bottom:10px;
             font-weight:$font-w-m;
-            color:var(--content);
+            color:$content;
             &.bul_dot {
                 dt {
                     &::before {
@@ -3395,7 +3479,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             margin-bottom:12px;
             font-weight:$font-w-m;
             line-height:16px;
-            color:var(--title);
+            color:$title;
         }
     }
     .bar_chart_bg { //진행률
@@ -3409,7 +3493,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             display:inline-block;
             height: 15px;
             border-radius:9px;
-            background-color:var(--primary);
+            background-color:$primary;
         }
         .bar_value {
             position:unset;
@@ -3433,7 +3517,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding-left:10px;
                 margin-bottom:0;
                 font-weight:$font-w-m;
-                color:var(--content);
+                color:$content;
                 line-height:18px;
                 &::before {
                     top:5px;
@@ -3441,7 +3525,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             dd {
-                @include title ($font15, $font-w-e, var(--title));
+                @include title ($font15, $font-w-e, $title);
             }
         }
     }
@@ -3485,10 +3569,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding-top:4px;
                 padding-right:10px;
                 font-weight:$font-w-m;
-                color:var(--text-disabled);
+                color:$text-disabled;
             }
             dd {
-                @include title ($font27, $font-w-h, var(--title));
+                @include title ($font27, $font-w-h, $title);
             }
         }
         &.no_dt_info {
@@ -3521,7 +3605,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             dd {
                 width:100%;
-                @include title ($font16, $font-w-e, var(--true));
+                @include title ($font16, $font-w-e, $true);
                 text-align:right;
             }
         }
@@ -3535,14 +3619,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-radius:3px;
             background-color:#EDF0F4;
             .use_name_txt {
-                color:var(--text-disabled);
+                color:$text-disabled;
             }
             .use_onoff_icon {
                 @include wh (24px, 24px);
                 background-color:transparent;
                 .icon_networkuse {
                     @include wh (24px, 24px);
-                    @include mask (var(--text-disabled));
+                    @include mask ($text-disabled);
                     -webkit-mask-image:url("../images/common/icon_net.svg");
                     mask-image:url("../images/common/icon_net.svg");
                     background-image:none;
@@ -3552,11 +3636,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:#DAFAF5;
                 .use_name_txt {
                     font-size:$font14;
-                    color:var(--primary);
+                    color:$primary;
                 }
                 .use_onoff_icon {
                     .icon_networkuse {
-                        background-color:var(--primary);
+                        background-color:$primary;
                     }
                 }
             }
@@ -3584,9 +3668,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 vertical-align:bottom;
                 em {
                     font-size:$font16;
-                    color:var(--true);
+                    color:$true;
                     &.orttxt {
-                        color:var(--false);
+                        color:$false;
                     }
                 }
                 span {
@@ -3614,7 +3698,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         right:10px;
         width:169px;
         padding:0 12px;
-        color:var(--text-disabled);
+        color:$text-disabled;
         text-align:left;
         .icon_search {
             position:absolute;
@@ -3622,7 +3706,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             right:14px;
             transform:translateY(-50%);
             @include wh (16px, 16px);
-            @include mask (var(--text-disabled));
+            @include mask ($text-disabled);
             background-image:none;
             -webkit-mask-image:url("../images/common/ico_btn.svg");
             mask-image:url("../images/common/ico_btn.svg");
@@ -3636,7 +3720,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &::before {
                 @include content(24px,24px);
                 margin-right:3px;
-                @include mask (var(--text-disabled));
+                @include mask ($text-disabled);
                 -webkit-mask-image:url("../images/moni/ico_status.svg");
                 mask-image:url("../images/moni/ico_status.svg");
             }
@@ -3644,10 +3728,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 width:auto;
                 margin-right:9px;
                 font-weight:$font-w-m;
-                color:var(--text-disabled);
+                color:$text-disabled;
             }
             dd {
-                @include title ($font27, $font-w-h, var(--title));
+                @include title ($font27, $font-w-h, $title);
             }
         }
         .flx {
@@ -3674,69 +3758,35 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .activation { //활성
         dt {
-            color:var(--true) !important;
+            color:$true !important;
         }
         dd {
-            color:var(--true) !important;
+            color:$true !important;
         }
     }
     .lock { //잠금
         dt {
-            color:var(--content) !important;
+            color:$content !important;
         }
         dd {
-            color:var(--content) !important;
+            color:$content !important;
         }
     }
     .inactive { //비활성
         dt {
-            color:var(--text-disabled) !important;
+            color:$text-disabled !important;
         }
         dd {
-            color:var(--text-disabled) !important;
+            color:$text-disabled !important;
         }
     }
     .fail { //실패
         dt {
-            color:var(--false) !important;
+            color:$false !important;
         }
         dd {
-            color:var(--false) !important;
+            color:$false !important;
         }
-    }
-}
-
-/***************** monitoring chart *****************/
-/* 도넛 chart */
-.gauge-legend {
-    top:-31px;
-    .min, .max {
-        @include title ($font18, $font-w-m, var(--text-disabled));
-    }
-    .min {
-        margin-left:-46px;
-    }
-    .max {
-        margin-left:12px;
-    }
-}
-.preview-textfield {
-    top:50%;
-    transform:translate(-50%,-50%);
-    @include wh (auto,auto);
-    margin:0;
-    border-radius:0;
-    @include title ($font27, $font-w-h, var(--content));
-    line-height:unset;
-    background-color:transparent;
-    .gg_opt {
-        position:unset;
-        margin-bottom:10px;
-        font-weight:$font-w-m;
-        color:var(--text-disabled);
-    }
-    em {
-        @include title ($font27, $font-w-h, var(--content));
     }
 }
 
@@ -3748,7 +3798,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .btn_dbcontrl {
         left:-35px;
         @include wh (35px,35px);
-        background:url("../images/common/ico_dbcontrl.svg")no-repeat center var(--basic);
+        background:url("../images/common/ico_dbcontrl.svg")no-repeat center $basic;
     }
     .contrl_wrap {
         width:335px;
@@ -3772,12 +3822,46 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .contrl_tit {
     padding:10px 7px;
     &>p {
-        @include title ($font18, $font-w-b, var(--title));
+        @include title ($font18, $font-w-b, $title);
     }
     .icon_reset {
         position:absolute;
         bottom:3px;
         right:0;
+    }
+}
+
+/***************** monitoring chart *****************/
+/* 도넛 chart */
+.gauge-legend {
+    top:-31px;
+    .min, .max {
+        @include title ($font18, $font-w-m, $text-disabled);
+    }
+    .min {
+        margin-left:-46px;
+    }
+    .max {
+        margin-left:12px;
+    }
+}
+.preview-textfield {
+    top:50%;
+    transform:translate(-50%,-50%);
+    @include wh (auto,auto);
+    margin:0;
+    border-radius:0;
+    @include title ($font27, $font-w-h, $content);
+    line-height:unset;
+    background-color:transparent;
+    .gg_opt {
+        position:unset;
+        margin-bottom:10px;
+        font-weight:$font-w-m;
+        color:$text-disabled;
+    }
+    em {
+        @include title ($font27, $font-w-h, $content);
     }
 }
 
@@ -3797,7 +3881,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .sych_mnt_top {
         margin-bottom:18px;
         p {
-            @include title ($font16, $font-w-m, var(--title));
+            @include title ($font16, $font-w-m, $title);
         }
     }
     .btn_set {
@@ -3805,7 +3889,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border:$borderD;
         border-radius:6px;
         line-height:28px;
-        color:var(--content);
+        color:$content;
     }
 }
 
@@ -3817,7 +3901,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .server_box_bg {
         border-radius:6px;
-        background-color:var(--true);
+        background-color:$true;
     }
     .server_box_white {
         min-height:60px;
@@ -3829,12 +3913,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &.HRsystem {
                 background-image:none;
                 background-position:unset;
-                background:url("../images/common/ico_HRsystem.svg")no-repeat center var(--btn-disabled);
+                background:url("../images/common/ico_HRsystem.svg")no-repeat center $btn-disabled;
             }
             &.ADserver {
                 background-image:none;
                 background-position:unset;
-                background:url("../images/common/ico_ADserver.svg")no-repeat center var(--btn-disabled);
+                background:url("../images/common/ico_ADserver.svg")no-repeat center $btn-disabled;
             }
         }
         .system_name_tit {
@@ -3844,10 +3928,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .db_pp {
                 padding-top:0;
                 font-size:$font12;
-                color:var(--secondary);
+                color:$secondary;
             }
         }
         .btn_run_exc {
+            top:2px;
             @include wh(30px,30px);
             padding:2px 0 0;
             border:$borderD;
@@ -3857,16 +3942,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &::before {
                 @include content(24px,24px);
                 display:inline-block;
-                @include mask(var(--title));
+                @include mask($title);
                 -webkit-mask-image:url("../images/common/ico_play.svg");
                 mask-image:url("../images/common/ico_play.svg");
             }
             &.diss {
-                border-color:var(--btn-disabled);
-                background-color:var(--disabled-line-bg);
+                border-color:$btn-disabled;
+                background-color:$disabled-line-bg;
                 opacity:1;
                 &::before {
-                    background-color:var(--text-disabled);
+                    background-color:$text-disabled;
                 }
             }
         }
@@ -3875,7 +3960,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:13px 0 0;
         .progress_txt {
             padding-bottom:0;
-            @include title($font13, $font-w-r, var(--secondary));
+            @include title($font13, $font-w-r, $secondary);
             line-height:16px;
             .loader {
                 left:0;
@@ -3888,11 +3973,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .sync_ctg_name {
-            color:var(--secondary);
+            color:$secondary;
         }
         .user_numb {
             margin-top:7px;
-            @include title (24px, $font-w-e, var(--title));
+            @include title (24px, $font-w-e, $title);
             text-align:right;
         }
     }
@@ -3912,13 +3997,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .server_info_date {
-            color:var(--secondary);
+            color:$secondary;
         }
     }
     .btn_refsh {
         border:$borderD;
         border-radius:6px;
-        background:url("../images/common/ico_refresh.svg")no-repeat center;
+        background:url("../images/common/ico_reset.svg")no-repeat center;
     }
 }
 .main_server_box {
@@ -3934,7 +4019,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:9px 0 8px;
             border-radius:8px;
             font-size:$font13;
-            background-color:var(--basic);
+            background-color:$basic;
         }
     }
 }
@@ -3991,7 +4076,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .stt_24h {
             padding-right:8px;
-            @include title ($font13, $font-w-r, var(--secondary));
+            @include title ($font13, $font-w-r, $secondary);
             .plus_cl {
                 font-weight:$font-w-r;
                 color:#386AEE;
@@ -3999,12 +4084,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .minus_cl {
                 padding-left:4px;
                 font-weight:$font-w-r;
-                color:var(--false);
+                color:$false;
             }
         }
         .user_numb {
             &.ms_numb {
-                @include title ($font13, $font-w-e, var(--title));
+                @include title ($font13, $font-w-e, $title);
             }
         }
     }
@@ -4012,7 +4097,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .syc_server_list {
     .server_box_bg {
         border-radius:6px;
-        background-color:var(--true);
+        background-color:$true;
     }
     .main_server_box_pd {
         padding-bottom:0;
@@ -4028,7 +4113,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             .rdd_server_box {
                 .rdd_server_stt_icon {
-                    background-color:var(--false);
+                    background-color:$false;
                     background-position:unset;
                     &::before {
                         -webkit-mask-image:url("../images/label/ico_PlugZapOff.svg");
@@ -4036,14 +4121,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     }
                 }
                 .server_info_name {
-                    color:var(--false);
+                    color:$false;
                 }
             }
         }
         &.connect {
             .rdd_server_box {
                 .rdd_server_stt_icon {
-                    background-color:var(--blue);
+                    background-color:$blue;
                     background-position:unset;
                     &::before {
                         -webkit-mask-image:url("../images/label/ico_PlugConnected.svg");
@@ -4052,7 +4137,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 .server_info_txt {
                     .server_info_name {
-                        color:var(--blue);
+                        color:$blue;
                     }
                 }
             }
@@ -4073,7 +4158,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     position:absolute;
                     @extend %positon_center;
                     display:inline-block;
-                    @include mask(var(--white));
+                    @include mask($white);
                 }
             }
             .server_info {
@@ -4091,12 +4176,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     padding:3px 5px;
     border-radius:3px;
     font-size:$font12;
-    color:var(--primary);
+    color:$primary;
     background-color:#DAFAF5;
 }
 
 .fw_dt {
-    border:1px solid var(--list-border);
+    border:1px solid $list-border;
     border-radius:10px;
     .icon_fw {
         @include wh(24px,24px);
@@ -4126,7 +4211,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .system_name_box {
     .system_icon {
         border-radius:7px;
-        background-color:var(--btn-disabled);
+        background-color:$btn-disabled;
         &.AMsystem {
             background-image:url("../images/role/icon_securityact.svg");
             background-position:center;
@@ -4152,7 +4237,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-image:url("../images/common/icon_google.svg");
             background-position:center;
             background-size:70%;
-            background-color:var(--btn-disabled);
+            background-color:$btn-disabled;
         }
     }
     .system_name_tit {
@@ -4163,19 +4248,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .errtxt {
             padding-right:8px;
             padding-bottom:10px;
-            color:var(--false);
+            color:$false;
             i {
                 @include wh(18px,18px);
-                @include mask(var(--false));
-                -webkit-mask-image: url(../images/common/ico_info.svg);
-                mask-image: url(../images/common/ico_info.svg);
+                @include mask($false);
+                -webkit-mask-image: url("../images/common/ico_info.svg");
+                mask-image: url("../images/common/ico_info.svg");
                 background-position:unset;
                 background-image:none;
             }
             &.tra_err {
                 i {
                     @include wh(18px,18px);
-                    @include mask(var(--info));
+                    @include mask($info);
                     -webkit-mask-image: url("../images/common/ico_warning.svg");
                     mask-image: url("../images/common/ico_warning.svg");
                 }
@@ -4185,9 +4270,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .btn_refsh_s {
         @include wh(30px,30px);
         background-position:unset;
-        border: 1px solid var(--border-d);
+        border: 1px solid $border-d;
         border-radius: 6px;
-        background: url("../images/common/ico_refresh.svg") no-repeat center;
+        background: url("../images/common/ico_reset.svg") no-repeat center;
     }
     .server_loading {
         @include wh(30px, 30px);
@@ -4209,11 +4294,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 width:auto;
                 margin-bottom:0;
                 font-size:$font13;
-                color:var(--secondary);
+                color:$secondary;
             }
             .user_numb {
                 width:auto;
-                color:var(--title);
+                color:$title;
             }
             &.bul_dot {
                 dt {
@@ -4238,7 +4323,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             box-shadow:0 6px 6px rgb(0 0 0 / 7%);
             .icon_err, .icon_warning {
                 @include wh (24px, 24px);
-                @include mask (var(--false));
+                @include mask ($false);
                 background-image:none;
                 background-position:unset;
             }
@@ -4248,7 +4333,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             &.open {
-                min-width:unset;
+                min-width:536px;
                 max-width:760px;
                 width:$wh100;
                 .sych_mnt_toast_detail {
@@ -4270,27 +4355,27 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .sych_mnt_toast_detail {
             p, em {
-                color:var(--false);
+                color:$false;
             }
         }
         .btn_close {
-            background-color:var(--false);
+            background-color:$false;
         }
     }
     .warning_toast {
         background-color:#FFEBDD;
         .icon_warning {
-            background-color:var(--info);
+            background-color:$info;
             -webkit-mask-image:url("../images/common/ico_warning.svg");
             mask-image:url("../images/common/ico_warning.svg");
         }
         .sych_mnt_toast_detail {
             p, em {
-                color:var(--info);
+                color:$info;
             }
         }
         .btn_close {
-            background-color:var(--info);
+            background-color:$info;
         }
     }
 }
@@ -4363,7 +4448,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .box_showbtn {
     right:15px;
-    top:10px;
+    top:15px;
     @include wh(30px, 30px);
     padding:0;
     border:$borderD;
@@ -4375,11 +4460,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         position:absolute;
         @extend %positon_center;
         display:inline-block;
-        @include mask(var(--title));
+        @include mask($title);
         -webkit-mask-image:url("../images/common/ico_show.svg");
         mask-image:url("../images/common/ico_show.svg");
     }
     &.hide {
+        border-color:$border-d;
         &::after {
             @include content(1px,24px);
             position:absolute;
@@ -4387,7 +4473,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             left:50%;
             transform:translate(-50%,-50%) rotate(-45deg);
             display:block;
-            background-color:var(--false);
+            background-color:$false;
         }
     }
 }
@@ -4411,26 +4497,26 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     padding:0;
     border:$borderD;
     border-radius:6px;
-    background-color:var(--white);
+    background-color:$white;
     .icam_pp {
         padding:15px 10px;
         margin-bottom:15px;
         border-bottom:$borderD;
-        @include title($font14,$font-w-m,var(--title));
+        @include title($font14,$font-w-m,$title);
         &>p{
-            @include title($font14,$font-w-m,var(--title));
+            @include title($font14,$font-w-m,$title);
         }
     }
     .icam_b_stl {
         margin:0 10px 10px;
-        border:1px solid var(--list-border);
-        border-left:6px solid var(--true);
+        border:1px solid $list-border;
+        border-left:6px solid $true;
         border-radius:10px;
         .sicam_icon {
             position: relative;
             @include wh(40px,40px);
             border-radius:7px;
-            background-color:var(--btn-disabled);
+            background-color:$btn-disabled;
             background-position:center;
             background-image:none;
             &::before {
@@ -4500,25 +4586,25 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             font-size:$font14;
         }
         .server_loading {
-            top:15px;
+            top:21px;
             @include wh(30px, 30px);
             padding:0;
         }
         .btn_refsh_s {
-            top:15px;
+            top:21px;
             width: 30px;
             height: 30px;
             background-position: unset;
-            border: 1px solid var(--border-d);
+            border: 1px solid $border-d;
             border-radius: 6px;
-            background: url("../images/common/ico_refresh.svg") no-repeat center;
+            background: url("../images/common/ico_reset.svg") no-repeat center;
         }
         .sync_stt_dtl {
             .sync_ctg_name {
-                color:var(--secondary);
+                color:$secondary;
             }
             .user_numb {
-                @include title($font16,$font-w-e,var(--title));
+                @include title($font16,$font-w-e,$title);
             }
         }
         .sicam_icon_s {
@@ -4545,7 +4631,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .errtxt {
                     padding-left:0;
                     i {
-                        @include mask (var(--false));
+                        @include mask ($false);
                         margin:0;
                         -webkit-mask-image: url(../images/common/ico_info.svg);
                         mask-image: url(../images/common/ico_info.svg);
@@ -4566,7 +4652,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .errtxt {
                 padding-left:0;
                 i {
-                    @include mask (var(--false));
+                    @include mask ($false);
                     margin:0;
                     -webkit-mask-image: url(../images/common/ico_info.svg);
                     mask-image: url(../images/common/ico_info.svg);
@@ -4596,11 +4682,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     width:auto;
                     margin-bottom:0;
                     font-size:$font13;
-                    color:var(--secondary);
+                    color:$secondary;
                 }
                 .user_numb {
                     width:auto;
-                    color:var(--title);
+                    color:$title;
                 }
             }
         }
@@ -4608,12 +4694,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     &.btm_b_area {
         .icam_b_stl {
             .btn_refsh_s {
-                top:5px;
+                top:12px;
             }
         }
     }
     .progress_txt {
-        @include title($font13,$font-w-r,var(--text-disabled));
+        @include title($font13,$font-w-r,$text-disabled);
         padding:0 0 0 4px;
         line-height:16px;
         .icon_progress {
@@ -4652,7 +4738,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .icam_b_stl {
         .btn_refsh_s {
-            top:5px;
+            top:12px;
         }
     }
     .fw_list {
@@ -4661,7 +4747,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         height:100%;
         border:$borderD;
         border-radius:6px;
-        background-color:var(--white);
+        background-color:$white;
     }
 }
 
@@ -4697,7 +4783,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         align-items: flex-start;
         .sub {
             font-size:$font13;
-            color:var(--secondary);
+            color:$secondary;
         }
     }
     .score_progress {
@@ -4705,10 +4791,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .score_numb {
             padding-bottom:10px;
             p {
-                @include title (20px, $font-w-h, var(--content));
+                @include title (20px, $font-w-h, $content);
                 span {
                     font-weight:$font-w-m;
-                    color:var(--secondary);
+                    color:$secondary;
                 }
             }
         }
@@ -4727,16 +4813,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         gap:4px;
         p {
             font-size:$font14;
-            color:var(--true);
+            color:$true;
             &.icon_stt {
                 @include wh (18px,18px);
                 border-radius:50%;
-                background-color:var(--true);
+                background-color:$true;
                 &::before {
                     content:"";
                     display:inline-block;
                     @include wh (18px,18px);
-                    @include mask (var(--white));
+                    @include mask ($white);
                     -webkit-mask-image: url(../images/common/ico_check_s.svg);
                     mask-image: url(../images/common/ico_check_s.svg);
                 }
@@ -4746,7 +4832,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .set_hide_box {
-    background-color:var(--disabled-line-bg) !important;
+    background-color:$disabled-line-bg !important;
 }
 /***************** ICAM_board_setting *****************/
 .ICAM_board_setting {
@@ -4773,7 +4859,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         top:50%;
         transform:translateY(-50%);
         &.hide {
-            border-color:var(--border-d);
+            border-color:$border-d;
         }
     }
     .icam_b_stl:has(select) {
@@ -4816,9 +4902,139 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .box_showbtn {
             right:10px;
-            border-color:var(--border-d);
+            border-color:$border-d;
             &.hide {
-                border-color:var(--border-d);
+                border-color:$border-d;
+            }
+        }
+    }
+}
+
+/*---------------------------------------------
+    #서버 존 server_zone
+---------------------------------------------*/
+.info_wrap {
+    align-items:center;
+    column-gap:82px;
+    padding:21px;
+    margin-top:20px;
+    border:$borderD;
+    border-radius:6px;
+    background-color:$table-th;
+    li {
+        width:auto;
+        padding-top:0;
+        dl {
+            align-items:center;
+            column-gap:108px;
+        }
+        dt {
+            width:auto;
+            margin-bottom:0;
+            padding-left:20px;
+            font-size:$font14;
+            font-weight:$font-w-r;
+            background:none;
+            &::before {
+                top:6px;
+            }
+        }
+        dd {
+            font-weight:$font-w-b;
+            color:$title;
+        }
+        &:last-child {
+            dt {
+                display:none;
+            }
+        }
+    }
+    &+.list_stl {
+        .move_box {
+            height:526px;
+            .moved_tit {
+                border-bottom:1px solid $list-border;
+                .tit_in_btn {
+                    top: -7px;
+                }
+            }
+            .moved_list {
+                height:396px;
+                margin-top:14px;
+                border:0;
+                border-bottom:$borderD;
+            }
+        }
+        .moved_box {
+            height:526px;
+            .moved_tit {
+                border-bottom:1px solid $list-border;
+            }
+            .move_tbl {
+                max-height:max-content;
+                height:396px;
+                margin-top:14px;
+                border:0;
+                border-bottom:$borderD;
+            }
+        }
+        .mini_paging {
+            padding-top:14px;
+        }
+    }
+}
+
+.svz_list_stl {
+    .svz_list_ul {
+        align-items:flex-end;
+        justify-content:space-between;
+        padding:10px;
+        .svz_slt_btn {
+            width:auto;
+            .form_contrl {
+                width:246px;
+            }
+            .btn_retry {
+                padding:0;
+                border-radius:6px;
+                background-color:$basic;
+                background-image:none;
+                background-position:center;
+                &::before {
+                    content:"";
+                    display:inline-block;
+                    @include wh (24px,24px);
+                    @include mask($white);
+                    -webkit-mask-image: url("../images/common/ico_reset.svg");
+                    mask-image: url("../images/common/ico_reset.svg");
+                }
+            }
+        }
+    }
+    .svz_info {
+        width:auto;
+        .svz_info_ip {
+            @include title ($font16, $font-w-b, $title);
+        }
+        .svz_info_dtl {
+            padding-top:10px;
+            &.bul_dot {
+                dt {
+                    width:auto;
+                    padding-right:14px;
+                    margin:0;
+                    &::before {
+                        top:6px;
+                        left:0;
+                    }
+                }
+            }
+            dt {
+                font-size:$font14;
+                font-weight:$font-w-r;
+            }
+            .checkCircle {
+                font-weight:$font-w-m;
             }
         }
     }

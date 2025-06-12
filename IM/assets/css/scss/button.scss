@@ -1,5 +1,4 @@
-@use './variable' as *;
-@use './mixin' as *;
+@use 'variable' as *;
 
 /*---------------------------------------------
 	#상단 버튼
@@ -13,11 +12,18 @@
     padding:20px 24px;
     .opttxt {
         font-weight:$font-w-r;
-        color:var(--title);
+        color:$title;
     }
 }
 .btn_box {
     padding:0 0 10px;
+    &.tit_in_btn {
+        .ref {
+            @include icon(30px,30px);
+            padding:0;
+            background-image:url("../images/common/ico_refresh.svg");
+        }
+    }
 }
 
 $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
@@ -41,11 +47,11 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 ---------------------------------------------*/
 /* im 기본 */
 .basic {
-    border:1px solid var(--basic);
+    border:1px solid $basic;
     border-radius:6px;
     font-size:$font13;
     line-height:28px;
-    background:var(--basic);
+    background:$basic;
     &:focus-visible {
         border:1px solid #0A153C;
         background:#0A153C;
@@ -53,11 +59,11 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 }
 
 .basic2 {
-    border:1px solid var(--basic2);
+    border:1px solid $basic2;
     border-radius:6px;
     font-size:$font13;
     line-height:28px;
-    background:var(--basic2);
+    background:$basic2;
     &:focus-visible {
         border:1px solid #0A153C;
         background:#0A153C;
@@ -67,22 +73,22 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 /* big */
 .primary {
     border:$borderP;
-    color:var(--white);
+    color:$white;
     line-height:28px;
-    background:var(--primary);
+    background:$primary;
     // focus
     &:focus-visible {
-        border:1px solid var(--btn-hover);
-        background:var(--btn-hover);
+        border:1px solid $btn-hover;
+        background:$btn-hover;
     }
     &.btn_dropdown {
         padding-right:30px;
-        background:url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--primary);
+        background:url("../images/common/ico_accordion.svg") no-repeat right 4px center $primary;
     }
     &.arrow {
         i {
             @include wh (16px, 16px);
-            background:url("../images/common/ico_accordion.svg") no-repeat right center var(--primary);
+            background:url("../images/common/ico_accordion.svg") no-repeat right center $primary;
             transform:rotate(270deg);
         }
     }
@@ -95,19 +101,19 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     padding-bottom:0;
     border-radius:6px;
     font-size:$font13;
-    color:var(--content);
+    color:$content;
     border:$borderD;
     line-height:28px;
-    background:var(--white);
+    background:$white;
     // focus
     &:focus-visible {
-        color:var(--title);
-        border:1px solid var(--content);
+        color:$title;
+        border:1px solid $content;
     }
     &.btn_dropdown {
         padding:0 30px 0 10px;
         padding-bottom:0;
-        background:url("../images/common/ico_accordion.svg") no-repeat right 4px center var(--white);
+        background:url("../images/common/ico_accordion.svg") no-repeat right 4px center $white;
     }
 }
 
@@ -116,14 +122,14 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     #line_disabled : line 버튼만
 ---------------------------------------------*/
 .disabled {
-    border:1px solid var(--btn-disabled);
-    color:var(--text-disabled);
-    background:var(--btn-disabled);
+    border:1px solid $btn-disabled;
+    color:$text-disabled;
+    background:$btn-disabled;
 }
 .line_disabled {
-    color:var(--text-disabled);
-    background:var(--disabled-line-bg);
-    border:1px solid var(--btn-disabled);
+    color:$text-disabled;
+    background:$disabled-line-bg;
+    border:1px solid $btn-disabled;
     cursor:auto;
 }
 
@@ -143,28 +149,29 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     }
 }
 button, a {
-    color:var(--white);
+    color:$white;
     font-weight:$font-w-m;
     &.icon {
         display:inline-flex;
         align-items:center;
         column-gap:2px;
-        padding:0 014px 0 7px;
+        padding:0 14px 0 8px;
         i {
             display:inline-block;
             @include wh (24px, 24px);
+            margin-bottom: 2px;
             &.checkout {
-                @include mask(var(--title));
+                @include mask($title);
                 -webkit-mask-image:url("../images/common/close.svg");
                 mask-image:url("../images/common/close.svg");
             }
             &.checkin {
-                @include mask(var(--title));
+                @include mask($title);
                 -webkit-mask-image:url("../images/common/ico_check.svg");
                 mask-image:url("../images/common/ico_check.svg");
             }
             &.icon_setting {
-                @include mask(var(--title));
+                @include mask($title);
                 -webkit-mask-image:url("../images/common/icon_setting.svg");
                 mask-image:url("../images/common/icon_setting.svg");
                 background-image:none;
@@ -177,9 +184,9 @@ button, a {
             }
             &.icon_reset {
                 font-size:0;
-                @include mask(var(--title));
-                -webkit-mask-image:url("../images/common/ico_refresh.svg");
-                mask-image:url("../images/common/ico_refresh.svg");
+                @include mask($title);
+                -webkit-mask-image:url("../images/common/ico_reset.svg");
+                mask-image:url("../images/common/ico_reset.svg");
                 -webkit-mask-size: 90%;
                 mask-size: 90%;
                 background-image:none;
@@ -191,7 +198,7 @@ button, a {
         &.s_btn_more {
             position:relative;
             padding-right:25px;
-            color:var(--title);
+            color:$title;
             line-height:18px;
             &::after {
                 @include content(16px,16px);
@@ -207,7 +214,7 @@ button, a {
             @include wh (30px, 30px);
             padding:6px;
             font-size:0;
-            background:url("../images/common/ico_refresh.svg")no-repeat center/auto var(--white);
+            background:url("../images/common/ico_reset.svg")no-repeat center/auto $white;
             &::before {
                 content:none;
             }
@@ -216,7 +223,7 @@ button, a {
             @include wh (30px, 30px);
             padding:3px;
             font-size:0;
-            background:url("../images/common/close.svg")no-repeat center/auto var(--white);
+            background:url("../images/common/close.svg")no-repeat center/auto $white;
         }
         &.bottom {
             @include wh (30px,30px);
@@ -227,22 +234,22 @@ button, a {
     }
     &.disabled {
         cursor:auto;
-        border:1px solid var(--btn-disabled);
-        color:var(--text-disabled) !important;
-        background:var(--btn-disabled);
+        border:1px solid $btn-disabled;
+        color:$text-disabled !important;
+        background:$btn-disabled;
         i {
-            background-color:var(--text-disabled) !important;
+            background-color:$text-disabled !important;
         }
     }
     &.normal {
         display:inline-block;
         padding:6px 12px;
-        border:1px solid var(--default);
+        border:1px solid $default;
         border-radius:6px;
         font-weight:$font-w-r;
-        color:var(--content);
+        color:$content;
         line-height:16px;
-        background:var(--white);
+        background:$white;
         &.on {
             border:$borderP;
             background:#EDFFFC;
@@ -250,11 +257,11 @@ button, a {
                 content:"";
                 display:inline-block;
                 @include wh (16px, 16px);
-                @include mask(var(--primary));
+                @include mask($primary);
                 -webkit-mask-image:url("../images/common/ico_check_s.svg");
                 mask-image:url("../images/common/ico_check_s.svg");
             }
-            color:var(--primary);
+            color:$primary;
         }
     }
     /* 테이블 안 토글 버튼 */
@@ -262,7 +269,7 @@ button, a {
         display:inline-block;
         @include wh (16px, 16px);
         padding:0;
-        @include mask(var(--content));
+        @include mask($content);
         -webkit-mask-image:url("../images/common/icon_arrow_open.svg");
         mask-image:url("../images/common/icon_arrow_open.svg");
     }
@@ -280,7 +287,7 @@ button, a {
         position:relative;
         padding:0 14px 0 24px;
         font-size:13px;
-        color:var(--title);
+        color:$title;
         &::before {
             content:"";
             display:inline-block;
@@ -291,7 +298,7 @@ button, a {
         }
         &.icon_reset {
             &::before {
-                background-image:url("../images/common/ico_refresh.svg");
+                background-image:url("../images/common/ico_reset.svg");
                 transform:scaleX(-1);
             }
         }
@@ -303,8 +310,8 @@ button, a {
     .btn_option {
         right:unset;
         @include wh(30px, 30px);
-        border:1px solid var(--basic);
-        background-color:var(--basic);
+        border:1px solid $basic;
+        background-color:$basic;
     }
 }
 
@@ -314,7 +321,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 @each $close in $closes {
     .#{$close} {
         @include wh (16px,16px);
-        @include mask(var(--title));
+        @include mask($title);
         -webkit-mask-image:url("../images/common/close.svg");
         mask-image:url("../images/common/close.svg");
         background-image:none;
@@ -324,12 +331,12 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 /* add button */
 .btn_columnadd {
     height:45px;
-    border:1px dashed var(--border-d);
+    border:1px dashed $border-d;
     border-radius:6px;
-    background-color:var(--table-th);
+    background-color:$table-th;
     span {
         padding-right:30px;
-        @include title ($font16, $font-w-m, var(--title));
+        @include title ($font16, $font-w-m, $title);
         line-height:45px;
         .btn_option {
             right:0;
@@ -338,7 +345,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
             @include wh(24px,24px);
             border:none;
             border-radius:6px;
-            background-color:var(--basic);
+            background-color:$basic;
             &::after {
                 top:50%;
                 left:50%;
@@ -360,9 +367,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
             display:inline-block;
             padding:0 23px 0 14px;
             line-height:28px;
-            color:var(--white);
+            color:$white;
             background:url("../images/common/icon_plus.svg")no-repeat center right 4px;
-            background-color:var(--basic);
+            background-color:$basic;
         }
     }
 }
@@ -401,7 +408,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 
 /* treem_btn */
 .treem_btn {
-    color:var(--content);
+    color:$content;
 }
 
 /* btn_dtail */
@@ -413,18 +420,18 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         left:50%;
         transform:translate(-50%,-50%);
         @include wh(24px, 24px);
-        @include mask(var(--title));
+        @include mask($title);
         background-size:contain;
         -webkit-mask-image:url("../images/common/ico_accordion.svg");
         mask-image:url("../images/common/ico_accordion.svg");
     }
     &.on {
-        border:1px solid var(--basic);
-        background-color:var(--basic);
+        border:1px solid $basic;
+        background-color:$basic;
         .btn_dtail_arrow {
             top:50%;
             background-position:unset;
-            background-color:var(--white);
+            background-color:$white;
             transform:translate(-50%,-50%) rotate(180deg);
         }
     }
@@ -439,14 +446,14 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 /* 상세보기 */
 .btn_detailview {
     @include wh (16px,16px);
-    @include mask(var(--title));
+    @include mask($title);
     -webkit-mask-image:url("../images/common/ico_document.svg");
     mask-image:url("../images/common/ico_document.svg");
     -webkit-mask-size:auto;
     mask-size:auto;
     background-image:none;
     &.on {
-        background-color:var(--primary);
+        background-color:$primary;
     }
 }
 
@@ -461,7 +468,6 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         }
     }
 }
-
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
@@ -473,7 +479,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         display:inline-block;
         @include wh (24px, 24px);
         padding:0;
-        @include mask(var(--text-disabled));
+        @include mask($text-disabled);
         -webkit-mask-image:url("../images/common/ico_btn.svg");
         mask-image:url("../images/common/ico_btn.svg");
     }
@@ -493,9 +499,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         @include wh (auto, 36px);
         padding:7px 20px 6px;
         border-radius:7px;
-        color:var(--white);
+        color:$white;
         line-height:16px;
-        background:var(--primary);
+        background:$primary;
     }
 }
 
@@ -506,9 +512,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         &::before {
             @include content(16px,16px);
             display:inline-block;
-            @include mask(var(--title));
-            -webkit-mask-image:url("../images/common/ico_refresh.svg");
-            mask-image:url("../images/common/ico_refresh.svg");
+            @include mask($title);
+            -webkit-mask-image:url("../images/common/ico_reset.svg");
+            mask-image:url("../images/common/ico_reset.svg");
         }
     }
     .primary {
@@ -528,9 +534,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 display:inline-block;
                 @include wh (38px, 30px);
                 padding:0;
-                border:1px solid var(--default);
+                border:1px solid $default;
                 border-radius:6px;
-                @include title ($font12, $font-w-r, var(--content));
+                @include title ($font12, $font-w-r, $content);
                 line-height:30px;
                 text-align:center;
                 span {
@@ -546,7 +552,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                     span {
                         display:inline-block;
                         @include wh (24px, 24px);
-                        @include mask(var(--text-disabled));
+                        @include mask($text-disabled);
                         -webkit-mask-image:url("../images/common/ico_prev.svg");
                         mask-image:url("../images/common/ico_prev.svg");
                         background-position:unset;
@@ -558,7 +564,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                     overflow:hidden;
                     span {
                         @include wh (24px, 24px);
-                        @include mask(var(--text-disabled));
+                        @include mask($text-disabled);
                         -webkit-mask-image:url("../images/common/ico_pprev.svg");
                         mask-image:url("../images/common/ico_pprev.svg");
                         background-position:unset;
@@ -576,8 +582,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 }
             }
             .on {
-                border-color:var(--primary) !important;
-                background-color:var(--primary) !important;
+                border-color:$primary !important;
+                background-color:$primary !important;
             }
         }
     }
@@ -587,7 +593,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 &.currentpage {
                     @include wh(auto, auto);
                     em {
-                        color:var(--primary);
+                        color:$primary;
                     }
                 }
                 a {
@@ -602,7 +608,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                         span {
                             display:inline-block;
                             @include wh (24px, 24px);
-                            @include mask(var(--text-disabled));
+                            @include mask($text-disabled);
                             -webkit-mask-image:url("../images/common/prev.svg");
                             mask-image:url("../images/common/prev.svg");
                             background-position:unset;
@@ -614,7 +620,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                         overflow:hidden;
                         span {
                             @include wh (24px, 24px);
-                            @include mask(var(--text-disabled));
+                            @include mask($text-disabled);
                             -webkit-mask-image:url("../images/common/prevv.svg");
                             mask-image:url("../images/common/prevv.svg");
                             background-position:unset;

@@ -1,18 +1,410 @@
-/* Error: Undefined mixin.
- *    ,
- * 48 |         @include mask(var(--text-disabled));
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   IM/assets/css/scss/variable.scss 48:9  @use
- *   IM/assets/css/scss/table.scss 1:1      root stylesheet */
+@charset "UTF-8";
+/*---------------------------------------------
+	#변수 지정하기
+---------------------------------------------*/
+/***************** 폰트 *****************/
+/* font-size */
+/* font-weight */
+/***************** 색상 *****************/
+/* primary color */
+/* ui color */
+/* background color */
+/* text color */
+/* border color */
+/* button color */
+/* form color */
+/***************** 기타 *****************/
+/*---------------------------------------------
+	#Mixin
+---------------------------------------------*/
+/*---------------------------------------------
+	#Placeholder
+---------------------------------------------*/
+/*---------------------------------------------
+    #기본 테이블
+---------------------------------------------*/
+.tbl_list {
+  padding: 0 24px 20px;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+.default_tbl {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  word-break: break-all;
+  cursor: auto;
+  box-sizing: content-box;
+}
+.default_tbl .tbl_num_wid {
+  width: auto;
+}
+.default_tbl .more_list {
+  padding: 7px 10px;
+}
+.default_tbl .more_list span {
+  width: auto;
+}
+.default_tbl thead tr:hover {
+  background: transparent;
+  cursor: auto;
+}
+.default_tbl thead tr th {
+  padding: 10px;
+  border: 0;
+  border-top: 1px solid #C9C9C9;
+  border-bottom: 1px solid #757575;
+  line-height: 16px;
+  color: #222222;
+  background-color: #F8F8F8;
+}
+.default_tbl thead tr th.sort_column div {
+  padding: 0;
+  font-weight: 400;
+  color: #222222;
+}
+.default_tbl tbody tr th {
+  border: 0;
+  border-bottom: 1px solid #C9C9C9;
+  font-size: 13px;
+  font-weight: 400;
+  color: #222222;
+  line-height: 16px;
+}
+.default_tbl tbody tr th.new {
+  position: relative;
+}
+.default_tbl tbody tr th.new::after {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  content: "N";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 12px;
+  background: #F76900;
+}
+.default_tbl tbody tr .sort_column div {
+  color: #454545;
+}
+.default_tbl tbody tr td {
+  padding: 0 20px;
+  border: 0;
+  border-bottom: 1px solid #C9C9C9;
+  font-size: 13px;
+  font-weight: 400;
+  color: #454545;
+  line-height: 20px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.default_tbl tbody tr td div {
+  color: #454545;
+}
+.default_tbl tbody tr td:has(.form_contrl) {
+  padding: 5px 10px;
+  line-height: unset;
+}
+.default_tbl tbody tr td.nodata {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 60px 0 20px;
+  line-height: normal;
+  color: #999999;
+}
+.default_tbl tbody tr td.nodata::after {
+  display: inline-block;
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../images/common/icon-nodata.svg") no-repeat;
+  opacity: 0.3;
+}
+.default_tbl.tblStl2 {
+  border-top: 0;
+}
+.default_tbl.tblStl2 tbody th {
+  background-color: #F0F0F0;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  font-weight: 400;
+  text-align: center;
+}
+.default_tbl.tblStl2 tbody th:first-child {
+  text-align: left;
+}
+.default_tbl.tblStl2 tbody th:last-child {
+  border-right: 0;
+}
+.default_tbl.tblStl2 tbody th.th-bl {
+  background-color: #F8F8F8;
+}
+.default_tbl.tblStl2 tbody th .tb_dt_link p {
+  font-weight: 400;
+}
+.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  margin-top: 0;
+  background-image: url("../images/common/ico_accordion.svg");
+}
+.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow.up {
+  transform: translate(-50%, -50%) rotate(180deg);
+  background-position: unset;
+}
+.default_tbl.tblStl2 tbody td {
+  overflow: unset;
+  border: 1px solid #DDDDDD;
+  border-top: 0;
+  font-weight: 500;
+}
+.default_tbl.tblStl2 tbody td:last-child {
+  border-right: 0;
+}
+.default_tbl.tblStl2 tbody td.aft_cont {
+  background: #FCFCFC;
+}
+.default_tbl.tblStl2 tbody td.aft_cont .aft_ir {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0052CC;
+}
+.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i {
+  top: 7px;
+  left: -32px;
+  width: 22px;
+  height: 22px;
+}
+.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_add::after {
+  background: url("../images/common/ico_add.svg") no-repeat center;
+}
+.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_mod::after {
+  background: url("../images/common/ico_mod.svg") no-repeat center;
+}
+.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_mns::after {
+  background: url("../images/common/ico_mns.svg") no-repeat center;
+}
+.default_tbl.tblStl3 tbody td {
+  padding: 4px 20px 5px;
+  border: 1px solid #DDDDDD;
+}
+.default_tbl.tblStl3 tbody td:nth-child(2) {
+  padding: 0;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li:first-child .flx {
+  padding: 25px 20px 10px;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li:last-child .flx {
+  padding: 0 20px 25px;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li.bul_dot .flx .form_tit {
+  position: relative;
+  padding-left: 8px;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li.bul_dot .flx .form_tit::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: inline-block;
+  border-radius: 50%;
+  background: #999999;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx {
+  width: 50%;
+  padding: 0 20px 10px;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx:first-child {
+  border-right: 1px solid #DDDDDD;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_tit {
+  min-width: 185px;
+  width: auto;
+  padding: 0;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_txt {
+  width: 100%;
+  padding: 0;
+}
+.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_txt .form_contrl {
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 48 \2502          @include mask(var(--text-disabled));\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   IM/assets/css/scss/variable.scss 48:9  @use\a   IM/assets/css/scss/table.scss 1:1      root stylesheet";
+  width: 100%;
+}
+.default_tbl .detail_open {
+  background-color: #F3F5F7;
+}
+.default_tbl .detail_open > td {
+  padding: 20px 35px;
+}
+.default_tbl .detail_open > td .detail_open_cont {
+  padding: 0;
+}
+.default_tbl .detail_open > td .detail_open_cont p {
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+.default_tbl .detail_open > td .detail_open_cont .tbl_list {
+  padding: 0;
+  margin-bottom: 20px;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+}
+.default_tbl .detail_open > td .detail_open_cont .tbl_list::-webkit-scrollbar {
+  height: 7px;
+}
+.default_tbl .detail_open > td .detail_open_cont .tbl_list::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: #EEEEEE;
+}
+.default_tbl .detail_open > td .detail_open_cont .tbl_list .default_tbl tr td {
+  border: 0;
+  border-bottom: 1px solid #DDDDDD;
+}
+.default_tbl .detail_open > td .detail_open_cont .tbl_list .default_tbl tr:last-child td {
+  border-bottom: 0;
+}
+.default_tbl .detail_open > td .detail_open_cont .tbl_btm {
+  padding: 10px 34px 20px;
+}
+.default_tbl tr.on, .default_tbl tr:hover {
+  background-color: #F3F5F7;
+}
+.default_tbl .dt_view {
+  border-top: 0;
+}
+
+/* table info */
+.tbl_list .req_txt {
+  margin-top: 0;
+  padding-bottom: 15px;
+  font-size: 12px;
+  color: #757575;
+}
+.tbl_list .req_txt em {
+  font-weight: 500;
+  color: #27AD98;
+  vertical-align: unset;
+}
+
+/* mini_tbl */
+.mini_tbl {
+  border: 0;
+  border-bottom: 1px solid #DDDDDD;
+}
+.mini_tbl .default_tbl thead th {
+  background-color: #F8F8F8;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #757575;
+}
+.mini_tbl .mini_paging {
+  border-top: 0;
+}
+
+/* move_tbl2 */
+.move_tbl2 .default_tbl thead tr th {
+  padding: 8px 10px;
+  font-weight: 400;
+  color: #454545;
+}
+.move_tbl2 .default_tbl thead tr th:nth-child(3) {
+  text-align: center;
+}
+.move_tbl2 .default_tbl tbody tr td {
+  padding: 8px 10px;
+  color: #454545;
+}
+.move_tbl2 .default_tbl tbody tr td:nth-child(2) {
+  text-align: left;
+}
+.move_tbl2 .default_tbl tbody tr td.depth2:not(.dt_view .depth2)::before {
+  content: "ㄴ";
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  color: #999999;
+}
+.move_tbl2 .default_tbl tr.on td {
+  border-bottom: 0;
+}
+.move_tbl2 .default_tbl .btn_dtail_list {
+  width: 70px;
+  text-align: center;
+}
+.move_tbl2 .default_tbl .btn_dtail_list .btn_dtail {
+  width: 30px;
+  height: 30px;
+}
+.move_tbl2 .add_option {
+  height: 30px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #454545;
+}
+.move_tbl2 .add_option .btn_option {
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background-color: #999999;
+}
+.move_tbl2 .add_option .btn_option::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #FFFFFF;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/icon_arrow_none.svg");
+  mask-image: url("../images/common/icon_arrow_none.svg");
+}
+
+.move_tbl {
+  height: 100%;
+  max-height: 370px;
+  margin-top: 7px;
+  border: 0;
+  border-top: 1px solid #C9C9C9;
+}
+.move_tbl .default_tbl tbody tr td {
+  line-height: 34px;
 }

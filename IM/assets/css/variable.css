@@ -1,17 +1,22 @@
-/* Error: Undefined mixin.
- *    ,
- * 48 |         @include mask(var(--text-disabled));
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   IM/assets/css/scss/variable.scss 48:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 48 \2502          @include mask(var(--text-disabled));\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   IM/assets/css/scss/variable.scss 48:9  root stylesheet";
-}
+@charset "UTF-8";
+/*---------------------------------------------
+	#변수 지정하기
+---------------------------------------------*/
+/***************** 폰트 *****************/
+/* font-size */
+/* font-weight */
+/***************** 색상 *****************/
+/* primary color */
+/* ui color */
+/* background color */
+/* text color */
+/* border color */
+/* button color */
+/* form color */
+/***************** 기타 *****************/
+/*---------------------------------------------
+	#Mixin
+---------------------------------------------*/
+/*---------------------------------------------
+	#Placeholder
+---------------------------------------------*/

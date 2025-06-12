@@ -1,5 +1,4 @@
-@use './variable' as *;
-@use './mixin' as *;
+@use 'variable' as *;
 
 $borderTs: "search_wrap", "tab_wrap";
 
@@ -14,23 +13,26 @@ $borderTs: "search_wrap", "tab_wrap";
 /* focus */
 .form_contrl {
     &:focus-visible, &:focus {
-        border:1px solid var(--primary);
-        color:var(--title);
+        border:1px solid $primary;
     }
 }
 /* disabled */
 .form_contrl {
     height:30px;
-    border:1px solid var(--default);
+    border:1px solid $default;
     border-radius:6px;
     font-size:$font13;
-    color:var(--text-disabled);
+    color:$title;
     &:disabled {
-        background:var(--btn-disabled);
+        background:$btn-disabled;
         border:$borderD;
     }
     &::placeholder {
-        color:var(--text-disabled);
+        color:$text-disabled;
+    }
+    &.disabled {
+        border:$borderD;
+        background:$btn-disabled;
     }
 }
 
@@ -44,7 +46,7 @@ $borderTs: "search_wrap", "tab_wrap";
     &+ .tab_wrap.cont_in_tab {
         margin-top:0;
         border-radius:0;
-        background-color:var(--body);
+        background-color:$body;
     }
 }
 .search_box {
@@ -86,7 +88,7 @@ $borderTs: "search_wrap", "tab_wrap";
         background-position: left 5px center;
         background-size: 16px;
         background-repeat: no-repeat;
-        color:var(--text-disabled);
+        color:$text-disabled;
     }
     &.flx {
         gap:4px;
@@ -103,13 +105,13 @@ $borderTs: "search_wrap", "tab_wrap";
         li {
             button {
                 padding:0 10px;
-                color:var(--content);
+                color:$content;
                 font-weight:$font-w-r;
                 line-height:30px;
                 &.on {
                     font-weight:$font-w-m;
-                    color:var(--white);
-                    background-color:var(--primary);
+                    color:$white;
+                    background-color:$primary;
                 }
             }
         }
@@ -118,19 +120,19 @@ $borderTs: "search_wrap", "tab_wrap";
 .weeksTbl {
     .week_row {
         .diss_week {
-            background-color:var(--btn-disabled);
+            background-color:$btn-disabled;
             .btn_weekday {
                 border-radius:0;
-                color:var(--text-disabled);
+                color:$text-disabled;
             }
         }
         .btn_weekday {
             padding:0;
             font-weight:$font-w-r;
-            color:var(--content);
+            color:$content;
             &.on {
                 font-weight:$font-w-m;
-                background-color:var(--primary);
+                background-color:$primary;
             }
         }
     }
@@ -161,7 +163,7 @@ $borderTs: "search_wrap", "tab_wrap";
                 border:0;
                 border-radius:6px;
                 background-image:url("../images/common/ico_upload.svg");
-                background-color:var(--basic);
+                background-color:$basic;
             }
         }
     }
@@ -170,7 +172,7 @@ $borderTs: "search_wrap", "tab_wrap";
     padding-top:6px;
     .form_contrl {
         border:0;
-        @include title($font13, $font-w-r, var(--content));
+        @include title($font13, $font-w-r, $content);
         background-color:#F3F5F7;
     }
 }
@@ -180,41 +182,41 @@ $borderTs: "search_wrap", "tab_wrap";
         height:83px;
         margin-top:13px;
         border-radius:6px;
-        background:var(--body);
+        background:$body;
         &:has(.icon_file_upload) {
             display:block;
             padding:16px 0 21px;
-            border:1px dashed var(--border-d);
+            border:1px dashed $border-d;
             text-align:center;
         }
         .icon_file_upload {
             display:inline-block;
             @include wh (24px,24px);
-            @include mask(var(--text-disabled));
+            @include mask($text-disabled);
             -webkit-mask-image:url("../images/common/ico_file_upload.svg");
             mask-image:url("../images/common/ico_file_upload.svg");
             background-image:none;
         }
         p {
-            @include title($font13, $font-w-r, var(--text-disabled));
+            @include title($font13, $font-w-r, $text-disabled);
             line-height:16px;
         }
         &.upload_list {
             padding:15px 15px 11px;
             border:0;
             &:hover {
-                background-color:var(--body);
+                background-color:$body;
             }
             li {
                 gap:4px;
                 padding-bottom:10px;
                 p {
                     font-size:$font13;
-                    color:var(--title);
+                    color:$title;
                     line-height:16px;
                     vertical-align:unset;
                     &.file_size {
-                        color:var(--text-disabled);
+                        color:$text-disabled;
                     }
                 }
                 .btn_del {
@@ -225,7 +227,7 @@ $borderTs: "search_wrap", "tab_wrap";
                     border-radius:6px;
                     background-image:url("../images/common/close.svg");
                     background-size:80%;
-                    background-color:var(--white);
+                    background-color:$white;
                     background-position:center;
                 }
             }
@@ -266,7 +268,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
     .#{$label}:before {
         margin-top:0;
         margin-right:5px;
-        border: 1px solid var(--default);
+        border: 1px solid $default;
     }
 }
 
@@ -277,14 +279,14 @@ $labels: "check_stl_lab", "radio_stl_lab";
     }
     // disabled
     .#{$input}:disabled + label:before {
-        border: 1px solid var(--btn-disabled);
+        border: 1px solid $btn-disabled;
     }
 }
 
 .check_stl {
     & + label.check_stl_lab {
         padding-left: 20px;
-        color: var(--content);
+        color: $content;
         &::before,
         &::after {
             content: "";
@@ -297,12 +299,12 @@ $labels: "check_stl_lab", "radio_stl_lab";
         }
         &::before {
             @include wh(16px, 16px);
-            border: 1px solid var(--default);
-            background-color: var(--white);
+            border: 1px solid $default;
+            background-color: $white;
         }
         &::after {
             @include wh(15px, 15px);
-            @include mask(var(--default));
+            @include mask($default);
             -webkit-mask-size: 60%;
             mask-size: 60%;
             -webkit-mask-image: url("../images/common/icon_check_s.svg");
@@ -312,7 +314,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
     &:checked + label.check_stl_lab {
         &::before {
             @include wh(16px, 16px);
-            background-color: var(--primary);
+            background-color: $primary;
             border: $borderP;
             margin: 0;
             transform: translateY(-50%);
@@ -321,17 +323,17 @@ $labels: "check_stl_lab", "radio_stl_lab";
 
         &::after {
             @include wh(15px, 15px);
-            background-color: var(--white);
+            background-color: $white;
             background-image: none;
             margin: 0;
             left: 0;
         }
     }
     &:disabled + label.check_stl_lab::before {
-        background-color: var(--btn-disabled);
+        background-color: $btn-disabled;
     }
     & + label.check_stl_lab2 {
-        color:var(--text-disabled);
+        color:$text-disabled;
         i {
             @include wh (16px,16px);
             border:0;
@@ -348,12 +350,12 @@ $labels: "check_stl_lab", "radio_stl_lab";
             }
             &::before {
                 @include wh(16px, 16px);
-                border: 1px solid var(--default);
-                background-color: var(--white);
+                border: 1px solid $default;
+                background-color: $white;
             }
             &::after {
                 @include wh(15px, 15px);
-                @include mask(var(--default));
+                @include mask($default);
                 -webkit-mask-size: 50%;
                 mask-size: 50%;
                 -webkit-mask-image: url("../images/common/icon_check_s.svg");
@@ -362,11 +364,11 @@ $labels: "check_stl_lab", "radio_stl_lab";
         }
     }
     &:checked + label.check_stl_lab2 {
-        color:var(--content);
+        color:$content;
         i {
             &::before {
                 @include wh(16px, 16px);
-                background-color: var(--primary);
+                background-color: $primary;
                 border: $borderP;
                 margin: 0;
                 transform: translate(-50%,-50%);
@@ -374,7 +376,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
             }
             &::after {
                 @include wh(15px, 15px);
-                background-color: var(--white);
+                background-color: $white;
                 background-image: none;
                 margin: 0;
                 left: 50%;
@@ -382,13 +384,13 @@ $labels: "check_stl_lab", "radio_stl_lab";
         }
     }
     &:disabled + label.check_stl_lab2::before {
-        background-color: var(--btn-disabled);
+        background-color: $btn-disabled;
     }
 }
 .radio_stl {
     &+ label {
         &::before {
-            @include mask(var(--default));
+            @include mask($default);
         }
         &::after {
             content:none;
@@ -400,7 +402,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
     &:checked {
         &+ label {
             &::before {
-                background-color:var(--primary);
+                background-color:$primary;
             }
             &::after {
                 content:none;
@@ -410,7 +412,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
     &:disabled {
         &+ label {
             &::before {
-                background-color:var(--btn-disabled);
+                background-color:$btn-disabled;
             }
             &::after {
                 content:none;
@@ -425,17 +427,16 @@ $labels: "check_stl_lab", "radio_stl_lab";
 select{
     &.form_contrl {
         padding-right:26px;
-        font-size:$font14;
-        background: url("../images/common/ico_accordion.svg") no-repeat right 1px center var(--white);
+        background: url("../images/common/ico_accordion.svg") no-repeat right 1px center $white;
     }
 }
 .tbl_btm {
     .page_select {
-        color:var(--text-disabled);
+        color:$text-disabled;
         .form_contrl {
             width:70px;
             height:30px;
-            border:1px solid var(--default);
+            border:1px solid $default;
             border-radius:6px;
         }
     }
@@ -451,7 +452,7 @@ select{
         &:checked {
             &+ label {
                 &::before {
-                    background-color:var(--primary);
+                    background-color:$primary;
                 }
                 &::after {
                     left:8px;
@@ -461,7 +462,7 @@ select{
         &+ label {
             &::before {
                 @include wh(53px,28px);
-                background-color:var(--btn-disabled);
+                background-color:$btn-disabled;
             }
             &::after {
                 left:3px;
@@ -475,7 +476,7 @@ select{
             &:checked {
                 &+ label {
                     &::before {
-                        background-color:var(--primary);
+                        background-color:$primary;
                     }
                     &::after {
                         left:8px;
@@ -485,7 +486,7 @@ select{
             &+ label {
                 &::before {
                     @include wh(40px,18px);
-                    background-color:var(--btn-disabled);
+                    background-color:$btn-disabled;
                 }
                 &::after {
                     left:3px;
@@ -521,7 +522,7 @@ select{
                 border-top:$borderD;
             }
             button {
-                color:var(--content);
+                color:$content;
             }
         }
     }
@@ -545,7 +546,7 @@ select{
         margin-top:2px;
         border-top:$borderD;
         border-radius:6px;
-        background-color:var(--white);
+        background-color:$white;
         z-index:1;
         li {
             border-bottom:0;

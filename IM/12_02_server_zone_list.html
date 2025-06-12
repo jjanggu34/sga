@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -25,10 +28,12 @@
 		<div class="nav">
 			<div class="nav_inner scroll">
 				<div class="nav_header">
+					<!--s: 이미지 경로 및 이미지 변경-->
 					<a href="" class="logo">
-						<img src="img/common/logo_186x30.png">
+						<img src="assets/images/common/logo.png">
 						<span>Admin</span>
 					</a>
+					<!--e: 이미지 경로 및 이미지 변경-->
 				</div>
 				<ul class="nav_list">
 					<li><a href="" class=""><i class="icon_user"></i><span>사용자</span></a></li>
@@ -54,14 +59,17 @@
 					<li><a href=""><i class="icon_monitor"></i><span>모니터링</span></a></li>
 					<li><a href=""><i class="icon_report"></i><span>리포트</span></a></li>
 				</ul>
+				<!-- s: copyright 추가 -->
+				<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
+				<!-- e: copyright 추가 -->
 			</div>
 		</div>
 		<div id="container">
+			<!-- s : header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="header">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>시스템 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">시스템 관리</a></li>
@@ -69,57 +77,61 @@
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> user01</a></li>
+					<li class="btn_top_user"><a href="">user01</a></li>
+					<li class="timer"><i></i><span><em>00:15:00</em> 후 접속 끊김</span><button class="time_ref" title="세션 시간 새로고침"></button></li>
 					<li class="btn_alim"><a href="">alim<span>13</span></a></li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
 					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
-					</li>
 				</ul>
 			</div>
-			<div class="content">
+			<!-- e : header_title 내용 수정 및 gl_nav 수정 -->
+			<!-- s: class 추가 -->
+			<div class="content only">
+			<!-- e: class 추가 -->
 				<div class="topPrss">
 					<div class="inner_topPrss">
+						<!-- s: class 변경 -->
 						<div class="detail_process">
 							<ul class="flx">
-								<li class="flx_cell process_comple"><span class="s_num">1</span>기본 정보</li>
-								<li class="flx_cell process_comple"><span class="s_num">2</span>접속 정보</li>
+								<li class="flx_cell pro_comple"><span class="s_num">1</span>기본 정보</li>
+								<li class="flx_cell pro_comple"><span class="s_num">2</span>접속 정보</li>
 								<li class="flx_cell process_current"><span class="s_num">6</span>서버 연동</li>
 							</ul>
 						</div>
+						<!-- e: class 변경 -->
 					</div>
 				</div>
 				<div class="btn_box cl_both">
+					<!-- s: class 변경 -->
 					<div class="f_l">
-						<a href="" class="white">서버 연동 실행</a>
+						<a href="" class="line">서버 연동 실행</a>
 					</div>
 					<div class="f_r">
-						<a href="" class="white">수정</a>
+						<a href="" class="line">수정</a>
 						<span class="divide"></span>
-						<a href="" class="navy">이전</a>
-						<a href="" class="blue">다음</a>
+						<a href="" class="basic2">이전</a>
+						<a href="" class="basic">다음</a>
 						<span class="divide"></span>
-						<a href="" class="navy">확인</a>
-					</div>				
+						<a href="" class="primary">확인</a>
+					</div>
+					<!-- e: class 변경 -->
 				</div>
 				<ul class="info_wrap">
+					<!-- s: bul_dot 추가 -->
 					<li>
-						<dl>
+						<dl class="bul_dot">
 							<dt>시작시간</dt>
 							<dd>2022. 08. 23 08:00:00</dd>
 						</dl>
 					</li>
 					<li>
-						<dl>
+						<dl class="bul_dot">
 							<dt>종료시간</dt>
 							<dd>2022. 08. 24 08:00:00</dd>
 						</dl>
 					</li>
 					<li>
-						<dl>
+						<dl class="bul_dot">
 							<dt>진행시간</dt>
 							<dd> 
 								<p class="txtbg yelltxt">진행중 - 클라우드</p>
@@ -134,13 +146,16 @@
 							</dd>
 						</dl>
 					</li>
+					<!-- e: bul_dot 추가 -->
 				</ul>
 				<div class="move_wrap list_stl">
 					<div class="move_box">
 						<div class="moved_tit">
 							미등록
 							<div class="btn_box tit_in_btn">
-								<button class="white ref">새로고침</button>
+								<!-- s: class 변경 -->
+								<button class="line ref">새로고침</button>
+								<!-- e: class 변경 -->
 							</div>
 						</div>
 						<div class="moved_list">
@@ -148,10 +163,12 @@
 								<div class="svz_list_ul">
 									<div class="svz_info">
 										<p class="svz_info_ip">172.24.0.101</p>
-										<dl class="svz_info_dtl">
+										<!-- s: bul_dot, checkCircle 추가 sv_connect 삭제-->
+										<dl class="svz_info_dtl bul_dot">
 											<dt>서버상태</dt>
-											<dd>정상 <i class="icon_list sv_connect"></i></dd>
+											<dd class="checkCircle"><i class="icon_list"></i>정상</dd>
 										</dl>
+										<!-- e: bul_dot 추가 -->
 									</div>
 									<div class="svz_slt_btn">
 										<select class="form_contrl">
@@ -166,10 +183,12 @@
 								<div class="svz_list_ul">
 									<div class="svz_info">
 										<p class="svz_info_ip">172.24.0.101</p>
-										<dl class="svz_info_dtl">
+										<!-- s: bul_dot, checkCircle 추가 sv_connect 삭제-->
+										<dl class="svz_info_dtl bul_dot">
 											<dt>서버상태</dt>
-											<dd>정상 <i class="icon_list sv_connect"></i></dd>
+											<dd class="checkCircle"><i class="icon_list"></i>정상</dd>
 										</dl>
+										<!-- e: bul_dot 추가 -->
 									</div>
 									<div class="svz_slt_btn">
 										<select class="form_contrl">
@@ -184,10 +203,12 @@
 								<div class="svz_list_ul">
 									<div class="svz_info">
 										<p class="svz_info_ip">172.24.0.101</p>
-										<dl class="svz_info_dtl">
+										<!-- s: bul_dot, checkCircle 추가 sv_connect 삭제-->
+										<dl class="svz_info_dtl bul_dot">
 											<dt>서버상태</dt>
-											<dd>정상 <i class="icon_list sv_connect"></i></dd>
+											<dd class="checkCircle"><i class="icon_list"></i>정상</dd>
 										</dl>
+										<!-- e: bul_dot 추가 -->
 									</div>
 									<div class="svz_slt_btn">
 										<select class="form_contrl">
@@ -202,10 +223,12 @@
 								<div class="svz_list_ul">
 									<div class="svz_info">
 										<p class="svz_info_ip">172.24.0.101</p>
-										<dl class="svz_info_dtl">
+										<!-- s: bul_dot, checkCircle 추가 sv_connect 삭제-->
+										<dl class="svz_info_dtl bul_dot">
 											<dt>서버상태</dt>
-											<dd>정상 <i class="icon_list sv_connect"></i></dd>
+											<dd class="checkCircle"><i class="icon_list"></i>정상</dd>
 										</dl>
+										<!-- e: bul_dot 추가 -->
 									</div>
 									<div class="svz_slt_btn">
 										<select class="form_contrl">
@@ -382,9 +405,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer">
+			<!-- nav로 이동 <div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </body>
