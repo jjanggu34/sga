@@ -201,6 +201,10 @@
   text-align: left !important;
 }
 
+.hypn {
+  margin-top: 9px;
+}
+
 /*---------------------------------------------
     border-bottom이 after로 들어가야할 때
 ---------------------------------------------*/
@@ -2394,6 +2398,7 @@ input + .loader {
 .i-card_wrap .dash_box.in_role .i-card_title {
   position: absolute;
   left: 74px;
+  width: 110px;
   padding: 0 0 0 7px;
   font-weight: 500;
   color: #999999;
@@ -2599,6 +2604,7 @@ input + .loader {
 .i-card_wrap .dash_box.system_tab {
   width: calc((100% - 170px) / 6);
   padding: 14px 22px;
+  border: 1px solid #C9C9C9;
 }
 .i-card_wrap .dash_box.system_tab.on {
   border: 0;
@@ -5413,7 +5419,7 @@ input + .loader {
 ---------------------------------------------*/
 .info_wrap {
   align-items: center;
-  column-gap: 82px;
+  column-gap: 50px;
   padding: 21px;
   margin-top: 20px;
   border: 1px solid #DDDDDD;
@@ -5545,7 +5551,7 @@ input + .loader {
 ---------------------------------------------*/
 .list_stl .move_box:not(.move_wrap.list_stl .move_box) {
   height: auto;
-  padding: 23px 0 0;
+  padding: 23px 0 14px;
   border: 0;
 }
 .list_stl .cld_weekday_tbl {
@@ -5563,9 +5569,13 @@ input + .loader {
   max-height: 480px;
   border: 0;
   border-bottom: 1px solid #C9C9C9;
+  border-radius: 0;
 }
 .list_stl .cld_time_list li .cld_time_sp {
   font-size: 12px;
+}
+.list_stl .cld_time_list li .cld_time_sp::after {
+  content: none;
 }
 .list_stl .week_time_schedule {
   margin: 0;
