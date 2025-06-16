@@ -13,6 +13,7 @@
 /* border color */
 /* button color */
 /* form color */
+/***************** 자주 쓰이는 이미지 *****************/
 /***************** 기타 *****************/
 /*---------------------------------------------
 	#Mixin
@@ -1299,6 +1300,9 @@ body * {
   }
 }
 @media screen and (max-width: 768px) {
+  #SGIM_wrap #container {
+    margin-left: 0;
+  }
   #SGIM_wrap #container .cont_wrap {
     margin: 0 4px;
     padding: 64px 0 0;
@@ -1319,6 +1323,7 @@ body * {
     top: 18px;
     left: 10px;
     display: inline-block;
+    background-position: unset;
   }
   #SGIM_wrap #container .header .gl_nav {
     top: auto;

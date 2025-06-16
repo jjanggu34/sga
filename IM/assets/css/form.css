@@ -13,6 +13,7 @@
 /* border color */
 /* button color */
 /* form color */
+/***************** 자주 쓰이는 이미지 *****************/
 /***************** 기타 *****************/
 /*---------------------------------------------
 	#Mixin
@@ -47,13 +48,10 @@
 .form_contrl:disabled {
   background: #EEEEEE;
   border: 1px solid #DDDDDD;
+  color: #999999;
 }
 .form_contrl::placeholder {
   color: #999999;
-}
-.form_contrl.disabled {
-  border: 1px solid #DDDDDD;
-  background: #EEEEEE;
 }
 
 /* search */
@@ -365,6 +363,9 @@
   margin: 0;
   left: 0;
 }
+.check_stl:disabled + label.check_stl_lab {
+  color: #999999;
+}
 .check_stl:disabled + label.check_stl_lab::before {
   background-color: #EEEEEE;
 }
@@ -428,6 +429,9 @@
   margin: 0;
   left: 50%;
 }
+.check_stl:disabled + label.check_stl_lab2 {
+  color: #999999;
+}
 .check_stl:disabled + label.check_stl_lab2::before {
   background-color: #EEEEEE;
 }
@@ -453,6 +457,9 @@
 }
 .radio_stl:checked + label::after {
   content: none;
+}
+.radio_stl:disabled + label {
+  color: #999999;
 }
 .radio_stl:disabled + label::before {
   background-color: #EEEEEE;

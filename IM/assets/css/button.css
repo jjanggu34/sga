@@ -13,6 +13,7 @@
 /* border color */
 /* button color */
 /* form color */
+/***************** 자주 쓰이는 이미지 *****************/
 /***************** 기타 *****************/
 /*---------------------------------------------
 	#Mixin
@@ -57,6 +58,9 @@
   font-size: 14px;
   font-weight: 500;
 }
+.btn_box a:last-child {
+  margin-right: 0;
+}
 
 .btn_box button {
   padding: 0 14px;
@@ -68,6 +72,9 @@
   height: 38px;
   font-size: 14px;
   font-weight: 500;
+}
+.btn_box button:last-child {
+  margin-right: 0;
 }
 
 .list_btn button {
@@ -81,6 +88,9 @@
   font-size: 14px;
   font-weight: 500;
 }
+.list_btn button:last-child {
+  margin-right: 0;
+}
 
 button {
   padding: 0 14px;
@@ -92,6 +102,9 @@ button.big {
   height: 38px;
   font-size: 14px;
   font-weight: 500;
+}
+button:last-child {
+  margin-right: 0;
 }
 
 /*---------------------------------------------
@@ -165,22 +178,20 @@ button.big {
   padding-bottom: 0;
   background: url("../images/common/ico_accordion.svg") no-repeat right 4px center #FFFFFF;
 }
-
-/*---------------------------------------------
-	#disabled : 기본
-    #line_disabled : line 버튼만
----------------------------------------------*/
-.disabled {
-  border: 1px solid #EEEEEE;
-  color: #999999;
-  background: #EEEEEE;
-}
-
-.line_disabled {
+.line.diss {
   color: #999999;
   background: #FCFCFC;
   border: 1px solid #EEEEEE;
   cursor: auto;
+}
+
+/*---------------------------------------------
+	#diss : disabled
+---------------------------------------------*/
+.diss {
+  border: 1px solid #EEEEEE;
+  color: #999999;
+  background: #EEEEEE;
 }
 
 /*---------------------------------------------
@@ -320,15 +331,15 @@ button.icon.bottom, a.icon.bottom {
   height: 30px;
   padding: 0;
   font-size: 0;
-  background: url("../images/common/ico_accordion.svg") no-repeat center/auto;
+  background: url("../images/common/close.svg") no-repeat center/auto;
 }
-button.disabled, a.disabled {
+button.diss, a.diss {
   cursor: auto;
   border: 1px solid #EEEEEE;
   color: #999999 !important;
   background: #EEEEEE;
 }
-button.disabled i, a.disabled i {
+button.diss i, a.diss i {
   background-color: #999999 !important;
 }
 button.normal, a.normal {
@@ -342,6 +353,7 @@ button.normal, a.normal {
   background: #FFFFFF;
 }
 button.normal.on, a.normal.on {
+  padding: 6px 12px 6px 6px;
   border: 1px solid #27AD98;
   background: #EDFFFC;
   color: #27AD98;
@@ -627,6 +639,11 @@ button.text.icon_reset::before, a.text.icon_reset::before {
   font-weight: 600;
   line-height: 45px;
 }
+.btn_box .diss {
+  border: 1px solid #EEEEEE;
+  color: #999999;
+  background: #EEEEEE;
+}
 
 /*---------------------------------------------
 	#search button
@@ -776,6 +793,9 @@ button.text.icon_reset::before, a.text.icon_reset::before {
   height: 30px;
   transform: rotate(180deg);
 }
+.pagination ul li a.diss {
+  background-color: #EEEEEE;
+}
 .pagination ul li .on {
   border-color: #27AD98 !important;
   background-color: #27AD98 !important;
@@ -832,4 +852,10 @@ button.text.icon_reset::before, a.text.icon_reset::before {
   -webkit-mask-image: url("../images/common/prevv.svg");
   mask-image: url("../images/common/prevv.svg");
   background-position: unset;
+}
+.pagination.mini_paging ul li a.diss {
+  background-color: transparent;
+}
+.pagination.mini_paging ul li a.diss span {
+  background-color: #C9C9C9;
 }

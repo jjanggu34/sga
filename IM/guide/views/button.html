@@ -79,7 +79,7 @@
                         <div class="list_left_btn">
                             <button class="basic">normal</button>
                             <button class="basic" style="background:#0A153C; border:1px solid #0A153C;">focus</button>
-                            <button class="basic disabled">disable</button>
+                            <button class="basic diss">disable</button>
                             <button class="primary">point</button>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                             <button class="line">normal</button>
                             <button class="line" style="color:#222222;
                             border:1px solid #454545;">focus</button>
-                            <button class="line_disabled">disable</button>
+                            <button class="line diss">disable</button>
                         </div>
                     </div>
 
@@ -101,7 +101,7 @@
                         <div class="list_left_btn">
                             <button class="primary big">normal</button>
                             <button class="primary big" style="background:#138170;">focus</button>
-                            <button class="disabled big">disable</button>
+                            <button class="diss big">disable</button>
                         </div>
                     </div>
 
@@ -113,12 +113,10 @@
                                 <i class="icon_reset"></i>
                                 새로고침
                             </button>
-                            <button class="line_disabled icon">
+                            <button class="line diss icon">
                                 <i class="icon_reset init"></i>
                                 상태초기화
                             </button>
-                            <button class="icon s_btn_more">바로가기</button>
-                            <button class="text icon_reset">초기화</button>
                             <button class="line icon">
                                 <i class="icon_ff excel"></i>
                                 EXEL 추출
@@ -127,21 +125,35 @@
                             <button class="line icon"><i class="checkout"></i> 체크아웃</button>
                             <button class="line icon"><i class="checkin"></i> 체크인</button>
                             <button class="line icon"><i class="icon_applylist"></i>1개 보유</button>
-                            <button class="line icon icon_reset">초기화</button>
-                            <button class="line icon close">닫기</button>
-                            <button class="line icon bottom">아래화살표</button>
                             <button class="btnstl basic list_upload"><i></i>목록 업로드</button>
-                            <div class="default_addel_btn" style="margin:10px;">
-                                <a title="추가" class="btn_option"></a>
-                                <a title="삭제" class="btn_option btn_del_option"></a>
-                                <a title="테스트" class="btn_option btn_test"></a>
-                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <p class="tit">No Line + Icon</p>
+                    <div class="list_btn" style="padding:0;">
+                        <div class="list_left_btn">
+                            <button class="icon s_btn_more">바로가기</button>
+                            <button class="text icon_reset">초기화</button>
+                        </div>
+                    </div>
+
+                    <p class="tit">Only Icon</p>
+                    <div style="padding:0;">
+                        <button class="line icon icon_reset">초기화</button>
+                        <button class="line icon close">닫기</button>
+                        <button class="line icon bottom">아래화살표</button>
+                        <div class="default_addel_btn" style="display:inline-block;">
+                            <a title="추가" class="btn_option"></a>
+                            <a title="삭제" class="btn_option btn_del_option"></a>
+                            <a title="테스트" class="btn_option btn_test"></a>
                         </div>
                     </div>
 
                     <p class="tit">Select-sm</p>
                     <div class="flx">
-                        <button class="normal">normal</button>
+                        <button class="normal" style="margin-right:5px;">normal</button>
+                        <button class="normal diss" style="margin-right:5px;">disabled normal</button>
                         <button class="normal on">active</button>
                     </div>
 
@@ -181,13 +193,13 @@
                                 <a href="" class="prev diss"><span></span>이전</a>
                             </li>
                             <li class="currentpage">
-                                <p><em>1</em> / 1</p>
+                                <p><em>1</em> / 5</p>
                             </li>
                             <li>
-                                <a href="" class="next diss"><span></span>다음</a>
+                                <a href="" class="next"><span></span>다음</a>
                             </li>
                             <li>
-                                <a href="" class="last diss"><span></span>마지막</a>
+                                <a href="" class="last"><span></span>마지막</a>
                             </li>
                         </ul>
                     </div>

@@ -13,6 +13,7 @@
 /* border color */
 /* button color */
 /* form color */
+/***************** 자주 쓰이는 이미지 *****************/
 /***************** 기타 *****************/
 /*---------------------------------------------
 	#Mixin
@@ -183,6 +184,7 @@
   border: 1px solid #DDDDDD;
   border-top: 0;
   font-weight: 500;
+  line-height: 35px;
 }
 .default_tbl.tblStl2 tbody td:last-child {
   border-right: 0;
@@ -407,4 +409,9 @@
 }
 .move_tbl .default_tbl tbody tr td {
   line-height: 34px;
+}
+
+/* dash_box > table */
+.dash_box .default_tbl td {
+  line-height: 35px;
 }

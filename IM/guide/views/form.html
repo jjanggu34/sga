@@ -44,7 +44,7 @@
       .info_text li { margin-bottom:5px; }
       .info_text li:last-child { margin-bottom:0; }
       h2 { font-size:30px; border-bottom:2px solid #222222; }
-      .tit { display:block; margin:20px 0; padding:10px 5px; font-size:$font16; background-color:#6ebda8; color:#fff; }
+      .tit { display:block; margin:20px 0; padding:10px 5px; font-size:16px; background-color:#6ebda8; color:#fff; }
       .check-wrap > div {
         display: inline-block;
         margin-right: 10px;
@@ -574,8 +574,12 @@
             </div>
             <p class="tit">toggle 버튼</p>
             <div class="flx">
-              <p class="tg_sch_stl blue_tg_stl">
+              <p class="tg_sch_stl blue_tg_stl" style="margin-right:10px;">
                 <input type="checkbox" class="tg_sch" id="dbcontrl01" name="" checked="checked"/>
+                <label for="dbcontrl01" class="tg_sch_lab"></label>
+              </p>
+              <p class="tg_sch_stl blue_tg_stl mini">
+                <input type="checkbox" class="tg_sch" id="dbcontrl01" name="" checked="checked">
                 <label for="dbcontrl01" class="tg_sch_lab"></label>
               </p>
             </div>

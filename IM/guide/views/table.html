@@ -33,7 +33,7 @@
 	<![endif]-->
     <style>
         h2 { font-size:30px; }
-        .tit { display:block; margin:20px 0; padding:10px 5px; font-size:$font16; background-color:#6ebda8; color:#fff; }
+        .tit { display:block; margin:20px 0; padding:10px 5px; font-size:16px; background-color:#6ebda8; color:#fff; }
         .i_icon > span { margin-right:20px; }
         .extension { margin-top:20px; }
         .mandatxt_box > div,
@@ -52,66 +52,94 @@
             <!-- S: content -->
             <div class="content" style="border-radius:10px; margin:20px; padding:20px; background-color:#fff;">
                 <h2>table</h2>
-                <p class="tit">09_table_style02.html, 11_02_workflow_2line.html 여기 테이블</p>
                 <section>
                     <p class="tit">기본 테이블</p>
-                    <div class="tbl_list dash_table">
-                        <table class="default_tbl" role="grid">
-                            <caption>시스템, 서비스 영역 및 계정 정보를 제공하는 표</caption>
-                            <colgroup aria-hidden="true">
-                                <col width="33.33%">
-                                <col width="33.33%">
-                                <col width="33.33%">
-                            </colgroup>
+                    <div class="tbl_list">
+                        <table class="default_tbl">
                             <thead>
                                 <tr>
-                                    <th scope="col" data-tooltip="시스템명" class="gridText">시스템명</th>
-                                    <th scope="col" data-tooltip="서비스 영역" class="gridText">서비스 영역</th>
-                                    <th scope="col" data-tooltip="계정명" class="gridText">계정명</th>
+                                    <th class="tbl_num_wid"></th>
+                                    <th class="check_list"><input type="checkbox" name="" id="list00" class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
+                                    <th></th>
+                                    <th class="sort_column">
+                                        <div class="">종류<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">제조사<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">모델명<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">이름<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">설명<span class="ascanding"></span></div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <th>1</th>
+                                    <td class="check_list"><input type="checkbox" name="" id="list01" class="check_stl"><label for="list01" class="check_stl_lab"></label></td>
+                                    <td class="more_list"><button class="icon_arrow_open">더보기</button></td>
+                                    <td>OS</td>
+                                    <td>RedHat</td>
                                     <td>data1</td>
-                                    <td>data1</td>
-                                    <td>data1</td>
+                                    <td>CentOS(1503)</td>
+                                    <td>Linux 표준모델</td>
                                 </tr>
                                 <tr>
+                                    <th>2</th>
+                                    <td class="check_list"><input type="checkbox" name="" id="list02" class="check_stl"><label for="list02" class="check_stl_lab"></label></td>
+                                    <td class="more_list"><button class="icon_arrow_open">더보기</button></td>
+                                    <td>OS</td>
+                                    <td>RedHat</td>
                                     <td>data1</td>
+                                    <td>CentOS(1503)</td>
+                                    <td>Linux 표준모델</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td class="check_list"><input type="checkbox" name="" id="list03" class="check_stl"><label for="list03" class="check_stl_lab"></label></td>
+                                    <td class="more_list"><button class="icon_arrow_open">더보기</button></td>
+                                    <td>OS</td>
+                                    <td>RedHat</td>
                                     <td>data1</td>
-                                    <td>data1</td>
+                                    <td>CentOS(1503)</td>
+                                    <td>Linux 표준모델</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
     
                     <p class="tit">no data</p>
-                    <div class="tbl_list dash_table">
-                        <table class="default_tbl" role="grid">
-                            <caption>시스템, 서비스 영역 및 계정 정보를 제공하는 표</caption>
-                            <colgroup aria-hidden="true">
-                                <col width="33.33%">
-                                <col width="33.33%">
-                                <col width="33.33%">
-                            </colgroup>
+                    <div class="tbl_list">
+                        <table class="default_tbl">
                             <thead>
                                 <tr>
-                                    <th scope="col" data-tooltip="시스템명" class="gridText">시스템명</th>
-                                    <th scope="col" data-tooltip="서비스 영역" class="gridText">서비스 영역</th>
-                                    <th scope="col" data-tooltip="계정명" class="gridText">계정명</th>
+                                    <th class="check_list"><input type="checkbox" name="" id="list00" class="check_stl"><label for="list00" class="check_stl_lab"></label></th>
+                                    <th></th>
+                                    <th class="sort_column">
+                                        <div class="">종류<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">제조사<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">모델명<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">이름<span class="ascanding"></span></div>
+                                    </th>
+                                    <th class="sort_column">
+                                        <div class="">설명<span class="ascanding"></span></div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td colspan="3" class="center no_data" aria-live="polite">
-                                        <p>
-                                            <span>No Data</span>
-                                            데이터가 없습니다.
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr style="display: none;">
-                                    <td colspan="3" class="center" aria-live="assertive">로딩중</td>
+                                    <td colspan="7" class="nodata">데이터가 없습니다.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -275,8 +303,6 @@
                             </table>
                         </div>
                     </div>
-    
-                    <p class="tit">table 안에 accordion</p>
 
                     <p class="tit">table 안에 accordion / 02_02_sub_list_detail.html</p>
                     <div class="tbl_list">
@@ -341,39 +367,10 @@
 							</tbody>
 						</table>
                     </div>
-
-                    <p class="tit">popup 안에 토글 테이블 tblStl2</p>
-                    <div class="tbl_list" style="padding: 8px 0px;">
-                        <table class="default_tbl tblStl2 grid">
-                            <tbody>
-                                <tr>
-                                    <th class="th-bl">
-                                        <div class="tb_dt_link gridText">
-                                            <p> [2024-05-09 11:05:37] 계정 수집 </p>
-                                            <button type="button" title="상세보기" class="btn_d_arw">
-                                                <i class="btn_dtail_arrow up"></i>
-                                            </button>
-                                        </div>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td style="border-top: 1px solid rgb(169, 169, 169); padding: 0px;">
-                                        <div>
-                                            <div style="min-height: 50px; white-space: pre-line;"><span>'Linux-FIDO'시스템의 'bin'계정이 수집 됨</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </section>
             </div>
             <!-- E: content -->
             <!-- S: footer -->
-            <div class="footer">
-                <p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-            </div>
             <!-- E: footer -->
         </div>
         <div class="scroll_btns" style="display:none">

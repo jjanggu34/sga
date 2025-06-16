@@ -1003,6 +1003,9 @@ body {
             }
         }
     }
+    // &.show_nav {
+
+    // }
 }
 
 #ONSD_wrap {
@@ -1038,7 +1041,7 @@ body {
             top:6px;
             @include icon(30px, 30px);
             background-color:transparent;
-            background-image:url("../images/common/close.svg");
+            background-image:$iconClose;
         }
     }
     // cont
@@ -1076,7 +1079,7 @@ body {
             right:20px;
             @include icon(30px, 30px);
             background-color:transparent;
-            background-image:url("../images/common/close.svg");
+            background-image:$iconClose;
         }
     }
     .popup_content {
@@ -1179,6 +1182,7 @@ body {
 @media screen and (max-width: 768px) {
     #SGIM_wrap {
         #container {
+            margin-left:0;
             .cont_wrap {
                 margin:0 4px;
                 padding:64px 0 0;
@@ -1201,6 +1205,7 @@ body {
                         top:18px;
                         left:10px;
                         display:inline-block;
+                        background-position:unset;
                     }
                 }
                 .gl_nav {

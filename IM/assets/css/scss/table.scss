@@ -145,7 +145,7 @@
                             transform:translate(-50%,-50%);
                             @include icon(24px, 24px);
                             margin-top:0;
-                            background-image:url("../images/common/ico_accordion.svg");
+                            background-image:$icoAccordion;
                             &.up {
                                 transform:translate(-50%,-50%) rotate(180deg);
                                 background-position:unset;
@@ -159,6 +159,7 @@
                 border:$borderD;
                 border-top:0;
                 font-weight:$font-w-m;
+                line-height:35px;
                 &:last-child {
                     border-right:0;
                 }
@@ -427,3 +428,11 @@
     }
 }
 
+/* dash_box > table */
+.dash_box {
+    .default_tbl {
+        td {
+            line-height:35px;
+        }
+    }
+}

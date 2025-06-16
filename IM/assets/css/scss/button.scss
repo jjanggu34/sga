@@ -39,6 +39,9 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
             font-size:$font14;
             font-weight:$font-w-m;
         }
+        &:last-child {
+            margin-right:0;
+        }
     }
 }
 
@@ -83,12 +86,12 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     }
     &.btn_dropdown {
         padding-right:30px;
-        background:url("../images/common/ico_accordion.svg") no-repeat right 4px center $primary;
+        background:$icoAccordion no-repeat right 4px center $primary;
     }
     &.arrow {
         i {
             @include wh (16px, 16px);
-            background:url("../images/common/ico_accordion.svg") no-repeat right center $primary;
+            background:$icoAccordion no-repeat right center $primary;
             transform:rotate(270deg);
         }
     }
@@ -113,24 +116,23 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     &.btn_dropdown {
         padding:0 30px 0 10px;
         padding-bottom:0;
-        background:url("../images/common/ico_accordion.svg") no-repeat right 4px center $white;
+        background:$icoAccordion no-repeat right 4px center $white;
+    }
+    &.diss {
+        color:$text-disabled;
+        background:$disabled-line-bg;
+        border:1px solid $btn-disabled;
+        cursor:auto;
     }
 }
 
 /*---------------------------------------------
-	#disabled : 기본
-    #line_disabled : line 버튼만
+	#diss : disabled
 ---------------------------------------------*/
-.disabled {
+.diss {
     border:1px solid $btn-disabled;
     color:$text-disabled;
     background:$btn-disabled;
-}
-.line_disabled {
-    color:$text-disabled;
-    background:$disabled-line-bg;
-    border:1px solid $btn-disabled;
-    cursor:auto;
 }
 
 /*---------------------------------------------
@@ -162,8 +164,8 @@ button, a {
             margin-bottom: 2px;
             &.checkout {
                 @include mask($title);
-                -webkit-mask-image:url("../images/common/close.svg");
-                mask-image:url("../images/common/close.svg");
+                -webkit-mask-image:$iconClose;
+                mask-image:$iconClose;
             }
             &.checkin {
                 @include mask($title);
@@ -207,7 +209,7 @@ button, a {
                 top:6px;
                 transform:rotate(-90deg);
                 display:inline-block;
-                background:url("../images/common/ico_accordion.svg")no-repeat center;
+                background:$icoAccordion no-repeat center;
             }
         }
         &.icon_reset {
@@ -223,16 +225,16 @@ button, a {
             @include wh (30px, 30px);
             padding:3px;
             font-size:0;
-            background:url("../images/common/close.svg")no-repeat center/auto $white;
+            background:$iconClose no-repeat center/auto $white;
         }
         &.bottom {
             @include wh (30px,30px);
             padding:0;
             font-size:0;
-            background:url("../images/common/ico_accordion.svg")no-repeat center/auto;
+            background:$iconClose no-repeat center/auto;
         }
     }
-    &.disabled {
+    &.diss {
         cursor:auto;
         border:1px solid $btn-disabled;
         color:$text-disabled !important;
@@ -251,6 +253,7 @@ button, a {
         line-height:16px;
         background:$white;
         &.on {
+            padding:6px 12px 6px 6px;
             border:$borderP;
             background:#EDFFFC;
             &::before {
@@ -322,8 +325,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     .#{$close} {
         @include wh (16px,16px);
         @include mask($title);
-        -webkit-mask-image:url("../images/common/close.svg");
-        mask-image:url("../images/common/close.svg");
+        -webkit-mask-image:$iconClose;
+        mask-image:$iconClose;
         background-image:none;
     }
 }
@@ -351,7 +354,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 left:50%;
                 transform:translate(-50%,-50%);
                 @include icon(16px,16px);
-                background-image:url("../images/common/btn_add.svg");
+                background-image:$iconBtnAdd;
                 background-position:center;
             }
         }
@@ -422,8 +425,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         @include wh(24px, 24px);
         @include mask($title);
         background-size:contain;
-        -webkit-mask-image:url("../images/common/ico_accordion.svg");
-        mask-image:url("../images/common/ico_accordion.svg");
+        -webkit-mask-image:$icoAccordion;
+        mask-image:$icoAccordion;
     }
     &.on {
         border:1px solid $basic;
@@ -466,6 +469,11 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
             font-weight:$font-w-b;
             line-height:45px;
         }
+    }
+    .diss {
+        border:1px solid $btn-disabled;
+        color:$text-disabled;
+        background:$btn-disabled;
     }
 }
 /*---------------------------------------------
@@ -580,6 +588,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                     @extend .last;
                     transform:rotate(180deg);
                 }
+                &.diss {
+                    background-color:$btn-disabled;
+                }
             }
             .on {
                 border-color:$primary !important;
@@ -624,6 +635,12 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                             -webkit-mask-image:url("../images/common/prevv.svg");
                             mask-image:url("../images/common/prevv.svg");
                             background-position:unset;
+                        }
+                    }
+                    &.diss {
+                        background-color:transparent;
+                        span {
+                            background-color:$list-border;
                         }
                     }
                 }
