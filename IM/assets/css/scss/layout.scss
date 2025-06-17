@@ -76,14 +76,14 @@ body {
         }
         .id_input, .userID {
             label {
-                -webkit-mask-image: url(../images/common/ico_member.svg);
-                mask-image: url(../images/common/ico_member.svg);
+                -webkit-mask-image:$icoMember;
+                mask-image:$icoMember;
             }
         }
         .pw_input, .userPWD {
             label {
-                -webkit-mask-image: url(../images/common/icon_locked.svg);
-                mask-image: url(../images/common/icon_locked.svg);
+                -webkit-mask-image:$iconLocked;
+                mask-image:$iconLocked;
             }
             .fas {
                 transform:translateY(-50%);
@@ -126,8 +126,8 @@ body {
                 display:inline-block;
                 @include wh(18px,18px);
                 @include mask($false);
-                -webkit-mask-image: url(../images/common/ico_info.svg);
-                mask-image: url(../images/common/ico_info.svg);
+                -webkit-mask-image:$icoInfo;
+                mask-image:$icoInfo;
             }
         }
         .dupli_check {
@@ -192,8 +192,8 @@ body {
             @include wh (24px,24px);
             margin:0;
             @include mask ($text-disabled);
-            -webkit-mask-image: url(../images/common/ico_accordion.svg);
-            mask-image: url(../images/common/ico_accordion.svg);
+            -webkit-mask-image:$icoAccordion;
+            mask-image:$icoAccordion;
             &.open {
                 transform:translateY(-50%) rotate(-180deg);
             }
@@ -252,8 +252,8 @@ body {
         .btn_del {
             @include wh (24px, 24px);
             @include mask ($blue);
-            -webkit-mask-image: url(../images/common/close.svg);
-            mask-image: url(../images/common/close.svg);
+            -webkit-mask-image:$iconClose;
+            mask-image:$iconClose;
             background-image:none;
         }
     }
@@ -576,8 +576,8 @@ body {
                             transform:translateY(-50%);
                             display:inline-block;
                             @include mask($text-disabled);
-                            -webkit-mask-image:url("../images/common/nav_arr.svg");
-                            mask-image:url("../images/common/nav_arr.svg");
+                            -webkit-mask-image:$icoArrow;
+                            mask-image:$icoArrow;
                         }
                         &.on {
                             color:$primary;
@@ -637,8 +637,8 @@ body {
                         @include content(16px,16px);
                         display:inline-block;
                         @include mask ($secondary);
-                        -webkit-mask-image:url("../images/common/header_arr.svg");
-                        mask-image:url("../images/common/header_arr.svg");
+                        -webkit-mask-image:$icoArrow;
+                        mask-image:$icoArrow;
                     }
                     &:last-child {
                         a {

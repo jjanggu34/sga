@@ -1,15 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
   <defs>
     <clipPath id="clip-path">
-      <rect id="사각형_15468" data-name="사각형 15468" width="24" height="24" transform="translate(60)" fill="#fff"/>
-    </clipPath>
-    <clipPath id="clip-path-2">
-      <rect id="사각형_15463" data-name="사각형 15463" width="9.333" height="6.533" fill="#b621ff" opacity="0.62"/>
+      <rect id="사각형_15698" data-name="사각형 15698" width="16" height="16" transform="translate(-3 -5.062)" fill="#b621ff" opacity="0.62"/>
     </clipPath>
   </defs>
-  <g id="arrow" transform="translate(-60)" clip-path="url(#clip-path)">
-    <g id="마스크_그룹_17" data-name="마스크 그룹 17" transform="translate(69 16.333) rotate(-90)" clip-path="url(#clip-path-2)">
-      <path id="패스_442" data-name="패스 442" d="M5.6,5.6V0H0" transform="translate(8.626 1.16) rotate(135)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-    </g>
+  <g id="nav_arr" transform="translate(5.062 13) rotate(-90)" clip-path="url(#clip-path)">
+    <path id="패스_11" data-name="패스 11" d="M6,6.75A.75.75,0,0,1,5.25,6V.75H0A.75.75,0,0,1-.75,0,.75.75,0,0,1,0-.75H6A.75.75,0,0,1,6.75,0V6A.75.75,0,0,1,6,6.75Z" transform="translate(9.243 1.243) rotate(135)" fill="#222"/>
   </g>
 </svg>

@@ -169,8 +169,8 @@ button, a {
             }
             &.checkin {
                 @include mask($title);
-                -webkit-mask-image:url("../images/common/ico_check.svg");
-                mask-image:url("../images/common/ico_check.svg");
+                -webkit-mask-image:$icoCheck;
+                mask-image:$icoCheck;
             }
             &.icon_setting {
                 @include mask($title);
@@ -187,8 +187,8 @@ button, a {
             &.icon_reset {
                 font-size:0;
                 @include mask($title);
-                -webkit-mask-image:url("../images/common/ico_reset.svg");
-                mask-image:url("../images/common/ico_reset.svg");
+                -webkit-mask-image:$icoReset;
+                mask-image:$icoReset;
                 -webkit-mask-size: 90%;
                 mask-size: 90%;
                 background-image:none;
@@ -216,7 +216,7 @@ button, a {
             @include wh (30px, 30px);
             padding:6px;
             font-size:0;
-            background:url("../images/common/ico_reset.svg")no-repeat center/auto $white;
+            background:$icoReset no-repeat center/auto $white;
             &::before {
                 content:none;
             }
@@ -261,8 +261,8 @@ button, a {
                 display:inline-block;
                 @include wh (16px, 16px);
                 @include mask($primary);
-                -webkit-mask-image:url("../images/common/ico_check_s.svg");
-                mask-image:url("../images/common/ico_check_s.svg");
+                -webkit-mask-image:$icoCheckS;
+                mask-image:$icoCheckS;
             }
             color:$primary;
         }
@@ -282,8 +282,8 @@ button, a {
     }
     &.icon_arrow_none {
         @extend .icon_arrow_open;
-        -webkit-mask-image:url("../images/common/icon_arrow_none.svg");
-        mask-image:url("../images/common/icon_arrow_none.svg");
+        -webkit-mask-image:$icoArrowNone;
+        mask-image:$icoArrowNone;
     }
     /* 텍스트 + 아이콘 */
     &.text {
@@ -301,7 +301,7 @@ button, a {
         }
         &.icon_reset {
             &::before {
-                background-image:url("../images/common/ico_reset.svg");
+                background-image:$icoReset;
                 transform:scaleX(-1);
             }
         }
@@ -395,9 +395,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 left:50%;
                 transform:translate(-50%,-50%);
                 @include icon(24px, 24px);
-                background-image:url("../images/label/ico_FileEdit.svg");
+                background-image:$icoFileEdit;
                 &.del {
-                    background-image:url("../images/label/ico_trash.svg");
+                    background-image:$icoTrash;
                     background-position:center;
                 }
                 &.test {
@@ -450,8 +450,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 .btn_detailview {
     @include wh (16px,16px);
     @include mask($title);
-    -webkit-mask-image:url("../images/common/ico_document.svg");
-    mask-image:url("../images/common/ico_document.svg");
+    -webkit-mask-image:$icoDocument;
+    mask-image:$icoDocument;
     -webkit-mask-size:auto;
     mask-size:auto;
     background-image:none;
@@ -488,8 +488,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         @include wh (24px, 24px);
         padding:0;
         @include mask($text-disabled);
-        -webkit-mask-image:url("../images/common/ico_btn.svg");
-        mask-image:url("../images/common/ico_btn.svg");
+        -webkit-mask-image:$icoBtn;
+        mask-image:$icoBtn;
     }
     &.mini_search {
         .btn_search {
@@ -521,8 +521,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
             @include content(16px,16px);
             display:inline-block;
             @include mask($title);
-            -webkit-mask-image:url("../images/common/ico_reset.svg");
-            mask-image:url("../images/common/ico_reset.svg");
+            -webkit-mask-image:$icoReset;
+            mask-image:$icoReset;
         }
     }
     .primary {

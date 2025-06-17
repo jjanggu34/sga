@@ -48,21 +48,26 @@
     }
     tbody {
         tr {
+            border-bottom:1px solid $list-border;
             th {
                 border:0;
-                border-bottom:1px solid $list-border;
                 @include title($font13,$font-w-r,$title);
                 line-height:16px;
-                &.new {
+                &.new_org {
                     position:relative;
+                    @include wh ($wh100,$wh100);
+                    padding:0 20px;
+                    margin:0;
+                    border-radius:0;
+                    font-size:0;
+                    line-height:35px;
+                    background:none;
                     &::after {
                         display:inline-block;
                         @include content(12px,12px);
                         content:"N";
                         position:absolute;
-                        top:50%;
-                        right:10px;
-                        transform:translateY(-50%);
+                        @extend %positon_center;
                         border-radius:3px;
                         @include title($font12, $font-w-r, $white);
                         line-height:12px;
@@ -78,7 +83,6 @@
             td {
                 padding:0 20px;
                 border:0;
-                border-bottom:1px solid $list-border;
                 @include title ($font13, $font-w-r, $content);
                 line-height:20px;
                 text-align:center;
@@ -306,6 +310,17 @@
     .dt_view {
         border-top:0;
     }
+    .m-detail {
+        padding:20px 35px 20px 15px;
+        .m-info_wrap {
+            border-bottom:0;
+        }
+        .m-cont {
+            padding:10px;
+            border:1px solid $list-border;
+            border-radius:6px;
+        }
+    }
 }
 
 /* table info */
@@ -410,8 +425,8 @@
                 transform:translate(-50%, -50%);
                 @include wh (18px, 18px);
                 @include mask ($white);
-                -webkit-mask-image:url("../images/common/icon_arrow_none.svg");
-                mask-image:url("../images/common/icon_arrow_none.svg");
+                -webkit-mask-image:$icoArrowNone;
+                mask-image:$icoArrowNone;
             }
         }
     }

@@ -156,12 +156,12 @@ body * {
   margin-bottom: 10px;
 }
 #IMwrap .login_input .id_input label, #IMwrap .login_input .userID label {
-  -webkit-mask-image: url(../images/common/ico_member.svg);
-  mask-image: url(../images/common/ico_member.svg);
+  -webkit-mask-image: url("../images/common/ico_member.svg");
+  mask-image: url("../images/common/ico_member.svg");
 }
 #IMwrap .login_input .pw_input label, #IMwrap .login_input .userPWD label {
-  -webkit-mask-image: url(../images/common/icon_locked.svg);
-  mask-image: url(../images/common/icon_locked.svg);
+  -webkit-mask-image: url("../images/label/icon_locked.svg");
+  mask-image: url("../images/label/icon_locked.svg");
 }
 #IMwrap .login_input .pw_input .fas, #IMwrap .login_input .userPWD .fas {
   transform: translateY(-50%);
@@ -215,8 +215,8 @@ body * {
   mask-position: center;
   background-color: #FF0000;
   vertical-align: text-bottom;
-  -webkit-mask-image: url(../images/common/ico_info.svg);
-  mask-image: url(../images/common/ico_info.svg);
+  -webkit-mask-image: url("../images/common/ico_info.svg");
+  mask-image: url("../images/common/ico_info.svg");
 }
 #IMwrap .login_input .dupli_check {
   padding-top: 0;
@@ -280,8 +280,8 @@ body * {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url(../images/common/ico_accordion.svg);
-  mask-image: url(../images/common/ico_accordion.svg);
+  -webkit-mask-image: url("../images/common/ico_accordion.svg");
+  mask-image: url("../images/common/ico_accordion.svg");
 }
 .tn_slt .fm_tit .tab_arrow.open {
   transform: translateY(-50%) rotate(-180deg);
@@ -356,8 +356,8 @@ body * {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url(../images/common/close.svg);
-  mask-image: url(../images/common/close.svg);
+  -webkit-mask-image: url("../images/common/close.svg");
+  mask-image: url("../images/common/close.svg");
   background-image: none;
 }
 
@@ -704,8 +704,8 @@ body * {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/nav_arr.svg");
-  mask-image: url("../images/common/nav_arr.svg");
+  -webkit-mask-image: url("../images/common/arrow.svg");
+  mask-image: url("../images/common/arrow.svg");
 }
 #SGIM_wrap .nav_list > li ul li a.on {
   color: #27AD98;
@@ -778,8 +778,8 @@ body * {
   mask-position: center;
   background-color: #757575;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/header_arr.svg");
-  mask-image: url("../images/common/header_arr.svg");
+  -webkit-mask-image: url("../images/common/arrow.svg");
+  mask-image: url("../images/common/arrow.svg");
 }
 #SGIM_wrap .header .header_title .link_depth li:last-child a {
   color: #222222;

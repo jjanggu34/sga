@@ -300,12 +300,10 @@ $labels: "check_stl_lab", "radio_stl_lab";
             background-color: $white;
         }
         &::after {
-            @include wh(15px, 15px);
+            @include wh(16px, 16px);
             @include mask($default);
-            -webkit-mask-size: 60%;
-            mask-size: 60%;
-            -webkit-mask-image: url("../images/common/icon_check_s.svg");
-            mask-image: url("../images/common/icon_check_s.svg");
+            -webkit-mask-image:$icoCheckS;
+            mask-image:$icoCheckS;
         }
     }
     &:checked + label.check_stl_lab {
@@ -319,7 +317,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
         }
 
         &::after {
-            @include wh(15px, 15px);
+            @include wh(16px, 16px);
             background-color: $white;
             background-image: none;
             margin: 0;
@@ -356,10 +354,10 @@ $labels: "check_stl_lab", "radio_stl_lab";
             &::after {
                 @include wh(15px, 15px);
                 @include mask($default);
-                -webkit-mask-size: 50%;
-                mask-size: 50%;
-                -webkit-mask-image: url("../images/common/icon_check_s.svg");
-                mask-image: url("../images/common/icon_check_s.svg");
+                -webkit-mask-size: 100%;
+                mask-size: 100%;
+                -webkit-mask-image:$icoCheckS;
+                mask-image:$icoCheckS;
             }
         }
     }
@@ -393,10 +391,9 @@ $labels: "check_stl_lab", "radio_stl_lab";
 .radio_stl {
     &+ label {
         &::before {
-            @include mask($default);
-        }
-        &::after {
-            content:none;
+            border:5px solid $white;
+            background-color:$default;
+            outline:1px solid $default;
         }
         &+ .req_txt {
             padding:0;
@@ -405,7 +402,9 @@ $labels: "check_stl_lab", "radio_stl_lab";
     &:checked {
         &+ label {
             &::before {
-                background-color:$primary;
+                border:5px solid $primary;
+                background-color:$white;
+                outline:1px solid $primary;
             }
             &::after {
                 content:none;
@@ -416,7 +415,9 @@ $labels: "check_stl_lab", "radio_stl_lab";
         &+ label {
             color:$text-disabled;
             &::before {
-                background-color:$btn-disabled;
+                border:5px solid $btn-disabled;
+                background-color:$default;
+                outline:1px solid $btn-disabled;
             }
             &::after {
                 content:none;

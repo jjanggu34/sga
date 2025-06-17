@@ -1048,17 +1048,19 @@ input + .loader {
   color: #999999;
   background-color: #FFFFFF;
 }
-.detail_process .flx_cell.pro_comple {
+.detail_process .flx_cell.process_comple {
   color: #FFFFFF;
   background-color: #162866;
 }
-.detail_process .flx_cell.pro_comple::after {
+.detail_process .flx_cell.process_comple::after {
+  left: unset;
+  background-color: unset;
   background-image: url("../images/common/triangle_comp.svg");
 }
-.detail_process .flx_cell.pro_comple .s_num {
+.detail_process .flx_cell.process_comple .s_num {
   font-size: 0;
 }
-.detail_process .flx_cell.pro_comple .s_num::before {
+.detail_process .flx_cell.process_comple .s_num::before {
   content: "";
   width: 17px;
   height: 17px;
@@ -1098,20 +1100,24 @@ input + .loader {
 .detail_process .flx_cell.process_activ:hover {
   background: #757575;
 }
-.detail_process .flx_cell.warning .s_num {
+.detail_process .flx_cell.process_warning .s_num {
   font-size: 0;
   background-color: transparent;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
   background-image: url("../images/common/icon_warning.svg");
-  background-size: 80%;
   background-position: top center;
 }
-.detail_process .flx_cell.warning .s_num::before {
+.detail_process .flx_cell.process_warning .s_num::before {
   content: none;
+}
+.detail_process .flx_cell.process_warning::after {
+  content: "";
+  left: unset;
+  background-color: transparent;
 }
 
 .longPrss .detail_process .flx_cell {
@@ -1259,6 +1265,7 @@ input + .loader {
   padding-bottom: 20px;
 }
 .tree_menu_area .tree_menu_box {
+  flex: 1;
   width: 100%;
   max-width: 240px;
   border: 1px solid #DDDDDD;
@@ -1415,7 +1422,6 @@ input + .loader {
 }
 
 .treeType02 {
-  flex: 1;
   border: 1px solid #C9C9C9;
   border-radius: 5px;
 }
@@ -2576,6 +2582,10 @@ input + .loader {
   background-position: center;
   background-size: 80%;
 }
+.i-card_wrap .card_link .i-card_ct {
+  align-items: center;
+  padding-top: 17px;
+}
 .i-card_wrap .card_link .i-card_ct .server_icon.local-network i {
   background: url("../images/moni/local-network.png") no-repeat 50%/100px auto;
 }
@@ -2601,7 +2611,7 @@ input + .loader {
   background: url("../images/moni/SCP.png") no-repeat 50%/100px auto;
 }
 .i-card_wrap .card_link .i-card_ct .num_t {
-  padding: 43px 0;
+  width: auto;
   font-size: 24px;
   font-weight: 700;
   color: #222222;
@@ -2796,12 +2806,13 @@ input + .loader {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/menu_arr.svg");
-  mask-image: url("../images/common/menu_arr.svg");
+  -webkit-mask-image: url("../images/common/arrow.svg");
+  mask-image: url("../images/common/arrow.svg");
   background-position: unset;
   transform: rotate(-90deg);
 }
 .moved_box .pcs_ctg_list li a:hover, .moved_box .pcs_ctg_list li a .on {
+  border-radius: 9px;
   color: #27AD98;
   background-color: #DAFAF5;
 }
@@ -3796,7 +3807,6 @@ input + .loader {
   height: 30px;
   margin: 0 5px 0 3px;
   padding: 0;
-  border-left: 1px solid #DDDDDD;
   border-radius: 0 6px 6px 0;
   background-color: #FFFFFF;
 }
@@ -5135,8 +5145,8 @@ input + .loader {
   background-color: #FF0000;
   vertical-align: text-bottom;
   margin: 0;
-  -webkit-mask-image: url(../images/common/ico_info.svg);
-  mask-image: url(../images/common/ico_info.svg);
+  -webkit-mask-image: url("../images/common/ico_info.svg");
+  mask-image: url("../images/common/ico_info.svg");
 }
 .icam_b_list .icam_b_stl .sicam_name_box {
   padding: 17px 15px;
@@ -5162,8 +5172,8 @@ input + .loader {
   background-color: #FF0000;
   vertical-align: text-bottom;
   margin: 0;
-  -webkit-mask-image: url(../images/common/ico_info.svg);
-  mask-image: url(../images/common/ico_info.svg);
+  -webkit-mask-image: url("../images/common/ico_info.svg");
+  mask-image: url("../images/common/ico_info.svg");
 }
 .icam_b_list .icam_b_stl .dstb_stt {
   padding: 0 15px 0 9px;
@@ -5335,8 +5345,8 @@ input + .loader {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url(../images/common/ico_check_s.svg);
-  mask-image: url(../images/common/ico_check_s.svg);
+  -webkit-mask-image: url("../images/common/ico_check_s.svg");
+  mask-image: url("../images/common/ico_check_s.svg");
 }
 
 .set_hide_box {
