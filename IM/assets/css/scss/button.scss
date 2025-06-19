@@ -233,12 +233,21 @@ button, a {
             font-size:0;
             background:$iconClose no-repeat center/auto;
         }
+        &.mo_del,
+        &.mo_add {
+            @include icon (30px,30px);
+            background-image:url("../images/common/prev.svg");
+            background-position:unset;
+        }
+        &.mo_add {
+            transform:scale(-1);
+        }
     }
     &.diss {
         cursor:auto;
         border:1px solid $btn-disabled;
         color:$text-disabled !important;
-        background:$btn-disabled;
+        background-color:$btn-disabled;
         i {
             background-color:$text-disabled !important;
         }

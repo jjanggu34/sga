@@ -37,6 +37,7 @@
 .default_tbl {
   width: 100%;
   border: 0;
+  border-bottom: 1px solid #DDDDDD;
   background: transparent;
   word-break: break-all;
   cursor: auto;
@@ -71,6 +72,9 @@
 }
 .default_tbl tbody tr {
   border-bottom: 1px solid #C9C9C9;
+}
+.default_tbl tbody tr:last-child {
+  border-bottom: 0;
 }
 .default_tbl tbody tr th {
   border: 0;
@@ -304,6 +308,9 @@
   border-bottom: 1px solid #DDDDDD;
 }
 .default_tbl .detail_open > td .detail_open_cont .tbl_list .default_tbl tr:last-child td {
+  border-bottom: 0;
+}
+.default_tbl .detail_open > td .detail_open_cont .tbl_list .default_tbl {
   border-bottom: 0;
 }
 .default_tbl .detail_open > td .detail_open_cont .tbl_btm {

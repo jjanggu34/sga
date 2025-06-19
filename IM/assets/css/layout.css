@@ -511,6 +511,9 @@ body * {
 #SGIM_wrap.mini_nav .nav_list li a i {
   left: 14px;
 }
+#SGIM_wrap.mini_nav .nav_list li a.on + .open {
+  display: none;
+}
 #SGIM_wrap.mini_nav #container {
   padding-left: 0;
   margin-left: 70px;

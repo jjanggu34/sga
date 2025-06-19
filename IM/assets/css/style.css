@@ -350,6 +350,40 @@ input + .loader {
   }
 }
 
+/* 전체화면 로딩 */
+.loading_wrap .loader {
+  width: 45px;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  aspect-ratio: 0.75;
+  --c1: no-repeat linear-gradient(#27AD98 0 0);
+  --c2: no-repeat linear-gradient(#4BC16B 0 0);
+  --c3: no-repeat linear-gradient(#6ED540 0 0);
+  background: var(--c1) 0% 50%, var(--c2) 50% 50%, var(--c3) 100% 50%;
+  animation: allLoader 1s infinite linear alternate;
+}
+@keyframes allLoader {
+  0% {
+    background-size: 20% 50%, 20% 50%, 20% 50%;
+  }
+  20% {
+    background-size: 20% 20%, 20% 50%, 20% 50%;
+  }
+  40% {
+    background-size: 20% 100%, 20% 20%, 20% 50%;
+  }
+  60% {
+    background-size: 20% 50%, 20% 100%, 20% 20%;
+  }
+  80% {
+    background-size: 20% 50%, 20% 50%, 20% 100%;
+  }
+  100% {
+    background-size: 20% 50%, 20% 50%, 20% 50%;
+  }
+}
+
 /*---------------------------------------------
     #라벨 테이블 안에서 사용
     기본 : icon_list
@@ -2696,6 +2730,13 @@ input + .loader {
 .i-card_wrap + .content.only .pcs_ctg_wrap {
   margin-top: 30px;
 }
+.i-card_wrap.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.i-card_wrap.grid .dash_box {
+  width: 100%;
+}
 
 .i-card_ct .icon i {
   background: none;
@@ -2991,7 +3032,7 @@ input + .loader {
   background-image: none;
   background-image: url("../images/common/prev.svg");
 }
-.move_ctrl .mo_del {
+.move_ctrl .mo_del, .aply_box_tit .move_ctrl .mo_add {
   background-position: unset;
   width: 30px;
   height: 30px;
@@ -3018,7 +3059,7 @@ input + .loader {
   background-image: none;
   background-image: url("../images/common/prevv.svg");
 }
-.move_ctrl .mo_del,
+.move_ctrl .mo_del, .aply_box_tit .move_ctrl .mo_add,
 .move_ctrl .all_del {
   transform: rotate(-180deg);
 }
@@ -5002,6 +5043,73 @@ input + .loader {
 .set_hide_box .server_box_white {
   box-shadow: none;
 }
+/***************** 사용자 홈 화면 *****************/
+.home_lyt {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
+  column-gap: 10px;
+  border-top: 0;
+}
+.home_lyt .home_d_tit {
+  padding: 20px 20px 10px;
+  border-bottom: 1px solid #DDDDDD;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+}
+.home_lyt .tab_wrap {
+  padding: 20px 24px;
+}
+.home_lyt .dash_box {
+  border-radius: 6px;
+}
+.home_lyt .dash_box .tbl_list {
+  padding: 20px 24px;
+}
+
+.hm_alim .dash_box {
+  width: 100%;
+  margin: 0;
+}
+
+.aply_box_tit .home_d_tit {
+  padding: 20px 20px 10px;
+  border-bottom: 1px solid #DDDDDD;
+  border-radius: 6px 6px 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+}
+.aply_box_tit .move_ctrl .mo_del, .aply_box_tit .move_ctrl .mo_add {
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/prev.svg");
+  background-position: unset;
+}
+.aply_box_tit .move_ctrl .mo_add {
+  transform: scale(1);
+}
+
+.aply_box_wrap {
+  padding: 20px;
+  border-radius: 0 0 6px 6px;
+}
+.aply_box_wrap .apply_card {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 180px;
+  gap: 10px;
+  padding: 0;
+}
+.aply_box_wrap .apply_card .dash_box {
+  width: 100%;
+  margin: 0;
+  border-color: rgba(221, 221, 221, 0.6509803922);
+}
+
 /***************** ICAM_board_wrap *****************/
 .ICAM_board_wrap {
   padding: 107px 65px 160px 65px;

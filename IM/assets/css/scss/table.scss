@@ -9,6 +9,7 @@
 .default_tbl {
     width:$wh100;
     border:0;
+    border-bottom:$borderD;
     background:transparent;
     word-break:break-all;
     cursor:auto;
@@ -49,6 +50,9 @@
     tbody {
         tr {
             border-bottom:1px solid $list-border;
+            &:last-child {
+                border-bottom:0;
+            }
             th {
                 border:0;
                 @include title($font13,$font-w-r,$title);
@@ -293,6 +297,9 @@
                                 }
                             }
                         }
+                    }
+                    .default_tbl {
+                        border-bottom:0;
                     }
                 }
                 .tbl_btm {

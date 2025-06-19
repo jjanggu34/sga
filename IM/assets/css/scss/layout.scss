@@ -403,6 +403,11 @@ body {
                     i {
                         left:14px;
                     }
+                    &.on {
+                        &+.open {
+                            display:none;
+                        }
+                    }
                 }
             }
         }

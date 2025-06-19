@@ -225,6 +225,33 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
         }
     }
 }
+
+/* 전체화면 로딩 */
+.loading_wrap {
+    .loader {
+        width:45px;
+        height:auto;
+        border:0;
+        border-radius:0;
+        aspect-ratio: .75;
+        --c1: no-repeat linear-gradient(#27AD98 0 0);
+        --c2: no-repeat linear-gradient(#4BC16B 0 0);
+        --c3: no-repeat linear-gradient(#6ED540 0 0);
+        background: 
+        var(--c1) 0%   50%,
+        var(--c2) 50%  50%,
+        var(--c3) 100% 50%;
+        animation: allLoader 1s infinite linear alternate;
+    }
+    @keyframes allLoader {
+        0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
+        20% {background-size: 20% 20% ,20% 50% ,20% 50% }
+        40% {background-size: 20% 100%,20% 20% ,20% 50% }
+        60% {background-size: 20% 50% ,20% 100%,20% 20% }
+        80% {background-size: 20% 50% ,20% 50% ,20% 100%}
+        100%{background-size: 20% 50% ,20% 50% ,20% 50% }
+    }
+}
 /*---------------------------------------------
     #라벨 테이블 안에서 사용
     기본 : icon_list
@@ -2340,6 +2367,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         margin:57px 24px 20px !important;;
         .pcs_ctg_wrap {
             margin-top:30px;
+        }
+    }
+    // 사용자 홈 화면
+    &.grid {
+        display:grid;
+        grid-template-columns:repeat(6, 1fr);
+        .dash_box {
+            width:$wh100;
         }
     }
 }
@@ -4599,6 +4634,68 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     & + .box_showbtn {
         @extend %box_showbtn_common;
+    }
+}
+
+/***************** 사용자 홈 화면 *****************/
+.home_lyt {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(197px, 1fr));
+    column-gap:10px;
+    .home_d_tit {
+        padding:20px 20px 10px;
+        border-bottom:$borderD;
+        @include title ($font16, $font-w-b, $title);
+    }
+    .tab_wrap {
+        padding:20px 24px;
+    }  border-top:0;
+    .dash_box{
+        border-radius:6px;
+        .tbl_list {
+            padding:20px 24px;
+        }
+    }
+}
+.hm_alim {
+    .dash_box {
+        width:100%;
+        margin:0;
+    }
+}
+.aply_box_tit {
+    .home_d_tit {
+        padding:20px 20px 10px;
+        border-bottom:$borderD;
+        border-radius:6px 6px 0 0;
+        @include title ($font16, $font-w-b, $title);
+    }
+    .move_ctrl {
+        .mo_del {
+            @include icon (30px,30px);
+            background-image:url("../images/common/prev.svg");
+            background-position:unset;
+        }
+        .mo_add {
+            @extend .mo_del;
+            transform:scale(1);
+        }
+    }
+}
+.aply_box_wrap {
+    padding:20px;
+    border-radius:0 0 6px 6px;
+    .apply_card {
+        display:grid;
+        grid-auto-flow: column;
+        grid-auto-columns:180px;
+        gap:10px;
+        padding:0;
+        .dash_box {
+            width:100%;
+            margin:0;
+            border-color:#DDDDDDA6;
+        }
     }
 }
 

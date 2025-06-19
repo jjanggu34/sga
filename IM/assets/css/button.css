@@ -333,11 +333,23 @@ button.icon.bottom, a.icon.bottom {
   font-size: 0;
   background: url("../images/common/close.svg") no-repeat center/auto;
 }
+button.icon.mo_del, button.icon.mo_add, a.icon.mo_del, a.icon.mo_add {
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/prev.svg");
+  background-position: unset;
+}
+button.icon.mo_add, a.icon.mo_add {
+  transform: scale(-1);
+}
 button.diss, a.diss {
   cursor: auto;
   border: 1px solid #EEEEEE;
   color: #999999 !important;
-  background: #EEEEEE;
+  background-color: #EEEEEE;
 }
 button.diss i, a.diss i {
   background-color: #999999 !important;
