@@ -210,7 +210,7 @@ body {
     border-radius:6px;
     background-color:$body;
     .msgstl {
-        height:100%;
+        height:$wh100;
         p {
             position:relative;
             padding-left:34px;
@@ -468,7 +468,7 @@ body {
         }
     }
     .nav_list {
-        min-height:calc(100% - 175px);
+        min-height:calc($wh100 - 175px);
         padding:0 10px 10px;
         > li {
             margin-top:10px;
@@ -869,7 +869,7 @@ body {
         background:$body;
         .dash_wrap {
             min-height:calc(100vh - 100px);
-            height:100%;
+            height:$wh100;
             margin:80px 24px 0 !important;
             border:$borderD;
             border-radius:20px;
@@ -905,7 +905,7 @@ body {
         .content {
             padding:0;
             // margin:60px 0 20px;
-            height:100%;
+            height:$wh100;
             min-height:calc(100vh - 70px);//header + 위아래 margin
             margin:84px 0 0 ;
             border-top:0;
@@ -924,7 +924,7 @@ body {
                 padding-top:30px;
             }
             &.cont_scroll {
-                height:100%;
+                height:$wh100;
                 max-height:741px;
                 overflow-y:auto;
                 &::-webkit-scrollbar-thumb {
@@ -958,11 +958,11 @@ body {
             }
             &+.cnt_lyt_sc {
                 .content {
-                    width:100%;
+                    width:$wh100;
                     padding:20px 0;
                     margin-top:0;
                     &.cont_scroll {
-                        height:100%;
+                        height:$wh100;
                         min-height:auto;
                         // max-height:624px;
                         max-height:calc(100vh - 191px);
@@ -1028,7 +1028,7 @@ body {
 /***************** side popup *****************/
 .detail_view {
     top:60px;
-    height:calc(100% - 60px);
+    height:calc($wh100 - 60px);
     padding:20px;
     border:1px solid $border-d;
     border-radius:13px 0 0 13px;
@@ -1071,6 +1071,9 @@ body {
 
 /***************** center popup *****************/
 .layer_popup {
+    &.is_visible {
+        background-color:#27AD9806;
+    }
     .popup_title {
         padding:10px 20px 0 20px;
         border-bottom-color:$title;
@@ -1093,7 +1096,7 @@ body {
         }
         .tbl_list {
             max-height:338px;
-            height:100%;
+            height:$wh100;
             padding-bottom:0;
             margin-bottom:24px;
             border-top:1px solid $list-border;

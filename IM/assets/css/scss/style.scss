@@ -119,9 +119,7 @@ $btnstls: "trcolor", "fcolor";
     margin-top:9px;
 }
 
-/*---------------------------------------------
-    border-bottom이 after로 들어가야할 때
----------------------------------------------*/
+/* border-bottom이 after로 들어가야할 때 */
 .bBorder {
     border-bottom:$borderD !important;
     border-radius:0 !important;
@@ -229,27 +227,27 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
 /* 전체화면 로딩 */
 .loading_wrap {
     .loader {
-        width:45px;
+        width:60px;
         height:auto;
         border:0;
         border-radius:0;
-        aspect-ratio: .75;
+        aspect-ratio: 1;
         --c1: no-repeat linear-gradient(#27AD98 0 0);
-        --c2: no-repeat linear-gradient(#4BC16B 0 0);
-        --c3: no-repeat linear-gradient(#6ED540 0 0);
+        --c2: no-repeat linear-gradient(#222222 0 0);
         background: 
         var(--c1) 0%   50%,
-        var(--c2) 50%  50%,
-        var(--c3) 100% 50%;
-        animation: allLoader 1s infinite linear alternate;
+        var(--c2) 25%  50%,
+        var(--c1) 50%  50%,
+        var(--c2) 75%  50%;
+        animation: allLoader 1.5s infinite linear alternate;
     }
     @keyframes allLoader {
-        0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
-        20% {background-size: 20% 20% ,20% 50% ,20% 50% }
-        40% {background-size: 20% 100%,20% 20% ,20% 50% }
-        60% {background-size: 20% 50% ,20% 100%,20% 20% }
-        80% {background-size: 20% 50% ,20% 50% ,20% 100%}
-        100%{background-size: 20% 50% ,20% 50% ,20% 50% }
+        0%  {background-size: 15% 50%, 15% 50%, 15% 50%, 15% 50%}
+        20% {background-size: 15% 20%, 15% 50%, 15% 50%, 15% 50%}
+        40% {background-size: 15% 100%, 15% 20%, 15% 50%, 15% 50%}
+        60% {background-size: 15% 50%, 15% 100%, 15% 20%, 15% 50%}
+        80% {background-size: 15% 50%, 15% 50%, 15% 100%, 15% 20%}
+        100%{background-size: 15% 50%, 15% 50%, 15% 50%, 15% 100%}
     }
 }
 /*---------------------------------------------
@@ -259,6 +257,7 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
     #확장자 아이콘 : icon_ff.확장자명
     서버 : icon_os
     info : req_txt(설명문구 inbl, 경고문구 org), dupli_check
+    참고: guide/views/state.html
 ---------------------------------------------*/
 .icon_os {
     width:auto;
@@ -686,7 +685,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding-left:10px;
     }
 }
-
+/*********************************************************************
+    #progress
+    참고: guide/views/progress.html
+*********************************************************************/
 /***************** progress *****************/
 .topPrss {
     &.scrollPrss {
@@ -837,6 +839,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 
+/*********************************************************************
+    #tab
+    참고: guide/views/tab.html
+*********************************************************************/
 /***************** 탭 *****************/
 .tab_wrap {
     position:relative;
@@ -974,7 +980,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 /*********************************************************************
-#content-menu
+    #content-menu
+    참고: guide/views/treemenu.html
 *********************************************************************/
 .tree_menu_wrap {
     padding:0 20px 20px;
@@ -990,7 +997,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     padding-bottom:20px;
     .tree_menu_box {
         flex:1;
-        width:100%;
+        width:$wh100;
         max-width:240px;
         border:$borderD;
         margin-right:0;
@@ -1025,6 +1032,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         font-weight:$font-w-r;
                         color:$title;
                     }
+                    &.on {
+                        border-radius:6px;
+                        background:#DAFAF5;
+                        span {
+                            color:$primary;
+                        }
+                        .icon_tree {
+                            background-color:$primary;
+                        }
+                    }
+                    &:hover {
+                        background:#FFFAEF;
+                    }
                     .icon_tree {
                         margin-right:4px;
                         @include mask($text-disabled);
@@ -1047,19 +1067,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                             -webkit-mask-image:url("../images/common/ico_file.svg");
                             mask-image:url("../images/common/ico_file.svg");
                         }
-                    }
-                    &.on {
-                        border-radius:6px;
-                        background:#DAFAF5;
-                        span {
-                            color:$primary;
-                        }
-                        .icon_tree {
-                            background-color:$primary;
-                        }
-                    }
-                    &:hover {
-                        background:#FFFAEF;
                     }
                 }
                 .sub_tree_menu {
@@ -1476,9 +1483,115 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 /*********************************************************************
-#리스트
+    #리스트
+    참고: guide/views/list.html, guide/views/list2.html
 *********************************************************************/
+/***************** apply_card *****************/
+/* 결재목록 */
+.apply_card {
+    display:block;
+    padding:40px 20px;
+    .cont_title {
+        padding-bottom:3px;
+        h2 {
+            @include title ($font28, $font-w-m, $title);
+            line-height:24px;
+        }
+    }
+    .dash_box {
+        position:relative;
+        display:inline-block;
+        max-width:514px;
+        @include wh ($wh100, 210px);
+        margin:25px 11px 0 0;
+        padding:20px;
+        background-color:$disabled-line-bg;
+        border:1px solid #DDDDDDA6;
+        box-shadow:unset;
+        &:hover {
+            border-color:unset;
+            .arrow_apply {
+                border-color:unset;
+                background-color:unset;
+            }
+        }
+        .apply_card_w {
+            position:static;
+            width:$wh100;
+            padding:0;
+            .apply_txt {
+                position:static;
+                p {
+                    padding-bottom:30px;
+                    @include title ($font14, $font-w-r, $content);
+                    line-height:24px;
+                }
+                button, a {
+                    line-height:16px;
+                }
+                a {
+                    &.icon {
+                        position:absolute;
+                        left:20px;
+                        bottom:12px;
+                        column-gap:5px;
+                        padding:0 14px;
+                        border-radius:6px;
+                        line-height:30px;
+                    }
+                }
+            }
+        }
+        .help_w {
+            top:0;
+            right:0;
+            .help_btn {
+                position:absolute;
+                top:20px;
+                right:20px;
+                padding:0;
+                border-color:$border-d;
+                color:$title;
+                background:$white;
+            }
+        }
+        .arrow_apply {
+            position:absolute;
+            right:0;
+            bottom:40px;
+            width:auto;
+            border:0;
+            @include title ($font14, $font-w-r, $content);
+            line-height:24px;
+            background:none;
+            .icon_arrapply {
+                position:unset;
+                margin:0;
+                background:$icoArrow no-repeat center;
+            }
+        }
+    }
+}
+/* 사용자 홈 화면 */
+.aply_box_wrap {
+    padding:20px;
+    border-radius:0 0 6px 6px;
+    .apply_card {
+        display:grid;
+        grid-auto-flow: column;
+        grid-auto-columns:180px;
+        gap:10px;
+        padding:0;
+        .dash_box {
+            width:$wh100;
+            margin:0;
+            border-color:#DDDDDDA6;
+        }
+    }
+}
+
 /***************** workflow_box *****************/
+/* 결재선 */
 .workflow_box {
     margin-bottom:20px;
     background-color:$table-th;
@@ -1915,92 +2028,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
-/***************** apply_card *****************/
-.apply_card {
-    display:block;
-    padding:40px 20px;
-    .cont_title {
-        padding-bottom:3px;
-        h2 {
-            @include title ($font28, $font-w-m, $title);
-            line-height:24px;
-        }
-    }
-    .dash_box {
-        position:relative;
-        display:inline-block;
-        max-width:514px;
-        @include wh ($wh100, 210px);
-        margin:25px 11px 0 0;
-        padding:20px;
-        background-color:$disabled-line-bg;
-        border:1px solid #DDDDDDA6;
-        box-shadow:unset;
-        &:hover {
-            border-color:unset;
-            .arrow_apply {
-                border-color:unset;
-                background-color:unset;
-            }
-        }
-        .apply_card_w {
-            position:static;
-            width:$wh100;
-            padding:0;
-            .apply_txt {
-                position:static;
-                p {
-                    padding-bottom:30px;
-                    @include title ($font14, $font-w-r, $content);
-                    line-height:24px;
-                }
-                button, a {
-                    line-height:16px;
-                }
-                a {
-                    &.icon {
-                        position:absolute;
-                        left:20px;
-                        bottom:12px;
-                        column-gap:5px;
-                        padding:0 14px;
-                        border-radius:6px;
-                        line-height:30px;
-                    }
-                }
-            }
-        }
-        .help_w {
-            top:0;
-            right:0;
-            .help_btn {
-                position:absolute;
-                top:20px;
-                right:20px;
-                padding:0;
-                border-color:$border-d;
-                color:$title;
-                background:$white;
-            }
-        }
-        .arrow_apply {
-            position:absolute;
-            right:0;
-            bottom:40px;
-            width:auto;
-            border:0;
-            @include title ($font14, $font-w-r, $content);
-            line-height:24px;
-            background:none;
-            .icon_arrapply {
-                position:unset;
-                margin:0;
-                background:$icoArrow no-repeat center;
-            }
-        }
-    }
-}
-
 /***************** i-card_wrap *****************/
 .i-card_wrap {
     margin:0 24px;
@@ -2045,6 +2072,104 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding:0 0 0 7px;
                 font-weight:$font-w-m;
                 color:$text-disabled;
+            }
+        }
+        /* server zone */
+        &.card_link {
+            padding:14px 18px 0 24px;
+            .i-card_title {
+                padding:0 0 17px;
+                @include title ($font14, $font-w-b, $content);
+            }
+            .add_btn {
+                @include icon (22px,22px);
+                padding:0;
+                background-color:$basic;
+                background-image:url("../images/common/icon_plus_s.svg");
+                background-position:center;
+                background-size:80%;
+            }
+            .i-card_ct {
+                align-items:center;
+                padding-top:17px;
+                .server_icon {
+                    &.local-network {
+                        i {
+                            background:url("../images/moni/local-network.png")no-repeat 50%/100px auto;
+                        }
+                    }
+                    &.aws {
+                        i {
+                            background:url("../images/moni/amazon.png")no-repeat 50%/100px auto;
+                        }
+                    }
+                    &.m-azure {
+                        i {
+                            background:url("../images/moni/microsoft-azure.png")no-repeat 50%/100px auto;
+                        }
+                    }
+                    &.nhn {
+                        i {
+                            background:url("../images/moni/nhn.png")no-repeat 50%/100px auto;
+                        }
+                    }
+                    &.ac-directory {
+                        i {
+                            background:url("../images/moni/active-directory.png")no-repeat 50%/100px auto;
+                        }
+                    }
+                    &.oci {
+                        i {
+                            background:url("../images/moni/OCI.png")no-repeat 50%/100px auto;
+                        }
+                    }
+                    &.azure {
+                        i {
+                            background:url("../images/moni/azure-active-directory.png")no-repeat 50%/100px auto;
+                        }
+                    }
+                    &.SCP {
+                        i {
+                            background:url("../images/moni/SCP.png")no-repeat 50%/100px auto;
+                        }
+                    }
+                }
+                .num_t {
+                    width:auto;
+                    @include title (24px , $font-w-e, $title);
+                }
+            }
+        }
+        /* synchronize_card */
+        &.system_tab {
+            width:calc(($wh100 - 170px) / 6);
+            padding:14px 22px;
+            border:1px solid $list-border;
+            &.on {
+                border:0;
+                background-color:$primary;
+                .i-card_title {
+                    color:$white;
+                }
+                .system_info {
+                    p {
+                        color:$white;
+                    }
+                }
+            }
+            .i-card_title {
+                padding:0 0 10px;
+                @include title($font16,$font-w-b,$title);
+            }
+            .system_info {
+                padding:0;
+                p {
+                    padding-bottom:10px;
+                    color:$secondary;
+                    &:last-child {
+                        padding-bottom:0;
+                    }
+                }
             }
         }
         .i-card_ct {
@@ -2226,104 +2351,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-bottom:$borderD;
         }
     }
-    /* server zone */
-    .card_link {
-        padding:14px 18px 0 24px;
-        .i-card_title {
-            padding:0 0 17px;
-            @include title ($font14, $font-w-b, $content);
-        }
-        .add_btn {
-            @include icon (22px,22px);
-            padding:0;
-            background-color:$basic;
-            background-image:url("../images/common/icon_plus_s.svg");
-            background-position:center;
-            background-size:80%;
-        }
-        .i-card_ct {
-            align-items:center;
-            padding-top:17px;
-            .server_icon {
-                &.local-network {
-                    i {
-                        background:url("../images/moni/local-network.png")no-repeat 50%/100px auto;
-                    }
-                }
-                &.aws {
-                    i {
-                        background:url("../images/moni/amazon.png")no-repeat 50%/100px auto;
-                    }
-                }
-                &.m-azure {
-                    i {
-                        background:url("../images/moni/microsoft-azure.png")no-repeat 50%/100px auto;
-                    }
-                }
-                &.nhn {
-                    i {
-                        background:url("../images/moni/nhn.png")no-repeat 50%/100px auto;
-                    }
-                }
-                &.ac-directory {
-                    i {
-                        background:url("../images/moni/active-directory.png")no-repeat 50%/100px auto;
-                    }
-                }
-                &.oci {
-                    i {
-                        background:url("../images/moni/OCI.png")no-repeat 50%/100px auto;
-                    }
-                }
-                &.azure {
-                    i {
-                        background:url("../images/moni/azure-active-directory.png")no-repeat 50%/100px auto;
-                    }
-                }
-                &.SCP {
-                    i {
-                        background:url("../images/moni/SCP.png")no-repeat 50%/100px auto;
-                    }
-                }
-            }
-            .num_t {
-                width:auto;
-                @include title (24px , $font-w-e, $title);
-            }
-        }
-    }
-    // synchronize_card
-    .dash_box.system_tab {
-        width:calc((100% - 170px) / 6);
-        padding:14px 22px;
-        border:1px solid $list-border;
-        &.on {
-            border:0;
-            background-color:$primary;
-            .i-card_title {
-                color:$white;
-            }
-            .system_info {
-                p {
-                    color:$white;
-                }
-            }
-        }
-        .i-card_title {
-            padding:0 0 10px;
-            @include title($font16,$font-w-b,$title);
-        }
-        .system_info {
-            padding:0;
-            p {
-                padding-bottom:10px;
-                color:$secondary;
-                &:last-child {
-                    padding-bottom:0;
-                }
-            }
-        }
-    }
+    /* synchronize_card */
     .more_list_tab {
         width:82px;
         background-color:$basic;
@@ -2375,6 +2403,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         grid-template-columns:repeat(6, 1fr);
         .dash_box {
             width:$wh100;
+            .i-card_title {
+                padding:0 0 12px;
+            }
         }
     }
 }
@@ -2431,7 +2462,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             flex-wrap: wrap;
             .treem_btn_lyt {
                 justify-content:flex-end;
-                width:100%;
+                width:$wh100;
                 padding-top:10px;
                 .treem_btn {
                     font-weight:$font-w-r;
@@ -2726,7 +2757,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border-bottom:$borderD;
     }
     .moved_list {
-        height:100%;
+        height:$wh100;
         border:0;
         &>li {
             column-gap:20px;
@@ -2877,7 +2908,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .form_txt {
                     @extend .form_tit;
                     padding:0;
-                    width:100%;
+                    width:$wh100;
                 }
             }
         }
@@ -2893,7 +2924,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .form_list {
         display:flex;
-        width:100%;
+        width:$wh100;
         padding:11px;
         border-bottom:1px solid $border-d;
         .form_tit {
@@ -2907,7 +2938,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .form_txt {
-            width:100%;
+            width:$wh100;
             min-height:unset;
             padding:0;
             border-bottom:0;
@@ -3008,7 +3039,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &::after {
                     content:"";
                     display:inline-block;
-                    width:calc(100% - 32px);
+                    width:calc($wh100 - 32px);
                     height:1px;
                     margin-left:16px;
                     background-color:$border-d;
@@ -3512,8 +3543,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     background-color:transparent;
                     &::after {
                         @include wh($wh100, $wh100);
-                        -webkit-mask-size:100%;
-                        mask-size:100%;
+                        -webkit-mask-size:$wh100;
+                        mask-size:$wh100;
                         background-color:$white;
                     }
                 }
@@ -3568,7 +3599,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     gap:20px 10px;
 }
 .mod_stl {
-    width:calc((100% - 20px) / 3);
+    width:calc(($wh100 - 20px) / 3);
     margin:0;
     border:$borderD;
     border-radius:6px;
@@ -3711,7 +3742,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .data_txt_stl {
             @include flexsb(null);
-            width:100%;
+            width:$wh100;
             padding-left:5px;
             dt {
                 padding-top:4px;
@@ -3724,7 +3755,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         &.no_dt_info {
-            height:100%;
+            height:$wh100;
             .data_ico_lyt {
                 padding-bottom:0;
                 padding-right:107px;
@@ -3742,17 +3773,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         background-color:transparent;
         dl {
             flex-wrap: wrap;
-            width:100%;
-            height:74px;
+            @include wh($wh100,74px);
             padding:10px;
             border-radius:10px;
             background-color:#EDF0F4;
             dt {
-                width:100%;
+                width:$wh100;
                 font-size:$font14;
             }
             dd {
-                width:100%;
+                width:$wh100;
                 @include title ($font16, $font-w-e, $true);
                 text-align:right;
             }
@@ -3864,7 +3894,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         flex-wrap:wrap;
         padding:0;
         .data_total {
-            width:100%;
+            width:$wh100;
             &::before {
                 @include content(24px,24px);
                 margin-right:3px;
@@ -3883,7 +3913,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .flx {
-            width:100%;
+            width:$wh100;
             column-gap:10px;
             .data_cht_info {
                 flex-wrap:wrap;
@@ -4017,7 +4047,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     #모니터링-조정배포
 ---------------------------------------------*/
 .sych_mnt_wrap {
-    height: 100%;
+    height:$wh100;
     padding:54px 48px 160px 32px;
     border: 0;
     border-radius: 20px;
@@ -4211,12 +4241,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &.Auth {
                 background-position:unset;
                 background-image:url("../images/common/ico_auth.svg");
-                background-size: 100%;
+                background-size:$wh100;
             }
             &.distb {
                 background-position:unset;
                 background-image:url("../images/common/ico_distribution.svg");
-                background-size: 100%;
+                background-size:$wh100;
             }
         }
         .ms_server_name {
@@ -4659,7 +4689,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 .hm_alim {
     .dash_box {
-        width:100%;
+        width:$wh100;
         margin:0;
     }
 }
@@ -4679,22 +4709,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .mo_add {
             @extend .mo_del;
             transform:scale(1);
-        }
-    }
-}
-.aply_box_wrap {
-    padding:20px;
-    border-radius:0 0 6px 6px;
-    .apply_card {
-        display:grid;
-        grid-auto-flow: column;
-        grid-auto-columns:180px;
-        gap:10px;
-        padding:0;
-        .dash_box {
-            width:100%;
-            margin:0;
-            border-color:#DDDDDDA6;
         }
     }
 }
@@ -4837,7 +4851,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &.b_stl_s {
             .sicam_name_tit {
                 justify-content:space-between;
-                width:calc(100% - 70px);
+                width:calc($wh100 - 70px);
                 .errtxt {
                     padding-left:0;
                     i {
@@ -4858,7 +4872,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .sicam_name_tit {
             justify-content:space-between;
-            width:calc(100% - 90px);
+            width:calc($wh100 - 90px);
             .errtxt {
                 padding-left:0;
                 i {
@@ -4954,7 +4968,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .fw_list {
         gap:10px;
         justify-content:space-between;
-        height:100%;
+        height:$wh100;
         border:$borderD;
         border-radius:6px;
         background-color:$white;
@@ -5049,7 +5063,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     padding:68px 48px 160px 32px;
     .icam_b_list {
         max-width:300px;
-        width:100%;
+        width:$wh100;
         padding:15px 10px;
         border:1px dashed #A1B6CC;
         border-radius:6px;
@@ -5081,7 +5095,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .sicam_name_tit {
-            width:100%;
+            width:$wh100;
         }
         .sicam_name {
             padding:13px 0 0 46px;
@@ -5089,7 +5103,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .user_view_slt {
             padding:30px 0 0;
             .form_contrl {
-                width:100%;
+                width:$wh100;
                 height:30px;
                 font-size:$font13;
             }

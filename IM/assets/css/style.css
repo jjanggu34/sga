@@ -206,9 +206,7 @@
   margin-top: 9px;
 }
 
-/*---------------------------------------------
-    border-bottom이 after로 들어가야할 때
----------------------------------------------*/
+/* border-bottom이 after로 들어가야할 때 */
 .bBorder {
   border-bottom: 1px solid #DDDDDD !important;
   border-radius: 0 !important;
@@ -352,35 +350,34 @@ input + .loader {
 
 /* 전체화면 로딩 */
 .loading_wrap .loader {
-  width: 45px;
+  width: 60px;
   height: auto;
   border: 0;
   border-radius: 0;
-  aspect-ratio: 0.75;
+  aspect-ratio: 1;
   --c1: no-repeat linear-gradient(#27AD98 0 0);
-  --c2: no-repeat linear-gradient(#4BC16B 0 0);
-  --c3: no-repeat linear-gradient(#6ED540 0 0);
-  background: var(--c1) 0% 50%, var(--c2) 50% 50%, var(--c3) 100% 50%;
-  animation: allLoader 1s infinite linear alternate;
+  --c2: no-repeat linear-gradient(#222222 0 0);
+  background: var(--c1) 0% 50%, var(--c2) 25% 50%, var(--c1) 50% 50%, var(--c2) 75% 50%;
+  animation: allLoader 1.5s infinite linear alternate;
 }
 @keyframes allLoader {
   0% {
-    background-size: 20% 50%, 20% 50%, 20% 50%;
+    background-size: 15% 50%, 15% 50%, 15% 50%, 15% 50%;
   }
   20% {
-    background-size: 20% 20%, 20% 50%, 20% 50%;
+    background-size: 15% 20%, 15% 50%, 15% 50%, 15% 50%;
   }
   40% {
-    background-size: 20% 100%, 20% 20%, 20% 50%;
+    background-size: 15% 100%, 15% 20%, 15% 50%, 15% 50%;
   }
   60% {
-    background-size: 20% 50%, 20% 100%, 20% 20%;
+    background-size: 15% 50%, 15% 100%, 15% 20%, 15% 50%;
   }
   80% {
-    background-size: 20% 50%, 20% 50%, 20% 100%;
+    background-size: 15% 50%, 15% 50%, 15% 100%, 15% 20%;
   }
   100% {
-    background-size: 20% 50%, 20% 50%, 20% 50%;
+    background-size: 15% 50%, 15% 50%, 15% 50%, 15% 100%;
   }
 }
 
@@ -391,6 +388,7 @@ input + .loader {
     #확장자 아이콘 : icon_ff.확장자명
     서버 : icon_os
     info : req_txt(설명문구 inbl, 경고문구 org), dupli_check
+    참고: guide/views/state.html
 ---------------------------------------------*/
 .icon_os {
   width: auto;
@@ -992,6 +990,10 @@ input + .loader {
   padding-left: 10px;
 }
 
+/*********************************************************************
+    #progress
+    참고: guide/views/progress.html
+*********************************************************************/
 /***************** progress *****************/
 .topPrss.scrollPrss + div {
   margin-top: 52px;
@@ -1158,6 +1160,10 @@ input + .loader {
   margin: 3px 0;
 }
 
+/*********************************************************************
+    #tab
+    참고: guide/views/tab.html
+*********************************************************************/
 /***************** 탭 *****************/
 .tab_wrap {
   position: relative;
@@ -1285,7 +1291,8 @@ input + .loader {
 }
 
 /*********************************************************************
-#content-menu
+    #content-menu
+    참고: guide/views/treemenu.html
 *********************************************************************/
 .tree_menu_wrap {
   padding: 0 20px 20px;
@@ -1337,6 +1344,19 @@ input + .loader {
   font-weight: 400;
   color: #222222;
 }
+.tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a.on {
+  border-radius: 6px;
+  background: #DAFAF5;
+}
+.tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a.on span {
+  color: #27AD98;
+}
+.tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a.on .icon_tree {
+  background-color: #27AD98;
+}
+.tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a:hover {
+  background: #FFFAEF;
+}
 .tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a .icon_tree {
   margin-right: 4px;
   -webkit-mask-repeat: no-repeat;
@@ -1366,19 +1386,6 @@ input + .loader {
 .tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a .icon_tree.file {
   -webkit-mask-image: url("../images/common/ico_file.svg");
   mask-image: url("../images/common/ico_file.svg");
-}
-.tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a.on {
-  border-radius: 6px;
-  background: #DAFAF5;
-}
-.tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a.on span {
-  color: #27AD98;
-}
-.tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a.on .icon_tree {
-  background-color: #27AD98;
-}
-.tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner a:hover {
-  background: #FFFAEF;
 }
 .tree_menu_area .tree_menu_box .tree_menu_tl .tree_menu_inner .sub_tree_menu {
   padding-left: 0;
@@ -1836,9 +1843,121 @@ input + .loader {
 }
 
 /*********************************************************************
-#리스트
+    #리스트
+    참고: guide/views/list.html, guide/views/list2.html
 *********************************************************************/
+/***************** apply_card *****************/
+/* 결재목록 */
+.apply_card {
+  display: block;
+  padding: 40px 20px;
+}
+.apply_card .cont_title {
+  padding-bottom: 3px;
+}
+.apply_card .cont_title h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #222222;
+  line-height: 24px;
+}
+.apply_card .dash_box {
+  position: relative;
+  display: inline-block;
+  max-width: 514px;
+  width: 100%;
+  height: 210px;
+  margin: 25px 11px 0 0;
+  padding: 20px;
+  background-color: #FCFCFC;
+  border: 1px solid rgba(221, 221, 221, 0.6509803922);
+  box-shadow: unset;
+}
+.apply_card .dash_box:hover {
+  border-color: unset;
+}
+.apply_card .dash_box:hover .arrow_apply {
+  border-color: unset;
+  background-color: unset;
+}
+.apply_card .dash_box .apply_card_w {
+  position: static;
+  width: 100%;
+  padding: 0;
+}
+.apply_card .dash_box .apply_card_w .apply_txt {
+  position: static;
+}
+.apply_card .dash_box .apply_card_w .apply_txt p {
+  padding-bottom: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #454545;
+  line-height: 24px;
+}
+.apply_card .dash_box .apply_card_w .apply_txt button, .apply_card .dash_box .apply_card_w .apply_txt a {
+  line-height: 16px;
+}
+.apply_card .dash_box .apply_card_w .apply_txt a.icon {
+  position: absolute;
+  left: 20px;
+  bottom: 12px;
+  column-gap: 5px;
+  padding: 0 14px;
+  border-radius: 6px;
+  line-height: 30px;
+}
+.apply_card .dash_box .help_w {
+  top: 0;
+  right: 0;
+}
+.apply_card .dash_box .help_w .help_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  border-color: #DDDDDD;
+  color: #222222;
+  background: #FFFFFF;
+}
+.apply_card .dash_box .arrow_apply {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  width: auto;
+  border: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #454545;
+  line-height: 24px;
+  background: none;
+}
+.apply_card .dash_box .arrow_apply .icon_arrapply {
+  position: unset;
+  margin: 0;
+  background: url("../images/common/arrow.svg") no-repeat center;
+}
+
+/* 사용자 홈 화면 */
+.aply_box_wrap {
+  padding: 20px;
+  border-radius: 0 0 6px 6px;
+}
+.aply_box_wrap .apply_card {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 180px;
+  gap: 10px;
+  padding: 0;
+}
+.aply_box_wrap .apply_card .dash_box {
+  width: 100%;
+  margin: 0;
+  border-color: rgba(221, 221, 221, 0.6509803922);
+}
+
 /***************** workflow_box *****************/
+/* 결재선 */
 .workflow_box {
   margin-bottom: 20px;
   background-color: #F8F8F8;
@@ -2310,103 +2429,12 @@ input + .loader {
   bottom: unset;
 }
 
-/***************** apply_card *****************/
-.apply_card {
-  display: block;
-  padding: 40px 20px;
-}
-.apply_card .cont_title {
-  padding-bottom: 3px;
-}
-.apply_card .cont_title h2 {
-  font-size: 28px;
-  font-weight: 500;
-  color: #222222;
-  line-height: 24px;
-}
-.apply_card .dash_box {
-  position: relative;
-  display: inline-block;
-  max-width: 514px;
-  width: 100%;
-  height: 210px;
-  margin: 25px 11px 0 0;
-  padding: 20px;
-  background-color: #FCFCFC;
-  border: 1px solid rgba(221, 221, 221, 0.6509803922);
-  box-shadow: unset;
-}
-.apply_card .dash_box:hover {
-  border-color: unset;
-}
-.apply_card .dash_box:hover .arrow_apply {
-  border-color: unset;
-  background-color: unset;
-}
-.apply_card .dash_box .apply_card_w {
-  position: static;
-  width: 100%;
-  padding: 0;
-}
-.apply_card .dash_box .apply_card_w .apply_txt {
-  position: static;
-}
-.apply_card .dash_box .apply_card_w .apply_txt p {
-  padding-bottom: 30px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #454545;
-  line-height: 24px;
-}
-.apply_card .dash_box .apply_card_w .apply_txt button, .apply_card .dash_box .apply_card_w .apply_txt a {
-  line-height: 16px;
-}
-.apply_card .dash_box .apply_card_w .apply_txt a.icon {
-  position: absolute;
-  left: 20px;
-  bottom: 12px;
-  column-gap: 5px;
-  padding: 0 14px;
-  border-radius: 6px;
-  line-height: 30px;
-}
-.apply_card .dash_box .help_w {
-  top: 0;
-  right: 0;
-}
-.apply_card .dash_box .help_w .help_btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 0;
-  border-color: #DDDDDD;
-  color: #222222;
-  background: #FFFFFF;
-}
-.apply_card .dash_box .arrow_apply {
-  position: absolute;
-  right: 0;
-  bottom: 40px;
-  width: auto;
-  border: 0;
-  font-size: 14px;
-  font-weight: 400;
-  color: #454545;
-  line-height: 24px;
-  background: none;
-}
-.apply_card .dash_box .arrow_apply .icon_arrapply {
-  position: unset;
-  margin: 0;
-  background: url("../images/common/arrow.svg") no-repeat center;
-}
-
 /***************** i-card_wrap *****************/
 .i-card_wrap {
   margin: 0 24px;
   padding-bottom: 14px;
   gap: 10px;
-  /* server zone */
+  /* synchronize_card */
 }
 .i-card_wrap .dash_box {
   position: relative;
@@ -2414,6 +2442,8 @@ input + .loader {
   border: 1px solid #C9C9C9;
   border-radius: 20px;
   box-shadow: unset;
+  /* server zone */
+  /* synchronize_card */
 }
 .i-card_wrap .dash_box.noicon {
   display: inline-flex;
@@ -2447,6 +2477,92 @@ input + .loader {
   padding: 0 0 0 7px;
   font-weight: 500;
   color: #999999;
+}
+.i-card_wrap .dash_box.card_link {
+  padding: 14px 18px 0 24px;
+}
+.i-card_wrap .dash_box.card_link .i-card_title {
+  padding: 0 0 17px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #454545;
+}
+.i-card_wrap .dash_box.card_link .add_btn {
+  width: 22px;
+  height: 22px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  padding: 0;
+  background-color: #162866;
+  background-image: url("../images/common/icon_plus_s.svg");
+  background-position: center;
+  background-size: 80%;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct {
+  align-items: center;
+  padding-top: 17px;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .server_icon.local-network i {
+  background: url("../images/moni/local-network.png") no-repeat 50%/100px auto;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .server_icon.aws i {
+  background: url("../images/moni/amazon.png") no-repeat 50%/100px auto;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .server_icon.m-azure i {
+  background: url("../images/moni/microsoft-azure.png") no-repeat 50%/100px auto;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .server_icon.nhn i {
+  background: url("../images/moni/nhn.png") no-repeat 50%/100px auto;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .server_icon.ac-directory i {
+  background: url("../images/moni/active-directory.png") no-repeat 50%/100px auto;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .server_icon.oci i {
+  background: url("../images/moni/OCI.png") no-repeat 50%/100px auto;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .server_icon.azure i {
+  background: url("../images/moni/azure-active-directory.png") no-repeat 50%/100px auto;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .server_icon.SCP i {
+  background: url("../images/moni/SCP.png") no-repeat 50%/100px auto;
+}
+.i-card_wrap .dash_box.card_link .i-card_ct .num_t {
+  width: auto;
+  font-size: 24px;
+  font-weight: 700;
+  color: #222222;
+}
+.i-card_wrap .dash_box.system_tab {
+  width: calc((100% - 170px) / 6);
+  padding: 14px 22px;
+  border: 1px solid #C9C9C9;
+}
+.i-card_wrap .dash_box.system_tab.on {
+  border: 0;
+  background-color: #27AD98;
+}
+.i-card_wrap .dash_box.system_tab.on .i-card_title {
+  color: #FFFFFF;
+}
+.i-card_wrap .dash_box.system_tab.on .system_info p {
+  color: #FFFFFF;
+}
+.i-card_wrap .dash_box.system_tab .i-card_title {
+  padding: 0 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+}
+.i-card_wrap .dash_box.system_tab .system_info {
+  padding: 0;
+}
+.i-card_wrap .dash_box.system_tab .system_info p {
+  padding-bottom: 10px;
+  color: #757575;
+}
+.i-card_wrap .dash_box.system_tab .system_info p:last-child {
+  padding-bottom: 0;
 }
 .i-card_wrap .dash_box .i-card_ct {
   justify-content: space-between;
@@ -2595,92 +2711,6 @@ input + .loader {
 .i-card_wrap + .content.tab_cont .tab_wrap {
   border-bottom: 1px solid #DDDDDD;
 }
-.i-card_wrap .card_link {
-  padding: 14px 18px 0 24px;
-}
-.i-card_wrap .card_link .i-card_title {
-  padding: 0 0 17px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #454545;
-}
-.i-card_wrap .card_link .add_btn {
-  width: 22px;
-  height: 22px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: none;
-  padding: 0;
-  background-color: #162866;
-  background-image: url("../images/common/icon_plus_s.svg");
-  background-position: center;
-  background-size: 80%;
-}
-.i-card_wrap .card_link .i-card_ct {
-  align-items: center;
-  padding-top: 17px;
-}
-.i-card_wrap .card_link .i-card_ct .server_icon.local-network i {
-  background: url("../images/moni/local-network.png") no-repeat 50%/100px auto;
-}
-.i-card_wrap .card_link .i-card_ct .server_icon.aws i {
-  background: url("../images/moni/amazon.png") no-repeat 50%/100px auto;
-}
-.i-card_wrap .card_link .i-card_ct .server_icon.m-azure i {
-  background: url("../images/moni/microsoft-azure.png") no-repeat 50%/100px auto;
-}
-.i-card_wrap .card_link .i-card_ct .server_icon.nhn i {
-  background: url("../images/moni/nhn.png") no-repeat 50%/100px auto;
-}
-.i-card_wrap .card_link .i-card_ct .server_icon.ac-directory i {
-  background: url("../images/moni/active-directory.png") no-repeat 50%/100px auto;
-}
-.i-card_wrap .card_link .i-card_ct .server_icon.oci i {
-  background: url("../images/moni/OCI.png") no-repeat 50%/100px auto;
-}
-.i-card_wrap .card_link .i-card_ct .server_icon.azure i {
-  background: url("../images/moni/azure-active-directory.png") no-repeat 50%/100px auto;
-}
-.i-card_wrap .card_link .i-card_ct .server_icon.SCP i {
-  background: url("../images/moni/SCP.png") no-repeat 50%/100px auto;
-}
-.i-card_wrap .card_link .i-card_ct .num_t {
-  width: auto;
-  font-size: 24px;
-  font-weight: 700;
-  color: #222222;
-}
-.i-card_wrap .dash_box.system_tab {
-  width: calc((100% - 170px) / 6);
-  padding: 14px 22px;
-  border: 1px solid #C9C9C9;
-}
-.i-card_wrap .dash_box.system_tab.on {
-  border: 0;
-  background-color: #27AD98;
-}
-.i-card_wrap .dash_box.system_tab.on .i-card_title {
-  color: #FFFFFF;
-}
-.i-card_wrap .dash_box.system_tab.on .system_info p {
-  color: #FFFFFF;
-}
-.i-card_wrap .dash_box.system_tab .i-card_title {
-  padding: 0 0 10px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #222222;
-}
-.i-card_wrap .dash_box.system_tab .system_info {
-  padding: 0;
-}
-.i-card_wrap .dash_box.system_tab .system_info p {
-  padding-bottom: 10px;
-  color: #757575;
-}
-.i-card_wrap .dash_box.system_tab .system_info p:last-child {
-  padding-bottom: 0;
-}
 .i-card_wrap .more_list_tab {
   width: 82px;
   background-color: #162866;
@@ -2736,6 +2766,9 @@ input + .loader {
 }
 .i-card_wrap.grid .dash_box {
   width: 100%;
+}
+.i-card_wrap.grid .dash_box .i-card_title {
+  padding: 0 0 12px;
 }
 
 .i-card_ct .icon i {
@@ -5091,23 +5124,6 @@ input + .loader {
 }
 .aply_box_tit .move_ctrl .mo_add {
   transform: scale(1);
-}
-
-.aply_box_wrap {
-  padding: 20px;
-  border-radius: 0 0 6px 6px;
-}
-.aply_box_wrap .apply_card {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 180px;
-  gap: 10px;
-  padding: 0;
-}
-.aply_box_wrap .apply_card .dash_box {
-  width: 100%;
-  margin: 0;
-  border-color: rgba(221, 221, 221, 0.6509803922);
 }
 
 /***************** ICAM_board_wrap *****************/

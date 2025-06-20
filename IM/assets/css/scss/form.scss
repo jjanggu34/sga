@@ -354,8 +354,8 @@ $labels: "check_stl_lab", "radio_stl_lab";
             &::after {
                 @include wh(15px, 15px);
                 @include mask($default);
-                -webkit-mask-size: 100%;
-                mask-size: 100%;
+                -webkit-mask-size: $wh100;
+                mask-size: $wh100;
                 -webkit-mask-image:$icoCheckS;
                 mask-image:$icoCheckS;
             }
@@ -508,7 +508,7 @@ select{
 ---------------------------------------------*/
 .dropdown {
     .btn_dropdown {
-        width:100%;
+        width:$wh100;
         margin:0;
         padding:0;
         border:$borderD;
@@ -536,7 +536,7 @@ select{
 .moved_tit {
     .dropdown {
         display:block;
-        width:100%;
+        width:$wh100;
         padding-bottom:10px;
         border:0;
         border-bottom:$borderD;
