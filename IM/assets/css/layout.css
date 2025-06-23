@@ -1204,7 +1204,7 @@ body * {
 
 /***************** center popup *****************/
 .layer_popup.is_visible {
-  background-color: rgba(39, 173, 152, 0.0235294118);
+  background-color: rgba(34, 34, 34, 0.1254901961);
 }
 .layer_popup .popup_title {
   padding: 10px 20px 0 20px;
