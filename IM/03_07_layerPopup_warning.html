@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -33,12 +36,13 @@
 					<form class="detail_search_wrap" style="display:none">
 						<p class="detail_search_btn">상세검색<i>닫기</i></p>
 						<div class="search_column4">
+							<!-- s: class명 추가 bul_dot -->
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail01">종류</label></dt>
 									<dd><input type="text" name="" id="detail01" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail02">제조사</label></dt>
 									<dd><select name="" id="detail02" class="form_contrl">
 										<option value="">전체</option>
@@ -50,17 +54,17 @@
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail04">제조사</label></dt>
 									<dd><input type="text" name="" id="detail04" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail05">도메인</label></dt>
 									<dd><input type="text" name="" id="detail05" class="form_contrl"></dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail07">모델명</label></dt>
 									<dd><select name="" id="detail07" class="form_contrl">
 										<option value="">전체</option>
@@ -70,17 +74,17 @@
 										<option value="">555</option>
 									</select></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt>관리자ID</dt>
 									<dd class="txt">admin</dd>
 								</dl>
 							</div>
 							<div class="col">
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail09">이름</label></dt>
 									<dd><input type="text" name="" id="detail09" class="form_contrl"></dd>
 								</dl>
-								<dl>
+								<dl class="bul_dot">
 									<dt><label for="detail10">계정구분</label></dt>
 									<dd><select name="" id="detail10" class="form_contrl">
 										<option value="">전체</option>
@@ -91,11 +95,14 @@
 									</select></dd>
 								</dl>
 							</div>
+							<!-- e: class명 추가 bul_dot -->
 						</div>
 						<div class="box2">
 							<p class="btn_box">
-								<a href="" class="white">초기화</a>
-								<a href="" class="blue">검색</a>
+								<!-- s: class 변경 -->
+								<a href="" class="line icon icon_reset">초기화</a>
+								<a href="" class="primary">검색</a>
+								<!-- e: class 변경 -->
 							</p>
 						</div>
 					</form>
@@ -112,10 +119,12 @@
 				</div>
 				<div class="list_btn cl_both">
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow" id="btn_update">Update</button>
+						<!-- s: class 변경 -->
+						<button class="line">생성</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line" id="btn_update">Update</button>
+						<!-- e: class 변경 -->
 					</div>
 				</div>
 				<div class="tbl_list">
@@ -159,10 +168,9 @@
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>
+							<!-- s: td 삭제 후 colsapn="7"로 변경 -->
 							<tr class="detail_open">
-								<td></td>
-								<td><i class="icon_detail"></i></td>
-								<td colspan="5">
+								<td colspan="7">
 									<div class="detail_open_cont">
 										<p>내용 없음</p>
 										<div class="tbl_list">
@@ -221,11 +229,14 @@
 											</table>
 										</div>
 										<div class="btn_box align_right">
-											<a href="" class="blue">Action 추가</a>
+											<!-- s: class 변경 -->
+											<a href="" class="basic">Action 추가</a>
+											<!-- e: class 변경 -->
 										</div>
 									</div>
 								</td>
 							</tr>
+							<!-- e: td 삭제 후 colsapn="7"로 변경 -->
 							<tr>
 								<td class="check_list"><input type="checkbox" name="" id="list04" class="check_stl"><label for="list04" class="check_stl_lab"></label></td>
 								<td class="more_list"><button class="icon_arrow_open">더보기</button></td>
@@ -318,10 +329,12 @@
 				</div>
 				<div class="list_btn cl_both">
 					<div class="list_left_btn f_l wid50">
-						<button class="shadow">생성</button>
-						<button class="shadow">복사생성</button>
-						<button class="shadow">삭제</button>
-						<button class="shadow" id="btn_update">Update</button>
+						<!-- s: class 변경 -->
+						<button class="line">생성</button>
+						<button class="line">복사생성</button>
+						<button class="line">삭제</button>
+						<button class="line" id="btn_update">Update</button>
+						<!-- e: class 변경 -->
 					</div>
 				</div>
 			</div>

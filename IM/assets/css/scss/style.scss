@@ -25,6 +25,10 @@ $btnstls: "trcolor", "fcolor";
     }
 }
 
+.greentxt {
+    color:$true;
+}
+
 .bluetxt {
     line-height:1.9;
     .mandatxt {
@@ -106,7 +110,9 @@ $btnstls: "trcolor", "fcolor";
 }
 
 .content_infotxt {
+    font-size:$font13;
     em {
+        font-weight:$font-w-m;
         color:$primary;
     }
 }
@@ -3931,11 +3937,18 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         li {
             display:flex;
             .form_tit {
+                border-bottom:1px solid $list-border;
                 font-weight:$font-w-r;
+            }
+            &:last-child {
+                .form_txt {
+                    border-bottom:1px solid $list-border;
+                }
             }
         }
         .form_txt {
             width:$wh100;
+            border-bottom:1px solid $list-border;
         }
     }
     .form_list {
@@ -3960,6 +3973,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-bottom:0;
             font-size:0;
             line-height:normal;
+            &.flx {
+                gap:10px;
+            }
             textarea{
                 &.form_contrl {
                     width:$wh100;

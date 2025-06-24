@@ -102,6 +102,10 @@
   color: #FF0000 !important;
 }
 
+.greentxt {
+  color: #23AC3D;
+}
+
 .bluetxt {
   line-height: 1.9;
 }
@@ -194,7 +198,11 @@
   background-image: url("../images/common/icon_caution.svg");
 }
 
+.content_infotxt {
+  font-size: 13px;
+}
 .content_infotxt em {
+  font-weight: 500;
   color: #27AD98;
 }
 
@@ -4382,10 +4390,15 @@ input + .loader {
   display: flex;
 }
 .form_stl .form_tbl li .form_tit, .form_stl .form_tbl.bul_dot > li li .form_txt {
+  border-bottom: 1px solid #C9C9C9;
   font-weight: 400;
+}
+.form_stl .form_tbl li:last-child .form_txt {
+  border-bottom: 1px solid #C9C9C9;
 }
 .form_stl .form_tbl .form_txt {
   width: 100%;
+  border-bottom: 1px solid #C9C9C9;
 }
 .form_stl .form_list {
   display: flex;
@@ -4410,6 +4423,9 @@ input + .loader {
   border-bottom: 0;
   font-size: 0;
   line-height: normal;
+}
+.form_stl .form_list .form_txt.flx {
+  gap: 10px;
 }
 .form_stl .form_list .form_txt textarea.form_contrl {
   width: 100%;
