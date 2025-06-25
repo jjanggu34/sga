@@ -26,7 +26,16 @@ $btnstls: "trcolor", "fcolor";
 }
 
 .greentxt {
-    color:$true;
+    color:$true !important;
+}
+.minttxt {
+    color:$primary !important;
+}
+.navytxt {
+    color:#0060C1 !important;
+}
+.graytxt {
+    color:$text-disabled !important;
 }
 
 .bluetxt {
@@ -42,7 +51,6 @@ $btnstls: "trcolor", "fcolor";
             background-image:url("../images/label/ico_delegated.svg");
         }
     }
-    
     .madna_ed {
         @extend %tag-base;
         margin-left:4px;
@@ -111,6 +119,7 @@ $btnstls: "trcolor", "fcolor";
 
 .content_infotxt {
     font-size:$font13;
+    color:$secondary;
     em {
         font-weight:$font-w-m;
         color:$primary;
@@ -512,6 +521,20 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
+.license_use {
+    .lc_use {
+        padding:5px 14px;
+        border-radius:14px;
+        font-weight:$font-w-m;
+        line-height:16px;
+        color:#23AC3D;
+        background:#EFFCF3;
+        &.nouse {
+            color:$text-disabled;
+        }
+    }
+}
+
 /* N 알림 */
 .new_org {
     @include wh (15px, 15px);
@@ -603,7 +626,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     a {
         &.fm_tit {
             position:relative;
-            margin-top:28px;
+            margin-top:20px;
             padding:10px 0 10px 6px;
             border:0;
             border-radius:0;
@@ -628,13 +651,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     //form title
     p {
         &.fm_tit {
-            margin-top:0;
+            margin-top:20px;
             padding:10px 0 10px 6px;
             border:0;
             border-radius:0;
             border-bottom:1px solid $title;
             font-weight:$font-w-b;
             background:transparent;
+            &:first-child {
+                margin-top:0;
+            }
             &.add {
                 height:45px;
                 margin-bottom:40px;
@@ -2363,9 +2389,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         &.db {
                             background-image:url("../images/common/icon_db_on.svg");
                         }
-                        &.network {
-                            background-image:url("../images/common/icon_net_on.svg");
-                        }
                     }
                 }
             }
@@ -2400,10 +2423,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
-    }
-    &+.content.tab_cont { //list_btn이 t_cont_in으로 감싸 있어서 따로 줌
-        .tab_wrap {
-            border-bottom:$borderD;
+        &:has(.license_info_card,.li_gt_flx) {
+            padding:16px 20px 8px;
         }
     }
     /* synchronize_card */
@@ -2444,6 +2465,40 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .mini_paging {
             margin-top:16px;
+        }
+    }
+    /* 라이선스 화면 */
+    .license_info_card {
+        padding:0;
+        .li_customer_info {
+            flex:1;
+            width:$wh100;
+            padding-right:30px;
+        }
+        .customer_name {
+            @include title ($font14, $font-w-b, $title);
+        }
+        .date_info {
+            padding-bottom:30px;
+            p {
+                @include title ($font12, $font-w-m, $title);
+            }
+        }
+        .sq_nv_wd {
+            li {
+                border-radius:4px;
+                font-size:$font12;
+                color:#074C91;
+                background-color:#DAEAFA;
+            }
+        }
+    }
+    .li_gt_flx {
+        padding:0;
+    }
+    &+.content.tab_cont { //list_btn이 t_cont_in으로 감싸 있어서 따로 줌
+        .tab_wrap {
+            border-bottom:$borderD;
         }
     }
     &+.content.only {
@@ -3894,6 +3949,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &:last-child {
                     .form_txt {
                         padding-bottom:0;
+                        border-bottom:0;
                     }
                 }
             }
@@ -4736,7 +4792,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     grid-template-columns:repeat(auto-fit, minmax(197px, 1fr));
     column-gap:10px;
     .home_d_tit {
-        padding:20px 20px 10px;
+        padding:0 0 12px;
         border-bottom:$borderD;
         @include title ($font16, $font-w-b, $title);
     }
@@ -4744,9 +4800,82 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:20px 24px;
     }  border-top:0;
     .dash_box{
+        padding:20px 21px;
+        margin:0;
         border-radius:6px;
+        &:has(.tbl_list) {
+            .home_d_tit {
+                padding-bottom:21px;
+            }
+        }
         .tbl_list {
-            padding:20px 24px;
+            padding:0;
+            .default_tbl thead tr th{
+                border-top:0;
+            }
+        }
+    }
+}
+.w-4card {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    padding:23px 0 0;
+    .i_n_box {
+        column-gap:7px;
+        width:$wh100;
+        margin:0;
+        padding:22px 17px;
+        border-radius:20px;
+        &>.flx {
+            flex-direction:column;
+            width:calc($wh100 - 63px);
+            &.h_i_type {
+                flex-direction:row;
+                column-gap:15px;
+                .h_bl_num {
+                    font-size:$font18;
+                }
+            }
+            .h_bl_num {
+                font-size:24px;
+                text-align:right;
+            }
+        }
+        .h_i_w_tit {
+            color:$text-disabled;
+        }
+        .h_bl_num {
+            font-size:$font18;
+            font-weight:$font-w-e;
+            color:$title;
+        }
+    }
+    .h_i_w {
+        @include wh(56px,56px);
+        margin:0;
+        padding:10px;
+        border-radius:14px;
+        background-color:$btn-disabled;
+        i {
+            @include wh(34px,34px);
+            background:url("../images/role/icon_opst.svg")no-repeat center;
+            background-size:$wh100;
+        }
+        &.pwd {
+            i {
+                background-image:url("../images/role/icon-locked.svg");
+            }
+        }
+        &.task {
+            i {
+                background-image:url("../images/role/icon_task.svg");
+            }
+        }
+        &.req {
+            i {
+                background-image:url("../images/role/icon_FileEdit.svg");
+            }
         }
     }
 }
@@ -4754,6 +4883,31 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .dash_box {
         width:$wh100;
         margin:0;
+    }
+}
+.d_list_tt { //전체 건수, 더보기 버튼
+    position:absolute;
+    top:12px;
+    right:25px;
+    column-gap:10px;
+    padding-top:0;
+    .list_tt_tx {
+        font-size:$font13;
+        color:$secondary;
+        em {
+            font-weight:$font-w-m;
+            color:$primary;
+        }
+    }
+    &.f_ro02 {
+        top:12px;
+        right:25px;
+    }
+}
+.txt_of {
+    padding-top:3px;
+    .tasklist_txt {
+        height:auto;
     }
 }
 .aply_box_tit {
@@ -4772,6 +4926,119 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .mo_add {
             @extend .mo_del;
             transform:scale(1);
+        }
+    }
+}
+
+/***************** 라이선스 *****************/
+.exp_period_info {
+    gap:24px;
+    width:$wh100;
+    padding-left:14px;
+}
+.exp_perid_wrap {
+    .tit {
+        font-weight:$font-w-m;
+        color:$text-disabled;
+        line-height:16px;
+    }
+    .license_stt {
+        flex-direction:row-reverse;
+        padding:8px 0 11px;
+        &>p {
+            font-size:$font18;
+            color:$text-disabled;
+        }
+        .icon_license {
+            @include icon(24px,24px);
+            background-image:url("../images/common/ico_medal.svg");
+            &.expiration {
+                background-image:url("../images/common/ico_medal_off.svg");
+                background-position:unset;
+            }
+        }
+    }
+    .exp_perid_bar {
+        height:9px;
+        padding:0;
+        border:0;
+        border-radius:10px;
+        background-color:$btn-disabled;
+        .current_status {
+            height:100%;
+            border-radius:10px;
+            background-color:$primary;
+            &.gray {
+                background-color:$text-disabled;
+            }
+        }
+        .balloon {
+            left:52%;
+            top:unset;
+            bottom:20px;
+            padding:8px 18px 6px;
+            border:1px solid $list-border;
+            border-radius:6px;
+            &::before {
+                top:unset;
+                bottom:-5px;
+                transform:translateX(-50%);
+                @include wh(9px,9px);
+                border:1px solid $list-border;
+                border-radius:3px;
+                background-color:$white;
+                transform:translateX(-50%) rotate(45deg);
+            }
+            &::after {
+                top:25px;
+                transform:translateX(-50%);
+                @include wh(15px,7px);
+                border:0;
+                background-color:$white;
+            }
+            p {
+                padding:0;
+                font-size:$font14;
+                color:$primary;
+                line-height:$font18;
+            }
+        }
+    }
+    .license_date {
+        padding-top:9px;
+        p {
+            font-size:$font12;
+            color:$content;
+        }
+    }
+}
+.li_gt_flx {
+    gap:10px;
+}
+.li_gt_info {
+    border-right:1px solid $list-border;
+    &:last-child {
+        border-right:0;
+        .li_gt_txt {
+            padding-right:0;
+        }
+    }
+    .li_gt_txt {
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        padding-top:38px;
+        padding-right:10px;
+        .bigtxt {
+            font-size:24px;
+            font-weight:$font-w-h;
+            color:$title;
+        }
+        .smalltxt {
+            @include title($font18, $font-w-h, $text-disabled);
+            span {
+                @include title($font18, $font-w-h, $title);
+            }
         }
     }
 }

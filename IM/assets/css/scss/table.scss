@@ -56,7 +56,7 @@
             th {
                 border:0;
                 @include title($font13,$font-w-r,$title);
-                line-height:16px;
+                line-height:24px;
                 &.new_org {
                     position:relative;
                     @include wh ($wh100,$wh100);
@@ -261,6 +261,9 @@
                 }
             }
         }
+    }
+    .sort_column {
+        padding:10px;
     }
     .detail_open {
         background-color:$body;

@@ -81,7 +81,7 @@
   font-size: 13px;
   font-weight: 400;
   color: #222222;
-  line-height: 16px;
+  line-height: 24px;
 }
 .default_tbl tbody tr th.new_org {
   position: relative;
@@ -275,6 +275,9 @@
 .default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_txt .form_contrl {
   display: block;
   width: 100%;
+}
+.default_tbl .sort_column {
+  padding: 10px;
 }
 .default_tbl .detail_open {
   background-color: #F3F5F7;
