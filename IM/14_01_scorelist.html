@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -26,7 +29,7 @@
 			<div class="nav_inner scroll">
 				<div class="nav_header">
 					<a href="" class="logo">
-						<img src="img/common/logo_186x30.png">
+						<img src="assets/images/common/logo.png"><!--[2025] 이미지 경로 및 이미지 변경-->
 						<span>Admin</span>
 					</a>
 				</div>
@@ -54,14 +57,17 @@
 					<li><a href=""><i class="icon_monitor"></i><span>모니터링</span></a></li>
 					<li><a href=""><i class="icon_report"></i><span>리포트</span></a></li>
 				</ul>
+				<!-- s: copyright 추가 -->
+				<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
+				<!-- e: copyright 추가 -->
 			</div>
 		</div>
 		<div id="container">
+			<!-- s: header_title 내용 수정 및 gl_nav 수정 -->
 			<div class="header">
 				<div class="btn_lnb"><a>메뉴</a></div>
 				<div class="btn_lnb_m"><a>모바일메뉴</a></div>
 				<div class="header_title">
-					<h1>시스템 관리</h1>
 					<ol class="link_depth">
 						<li><a href="">HOME</a></li>
 						<li><a href="">시스템 관리</a></li>
@@ -69,18 +75,43 @@
 					</ol>
 				</div>
 				<ul class="gl_nav">
-					<li class="btn_top_user"><a href=""><img src="img/common/top_user.png"> user01</a></li>
-					<li class="btn_alim"><a href="">alim<span>13</span></a></li>
-					<li class="btn_logout"><a href="">logout</a></li>
-					<li class="lang_wrap"><a href="">KR</a>
-						<ul class="lang_pop balloon" style="display:none">
-							<li><a class="kr_lang"><i></i>한국어</a></li>
-							<li><a class="us_lang"><i></i>English</a></li>
-						</ul>
+					<li class="btn_top_user"><a href="">user01</a></li>
+					<li class="timer">
+						<i></i>
+						<span><em>00:15:00</em> 후 접속 끊김</span>
+						<button class="time_ref" title="세션 시간 새로고침"></button>
 					</li>
+					<li class="btn_alim"><a href="">alim<span>13</span></a>
+						<div class="balloon alim_pop" style="display:none">
+							<div class="alim_pop_wrap">
+								<div class="alim_top">
+									<span>새 알림</span>
+									<button class="alim_clear">모든 알림 지우기</button>
+								</div>
+								<ul class="alim_list">
+									<!-- s: class 변경 -->
+									<li><a><i class="icon_alim icon_caution"></i>경고!</a></li>
+									<li><a><i class="icon_alim icon_message"></i>나한테만 오는 알람메세지이이이이 두줄일때 다음줄로 넘어갑니다 </a></li>
+									<li><a><i class="icon_alim icon_notice"></i>전체적인 알람공지</a></li>
+									<li><a><i class="icon_alim icon_receive"></i>SMS문자왔숑</a></li>
+									<li><a><i class="icon_alim icon_caution"></i>메일왔네요</a></li>
+									<li><a><i class="icon_alim icon_caution"></i>기타알람</a></li>
+									<!-- e: class 변경 -->
+								</ul>
+								<div class="allAlim">
+									<!-- s: class 변경 -->
+									<a href="" class="basic icon_plus">모두 보기</a>
+									<!-- e: class 변경 -->
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="btn_menualdown"><a id="guide_manualDown"></a></li>
+					<li class="btn_logout"><a href="">logout</a></li>
 				</ul>
 			</div>
-			<div class="content">
+			<!-- e: header_title 내용 수정 및 gl_nav 수정 -->
+			<div class="content only"><!--[2025] only 추가-->
 				<div class="topPrss">
 					<div class="inner_topPrss">
 						<div class="detail_process">
@@ -176,27 +207,29 @@
 				</div>
 				<div class="btn_box cl_both">
 					<div class="f_l">
-						<a href="" class="white">이전</a>
+						<a href="" class="basic2">이전</a><!--[2025] basic2으로 변경-->
 					</div>
 					<div class="f_r">
+						<!-- s: class 변경 -->
 						<div class="confirm_popup">
-							<a href="" class="blue btn_save">저장</a>
+							<a href="" class="primary btn_save">저장</a>
 							<div class="save_alert" style="display:none">
 								<div class="arrow"></div>
 								<p>저장하시겠습니까?</p>
 								<div class="btn_box">
-									<a href="" class="blue">저장</a>
-									<a href="" class="skyblue cancel">취소</a>
+									<a href="" class="primary">저장</a>
+									<a href="" class="line cancel">취소</a>
 								</div>
 							</div>
 						</div>
-						<a href="" class="skyblue">취소</a>
-					</div>				
+						<a href="" class="line">취소</a>
+						<!-- e: class 변경 -->
+					</div>
 				</div>
 			</div>
-			<div class="footer">
+			<!-- nav로 이동 <div class="footer">
 				<p><img src="img/common/sgn_logo.png"> ⓒ SGN corp. All Rights Reserved.</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </body>

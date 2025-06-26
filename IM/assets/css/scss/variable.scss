@@ -62,7 +62,8 @@ $sub-select: #F8FAFB;
 // common
 $iconClose:url("../images/common/close.svg"); //닫기
 $iconBtnAdd:url("../images/common/btn_add.svg"); //+버튼
-$icoAccordion:url("../images/common/ico_accordion.svg"); //아코디언 화살표
+$icoAccordion:url("../images/common/ico_accordion.svg"); //아코디언 화살표(라인)
+$icoAccordion2:url("../images/common/ico_accordion2.svg"); //아코디언 화살표(삼각형모양)
 $icoInfo:url("../images/common/ico_info.svg");//info
 $icoCheck:url("../images/common/ico_check.svg");//체크
 $icoCheckS:url("../images/common/ico_check_s.svg");//작은 체크
@@ -74,6 +75,7 @@ $icoArrowNone:url("../images/common/icon_arrow_none.svg");// -
 $icoReset:url("../images/common/ico_reset.svg");//초기화
 $icoDocument:url("../images/common/ico_document.svg");//상세보기
 $icoBtn:url("../images/common/ico_btn.svg");//검색버튼 돋보기 모양
+$icoKebab:url("../images/common/ico_Kebab.svg");//... 세로 모양
 // label
 $iconPgs:url("../images/label/icon_pgs.svg"); // 진행중
 $icoPlugConnected:url("../images/label/ico_PlugConnected.svg"); //연결됨

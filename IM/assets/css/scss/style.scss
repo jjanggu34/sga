@@ -1239,8 +1239,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 left:8px;
                 @include content(16px,16px);
                 @include mask($text-disabled);
-                -webkit-mask-image:url("../images/common/ico_accordion2.svg");
-                mask-image:url("../images/common/ico_accordion2.svg");
+                -webkit-mask-image:$icoAccordion2;
+                mask-image:$icoAccordion2;
                 transform:rotate(-90deg);
                 z-index:1;
             }
@@ -1410,8 +1410,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         right:0;
         .btn_tree_more {
             @include mask ($text-disabled);
-            -webkit-mask-image: url("../images/common/ico_Kebab.svg");
-            mask-image: url("../images/common/ico_Kebab.svg");
+            -webkit-mask-image:$icoKebab;
+            mask-image:$icoKebab;
             background-image:none;
         }
         .tree_more_list {
@@ -2502,7 +2502,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     &+.content.only {
-        margin:57px 24px 20px !important;;
+        margin:20px 24px 20px !important;;
         .pcs_ctg_wrap {
             margin-top:30px;
         }
@@ -2884,8 +2884,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include mask($text-disabled);
             -webkit-mask-size: 70%;
             mask-size: 70%;
-            -webkit-mask-image:url("../images/common/ico_accordion2.svg");
-            mask-image:url("../images/common/ico_accordion2.svg");
+            -webkit-mask-image:$icoAccordion2;
+            mask-image:$icoAccordion2;
             background-image:none;
             transform:rotate(-90deg);
             &.open {
@@ -3028,7 +3028,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-position:unset;
             }
             .mnt_user {
-                background-image:url("../images/moni/ico_user.svg");
+                @include mask($text-disabled);
+                -webkit-mask-image:url("../images/common/ico_member.svg");
+                mask-image:url("../images/common/ico_member.svg");
             }
             .mnt_server {
                 background-image:url("../images/moni/ico_server.svg");
@@ -3996,7 +3998,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 border-bottom:1px solid $list-border;
                 font-weight:$font-w-r;
             }
-            &:last-child {
+            &:last-child:not(.pcs_ctg_nxt li,.noline li) {
                 .form_txt {
                     border-bottom:1px solid $list-border;
                 }
@@ -4112,8 +4114,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     top:4px;
                     @include wh(16px,16px);
                     @include mask($text-disabled);
-                    -webkit-mask-image:url("../images/common/ico_accordion2.svg");
-                    mask-image:url("../images/common/ico_accordion2.svg");
+                    -webkit-mask-image:$icoAccordion2;
+                    mask-image:$icoAccordion2;
                 }
                 &.on {
                     &::after {
@@ -4288,8 +4290,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 top:0;
                 left:0;
                 @include wh(24px, 24px);
-                -webkit-mask-image:url("../images/common/ico_Kebab.svg");
-                mask-image:url("../images/common/ico_Kebab.svg");
+                -webkit-mask-image:$icoKebab;
+                mask-image:$icoKebab;
             }
         }
     }
@@ -5041,6 +5043,42 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
     }
+    .tit {
+        position:relative;
+        padding-left:24px;
+        &::before {
+            content:"";
+            position:absolute;
+            bottom:0;
+            left:0;
+            display:inline-block;
+            @include icon(20px,20px);
+            background-image:url("../images/moni/ico_connector.svg");
+        }
+    }
+    &:nth-child(1) {
+        .tit {
+            &::before {
+                background-image:url("../images/moni/ico_server.svg");
+            }
+        }
+    }
+    &:nth-child(2) {
+        .tit {
+            &::before {
+                @include mask($text-disabled);
+                -webkit-mask-image:url("../images/common/ico_member.svg");
+                mask-image:url("../images/common/ico_member.svg");
+            }
+        }
+    }
+    &:nth-child(3) {
+        .tit {
+            &::before {
+                background-image:url("../images/moni/ico_system.svg");
+            }
+        }
+    }
 }
 
 /***************** ICAM_board_wrap *****************/
@@ -5762,11 +5800,25 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 #error_wrap.waiting_wrap {
     padding-top:15em;
     .error_txt {
-        background:url("../images/common/hourglass.png")no-repeat top center;
+        background:none;
         .txt1 {
+            position:relative;
             display:block;
             padding-top:180px;
             font-size:30px;
+            &::before {
+                content:"";
+                position:absolute;
+                top:0;
+                display:inline-block;
+                @include icon(179px,179px);
+                background-image:url("../images/common/hourglass.gif");
+                animation:hourglass 2.8s ease-in-out infinite;
+
+                @keyframes hourglass {
+                    100% { transform:rotate(180deg); }
+                }
+            }
             em {
                 font-size:30px;
                 color:$primary;

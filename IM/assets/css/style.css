@@ -2875,7 +2875,7 @@ input + .loader {
   border-bottom: 1px solid #DDDDDD;
 }
 .i-card_wrap + .content.only {
-  margin: 57px 24px 20px !important;
+  margin: 20px 24px 20px !important;
 }
 .i-card_wrap + .content.only .pcs_ctg_wrap {
   margin-top: 30px;
@@ -3404,7 +3404,16 @@ input + .loader {
   background-position: unset;
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_user {
-  background-image: url("../images/moni/ico_user.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #999999;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_member.svg");
+  mask-image: url("../images/common/ico_member.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_server {
   background-image: url("../images/moni/ico_server.svg");
@@ -4453,7 +4462,7 @@ input + .loader {
   border-bottom: 1px solid #C9C9C9;
   font-weight: 400;
 }
-.form_stl .form_tbl li:last-child .form_txt {
+.form_stl .form_tbl li:last-child:not(.pcs_ctg_nxt li, .noline li) .form_txt {
   border-bottom: 1px solid #C9C9C9;
 }
 .form_stl .form_tbl .form_txt {
@@ -5472,6 +5481,41 @@ input + .loader {
   font-weight: 800;
   color: #222222;
 }
+.li_gt_info .tit {
+  position: relative;
+  padding-left: 24px;
+}
+.li_gt_info .tit::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/moni/ico_connector.svg");
+}
+.li_gt_info:nth-child(1) .tit::before {
+  background-image: url("../images/moni/ico_server.svg");
+}
+.li_gt_info:nth-child(2) .tit::before {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #999999;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/ico_member.svg");
+  mask-image: url("../images/common/ico_member.svg");
+}
+.li_gt_info:nth-child(3) .tit::before {
+  background-image: url("../images/moni/ico_system.svg");
+}
 
 /***************** ICAM_board_wrap *****************/
 .ICAM_board_wrap {
@@ -6201,12 +6245,31 @@ input + .loader {
   padding-top: 15em;
 }
 #error_wrap.waiting_wrap .error_txt {
-  background: url("../images/common/hourglass.png") no-repeat top center;
+  background: none;
 }
 #error_wrap.waiting_wrap .error_txt .txt1 {
+  position: relative;
   display: block;
   padding-top: 180px;
   font-size: 30px;
+}
+#error_wrap.waiting_wrap .error_txt .txt1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  width: 179px;
+  height: 179px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  background-image: url("../images/common/hourglass.gif");
+  animation: hourglass 2.8s ease-in-out infinite;
+}
+@keyframes hourglass {
+  100% {
+    transform: rotate(180deg);
+  }
 }
 #error_wrap.waiting_wrap .error_txt .txt1 em {
   font-size: 30px;
