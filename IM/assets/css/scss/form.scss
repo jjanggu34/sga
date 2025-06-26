@@ -399,6 +399,23 @@ $labels: "check_stl_lab", "radio_stl_lab";
             padding:0;
         }
     }
+    &+.radio_stl_lab2 {
+        i {
+            border:1px solid $default;
+            &::after {
+                content:"";
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform:translate(-50%,-50%);
+                display:inline-block;
+                @include wh(6px,6px);
+                margin:0;
+                border-radius:50%;
+                background-color:$default;
+            }
+        }
+    }
     &:checked {
         &+ label {
             &::before {
@@ -408,6 +425,17 @@ $labels: "check_stl_lab", "radio_stl_lab";
             }
             &::after {
                 content:none;
+            }
+        }
+        &+.radio_stl_lab2 {
+            i {
+                background-color:$primary;
+                &::after {
+                    @include wh(6px,6px);
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    margin:0;
+                }
             }
         }
     }
@@ -421,6 +449,15 @@ $labels: "check_stl_lab", "radio_stl_lab";
             }
             &::after {
                 content:none;
+            }
+        }
+        &+.radio_stl_lab2 {
+            i {
+                border:1px solid $btn-disabled;
+                background-color:$btn-disabled;;
+                &::after {
+                    background-color:$default;
+                }
             }
         }
     }

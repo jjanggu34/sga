@@ -442,6 +442,22 @@
 .radio_stl + label + .req_txt {
   padding: 0;
 }
+.radio_stl + .radio_stl_lab2 i {
+  border: 1px solid #BBBBBB;
+}
+.radio_stl + .radio_stl_lab2 i::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  border-radius: 50%;
+  background-color: #BBBBBB;
+}
 .radio_stl:checked + label::before {
   border: 5px solid #27AD98;
   background-color: #FFFFFF;
@@ -449,6 +465,16 @@
 }
 .radio_stl:checked + label::after {
   content: none;
+}
+.radio_stl:checked + .radio_stl_lab2 i {
+  background-color: #27AD98;
+}
+.radio_stl:checked + .radio_stl_lab2 i::after {
+  width: 6px;
+  height: 6px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 .radio_stl:disabled + label {
   color: #999999;
@@ -460,6 +486,13 @@
 }
 .radio_stl:disabled + label::after {
   content: none;
+}
+.radio_stl:disabled + .radio_stl_lab2 i {
+  border: 1px solid #EEEEEE;
+  background-color: #EEEEEE;
+}
+.radio_stl:disabled + .radio_stl_lab2 i::after {
+  background-color: #BBBBBB;
 }
 
 /*---------------------------------------------
