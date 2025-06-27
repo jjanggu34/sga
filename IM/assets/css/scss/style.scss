@@ -493,7 +493,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border-radius:30px;
         padding:6px 14px 5px;
         font-size:$font13;
-        font-weight:$font-w-r;
+        font-weight:$font-w-m;
     }
     &.grbox { //시스템 그룹
         span {
@@ -503,8 +503,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.ppbox { //시스템 계정
         span {
-            background:#FFFAEF;
-            color:#F9AF1C;
+            background:#E6E2FF;
+            color:#6A5ACD;
         }
     }
     &.blbox { //시스템
@@ -515,8 +515,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.orgbox { //역할
         span {
-            background:#E0FBFF;
-            color:#00C7E6;
+            background:#FFF1D5;
+            color:#F9AF1C;
         }
     }
 }
@@ -1105,7 +1105,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         }
                     }
                     &:hover {
-                        background:#FFFAEF;
+                        border-radius:6px;
+                        background:#DAFAF5;
                     }
                     .icon_tree {
                         margin-right:4px;
@@ -1675,21 +1676,26 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include wh (62px, 62px);
             background:$text-disabled;
             i {
-                @include wh(40px,40px);
                 @include mask($white);
                 margin-top:10px;
                 &.i_start {
+                    @include wh(40px,40px);
                     -webkit-mask-image:$icoMember;
                     mask-image:$icoMember;
                 }
                 &.i_end {
+                    @include wh(24px,24px);
                     background-position:unset;
                     -webkit-mask-image:$icoCheck;
                     mask-image:$icoCheck;
                 }
             }
             &:has(.i_end) {
+                @include wh (53px, 53px);
                 background-color:$primary;
+                i {
+                    margin-top:13px;
+                }
             }
         }
     }
@@ -4614,6 +4620,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .btn_desc { //설명문구 추가/수정
         border:$borderD;
+    }
+    .balloon.entry_help {
+        font-size:$font14;
+        color:$content;
     }
 }
 
