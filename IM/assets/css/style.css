@@ -2483,6 +2483,25 @@ input + .loader {
   bottom: unset;
 }
 
+/***************** workflow_designer *****************/
+.wd_dt_cont {
+  padding: 20px 0;
+}
+.wd_dt_cont .default_tbl.tblStl2 tbody td {
+  line-height: unset;
+}
+.wd_dt_cont .filebox .form_contrl, .wd_dt_cont .form_contrl {
+  width: 100%;
+  height: 30px;
+}
+
+.wk_tab .btn_d_arw {
+  padding: 0;
+}
+.wk_tab .btn_option {
+  padding: 0;
+}
+
 /***************** i-card_wrap *****************/
 .i-card_wrap {
   margin: 0 24px;
@@ -5226,6 +5245,9 @@ input + .loader {
   font-size: 16px;
   font-weight: 600;
   color: #222222;
+}
+.home_lyt .home_d_tit + .tab_wrap {
+  border-top: 0;
 }
 .home_lyt .tab_wrap {
   padding: 20px 24px;

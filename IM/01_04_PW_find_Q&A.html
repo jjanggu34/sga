@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -45,19 +48,23 @@
 					</li>
 				</ul>
 				<div class="btn_box cl_both">
-					<div class="f_l">
-						<a href="" class="white">이전</a>
+					<!-- s: 구조 변경 -->
+					<div class="align_center"><!--[2025] f_l 삭제, align_center으로 변경-->
+						<a href="" class="big primary">저장</a><!--[2025] primary으로 변경, big 추가-->
 					</div>
 					<div class="f_r">
-						<a href="" class="gradient">다음</a>
-						<a href="" class="skyblue">취소</a>
-					</div>					
+						<!-- s: class 변경 -->
+						<a href="" class="basic2">이전</a><!--[2025] basic2로 변경-->
+						<a href="" class="line">취소</a><!--[2025] line으로 변경-->
+						<!-- e: class 변경 -->
+					</div>
+					<!-- e: 구조 변경 -->
 				</div>
 			</div>
-			<!-- 푸터 -->
-			<div id="footer">
-				<p class="copy"><img src="img/common/sgn_logo.png" alt="SGN"> &copy; <span>SGN</span> corp. All Rights Reserved.</p>
-			</div>
+		</div>
+		<!-- 푸터 -->
+		<div id="footer"><!--[2025] 푸터 위치 변경-->
+			<p class="copy"><img src="img/common/sgn_logo.png" alt="SGN"> &copy; <span>SGN</span> corp. All Rights Reserved.</p>
 		</div>
 	</div>
 </body>

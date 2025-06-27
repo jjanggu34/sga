@@ -2090,6 +2090,28 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
+/***************** workflow_designer *****************/
+// wd_detail 콘텐츠
+.wd_dt_cont {
+    padding:20px 0;
+    .default_tbl.tblStl2 tbody td {
+        line-height:unset;
+    }
+    .filebox .form_contrl, .form_contrl {
+        width:$wh100;
+        height:30px;
+    }
+}
+
+.wk_tab {
+    .btn_d_arw {
+        padding:0;
+    }
+    .btn_option {
+        padding:0;
+    }
+}
+
 /***************** i-card_wrap *****************/
 .i-card_wrap {
     margin:0 24px;
@@ -4797,6 +4819,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:0 0 12px;
         border-bottom:$borderD;
         @include title ($font16, $font-w-b, $title);
+        &+.tab_wrap {
+            border-top:0;
+        }
     }
     .tab_wrap {
         padding:20px 24px;

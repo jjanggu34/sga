@@ -377,6 +377,117 @@ body {
 }
 
 /*---------------------------------------------
+    #비밀번호 찾기 레이아웃
+---------------------------------------------*/
+#SGIM_PwFind {
+    margin:155px auto 0;
+    .pw_find_header {
+        position:unset;
+        margin-bottom:40px;
+        background-image:none;
+        h1 {
+            @include title(35px, $font-w-b, $title);
+            text-align:center;
+        }
+    }
+    .pw_find_wrap {
+        border-radius:30px;
+    }
+    .pw_find_cont {
+        padding:30px;
+        .pw_find_tit {
+            padding:0 0 11px;
+            border-bottom:0;
+            @include title(20px, $font-w-b, $title);
+        }
+        .infotxt {
+            padding-top:0;
+            padding-bottom:10px;
+            border-bottom:1px solid $title;
+            font-size:$font12;
+            color:$secondary;
+        }
+        .pw_reset {
+            padding:30px 15px;
+            .bul_dot {
+                &>dt {
+                    margin-bottom:0;
+                    &::before {
+                        top:5px;
+                        left:0;
+                    }
+                }
+                dd {
+                    width:$wh100;
+                }
+            }
+        }
+        .pw_qna {
+            padding:30px 15px 0;
+            li {
+                padding:0 0 10px;
+                border-bottom:0;
+                &:last-child {
+                    padding-bottom:0;
+                }
+                .form_contrl {
+                    height:30px;
+                }
+            }
+        }
+        .q_txt {
+            padding-bottom:10px;
+            span {
+                font-weight:$font-w-r;
+                color:$primary;
+            }
+        }
+        .form_contrl {
+            max-width:unset;
+            width:$wh100;
+            height:45px;
+        }
+        .btn_box {
+            border-top:0;
+        }
+        .align_center {
+            padding:0 15px;
+            a {
+                width:$wh100;
+                margin-bottom:15px;
+            }
+        }
+        .pw_find_input {
+            display:flex;
+            align-items:center;
+            padding:30px 15px 20px;
+            &.bul_dot {
+                &>dt {
+                    margin-bottom:0;
+                    &::before {
+                        top:5px;
+                        left:0;
+                    }
+                }
+                dd {
+                    width:$wh100;
+                }
+            }
+            dt {
+                width:160px;
+            }
+            dd {
+                width:$wh100;
+            }
+        }
+    }
+    #footer {
+        position:unset;
+        padding-top:40px;
+    }
+}
+
+/*---------------------------------------------
     #헤더 레이아웃
 ---------------------------------------------*/
 #SGIM_wrap {
@@ -1030,7 +1141,7 @@ body {
 /*---------------------------------------------
     #팝업 레이아웃
 ---------------------------------------------*/
-/***************** side popup *****************/
+/***************** side popup - detail_view *****************/
 .detail_view {
     top:60px;
     height:calc($wh100 - 60px);
@@ -1042,7 +1153,6 @@ body {
     .dtv_top {
         padding:10px 0 10px 6px;
         border-bottom-color:$title;
-        border-radius:13px 0 0;
         background-color:transparent;
         .title {
             @include title ($font18, $font-w-b, $title);
@@ -1070,6 +1180,31 @@ body {
     .dtv_cont_wrap {
         .btn_box {
             border-top:1px solid $list-border;
+        }
+    }
+}
+
+/***************** side popup - wd_detail *****************/
+.wd_detail {
+    padding:20px;
+    border:1px solid $border-d;
+    border-radius:13px;
+    box-shadow:0 3px 6px #00000016;
+    // 헤더
+    .wd_tit {
+        height:auto;
+        padding:10px 0 10px 6px;
+        border-bottom-color:$title;
+        border-radius:13px 0 0;
+        background-color:transparent;
+        .title {
+            @include title ($font18, $font-w-b, $title);
+        }
+        .btn_close {
+            top:6px;
+            @include icon(30px, 30px);
+            background-color:transparent;
+            background-image:$iconClose;
         }
     }
 }
@@ -1108,6 +1243,7 @@ body {
             }
         }
         &.toast_popup {
+            max-width:307px;
             margin:24em auto;
         }
     }
@@ -1154,6 +1290,127 @@ body {
                 }
             }
         }
+        .form_stl {
+            padding:22px 0 0;
+            margin:0;
+            .form_tbl {
+                padding:0;
+            }
+        }
+    }
+    .test_result {
+        &.loading {
+            height:50px;
+            line-height:50px;
+            background-color:#252D4A;
+            .loader {
+                margin-top:16px;
+                margin-right:3px;
+                border:3px solid $white;
+                border-top:3px solid #252D4A;
+                animation:loadspin 1s linear infinite;
+            }
+        }
+    }
+    .test_exc {
+        padding:50px 0 30px;
+    }
+    .output_wrap {
+        .tit {
+            position:relative;
+            padding-top:11px;
+            padding-left:10px;
+            &::before {
+                @include content (3px, 3px);
+                position:absolute;
+                top:17px;
+                left:0;
+                display:inline-block;
+                border-radius:50%;
+                background:$content;
+            }
+        }
+        .output_box {
+            margin-top:11px;
+            border-radius:6px;
+            font-size:$font14;
+            font-weight:$font-w-m;
+            background-color:#252C4A;
+        }
+    }
+}
+
+/***************** toast_popup *****************/
+.toast_popup {
+    border-radius:34px;
+    .popup_content {
+        padding:40px 24px;
+    }
+    .toast_check {
+        position:relative;
+        padding:9px 0;
+        @include title ($font16,$font-w-b,$title);
+        &:has(span) {
+            padding-top:61px;
+        }
+        span {
+            position:absolute;
+            top:0;
+            left:50%;
+            transform:translateX(-50%);
+            display:block;
+            @include icon(50px,50px);
+            background-image:url("../images/common/ico_ok.svg");
+        }
+        &.fail {
+            span {
+                background-image:url("../images/common/ico_erro.svg");
+                background-position:unset;
+            }
+        }
+        &.warning {
+            span {
+                @include mask($info);
+                -webkit-mask-image:url("../images/common/ico_warning.svg");
+                mask-image:url("../images/common/ico_warning.svg");
+            }
+        }
+    }
+    .toast_msg {
+        margin-top:9px;
+        padding-bottom:20px;
+        p {
+            font-size:$font14;
+        }
+    }
+    .errcode_box {
+        margin-bottom:0;
+        border-radius:6px;
+        background-color:$body;
+    }
+    .btn_errcode {
+        .errcode_dt_btn {
+            @include flexsb();
+            width:$wh100;
+            padding:15px;
+            @include title ($font14, $font-w-r, $content);
+            span {
+                @include wh(24px,24px);
+                @include mask($title);
+                -webkit-mask-image:$icoAccordion;
+                mask-image:$icoAccordion;
+                background-position:unset;
+                background-image:none;
+            }
+            &.open {
+                span {
+                    transform:rotate(-180deg);
+                }
+            }
+        }
+    }
+    .btn_box {
+        padding:0;
     }
 }
 

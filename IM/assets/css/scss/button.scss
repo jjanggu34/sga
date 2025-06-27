@@ -38,6 +38,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
             height:38px;
             font-size:$font14;
             font-weight:$font-w-m;
+            line-height:38px;
         }
         &:last-child {
             margin-right:0;

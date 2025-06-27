@@ -57,6 +57,7 @@
   height: 38px;
   font-size: 14px;
   font-weight: 500;
+  line-height: 38px;
 }
 .btn_box a:last-child {
   margin-right: 0;
@@ -72,6 +73,7 @@
   height: 38px;
   font-size: 14px;
   font-weight: 500;
+  line-height: 38px;
 }
 .btn_box button:last-child {
   margin-right: 0;
@@ -87,6 +89,7 @@
   height: 38px;
   font-size: 14px;
   font-weight: 500;
+  line-height: 38px;
 }
 .list_btn button:last-child {
   margin-right: 0;
@@ -102,6 +105,7 @@ button.big {
   height: 38px;
   font-size: 14px;
   font-weight: 500;
+  line-height: 38px;
 }
 button:last-child {
   margin-right: 0;

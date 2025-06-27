@@ -123,6 +123,13 @@
     &.tblStl2 {
         border-top:0;
         tbody {
+            tr {
+                &:first-child {
+                    td {
+                        border-top:$borderD;
+                    }
+                }
+            }
             th{
                 background-color:#F0F0F0;
                 border-top:$borderD;

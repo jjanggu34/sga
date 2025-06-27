@@ -10,6 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<!-- s : 추가 -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- e : 추가 -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
 	<!--[if lt IE 9]>
@@ -29,26 +32,35 @@
 		<div class="pw_find_wrap">
 			<div class="pw_find_cont">
 				<p class="pw_find_tit">비밀번호 찾는 방법 선택</p>
-				<div class="pw_find_input">
-					<p class="txt">사용자 아이디를 입력해주세요.</p>
-					<input type="text" name="" class="form_contrl">
-				</div>
+				<p class="infotxt">사용자 아이디를 입력해주세요.</p><!--[2025] infotxt으로 변경-->
+				<!-- s: dl dt dd로 변경, bul_dot 추가 -->
+				<dl class="pw_find_input bul_dot">
+					<dt><label for="">사용자 ID</label></dt>
+					<dd><input type="text" name="" class="form_contrl"></dd>
+					
+				</dl>
 				<ul class="pw_findway">
-					<li class="form_txt"><input type="radio" name="PWFIND" id="PWFIND01" class="radio_stl" checked><label for="PWFIND01" class="radio_stl_lab2"><i></i>등록된 email로 임시 비밀번호 전달</label></li>
+					<li class="form_txt"><input type="radio" name="PWFIND" id="PWFIND01" class="radio_stl" checked>
+						<label for="PWFIND01" class="radio_stl_lab2">
+							<i></i>등록된 email로 임시 비밀번호 전달
+						</label>
+					</li>
 					<li class="form_txt"><input type="radio" name="PWFIND" id="PWFIND02" class="radio_stl"><label for="PWFIND02" class="radio_stl_lab2"><i></i>등록된 전화로 임시 비밀번호 전달</label></li>
 					<li class="form_txt"><input type="radio" name="PWFIND" id="PWFIND03" class="radio_stl"><label for="PWFIND03" class="radio_stl_lab2"><i></i>등록한 Q&A로 비밀번호 찾기</label></li>
 				</ul>
 				<div class="btn_box cl_both">
 					<div class="f_r">
-						<a href="" class="gradient">다음</a>
-						<a href="" class="skyblue">취소</a>
-					</div>					
+						<!-- s: class 변경 -->
+						<a href="" class="primary">다음</a>
+						<a href="" class="line">취소</a>
+						<!-- e: class 변경-->
+					</div>
 				</div>
 			</div>
-			<!-- 푸터 -->
-			<div id="footer">
-				<p class="copy"><img src="img/common/sgn_logo.png" alt="SGN"> &copy; <span>SGN</span> corp. All Rights Reserved.</p>
-			</div>
+		</div>
+		<!-- 푸터 -->
+		<div id="footer"><!--[2025] 푸터 위치 변경-->
+			<p class="copy"><img src="img/common/sgn_logo.png" alt="SGN"> &copy; <span>SGN</span> corp. All Rights Reserved.</p>
 		</div>
 	</div>
 </body>
