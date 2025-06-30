@@ -176,8 +176,8 @@ button, a {
             }
             &.checkin {
                 @include mask($title);
-                -webkit-mask-image:$icoCheck;
-                mask-image:$icoCheck;
+                -webkit-mask-image:$icoCheckS;
+                mask-image:$icoCheckS;
             }
             &.icon_setting {
                 @include mask($title);
@@ -196,8 +196,8 @@ button, a {
                 @include mask($title);
                 -webkit-mask-image:$icoReset;
                 mask-image:$icoReset;
-                -webkit-mask-size: 90%;
-                mask-size: 90%;
+                -webkit-mask-size: 100%;
+                mask-size: 100%;
                 background-image:none;
                 &::before {
                     content:none;
@@ -537,7 +537,6 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 .list_right_btn {
     .icon_reset {
         position:relative;
-        padding-left:31px;
         &::before {
             position:absolute;
             top:1px;
@@ -546,6 +545,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
             -webkit-mask-size:90%;
             mask-size:90%;
             background-color:$white;
+        }
+        &.basic {
+            padding-left:31px;
         }
     }
 }

@@ -543,6 +543,21 @@ body * {
 #SGIM_PwFind .pw_find_cont .pw_reset .bul_dot dd {
   width: 100%;
 }
+#SGIM_PwFind .pw_find_cont .form_contrl {
+  max-width: unset;
+  width: 100%;
+  height: 45px;
+}
+#SGIM_PwFind .pw_find_cont .btn_box {
+  border-top: 0;
+}
+#SGIM_PwFind .pw_find_cont .align_center {
+  padding: 0 15px;
+}
+#SGIM_PwFind .pw_find_cont .align_center a {
+  width: 100%;
+  margin-bottom: 15px;
+}
 #SGIM_PwFind .pw_find_cont .pw_qna {
   padding: 30px 15px 0;
 }
@@ -562,21 +577,6 @@ body * {
 #SGIM_PwFind .pw_find_cont .q_txt span {
   font-weight: 400;
   color: #27AD98;
-}
-#SGIM_PwFind .pw_find_cont .form_contrl {
-  max-width: unset;
-  width: 100%;
-  height: 45px;
-}
-#SGIM_PwFind .pw_find_cont .btn_box {
-  border-top: 0;
-}
-#SGIM_PwFind .pw_find_cont .align_center {
-  padding: 0 15px;
-}
-#SGIM_PwFind .pw_find_cont .align_center a {
-  width: 100%;
-  margin-bottom: 15px;
 }
 #SGIM_PwFind .pw_find_cont .pw_find_input {
   display: flex;
@@ -598,6 +598,25 @@ body * {
 }
 #SGIM_PwFind .pw_find_cont .pw_find_input dd {
   width: 100%;
+}
+#SGIM_PwFind .pw_find_cont .pw_findway {
+  padding: 30px 26px;
+  border-top: 0;
+  border-radius: 6px;
+  background-color: #F3F5F7;
+}
+#SGIM_PwFind .pw_find_cont .pw_findway li {
+  padding: 0 0 10px;
+}
+#SGIM_PwFind .pw_find_cont .pw_findway li:last-child {
+  padding-bottom: 0;
+}
+#SGIM_PwFind .pw_find_cont .pw_findway li .radio_stl:checked + label.radio_stl_lab2 {
+  color: #454545;
+}
+#SGIM_PwFind .pw_find_cont .pw_findway li label {
+  font-weight: 400;
+  color: #999999;
 }
 #SGIM_PwFind #footer {
   position: unset;
@@ -1160,6 +1179,7 @@ body * {
   border: 1px solid #C9C9C9;
 }
 #SGIM_wrap #container .cont_wrap .content .default_tbl tbody tr td {
+  border: 0;
   line-height: 34px;
 }
 #SGIM_wrap #container .content {
@@ -1260,6 +1280,9 @@ body * {
 }
 #SGIM_wrap #container .content.ch_password_cont .form_stl .form_contrl {
   width: 270px;
+}
+#SGIM_wrap #container .content.ch_password_cont .form_tbl li:last-child .form_txt {
+  border-bottom: 1px solid #C9C9C9;
 }
 
 #ONSD_wrap .content {

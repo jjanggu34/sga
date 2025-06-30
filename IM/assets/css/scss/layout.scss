@@ -422,6 +422,22 @@ body {
                 }
             }
         }
+        .form_contrl {
+            max-width:unset;
+            width:$wh100;
+            height:45px;
+        }
+        .btn_box {
+            border-top:0;
+        }
+        .align_center {
+            padding:0 15px;
+            a {
+                width:$wh100;
+                margin-bottom:15px;
+            }
+        }
+        // QnA로 암호 찾기
         .pw_qna {
             padding:30px 15px 0;
             li {
@@ -442,21 +458,7 @@ body {
                 color:$primary;
             }
         }
-        .form_contrl {
-            max-width:unset;
-            width:$wh100;
-            height:45px;
-        }
-        .btn_box {
-            border-top:0;
-        }
-        .align_center {
-            padding:0 15px;
-            a {
-                width:$wh100;
-                margin-bottom:15px;
-            }
-        }
+        // 암호 초기화 전달 화면
         .pw_find_input {
             display:flex;
             align-items:center;
@@ -478,6 +480,27 @@ body {
             }
             dd {
                 width:$wh100;
+            }
+        }
+        .pw_findway {
+            padding:30px 26px;
+            border-top:0;
+            border-radius:6px;
+            background-color:$body;
+            li {
+                padding:0 0 10px;
+                &:last-child {
+                    padding-bottom:0;
+                }
+                .radio_stl {
+                    &:checked + label.radio_stl_lab2 {
+                        color:$content;
+                    }
+                }
+                label {
+                    font-weight:$font-w-r;
+                    color:$text-disabled;
+                }
             }
         }
     }
@@ -1009,6 +1032,7 @@ body {
                 // min-height:calc(100vh - 80px);//header + 위아래 margin
                 border:1px solid $list-border;
                 .default_tbl tbody tr td {
+                    border:0;
                     line-height:34px;
                 }
             }
@@ -1120,6 +1144,9 @@ body {
                     .form_contrl {
                         width:270px;
                     }
+                }
+                .form_tbl li:last-child .form_txt {
+                    border-bottom:1px solid $list-border;
                 }
             }
         }

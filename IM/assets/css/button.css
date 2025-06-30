@@ -260,8 +260,8 @@ button.icon i.checkin, a.icon i.checkin {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_check.svg");
-  mask-image: url("../images/common/ico_check.svg");
+  -webkit-mask-image: url("../images/common/ico_check_s.svg");
+  mask-image: url("../images/common/ico_check_s.svg");
 }
 button.icon i.icon_setting, a.icon i.icon_setting {
   -webkit-mask-repeat: no-repeat;
@@ -294,8 +294,8 @@ button.icon i.icon_reset, a.icon i.icon_reset {
   vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_reset.svg");
   mask-image: url("../images/common/ico_reset.svg");
-  -webkit-mask-size: 90%;
-  mask-size: 90%;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
   background-image: none;
 }
 button.icon i.icon_reset::before, a.icon i.icon_reset::before {
@@ -721,7 +721,6 @@ button.s_btn_more, a.s_btn_more {
 
 .list_right_btn .icon_reset {
   position: relative;
-  padding-left: 31px;
 }
 .list_right_btn .icon_reset::before {
   position: absolute;
@@ -732,6 +731,9 @@ button.s_btn_more, a.s_btn_more {
   -webkit-mask-size: 90%;
   mask-size: 90%;
   background-color: #FFFFFF;
+}
+.list_right_btn .icon_reset.basic {
+  padding-left: 31px;
 }
 
 /*---------------------------------------------

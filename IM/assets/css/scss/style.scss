@@ -1438,8 +1438,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         right:0;
                         display:inline-block;
                         @include mask($primary);
-                        -webkit-mask-image:$icoCheck;
-                        mask-image:$icoCheck;
+                        -webkit-mask-image:$icoCheckS;
+                        mask-image:$icoCheckS;
                     }
                 }
             }
@@ -1636,19 +1636,105 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 /* 사용자 홈 화면 */
+.aply_box {
+    .dash_box {
+        padding:20px;
+        border-radius:20px;
+    }
+    .aply_box_tit {
+        .home_d_tit {
+            padding:0 0 12px;
+            border-bottom:$borderD;
+            border-radius:20px 20px 0 0;
+        }
+        .move_ctrl {
+            top:unset;
+            right:0;
+            bottom:10px;
+        }
+    }
+}
 .aply_box_wrap {
-    padding:20px;
-    border-radius:0 0 6px 6px;
+    padding:16px 0 0;
+    border-radius:0;
+    background-color:transparent;
     .apply_card {
         display:grid;
         grid-auto-flow: column;
-        grid-auto-columns:180px;
+        grid-auto-columns:220px;
         gap:10px;
         padding:0;
         .dash_box {
-            width:$wh100;
+            @include wh($wh100,auto);
             margin:0;
-            border-color:#DDDDDDA6;
+            padding:18px 14px 18px 19px;
+            border-color:$list-border;
+            background-color:$white;
+            &.grbox { //시스템 그룹
+                span {
+                    background:#E3EEFF;
+                    color:#0052CC;
+                }
+                &:hover {
+                    border-color:#0052CC;
+                    .arrow_apply {
+                        background-color:transparent;
+                    }
+                }
+            }
+            &.ppbox { //시스템 계정
+                span {
+                    background:#E6E2FF;
+                    color:#6A5ACD;
+                }
+                &:hover {
+                    border-color:#6A5ACD;
+                    .arrow_apply {
+                        background-color:transparent;
+                    }
+                }
+            }
+            &.blbox { //시스템
+                span {
+                    background:#EFFCF3;
+                    color:#23AC3D;
+                }
+                &:hover {
+                    border-color:#23AC3D;
+                    .arrow_apply {
+                        background-color:transparent;
+                    }
+                }
+            }
+            &.orgbox { //역할
+                span {
+                    background:#FFF1D5;
+                    color:#F9AF1C;
+                }
+                &:hover {
+                    border-color:#F9AF1C;
+                    .arrow_apply {
+                        background-color:transparent;
+                    }
+                }
+            }
+            .apply_tit {
+                display:flex;
+                flex-direction:column;
+                gap:10px;
+                padding:0;
+                font-size:$font16;
+            }
+            span {
+                display:inline-block;
+                width:fit-content;
+                padding:6px 14px 5px;
+            }
+            .arrow_apply {
+                top:50%;
+                transform:translateY(-50%);
+                bottom:unset;
+            }
         }
     }
 }
@@ -2884,6 +2970,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .all_del {
         transform:rotate(-180deg);
     }
+    button {
+        border-radius:6px;
+    }
 }
 
 /* move_stl2 */
@@ -4026,11 +4115,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 border-bottom:1px solid $list-border;
                 font-weight:$font-w-r;
             }
-            &:last-child:not(.pcs_ctg_nxt li,.noline li) {
-                .form_txt {
-                    border-bottom:1px solid $list-border;
-                }
-            }
         }
         .form_txt {
             width:$wh100;
@@ -4834,21 +4918,53 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .tab_wrap {
-        padding:20px 24px;
-    }  border-top:0;
+        padding:0;
+    }
     .dash_box{
         padding:20px 21px;
         margin:0;
         border-radius:6px;
         &:has(.tbl_list) {
             .home_d_tit {
-                padding-bottom:21px;
+                border-bottom:0;
             }
         }
         .tbl_list {
+            border-top:$borderD;
             padding:0;
+            margin-top:10px;
             .default_tbl thead tr th{
                 border-top:0;
+            }
+        }
+        .notice_box {
+            padding:8px 14px;
+            background-color:#252C4A;
+            .noti_tit {
+                position:relative;
+                padding-left:26px;
+                @include title($font14, $font-w-m, $white);
+                &::before {
+                    content:"";
+                    position:absolute;
+                    top:50%;
+                    transform:translateY(-50%);
+                    left:0;
+                    display:block;
+                    @include icon (24px,24px);
+                    background-image:url("../images/common/ico_notice.svg");
+                }
+            }
+            .recent_notice {
+                a {
+                    font-size:$font13;
+                    font-weight:$font-w-r;
+                    line-height:17px;
+                }
+            }
+            .noti_new {
+                top:50%;
+                transform:translateY(-50%);
             }
         }
     }
@@ -4920,6 +5036,70 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .dash_box {
         width:$wh100;
         margin:0;
+        padding:18px 18px 18px 25px;
+        border:1px solid $list-border;
+        border-radius:15px;
+        box-shadow:none;
+        &.hm_req {
+            i {
+                background-image:url("../images/label/ico_application.svg");
+                background-size:100%;
+            }
+            .hm_tit,.hm_alimnum, .hm_alimnum em {
+                color:#0D64AF;
+            }
+        }
+        &.hm_appr {
+            i {
+                @include mask($true);
+                -webkit-mask-image:url("../images/common/ico_ok.svg");
+                mask-image:url("../images/common/ico_ok.svg");
+                background-image:unset;
+            }
+            .hm_tit,.hm_alimnum, .hm_alimnum em {
+                color:$true;
+            }
+        }
+        &.hm_msg {
+            i {
+                @include mask($info);
+                -webkit-mask-image:url("../images/common/ico_msg.svg");
+                mask-image:url("../images/common/ico_msg.svg");
+                background-image:unset;
+            }
+            .hm_tit,.hm_alimnum, .hm_alimnum em {
+                color:$info;
+            }
+        }
+    }
+    .hm_icon {
+        transform:translateY(-50%);
+        @include wh (24px,24px);
+        margin:0;
+        background-color:transparent;
+        i {
+            @include wh (24px,24px);
+            margin:0;
+        }
+    }
+    .hm_info {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding-left:39px;
+        .hm_tit {
+            padding:0;
+            font-size:$font13;
+            font-weight:$font-w-m;
+        }
+        .hm_alimnum {
+            font-size:$font18;
+            font-weight:$font-w-r;
+            em {
+                font-size:$font18;
+                font-weight:$font-w-e;
+            }
+        }
     }
 }
 .d_list_tt { //전체 건수, 더보기 버튼
