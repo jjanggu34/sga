@@ -55,10 +55,13 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     border-radius:6px;
     font-size:$font13;
     line-height:28px;
-    background:$basic;
+    background-color:$basic;
     &:focus-visible {
         border:1px solid #0A153C;
-        background:#0A153C;
+        background-color:#0A153C;
+    }
+    &:hover {
+        background-color:#0A153C;
     }
 }
 
@@ -67,10 +70,10 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     border-radius:6px;
     font-size:$font13;
     line-height:28px;
-    background:$basic2;
+    background-color:$basic2;
     &:focus-visible {
         border:1px solid #0A153C;
-        background:#0A153C;
+        background-color:#0A153C;
     }
 }
 
@@ -79,11 +82,11 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     border:$borderP;
     color:$white;
     line-height:28px;
-    background:$primary;
+    background-color:$primary;
     // focus
     &:focus-visible {
         border:1px solid $btn-hover;
-        background:$btn-hover;
+        background-color:$btn-hover;
     }
     &.btn_dropdown {
         padding-right:30px;
@@ -95,6 +98,9 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
             background:$icoAccordion no-repeat right center $primary;
             transform:rotate(270deg);
         }
+    }
+    &:hover {
+        background-color:$btn-hover;
     }
 }
 
@@ -124,6 +130,9 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
         background:$disabled-line-bg;
         border:1px solid $btn-disabled;
         cursor:auto;
+    }
+    &:hover {
+        border:1px solid $line-hover;
     }
 }
 
@@ -515,6 +524,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         color:$white;
         line-height:16px;
         background:$primary;
+        &:hover {
+            background-color:$btn-hover;
+        }
     }
 }
 

@@ -116,7 +116,7 @@ $borderP: 1px solid $primary;
 @mixin icon($width, $height) {
     width:$width;
     height:$height;
-    background-size:100%;
+    background-size:$wh100;
     background-repeat:no-repeat;
     background-image:none;
 }
@@ -125,7 +125,7 @@ $borderP: 1px solid $primary;
     display:inline-block;
     width:auto;
     border-radius:14px;
-    font-size:var(--font-13);
+    font-size:$font13;
 }
 
 @mixin mask($backColor) {

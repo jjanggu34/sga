@@ -1,7 +1,7 @@
 @use 'variable' as *;
 
 /***************** 공통 *****************/
-$btnstls: "trcolor", "fcolor";
+$btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 @each $btnstl in $btnstls {
     .#{$btnstl}.btnstl {
         @include wh (76px, 26px);
@@ -11,12 +11,14 @@ $btnstls: "trcolor", "fcolor";
         line-height:16px;
     }
 }
-.trcolor {
+.trcolor,
+.score_table .pst_num {
     @include label();
     color:$true;
     background-color:#EFFCF3;
 }
-.fcolor {
+.fcolor,
+.score_table .ngt_num {
     @include label();
     color:$false;
     background-color:#FFEFEF;
@@ -132,6 +134,10 @@ $btnstls: "trcolor", "fcolor";
 
 .hypn {
     margin-top:9px;
+}
+
+.pb10 {
+    padding-bottom:10px !important;
 }
 
 /* border-bottom이 after로 들어가야할 때 */
@@ -700,6 +706,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &+.btn_box {
                 padding-top:14px;
             }
+        }
+    }
+    // bnt_box + fm_tit
+    .btn_box {
+        &+.fm_tit {
+            margin-top:7px;
         }
     }
 }
@@ -1612,10 +1624,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 position:absolute;
                 top:20px;
                 right:20px;
+                @include wh (26px,26px);
                 padding:0;
                 border-color:$border-d;
-                color:$title;
-                background:$white;
+                @include title(17px, $font-w-r, $title);
+                line-height:26px;
+                background-color:$white;
             }
         }
         .arrow_apply {
@@ -2695,6 +2709,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
     }
+    &:has(.score) {
+        padding-bottom:14px;
+        &+.btn_box {
+            padding-top:0;
+        }
+    }
     .moved_box {
         padding:20px;
         border:$borderD;
@@ -2776,6 +2796,20 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .moved_list {
         border-radius:0;
+    }
+    // 장치스코어 화면
+    &.score {
+        padding:13px 0 0;
+        border:0;
+        .moved_tit {
+            padding-bottom:15px;
+            border-bottom:1px solid $title;
+        }
+        .mini_search {
+            position:absolute;
+            top:1px;
+            right:0;
+        }
     }
 }
 
@@ -3014,6 +3048,110 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
+/* 장치스코어 화면 */
+.score_table_wrap {
+    margin-top:20px;
+    border:0;
+    border-bottom:1px solid $list-border;
+    padding-bottom:12px;
+    .score_table {
+        padding:12px 11px;
+        margin-bottom:10px;
+        border:1px solid $list-border;
+        border-collapse: separate;
+        border-radius:6px;
+        th,td {
+            padding:0;
+            vertical-align:middle;
+        }
+        th {
+            @include title ($font12, $font-w-m, $title);
+        }
+        td {
+            &:last-child {
+                text-align:right;
+            }
+        }
+        .pst_num,.ngt_num {
+            display:inline-block;
+            border:0;
+            min-width:73px;
+            padding:6px 0 5px;
+            font-weight:$font-w-m;
+        }
+        &:has(.allscore) {
+            padding:10px 11px 8px;
+            border:0;
+            background-color:$body;
+        }
+        .allscore {
+            td {
+                background-color:transparent;
+                .bluetxt {
+                    padding:0;
+                    @include title ($font18, $font-w-m, $title);
+                    line-height:unset;
+                }
+            }
+            .pst_num,.ngt_num {
+                font-size:$font18;
+                font-weight:$font-w-b;
+            }
+        }
+        // 장치스코어 수정 화면
+        &:has(.btn_option) {
+            position:relative;
+            td {
+                padding-right:129px;
+            }
+        }
+        .scorelist_addbtn_row {
+            td {
+                border:0;
+            }
+        }
+    }
+    .scorelist_addbtn {
+        position:absolute;
+        top:13px;
+        right:17px;
+        padding:7px 14px 6px 30px;
+        line-height:16px;
+        .btn_option {
+            position:absolute;
+            top:50%;
+            left:6px;
+            transform:translateY(-50%);
+            @include wh (24px, 24px);
+            @include mask ($title);
+            border:0;
+            -webkit-mask-image:url("../images/common/icon_plus.svg");
+            mask-image:url("../images/common/icon_plus.svg");
+            -webkit-mask-size:80%;
+            mask-size:80%;
+            &::after {
+                content:none;
+            }
+        }
+    }
+    .score_inp_wrap {
+        .btn_del_option {
+            @include wh (30px,30px);
+            border-radius:6px;
+            background-color:$basic;
+            &::after {
+                top:2px;
+                left:2px;
+                @include wh (24px,24px);
+                @include mask($white);
+                -webkit-mask-image:url("../images/common/ico_mns.svg");
+                mask-image:url("../images/common/ico_mns.svg");
+                background-image:none;
+                background-position:center;
+            }
+        }
+    }
+}
 /*********************************************************************
     #모니터링
 *********************************************************************/
@@ -4909,6 +5047,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(197px, 1fr));
     column-gap:10px;
+    margin:0 24px;
     .home_d_tit {
         padding:0 0 12px;
         border-bottom:$borderD;
@@ -4920,10 +5059,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .tab_wrap {
         padding:0;
     }
-    .dash_box{
+    & > .dash_box{
         padding:20px 21px;
         margin:0;
+        border:$borderD;
         border-radius:6px;
+        box-shadow:unset;
         &:has(.tbl_list) {
             .home_d_tit {
                 border-bottom:0;
@@ -4939,6 +5080,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .notice_box {
             padding:8px 14px;
+            margin-bottom:13px;
             background-color:#252C4A;
             .noti_tit {
                 position:relative;
@@ -4965,8 +5107,86 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .noti_new {
                 top:50%;
                 transform:translateY(-50%);
+                a,em {
+                    font-size:0;
+                }
+                em {
+                    @include wh (24px,24px);
+                    @include mask($white);
+                    -webkit-mask-image:url("../images/common/ico_accordion3.svg");
+                    mask-image:url("../images/common/ico_accordion3.svg");
+                    transform:rotate(-90deg);
+                }
             }
         }
+        .home_pfbox {
+            padding:0 3px;
+            box-shadow:unset;
+            .flx {
+                justify-content:space-between;
+                align-items:center;
+                padding-bottom:10px;
+            }
+            .home_d_tit {
+                padding-bottom:0;
+                border-bottom:0;
+            }
+            .pf_btns.icon_mymodify {
+                position:unset;
+                @include icon(30px,30px);
+                border:$borderD;
+                border-radius:6px;
+                background-image:$icoFileEdit;
+                background-position:center;
+                background-size:60%;
+            }
+            .pf_info_wrap {
+                gap:6px 9px;
+                padding:0;
+                dl {
+                    justify-content:space-between;
+                    width:calc((100% - 9px) / 2);
+                    padding:10px 16px 10px 12px;
+                    border-radius:5px;
+                    background-color:#EDF0F4;
+                    dt {
+                        color:$content;
+                    }
+                    dd {
+                        font-weight:$font-w-m;
+                        color:$title;
+                    }
+                }
+            }
+            .pf_info_btns {
+                margin:20px 0 0;
+                padding:0;
+                border-top:0;
+                .line {
+                    padding:0 11px;
+                    @include title ($font13, $font-w-m, $title);
+                    line-height:28px;
+                }
+                i {
+                    @include icon (24px,24px);
+                    margin-top:2px;
+                }
+                .icon_myauth {
+                    background-image:url("../images/common/icon_myauth.svg");
+                }
+                .icon_mypw {
+                    background-image:url("../images/label/icon_locked.svg");
+                    background-position:unset;
+                }
+            }
+        }
+    }
+}
+.aply_box {
+    margin:0 24px;
+    .dash_box {
+        border:$borderD;
+        box-shadow:unset;
     }
 }
 .w-4card {

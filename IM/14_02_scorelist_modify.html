@@ -127,7 +127,7 @@
 					</div>
 				</div>
 				<div class="move_wrap">
-					<div class="moved_box">
+					<div class="moved_box score"><!--[2025] score 추가-->
 						<p class="moved_tit">스코어 항목</p>
 						<div class="search_box mini_search">
 							<input type="text" placeholder="검색어를 입력해주세요" class="search_inputbox" />
@@ -144,7 +144,7 @@
 										</div></td>
 									</tr>
 									<tr class="scorelist_addbtn_row">
-										<td><button class="scorelist_addbtn">항목추가 <i class="btn_option"></i></button></td>
+										<td><button class="scorelist_addbtn line"><i class="btn_option"></i> 항목추가 </button></td><!--[2025] line 추가, 텍스트 위치 변경-->
 										<td></td>
 									</tr>
 								</tbody>
@@ -159,7 +159,7 @@
 										</div></td>
 									</tr>
 									<tr class="scorelist_addbtn_row">
-										<td><button class="scorelist_addbtn">항목추가 <i class="btn_option"></i></button></td>
+										<td><button class="scorelist_addbtn line"><i class="btn_option"></i> 항목추가 </button></td><!--[2025] line 추가, 텍스트 위치 변경-->
 										<td></td>
 									</tr>
 								</tbody>
@@ -174,7 +174,7 @@
 										</div></td>
 									</tr>
 									<tr class="scorelist_addbtn_row">
-										<td><button class="scorelist_addbtn">항목추가 <i class="btn_option"></i></button></td>
+										<td><button class="scorelist_addbtn line"><i class="btn_option"></i> 항목추가 </button></td><!--[2025] line 추가, 텍스트 위치 변경-->
 										<td></td>
 									</tr>
 								</tbody>
@@ -184,21 +184,27 @@
 									<tr>
 										<th rowspan="5">소유 장비 규제준수 여부</th>
 										<td>규제준수함</td>
-										<td><div class="score_inp_wrap">
+										<td class="pb10"><!--[2025] pb10 추가-->
+											<div class="score_inp_wrap">
 											<input type="text" class="form_contrl" value="30"><button class="btn_option btn_del_option"></button>
-										</div></td>
+											</div>
+										</td>
 									</tr>
 									<tr>
 										<td>규제준수 (설치만 됨)</td>
-										<td><div class="score_inp_wrap">
+										<td class="pb10"><!--[2025] pb10 추가-->
+											<div class="score_inp_wrap">
 											<input type="text" class="form_contrl" value="5"><button class="btn_option btn_del_option"></button>
-										</div></td>
+											</div>
+										</td>
 									</tr>
 									<tr>
 										<td>규제준수 안함</td>
-										<td><div class="score_inp_wrap">
+										<td class="pb10"><!--[2025] pb10 추가-->
+											<div class="score_inp_wrap">
 											<input type="text" class="form_contrl" value="0"><button class="btn_option btn_del_option"></button>
-										</div></td>
+											</div>
+										</td>
 									</tr>
 									<tr>
 										<td>규제준수 (설치 안됨)</td>
@@ -207,7 +213,7 @@
 										</div></td>
 									</tr>
 									<tr class="scorelist_addbtn_row">
-										<td><button class="scorelist_addbtn">항목추가 <i class="btn_option"></i></button></td>
+										<td><button class="scorelist_addbtn line"><i class="btn_option"></i> 항목추가 </button></td><!--[2025] line 추가, 텍스트 위치 변경-->
 										<td></td>
 									</tr>
 								</tbody>
@@ -222,7 +228,7 @@
 										</div></td>
 									</tr>
 									<tr class="scorelist_addbtn_row">
-										<td><button class="scorelist_addbtn">항목추가 <i class="btn_option"></i></button></td>
+										<td><button class="scorelist_addbtn line"><i class="btn_option"></i> 항목추가 </button></td><!--[2025] line 추가, 텍스트 위치 변경-->
 										<td></td>
 									</tr>
 								</tbody>
@@ -242,12 +248,10 @@
 					</div>
 				</div>
 				<div class="btn_box cl_both">
-					<div class="f_l">
-						<a href="" class="basic2">이전</a><!--[2025] basic2으로 변경-->
-					</div>
 					<div class="f_r">
 						<!-- s: class 변경 -->
 						<div class="confirm_popup">
+							<a href="" class="basic2">이전</a><!--[2025] f_l 안에서 f_r로 이동, basic2으로 변경-->
 							<a href="" class="primary btn_save">저장</a>
 							<div class="save_alert" style="display:none">
 								<div class="arrow"></div>

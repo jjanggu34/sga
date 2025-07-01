@@ -120,11 +120,14 @@ button:last-child {
   border-radius: 6px;
   font-size: 13px;
   line-height: 28px;
-  background: #162866;
+  background-color: #162866;
 }
 .basic:focus-visible {
   border: 1px solid #0A153C;
-  background: #0A153C;
+  background-color: #0A153C;
+}
+.basic:hover {
+  background-color: #0A153C;
 }
 
 .basic2 {
@@ -132,11 +135,11 @@ button:last-child {
   border-radius: 6px;
   font-size: 13px;
   line-height: 28px;
-  background: #495991;
+  background-color: #495991;
 }
 .basic2:focus-visible {
   border: 1px solid #0A153C;
-  background: #0A153C;
+  background-color: #0A153C;
 }
 
 /* big */
@@ -144,11 +147,11 @@ button:last-child {
   border: 1px solid #27AD98;
   color: #FFFFFF;
   line-height: 28px;
-  background: #27AD98;
+  background-color: #27AD98;
 }
 .primary:focus-visible {
   border: 1px solid #138170;
-  background: #138170;
+  background-color: #138170;
 }
 .primary.btn_dropdown {
   padding-right: 30px;
@@ -159,6 +162,9 @@ button:last-child {
   height: 16px;
   background: url("../images/common/ico_accordion.svg") no-repeat right center #27AD98;
   transform: rotate(270deg);
+}
+.primary:hover {
+  background-color: #138170;
 }
 
 /*---------------------------------------------
@@ -187,6 +193,9 @@ button:last-child {
   background: #FCFCFC;
   border: 1px solid #EEEEEE;
   cursor: auto;
+}
+.line:hover {
+  border: 1px solid #797979;
 }
 
 /*---------------------------------------------
@@ -693,6 +702,9 @@ button.s_btn_more, a.s_btn_more {
   color: #FFFFFF;
   line-height: 16px;
   background: #27AD98;
+}
+.search_box .btn_detail_search:hover {
+  background-color: #138170;
 }
 
 .btn_box .icon_reset, .list_right_btn .icon_reset {
