@@ -455,6 +455,10 @@
     margin-top:7px;
     border:0;
     border-top:1px solid $list-border;
+    border-bottom:1px solid $list-border;
+    .default_tbl {
+        border-bottom:0;
+    }
     .default_tbl tbody tr td {
         line-height:34px;
     }

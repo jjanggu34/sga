@@ -87,8 +87,8 @@ body * {
   position: relative;
 }
 #IMwrap .login_input .id_input label {
-  top: 11px;
-  left: 17px;
+  top: 12px;
+  left: 14px;
   width: 20px;
   height: 20px;
   -webkit-mask-repeat: no-repeat;
@@ -104,8 +104,8 @@ body * {
   position: relative;
 }
 #IMwrap .login_input .pw_input label {
-  top: 11px;
-  left: 17px;
+  top: 12px;
+  left: 14px;
   width: 20px;
   height: 20px;
   -webkit-mask-repeat: no-repeat;
@@ -121,8 +121,8 @@ body * {
   position: relative;
 }
 #IMwrap .login_input .userID label {
-  top: 11px;
-  left: 17px;
+  top: 12px;
+  left: 14px;
   width: 20px;
   height: 20px;
   -webkit-mask-repeat: no-repeat;
@@ -138,8 +138,8 @@ body * {
   position: relative;
 }
 #IMwrap .login_input .userPWD label {
-  top: 11px;
-  left: 17px;
+  top: 12px;
+  left: 14px;
   width: 20px;
   height: 20px;
   -webkit-mask-repeat: no-repeat;
@@ -160,8 +160,8 @@ body * {
   mask-image: url("../images/common/ico_member.svg");
 }
 #IMwrap .login_input .pw_input label, #IMwrap .login_input .userPWD label {
-  -webkit-mask-image: url("../images/label/icon_locked.svg");
-  mask-image: url("../images/label/icon_locked.svg");
+  -webkit-mask-image: url("../images/common/icon_locked2.svg");
+  mask-image: url("../images/common/icon_locked2.svg");
 }
 #IMwrap .login_input .pw_input .fas, #IMwrap .login_input .userPWD .fas {
   transform: translateY(-50%);
@@ -237,38 +237,40 @@ body * {
 }
 
 /***************** column2 *****************/
-.column2 .logo img {
+#IMwrap {
+  /* 왼쪽 */
+  /* 오른쪽 */
+}
+#IMwrap .column2 .logo img {
   width: 100%;
   height: 100%;
 }
-.column2 .login_exps {
+#IMwrap .column2 .login_exps {
   gap: 50px;
   margin-top: 53px;
   padding-top: 0;
   border: 0;
   border-radius: 0;
 }
-.column2 .login_exps .login_exps_right {
+#IMwrap .column2 .login_exps .login_exps_right {
   max-width: 438px;
   width: 100%;
-  padding: 30px 20px;
+  padding: 30px;
   border-radius: 20px;
   background-color: #27AD98;
 }
-
-/* 왼쪽 */
-.tn_slt {
+#IMwrap .tn_slt {
   padding-bottom: 10px;
 }
-.tn_slt .fm_tit {
+#IMwrap .tn_slt .fm_tit {
   border: 1px solid #BBBBBB;
   font-weight: 400;
   color: #222222;
   background-color: #FFFFFF;
 }
-.tn_slt .fm_tit .tab_arrow {
+#IMwrap .tn_slt .fm_tit .tab_arrow {
   right: 10px;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(-180deg);
   width: 24px;
   height: 24px;
   margin: 0;
@@ -283,30 +285,29 @@ body * {
   -webkit-mask-image: url("../images/common/ico_accordion.svg");
   mask-image: url("../images/common/ico_accordion.svg");
 }
-.tn_slt .fm_tit .tab_arrow.open {
-  transform: translateY(-50%) rotate(-180deg);
+#IMwrap .tn_slt .fm_tit .tab_arrow.open {
+  transform: translateY(-50%);
 }
-.tn_slt .slt_list {
+#IMwrap .tn_slt .slt_list {
   top: 42px;
 }
-
-.login_btmmsg {
+#IMwrap .login_btmmsg {
   margin-top: 10px;
   padding: 21px 20px;
   border: 1px solid #DDDDDD;
   border-radius: 6px;
   background-color: #F3F5F7;
 }
-.login_btmmsg .msgstl {
+#IMwrap .login_btmmsg .msgstl {
   height: 100%;
 }
-.login_btmmsg .msgstl p {
+#IMwrap .login_btmmsg .msgstl p {
   position: relative;
   padding-left: 34px;
   font-size: 14px;
   text-align: left;
 }
-.login_btmmsg .msgstl p::before {
+#IMwrap .login_btmmsg .msgstl p::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -320,8 +321,7 @@ body * {
   background-image: none;
   background-image: url("../images/common/ico_msg.svg");
 }
-
-.security_pledge {
+#IMwrap .security_pledge {
   flex-direction: column-reverse;
   row-gap: 12px;
   width: 100%;
@@ -331,7 +331,7 @@ body * {
   border-radius: 0;
   background-color: transparent;
 }
-.security_pledge .balloonStl2 {
+#IMwrap .security_pledge .balloonStl2 {
   position: unset;
   justify-content: space-between;
   padding: 4px 5px 4px 13px;
@@ -340,12 +340,12 @@ body * {
   background-color: #D6E9FF;
   box-shadow: unset;
 }
-.security_pledge .balloonStl2 .bluetxt {
+#IMwrap .security_pledge .balloonStl2 .bluetxt {
   font-size: 12px;
   font-weight: 400;
   color: #1863BA;
 }
-.security_pledge .balloonStl2 .btn_del {
+#IMwrap .security_pledge .balloonStl2 .btn_del {
   width: 24px;
   height: 24px;
   -webkit-mask-repeat: no-repeat;
@@ -360,61 +360,60 @@ body * {
   mask-image: url("../images/common/close.svg");
   background-image: none;
 }
-
-.txtbtns_devide {
+#IMwrap .txtbtns_devide {
   gap: 4px;
 }
-
-/* 오른쪽 */
-.login_notice {
+#IMwrap .login_notice {
   padding: 0;
   margin-bottom: 0;
   background-color: transparent;
 }
-.login_notice > p {
+#IMwrap .login_notice > p {
   padding-bottom: 22px;
   font-size: 18px;
   font-weight: 600;
   color: #FFFFFF;
 }
-.login_notice .notice_list li {
+#IMwrap .login_notice .notice_list li {
   padding: 0 0 13px;
 }
-.login_notice .notice_list li:last-child {
+#IMwrap .login_notice .notice_list li:last-child {
   padding: 0;
 }
-.login_notice .notice_list li a {
+#IMwrap .login_notice .notice_list li a {
   width: 100%;
   font-size: 14px;
+  font-weight: 400;
 }
-
-.cl_txt {
+#IMwrap .login_notice .notice_list li a:hover {
+  text-decoration: unset;
+}
+#IMwrap .cl_txt {
   padding: 20px 0;
 }
-.cl_txt em {
+#IMwrap .cl_txt em {
   padding: 0 16px;
   font-size: 14px;
   font-weight: 400;
   color: #FFFFFF;
   background-color: #27AD98;
 }
-
-.client_down_list {
+#IMwrap .client_down_list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
-.client_down_list .clientBtn {
+#IMwrap .client_down_list .clientBtn {
   flex-direction: column;
   margin-top: 0;
   padding: 12px 0 7px;
   font-size: 16px;
 }
-.client_down_list .clientBtn.AMClient {
+#IMwrap .client_down_list .clientBtn.AMClient {
   border: 0;
   color: #454545;
 }
-.client_down_list .clientBtn.AMClient .icon_client {
+#IMwrap .client_down_list .clientBtn.AMClient .icon_client {
   width: 60px;
   height: 40px;
   background-size: 100%;
@@ -422,11 +421,11 @@ body * {
   background-image: none;
   background-image: url("../images/common/ico_am.svg");
 }
-.client_down_list .clientBtn.OTP {
+#IMwrap .client_down_list .clientBtn.OTP {
   border: 0;
   color: #454545;
 }
-.client_down_list .clientBtn.OTP .icon_client {
+#IMwrap .client_down_list .clientBtn.OTP .icon_client {
   width: 60px;
   height: 40px;
   background-size: 100%;
@@ -435,11 +434,11 @@ body * {
   background-image: url("../images/common/ico_otp.svg");
   background-position: unset;
 }
-.client_down_list .clientBtn.FIDO {
+#IMwrap .client_down_list .clientBtn.FIDO {
   border: 0;
   color: #454545;
 }
-.client_down_list .clientBtn.FIDO .icon_client {
+#IMwrap .client_down_list .clientBtn.FIDO .icon_client {
   width: 60px;
   height: 45px;
   background-size: 100%;
@@ -448,11 +447,11 @@ body * {
   background-image: url("../images/common/ico_uem.svg");
   background-position: unset;
 }
-.client_down_list .clientBtn.UEM {
+#IMwrap .client_down_list .clientBtn.UEM {
   border: 0;
   color: #454545;
 }
-.client_down_list .clientBtn.UEM .icon_client {
+#IMwrap .client_down_list .clientBtn.UEM .icon_client {
   width: 60px;
   height: 45px;
   background-size: 100%;
@@ -463,32 +462,32 @@ body * {
 }
 
 /***************** row2 *****************/
-.row2 .login_exps_right {
+#IMwrap .row2 .login_exps_right {
   margin-bottom: 98px;
 }
-.row2 .client_down_list {
+#IMwrap .row2 .client_down_list {
   grid-template-columns: 1fr;
 }
-.row2 .client_down_list .clientBtn {
+#IMwrap .row2 .client_down_list .clientBtn {
   flex-direction: row;
   justify-content: center;
   column-gap: 5px;
   padding: 8px 0 7px;
   font-size: 14px;
 }
-.row2 .client_down_list .clientBtn.AMClient .icon_client {
+#IMwrap .row2 .client_down_list .clientBtn.AMClient .icon_client {
   width: 45px;
   height: 30px;
 }
-.row2 .client_down_list .clientBtn.OTP .icon_client {
+#IMwrap .row2 .client_down_list .clientBtn.OTP .icon_client {
   width: 45px;
   height: 30px;
 }
-.row2 .client_down_list .clientBtn.FIDO .icon_client {
+#IMwrap .row2 .client_down_list .clientBtn.FIDO .icon_client {
   width: 40px;
   height: 30px;
 }
-.row2 .client_down_list .clientBtn.UEM .icon_client {
+#IMwrap .row2 .client_down_list .clientBtn.UEM .icon_client {
   width: 40px;
   height: 30px;
 }
@@ -533,11 +532,14 @@ body * {
 #SGIM_PwFind .pw_find_cont .pw_reset {
   padding: 30px 15px;
 }
+#SGIM_PwFind .pw_find_cont .pw_reset .bul_dot {
+  padding-top: 0;
+  margin-top: 12px;
+}
 #SGIM_PwFind .pw_find_cont .pw_reset .bul_dot > dt {
   margin-bottom: 0;
 }
 #SGIM_PwFind .pw_find_cont .pw_reset .bul_dot > dt::before {
-  top: 5px;
   left: 0;
 }
 #SGIM_PwFind .pw_find_cont .pw_reset .bul_dot dd {
@@ -586,10 +588,6 @@ body * {
 #SGIM_PwFind .pw_find_cont .pw_find_input.bul_dot > dt {
   margin-bottom: 0;
 }
-#SGIM_PwFind .pw_find_cont .pw_find_input.bul_dot > dt::before {
-  top: 5px;
-  left: 0;
-}
 #SGIM_PwFind .pw_find_cont .pw_find_input.bul_dot dd {
   width: 100%;
 }
@@ -632,24 +630,36 @@ body * {
 #SGIM_wrap.mini_nav .nav .nav_inner > p {
   display: none;
 }
-#SGIM_wrap.mini_nav .nav_list li a {
+#SGIM_wrap.mini_nav .nav_list > li a {
   padding: 16px 18px 24px 21px;
 }
-#SGIM_wrap.mini_nav .nav_list li a.depth_menu::after {
+#SGIM_wrap.mini_nav .nav_list > li a.depth_menu::after {
   display: none;
 }
-#SGIM_wrap.mini_nav .nav_list li a i {
-  left: 14px;
+#SGIM_wrap.mini_nav .nav_list > li a i {
+  left: 12px;
 }
-#SGIM_wrap.mini_nav .nav_list li a.on + .open {
+#SGIM_wrap.mini_nav .nav_list > li a.on + .open {
+  margin: 0;
+  border-radius: 6px;
+  background-color: #FCFCFC;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3254901961);
+}
+#SGIM_wrap.mini_nav .nav_list > li ul {
   display: none;
+}
+#SGIM_wrap.mini_nav .nav_list > li ul li {
+  padding: 10px;
+}
+#SGIM_wrap.mini_nav .nav_list > li ul li a {
+  padding: 0;
 }
 #SGIM_wrap.mini_nav #container {
   padding-left: 0;
   margin-left: 70px;
 }
 #SGIM_wrap.mini_nav .header .btn_lnb a {
-  left: 24px;
+  left: 21px;
 }
 #SGIM_wrap.mini_nav .scrollPrss {
   padding-left: 70px;
@@ -711,6 +721,7 @@ body * {
 #SGIM_wrap .nav_list > li > a {
   padding: 12px 20px 12px 42px;
   border-left: 0;
+  border-radius: 10px;
 }
 #SGIM_wrap .nav_list > li > a.on {
   border-top: 0;

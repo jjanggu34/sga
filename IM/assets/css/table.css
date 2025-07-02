@@ -442,6 +442,10 @@
   margin-top: 7px;
   border: 0;
   border-top: 1px solid #C9C9C9;
+  border-bottom: 1px solid #C9C9C9;
+}
+.move_tbl .default_tbl {
+  border-bottom: 0;
 }
 .move_tbl .default_tbl tbody tr td {
   line-height: 34px;

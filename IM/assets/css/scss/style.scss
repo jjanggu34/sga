@@ -75,6 +75,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
     background-color:#FFF5E0;
     &.yelltxt {
         padding:5px 14px;
+        border:0;
         color:#F9AF1C;
         &::before {
             content:"";
@@ -261,7 +262,7 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
         animation:unset;
         .bar {
             width: 12px;
-            border-radius: 9px;
+            border-radius: 30px;
             animation: barAnimation 1.5s ease-in-out infinite;
         }
         
@@ -288,7 +289,7 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
         @keyframes barAnimation {
             0%, 40%, 100% {
                 width:20px;
-                height: 15px;
+                height: 20px;
                 transform: scaleY(1);
             }
             20% {
@@ -730,7 +731,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &::before {
             @include content (3px, 3px);
             position:absolute;
-            top:16px;
+            top:50%;
+            transform:translateY(-50%);
             left:10px;
             display:inline-block;
             border-radius:50%;
@@ -742,7 +744,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &::before {
             @include content (3px, 3px);
             position:absolute;
-            top:16px;
+            top:50%;
+            transform:translateY(-50%);
             left:10px;
             display:inline-block;
             border-radius:50%;
@@ -912,6 +915,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
+.pcs_bl.balloon {
+    border:1px solid $list-border;
+    border-radius:6px;
+}
 
 /*********************************************************************
     #tab
@@ -1096,87 +1103,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 border-top:0;
             }
         }
-        .tree_menu_tl {
-            padding:20px 13px;
-            border-top:$borderD;
-            .tree_menu_inner {
-                a {
-                    padding:0;
-                    span {
-                        font-weight:$font-w-r;
-                        color:$title;
-                    }
-                    &.on {
-                        border-radius:6px;
-                        background:#DAFAF5;
-                        span {
-                            color:$primary;
-                        }
-                        .icon_tree {
-                            background-color:$primary;
-                        }
-                    }
-                    &:hover {
-                        border-radius:6px;
-                        background:#DAFAF5;
-                    }
-                    .icon_tree {
-                        margin-right:4px;
-                        @include mask($text-disabled);
-                        background-position:unset;
-                        background-image:none;
-                        &.folder {
-                            -webkit-mask-image:$icoFolder;
-                            mask-image:$icoFolder;
-                            &_open {
-                                background-color:$title;
-                                -webkit-mask-image:$icoFolderOpen;
-                                mask-image:$icoFolderOpen;
-                            }
-                        }
-                        &.iuser {
-                            -webkit-mask-image:$icoMember;
-                            mask-image:$icoMember;
-                        }
-                        &.file {
-                            -webkit-mask-image:url("../images/common/ico_file.svg");
-                            mask-image:url("../images/common/ico_file.svg");
-                        }
-                    }
-                }
-                .sub_tree_menu {
-                    padding-left:0;
-                    li {
-                        position:relative;
-                        margin-top:5px;
-                        a {
-                            padding:0 10px 0 14px;
-                            span {
-                                color:$text-disabled;
-                            }
-                            &::before {
-                                @include content(7px, 8px);
-                                position:absolute;
-                                top:50%;
-                                left:5px;
-                                transform:translateY(-50%);
-                                display:inline-block;
-                                border-left:$borderD;
-                                border-bottom:$borderD;
-                            }
-                            &.on {
-                                span {
-                                    color:$primary;
-                                }
-                                &::before {
-                                    border-color:$primary;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    }
+    .tree_menu_tl {
+        padding:20px 13px;
+        border-top:$borderD;
     }
     .mini_tbl {
         flex:1;
@@ -1198,6 +1128,105 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             &+.tree_menu_tl {
                 padding-top:0;
+            }
+        }
+    }
+}
+
+.tree_menu_inner {
+    a {
+        padding:0;
+        border-radius:6px;
+        span {
+            font-weight:$font-w-r;
+            color:$title;
+        }
+        &.on {
+            background:#DAFAF5;
+            span {
+                color:$primary;
+            }
+            .icon_tree {
+                background-color:$primary;
+            }
+        }
+        &:hover {
+            background:#DAFAF5;
+            span {
+                color:$primary;
+            }
+        }
+        .icon_tree {
+            margin-right:4px;
+            @include mask($text-disabled);
+            background-position:unset;
+            background-image:none;
+            &.folder {
+                -webkit-mask-image:$icoFolder;
+                mask-image:$icoFolder;
+                &_open {
+                    background-color:$title;
+                    -webkit-mask-image:$icoFolderOpen;
+                    mask-image:$icoFolderOpen;
+                }
+            }
+            &.iuser {
+                -webkit-mask-image:$icoMember;
+                mask-image:$icoMember;
+            }
+            &.file {
+                -webkit-mask-image:url("../images/common/ico_file.svg");
+                mask-image:url("../images/common/ico_file.svg");
+            }
+        }
+        &.diss {
+            &:hover {
+                background-color:$btn_disabled;
+            }
+        }
+    }
+    .sub_tree_menu {
+        padding-left:0;
+        li {
+            position:relative;
+            margin-top:5px;
+            a {
+                padding:0 10px 0 14px;
+                span {
+                    color:$text-disabled;
+                }
+                &::before {
+                    @include content(7px, 8px);
+                    position:absolute;
+                    top:50%;
+                    left:5px;
+                    transform:translateY(-50%);
+                    display:inline-block;
+                    border-left:$borderD;
+                    border-bottom:$borderD;
+                }
+                &.on {
+                    span {
+                        color:$primary;
+                    }
+                    &::before {
+                        border-color:$primary;
+                    }
+                }
+                &:hover {
+                    background:#DAFAF5;
+                    span {
+                        color:$primary;
+                    }
+                }
+                &.diss {
+                    &:hover {
+                        background-color:$btn_disabled;
+                        span {
+                            color:$text-disabled;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1506,7 +1535,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &.bul_dot {
             dt {
                 &::before {
-                    top:12px;
                     left:0;
                 }
             }
@@ -1875,6 +1903,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 margin-top:0;
                 display:inline-block;
                 background-position-y:unset;
+            }
+        }
+        .wf_detail {
+            .wf_state_txt {
+                font-size:$font12;
+                color:$text-disabled;
             }
         }
         &.apv_comple {
@@ -2267,6 +2301,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         /* server zone */
         &.card_link {
             padding:14px 18px 0 24px;
+            &:hover {
+                border:1px solid $line-hover;
+            }
             .i-card_title {
                 padding:0 0 17px;
                 @include title ($font14, $font-w-b, $content);
@@ -2354,6 +2391,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             width:calc(($wh100 - 170px) / 6);
             padding:14px 22px;
             border:1px solid $list-border;
+            &:hover {
+                border:1px solid $line-hover;
+            }
             &.on {
                 border:0;
                 background-color:$primary;
@@ -2677,6 +2717,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 &:last-child {
                     border-bottom:0;
                 }
+                &::before {
+                    top:16px;
+                    transform:none;
+                }
             }
         }
     }
@@ -2825,100 +2869,104 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .move_wrap {
         padding:0;
         border:0;
-        .move2_box {
-            margin-right:0;
-            border:$borderD;
-            border-radius:6px;
-            .move_box {
-                padding:0;
-                margin:0;
-                border:0;
-                border-radius:0;
-                &:first-child {
-                    border-right:$borderD;
-                    .moved_tit {
-                        border-radius:6px 0 0 0;
-                    }
-                }
-                &:last-child {
-                    .moved_tit {
-                        border-radius:0 6px 0 0;
-                    }
-                }
+    }
+    .move2_box {
+        margin-right:0;
+        border:$borderD;
+        border-radius:6px;
+        .move_box {
+            padding:0;
+            margin:0;
+            border:0;
+            border-radius:0;
+            &:first-child {
+                border-right:$borderD;
                 .moved_tit {
-                    padding:10px 16px;
-                    border-bottom:1px solid $title;
-                    font-size:$font13;
-                    font-weight:$font-w-m;
-                    background-color:$disabled-line-bg;
-                }
-                .move_tbl {
-                    height:auto;
-                    max-height:272px;
-                    margin-top:0;
-                    border-top:0;
-                    overflow-y:auto;
-                    .default_tbl {
-                        tr {
-                            &:last-child {
-                                td {
-                                    border:0;
-                                }
-                            }
-                        }
-                    }
-                    .nodata {
-                        top:58%;
-                        transform:translateY(-58%);
-                        padding:0;
-                        line-height:normal;
-                        color:$text-disabled;
-                        &::before {
-                            display:inline-block;
-                            @include content(35px, 35px);
-                            position:absolute;
-                            bottom:30px;
-                            left:50%;
-                            transform:translateX(-50%);
-                            background: url("../images/common/icon-nodata.svg") no-repeat;
-                            opacity: .3;
-                        }
-                    }
+                    border-radius:6px 0 0 0;
                 }
             }
-        }
-        .moved_box {
-            padding:0;
-            border:$borderD;
-            border-radius:6px;
+            &:last-child {
+                .moved_tit {
+                    border-radius:0 6px 0 0;
+                }
+            }
             .moved_tit {
                 padding:10px 16px;
                 border-bottom:1px solid $title;
-                border-radius:6px 6px 0 0;
                 font-size:$font13;
                 font-weight:$font-w-m;
                 background-color:$disabled-line-bg;
             }
             .move_tbl {
-                height:270px;
+                height:auto;
+                max-height:272px;
                 margin-top:0;
                 border-top:0;
+                overflow-y:auto;
                 .default_tbl {
                     tr {
-                        &.newalim {
-                            background-color: #F4F7FA;
-
-                        }
-                        td {
-                            color:$text-disabled;
-                            &.check_list {
-                                padding:7px 10px;
-                            }
-                        }
-                        &:has(td input:checked) {
+                        &:last-child {
                             td {
-                                color:$title;
+                                border:0;
                             }
+                        }
+                    }
+                }
+                .nodata {
+                    top:58%;
+                    transform:translateY(-58%);
+                    padding:0;
+                    line-height:normal;
+                    color:$text-disabled;
+                    &::before {
+                        display:inline-block;
+                        @include content(35px, 35px);
+                        position:absolute;
+                        bottom:30px;
+                        left:50%;
+                        transform:translateX(-50%);
+                        background: url("../images/common/icon-nodata.svg") no-repeat;
+                        opacity: .3;
+                    }
+                }
+            }
+        }
+        .move_tbl {
+            border-bottom:0;
+        }
+    }
+    .moved_box {
+        padding:0;
+        border:$borderD;
+        border-radius:6px;
+        .moved_tit {
+            padding:10px 16px;
+            border-bottom:1px solid $title;
+            border-radius:6px 6px 0 0;
+            font-size:$font13;
+            font-weight:$font-w-m;
+            background-color:$disabled-line-bg;
+        }
+        .move_tbl {
+            height:270px;
+            margin-top:0;
+            border-top:0;
+            border-bottom:0;
+            .default_tbl {
+                tr {
+                    &.newalim {
+                        background-color: #F4F7FA;
+
+                    }
+                    td {
+                        color:$text-disabled;
+                        &.check_list {
+                            padding:7px 10px;
+                        }
+                    }
+                    &:has(td input:checked) {
+                        td {
+                            color:$title;
                         }
                     }
                 }
@@ -4212,7 +4260,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             .form_tit {
                 min-width:100px;
-                width:150px;
+                width:220px;
                 padding:10px;
                 label {
                     margin-bottom:0;
@@ -4481,15 +4529,18 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .entry_top {
         padding:0 0 0 38px;
         border:1px solid $btn-disabled;
+        border-radius:6px;
         &>ul {
             display:inline-block;
             margin:6px 0;
             &>li {
                 display:inline-block;
                 &>a {
+                    height:30px;
                     border-radius:6px;
                     font-size:$font12;
                     font-weight:$font-w-m;
+                    line-height:30px;
                 }
             }
         }
@@ -4530,8 +4581,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .entry_name {
-        height:30px;
-        line-height:30px;
+        border:1px solid $default;
         .btn_option {
             top:2px;
             right:0;
@@ -4546,8 +4596,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .add_option {
-        height:30px;
-        line-height:30px;
         .btn_option {
             border-radius:6px;
             background-color:$text-disabled;
