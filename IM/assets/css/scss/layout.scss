@@ -219,10 +219,7 @@ body {
                 text-align:left;
                 &::before {
                     content:"";
-                    position:absolute;
-                    top:50%;
-                    left:0;
-                    transform:translateY(-50%);
+                    @include topCenter ($left: 0);
                     display:inline-block;
                     @include icon (24px,24px);
                     background-image:url("../images/common/ico_msg.svg");
@@ -728,9 +725,7 @@ body {
                         &::after {
                             @include content(16px,16px);
                             position:absolute;
-                            top:50%;
-                            right:0;
-                            transform:translateY(-50%);
+                            @include topCenter ($right: 0);
                             display:inline-block;
                             @include mask($text-disabled);
                             -webkit-mask-image:$icoArrow;
@@ -825,9 +820,7 @@ body {
             }
         }
         .gl_nav {
-            top:50%;
-            right:20px;
-            transform:translateY(-50%);
+            @include topCenter ($right: 20px);
             display:inline-flex;
             align-items:center;
             width:auto;
@@ -891,8 +884,10 @@ body {
                 &.btn_alim {
                     &>a {
                         @include icon (24px,24px);
+                        margin-top:0;
                         background-image:url("../images/common/icon-alarm.svg");
                         &>span {
+                            display:none;
                             line-height:20px;
                             color:$white;
                             background-color:#F76900;
@@ -943,7 +938,7 @@ body {
             }
         }
         .alim_pop {
-            top:60px;
+            top:58px;
             right:-69px;
             .alim_pop_wrap {
                 .alim_top {
@@ -1048,7 +1043,7 @@ body {
             }
             .content {
                 // min-height:calc(100vh - 80px);//header + 위아래 margin
-                border:1px solid $list-border;
+                border:$borderC;
                 .default_tbl tbody tr td {
                     border:0;
                     line-height:34px;
@@ -1164,7 +1159,7 @@ body {
                     }
                 }
                 .form_tbl li:last-child .form_txt {
-                    border-bottom:1px solid $list-border;
+                    border-bottom:$borderC;
                 }
             }
         }
@@ -1224,7 +1219,7 @@ body {
     }
     .dtv_cont_wrap {
         .btn_box {
-            border-top:1px solid $list-border;
+            border-top:$borderC;
         }
     }
 }
@@ -1317,8 +1312,8 @@ body {
             height:$wh100;
             padding-bottom:0;
             margin-bottom:24px;
-            border-top:1px solid $list-border;
-            border-bottom:1px solid $list-border;
+            border-top:$borderC;
+            border-bottom:$borderC;
             overflow-y:auto;
             thead {
                 tr {
@@ -1465,13 +1460,13 @@ body {
         top:unset;
         bottom:-14px;
         padding:20px;
-        border:1px solid $list-border;
+        border:$borderC;
         border-radius:6px;
         &::before {
             top:46px;
             left:-5px;
             @include wh (9px,9px);
-            border:1px solid $list-border;
+            border:$borderC;
             border-radius:3px;
             background-color:$white;
             transform:rotate(45deg);

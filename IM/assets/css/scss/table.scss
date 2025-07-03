@@ -5,10 +5,14 @@
 ---------------------------------------------*/
 .tbl_list {
     padding:0 24px 20px;
+    &:has(.tblStl3) {
+        border-top:1px solid $title;
+    }
 }
 .default_tbl {
     width:$wh100;
     border:0;
+    border-top:$borderD;
     border-bottom:$borderD;
     background:transparent;
     word-break:break-all;
@@ -32,7 +36,7 @@
             th {
                 padding:10px;
                 border:0;
-                border-top:1px solid $list-border;
+                border-top:$borderC;
                 border-bottom:1px solid $secondary;
                 line-height:16px;
                 color:$title;
@@ -49,10 +53,10 @@
     }
     tbody {
         tr {
-            border-bottom:1px solid $list-border;
-            &:last-child {
-                border-bottom:0;
-            }
+            border-bottom:$borderC;
+            // &:last-child {
+            //     border-bottom:0;
+            // }
             th {
                 border:0;
                 @include title($font13,$font-w-r,$title);
@@ -123,17 +127,10 @@
     &.tblStl2 {
         border-top:0;
         tbody {
-            tr {
-                &:first-child {
-                    td {
-                        border-top:$borderD;
-                    }
-                }
-            }
             th{
                 background-color:#F0F0F0;
-                border-top:$borderD;
-                border-right:$borderD;
+                border-top:$borderC;
+                border-right:$borderC;
                 font-weight:$font-w-r;
                 text-align:center;
                 &:first-child {
@@ -155,9 +152,7 @@
                         padding:0;
                         .btn_dtail_arrow {
                             position:absolute;
-                            top:50%;
-                            left:50%;
-                            transform:translate(-50%,-50%);
+                            @extend %positon_center;
                             @include icon(24px, 24px);
                             margin-top:0;
                             background-image:$icoAccordion;
@@ -171,7 +166,7 @@
             }
             td {
                 overflow:unset;
-                border:$borderD;
+                border:$borderC;
                 border-top:0;
                 font-weight:$font-w-m;
                 line-height:35px;
@@ -208,12 +203,25 @@
         }
     }
     &.tblStl3 {
+        border:0;
+        border-bottom:$borderC;
         tbody {
+            tr {
+                &:first-child {
+                    td {
+                        border-top:0;
+                    }
+                }
+            }
             td {
                 padding:4px 20px 5px;
-                border:$borderD;
+                border:$borderC;
+                border-left:0;
                 &:nth-child(2) {
                     padding:0;
+                }
+                &:last-child {
+                    border-right:0;
                 }
                 .flx_frm_tbl {
                     li {
@@ -323,6 +331,12 @@
         &:hover {
             background-color:$body;
         }
+        &.newalim {
+            background-color:#F4F7FA;
+            &:first-child {
+                border-top-color:$list-border;
+            }
+        }
     }
     .dt_view {
         border-top:0;
@@ -334,7 +348,7 @@
         }
         .m-cont {
             padding:10px;
-            border:1px solid $list-border;
+            border:$borderC;
             border-radius:6px;
         }
     }
@@ -358,7 +372,7 @@
 /* mini_tbl */
 .mini_tbl {
     border:0;
-    border-bottom:$borderD;
+    border-bottom:$borderC;
     .default_tbl {
         thead {
             th {
@@ -430,18 +444,12 @@
         line-height:30px;
         color:$content;
         .btn_option {
-            top:5px;
-            @include wh (18px, 18px);
-            padding:0;
-            border:0;
+            @extend %btn_option;
             border-radius:6px;
             background-color:$text-disabled;
             &::after {
-                top:50%;
-                left:50%;
-                transform:translate(-50%, -50%);
-                @include wh (18px, 18px);
-                @include mask ($white);
+                @extend %positon_center;
+                background-color:$white;
                 -webkit-mask-image:$icoArrowNone;
                 mask-image:$icoArrowNone;
             }
@@ -454,13 +462,16 @@
     max-height:370px;//10개 기준
     margin-top:7px;
     border:0;
-    border-top:1px solid $list-border;
-    border-bottom:1px solid $list-border;
+    border-top:$borderC;
+    border-bottom:$borderC;
     .default_tbl {
         border-bottom:0;
     }
     .default_tbl tbody tr td {
         line-height:34px;
+        &.check_list {
+            line-height:unset;
+        }
     }
 }
 

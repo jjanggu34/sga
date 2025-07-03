@@ -143,7 +143,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 
 /* border-bottom이 after로 들어가야할 때 */
 .bBorder {
-    border-bottom:$borderD !important;
+    border-bottom:$borderC !important;
     border-radius:0 !important;
 }
 
@@ -730,10 +730,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding-left:10px;
         &::before {
             @include content (3px, 3px);
-            position:absolute;
-            top:50%;
-            transform:translateY(-50%);
-            left:10px;
+            @include topCenter ($left: 10px);
             display:inline-block;
             border-radius:50%;
             background:$content;
@@ -743,10 +740,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         position:relative;
         &::before {
             @include content (3px, 3px);
-            position:absolute;
-            top:50%;
-            transform:translateY(-50%);
-            left:10px;
+            @include topCenter ($left: 10px);
             display:inline-block;
             border-radius:50%;
             background:$content;
@@ -916,7 +910,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .pcs_bl.balloon {
-    border:1px solid $list-border;
+    border:$borderC;
     border-radius:6px;
 }
 
@@ -1106,7 +1100,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .tree_menu_tl {
         padding:20px 13px;
-        border-top:$borderD;
+        border-top:$borderC;
     }
     .mini_tbl {
         flex:1;
@@ -1197,10 +1191,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
                 &::before {
                     @include content(7px, 8px);
-                    position:absolute;
-                    top:50%;
-                    left:5px;
-                    transform:translateY(-50%);
+                    @include topCenter ($left: 5px);
                     display:inline-block;
                     border-left:$borderD;
                     border-bottom:$borderD;
@@ -1253,7 +1244,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .treeType02 {
-    border:1px solid $list-border;
+    border:$borderC;
     border-radius:5px;
     .tt_tit {
         padding:15px 17px 14px;
@@ -1375,10 +1366,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 color:$text-disabled;
                 font-weight:$font-w-r;
                 .icon_folder {
-                    position:absolute;
-                    top:50%;
-                    left:0;
-                    transform:translateY(-50%);
+                    @include topCenter ($left: 0);
                     @include wh(24px, 24px);
                     @include mask ($text-disabled);
                     -webkit-mask-image:$icoFolder;
@@ -1419,10 +1407,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         padding-left:50px;
                         &::before {
                             content:"ㄴ";
-                            position:absolute;
-                            top:50%;
-                            left:7px;
-                            transform:translateY(-50%);
+                            @include topCenter ($left: 7px);
                             display:inline-block;
                             @include wh (auto, auto);
                             color:$text-disabled;
@@ -1473,10 +1458,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     background-color:#DAFAF5;
                     &::after {
                         @include content(24px, 24px);
-                        position:absolute;
-                        top:50%;
-                        transform:translateY(-50%);
-                        right:0;
+                        @include topCenter ($right: 0);
                         display:inline-block;
                         @include mask($primary);
                         -webkit-mask-image:$icoCheckS;
@@ -1509,9 +1491,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         line-height:18px;
         background-color:#F9F9F9;
         i {
-            top:50%;
-            right:9px;
-            transform:translateY(-50%);
+            @include topCenter ($right: 9px);
         }
     }
     .search_column4 {
@@ -1773,9 +1753,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding:6px 14px 5px;
             }
             .arrow_apply {
-                top:50%;
-                transform:translateY(-50%);
-                bottom:unset;
+                @include topCenter ($bottom: unset);
             }
         }
     }
@@ -1788,7 +1766,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     background-color:$table-th;
     &::-webkit-scrollbar-thumb {
         border-radius:30px;
-        background-color:$text-disabled;
+        background-color:$list-border;
     }
     &::-webkit-scrollbar {
         height:10px;
@@ -2260,7 +2238,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .dash_box {
         position:relative;
         padding:20px;
-        border:1px solid $list-border;
+        border:$borderC;
         border-radius:20px;
         box-shadow:unset;
         &.noicon {
@@ -2314,7 +2292,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:$basic;
                 background-image:url("../images/common/icon_plus_s.svg");
                 background-position:center;
-                background-size:80%;
+                background-size:70%;
             }
             .i-card_ct {
                 align-items:center;
@@ -2390,7 +2368,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &.system_tab {
             width:calc(($wh100 - 170px) / 6);
             padding:14px 22px;
-            border:1px solid $list-border;
+            border:$borderC;
             &:hover {
                 border:1px solid $line-hover;
             }
@@ -2702,7 +2680,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &.bul_dot {
             li {
                 padding:10px 20px;
-                border-bottom:1px solid $list-border;
+                border-bottom:$borderC;
                 .view_tit {
                     p {
                         @include title ($font14, $font-w-r, $content);
@@ -3100,12 +3078,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .score_table_wrap {
     margin-top:20px;
     border:0;
-    border-bottom:1px solid $list-border;
+    border-bottom:$borderC;
     padding-bottom:12px;
     .score_table {
         padding:12px 11px;
         margin-bottom:10px;
-        border:1px solid $list-border;
+        border:$borderC;
         border-collapse: separate;
         border-radius:6px;
         th,td {
@@ -3166,10 +3144,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:7px 14px 6px 30px;
         line-height:16px;
         .btn_option {
-            position:absolute;
-            top:50%;
-            left:6px;
-            transform:translateY(-50%);
+            @include topCenter ($left: 6px);
             @include wh (24px, 24px);
             @include mask ($title);
             border:0;
@@ -3184,9 +3159,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .score_inp_wrap {
         .btn_del_option {
-            @include wh (30px,30px);
-            border-radius:6px;
-            background-color:$basic;
+            @extend %btn_option30;
             &::after {
                 top:2px;
                 left:2px;
@@ -3491,12 +3464,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         width:169px;
         padding:0 12px;
         color:$text-disabled;
+        font-weight:$font-w-r;
         text-align:left;
         .icon_search {
-            position:absolute;
-            top:50%;
-            right:14px;
-            transform:translateY(-50%);
+            @include topCenter ($right: 14px);
             @include wh (16px, 16px);
             @include mask ($text-disabled);
             background-image:none;
@@ -3749,8 +3720,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:13px 0 0;
         .progress_txt {
             padding-bottom:0;
-            @include title($font13, $font-w-r, $secondary);
+            @include title($font13, $font-w-r, $text-disabled);
             line-height:16px;
+            &:has(.loader){
+                color:$secondary;
+            }
             .loader {
                 left:0;
                 right:unset;
@@ -3934,9 +3908,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .rdd_server_box {
             padding:15px 0 15px 60px;
             .rdd_server_stt_icon {
-                top:50%;
-                left:15px;
-                transform:translateY(-50%);
+                @include topCenter ($left: 15px);
                 @include wh(40px,40px);
                 border-radius:7px;
                 font-size:0;
@@ -3970,7 +3942,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 .fw_dt {
-    border:1px solid $list-border;
+    border:$borderC;
     border-radius:10px;
     .icon_fw {
         @include wh(24px,24px);
@@ -4245,6 +4217,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &.noline {
             padding-top:20px;
             li {
+                border:0;
                 &:first-child {
                     padding-top:0;
                     &::before {
@@ -4286,7 +4259,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 .form_tit {
                     display:inline-block;
                     padding:8px 0 0;
-                    border-bottom:0;
                 }
                 .form_txt {
                     @extend .form_tit;
@@ -4297,14 +4269,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         li {
             display:flex;
+            border-bottom:$borderC;
             .form_tit {
-                border-bottom:1px solid $list-border;
+                border-bottom:0;
                 font-weight:$font-w-r;
             }
         }
         .form_txt {
             width:$wh100;
-            border-bottom:1px solid $list-border;
+            border-bottom:0;
         }
     }
     .form_list {
@@ -4564,18 +4537,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
     }
-    .btn_option {
-        top:5px;
-        @include wh (18px, 18px);
-        padding:0;
-        border:0;
+    .btn_option { //...이 세로인 모양
+        @extend %btn_option;
         border-radius:0;
         background-color:transparent;
         &::after {
             top:0;
             left:0;
-            @include wh (18px, 18px);
-            @include mask ($text-disabled);
             background-position:center;
             background-image:none;
         }
@@ -4596,7 +4564,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .add_option {
-        .btn_option {
+        .btn_option { // - 모양
             border-radius:6px;
             background-color:$text-disabled;
             &::after {
@@ -4780,9 +4748,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     &>dt {
                         position:relative;
                         &::before {
-                            top:50%;
-                            left:0;
-                            transform:translateY(-50%);
+                            @include topCenter ($left: 0px);
                         }
                     }
                 }
@@ -4801,9 +4767,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     padding-top:0;
                     .btn_option {
                         top:0;
-                        @include wh(30px, 30px);
-                        border-radius:6px;
-                        background-color:$basic;
+                        @extend %btn_option30;
                         &::after {
                             @extend %positon_center;
                             @include wh(24px, 24px);
@@ -4868,23 +4832,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         color:$content;
     }
     .btn_columnadd {
-        height:45px;
+        @extend %btn_columnadd;
         margin-top:10px;
-        border:1px dashed $border-d;
-        border-radius:6px;
-        background-color:$table-th;
         .btn_option {
             top:10px;
             transform:unset;
-            @include wh(24px, 24px);
-            border:none;
-            border-radius:6px;
-            background-color:$basic;
             &::after {
                 top:12px;
                 left:12px;
                 background-color:transparent;
-                background-image:$iconBtnAdd;
             }
         }
     }
@@ -4969,10 +4925,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             &::before {
                 content:"";
-                position:absolute;
-                left:-4px;
-                top:50%;
-                transform:translateY(-50%);
+                @include topCenter ($left: -4px);
                 display:inline-block;
                 @include wh (1px,40px);
                 background-color:$border-d;
@@ -5079,6 +5032,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .set_hide_box {
+    border-radius:10px;
+    background-color:$disabled-line-bg !important;
     .server_box_white {
         box-shadow: none;
     }
@@ -5136,10 +5091,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 @include title($font14, $font-w-m, $white);
                 &::before {
                     content:"";
-                    position:absolute;
-                    top:50%;
-                    transform:translateY(-50%);
-                    left:0;
+                    @include topCenter ($left: 0);
                     display:block;
                     @include icon (24px,24px);
                     background-image:url("../images/common/ico_notice.svg");
@@ -5153,8 +5105,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             .noti_new {
-                top:50%;
-                transform:translateY(-50%);
+                @include topCenter ();
                 a,em {
                     font-size:0;
                 }
@@ -5305,7 +5256,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         width:$wh100;
         margin:0;
         padding:18px 18px 18px 25px;
-        border:1px solid $list-border;
+        border:$borderC;
         border-radius:15px;
         box-shadow:none;
         &.hm_req {
@@ -5462,14 +5413,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             top:unset;
             bottom:20px;
             padding:8px 18px 6px;
-            border:1px solid $list-border;
+            border:$borderC;
             border-radius:6px;
             &::before {
                 top:unset;
                 bottom:-5px;
                 transform:translateX(-50%);
                 @include wh(9px,9px);
-                border:1px solid $list-border;
+                border:$borderC;
                 border-radius:3px;
                 background-color:$white;
                 transform:translateX(-50%) rotate(45deg);
@@ -5501,7 +5452,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     gap:10px;
 }
 .li_gt_info {
-    border-right:1px solid $list-border;
+    border-right:$borderC;
     &:last-child {
         border-right:0;
         .li_gt_txt {
@@ -5584,7 +5535,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .icam_b_stl {
         margin:0 10px 10px;
-        border:1px solid $list-border;
+        border:$borderC;
         border-left:6px solid $true;
         border-radius:10px;
         .sicam_icon {
@@ -5715,7 +5666,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .sicam_name_box {
-            padding:17px 15px;
+            padding:17px 15px 17px 9px;
             gap:4px;
             &+.dstb_stt {
                 padding-top:20px;
@@ -5723,7 +5674,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .sicam_name_tit {
             justify-content:space-between;
-            width:calc($wh100 - 90px);
+            width:calc($wh100 - 75px);
             .errtxt {
                 padding-left:0;
                 i {
@@ -5874,6 +5825,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .secure_score_box {
     top:48px;
     left:48px;
+    @include wh (536px, 216px);
     padding:34px 20px 20px 36px;
     border:none;
     border-radius:20px;
@@ -5887,7 +5839,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .score_progress {
-        padding-bottom:20px;
+        position:relative;
+        padding:22px 0 20px;
         .score_numb {
             padding-bottom:10px;
             p {
@@ -5904,9 +5857,14 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border-radius:10px;
         overflow:hidden;
         .pgBar {
+            position:unset;
             height:14px;
             border-radius:0;
             background: linear-gradient(to right, #FF0000 0 18%, #FFA120 18% 36%, #FED35F 36% 55%, #FFFF38 55% 73%, #7DE57B 73% 90%, #23AC3D 90% 100%);
+            .picker {
+                top:40px;
+                right:42px;
+            }
         }
     }
     .score_rst {
@@ -5930,10 +5888,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
 }
-
-.set_hide_box {
-    background-color:$disabled-line-bg !important;
-}
 /***************** ICAM_board_setting *****************/
 .ICAM_board_setting {
     padding:68px 48px 160px 32px;
@@ -5956,8 +5910,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .box_showbtn {
-        top:50%;
-        transform:translateY(-50%);
+        @include topCenter ();
         &.hide {
             border-color:$border-d;
         }
@@ -6053,7 +6006,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .move_box {
             height:526px;
             .moved_tit {
-                border-bottom:1px solid $list-border;
+                border-bottom:$borderC;
                 .tit_in_btn {
                     top: -7px;
                 }
@@ -6068,7 +6021,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .moved_box {
             height:526px;
             .moved_tit {
-                border-bottom:1px solid $list-border;
+                border-bottom:$borderC;
             }
             .move_tbl {
                 max-height:max-content;
@@ -6104,6 +6057,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     content:"";
                     display:inline-block;
                     @include wh (24px,24px);
+                    margin-top:2px;
                     @include mask($white);
                     -webkit-mask-image: url("../images/common/ico_reset.svg");
                     mask-image: url("../images/common/ico_reset.svg");
@@ -6163,7 +6117,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .cld_col {
         max-height:480px;
         border:0;
-        border-bottom:1px solid $list-border;
+        border-bottom:$borderC;
         border-radius:0;
     }
     .cld_time_list {

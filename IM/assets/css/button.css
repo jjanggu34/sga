@@ -21,6 +21,26 @@
 /*---------------------------------------------
 	#Placeholder
 ---------------------------------------------*/
+.default_addel_btn .btn_option::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn_columnadd {
+  height: 45px;
+  border: 1px dashed #DDDDDD;
+  border-radius: 6px;
+  background-color: #F8F8F8;
+}
+
+.default_addel_btn .btn_option {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #162866;
+}
+
 /*---------------------------------------------
 	#상단 버튼
     #tit_in_btn: absolute
@@ -440,10 +460,34 @@ button.s_btn_more, a.s_btn_more {
 /* 옵션 */
 .default_addel_btn .btn_option {
   right: unset;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #162866;
-  background-color: #162866;
+}
+.default_addel_btn .btn_option::after {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #FFFFFF;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/btn_add.svg");
+  mask-image: url("../images/common/btn_add.svg");
+  background-position: center;
+}
+.default_addel_btn .btn_option.btn_del_option::after {
+  -webkit-mask-image: url("../images/common/btn_minus.svg");
+  mask-image: url("../images/common/btn_minus.svg");
+  background-position: center;
+}
+.default_addel_btn .btn_option.btn_test::after {
+  width: 24px;
+  margin: 0;
+  -webkit-mask-image: url("../images/common/btn_special.svg");
+  mask-image: url("../images/common/btn_special.svg");
+  background-position: center;
 }
 
 /* close */
@@ -496,12 +540,6 @@ button.s_btn_more, a.s_btn_more {
 }
 
 /* add button */
-.btn_columnadd {
-  height: 45px;
-  border: 1px dashed #DDDDDD;
-  border-radius: 6px;
-  background-color: #F8F8F8;
-}
 .btn_columnadd span {
   padding-right: 30px;
   font-size: 16px;
@@ -666,6 +704,7 @@ button.s_btn_more, a.s_btn_more {
 	#search button
 ---------------------------------------------*/
 .search_box .btn_search, .search_box.mini_search .btn_search {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 110px;
@@ -691,9 +730,10 @@ button.s_btn_more, a.s_btn_more {
   padding: 0;
 }
 .search_box .btn_detail_search {
+  position: absolute;
   top: 50%;
-  right: 9px;
   transform: translateY(-50%);
+  right: 9px;
   display: inline-block;
   width: auto;
   height: 36px;

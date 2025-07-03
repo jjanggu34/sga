@@ -311,8 +311,8 @@ body * {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
   transform: translateY(-50%);
+  left: 0;
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -836,9 +836,10 @@ body * {
   width: 16px;
   height: 16px;
   position: absolute;
+  position: absolute;
   top: 50%;
-  right: 0;
   transform: translateY(-50%);
+  right: 0;
   display: inline-block;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
@@ -954,9 +955,10 @@ body * {
   content: none;
 }
 #SGIM_wrap .header .gl_nav {
+  position: absolute;
   top: 50%;
-  right: 20px;
   transform: translateY(-50%);
+  right: 20px;
   display: inline-flex;
   align-items: center;
   width: auto;
@@ -1040,9 +1042,11 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
+  margin-top: 0;
   background-image: url("../images/common/icon-alarm.svg");
 }
 #SGIM_wrap .header .gl_nav li.btn_alim > a > span {
+  display: none;
   line-height: 20px;
   color: #FFFFFF;
   background-color: #F76900;
@@ -1082,7 +1086,7 @@ body * {
   color: #27AD98;
 }
 #SGIM_wrap .header .alim_pop {
-  top: 60px;
+  top: 58px;
   right: -69px;
 }
 #SGIM_wrap .header .alim_pop .alim_pop_wrap .alim_top {

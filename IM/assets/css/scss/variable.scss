@@ -89,6 +89,7 @@ $iconLocked:url("../images/label/icon_locked.svg");//잠금
 $wh100: 100%;
 $borderD: 1px solid $border-d;
 $borderP: 1px solid $primary;
+$borderC: 1px solid $list-border;
 
 /*---------------------------------------------
 	#Mixin
@@ -144,6 +145,20 @@ $borderP: 1px solid $primary;
     height:$height;
 }
 
+@mixin topCenter($left: null, $right: null, $bottom: null) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @if $left != null {
+        left: $left;
+    }
+    @if $right != null {
+        right: $right;
+    }
+    @if $bottom != null {
+        bottom: $bottom;
+    }
+}
 /*---------------------------------------------
 	#Placeholder
 ---------------------------------------------*/
@@ -180,4 +195,28 @@ $borderP: 1px solid $primary;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+}
+
+%btn_columnadd {
+    height:45px;
+    border:1px dashed $border-d;
+    border-radius:6px;
+    background-color:$table-th;
+}
+
+%btn_option {
+    top:5px;
+    @include wh (18px, 18px);
+    padding:0;
+    border:0;
+    &::after {
+        @include wh (18px, 18px);
+        @include mask ($text-disabled);
+    }
+}
+
+%btn_option30 {
+    @include wh(30px, 30px);
+    border-radius:6px;
+    background-color:$basic;
 }

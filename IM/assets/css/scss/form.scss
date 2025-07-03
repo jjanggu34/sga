@@ -155,10 +155,7 @@ $borderTs: "search_wrap", "tab_wrap";
 .filebox { // input + 첨부파일 아이콘 + 업로드 아이콘
     position:relative;
     .file_btns {
-        position:absolute;
-        top:50%;
-        transform:translateY(-50%);
-        right:4px;
+        @include topCenter ($right: 4px);
         margin:0;
         column-gap:5px;
         button {
@@ -565,6 +562,9 @@ select{
         padding:0;
         border:$borderD;
         text-align:left;
+        &:hover {
+            border-color:$border-d;
+        }
     }
     .dropdown_list {
         top:25px;

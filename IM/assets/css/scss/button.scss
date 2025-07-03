@@ -326,9 +326,32 @@ button, a {
 .default_addel_btn {
     .btn_option {
         right:unset;
-        @include wh(30px, 30px);
-        border:1px solid $basic;
-        background-color:$basic;
+        @extend %btn_option30;
+        &::after {
+            @extend %positon_center;
+            @include wh (24px,24px);
+            margin:0;
+            @include mask ($white);
+            -webkit-mask-image: url("../images/common/btn_add.svg");
+            mask-image: url("../images/common/btn_add.svg");
+            background-position:center;
+        }
+        &.btn_del_option {
+            &::after {
+                -webkit-mask-image: url("../images/common/btn_minus.svg");
+                mask-image: url("../images/common/btn_minus.svg");
+                background-position:center;
+            }
+        }
+        &.btn_test {
+            &::after {
+                width:24px;
+                margin:0;
+                -webkit-mask-image: url("../images/common/btn_special.svg");
+                mask-image: url("../images/common/btn_special.svg");
+                background-position:center;
+            }
+        }
     }
 }
 
@@ -347,10 +370,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 
 /* add button */
 .btn_columnadd {
-    height:45px;
-    border:1px dashed $border-d;
-    border-radius:6px;
-    background-color:$table-th;
+    @extend %btn_columnadd;
     span {
         padding-right:30px;
         @include title ($font16, $font-w-m, $title);
@@ -495,9 +515,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
 ---------------------------------------------*/
 .search_box {
     .btn_search {
-        top:50%;
-        transform:translateY(-50%);
-        right:110px;
+        @include topCenter ($right: 110px);
         display:inline-block;
         @include wh (24px, 24px);
         padding:0;
@@ -514,9 +532,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         }
     }
     .btn_detail_search{
-        top:50%;
-        right:9px;
-        transform:translateY(-50%);
+        @include topCenter ($right: 9px);
         display:inline-block;
         @include wh (auto, 36px);
         padding:7px 20px 6px;

@@ -21,10 +21,30 @@
 /*---------------------------------------------
 	#Placeholder
 ---------------------------------------------*/
-.default_tbl tbody tr th.new_org::after {
+.default_tbl tbody tr th.new_org::after, .default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow, .move_tbl2 .add_option .btn_option::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.move_tbl2 .add_option .btn_option {
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+}
+.move_tbl2 .add_option .btn_option::after {
+  width: 18px;
+  height: 18px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #999999;
+  vertical-align: text-bottom;
 }
 
 /*---------------------------------------------
@@ -33,10 +53,14 @@
 .tbl_list {
   padding: 0 24px 20px;
 }
+.tbl_list:has(.tblStl3) {
+  border-top: 1px solid #222222;
+}
 
 .default_tbl {
   width: 100%;
   border: 0;
+  border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
   background: transparent;
   word-break: break-all;
@@ -72,9 +96,6 @@
 }
 .default_tbl tbody tr {
   border-bottom: 1px solid #C9C9C9;
-}
-.default_tbl tbody tr:last-child {
-  border-bottom: 0;
 }
 .default_tbl tbody tr th {
   border: 0;
@@ -153,13 +174,10 @@
 .default_tbl.tblStl2 {
   border-top: 0;
 }
-.default_tbl.tblStl2 tbody tr:first-child td {
-  border-top: 1px solid #DDDDDD;
-}
 .default_tbl.tblStl2 tbody th {
   background-color: #F0F0F0;
-  border-top: 1px solid #DDDDDD;
-  border-right: 1px solid #DDDDDD;
+  border-top: 1px solid #C9C9C9;
+  border-right: 1px solid #C9C9C9;
   font-weight: 400;
   text-align: center;
 }
@@ -183,9 +201,6 @@
 }
 .default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 24px;
   height: 24px;
   background-size: 100%;
@@ -200,7 +215,7 @@
 }
 .default_tbl.tblStl2 tbody td {
   overflow: unset;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #C9C9C9;
   border-top: 0;
   font-weight: 500;
   line-height: 35px;
@@ -231,12 +246,23 @@
 .default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_mns::after {
   background: url("../images/common/ico_mns.svg") no-repeat center;
 }
+.default_tbl.tblStl3 {
+  border: 0;
+  border-bottom: 1px solid #C9C9C9;
+}
+.default_tbl.tblStl3 tbody tr:first-child td {
+  border-top: 0;
+}
 .default_tbl.tblStl3 tbody td {
   padding: 4px 20px 5px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #C9C9C9;
+  border-left: 0;
 }
 .default_tbl.tblStl3 tbody td:nth-child(2) {
   padding: 0;
+}
+.default_tbl.tblStl3 tbody td:last-child {
+  border-right: 0;
 }
 .default_tbl.tblStl3 tbody td .flx_frm_tbl li:first-child .flx {
   padding: 25px 20px 10px;
@@ -325,6 +351,12 @@
 .default_tbl tr.on, .default_tbl tr:hover {
   background-color: #F3F5F7;
 }
+.default_tbl tr.newalim {
+  background-color: #F4F7FA;
+}
+.default_tbl tr.newalim:first-child {
+  border-top-color: #C9C9C9;
+}
 .default_tbl .dt_view {
   border-top: 0;
 }
@@ -356,7 +388,7 @@
 /* mini_tbl */
 .mini_tbl {
   border: 0;
-  border-bottom: 1px solid #DDDDDD;
+  border-bottom: 1px solid #C9C9C9;
 }
 .mini_tbl .default_tbl thead th {
   background-color: #F8F8F8;
@@ -410,28 +442,11 @@
   color: #454545;
 }
 .move_tbl2 .add_option .btn_option {
-  top: 5px;
-  width: 18px;
-  height: 18px;
-  padding: 0;
-  border: 0;
   border-radius: 6px;
   background-color: #999999;
 }
 .move_tbl2 .add_option .btn_option::after {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 18px;
-  height: 18px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
   background-color: #FFFFFF;
-  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/icon_arrow_none.svg");
   mask-image: url("../images/common/icon_arrow_none.svg");
 }
@@ -449,6 +464,9 @@
 }
 .move_tbl .default_tbl tbody tr td {
   line-height: 34px;
+}
+.move_tbl .default_tbl tbody tr td.check_list {
+  line-height: unset;
 }
 
 /* dash_box > table */

@@ -62,6 +62,40 @@
   transform: translate(-50%, -50%);
 }
 
+.action_list .btn_columnadd {
+  height: 45px;
+  border: 1px dashed #DDDDDD;
+  border-radius: 6px;
+  background-color: #F8F8F8;
+}
+
+.action_list .btn_option {
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+}
+.action_list .btn_option::after {
+  width: 18px;
+  height: 18px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #999999;
+  vertical-align: text-bottom;
+}
+
+.score_table_wrap .score_inp_wrap .btn_del_option, .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #162866;
+}
+
 /***************** 공통 *****************/
 .trcolor.btnstl {
   width: 76px;
@@ -255,7 +289,7 @@
 
 /* border-bottom이 after로 들어가야할 때 */
 .bBorder {
-  border-bottom: 1px solid #DDDDDD !important;
+  border-bottom: 1px solid #C9C9C9 !important;
   border-radius: 0 !important;
 }
 
@@ -1425,7 +1459,7 @@ input + .loader {
 }
 .tree_menu_area .tree_menu_tl {
   padding: 20px 13px;
-  border-top: 1px solid #DDDDDD;
+  border-top: 1px solid #C9C9C9;
 }
 .tree_menu_area .mini_tbl {
   flex: 1;
@@ -1528,8 +1562,8 @@ input + .loader {
   height: 8px;
   position: absolute;
   top: 50%;
-  left: 5px;
   transform: translateY(-50%);
+  left: 5px;
   display: inline-block;
   border-left: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
@@ -1698,8 +1732,8 @@ input + .loader {
 .tree_wrap .tree_list li a .icon_folder {
   position: absolute;
   top: 50%;
-  left: 0;
   transform: translateY(-50%);
+  left: 0;
   width: 24px;
   height: 24px;
   -webkit-mask-repeat: no-repeat;
@@ -1751,8 +1785,8 @@ input + .loader {
   content: "ㄴ";
   position: absolute;
   top: 50%;
-  left: 7px;
   transform: translateY(-50%);
+  left: 7px;
   display: inline-block;
   width: auto;
   height: auto;
@@ -1853,9 +1887,10 @@ input + .loader {
   background-color: #F9F9F9;
 }
 .detail_search_wrap .detail_search_btn i {
+  position: absolute;
   top: 50%;
-  right: 9px;
   transform: translateY(-50%);
+  right: 9px;
 }
 .detail_search_wrap .search_column4 {
   gap: 10px 13px;
@@ -2140,6 +2175,7 @@ input + .loader {
   padding: 6px 14px 5px;
 }
 .aply_box_wrap .apply_card .dash_box .arrow_apply {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   bottom: unset;
@@ -2153,7 +2189,7 @@ input + .loader {
 }
 .workflow_box::-webkit-scrollbar-thumb {
   border-radius: 30px;
-  background-color: #999999;
+  background-color: #C9C9C9;
 }
 .workflow_box::-webkit-scrollbar {
   height: 10px;
@@ -2720,7 +2756,7 @@ input + .loader {
   background-color: #162866;
   background-image: url("../images/common/icon_plus_s.svg");
   background-position: center;
-  background-size: 80%;
+  background-size: 70%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct {
   align-items: center;
@@ -3536,8 +3572,8 @@ input + .loader {
 .score_table_wrap .scorelist_addbtn .btn_option {
   position: absolute;
   top: 50%;
-  left: 6px;
   transform: translateY(-50%);
+  left: 6px;
   width: 24px;
   height: 24px;
   -webkit-mask-repeat: no-repeat;
@@ -3556,12 +3592,6 @@ input + .loader {
 }
 .score_table_wrap .scorelist_addbtn .btn_option::after {
   content: none;
-}
-.score_table_wrap .score_inp_wrap .btn_del_option {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  background-color: #162866;
 }
 .score_table_wrap .score_inp_wrap .btn_del_option::after {
   top: 2px;
@@ -3899,13 +3929,14 @@ input + .loader {
   width: 169px;
   padding: 0 12px;
   color: #999999;
+  font-weight: 400;
   text-align: left;
 }
 .mod_cont .btn_r_absl .icon_search {
   position: absolute;
   top: 50%;
-  right: 14px;
   transform: translateY(-50%);
+  right: 14px;
   width: 16px;
   height: 16px;
   -webkit-mask-repeat: no-repeat;
@@ -4191,8 +4222,11 @@ input + .loader {
   padding-bottom: 0;
   font-size: 13px;
   font-weight: 400;
-  color: #757575;
+  color: #999999;
   line-height: 16px;
+}
+.server_box .sync_stt .progress_txt:has(.loader) {
+  color: #757575;
 }
 .server_box .sync_stt .progress_txt .loader {
   left: 0;
@@ -4374,9 +4408,10 @@ input + .loader {
   padding: 15px 0 15px 60px;
 }
 .syc_server_list .rdd_server_wrap .rdd_server_box .rdd_server_stt_icon {
+  position: absolute;
   top: 50%;
-  left: 15px;
   transform: translateY(-50%);
+  left: 15px;
   width: 40px;
   height: 40px;
   border-radius: 7px;
@@ -4732,6 +4767,9 @@ input + .loader {
 .form_stl .form_tbl.noline {
   padding-top: 20px;
 }
+.form_stl .form_tbl.noline li {
+  border: 0;
+}
 .form_stl .form_tbl.noline li:first-child {
   padding-top: 0;
 }
@@ -4767,7 +4805,6 @@ input + .loader {
 .form_stl .form_tbl.bul_dot > li .form_tit, .form_stl .form_tbl.bul_dot > li .form_txt {
   display: inline-block;
   padding: 8px 0 0;
-  border-bottom: 0;
 }
 .form_stl .form_tbl.bul_dot > li .form_txt {
   padding: 0;
@@ -4775,14 +4812,15 @@ input + .loader {
 }
 .form_stl .form_tbl li {
   display: flex;
+  border-bottom: 1px solid #C9C9C9;
 }
 .form_stl .form_tbl li .form_tit, .form_stl .form_tbl.bul_dot > li li .form_txt {
-  border-bottom: 1px solid #C9C9C9;
+  border-bottom: 0;
   font-weight: 400;
 }
 .form_stl .form_tbl .form_txt {
   width: 100%;
-  border-bottom: 1px solid #C9C9C9;
+  border-bottom: 0;
 }
 .form_stl .form_list {
   display: flex;
@@ -5019,27 +5057,12 @@ input + .loader {
   background-image: url("../images/common/ico_document.svg");
 }
 .action_list .btn_option {
-  top: 5px;
-  width: 18px;
-  height: 18px;
-  padding: 0;
-  border: 0;
   border-radius: 0;
   background-color: transparent;
 }
 .action_list .btn_option::after {
   top: 0;
   left: 0;
-  width: 18px;
-  height: 18px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
-  background-color: #999999;
-  vertical-align: text-bottom;
   background-position: center;
   background-image: none;
 }
@@ -5218,9 +5241,10 @@ input + .loader {
   position: relative;
 }
 .action_list .entry_setting .form_stl .form_list.bul_dot > dt::before {
+  position: absolute;
   top: 50%;
-  left: 0;
   transform: translateY(-50%);
+  left: 0px;
 }
 .action_list .entry_setting .form_stl .form_list.topline {
   padding-top: 10px;
@@ -5234,10 +5258,6 @@ input + .loader {
 }
 .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option {
   top: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  background-color: #162866;
 }
 .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option::after {
   width: 24px;
@@ -5292,26 +5312,16 @@ input + .loader {
   color: #454545;
 }
 .action_list .btn_columnadd {
-  height: 45px;
   margin-top: 10px;
-  border: 1px dashed #DDDDDD;
-  border-radius: 6px;
-  background-color: #F8F8F8;
 }
 .action_list .btn_columnadd .btn_option {
   top: 10px;
   transform: unset;
-  width: 24px;
-  height: 24px;
-  border: none;
-  border-radius: 6px;
-  background-color: #162866;
 }
 .action_list .btn_columnadd .btn_option::after {
   top: 12px;
   left: 12px;
   background-color: transparent;
-  background-image: url("../images/common/btn_add.svg");
 }
 .action_list .btn_desc {
   border: 1px solid #DDDDDD;
@@ -5413,9 +5423,9 @@ input + .loader {
 .task_wrap .tasklist .btn_g_del::before {
   content: "";
   position: absolute;
-  left: -4px;
   top: 50%;
   transform: translateY(-50%);
+  left: -4px;
   display: inline-block;
   width: 1px;
   height: 40px;
@@ -5527,6 +5537,10 @@ input + .loader {
   background-color: #FF0000;
 }
 
+.set_hide_box {
+  border-radius: 10px;
+  background-color: #FCFCFC !important;
+}
 .set_hide_box .server_box_white {
   box-shadow: none;
 }
@@ -5600,6 +5614,7 @@ input + .loader {
   line-height: 17px;
 }
 .home_lyt > .dash_box .notice_box .noti_new {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -6194,7 +6209,7 @@ input + .loader {
   mask-image: url("../images/common/ico_info.svg");
 }
 .icam_b_list .icam_b_stl .sicam_name_box {
-  padding: 17px 15px;
+  padding: 17px 15px 17px 9px;
   gap: 4px;
 }
 .icam_b_list .icam_b_stl .sicam_name_box + .dstb_stt {
@@ -6202,7 +6217,7 @@ input + .loader {
 }
 .icam_b_list .icam_b_stl .sicam_name_tit {
   justify-content: space-between;
-  width: calc(100% - 90px);
+  width: calc(100% - 75px);
 }
 .icam_b_list .icam_b_stl .sicam_name_tit .errtxt {
   padding-left: 0;
@@ -6352,6 +6367,8 @@ input + .loader {
 .secure_score_box {
   top: 48px;
   left: 48px;
+  width: 536px;
+  height: 216px;
   padding: 34px 20px 20px 36px;
   border: none;
   border-radius: 20px;
@@ -6366,7 +6383,8 @@ input + .loader {
   color: #757575;
 }
 .secure_score_box .score_progress {
-  padding-bottom: 20px;
+  position: relative;
+  padding: 22px 0 20px;
 }
 .secure_score_box .score_progress .score_numb {
   padding-bottom: 10px;
@@ -6386,9 +6404,14 @@ input + .loader {
   overflow: hidden;
 }
 .secure_score_box .progress_bar .pgBar {
+  position: unset;
   height: 14px;
   border-radius: 0;
   background: linear-gradient(to right, #FF0000 0 18%, #FFA120 18% 36%, #FED35F 36% 55%, #FFFF38 55% 73%, #7DE57B 73% 90%, #23AC3D 90% 100%);
+}
+.secure_score_box .progress_bar .pgBar .picker {
+  top: 40px;
+  right: 42px;
 }
 .secure_score_box .score_rst {
   gap: 4px;
@@ -6420,10 +6443,6 @@ input + .loader {
   mask-image: url("../images/common/ico_check_s.svg");
 }
 
-.set_hide_box {
-  background-color: #FCFCFC !important;
-}
-
 /***************** ICAM_board_setting *****************/
 .ICAM_board_setting {
   padding: 68px 48px 160px 32px;
@@ -6447,6 +6466,7 @@ input + .loader {
   margin-bottom: 0;
 }
 .ICAM_board_setting .box_showbtn {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -6593,6 +6613,7 @@ input + .loader {
   display: inline-block;
   width: 24px;
   height: 24px;
+  margin-top: 2px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100%;

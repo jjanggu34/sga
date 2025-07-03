@@ -1,0 +1,13 @@
+@use 'variable' as *;
+/* 05_03_08 */
+.btn_option {
+    @include wh(24px,24px);
+    border:none;
+    background-color:$basic;
+    &::after {
+        @extend %positon_center;
+        @include icon(16px,16px);
+        background-image:$iconBtnAdd;
+        background-position:center;
+    }
+}

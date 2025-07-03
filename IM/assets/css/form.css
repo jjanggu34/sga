@@ -588,6 +588,9 @@ select.form_contrl {
   border: 1px solid #DDDDDD;
   text-align: left;
 }
+.dropdown .btn_dropdown:hover {
+  border-color: #DDDDDD;
+}
 .dropdown .dropdown_list {
   top: 25px;
   margin: 0;
