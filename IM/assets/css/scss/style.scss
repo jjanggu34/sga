@@ -930,7 +930,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             a {
                 padding:7px 12px;
-                font-weight:$font-w-m;
+                @include title ($font14, $font-w-m, $text-disabled);
                 &.on{
                     border-bottom:0;
                     border-radius:15px;
@@ -1689,7 +1689,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .dash_box {
             @include wh($wh100,auto);
             margin:0;
-            padding:18px 14px 18px 19px;
+            padding:17px 14px 18px 19px;
             border-color:$list-border;
             background-color:$white;
             &.grbox { //시스템 그룹
@@ -2250,6 +2250,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 padding:0;
                 color:$white;
                 opacity:.78;
+                font-weight:$font-w-m;
             }
             .i-card_ct {
                 align-self:flex-end;
@@ -2268,7 +2269,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &.in_role {
             .i-card_title {
                 position:absolute;
-                left:74px;
+                top:22px;
+                left:83px;
                 width:$wh100;
                 max-width:56%;
                 padding:0 0 0 7px;
@@ -2499,6 +2501,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .num_t {
                 display:inline-block;
                 padding-right:0;
+                font-size:24px;
             }
         }
         .acs_plc_typ {
@@ -2628,6 +2631,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding-bottom:30px;
             p {
                 @include title ($font12, $font-w-m, $title);
+                opacity:0.8;
             }
         }
         .sq_nv_wd {
@@ -2650,7 +2654,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     &+.content.only {
         margin:20px 24px 20px !important;;
         .pcs_ctg_wrap {
-            margin-top:30px;
+            margin-top:20px;
+        }
+        .t_cont_in {
+            .list_btn, .tbl_list, .tbl_btm {
+                padding:0 0 20px;
+            }
         }
     }
     // 사용자 홈 화면
@@ -2691,9 +2700,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     p {
                         @include title ($font13, $font-w-m, $title);
                     }
-                }
-                &:last-child {
-                    border-bottom:0;
                 }
                 &::before {
                     top:16px;
@@ -2739,7 +2745,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .moved_box {
         padding:20px;
-        border:$borderD;
+        border:$borderC;
         border-radius:6px;
     }
     .mini_paging {
@@ -2753,7 +2759,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     min-width:300px;
     padding-left:24px;
     padding:20px;
-    border:$borderD;
+    border:$borderC;
     border-radius:6px;
     .moved_tit {
         .tit_in_btn {
@@ -2795,7 +2801,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     -webkit-mask-image:$icoArrow;
                     mask-image:$icoArrow;
                     background-position:unset;
-                    transform:rotate(-90deg);
                 }
                 &:hover, .on {
                     border-radius:9px;
@@ -2841,6 +2846,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     border:0;
     @include title ($font16, $font-w-b, $title);
     background-color:unset;
+    &+.move_tbl {
+        .default_tbl {
+            border-top:0;
+        }
+    }
 }
 
 .form_txt {
@@ -2951,6 +2961,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
     }
+    .check2 {
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
 }
 
 .pcs_ctg_wrap {
@@ -2959,11 +2974,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         margin-top:0;
         margin-right:20px;
         padding:0 15px;
-        border:$borderD;
+        border:$borderC;
         border-radius:6px;
         .moved_tit {
             padding:10px 0;
-            border-bottom:$borderD;
+            border-bottom:$borderC;
             font-size:$font18;
             font-weight:$font-w-m;
         }
@@ -3165,8 +3180,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 left:2px;
                 @include wh (24px,24px);
                 @include mask($white);
-                -webkit-mask-image:url("../images/common/ico_mns.svg");
-                mask-image:url("../images/common/ico_mns.svg");
+                -webkit-mask-image:url("../images/common/ico_minus.svg");
+                mask-image:url("../images/common/ico_minus.svg");
                 background-image:none;
                 background-position:center;
             }
@@ -4264,6 +4279,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     @extend .form_tit;
                     padding:0;
                     width:$wh100;
+                    border-bottom:0;
                 }
             }
         }
@@ -4827,6 +4843,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .btn_box {
             padding:0;
         }
+        .txta_wrap {
+            .form_stl {
+                .form_contrl {
+                    max-width:none;
+                }
+            }
+            .balloon {
+                left:-58px;
+            }
+        }
     }
     a {
         color:$content;
@@ -5074,15 +5100,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
         }
         .tbl_list {
-            border-top:$borderD;
             padding:0;
             margin-top:10px;
-            .default_tbl thead tr th{
-                border-top:0;
+            .default_tbl {
+                border-color:$list-border;
+                thead tr th{
+                    border-top:0;
+                }
             }
         }
         .notice_box {
-            padding:8px 14px;
+            padding:8px 7px 8px 14px;
             margin-bottom:13px;
             background-color:#252C4A;
             .noti_tit {
@@ -5105,7 +5133,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             .noti_new {
-                @include topCenter ();
+                @include topCenter ($right:7px);
                 a,em {
                     font-size:0;
                 }
@@ -5480,6 +5508,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .tit {
         position:relative;
         padding-left:24px;
+        font-weight:$font-w-m;
+        color:$text-disabled;
         &::before {
             content:"";
             position:absolute;
@@ -5989,11 +6019,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             font-weight:$font-w-r;
             background:none;
             &::before {
-                top:6px;
+                top:8px;
             }
         }
         dd {
-            font-weight:$font-w-b;
+            font-weight:$font-w-m;
             color:$title;
         }
         &:last-child {
@@ -6012,10 +6042,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             .moved_list {
-                height:396px;
+                height:373px;
                 margin-top:14px;
                 border:0;
-                border-bottom:$borderD;
+                border-bottom:$borderC;
+                border-radius:0;
             }
         }
         .moved_box {
@@ -6026,7 +6057,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .move_tbl {
                 max-height:max-content;
                 height:396px;
-                margin-top:14px;
+                margin-top:0;
                 border:0;
                 border-bottom:$borderD;
             }
@@ -6059,6 +6090,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     @include wh (24px,24px);
                     margin-top:2px;
                     @include mask($white);
+                    -webkit-mask-size:80%;
+                    mask-size:80%;
                     -webkit-mask-image: url("../images/common/ico_reset.svg");
                     mask-image: url("../images/common/ico_reset.svg");
                 }
@@ -6103,9 +6136,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         padding:23px 0 14px;
         border:0;
     }
-    .cld_weekday_tbl {
+    .cld_weekday {
         background-color:$table-th;
+    }
+    .cld_weekday_tbl {
         td {
+            padding:8px 0;
             font-weight:$font-w-m;
             color:$title;
         }
@@ -6129,6 +6165,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
+        .time_sch {
+            td {
+                border-left:$borderC;
+            }
+        }
     }
     .week_time_schedule {
         margin:0;
@@ -6146,6 +6187,19 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-color:$primary;
             -webkit-mask-image: url("../images/common/ico_cld_close.svg");
             mask-image: url("../images/common/ico_cld_close.svg");
+        }
+    }
+    .week_time_schedule_col {
+        ul {
+            &>li {
+                border-bottom:$borderC;
+                &:last-child {
+                    border-bottom:0;
+                }
+                &.dashline {
+                    border-color:$border-d;
+                }
+            }
         }
     }
     .mini_popup {

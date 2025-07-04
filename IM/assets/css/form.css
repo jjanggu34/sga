@@ -121,9 +121,13 @@
   line-height: 30px;
 }
 .calendarUI .cld_month_pop li button.on {
+  border-radius: 0;
   font-weight: 500;
   color: #FFFFFF;
   background-color: #27AD98;
+}
+.calendarUI .cld_month_pop li button:hover {
+  border-radius: 0;
 }
 .calendarUI .calendar_month .prev {
   width: 24px;
@@ -308,18 +312,27 @@
 }
 
 /* check */
+.check_stl_lab {
+  color: #999999;
+}
 .check_stl_lab:before {
   margin-top: 0;
   margin-right: 5px;
   border: 1px solid #BBBBBB;
 }
 
+.radio_stl_lab {
+  color: #999999;
+}
 .radio_stl_lab:before {
   margin-top: 0;
   margin-right: 5px;
   border: 1px solid #BBBBBB;
 }
 
+.check_stl:checked + label {
+  color: #454545;
+}
 .check_stl:checked + label:before {
   border: 1px solid #27AD98;
 }
@@ -328,6 +341,9 @@
   border: 1px solid #EEEEEE;
 }
 
+.radio_stl:checked + label {
+  color: #454545;
+}
 .radio_stl:checked + label:before {
   border: 1px solid #27AD98;
 }
@@ -338,7 +354,6 @@
 
 .check_stl + label.check_stl_lab {
   padding-left: 20px;
-  color: #454545;
 }
 .check_stl + label.check_stl_lab::before, .check_stl + label.check_stl_lab::after {
   content: "";

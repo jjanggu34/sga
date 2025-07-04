@@ -7,6 +7,7 @@
     padding:0 24px 20px;
     &:has(.tblStl3) {
         border-top:1px solid $title;
+        padding:0 0 20px;
     }
 }
 .default_tbl {
@@ -266,6 +267,7 @@
                             .form_txt {
                                 width:$wh100;
                                 padding:0;
+                                border-bottom:0;
                                 .form_contrl {
                                     display:block;
                                     width:$wh100;

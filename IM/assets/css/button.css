@@ -65,6 +65,7 @@
   background-image: none;
   padding: 0;
   background-image: url("../images/common/ico_refresh.svg");
+  background-size: 85%;
 }
 
 .btn_box a {
@@ -192,16 +193,15 @@ button:last-child {
 ---------------------------------------------*/
 .line {
   padding-bottom: 0;
+  border: 1px solid #DDDDDD;
   border-radius: 6px;
   font-size: 13px;
   color: #454545;
-  border: 1px solid #DDDDDD;
   line-height: 28px;
   background: #FFFFFF;
 }
 .line:focus-visible {
   color: #222222;
-  border: 1px solid #454545;
 }
 .line.btn_dropdown {
   padding: 0 30px 0 10px;
@@ -455,6 +455,9 @@ button.text.icon_reset::before, a.text.icon_reset::before {
 button.s_btn_more, a.s_btn_more {
   height: 28px;
   padding: 0 10px;
+}
+button:focus-visible, button:focus, a:focus-visible, a:focus {
+  outline-color: #222222;
 }
 
 /* 옵션 */
@@ -876,6 +879,9 @@ button.s_btn_more, a.s_btn_more {
 .pagination ul li .on {
   border-color: #27AD98 !important;
   background-color: #27AD98 !important;
+}
+.pagination.mini_paging ul {
+  gap: 0;
 }
 .pagination.mini_paging ul li.currentpage {
   width: auto;

@@ -102,9 +102,13 @@ $borderTs: "search_wrap", "tab_wrap";
                 font-weight:$font-w-r;
                 line-height:30px;
                 &.on {
+                    border-radius:0;
                     font-weight:$font-w-m;
                     color:$white;
                     background-color:$primary;
+                }
+                &:hover {
+                    border-radius:0;
                 }
             }
         }
@@ -274,17 +278,23 @@ $labels: "check_stl_lab", "radio_stl_lab";
 
 // default
 @each $label in $labels {
-    .#{$label}:before {
-        margin-top:0;
-        margin-right:5px;
-        border: 1px solid $default;
+    .#{$label} {
+        color:$text-disabled;
+        &:before {
+            margin-top:0;
+            margin-right:5px;
+            border: 1px solid $default;
+        }
     }
 }
 
 @each $input in $inputs {
     // checked
-    .#{$input}:checked + label:before {
-        border: $borderP;
+    .#{$input}:checked + label {
+        color:$content;
+        &:before {
+            border: $borderP;
+        }
     }
     // disabled
     .#{$input}:disabled + label:before {
@@ -295,7 +305,6 @@ $labels: "check_stl_lab", "radio_stl_lab";
 .check_stl {
     & + label.check_stl_lab {
         padding-left: 20px;
-        color: $content;
         &::before,
         &::after {
             content: "";
