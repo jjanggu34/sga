@@ -198,7 +198,7 @@ button:last-child {
   font-size: 13px;
   color: #454545;
   line-height: 28px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
 }
 .line:focus-visible {
   color: #222222;

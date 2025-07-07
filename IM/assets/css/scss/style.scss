@@ -746,6 +746,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background:$content;
         }
     }
+    .form_tit {
+        position:relative;
+        &::before {
+            @include content (3px, 3px);
+            @include topCenter ($left: 0);
+            display:inline-block;
+            border-radius:50%;
+            background:$content;
+        }
+    }
 }
 .noline {
     .form_tit {
@@ -2209,6 +2219,300 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 }
 
 /***************** workflow_designer *****************/
+/* 기본 화면 */
+.wf_designer_box {
+    border-color:$list-border;
+    border-radius:0 0 6px 6px;
+    .wf_name {
+        border-color:$list-border;
+        padding:20px 18px;
+        .fm-dft {
+            padding:0;
+        }
+        .form_tit {
+            padding-left:10px;
+        }
+    }
+    .wf_ds_btns {
+        top:50%;
+        transform:translateY(-50%);
+        button {
+            @include wh (30px,30px);
+            border:$borderD;
+            border-radius:6px;
+            background:url("../images/label/ico_FileEdit.svg")no-repeat center / 70%;
+            &.dt_modfy {
+                background-image:url("../images/common/ico_approval.svg");
+                background-size:100%;
+            }
+        }
+    }
+    .wf_btns_wrap {
+        padding:20px 20px 24px;
+        border-bottom:$borderC;
+        .wf_ds_dragbtns {
+            gap:13px;
+            div {
+                padding:0;
+            }
+        }
+        .sqbt_txt {
+            padding-top:9px;
+            @include title ($font12, $font-w-m, $secondary);
+        }
+        .sqbtn, .rs_line {
+            position:relative;
+            border-radius:6px;
+            background:none;
+            &::before {
+                content:"";
+                position:absolute;
+                @extend %positon_center;
+                display:inline-block;
+            }
+        }
+        .sqbtn {
+            border:1px solid #51C4C4;
+            background-color:#F2FCFC;
+            &.roleLane {
+                &::before {
+                    @include icon (24px,24px);
+                    background-image:url("../images/common/ico_roleLane.svg");
+                }
+            }
+            &.itaskBox {
+                &::before {
+                    @include icon (24px,24px);
+                    background-image:url("../images/common/ico_TaskBox.svg");
+                }
+            }
+            &.termination {
+                &::before {
+                    @include icon (24px,24px);
+                    background-image:url("../images/common/ico_termination.svg");
+                }
+            }
+            &.Connector {
+                &::before {
+                    @include wh (24px,24px);
+                    @include mask (#51C4C4);
+                    -webkit-mask-image:url("../images/moni/ico_connector.svg");
+                    mask-image:url("../images/moni/ico_connector.svg");
+                }
+            }
+        }
+        .rs_line {
+            border-width:1px;
+            &.succl {
+                border-color:$true;
+                background-color:#EFFCF3;
+                &::before {
+                    @include wh (24px,24px);
+                    @include mask ($true);
+                    -webkit-mask-image:url("../images/common/ico_ok.svg");
+                    mask-image:url("../images/common/ico_ok.svg");
+                    -webkit-mask-size:70%;
+                    mask-size:70%;
+                }
+            }
+            &.waitl {
+                border-color:$info;
+                background-color:#FFEBDD;
+                &::before {
+                    @include wh (24px,24px);
+                    @include mask ($info);
+                    -webkit-mask-image:url("../images/common/ico_warning.svg");
+                    mask-image:url("../images/common/ico_warning.svg");
+                    -webkit-mask-size:70%;
+                    mask-size:70%;
+                }
+            }
+            &.errl {
+                border-color:$false;
+                background-color:#FFEFEF;
+                &::before {
+                    @include icon (24px,24px);
+                    background-image:url("../images/common/ico_erro.svg");
+                    background-size:70%;
+                    background-position:center;
+                }
+            }
+        }
+        .screen_ctl {
+            @include topCenter ($right:20px);
+            border:$borderD;
+            border-radius:6px;
+            .line {
+                border:0;
+                border-radius:0;
+                border-right:$borderC;
+                &:first-child {
+                    border-radius:6px 0 0 6px;
+                }
+                &:last-child {
+                    border-radius:0 6px 6px 0;
+                    border-right:0;
+                }
+            }
+        }
+        .screenbtn {
+            padding:0 8px 0 32px;
+            &.fitOn {
+                background-image:url("../images/common/ico_fos.svg");
+                background-position:left 4px center;
+            }
+            &.acSize {
+                background-image:url("../images/common/ico_as.svg");
+                background-position:left 2px center;
+            }
+            &.zoomin,&.zoomout {
+                position:relative;
+                padding:0;
+                background-image:url("../images/common/ico_btn.svg");
+                background-position:center;
+                background-size:75%;
+                &::before {
+                    position:absolute;
+                    top:0;
+                    display:block;
+                    font-size:$font13;
+                    color:#000000;
+                }
+            }
+            &.zoomin {
+                &::before {
+                    content:"+";
+                    left:8px;
+                }
+            }
+            &.zoomout {
+                &::before {
+                    content:"-";
+                    left:10px;
+                }
+            }
+        }
+    }
+    .role_lane_wrap {
+        border-radius:0 0 6px 6px;
+        &>div:first-child {
+            padding:20px 13px;
+            font-size:0;
+            &>p {
+                padding-bottom:12px;
+            }
+            div:last-child {
+                @include title ($font12, $font-w-m, $secondary);
+                line-height: 25px;
+            }
+        }
+    }
+}
+// 워크플로우 디자인 요소모음
+.se_cir {
+    margin-right:7px;
+    font-size:$font16;
+    font-weight:$font-w-h;
+    line-height:26px;
+    background-color:$basic;
+}
+.tmn_cir {
+    @include wh (24px,24px);
+    margin-right:15px;
+}
+.taskBox_df {
+    margin-right:7px;
+    border-radius:6px;
+}
+.taskBox {
+    margin-right:7px;
+    border-radius:6px;
+    .task_name {
+        font-weight:$font-w-m;
+        color:$content;
+    }
+    .lc_cond {
+        @include wh (38px,38px);
+        i {
+            transform:translate(-50%,-50%);
+            @include wh (30px,30px);
+            margin:0;
+            @include mask ($white);
+            -webkit-mask-image:url("../images/common/ico_refresh.svg");
+            mask-image:url("../images/common/ico_refresh.svg");
+        }
+    }
+    .task_elm {
+        .tasks {
+            border-radius:6px;
+        }
+    }
+}
+.conditionBox {
+    width:auto;
+    padding:6px 14px 5px;
+    border-radius:4px;
+    font-size:$font12;
+    &.bluebox {
+        margin-right:12px;
+        border-color:#0052CC;
+        background-color:#E3EEFF;
+        &::after {
+            background-color:#0052CC;
+        }
+        p {
+            color:#0052CC;
+            font-size:$font12;
+            letter-spacing:0;
+        }
+    }
+    &.pupplebox {
+        border-color:#6A5ACD;
+        background-color:#E6E2FF;
+        &::after {
+            background-color:#6A5ACD;
+        }
+        p {
+            color:#6A5ACD;
+            font-size:$font12;
+            letter-spacing:0;
+        }
+    }
+}
+.task_elm {
+    display:inline-block;
+    .tasks {
+        display:inline-block;
+        background-image:url("../images/common/wfd_icon_tasks.svg");
+    }
+}
+
+.lanebox {
+    border-color:$list-border;
+    &.blue_lane {
+        background-color:#E6F0FF;
+        .blue_lane_tit {
+            border-right-color:#0052CC;
+            background-color:#D2E1FE;
+            .txt_vtcrl {
+                color:#0052CC;
+            }
+        }
+    }
+    &.green_lane {
+        border-color:#23A2A2;
+        background-color:#EFFDFE;
+        border-radius:0 0 6px 6px;
+        .green_lane_tit {
+            border-right-color:#23A2A2;
+            border-radius:0 0 0 6px;
+            background-color:#CAF0F1;
+            .txt_vtcrl {
+                color:#23A2A2;
+            }
+        }
+    }
+}
 // wd_detail 콘텐츠
 .wd_dt_cont {
     padding:20px 0;
@@ -4850,7 +5154,22 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
             .balloon {
-                left:-58px;
+                left:0;
+                border-radius:6px;
+                &::before {
+                    top:-6px;
+                    left:75px;
+                    @include wh(10px,10px);
+                    border:$borderC;
+                    border-right:0;
+                    border-bottom:0;
+                    border-radius:3px 0 0 0;
+                    background-color:$white;
+                    transform:rotate(45deg);
+                }
+                &::after {
+                    content:none;
+                }
             }
         }
     }

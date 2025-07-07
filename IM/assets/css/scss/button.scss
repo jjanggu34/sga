@@ -115,7 +115,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     font-size:$font13;
     color:$content;
     line-height:28px;
-    background:$white;
+    background-color:$white;
     // focus
     &:focus-visible {
         color:$title;
