@@ -64,6 +64,19 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     &:hover {
         background-color:#0A153C;
     }
+    &.btn_condition_add {
+        padding:0 10px 0 3px;
+        i {
+            @include wh (18px,18px);
+            margin-right:2px;
+            @include mask ($white);
+            -webkit-mask-image:url("../images/common/icon_plus_s.svg");
+            mask-image:url("../images/common/icon_plus_s.svg");
+            -webkit-mask-size:90%;
+            mask-size:90%;
+            background-position:center;
+        }
+    }
 }
 
 .basic2 {

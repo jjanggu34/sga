@@ -148,6 +148,22 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 }
 
 /*---------------------------------------------
+    #scrollbar
+---------------------------------------------*/
+.minitbl_scr {
+    &::-webkit-scrollbar {
+        width:5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color:$basic;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color:$btn-disabled;
+    }
+}
+
+/*---------------------------------------------
     #loading
 ---------------------------------------------*/
 /* input loader */
@@ -741,6 +757,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &::before {
             @include content (3px, 3px);
             @include topCenter ($left: 10px);
+            display:inline-block;
+            border-radius:50%;
+            background:$content;
+        }
+    }
+    &> th {
+        position:relative;
+        &::before {
+            @include content (3px, 3px);
+            @include topCenter ($left: 0);
             display:inline-block;
             border-radius:50%;
             background:$content;
@@ -2222,7 +2248,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /* 기본 화면 */
 .wf_designer_box {
     border-color:$list-border;
-    border-radius:0 0 6px 6px;
+    border-radius:6px;
     .wf_name {
         border-color:$list-border;
         padding:20px 18px;
@@ -2395,7 +2421,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .role_lane_wrap {
         border-radius:0 0 6px 6px;
-        &>div:first-child {
+        &>div:first-child:not(.lanebox) {
             padding:20px 13px;
             font-size:0;
             &>p {
@@ -2405,6 +2431,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 @include title ($font12, $font-w-m, $secondary);
                 line-height: 25px;
             }
+        }
+    }
+    // detail
+    .wd_detail {
+        border-radius:13px 6px 6px 13px;
+    }
+}
+.wk_gr_type {
+    &.open {
+        &+.wk_form:after {
+            content:none;
         }
     }
 }
@@ -2513,11 +2550,90 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
 }
+
+// cond_editor
+.cond_editor {
+    padding:20px;
+    border:$borderC;
+    border-radius:6px;
+    box-shadow:0 6px 6px rgb(0 0 0 / 7%);
+}
+.cond_btn_wrap {
+    margin-top:9px;
+    padding:18px 20px;
+    border-radius:6px;
+    background-color:#F4F7FA;
+    .req_txt {
+        font-size:$font14;
+        color:$basic;
+    }
+}
+.cond_sel {
+    position:relative;
+    gap:12px 10px;
+    padding:17px 0 0 22px;
+    .form_contrl {
+        height:28px;
+        margin:0;
+        font-size:$font13;
+        color:$content;
+    }
+    .btn_option {
+        top:0;
+        @include wh (28px, 28px);
+        padding:0;
+        border:0;
+        border-radius:4px;
+        background-color:$basic;
+        &.btn_del_option {
+            &::after {
+                @extend %positon_center;
+                @include wh (18px,18px);
+                @include mask($white);
+                -webkit-mask-image:url("../images/common/ico_minus.svg");
+                mask-image:url("../images/common/ico_minus.svg");
+                background-position:center;
+            }
+        }
+    }
+}
+
 // wd_detail 콘텐츠
 .wd_dt_cont {
     padding:20px 0;
-    .default_tbl.tblStl2 tbody td {
-        line-height:unset;
+    .default_tbl {
+        display:block;
+        width:auto;
+        padding:9px 12px 0;
+        margin-bottom:20px;
+        border:0;
+        border-radius:6px;
+        background-color:$body;
+        &.tblStl2 {
+            tbody {
+                display:block;
+            }
+            tr {
+                display:flex;
+                border:0;
+            }
+            th,td {
+                border:0;
+            }
+            th {
+                padding:4px 4px 8px 10px;
+                background-color:transparent;
+            }
+            td {
+                display:inline-block;
+                width:100%;
+                padding:0;
+                text-align:left;
+            }
+        }
+        &+.wk_tab {
+            border-top:1px solid $title;
+        }
     }
     .filebox .form_contrl, .form_contrl {
         width:$wh100;
@@ -2527,10 +2643,116 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .wk_tab {
     .btn_d_arw {
+        position:relative;
         padding:0;
+        border:$borderD;
+        border-radius:4px;
+        .btn_dtail_arrow {
+            position:absolute;
+            @extend %positon_center;
+            @include wh (16px,16px);
+            margin-top:0;
+            @include mask ($title);
+            -webkit-mask-image:$icoAccordion;
+            mask-image:$icoAccordion;
+            background-position:center;
+            &.up {
+                margin-top:0;
+                background-color:$white;
+                transform:translate(-50%,-50%) rotate(180deg);
+            }
+        }
+        &:has(.up) {
+            background-color:$basic;
+        }
+    }
+    p {
+        font-weight:$font-w-r;
+    }
+    .on_color {
+        font-weight:$font-w-m;
+        color:$basic;
     }
     .btn_option {
+        @include wh (16px,16px);
         padding:0;
+        border:0;
+        border-radius:4px;
+        background-color:$text-disabled;
+        &::after {
+            left:4px;
+        }
+    }
+    &.bgopen, &.leftbd {
+        background-color:#F4F7FA;
+        &>.tb_dt_link .btn_option {
+            background-color:$basic;
+        }
+    }
+    &.bgopen {
+        .wk_gr_arw {
+            @include wh (16px,16px);
+            @include mask ($text-disabled);
+            -webkit-mask-image:$icoAccordion2;
+            mask-image:$icoAccordion2;
+            background-position:center;
+            transform:rotate(-90deg);
+        }
+    }
+    .wk_tab_small {
+        p {
+            font-weight:$font-w-m;
+            color:$text-disabled;
+        }
+        &.open {
+            background-color:#E2E6F0;
+            &>.wk_gr_type {
+                &>.wk_gr_arw {
+                    @include wh (16px,16px);
+                    background-color:$basic;
+                    background-position:center;
+                    transform:rotate(0);
+                }
+                &.hrzbd {
+                    .on_color {
+                        color:$basic;
+                    }
+                }
+            }
+            .btn_option {
+                background-color:$basic;
+            }
+        }
+
+    }
+    .wk_form {
+        .bul_dot {
+            .form_tit {
+                &::before {
+                    left:7px;
+                }
+            }
+        }
+    }
+}
+
+// designer_table
+.wf_post_t {
+    padding:20px;
+    border-radius:13px 13px 0 0 ;
+    background-color:$white;
+    box-shadow:0 6px 6px rgb(0 0 0 / 7%);
+    .moved_tit.minitit {
+        padding:0 0 24px;
+    }
+}
+
+.minitbl_scr {
+    .minitbl {
+        thead {
+            position:sticky;
+            top:0;
+        }
     }
 }
 

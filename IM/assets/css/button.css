@@ -150,6 +150,27 @@ button:last-child {
 .basic:hover {
   background-color: #0A153C;
 }
+.basic.btn_condition_add {
+  padding: 0 10px 0 3px;
+}
+.basic.btn_condition_add i {
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #FFFFFF;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/common/icon_plus_s.svg");
+  mask-image: url("../images/common/icon_plus_s.svg");
+  -webkit-mask-size: 90%;
+  mask-size: 90%;
+  background-position: center;
+}
 
 .basic2 {
   border: 1px solid #495991;
