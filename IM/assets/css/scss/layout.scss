@@ -117,8 +117,9 @@ body {
         .warning_txt {
             position:relative;;
             padding:0 22px 0 22px;
-            font-size:var(--font-12 );
+            font-size:$font12;
             color:$false;
+            word-break: keep-all;
             &::before {
                 content:"";
                 position:absolute;
