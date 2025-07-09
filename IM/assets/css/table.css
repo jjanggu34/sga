@@ -316,13 +316,6 @@
   border-radius: 6px;
   background-color: #FFFFFF;
 }
-.default_tbl .detail_open > td .detail_open_cont .tbl_list::-webkit-scrollbar {
-  height: 7px;
-}
-.default_tbl .detail_open > td .detail_open_cont .tbl_list::-webkit-scrollbar-thumb {
-  border-radius: 30px;
-  background: #EEEEEE;
-}
 .default_tbl .detail_open > td .detail_open_cont .tbl_list .default_tbl tr td {
   border: 0;
   border-bottom: 1px solid #DDDDDD;

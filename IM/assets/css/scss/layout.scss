@@ -545,10 +545,41 @@ body {
                     }
                     &.on {
                         &+.open {
+                            top:-7px;
+                            padding:10px;
                             margin:0;
                             border-radius:6px;
-                            background-color:$disabled-line-bg;
+                            background-color:$primary;
                             box-shadow:1px 1px 6px rgba(0, 0, 0, 0.3254901961);
+                            li {
+                                border-bottom:0;
+                            }
+                            a {
+                                color:$white;
+                                opacity:0.8;
+                                &::after {
+                                    background-color:$white;
+                                    opacity:0.8;
+                                }
+                                &:hover {
+                                    font-weight:$font-w-b;
+                                    opacity:1;
+                                    &::after {
+                                        opacity:1;
+                                    }
+                                }
+                            }
+                            &::before {
+                                content:"";
+                                position:absolute;
+                                left:-4px;
+                                top:21px;
+                                transform:rotate(45deg);
+                                display:block;
+                                @include wh (13px,17px);
+                                border-radius:3px;
+                                background-color:$primary;
+                            }
                         }
                     }
                 }
@@ -585,17 +616,20 @@ body {
             background-color:#F9FBFD;
             &>p {
                 display:block;
-                padding:24px 22px;
+                padding:0 22px;
                 @include title ($font12, $font-w-m, $text-disabled);
                 line-height:18px;
             }
         }
     }
     .nav_header {
+        position:sticky;
+        top:0;
         @include flexsb();
         padding:15px 20px 16px;
         border-bottom:1px solid $text-disabled;
         background-color:$white;
+        z-index:1;
         .logo {
             @include wh (171px, 28px);
             img {
@@ -620,7 +654,7 @@ body {
         }
     }
     .nav_list {
-        min-height:calc($wh100 - 175px);
+        min-height:calc($wh100 - 180px);
         padding:0 10px 10px;
         > li {
             margin-top:10px;
@@ -1075,14 +1109,10 @@ body {
                 margin:60px 0 0 ;
                 padding-top:30px;
             }
-            &.cont_scroll {
+            &.scroll {
                 height:$wh100;
                 max-height:741px;
                 overflow-y:auto;
-                &::-webkit-scrollbar-thumb {
-                    border-radius:30px;
-                    background-color:$border-d;
-                }
                 .tab_wrap {
                     padding-top:0;
                 }
@@ -1090,13 +1120,6 @@ body {
                     padding:0 0 10px;
                     margin:0 20px;
                     overflow-x:auto;
-                    &::-webkit-scrollbar-thumb {
-                        border-radius:30px;
-                        background-color:$border-d;
-                    }
-                    &::-webkit-scrollbar {
-                        height:10px;
-                    }
                 }
                 .tbl_btm { //table 아래 pagination
                     padding:10px 20px 20px;
@@ -1113,7 +1136,7 @@ body {
                     width:$wh100;
                     padding:20px 0;
                     margin-top:0;
-                    &.cont_scroll {
+                    &.scroll {
                         height:$wh100;
                         min-height:auto;
                         // max-height:624px;
@@ -1211,12 +1234,6 @@ body {
     // cont
     .dtv_cont {
         padding:0;
-        &.scroll {
-            &::-webkit-scrollbar-thumb {
-                border-radius:30px;
-                background:$border-d;
-            }
-        }
         .view_list {
             padding-bottom:0;
         }
@@ -1266,17 +1283,6 @@ body {
             }
         }
         &.poptable02 {
-            .tbl_list {
-                border-bottom:0;
-                &::-webkit-scrollbar-thumb {
-                    background: $border-d;
-                    border-radius: 10px;
-                }
-                &::-webkit-scrollbar-track {
-                    background-color:$btn-disabled;
-                    border-radius: 10px;
-                }
-            }
             .default_tbl {
                 border-bottom:0;
                 tbody {

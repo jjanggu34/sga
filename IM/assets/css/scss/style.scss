@@ -120,9 +120,11 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
     }
     &.msg5 {
         background-image:url("../images/common/ico_mail.svg");
+        background-position:center;
     }
     &.msg4 {
         background-image:url("../images/common/icon_alarm.svg");
+        background-position:center;
     }
 }
 
@@ -156,16 +158,31 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 /*---------------------------------------------
     #scrollbar
 ---------------------------------------------*/
-.minitbl_scr {
-    &::-webkit-scrollbar {
-        width:5px;
-    }
+// 공통 스크롤바 스타일
+.scrollbar-common {
     &::-webkit-scrollbar-thumb {
-        background-color:$basic;
+        background-color: $basic;
         border-radius: 10px;
     }
     &::-webkit-scrollbar-track {
-        background-color:$btn-disabled;
+        background-color: $btn-disabled;
+    }
+}
+
+// row
+.scroll_r {
+    @extend .scrollbar-common;
+    &::-webkit-scrollbar {
+        height: 5px;
+    }
+}
+
+// col
+.scroll {
+    @extend .scrollbar-common;
+    scrollbar-width: auto;
+    &::-webkit-scrollbar {
+        width: 5px;
     }
 }
 
@@ -326,6 +343,84 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
 /*---------------------------------------------
     #balloon
 ---------------------------------------------*/
+.balloon {
+    left:0;
+    border:$borderC;
+    border-radius:6px;
+    background-color:$white;
+    &::before {
+        top:-6px;
+        left:75px;
+        @include wh(10px,10px);
+        margin:0;
+        border:$borderC;
+        border-right:0;
+        border-bottom:0;
+        border-radius:3px 0 0 0;
+        background-color:$white;
+        transform:rotate(45deg);
+    }
+    &::after {
+        content:none;
+    }
+    &.coll_box {
+        &::before {
+            top:-6px;
+        }
+    }
+}
+
+.pcs_bl.balloon {
+    top:-37px;
+    &::before {
+        bottom:-6px;
+        border-top:$borderC;
+        transform:rotate(225deg);
+    }
+}
+
+.exp_perid_bar {
+    .balloon {
+        left:52%;
+        top:unset;
+        bottom:20px;
+        padding:8px 14px 6px;
+        &::before {
+            top:unset;
+            bottom:-5px;
+            left:50%;
+            transform:translateX(-50%) rotate(225deg);
+            @include wh(8px,8px);
+        }
+        p {
+            padding:0;
+            font-size:$font14;
+            color:$primary;
+            line-height:$font18;
+        }
+    }
+}
+
+.balloon.list_pop {
+    left:auto;
+    box-shadow:0 3px 3px #00000016;
+    .move_box {
+        padding:15px 23px;
+        border:0;
+        .search_box {
+            text-align:right;
+            .search_inputbox {
+                width:273px;
+            }
+        }
+    }
+    .move_tbl {
+        border-bottom:$borderD;
+    }
+    .mini_paging {
+        margin-top:16px;
+    }
+}
 
 /*---------------------------------------------
     #라벨 테이블 안에서 사용
@@ -981,11 +1076,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
-.pcs_bl.balloon {
-    border:$borderC;
-    border-radius:6px;
-}
-
 /*********************************************************************
     #tab
     참고: guide/views/tab.html
@@ -1054,6 +1144,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     &.network {
                         -webkit-mask-image:url("../images/common/ico_net.svg");
                         mask-image:url("../images/common/ico_net.svg");
+                    }
+                    &.etc {
+                        -webkit-mask-image:url("../images/common/ico_kebab.svg");
+                        mask-image:url("../images/common/ico_kebab.svg");
                     }
                 }
                 &.on {
@@ -1864,13 +1958,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .workflow_box {
     margin-bottom:20px;
     background-color:$table-th;
-    &::-webkit-scrollbar-thumb {
-        border-radius:30px;
-        background-color:$list-border;
-    }
-    &::-webkit-scrollbar {
-        height:10px;
-    }
     &:has(.flow2) {
         height:207px
     }
@@ -3252,27 +3339,6 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             @include icon(24px,24px);
             background-image:url("../images/common/icon_plus.svg");
             background-position:unset;
-        }
-    }
-    .balloon.list_pop {
-        border-radius:6px;
-        border-color:$list-border;
-        box-shadow:0 3px 3px #00000016;
-        .move_box {
-            padding:15px 23px;
-            border:0;
-            .search_box {
-                text-align:right;
-                .search_inputbox {
-                    width:273px;
-                }
-            }
-        }
-        .move_tbl {
-            border-bottom:$borderD;
-        }
-        .mini_paging {
-            margin-top:16px;
         }
     }
     /* 라이선스 화면 */
@@ -5508,24 +5574,6 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                     max-width:none;
                 }
             }
-            .balloon {
-                left:0;
-                border-radius:6px;
-                &::before {
-                    top:-6px;
-                    left:75px;
-                    @include wh(10px,10px);
-                    border:$borderC;
-                    border-right:0;
-                    border-bottom:0;
-                    border-radius:3px 0 0 0;
-                    background-color:$white;
-                    transform:rotate(45deg);
-                }
-                &::after {
-                    content:none;
-                }
-            }
         }
     }
     a {
@@ -5550,7 +5598,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         box-shadow:0 3px 3px rgb(0 0 0 / 16%);
         &::after {
             transform:translate(-50%,-50%);
-            @include wh (24px,24px);
+            @include icon (24px,24px);
             margin:0;
             background-image:url("../images/label/ico_FileEdit_f.svg");
             background-position:center;
@@ -6119,37 +6167,6 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             background-color:$primary;
             &.gray {
                 background-color:$text-disabled;
-            }
-        }
-        .balloon {
-            left:52%;
-            top:unset;
-            bottom:20px;
-            padding:8px 18px 6px;
-            border:$borderC;
-            border-radius:6px;
-            &::before {
-                top:unset;
-                bottom:-5px;
-                transform:translateX(-50%);
-                @include wh(9px,9px);
-                border:$borderC;
-                border-radius:3px;
-                background-color:$white;
-                transform:translateX(-50%) rotate(45deg);
-            }
-            &::after {
-                top:25px;
-                transform:translateX(-50%);
-                @include wh(15px,7px);
-                border:0;
-                background-color:$white;
-            }
-            p {
-                padding:0;
-                font-size:$font14;
-                color:$primary;
-                line-height:$font18;
             }
         }
     }
