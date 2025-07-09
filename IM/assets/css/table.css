@@ -21,7 +21,7 @@
 /*---------------------------------------------
 	#Placeholder
 ---------------------------------------------*/
-.default_tbl tbody tr th.new_org::after, .default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow, .move_tbl2 .add_option .btn_option::after {
+.default_tbl tbody tr th.new_org::after, .default_tbl.tblStl2 .tb_dt_link .btn_d_arw .btn_dtail_arrow, .move_tbl2 .add_option .btn_option::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -85,7 +85,7 @@
   padding: 10px;
   border: 0;
   border-top: 1px solid #C9C9C9;
-  border-bottom: 1px solid #757575;
+  border-bottom: 1px solid #222222;
   line-height: 16px;
   color: #222222;
   background-color: #F8F8F8;
@@ -191,29 +191,6 @@
 .default_tbl.tblStl2 tbody th.th-bl {
   background-color: #F8F8F8;
 }
-.default_tbl.tblStl2 tbody th .tb_dt_link p {
-  font-weight: 400;
-}
-.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-}
-.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: none;
-  margin-top: 0;
-  background-image: url("../images/common/ico_accordion.svg");
-}
-.default_tbl.tblStl2 tbody th .tb_dt_link .btn_d_arw .btn_dtail_arrow.up {
-  transform: translate(-50%, -50%) rotate(180deg);
-  background-position: unset;
-}
 .default_tbl.tblStl2 tbody td {
   overflow: unset;
   border: 1px solid #C9C9C9;
@@ -224,27 +201,50 @@
 .default_tbl.tblStl2 tbody td:last-child {
   border-right: 0;
 }
-.default_tbl.tblStl2 tbody td.aft_cont {
+.default_tbl.tblStl2 .tb_dt_link p {
+  font-weight: 400;
+}
+.default_tbl.tblStl2 .tb_dt_link .btn_d_arw {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+.default_tbl.tblStl2 .tb_dt_link .btn_d_arw .btn_dtail_arrow {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+  margin-top: 0;
+  background-image: url("../images/common/ico_accordion.svg");
+}
+.default_tbl.tblStl2 .tb_dt_link .btn_d_arw .btn_dtail_arrow.up {
+  transform: translate(-50%, -50%) rotate(180deg);
+  background-position: unset;
+}
+.default_tbl.tblStl2 .aft_cont {
   background: #FCFCFC;
 }
-.default_tbl.tblStl2 tbody td.aft_cont .aft_ir {
+.default_tbl.tblStl2 .aft_cont .aft_ir {
   font-size: 13px;
   font-weight: 500;
   color: #0052CC;
 }
-.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i {
+.default_tbl.tblStl2 .aft_i {
   top: 7px;
   left: -32px;
   width: 22px;
   height: 22px;
 }
-.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_add::after {
+.default_tbl.tblStl2 .aft_i.aft_add::after {
   background: url("../images/common/ico_add.svg") no-repeat center;
 }
-.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_mod::after {
+.default_tbl.tblStl2 .aft_i.aft_mod::after {
   background: url("../images/common/ico_mod.svg") no-repeat center;
 }
-.default_tbl.tblStl2 tbody td.aft_cont .aft_ir .aft_i.aft_mns::after {
+.default_tbl.tblStl2 .aft_i.aft_mns::after {
   background: url("../images/common/ico_mns.svg") no-repeat center;
 }
 .default_tbl.tblStl3 {
@@ -265,45 +265,31 @@
 .default_tbl.tblStl3 tbody td:last-child {
   border-right: 0;
 }
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li:first-child .flx {
+.default_tbl.tblStl3 .flx_frm_tbl li:first-child .flx {
   padding: 25px 20px 10px;
 }
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li:last-child .flx {
+.default_tbl.tblStl3 .flx_frm_tbl li:last-child .flx {
   padding: 0 20px 25px;
 }
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li.bul_dot .flx .form_tit {
-  position: relative;
-  padding-left: 8px;
-}
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li.bul_dot .flx .form_tit::before {
-  content: "";
-  width: 3px;
-  height: 3px;
-  position: absolute;
-  top: 5px;
-  left: 0;
-  display: inline-block;
-  border-radius: 50%;
-  background: #999999;
-}
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx {
+.default_tbl.tblStl3 .flx {
   width: 50%;
   padding: 0 20px 10px;
 }
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx:first-child {
+.default_tbl.tblStl3 .flx:first-child {
   border-right: 1px solid #DDDDDD;
 }
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_tit {
+.default_tbl.tblStl3 .flx .form_tit {
   min-width: 185px;
   width: auto;
   padding: 0;
+  font-weight: 400;
 }
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_txt {
+.default_tbl.tblStl3 .flx .form_txt {
   width: 100%;
   padding: 0;
   border-bottom: 0;
 }
-.default_tbl.tblStl3 tbody td .flx_frm_tbl li .flx .form_txt .form_contrl {
+.default_tbl.tblStl3 .flx .form_txt .form_contrl {
   display: block;
   width: 100%;
 }

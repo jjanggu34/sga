@@ -265,6 +265,12 @@
 .icon_alim.icon_caution {
   background-image: url("../images/common/icon_caution.svg");
 }
+.icon_alim.msg5 {
+  background-image: url("../images/common/ico_mail.svg");
+}
+.icon_alim.msg4 {
+  background-image: url("../images/common/icon_alarm.svg");
+}
 
 .content_infotxt {
   font-size: 13px;
@@ -493,6 +499,9 @@ input + .loader {
   }
 }
 
+/*---------------------------------------------
+    #balloon
+---------------------------------------------*/
 /*---------------------------------------------
     #라벨 테이블 안에서 사용
     기본 : icon_list
@@ -1079,7 +1088,7 @@ input + .loader {
 /*********************************************************************
 #블릿텍스트
 *********************************************************************/
-/* . */
+/* 기본 */
 .bul_dot > dt {
   position: relative;
   display: inline-block;
@@ -1129,27 +1138,47 @@ input + .loader {
   border-radius: 50%;
   background: #454545;
 }
-.bul_dot .form_tit, .form_stl .form_tbl.bul_dot > li .form_txt {
+
+/* border-bottom 없을 때 */
+.noline .form_tit {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-left: 10px;
+}
+
+/* 워크플로우 detail 팝업 */
+.wk_form .bul_dot .form_tit {
   position: relative;
 }
-.bul_dot .form_tit::before, .form_stl .form_tbl.bul_dot > li .form_txt::before {
+.wk_form .bul_dot .form_tit::before {
   content: "";
   width: 3px;
   height: 3px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
+  left: 8px;
   display: inline-block;
   border-radius: 50%;
   background: #454545;
 }
 
-.noline .form_tit, .noline .form_stl .form_tbl.bul_dot > li .form_txt, .form_stl .form_tbl.bul_dot > li .noline .form_txt {
+/* table3 */
+.tblStl3 li.bul_dot .flx .form_tit {
   position: relative;
+  padding-left: 8px;
+}
+.tblStl3 li.bul_dot .flx .form_tit::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 5px;
+  left: 0;
   display: inline-block;
-  width: 100%;
-  padding-left: 10px;
+  border-radius: 50%;
+  background: #454545;
 }
 
 /*********************************************************************
@@ -2031,6 +2060,32 @@ input + .loader {
   padding-right: 4px;
 }
 
+.related_box {
+  top: 63px;
+  transform: translateX(-50%);
+  width: 458px;
+  padding: 10px 10px;
+  margin: 0;
+  border: 1px solid #BBBBBB;
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+}
+.related_box .related_list {
+  padding-top: 9px;
+  border-top: 1px solid #DDDDDD;
+}
+.related_box .related_list li a {
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-weight: 400;
+  color: #454545;
+}
+.related_box .related_list li a:hover {
+  font-weight: 500;
+  color: #454545;
+  background-color: rgba(22, 40, 102, 0.09);
+}
+
 /*********************************************************************
     #리스트
     참고: guide/views/list.html, guide/views/list2.html
@@ -2724,7 +2779,7 @@ input + .loader {
 .wf_designer_box .wf_name .fm-dft {
   padding: 0;
 }
-.wf_designer_box .wf_name .form_tit, .wf_designer_box .wf_name .form_stl .form_tbl.bul_dot > li .form_txt, .form_stl .form_tbl.bul_dot > li .wf_designer_box .wf_name .form_txt {
+.wf_designer_box .wf_name .form_tit {
   padding-left: 10px;
 }
 .wf_designer_box .wf_ds_btns {
@@ -2813,56 +2868,137 @@ input + .loader {
 .wf_designer_box .wf_btns_wrap .rs_line {
   border-width: 1px;
 }
+.wf_designer_box .wf_btns_wrap .rs_line::before {
+  width: 24px;
+  height: 24px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.apply::before {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #162866;
+  vertical-align: text-bottom;
+  background-image: none;
+  -webkit-mask-size: 70%;
+  mask-size: 70%;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.succl::before {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #162866;
+  vertical-align: text-bottom;
+  background-image: none;
+  -webkit-mask-size: 70%;
+  mask-size: 70%;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.approl::before {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #162866;
+  vertical-align: text-bottom;
+  background-image: none;
+  -webkit-mask-size: 70%;
+  mask-size: 70%;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.waitl::before {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #162866;
+  vertical-align: text-bottom;
+  background-image: none;
+  -webkit-mask-size: 70%;
+  mask-size: 70%;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.reject::before {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #162866;
+  vertical-align: text-bottom;
+  background-image: none;
+  -webkit-mask-size: 70%;
+  mask-size: 70%;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.apply {
+  border-color: #162866;
+  background-color: #DBE0F0;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.apply::before {
+  background-color: #162866;
+  -webkit-mask-image: url("../images/label/ico_FileEdit_f.svg");
+  mask-image: url("../images/label/ico_FileEdit_f.svg");
+}
 .wf_designer_box .wf_btns_wrap .rs_line.succl {
+  border-color: #0452CB;
+  background-color: #E3EEFF;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.succl::before {
+  background-color: #0452CB;
+  -webkit-mask-image: url("../images/common/ico_ok.svg");
+  mask-image: url("../images/common/ico_ok.svg");
+}
+.wf_designer_box .wf_btns_wrap .rs_line.approl {
   border-color: #23AC3D;
   background-color: #EFFCF3;
 }
-.wf_designer_box .wf_btns_wrap .rs_line.succl::before {
-  width: 24px;
-  height: 24px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
+.wf_designer_box .wf_btns_wrap .rs_line.approl::before {
   background-color: #23AC3D;
-  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_ok.svg");
   mask-image: url("../images/common/ico_ok.svg");
-  -webkit-mask-size: 70%;
-  mask-size: 70%;
 }
 .wf_designer_box .wf_btns_wrap .rs_line.waitl {
+  border-color: #F9AF1C;
+  background-color: #FFF3DB;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.waitl::before {
+  background-color: #F9AF1C;
+  -webkit-mask-image: url("../images/label/icon_pgs.svg");
+  mask-image: url("../images/label/icon_pgs.svg");
+}
+.wf_designer_box .wf_btns_wrap .rs_line.reject {
   border-color: #F76900;
   background-color: #FFEBDD;
 }
-.wf_designer_box .wf_btns_wrap .rs_line.waitl::before {
-  width: 24px;
-  height: 24px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-position: center;
-  mask-position: center;
+.wf_designer_box .wf_btns_wrap .rs_line.reject::before {
   background-color: #F76900;
-  vertical-align: text-bottom;
   -webkit-mask-image: url("../images/common/ico_warning.svg");
   mask-image: url("../images/common/ico_warning.svg");
-  -webkit-mask-size: 70%;
-  mask-size: 70%;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.cancel {
+  border-color: #999999;
+  background-color: #EBEBEB;
+}
+.wf_designer_box .wf_btns_wrap .rs_line.cancel::before {
+  background-image: url("../images/label/closeCircle.svg");
+  background-size: 70%;
+  background-position: center;
 }
 .wf_designer_box .wf_btns_wrap .rs_line.errl {
   border-color: #FF0000;
   background-color: #FFEFEF;
 }
 .wf_designer_box .wf_btns_wrap .rs_line.errl::before {
-  width: 24px;
-  height: 24px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: none;
   background-image: url("../images/common/ico_erro.svg");
   background-size: 70%;
   background-position: center;
@@ -3151,9 +3287,33 @@ input + .loader {
 .wd_dt_cont .default_tbl + .wk_tab {
   border-top: 1px solid #222222;
 }
-.wd_dt_cont .filebox .form_contrl, .wd_dt_cont .form_contrl {
+.wd_dt_cont .filebox .file_btns button {
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: none;
+}
+.wd_dt_cont .filebox .file_btns button.upload {
+  background-size: 60%;
+}
+.wd_dt_cont .filebox .form_contrl, .wd_dt_cont .filebox .form_contrl {
   width: 100%;
-  height: 30px;
+  height: 26px;
+}
+.wd_dt_cont .inp_set {
+  position: relative;
+  display: block;
+}
+.wd_dt_cont .inp_set .form_contrl {
+  width: 100%;
+}
+.wd_dt_cont .inp_set .icon_setting {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4px;
 }
 
 .wk_tab .btn_d_arw {
@@ -3247,8 +3407,29 @@ input + .loader {
 .wk_tab .wk_tab_small.open .btn_option {
   background-color: #162866;
 }
-.wk_tab .wk_form .bul_dot .form_tit::before, .wk_tab .wk_form .form_stl .form_tbl.bul_dot > li .form_txt::before, .form_stl .wk_tab .wk_form .form_tbl.bul_dot > li .form_txt::before {
-  left: 7px;
+
+.wk_form.leftbd::before {
+  border-color: #C9C9C9;
+}
+
+.leftbd::before {
+  border-color: #C9C9C9;
+}
+
+.tb_dt_link.hrzbd::before {
+  border-color: #C9C9C9;
+}
+
+.first.leftbd::before {
+  border-color: #C9C9C9;
+}
+
+.wk_gr_type::before {
+  border-color: #C9C9C9;
+}
+
+.t_tr > .wk_tab::before {
+  border-color: #C9C9C9;
 }
 
 .wf_post_t {
@@ -3264,6 +3445,7 @@ input + .loader {
 .minitbl_scr .minitbl thead {
   position: sticky;
   top: 0;
+  box-shadow: inset 0 1px 0 #C9C9C9, inset 0 -1px 0 #222222;
 }
 
 /***************** i-card_wrap *****************/
@@ -4319,7 +4501,7 @@ input + .loader {
   line-height: 18px;
 }
 .mod_cont .mod_cont_df .bul_dot dt::before {
-  top: 5px;
+  top: 7px;
   left: 0;
 }
 .mod_cont .mod_cont_df .bul_dot dd {
@@ -5345,7 +5527,7 @@ input + .loader {
 }
 
 /* cdt_box */
-.cdt_box .form_tit > label, .cdt_box .form_stl .form_tbl.bul_dot > li .form_txt > label, .form_stl .form_tbl.bul_dot > li .cdt_box .form_txt > label {
+.cdt_box .form_tit > label {
   line-height: 2.3;
 }
 
@@ -5373,12 +5555,12 @@ input + .loader {
   padding-bottom: 0;
   border-bottom: 0;
 }
-.form_stl .form_tbl.noline .form_tit, .form_stl .form_tbl.noline .form_tbl.bul_dot > li .form_txt, .form_stl .form_tbl.bul_dot > li .form_tbl.noline .form_txt {
+.form_stl .form_tbl.noline .form_tit {
   min-width: 100px;
   width: 220px;
   padding: 10px;
 }
-.form_stl .form_tbl.noline .form_tit label, .form_stl .form_tbl.noline .form_tbl.bul_dot > li .form_txt label, .form_stl .form_tbl.bul_dot > li .form_tbl.noline .form_txt label {
+.form_stl .form_tbl.noline .form_tit label {
   margin-bottom: 0;
 }
 .form_stl .form_tbl.noline .form_txt {
@@ -5395,20 +5577,15 @@ input + .loader {
 .form_stl .form_tbl.bul_dot > li::before {
   top: 24px;
 }
-.form_stl .form_tbl.bul_dot > li .form_tit, .form_stl .form_tbl.bul_dot > li .form_txt {
+.form_stl .form_tbl.bul_dot > li .form_tit {
   display: inline-block;
   padding: 8px 0 0;
-}
-.form_stl .form_tbl.bul_dot > li .form_txt {
-  padding: 0;
-  width: 100%;
-  border-bottom: 0;
 }
 .form_stl .form_tbl li {
   display: flex;
   border-bottom: 1px solid #C9C9C9;
 }
-.form_stl .form_tbl li .form_tit, .form_stl .form_tbl.bul_dot > li li .form_txt {
+.form_stl .form_tbl li .form_tit {
   border-bottom: 0;
   font-weight: 400;
 }
@@ -5422,13 +5599,13 @@ input + .loader {
   padding: 11px;
   border-bottom: 1px solid #DDDDDD;
 }
-.form_stl .form_list .form_tit, .form_stl .form_list .form_tbl.bul_dot > li .form_txt, .form_stl .form_tbl.bul_dot > li .form_list .form_txt {
+.form_stl .form_list .form_tit {
   position: unset;
   padding-top: 5px;
   margin: 0;
   font-weight: 400;
 }
-.form_stl .form_list .form_tit::before, .form_stl .form_list .form_tbl.bul_dot > li .form_txt::before, .form_stl .form_tbl.bul_dot > li .form_list .form_txt::before {
+.form_stl .form_list .form_tit::before {
   left: 10px;
   top: 21px;
 }
@@ -5480,7 +5657,7 @@ input + .loader {
   padding: 0;
   border-bottom: 0;
 }
-.action_tree_top .form_stl .form_list.noline .form_tit, .action_tree_top .form_stl .form_list.noline .form_tbl.bul_dot > li .form_txt, .action_tree_top .form_stl .form_tbl.bul_dot > li .form_list.noline .form_txt {
+.action_tree_top .form_stl .form_list.noline .form_tit {
   width: auto;
   min-width: unset;
   padding: 0;
@@ -5703,7 +5880,7 @@ input + .loader {
   margin-left: 18px;
   background-color: #707A88;
 }
-.action_list .entrybox.entry_connect .entry_setting .form_stl .form_list .form_tit, .action_list .entrybox.entry_connect .entry_setting .form_stl .form_list .form_tbl.bul_dot > li .form_txt, .action_list .entrybox.entry_connect .entry_setting .form_stl .form_tbl.bul_dot > li .form_list .form_txt {
+.action_list .entrybox.entry_connect .entry_setting .form_stl .form_list .form_tit {
   min-width: 160px;
   width: auto;
 }
@@ -5821,7 +5998,7 @@ input + .loader {
 .action_list .entry_setting .form_stl .form_list.noline {
   border-bottom: 0;
 }
-.action_list .entry_setting .form_stl .form_list.noline .form_tit, .action_list .entry_setting .form_stl .form_list.noline .form_tbl.bul_dot > li .form_txt, .action_list .entry_setting .form_stl .form_tbl.bul_dot > li .form_list.noline .form_txt {
+.action_list .entry_setting .form_stl .form_list.noline .form_tit {
   padding-top: 0;
   font-weight: 400;
 }
@@ -5884,10 +6061,10 @@ input + .loader {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.action_list .entry_setting .form_stl div.form_list.bul_dot .form_tit, .action_list .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt, .action_list .entry_setting .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt {
+.action_list .entry_setting .form_stl div.form_list.bul_dot .form_tit {
   position: relative;
 }
-.action_list .entry_setting .form_stl div.form_list.bul_dot .form_tit::before, .action_list .entry_setting .form_stl div.form_list.bul_dot .form_tbl.bul_dot > li .form_txt::before, .action_list .entry_setting .form_stl .form_tbl.bul_dot > li div.form_list.bul_dot .form_txt::before {
+.action_list .entry_setting .form_stl div.form_list.bul_dot .form_tit::before {
   content: "";
   width: 3px;
   height: 3px;
@@ -5940,7 +6117,18 @@ input + .loader {
   background-color: transparent;
 }
 .action_list .btn_desc {
-  border: 1px solid #DDDDDD;
+  width: 53px;
+  height: 53px;
+  border: 0;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+}
+.action_list .btn_desc::after {
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-image: url("../images/label/ico_FileEdit_f.svg");
+  background-position: center;
 }
 .action_list .balloon.entry_help {
   font-size: 14px;
@@ -6404,8 +6592,17 @@ input + .loader {
   box-shadow: none;
 }
 .hm_alim .dash_box.hm_req i {
-  background-image: url("../images/label/ico_application.svg");
-  background-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #0D64AF;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../images/label/ico_FileEdit_f.svg");
+  mask-image: url("../images/label/ico_FileEdit_f.svg");
+  background-image: none;
 }
 .hm_alim .dash_box.hm_req .hm_tit, .hm_alim .dash_box.hm_req .hm_alimnum, .hm_alim .dash_box.hm_req .hm_alimnum em {
   color: #0D64AF;

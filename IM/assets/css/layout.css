@@ -1389,7 +1389,7 @@ body * {
 
 /***************** center popup *****************/
 .layer_popup.is_visible {
-  background-color: rgba(34, 34, 34, 0.1254901961);
+  background-color: rgba(34, 34, 34, 0.16);
 }
 .layer_popup .popup_wrap {
   border-radius: 30px;

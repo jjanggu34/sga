@@ -64,6 +64,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     &:hover {
         background-color:#0A153C;
     }
+    // icon 들어갈 때
     &.btn_condition_add {
         padding:0 10px 0 3px;
         i {
@@ -75,6 +76,20 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
             -webkit-mask-size:90%;
             mask-size:90%;
             background-position:center;
+        }
+    }
+    &.icon_setting {
+        padding:0;
+        margin:0;
+        background-image:none;
+        &::before {
+            content:"";
+            display:block;
+            @include wh (10px,10px);
+            margin-left:2px;
+            @include mask ($white);
+            -webkit-mask-image:url("../images/common/icon_setting.svg");
+            mask-image:url("../images/common/icon_setting.svg");
         }
     }
 }

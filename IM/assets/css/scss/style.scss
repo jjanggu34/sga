@@ -118,6 +118,12 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
     &.icon_caution {
         background-image:url("../images/common/icon_caution.svg");
     }
+    &.msg5 {
+        background-image:url("../images/common/ico_mail.svg");
+    }
+    &.msg4 {
+        background-image:url("../images/common/icon_alarm.svg");
+    }
 }
 
 .content_infotxt {
@@ -316,6 +322,10 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
         }
     }
 }
+
+/*---------------------------------------------
+    #balloon
+---------------------------------------------*/
 
 /*---------------------------------------------
     #라벨 테이블 안에서 사용
@@ -736,7 +746,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /*********************************************************************
 #블릿텍스트
 *********************************************************************/
-/* . */
+/* 기본 */
 .bul_dot {
     &> dt {
         position:relative;
@@ -772,23 +782,49 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background:$content;
         }
     }
-    .form_tit {
-        position:relative;
-        &::before {
-            @include content (3px, 3px);
-            @include topCenter ($left: 0);
-            display:inline-block;
-            border-radius:50%;
-            background:$content;
-        }
-    }
 }
+/* border-bottom 없을 때 */
 .noline {
     .form_tit {
         position:relative;
         display:inline-block;
         width:$wh100;
         padding-left:10px;
+    }
+}
+/* 워크플로우 detail 팝업 */
+.wk_form {
+    .bul_dot {
+        .form_tit {
+            position:relative;
+            &::before {
+                @include content (3px, 3px);
+                @include topCenter ($left: 8px);
+                display:inline-block;
+                border-radius:50%;
+                background:$content;
+            }
+        }
+    }
+}
+/* table3 */
+.tblStl3 li {
+    &.bul_dot {
+        .flx {
+            .form_tit {
+                position:relative;
+                padding-left:8px;
+                &::before {
+                    @include content(3px,3px);
+                    position:absolute;
+                    top:5px;
+                    left:0;
+                    display:inline-block;
+                    border-radius:50%;
+                    background:$content;
+                }
+            }
+        }
     }
 }
 /*********************************************************************
@@ -1601,6 +1637,34 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
+.related_box {
+    top:63px;
+    transform:translateX(-50%);
+    width:458px;
+    padding:10px 10px;
+    margin:0;
+    border:1px solid $default;
+    border-top:0;
+    border-radius:0 0 6px 6px;
+    .related_list {
+        padding-top:9px;
+        border-top:$borderD;
+        li {
+            a {
+                padding:12px 14px;
+                border-radius:9px;
+                font-weight:$font-w-r;
+                color:$content;
+                &:hover {
+                    font-weight:$font-w-m;
+                    color:$content;
+                    background-color:rgb(22 40 102 / 9%);
+                }
+            }
+        }
+    }
+}
+
 /*********************************************************************
     #리스트
     참고: guide/views/list.html, guide/views/list2.html
@@ -2329,35 +2393,79 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .rs_line {
             border-width:1px;
+            &::before {
+                @include icon (24px,24px);
+            }
+            $rsLines: "apply", "succl", "approl", "waitl", "reject";
+
+            @each $rsLine in $rsLines {
+                &.#{$rsLine} {
+                    &::before {
+                        @include mask ($basic);
+                        background-image:none;
+                        -webkit-mask-size:70%;
+                        mask-size:70%;
+                    }
+                }
+            }
+            &.apply {
+                border-color:$basic;
+                background-color:#DBE0F0;
+                &::before {
+                    background-color:$basic;
+                    -webkit-mask-image:url("../images/label/ico_FileEdit_f.svg");
+                    mask-image:url("../images/label/ico_FileEdit_f.svg");
+                }
+            }
             &.succl {
+                border-color:#0452CB;
+                background-color:#E3EEFF;
+                &::before {
+                    background-color:#0452CB;
+                    -webkit-mask-image:url("../images/common/ico_ok.svg");
+                    mask-image:url("../images/common/ico_ok.svg");
+                }
+            }
+            &.approl {
                 border-color:$true;
                 background-color:#EFFCF3;
                 &::before {
-                    @include wh (24px,24px);
-                    @include mask ($true);
+                    background-color:$true;
                     -webkit-mask-image:url("../images/common/ico_ok.svg");
                     mask-image:url("../images/common/ico_ok.svg");
-                    -webkit-mask-size:70%;
-                    mask-size:70%;
                 }
             }
             &.waitl {
+                border-color:#F9AF1C;
+                background-color:#FFF3DB;
+                &::before {
+                    background-color:#F9AF1C;
+                    -webkit-mask-image:url("../images/label/icon_pgs.svg");
+                    mask-image:url("../images/label/icon_pgs.svg");
+                }
+            }
+            &.reject {
                 border-color:$info;
                 background-color:#FFEBDD;
                 &::before {
-                    @include wh (24px,24px);
-                    @include mask ($info);
+                    background-color:$info;
                     -webkit-mask-image:url("../images/common/ico_warning.svg");
                     mask-image:url("../images/common/ico_warning.svg");
-                    -webkit-mask-size:70%;
-                    mask-size:70%;
+                }
+            }
+            &.cancel {
+                border-color:$text-disabled;
+                background-color:#EBEBEB;
+                &::before {
+                    background-image:url("../images/label/closeCircle.svg");
+                    background-size:70%;
+                    background-position:center;
                 }
             }
             &.errl {
                 border-color:$false;
                 background-color:#FFEFEF;
                 &::before {
-                    @include icon (24px,24px);
                     background-image:url("../images/common/ico_erro.svg");
                     background-size:70%;
                     background-position:center;
@@ -2635,13 +2743,34 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             border-top:1px solid $title;
         }
     }
-    .filebox .form_contrl, .form_contrl {
-        width:$wh100;
-        height:30px;
+    .filebox {
+        .file_btns {
+            button {
+                @include icon(16px, 16px);
+                &.upload{
+                    background-size:60%;
+                }
+            }
+        }
+        .form_contrl, .form_contrl {
+            width:$wh100;
+            height:26px;
+        }
+    }
+    .inp_set {
+        position:relative;
+        display:block;
+        .form_contrl {
+            width:$wh100;
+        }
+        .icon_setting {
+            position:absolute;
+            @include topCenter ($right: 4px);
+        }
     }
 }
 
-.wk_tab {
+.wk_tab { //큰뎁스
     .btn_d_arw {
         position:relative;
         padding:0;
@@ -2689,7 +2818,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-color:$basic;
         }
     }
-    &.bgopen {
+    &.bgopen { //큰뎁스 오픈
         .wk_gr_arw {
             @include wh (16px,16px);
             @include mask ($text-disabled);
@@ -2699,7 +2828,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             transform:rotate(-90deg);
         }
     }
-    .wk_tab_small {
+    .wk_tab_small { //작은뎁스
         p {
             font-weight:$font-w-m;
             color:$text-disabled;
@@ -2725,13 +2854,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
 
     }
-    .wk_form {
-        .bul_dot {
-            .form_tit {
-                &::before {
-                    left:7px;
-                }
-            }
+}
+
+
+// 점선
+$Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_type", "t_tr > .wk_tab";
+
+@each $Dash in $Dashs {
+    .#{$Dash} {
+        &::before {
+            border-color:$list-border;
         }
     }
 }
@@ -2752,6 +2884,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         thead {
             position:sticky;
             top:0;
+            box-shadow:inset 0 1px 0 $list-border, inset 0 -1px 0 $title;
         }
     }
 }
@@ -3825,7 +3958,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 color:$content;
                 line-height:18px;
                 &::before {
-                    top:5px;
+                    top:7px;
                     left:0;
                 }
             }
@@ -4801,12 +4934,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     display:inline-block;
                     padding:8px 0 0;
                 }
-                .form_txt {
-                    @extend .form_tit;
-                    padding:0;
-                    width:$wh100;
-                    border-bottom:0;
-                }
+                // .form_txt {
+                //     @extend .form_tit;
+                //     padding:0;
+                //     width:$wh100;
+                //     border-bottom:0;
+                // }
             }
         }
         li {
@@ -5412,7 +5545,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     .btn_desc { //설명문구 추가/수정
-        border:$borderD;
+        @include wh (53px,53px);
+        border:0;
+        box-shadow:0 3px 3px rgb(0 0 0 / 16%);
+        &::after {
+            transform:translate(-50%,-50%);
+            @include wh (24px,24px);
+            margin:0;
+            background-image:url("../images/label/ico_FileEdit_f.svg");
+            background-position:center;
+        }
     }
     .balloon.entry_help {
         font-size:$font14;
@@ -5830,8 +5972,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         box-shadow:none;
         &.hm_req {
             i {
-                background-image:url("../images/label/ico_application.svg");
-                background-size:100%;
+                @include mask(#0D64AF);
+                -webkit-mask-image:url("../images/label/ico_FileEdit_f.svg");
+                mask-image:url("../images/label/ico_FileEdit_f.svg");
+                background-image:none;
             }
             .hm_tit,.hm_alimnum, .hm_alimnum em {
                 color:#0D64AF;
@@ -6189,12 +6333,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
         .btn_refsh_s {
             top:21px;
-            width: 30px;
-            height: 30px;
+            @include wh (30px,30px);
             background-position: unset;
-            border: 1px solid $border-d;
+            border:$borderD;
             border-radius: 6px;
-            background: url("../images/common/ico_reset.svg") no-repeat center;
+            background: $icoReset no-repeat center;
         }
         .sync_stt_dtl {
             .sync_ctg_name {

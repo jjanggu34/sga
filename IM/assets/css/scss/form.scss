@@ -50,7 +50,7 @@ $borderTs: "search_wrap", "tab_wrap";
     .search_inputbox {
         @include wh ($wh100, 48px);
         padding:6px 9px 6px 14px;
-        border:$borderD;
+        border:1px solid $default;
         border-radius:6px;
     }
     &.mini_search {
