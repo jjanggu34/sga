@@ -524,7 +524,7 @@ body {
             padding-bottom:20px;
         }
         .nav {
-            .nav_inner {
+            .nav_wrap {
                 &>p {
                     display:none;
                 }
@@ -609,15 +609,16 @@ body {
         }
     }
     .nav {
+        width:240px;
         border-right:$borderD;
         box-shadow:none;
         .nav_inner {
+            border-right:$borderD;
             background-color:#F9FBFD;
-            &>p {
-                display:block;
-                padding:0 22px;
-                @include title ($font12, $font-w-m, $text-disabled);
-                line-height:18px;
+            &:has(.nav_tab) {
+                .nav_wrap {
+                    height:calc($wh100 - 108px);
+                }
             }
         }
     }
@@ -625,7 +626,7 @@ body {
         position:sticky;
         top:0;
         @include flexsb();
-        padding:15px 20px 16px;
+        padding:15px 10px 16px;
         border-bottom:1px solid $text-disabled;
         background-color:$white;
         z-index:1;
@@ -652,8 +653,19 @@ body {
             }
         }
     }
+    .nav_wrap {
+        height:calc($wh100 - 60px);
+        p {
+            display:block;
+            padding:0 20px;
+            @include title ($font12, $font-w-m, $text-disabled);
+            line-height:18px;
+            text-align:center;
+            white-space: normal;
+        }
+    }
     .nav_list {
-        min-height:calc($wh100 - 190px);
+        min-height:calc($wh100 - 82px);
         padding:0 10px 10px;
         > li {
             margin-top:10px;
@@ -1161,6 +1173,7 @@ body {
                 }
             }
             &.only {
+                min-height:calc($wh100 - 100px);
                 margin:80px 24px 20px;
                 padding:20px 24px;
                 border:$borderD;
@@ -1211,7 +1224,7 @@ body {
 .detail_view {
     top:60px;
     height:calc($wh100 - 60px);
-    padding:20px;
+    padding:10px 20px 20px;
     border:1px solid $border-d;
     border-radius:13px 0 0 13px;
     box-shadow:0 3px 6px #00000016;
@@ -1246,7 +1259,7 @@ body {
 
 /***************** side popup - wd_detail *****************/
 .wd_detail {
-    padding:20px;
+    padding:10px 20px 20px;
     border:1px solid $border-d;
     border-radius:13px;
     box-shadow:0 3px 6px #00000016;
@@ -1351,7 +1364,7 @@ body {
         .move_wrap {
             align-items:stretch;
             &+ .btn_box {
-                padding-top:5px;
+                padding-top:10px;
             }
         }
     }

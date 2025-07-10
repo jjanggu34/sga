@@ -26,7 +26,7 @@
 <body>
 	<div id="SGIM_wrap" class="">
 		<div class="nav">
-			<div class="nav_inner scroll">
+			<div class="nav_inner">
 				<div class="nav_header">
 					<a href="" class="logo">
 						<img src="assets/images/common/logo.png"><!--[2025] 이미지 경로 및 이미지 변경-->
@@ -36,77 +36,81 @@
 					<a href="" class="">사용자</a>
 					<a href="" class="on">관리자</a>
 				</div>
-				<ul class="nav_list">
-					<li><a href="" class="depth_menu"><i class="UserMangement"></i><span>사용자 관리</span></a>
-						<ul>
-							<li><a href="">사용자</a></li>
-							<li><a href="" class="on">사용자 그룹</a></li>
-							<li><a href="">조직 그룹</a></li>
-							<li><a href="">대량 등록</a></li>
-							<li><a href="">자가 등록</a></li>
-						</ul>
-					</li>
-					<li><a href="" class="depth_menu"><i class="ResourceMangement"></i><span>시스템 관리</span></a>
-						<ul>
-							<li><a href="">조정 및 배포</a></li>
-							<li><a href="">시스템(자원)</a></li>
-							<li><a href="">시스템(자원) 그룹</a></li>
-						</ul>
-					</li>
-					<li><a href="" class="depth_menu"><i class="PolicyMangement"></i><span>정책 관리</span></a>
-						<ul>
-							<li><a href="">역할</a></li>
-							<li><a href="">조정 정책</a></li>
-							<li><a href="">배포 정책</a></li>
-						</ul>
-					</li>
-					<li><a href="" class="depth_menu"><i class="AMMangement"></i><span>정책제어 정책</span></a>
-						<ul>
-							<li><a href="">PAM 연결 관리</a></li>
-							<li><a href="">접속조회</a></li>
-							<li><a href="">접근권한 관리</a></li>
-							<li><a href="">명령어</a></li>
-							<li><a href="">금지 명령어</a></li>
-						</ul>
-					</li>
-					<li><a href="" class="depth_menu"><i class="icon_pw"></i><span>인증/인가 관리</span></a>
-						<ul>
-							<li><a href="">인증 관리</a></li>
-							<li><a href="">인가 관리</a></li>
-							<li><a href="">암호 정책 관리</a></li>
-						</ul>
-					</li>
-					<li><a href="" class="depth_menu"><i class="AuditingReport"></i><span>감사 및 보고서 긴 메뉴명입니다</span></a>
-						<ul>
-							<li><a href="">모니터링</a></li>
-							<li><a href="">감사</a></li>
-							<li><a href="">보고서</a></li>
-						</ul>
-					</li>
-					<li><a href="" class="depth_menu"><i class="AttributeMangement"></i><span>속성관리</span></a>
-						<ul>
-							<li><a href="">사용자 정보</a></li>
-							<li><a href="">사용자그룹 정보</a></li>
-							<li><a href="">조직 정보</a></li>
-						</ul>
-					</li>
-					<li><a href="" class=""><i class="Connector"></i><span>Connector</span></a></li>
-					<li><a href="" class=""><i class="ONSDModel"></i><span>ONSD Entry</span></a></li>
-					<li><a href="" class=""><i class="WorkflowManagement"></i><span>워크플로우</span></a></li>
-					<li><a href="" class="depth_menu"><i class="System"></i><span>시스템</span></a>
-						<ul>
-							<li><a href="">관리자</a></li>
-							<li><a href="">저장소 관리</a></li>
-							<li><a href="">서비스 모듈 관리</a></li>
-							<li><a href="">스케줄 관리</a></li>
-							<li><a href="">CMS</a></li>
-							<li><a href="">환경 설정</a></li>
-						</ul>
-					</li>
-				</ul>
-				<!-- s: copyright 추가 -->
-				<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
-				<!-- e: copyright 추가 -->
+				<!-- s: nav_wrap 추가 및 구조변경, scroll 옮김 -->
+				<div class="nav_wrap scroll">
+					<ul class="nav_list">
+						<li><a href="" class="depth_menu"><i class="UserMangement"></i><span>사용자 관리</span></a>
+							<ul>
+								<li><a href="">사용자</a></li>
+								<li><a href="" class="on">사용자 그룹</a></li>
+								<li><a href="">조직 그룹</a></li>
+								<li><a href="">대량 등록</a></li>
+								<li><a href="">자가 등록</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="depth_menu"><i class="ResourceMangement"></i><span>시스템 관리</span></a>
+							<ul>
+								<li><a href="">조정 및 배포</a></li>
+								<li><a href="">시스템(자원)</a></li>
+								<li><a href="">시스템(자원) 그룹</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="depth_menu"><i class="PolicyMangement"></i><span>정책 관리</span></a>
+							<ul>
+								<li><a href="">역할</a></li>
+								<li><a href="">조정 정책</a></li>
+								<li><a href="">배포 정책</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="depth_menu"><i class="AMMangement"></i><span>정책제어 정책</span></a>
+							<ul>
+								<li><a href="">PAM 연결 관리</a></li>
+								<li><a href="">접속조회</a></li>
+								<li><a href="">접근권한 관리</a></li>
+								<li><a href="">명령어</a></li>
+								<li><a href="">금지 명령어</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="depth_menu"><i class="icon_pw"></i><span>인증/인가 관리</span></a>
+							<ul>
+								<li><a href="">인증 관리</a></li>
+								<li><a href="">인가 관리</a></li>
+								<li><a href="">암호 정책 관리</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="depth_menu"><i class="AuditingReport"></i><span>감사 및 보고서 긴 메뉴명입니다</span></a>
+							<ul>
+								<li><a href="">모니터링</a></li>
+								<li><a href="">감사</a></li>
+								<li><a href="">보고서</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="depth_menu"><i class="AttributeMangement"></i><span>속성관리</span></a>
+							<ul>
+								<li><a href="">사용자 정보</a></li>
+								<li><a href="">사용자그룹 정보</a></li>
+								<li><a href="">조직 정보</a></li>
+							</ul>
+						</li>
+						<li><a href="" class=""><i class="Connector"></i><span>Connector</span></a></li>
+						<li><a href="" class=""><i class="ONSDModel"></i><span>ONSD Entry</span></a></li>
+						<li><a href="" class=""><i class="WorkflowManagement"></i><span>워크플로우</span></a></li>
+						<li><a href="" class="depth_menu"><i class="System"></i><span>시스템</span></a>
+							<ul>
+								<li><a href="">관리자</a></li>
+								<li><a href="">저장소 관리</a></li>
+								<li><a href="">서비스 모듈 관리</a></li>
+								<li><a href="">스케줄 관리</a></li>
+								<li><a href="">CMS</a></li>
+								<li><a href="">환경 설정</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- s: copyright 추가 -->
+					<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
+					<!-- e: copyright 추가 -->
+				</div>
+				<!-- e: nav_wrap 추가 및 구조변경, scroll 옮김 -->
 			</div>
 		</div>
 		<div id="container">
@@ -424,7 +428,7 @@
 								<td>OS</td>
 								<td>RedHat</td>
 								<td>data1</td>
-								<td class="pauseCircle"><i class="icon_list"></i>작업중 오류</td>
+								<td class="connection_error"><i class="icon_list"></i>작업중 오류</td><!--[2025] connection_error 옮김-->
 								<td>CentOS(1503)</td>
 								<td>Linux 표준모델</td>
 							</tr>

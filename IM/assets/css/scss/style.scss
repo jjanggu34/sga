@@ -180,7 +180,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 // col
 .scroll {
     @extend .scrollbar-common;
-    scrollbar-width: auto;
+    scrollbar-width:inherit;
     &::-webkit-scrollbar {
         width: 5px;
     }
@@ -583,7 +583,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         mask-image:$iconPgs;
     }
 }
-.downloadCircle { //수집완료
+.connection_compl { //수집완료
     color:$blue!important;
     .icon_list {
         @include mask($blue);
@@ -591,7 +591,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         mask-image:url("../images/label/ico_downloadCircle.svg");
     }
 }
-.pauseCircle { //접속오류, 작업중 오류, 수집오류
+.connection_error { //접속오류, 작업중 오류, 수집오류
     color:$false !important;
     .icon_list {
         @include mask($false );
@@ -1050,9 +1050,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             background-image:url("../images/common/triangle.svg");
             z-index:2;
         }
-        &:only-child {
-            border-radius:7px !important;
-        }
         &:last-child {
             margin-right:0;
             border-radius:0 7px 7px 0;
@@ -1129,6 +1126,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 content:"";
                 left:unset;
                 background-color:transparent;
+            }
+        }
+        &:only-child {
+            padding:10px 0;
+            border-bottom:1px solid $title;
+            border-radius:0;
+            @include title ($font18, $font-w-b, $title);
+            text-align:left;
+            background-color:transparent;
+            .s_num {
+                display:none;
             }
         }
     }
@@ -1863,6 +1871,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             padding:0;
             .apply_txt {
                 position:static;
+                padding-top:12px;
                 p {
                     padding-bottom:30px;
                     @include title ($font14, $font-w-r, $content);
@@ -3504,9 +3513,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     #move_box
 *********************************************************************/
 .move_wrap {
-    &+.btn_box {
-        padding-top:20px;
-    }
+    padding-bottom:20px;
     &.treeview {
         margin:4px 24px 0;
         .moved_box {
@@ -4332,7 +4339,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             color:$true !important;
         }
     }
-    .lock { //잠금
+    .locked { //잠금
         dt {
             color:$content !important;
         }

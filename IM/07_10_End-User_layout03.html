@@ -27,7 +27,7 @@
 	<div id="SGIM_wrap" class="">
 		<div class="nav">
 			<a class="menu_close_btn"></a>
-			<div class="nav_inner scroll">
+			<div class="nav_inner">
 				<div class="nav_header">
 					<a href="" class="logo">
 						<img src="assets/images/common/logo.png"><!-- 이미지 경로 및 이미지 변경-->
@@ -37,27 +37,31 @@
 					<a href="" class="on">사용자</a>
 					<a href="" class="">관리자</a>
 				</div>
-				<ul class="nav_list">
-					<li><a href="" class=""><i class="Home"></i><span>HOME</span></a></li>
-					<li><a href="" class="depth_menu"><i class="MyProfiles"></i><span>내 정보</span></a>
-						<ul>
-							<li><a href="">기본 정보</a></li>
-							<li><a href="" class="on">인증/암호 관리</a></li>
-							<li><a href="">권한 위임</a></li>
-						</ul>
-					</li>
-					<li><a href="" class="depth_menu"><i class="MyAuth"></i><span>권한 신청</span></a><ul>
-							<li><a href="">시스템/자원 관리</a></li>
-							<li><a href="">역할(Role)관리</a></li>
-						</ul>
-					</li>
-					<li><a href=""><i class="MyRequest"></i><span>요청 관리</span></a></li>
-					<li><a href=""><i class="MyApproval"></i><span>승인 관리</span></a></li>
-					<li><a href=""><i class="MyMessage"></i><span>메시지 확인</span></a></li>
-				</ul>
-				<!-- s: copyright 추가 -->
-				<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
-				<!-- e: copyright 추가 -->
+				<!-- s: nav_wrap 추가 및 구조변경, scroll 옮김 -->
+				<div class="nav_wrap scroll">
+					<ul class="nav_list">
+						<li><a href="" class=""><i class="Home"></i><span>HOME</span></a></li>
+						<li><a href="" class="depth_menu"><i class="MyProfiles"></i><span>내 정보</span></a>
+							<ul>
+								<li><a href="">기본 정보</a></li>
+								<li><a href="" class="on">인증/암호 관리</a></li>
+								<li><a href="">권한 위임</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="depth_menu"><i class="MyAuth"></i><span>권한 신청</span></a><ul>
+								<li><a href="">시스템/자원 관리</a></li>
+								<li><a href="">역할(Role)관리</a></li>
+							</ul>
+						</li>
+						<li><a href=""><i class="MyRequest"></i><span>요청 관리</span></a></li>
+						<li><a href=""><i class="MyApproval"></i><span>승인 관리</span></a></li>
+						<li><a href=""><i class="MyMessage"></i><span>메시지 확인</span></a></li>
+					</ul>
+					<!-- s: copyright 추가 -->
+					<p>SGN Copyright 2025 SGN Co., Ltd. All Right Reserved.Secureguard  ICAM V2.0</p>
+					<!-- e: copyright 추가 -->
+				</div>
+				<!-- e: nav_wrap 추가 및 구조변경, scroll 옮김 -->
 			</div>
 		</div>
 		<div id="container" class="">

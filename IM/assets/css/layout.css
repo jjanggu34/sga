@@ -630,7 +630,7 @@ body * {
 #SGIM_wrap.mini_nav .nav_header {
   padding-bottom: 20px;
 }
-#SGIM_wrap.mini_nav .nav .nav_inner > p {
+#SGIM_wrap.mini_nav .nav .nav_wrap > p {
   display: none;
 }
 #SGIM_wrap.mini_nav .nav_list > li a {
@@ -700,19 +700,16 @@ body * {
   padding-left: 70px;
 }
 #SGIM_wrap .nav {
+  width: 240px;
   border-right: 1px solid #DDDDDD;
   box-shadow: none;
 }
 #SGIM_wrap .nav .nav_inner {
+  border-right: 1px solid #DDDDDD;
   background-color: #F9FBFD;
 }
-#SGIM_wrap .nav .nav_inner > p {
-  display: block;
-  padding: 0 22px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #999999;
-  line-height: 18px;
+#SGIM_wrap .nav .nav_inner:has(.nav_tab) .nav_wrap {
+  height: calc(100% - 108px);
 }
 #SGIM_wrap .nav_header {
   position: sticky;
@@ -720,7 +717,7 @@ body * {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px 16px;
+  padding: 15px 10px 16px;
   border-bottom: 1px solid #999999;
   background-color: #FFFFFF;
   z-index: 1;
@@ -749,8 +746,21 @@ body * {
   font-weight: 500;
   color: #27AD98;
 }
+#SGIM_wrap .nav_wrap {
+  height: calc(100% - 60px);
+}
+#SGIM_wrap .nav_wrap p {
+  display: block;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999999;
+  line-height: 18px;
+  text-align: center;
+  white-space: normal;
+}
 #SGIM_wrap .nav_list {
-  min-height: calc(100% - 190px);
+  min-height: calc(100% - 82px);
   padding: 0 10px 10px;
 }
 #SGIM_wrap .nav_list > li {
@@ -1302,6 +1312,7 @@ body * {
   border-radius: 3px;
 }
 #SGIM_wrap #container .content.only, #SGIM_wrap #container .content.ch_password_cont {
+  min-height: calc(100% - 100px);
   margin: 80px 24px 20px;
   padding: 20px 24px;
   border: 1px solid #DDDDDD;
@@ -1341,7 +1352,7 @@ body * {
 .detail_view {
   top: 60px;
   height: calc(100% - 60px);
-  padding: 20px;
+  padding: 10px 20px 20px;
   border: 1px solid #DDDDDD;
   border-radius: 13px 0 0 13px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.0862745098);
@@ -1378,7 +1389,7 @@ body * {
 
 /***************** side popup - wd_detail *****************/
 .wd_detail {
-  padding: 20px;
+  padding: 10px 20px 20px;
   border: 1px solid #DDDDDD;
   border-radius: 13px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.0862745098);
@@ -1479,7 +1490,7 @@ body * {
   align-items: stretch;
 }
 .layer_popup .popup_content .move_wrap + .btn_box {
-  padding-top: 5px;
+  padding-top: 10px;
 }
 .layer_popup .poptable .btn_box {
   padding-top: 0;
