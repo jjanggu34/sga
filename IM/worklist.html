@@ -96,7 +96,7 @@
 							<td></td>
 							<td class="state"></td>
 							<td></td>
-							<td>content 안에 search_wrap</td>
+							<td></td>
 						</tr>
 						<tr class="Gcomp">
 							<td>grid</td>
@@ -120,7 +120,7 @@
 							<td></td>
 							<td class="state"></td>
 							<td></td>
-							<td>1뎁스 클릭시 2뎁스 보이게 작업<br/>2뎁스 페이지링크 후 2뎁스 메뉴박스 숨김<br/>이유 : 컨텐츠화면 가려짐 효과 있습니다.</td>
+							<td style="font-weight:700;">1뎁스 클릭시 2뎁스 보이게 작업<br/>2뎁스 페이지링크 후 2뎁스 메뉴박스 숨김<br/>이유 : 컨텐츠화면 가려짐 효과 있습니다.</td>
 						</tr>
 						<tr class="Gcomp">
 							<td>treemenu</td>
@@ -179,7 +179,7 @@
 							<td></td>
 							<td class="state"></td>
 							<td></td>
-							<td>radio 버튼 보류</td>
+							<td></td>
 						</tr>
 						<tr class="Gcomp">
 							<td>button</td>
@@ -270,7 +270,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="">
+						<tr class="comp">
 							<td>header, nav</td>
 							<td></td>
 							<td></td>
@@ -1191,12 +1191,6 @@
 							} else if ($row.hasClass("ing")) {
 								$stateCell.html("<span>진행 중</span>");
 								progressCnt++;
-							} else if ($row.hasClass("half")) {
-								$stateCell.html("<span>50% 진행</span>");
-								progressCnt++;
-							} else if ($row.hasClass("almost")) {
-								$stateCell.html("<span>80% 진행</span>");
-								progressCnt++;
 							} else if ($row.hasClass("comp")) {
 								$stateCell.html("<span>완료(메뉴 제외)</span>");
 								compCnt++;
@@ -1212,7 +1206,7 @@
 
 					// 상태별 카운트를 업데이트
 					updateCounts: function(){
-						var totCnt = $(".page table tbody tr").length; // 전체 행 개수
+						var totCnt = $(".page table tbody tr").length + $(".guide table tbody tr").length; // 전체 행 개수
 						$("#compCnt").text(compCnt);
 						$("#totCnt").text(totCnt);
 						$("#progressCnt").text(progressCnt);

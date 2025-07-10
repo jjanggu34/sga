@@ -62,7 +62,6 @@ body * {
 }
 #IMwrap #login_wrap.column2, #IMwrap #login_wrap.row2 {
   margin: 155px auto 0;
-  padding-top: 0;
 }
 #IMwrap .logo img {
   width: 100%;
@@ -751,7 +750,7 @@ body * {
   color: #27AD98;
 }
 #SGIM_wrap .nav_list {
-  min-height: calc(100% - 180px);
+  min-height: calc(100% - 190px);
   padding: 0 10px 10px;
 }
 #SGIM_wrap .nav_list > li {
@@ -1615,93 +1614,6 @@ body * {
 }
 .toast_popup .btn_box {
   padding: 0;
-}
-
-/***************** balloon *****************/
-.b_pwd.balloon {
-  top: unset;
-  bottom: -14px;
-  padding: 20px;
-  border: 1px solid #C9C9C9;
-  border-radius: 6px;
-}
-.b_pwd.balloon::before {
-  top: 46px;
-  left: -5px;
-  width: 9px;
-  height: 9px;
-  border: 1px solid #C9C9C9;
-  border-radius: 3px;
-  background-color: #FFFFFF;
-  transform: rotate(45deg);
-}
-.b_pwd.balloon::after {
-  top: 45px;
-  left: -1px;
-  width: 9px;
-  height: 13px;
-  border: 0;
-  background-color: #FFFFFF;
-}
-.b_pwd.balloon .safe .safe_txt {
-  color: #222222;
-}
-.b_pwd.balloon .safe .safe_txt span {
-  position: relative;
-  display: inline-block;
-  line-height: 16px;
-}
-.b_pwd.balloon .safe .safe_txt span::after {
-  position: absolute;
-  height: 15px;
-  background-color: #C9C9C9;
-}
-.b_pwd.balloon .safe .greentxt, .b_pwd.balloon .safe .redtxt {
-  margin-left: 12px;
-  font-weight: 400;
-  line-height: 16px;
-}
-.b_pwd.balloon .safe .statusbg {
-  height: 8px;
-  border-radius: 10px;
-  background-color: #EEEEEE;
-}
-.b_pwd.balloon .safe .statusbg .bar.greenbar {
-  height: 8px;
-  border-radius: 10px;
-  background-color: #23AC3D;
-}
-.b_pwd.balloon .s_txt {
-  font-size: 12px;
-  color: #757575;
-}
-
-.help_w .balloon {
-  top: 48px;
-  right: 16px;
-  border: 1px solid #DDDDDD;
-  border-radius: 6px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.0862745098);
-}
-.help_w .balloon::before {
-  top: -8px;
-  border-bottom: 8px solid #DDDDDD;
-}
-.help_w .balloon::after {
-  top: -7px;
-}
-
-.option_list.balloon {
-  top: 32px;
-  border: 1px solid #DDDDDD;
-  border-radius: 6px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.0862745098);
-}
-.option_list.balloon::before {
-  border-bottom: 8px solid #DDDDDD;
-}
-.option_list.balloon a {
-  font-weight: 400;
 }
 
 /*---------------------------------------------

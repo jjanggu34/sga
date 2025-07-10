@@ -38,7 +38,6 @@ body {
         }
         &.column2, &.row2 {
             margin:155px auto 0;
-            padding-top:0;
         }
     }
     .logo {
@@ -654,7 +653,7 @@ body {
         }
     }
     .nav_list {
-        min-height:calc($wh100 - 180px);
+        min-height:calc($wh100 - 190px);
         padding:0 10px 10px;
         > li {
             margin-top:10px;
@@ -1475,99 +1474,6 @@ body {
     }
     .btn_box {
         padding:0;
-    }
-}
-
-/***************** balloon *****************/
-.b_pwd {
-    &.balloon {
-        top:unset;
-        bottom:-14px;
-        padding:20px;
-        border:$borderC;
-        border-radius:6px;
-        &::before {
-            top:46px;
-            left:-5px;
-            @include wh (9px,9px);
-            border:$borderC;
-            border-radius:3px;
-            background-color:$white;
-            transform:rotate(45deg);
-        }
-        &::after {
-            top:45px;
-            left:-1px;
-            @include wh (9px, 13px);
-            border:0;
-            background-color:$white;
-        }
-        .safe {
-            .safe_txt {
-                color:$title;
-                span {
-                    position:relative;
-                    display:inline-block;
-                    line-height:16px;
-                    &::after {
-                        position:absolute;
-                        height:15px;
-                        background-color:$list-border;
-                    }
-                }
-            }
-            .greentxt, .redtxt {
-                margin-left:12px;
-                font-weight:$font-w-r;
-                line-height:16px;
-            }
-            .statusbg {
-                height:8px;
-                border-radius:10px;
-                background-color:$btn-disabled;
-                .bar.greenbar {
-                    height:8px;
-                    border-radius:10px;
-                    background-color:$true;
-                }
-            }
-        }
-        .s_txt {
-            font-size:$font12;
-            color:$secondary;
-        }
-    }
-}
-
-.help_w {
-    .balloon {
-        top:48px;
-        right:16px;
-        border:$borderD;
-        border-radius:6px;
-        box-shadow:0 3px 3px #00000016;
-        &::before {
-            top:-8px;
-            border-bottom:8px solid $border-d;
-        }
-        &::after {
-            top:-7px;
-        }
-    }
-}
-
-.option_list {
-    &.balloon {
-        top:32px;
-        border:$borderD;
-        border-radius:6px;
-        box-shadow:0 3px 3px #00000016;
-        &::before {
-            border-bottom:8px solid $border-d;
-        }
-        a {
-            font-weight:$font-w-r;
-        }
     }
 }
 

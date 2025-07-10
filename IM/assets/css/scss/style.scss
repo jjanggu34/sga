@@ -198,8 +198,8 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 input {
     &+.loader {
         position:absolute;
-        top:3px;
-        right:7px;
+        top:11px;
+        right:18px;
         @include wh(16px, 16px);
         border:none;
         border-radius: 50%;
@@ -287,52 +287,47 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
 
 /* 전체화면 로딩 */
 .loading_wrap {
-    width:116px;
+    width: 116px;
     .loader {
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        gap:12px;
-        width:116px;
+        gap: 12px;
+        width: 116px;
         height: 80px;
-        margin:0;
-        border:0;
-        border-radius:0;
-        animation:unset;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        animation: unset;
         .bar {
             width: 12px;
             border-radius: 30px;
-            animation: barAnimation 1.5s ease-in-out infinite;
+            animation: barAnimation 2s ease-in-out infinite;
         }
-        
         .bar:nth-child(1) {
             background-color: #27AD98;
             animation-delay: 0s;
         }
-        
         .bar:nth-child(2) {
-            background-color: #222222;
-            animation-delay: 0.1s;
-        }
-        
-        .bar:nth-child(3) {
-            background-color: #27AD98;
-            animation-delay: 0.2s;
-        }
-        
-        .bar:nth-child(4) {
             background-color: #222222;
             animation-delay: 0.3s;
         }
-        
+        .bar:nth-child(3) {
+            background-color: #27AD98;
+            animation-delay: 0.5s;
+        }
+        .bar:nth-child(4) {
+            background-color: #222222;
+            animation-delay: 0.7s;
+        }
         @keyframes barAnimation {
-            0%, 40%, 100% {
-                width:20px;
+            0%,50%,100% {
+                width: 20px;
                 height: 20px;
                 transform: scaleY(1);
             }
-            20% {
-                width:20px;
+            25%,75% {
+                width: 20px;
                 height: 80px;
                 transform: scaleY(1);
             }
@@ -343,6 +338,7 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
 /*---------------------------------------------
     #balloon
 ---------------------------------------------*/
+/* 기본 */
 .balloon {
     left:0;
     border:$borderC;
@@ -422,6 +418,83 @@ $loadings: ".msv_loading", ".server_loading", ".icam_b_stl .server_loading";
     }
 }
 
+.b_pwd {
+    &.balloon {
+        top:unset;
+        bottom:-22px;
+        padding:20px;
+        &::before {
+            top:46px;
+            left:-6px;
+            @include wh (9px,9px);
+            border:0;
+            border-left:$borderC;
+            border-bottom:$borderC;
+            border-radius:0 0 0 3px;
+            transform:rotate(45deg);
+        }
+        .safe {
+            .safe_txt {
+                color:$title;
+                span {
+                    position:relative;
+                    display:inline-block;
+                    line-height:16px;
+                    &::after {
+                        position:absolute;
+                        height:15px;
+                        background-color:$list-border;
+                    }
+                }
+            }
+            .greentxt, .redtxt {
+                margin-left:12px;
+                font-weight:$font-w-r;
+                line-height:16px;
+            }
+            .statusbg {
+                height:8px;
+                border-radius:10px;
+                background-color:$btn-disabled;
+                .bar.greenbar {
+                    height:8px;
+                    border-radius:10px;
+                    background-color:$true;
+                }
+            }
+        }
+        .s_txt {
+            font-size:$font12;
+            color:$secondary;
+        }
+    }
+}
+
+.help_w {
+    .balloon {
+        top:55px;
+        right:16px;
+        left:auto;
+        box-shadow:0 3px 3px #00000016;
+        &::before {
+            right:10px;
+        }
+    }
+}
+
+.option_list {
+    &.balloon {
+        top:32px;
+        box-shadow:0 3px 3px #00000016;
+        &::before {
+            top:-7px;
+        }
+        a {
+            font-weight:$font-w-r;
+        }
+    }
+}
+
 /*---------------------------------------------
     #라벨 테이블 안에서 사용
     기본 : icon_list
@@ -473,7 +546,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         mask-image:$icoPlugZapOff;
     }
 }
-.filePlus { //생성
+.icheck { //생성
     color:$blue!important;
     .icon_list {
         @include mask($blue);
@@ -494,24 +567,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         mask-image:url("../images/label/ico_checkCircle.svg");
     }
 }
-.fileEdit { //수정작업중
+.shippingcart_edit { //수정작업중
     color:$blue!important;
     .icon_pgs {
         @include mask(#1863BA);
         -webkit-mask-image:$icoFileEdit;
         mask-image:$icoFileEdit;
     }
-    &.ing {
-        color: $primary !important;
-        .icon_pgs {
-            @include mask($primary);
-            -webkit-mask-image:$iconPgs;
-            mask-image:$iconPgs;
-        }
-    }
 }
-.fileEditLoader { //수정진행중, 작업보류중
-    color:$primary !important;
+.progress_update,.progress_pending { //수정진행중, 작업보류중
+    color: $primary !important;
     .icon_pgs {
         @include mask($primary);
         -webkit-mask-image:$iconPgs;
@@ -534,7 +599,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         mask-image:url("../images/label/ico_PauseCircle.svg");
     }
 }
-.trash { //삭제, 삭제됨
+.idisabled { //삭제, 삭제됨
     color:$false !important;
     .icon_list, .icon_pgs {
         @include mask($false);
