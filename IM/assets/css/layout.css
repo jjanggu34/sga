@@ -1118,17 +1118,17 @@ body * {
   line-height: 24px;
 }
 #SGIM_wrap .header .balloon {
-  border: 1px solid #DDDDDD;
+  border: 1px solid #C9C9C9;
   border-radius: 6px;
 }
 #SGIM_wrap .header .balloon::before {
-  top: -8px;
+  top: -6px;
   right: 72px;
-  border-bottom: 8px solid #DDDDDD;
+  border-bottom: 0;
 }
-#SGIM_wrap .header .balloon::after {
-  top: -7px;
-  right: 73px;
+#SGIM_wrap .header .balloon.alim_toast {
+  right: -66px;
+  left: auto;
 }
 #SGIM_wrap .header .balloon.alim_toast .newalim_txt em {
   color: #27AD98;
@@ -1136,6 +1136,7 @@ body * {
 #SGIM_wrap .header .alim_pop {
   top: 58px;
   right: -69px;
+  left: auto;
 }
 #SGIM_wrap .header .alim_pop .alim_pop_wrap .alim_top {
   padding: 24px 24px 8px;
@@ -1312,7 +1313,7 @@ body * {
   border-radius: 3px;
 }
 #SGIM_wrap #container .content.only, #SGIM_wrap #container .content.ch_password_cont {
-  min-height: calc(100% - 100px);
+  min-height: calc(100vh - 100px);
   margin: 80px 24px 20px;
   padding: 20px 24px;
   border: 1px solid #DDDDDD;
@@ -1493,7 +1494,7 @@ body * {
   padding-top: 10px;
 }
 .layer_popup .poptable .btn_box {
-  padding-top: 0;
+  padding-top: 30px;
 }
 .layer_popup .test_result.loading {
   height: 50px;

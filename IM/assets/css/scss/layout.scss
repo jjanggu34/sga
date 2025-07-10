@@ -967,18 +967,16 @@ body {
             }
         }
         .balloon {
-            border:$borderD;
+            border:$borderC;
             border-radius:6px;
             &::before {
-                top:-8px;
+                top:-6px;
                 right:72px;
-                border-bottom:8px solid $border-d;
-            }
-            &::after {
-                top:-7px;
-                right:73px;
+                border-bottom:0;
             }
             &.alim_toast {
+                right:-66px;
+                left:auto;
                 .newalim_txt {
                     em {
                         color:$primary;
@@ -989,6 +987,7 @@ body {
         .alim_pop {
             top:58px;
             right:-69px;
+            left:auto;
             .alim_pop_wrap {
                 .alim_top {
                     padding:24px 24px 8px;
@@ -1173,7 +1172,7 @@ body {
                 }
             }
             &.only {
-                min-height:calc($wh100 - 100px);
+                min-height:calc(100vh - 100px);
                 margin:80px 24px 20px;
                 padding:20px 24px;
                 border:$borderD;
@@ -1370,7 +1369,7 @@ body {
     }
     .poptable {
         .btn_box {
-            padding-top:0;
+            padding-top:30px;
         }
     }
     .test_result {
