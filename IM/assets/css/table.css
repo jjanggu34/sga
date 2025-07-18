@@ -169,7 +169,7 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: url("../images/common/icon-nodata.svg") no-repeat;
+  background: url("../img/common/icon-nodata.svg") no-repeat;
   opacity: 0.3;
 }
 .default_tbl.tblStl2 {
@@ -218,7 +218,7 @@
   background-repeat: no-repeat;
   background-image: none;
   margin-top: 0;
-  background-image: url("../images/common/ico_accordion.svg");
+  background-image: url("../img/common/ico_accordion.svg");
 }
 .default_tbl.tblStl2 .tb_dt_link .btn_d_arw .btn_dtail_arrow.up {
   transform: translate(-50%, -50%) rotate(180deg);
@@ -239,13 +239,13 @@
   height: 22px;
 }
 .default_tbl.tblStl2 .aft_i.aft_add::after {
-  background: url("../images/common/ico_add.svg") no-repeat center;
+  background: url("../img/common/ico_add.svg") no-repeat center;
 }
 .default_tbl.tblStl2 .aft_i.aft_mod::after {
-  background: url("../images/common/ico_mod.svg") no-repeat center;
+  background: url("../img/common/ico_mod.svg") no-repeat center;
 }
 .default_tbl.tblStl2 .aft_i.aft_mns::after {
-  background: url("../images/common/ico_mns.svg") no-repeat center;
+  background: url("../img/common/ico_mns.svg") no-repeat center;
 }
 .default_tbl.tblStl3 {
   border: 0;
@@ -428,8 +428,8 @@
 }
 .move_tbl2 .add_option .btn_option::after {
   background-color: #FFFFFF;
-  -webkit-mask-image: url("../images/common/icon_arrow_none.svg");
-  mask-image: url("../images/common/icon_arrow_none.svg");
+  -webkit-mask-image: url("../img/common/icon_arrow_none.svg");
+  mask-image: url("../img/common/icon_arrow_none.svg");
 }
 
 .move_tbl {

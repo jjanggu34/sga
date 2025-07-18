@@ -118,7 +118,7 @@
                         top:20px;
                         left:50%;
                         transform:translateX(-50%);
-                        background: url("../images/common/icon-nodata.svg") no-repeat;
+                        background: url("../img/common/icon-nodata.svg") no-repeat;
                         opacity: .3;
                     }
                 }
@@ -188,17 +188,17 @@
             @include wh (22px,22px);
             &.aft_add {
                 &::after {
-                    background:url("../images/common/ico_add.svg")no-repeat center;
+                    background:url("../img/common/ico_add.svg")no-repeat center;
                 }
             }
             &.aft_mod {
                 &::after {
-                    background:url("../images/common/ico_mod.svg")no-repeat center;
+                    background:url("../img/common/ico_mod.svg")no-repeat center;
                 }
             }
             &.aft_mns {
                 &::after {
-                    background:url("../images/common/ico_mns.svg")no-repeat center;
+                    background:url("../img/common/ico_mns.svg")no-repeat center;
                 }
             }
         }

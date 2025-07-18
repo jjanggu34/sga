@@ -64,7 +64,7 @@
   background-repeat: no-repeat;
   background-image: none;
   padding: 0;
-  background-image: url("../images/common/ico_refresh.svg");
+  background-image: url("../img/common/ico_refresh.svg");
   background-size: 85%;
 }
 
@@ -165,8 +165,8 @@ button:last-child {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/icon_plus_s.svg");
-  mask-image: url("../images/common/icon_plus_s.svg");
+  -webkit-mask-image: url("../img/common/icon_plus_s.svg");
+  mask-image: url("../img/common/icon_plus_s.svg");
   -webkit-mask-size: 90%;
   mask-size: 90%;
   background-position: center;
@@ -190,8 +190,8 @@ button:last-child {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/icon_setting.svg");
-  mask-image: url("../images/common/icon_setting.svg");
+  -webkit-mask-image: url("../img/common/icon_setting.svg");
+  mask-image: url("../img/common/icon_setting.svg");
 }
 
 .basic2 {
@@ -219,12 +219,12 @@ button:last-child {
 }
 .primary.btn_dropdown {
   padding-right: 30px;
-  background: url("../images/common/ico_accordion.svg") no-repeat right 4px center #27AD98;
+  background: url("../img/common/ico_accordion.svg") no-repeat right 4px center #27AD98;
 }
 .primary.arrow i {
   width: 16px;
   height: 16px;
-  background: url("../images/common/ico_accordion.svg") no-repeat right center #27AD98;
+  background: url("../img/common/ico_accordion.svg") no-repeat right center #27AD98;
   transform: rotate(270deg);
 }
 .primary:hover {
@@ -249,7 +249,7 @@ button:last-child {
 .line.btn_dropdown {
   padding: 0 30px 0 10px;
   padding-bottom: 0;
-  background: url("../images/common/ico_accordion.svg") no-repeat right 4px center #FFFFFF;
+  background: url("../img/common/ico_accordion.svg") no-repeat right 4px center #FFFFFF;
 }
 .line.diss {
   color: #999999;
@@ -289,7 +289,7 @@ table .btnstl {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_upload.svg");
+  background-image: url("../img/common/ico_upload.svg");
   background-position: unset;
 }
 
@@ -320,8 +320,8 @@ button.icon i.checkout, a.icon i.checkout {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/close.svg");
-  mask-image: url("../images/common/close.svg");
+  -webkit-mask-image: url("../img/common/close.svg");
+  mask-image: url("../img/common/close.svg");
 }
 button.icon i.checkin, a.icon i.checkin {
   -webkit-mask-repeat: no-repeat;
@@ -332,8 +332,8 @@ button.icon i.checkin, a.icon i.checkin {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_check_s.svg");
-  mask-image: url("../images/common/ico_check_s.svg");
+  -webkit-mask-image: url("../img/common/ico_check_s.svg");
+  mask-image: url("../img/common/ico_check_s.svg");
 }
 button.icon i.icon_setting, a.icon i.icon_setting {
   -webkit-mask-repeat: no-repeat;
@@ -344,15 +344,15 @@ button.icon i.icon_setting, a.icon i.icon_setting {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/icon_setting.svg");
-  mask-image: url("../images/common/icon_setting.svg");
+  -webkit-mask-image: url("../img/common/icon_setting.svg");
+  mask-image: url("../img/common/icon_setting.svg");
   background-image: none;
   -webkit-mask-size: 80%;
   mask-size: 80%;
 }
 button.icon i.icon_applylist, a.icon i.icon_applylist {
   margin: 0;
-  background: url("../images/common/ico_m_list.svg") no-repeat center/100%;
+  background: url("../img/common/ico_m_list.svg") no-repeat center/100%;
 }
 button.icon i.icon_reset, a.icon i.icon_reset {
   font-size: 0;
@@ -364,8 +364,8 @@ button.icon i.icon_reset, a.icon i.icon_reset {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_reset.svg");
-  mask-image: url("../images/common/ico_reset.svg");
+  -webkit-mask-image: url("../img/common/ico_reset.svg");
+  mask-image: url("../img/common/ico_reset.svg");
   -webkit-mask-size: 100%;
   mask-size: 100%;
   background-image: none;
@@ -378,7 +378,7 @@ button.icon.icon_reset, a.icon.icon_reset {
   height: 30px;
   padding: 6px;
   font-size: 0;
-  background: url("../images/common/ico_reset.svg") no-repeat center/auto #FFFFFF;
+  background: url("../img/common/ico_reset.svg") no-repeat center/auto #FFFFFF;
 }
 button.icon.icon_reset::before, a.icon.icon_reset::before {
   content: none;
@@ -388,14 +388,14 @@ button.icon.close, a.icon.close {
   height: 30px;
   padding: 3px;
   font-size: 0;
-  background: url("../images/common/close.svg") no-repeat center/auto #FFFFFF;
+  background: url("../img/common/close.svg") no-repeat center/auto #FFFFFF;
 }
 button.icon.bottom, a.icon.bottom {
   width: 30px;
   height: 30px;
   padding: 0;
   font-size: 0;
-  background: url("../images/common/close.svg") no-repeat center/auto;
+  background: url("../img/common/close.svg") no-repeat center/auto;
 }
 button.icon.mo_del, button.icon.mo_add, a.icon.mo_del, a.icon.mo_add {
   width: 30px;
@@ -403,7 +403,7 @@ button.icon.mo_del, button.icon.mo_add, a.icon.mo_del, a.icon.mo_add {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/prev.svg");
+  background-image: url("../img/common/prev.svg");
   background-position: unset;
 }
 button.icon.mo_add, a.icon.mo_add {
@@ -447,8 +447,8 @@ button.normal.on::before, a.normal.on::before {
   mask-position: center;
   background-color: #27AD98;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_check_s.svg");
-  mask-image: url("../images/common/ico_check_s.svg");
+  -webkit-mask-image: url("../img/common/ico_check_s.svg");
+  mask-image: url("../img/common/ico_check_s.svg");
 }
 button.icon_arrow_open, button.icon_arrow_none, button.icon_arrow_close, a.icon_arrow_open, a.icon_arrow_none, a.icon_arrow_close {
   display: inline-block;
@@ -463,15 +463,15 @@ button.icon_arrow_open, button.icon_arrow_none, button.icon_arrow_close, a.icon_
   mask-position: center;
   background-color: #454545;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/icon_arrow_open.svg");
-  mask-image: url("../images/common/icon_arrow_open.svg");
+  -webkit-mask-image: url("../img/common/icon_arrow_open.svg");
+  mask-image: url("../img/common/icon_arrow_open.svg");
 }
 button.icon_arrow_close, a.icon_arrow_close {
   transform: rotate(180deg);
 }
 button.icon_arrow_none, a.icon_arrow_none {
-  -webkit-mask-image: url("../images/common/icon_arrow_none.svg");
-  mask-image: url("../images/common/icon_arrow_none.svg");
+  -webkit-mask-image: url("../img/common/icon_arrow_none.svg");
+  mask-image: url("../img/common/icon_arrow_none.svg");
 }
 button.text, a.text {
   position: relative;
@@ -492,7 +492,7 @@ button.text::before, a.text::before {
   background-image: none;
 }
 button.text.icon_reset::before, a.text.icon_reset::before {
-  background-image: url("../images/common/ico_reset.svg");
+  background-image: url("../img/common/ico_reset.svg");
   transform: scaleX(-1);
 }
 button.s_btn_more, a.s_btn_more {
@@ -519,20 +519,20 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/btn_add.svg");
-  mask-image: url("../images/common/btn_add.svg");
+  -webkit-mask-image: url("../img/common/btn_add.svg");
+  mask-image: url("../img/common/btn_add.svg");
   background-position: center;
 }
 .default_addel_btn .btn_option.btn_del_option::after {
-  -webkit-mask-image: url("../images/common/btn_minus.svg");
-  mask-image: url("../images/common/btn_minus.svg");
+  -webkit-mask-image: url("../img/common/btn_minus.svg");
+  mask-image: url("../img/common/btn_minus.svg");
   background-position: center;
 }
 .default_addel_btn .btn_option.btn_test::after {
   width: 24px;
   margin: 0;
-  -webkit-mask-image: url("../images/common/btn_special.svg");
-  mask-image: url("../images/common/btn_special.svg");
+  -webkit-mask-image: url("../img/common/btn_special.svg");
+  mask-image: url("../img/common/btn_special.svg");
   background-position: center;
 }
 
@@ -548,8 +548,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/close.svg");
-  mask-image: url("../images/common/close.svg");
+  -webkit-mask-image: url("../img/common/close.svg");
+  mask-image: url("../img/common/close.svg");
   background-image: none;
 }
 
@@ -564,8 +564,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/close.svg");
-  mask-image: url("../images/common/close.svg");
+  -webkit-mask-image: url("../img/common/close.svg");
+  mask-image: url("../img/common/close.svg");
   background-image: none;
 }
 
@@ -580,8 +580,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/close.svg");
-  mask-image: url("../images/common/close.svg");
+  -webkit-mask-image: url("../img/common/close.svg");
+  mask-image: url("../img/common/close.svg");
   background-image: none;
 }
 
@@ -612,7 +612,7 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/btn_add.svg");
+  background-image: url("../img/common/btn_add.svg");
   background-position: center;
 }
 
@@ -626,7 +626,7 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   padding: 0 23px 0 14px;
   line-height: 28px;
   color: #FFFFFF;
-  background: url("../images/common/icon_plus.svg") no-repeat center right 4px;
+  background: url("../img/common/icon_plus.svg") no-repeat center right 4px;
   background-color: #162866;
 }
 
@@ -654,14 +654,14 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/label/ico_FileEdit.svg");
+  background-image: url("../img/label/ico_FileEdit.svg");
 }
 .btns_detail ul li a.del {
-  background-image: url("../images/label/ico_trash.svg");
+  background-image: url("../img/label/ico_trash.svg");
   background-position: center;
 }
 .btns_detail ul li a.test {
-  background-image: url("../images/common/ico_code.svg");
+  background-image: url("../img/common/ico_code.svg");
   background-position: center;
 }
 
@@ -691,8 +691,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   background-color: #222222;
   vertical-align: text-bottom;
   background-size: contain;
-  -webkit-mask-image: url("../images/common/ico_accordion.svg");
-  mask-image: url("../images/common/ico_accordion.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion.svg");
+  mask-image: url("../img/common/ico_accordion.svg");
 }
 .btn_dtail.on {
   border: 1px solid #162866;
@@ -723,8 +723,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_document.svg");
-  mask-image: url("../images/common/ico_document.svg");
+  -webkit-mask-image: url("../img/common/ico_document.svg");
+  mask-image: url("../img/common/ico_document.svg");
   -webkit-mask-size: auto;
   mask-size: auto;
   background-image: none;
@@ -766,8 +766,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_btn.svg");
-  mask-image: url("../images/common/ico_btn.svg");
+  -webkit-mask-image: url("../img/common/ico_btn.svg");
+  mask-image: url("../img/common/ico_btn.svg");
 }
 .search_box.mini_search .btn_search {
   right: 10px;
@@ -810,8 +810,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_reset.svg");
-  mask-image: url("../images/common/ico_reset.svg");
+  -webkit-mask-image: url("../img/common/ico_reset.svg");
+  mask-image: url("../img/common/ico_reset.svg");
 }
 .btn_box .primary, .list_right_btn .primary {
   font-weight: 500;
@@ -881,8 +881,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_prev.svg");
-  mask-image: url("../images/common/ico_prev.svg");
+  -webkit-mask-image: url("../img/common/ico_prev.svg");
+  mask-image: url("../img/common/ico_prev.svg");
   background-position: unset;
 }
 .pagination ul li a.last, .pagination ul li a.first {
@@ -902,8 +902,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_pprev.svg");
-  mask-image: url("../images/common/ico_pprev.svg");
+  -webkit-mask-image: url("../img/common/ico_pprev.svg");
+  mask-image: url("../img/common/ico_pprev.svg");
   background-position: unset;
 }
 .pagination ul li a.prev {
@@ -954,8 +954,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/prev.svg");
-  mask-image: url("../images/common/prev.svg");
+  -webkit-mask-image: url("../img/common/prev.svg");
+  mask-image: url("../img/common/prev.svg");
   background-position: unset;
 }
 .pagination.mini_paging ul li a.last, .pagination.mini_paging ul li a.first {
@@ -975,8 +975,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/prevv.svg");
-  mask-image: url("../images/common/prevv.svg");
+  -webkit-mask-image: url("../img/common/prevv.svg");
+  mask-image: url("../img/common/prevv.svg");
   background-position: unset;
 }
 .pagination.mini_paging ul li a.diss {

@@ -50,7 +50,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
         i {
             @include wh (24px, 24px);
             @extend %imgae;
-            background-image:url("../images/label/ico_delegated.svg");
+            background-image:url("../img/label/ico_delegated.svg");
         }
     }
     .madna_ed {
@@ -61,7 +61,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
         i {
             @include wh (34px, 24px);
             @extend %imgae;
-            background-image:url("../images/label/ico_delegating.svg");
+            background-image:url("../img/label/ico_delegating.svg");
         }
     }
 }
@@ -97,7 +97,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
         }
         .icon_list {
             @include icon(16px,16px);
-            background-image:url("../images/label/ico_hourglass.svg");
+            background-image:url("../img/label/ico_hourglass.svg");
         }
     }
 }
@@ -107,23 +107,23 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
     left:7px;
     @include icon (16px, 16px);
     &.icon_receive {
-        background-image:url("../images/common/icon_receive.svg");
+        background-image:url("../img/common/icon_receive.svg");
     }
     &.icon_notice {
-        background-image:url("../images/common/icon_notice.svg");
+        background-image:url("../img/common/icon_notice.svg");
     }
     &.icon_message {
-        background-image:url("../images/common/icon_message.svg");
+        background-image:url("../img/common/icon_message.svg");
     }
     &.icon_caution {
-        background-image:url("../images/common/icon_caution.svg");
+        background-image:url("../img/common/icon_caution.svg");
     }
     &.msg5 {
-        background-image:url("../images/common/ico_mail.svg");
+        background-image:url("../img/common/ico_mail.svg");
         background-position:center;
     }
     &.msg4 {
-        background-image:url("../images/common/icon_alarm.svg");
+        background-image:url("../img/common/icon_alarm.svg");
         background-position:center;
     }
 }
@@ -526,8 +526,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     color:$text-disabled !important;
     .icon_list {
         @include mask($text-disabled);
-        -webkit-mask-image:url("../images/label/ico_circleOff.svg");
-        mask-image:url("../images/label/ico_circleOff.svg");
+        -webkit-mask-image:url("../img/label/ico_circleOff.svg");
+        mask-image:url("../img/label/ico_circleOff.svg");
     }
 }
 .plugConnected { //연결됨
@@ -550,8 +550,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     color:$blue!important;
     .icon_list {
         @include mask($blue);
-        -webkit-mask-image:url("../images/label/ico_FilePlus.svg");
-        mask-image:url("../images/label/ico_FilePlus.svg");
+        -webkit-mask-image:url("../img/label/ico_FilePlus.svg");
+        mask-image:url("../img/label/ico_FilePlus.svg");
     }
     .icon_pgs {
         @include mask(#1863BA);
@@ -563,8 +563,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     color:$true !important;
     .icon_list {
         @include mask($true);
-        -webkit-mask-image:url("../images/label/ico_checkCircle.svg");
-        mask-image:url("../images/label/ico_checkCircle.svg");
+        -webkit-mask-image:url("../img/label/ico_checkCircle.svg");
+        mask-image:url("../img/label/ico_checkCircle.svg");
     }
 }
 .shippingcart_edit { //수정작업중
@@ -587,16 +587,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     color:$blue!important;
     .icon_list {
         @include mask($blue);
-        -webkit-mask-image:url("../images/label/ico_downloadCircle.svg");
-        mask-image:url("../images/label/ico_downloadCircle.svg");
+        -webkit-mask-image:url("../img/label/ico_downloadCircle.svg");
+        mask-image:url("../img/label/ico_downloadCircle.svg");
     }
 }
 .connection_error { //접속오류, 작업중 오류, 수집오류
     color:$false !important;
     .icon_list {
         @include mask($false );
-        -webkit-mask-image:url("../images/label/ico_PauseCircle.svg");
-        mask-image:url("../images/label/ico_PauseCircle.svg");
+        -webkit-mask-image:url("../img/label/ico_PauseCircle.svg");
+        mask-image:url("../img/label/ico_PauseCircle.svg");
     }
 }
 .idisabled { //삭제, 삭제됨
@@ -643,25 +643,25 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     background-position:center !important;
     margin:0 !important;
     &.pdf {
-        background-image:url("../images/common/ico_pdf.svg");
+        background-image:url("../img/common/ico_pdf.svg");
     }
     &.excel {
-        background-image:url("../images/common/icon_excel.svg");
+        background-image:url("../img/common/icon_excel.svg");
     }
     &.word {
-        background-image:url("../images/common/ico_doc.svg");
+        background-image:url("../img/common/ico_doc.svg");
     }
     &.csv {
-        background-image:url("../images/common/ico_csv.svg");
+        background-image:url("../img/common/ico_csv.svg");
     }
     &.hwp {
-        background-image:url("../images/common/ico_hwp.svg");
+        background-image:url("../img/common/ico_hwp.svg");
     }
     &.text {
-        background-image:url("../images/common/ico_txt.svg");
+        background-image:url("../img/common/ico_txt.svg");
     }
     &.ppx {
-        background-image:url("../images/common/ico_ppx.svg");
+        background-image:url("../img/common/ico_ppx.svg");
     }
     &.sl_ff {
         height:16px;
@@ -833,7 +833,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 right:0;
                 transform: translateY(-50%);
                 @include icon(30px, 30px);
-                background-image:url("../images/common/ico_accordion3.svg");
+                background-image:url("../img/common/ico_accordion3.svg");
                 background-position:unset;
                 &.open {
                     transform:rotate(180deg) translateY(50%);
@@ -1007,8 +1007,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         &::after {
             top:2px;
             @include mask($text-disabled);
-            -webkit-mask-image:url("../images/common/arr-next.svg");
-            mask-image:url("../images/common/arr-next.svg");
+            -webkit-mask-image:url("../img/common/arr-next.svg");
+            mask-image:url("../img/common/arr-next.svg");
             background-image:none;
         }
         &.prev {
@@ -1047,7 +1047,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             filter: drop-shadow(5px 0 0 $white);
             border-radius: 7px;
             @include icon (31px,34px);
-            background-image:url("../images/common/triangle.svg");
+            background-image:url("../img/common/triangle.svg");
             z-index:2;
         }
         &:last-child {
@@ -1074,7 +1074,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &::after {
                 left:unset;
                 background-color:unset;
-                background-image:url("../images/common/triangle_comp.svg");
+                background-image:url("../img/common/triangle_comp.svg");
             }
             .s_num {
                 font-size:0;
@@ -1082,8 +1082,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     @include content(17px,17px);
                     display:inline-block;
                     @include mask($basic);
-                    -webkit-mask-image:url("../images/common/ico_step.svg");
-                    mask-image:url("../images/common/ico_step.svg");
+                    -webkit-mask-image:url("../img/common/ico_step.svg");
+                    mask-image:url("../img/common/ico_step.svg");
                 }
             }
         }
@@ -1091,7 +1091,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             color:$white;
             background-color:$primary;
             &::after {
-                background-image:url("../images/common/triangle_curr.svg");
+                background-image:url("../img/common/triangle_curr.svg");
             }
             .s_num {
                 color:$primary;
@@ -1101,7 +1101,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             color:$white;
             background:$secondary;
             &::after {
-                background-image:url("../images/common/triangle_active.svg");
+                background-image:url("../img/common/triangle_active.svg");
             }
             .s_num {
                 color:$text-disabled;
@@ -1116,7 +1116,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 font-size:0;
                 background-color:transparent;
                 @include icon(18px, 18px);
-                background-image:url("../images/common/icon_warning.svg");
+                background-image:url("../img/common/icon_warning.svg");
                 background-position:top center;
                 &::before {
                     content:none;
@@ -1203,24 +1203,24 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     @include mask($text-disabled);
                     background-image:none;
                     &.os {
-                        -webkit-mask-image:url("../images/common/ico_os.svg");
-                        mask-image:url("../images/common/ico_os.svg");
+                        -webkit-mask-image:url("../img/common/ico_os.svg");
+                        mask-image:url("../img/common/ico_os.svg");
                     }
                     &.app {
-                        -webkit-mask-image:url("../images/common/ico_app.svg");
-                        mask-image:url("../images/common/ico_app.svg");
+                        -webkit-mask-image:url("../img/common/ico_app.svg");
+                        mask-image:url("../img/common/ico_app.svg");
                     }
                     &.db {
-                        -webkit-mask-image:url("../images/common/ico_db.svg");
-                        mask-image:url("../images/common/ico_db.svg");
+                        -webkit-mask-image:url("../img/common/ico_db.svg");
+                        mask-image:url("../img/common/ico_db.svg");
                     }
                     &.network {
-                        -webkit-mask-image:url("../images/common/ico_net.svg");
-                        mask-image:url("../images/common/ico_net.svg");
+                        -webkit-mask-image:url("../img/common/ico_net.svg");
+                        mask-image:url("../img/common/ico_net.svg");
                     }
                     &.etc {
-                        -webkit-mask-image:url("../images/common/ico_kebab.svg");
-                        mask-image:url("../images/common/ico_kebab.svg");
+                        -webkit-mask-image:$icoKebab;
+                        mask-image:$icoKebab;
                     }
                 }
                 &.on {
@@ -1408,8 +1408,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 mask-image:$icoMember;
             }
             &.file {
-                -webkit-mask-image:url("../images/common/ico_file.svg");
-                mask-image:url("../images/common/ico_file.svg");
+                -webkit-mask-image:url("../img/common/ico_file.svg");
+                mask-image:url("../img/common/ico_file.svg");
             }
         }
         &.diss {
@@ -1563,8 +1563,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     .branch {
                         height:6px;
                         @include mask($text-disabled);
-                        -webkit-mask-image:url("../images/common/branch.svg");
-                        mask-image:url("../images/common/branch.svg");
+                        -webkit-mask-image:url("../img/common/branch.svg");
+                        mask-image:url("../img/common/branch.svg");
                         background-image:none;
                     }
                     .inst_name {
@@ -2172,8 +2172,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .wf_state {
                 background-color:#2262AC;
                 i {
-                    -webkit-mask-image:url("../images/common/ico_pro.svg");
-                    mask-image:url("../images/common/ico_pro.svg");
+                    -webkit-mask-image:url("../img/common/ico_pro.svg");
+                    mask-image:url("../img/common/ico_pro.svg");
                 }
             }
             .wf_detail {
@@ -2189,7 +2189,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .wf_state {
                 background-color:#6A5ACD;
                 i {
-                    background-image:url("../images/common/ico_mandate.svg");
+                    background-image:url("../img/common/ico_mandate.svg");
                 }
             }
             .wf_detail {
@@ -2206,8 +2206,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:$false;
                 i {
                     color:$white;
-                    -webkit-mask-image:url("../images/common/ico_error.svg");
-                    mask-image:url("../images/common/ico_error.svg");
+                    -webkit-mask-image:url("../img/common/ico_error.svg");
+                    mask-image:url("../img/common/ico_error.svg");
                 }
             }
             .wf_detail {
@@ -2225,7 +2225,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .wf_state {
                 background-color:$text-disabled;
                 i {
-                    background-image:url("../images/common/ico_autopay.svg");
+                    background-image:url("../img/common/ico_autopay.svg");
                 }
             }
             .wf_detail {
@@ -2241,7 +2241,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .wf_state {
                 background-color:#FFC107;
                 i {
-                    background-image:url("../images/common/ico_reject.svg");
+                    background-image:url("../img/common/ico_reject.svg");
                 }
             }
             .wf_detail {
@@ -2257,7 +2257,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             .wf_state {
                 background-color:$text-disabled;
                 i {
-                    background-image:url("../images/common/ico_autopay.svg");
+                    background-image:url("../img/common/ico_autopay.svg");
                 }
             }
             .wf_detail {
@@ -2333,8 +2333,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                     i {
                         @include wh (9px,8px);
                         @include mask ($content);
-                        -webkit-mask-image:url("../images/common/ico_wf_arrow.svg");
-                        mask-image:url("../images/common/ico_wf_arrow.svg");
+                        -webkit-mask-image:url("../img/common/ico_wf_arrow.svg");
+                        mask-image:url("../img/common/ico_wf_arrow.svg");
                         background-image:none;
                         z-index:3;
                     }
@@ -2491,9 +2491,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include wh (30px,30px);
             border:$borderD;
             border-radius:6px;
-            background:url("../images/label/ico_FileEdit.svg")no-repeat center / 70%;
+            background:url("../img/label/ico_FileEdit.svg")no-repeat center / 70%;
             &.dt_modfy {
-                background-image:url("../images/common/ico_approval.svg");
+                background-image:url("../img/common/ico_approval.svg");
                 background-size:100%;
             }
         }
@@ -2528,27 +2528,27 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &.roleLane {
                 &::before {
                     @include icon (24px,24px);
-                    background-image:url("../images/common/ico_roleLane.svg");
+                    background-image:url("../img/common/ico_roleLane.svg");
                 }
             }
             &.itaskBox {
                 &::before {
                     @include icon (24px,24px);
-                    background-image:url("../images/common/ico_TaskBox.svg");
+                    background-image:url("../img/common/ico_TaskBox.svg");
                 }
             }
             &.termination {
                 &::before {
                     @include icon (24px,24px);
-                    background-image:url("../images/common/ico_termination.svg");
+                    background-image:url("../img/common/ico_termination.svg");
                 }
             }
             &.Connector {
                 &::before {
                     @include wh (24px,24px);
                     @include mask (#51C4C4);
-                    -webkit-mask-image:url("../images/moni/ico_connector.svg");
-                    mask-image:url("../images/moni/ico_connector.svg");
+                    -webkit-mask-image:url("../img/moni/ico_connector.svg");
+                    mask-image:url("../img/moni/ico_connector.svg");
                 }
             }
         }
@@ -2574,8 +2574,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:#DBE0F0;
                 &::before {
                     background-color:$basic;
-                    -webkit-mask-image:url("../images/label/ico_FileEdit_f.svg");
-                    mask-image:url("../images/label/ico_FileEdit_f.svg");
+                    -webkit-mask-image:url("../img/label/ico_FileEdit_f.svg");
+                    mask-image:url("../img/label/ico_FileEdit_f.svg");
                 }
             }
             &.succl {
@@ -2583,8 +2583,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:#E3EEFF;
                 &::before {
                     background-color:#0452CB;
-                    -webkit-mask-image:url("../images/common/ico_ok.svg");
-                    mask-image:url("../images/common/ico_ok.svg");
+                    -webkit-mask-image:url("../img/common/ico_ok.svg");
+                    mask-image:url("../img/common/ico_ok.svg");
                 }
             }
             &.approl {
@@ -2592,8 +2592,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:#EFFCF3;
                 &::before {
                     background-color:$true;
-                    -webkit-mask-image:url("../images/common/ico_ok.svg");
-                    mask-image:url("../images/common/ico_ok.svg");
+                    -webkit-mask-image:url("../img/common/ico_ok.svg");
+                    mask-image:url("../img/common/ico_ok.svg");
                 }
             }
             &.waitl {
@@ -2601,8 +2601,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:#FFF3DB;
                 &::before {
                     background-color:#F9AF1C;
-                    -webkit-mask-image:url("../images/label/icon_pgs.svg");
-                    mask-image:url("../images/label/icon_pgs.svg");
+                    -webkit-mask-image:url("../img/label/icon_pgs.svg");
+                    mask-image:url("../img/label/icon_pgs.svg");
                 }
             }
             &.reject {
@@ -2610,15 +2610,15 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-color:#FFEBDD;
                 &::before {
                     background-color:$info;
-                    -webkit-mask-image:url("../images/common/ico_warning.svg");
-                    mask-image:url("../images/common/ico_warning.svg");
+                    -webkit-mask-image:url("../img/common/ico_warning.svg");
+                    mask-image:url("../img/common/ico_warning.svg");
                 }
             }
             &.cancel {
                 border-color:$text-disabled;
                 background-color:#EBEBEB;
                 &::before {
-                    background-image:url("../images/label/closeCircle.svg");
+                    background-image:url("../img/label/closeCircle.svg");
                     background-size:70%;
                     background-position:center;
                 }
@@ -2627,7 +2627,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 border-color:$false;
                 background-color:#FFEFEF;
                 &::before {
-                    background-image:url("../images/common/ico_erro.svg");
+                    background-image:url("../img/common/ico_erro.svg");
                     background-size:70%;
                     background-position:center;
                 }
@@ -2653,17 +2653,17 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .screenbtn {
             padding:0 8px 0 32px;
             &.fitOn {
-                background-image:url("../images/common/ico_fos.svg");
+                background-image:url("../img/common/ico_fos.svg");
                 background-position:left 4px center;
             }
             &.acSize {
-                background-image:url("../images/common/ico_as.svg");
+                background-image:url("../img/common/ico_as.svg");
                 background-position:left 2px center;
             }
             &.zoomin,&.zoomout {
                 position:relative;
                 padding:0;
-                background-image:url("../images/common/ico_btn.svg");
+                background-image:url("../img/common/ico_btn.svg");
                 background-position:center;
                 background-size:75%;
                 &::before {
@@ -2744,8 +2744,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             @include wh (30px,30px);
             margin:0;
             @include mask ($white);
-            -webkit-mask-image:url("../images/common/ico_refresh.svg");
-            mask-image:url("../images/common/ico_refresh.svg");
+            -webkit-mask-image:url("../img/common/ico_refresh.svg");
+            mask-image:url("../img/common/ico_refresh.svg");
         }
     }
     .task_elm {
@@ -2789,7 +2789,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     display:inline-block;
     .tasks {
         display:inline-block;
-        background-image:url("../images/common/wfd_icon_tasks.svg");
+        background-image:url("../img/common/wfd_icon_tasks.svg");
     }
 }
 
@@ -2859,8 +2859,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 @extend %positon_center;
                 @include wh (18px,18px);
                 @include mask($white);
-                -webkit-mask-image:url("../images/common/ico_minus.svg");
-                mask-image:url("../images/common/ico_minus.svg");
+                -webkit-mask-image:url("../img/common/ico_minus.svg");
+                mask-image:url("../img/common/ico_minus.svg");
                 background-position:center;
             }
         }
@@ -3112,7 +3112,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 @include icon (22px,22px);
                 padding:0;
                 background-color:$basic;
-                background-image:url("../images/common/icon_plus_s.svg");
+                background-image:url("../img/common/icon_plus_s.svg");
                 background-position:center;
                 background-size:70%;
             }
@@ -3126,56 +3126,56 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                     &.local-network {
                         margin-bottom:10px;
                         i {
-                            background-image:url("../images/moni/local-network.png");
+                            background-image:url("../img/moni/local-network.png");
                             background-size:100%;
                         }
                     }
                     &.aws {
                         margin-bottom:10px;
                         i {
-                            background-image:url("../images/moni/amazon.png");
+                            background-image:url("../img/moni/amazon.png");
                             background-size:100%;
                         }
                     }
                     &.m-azure {
                         margin-bottom:10px;
                         i {
-                            background-image:url("../images/moni/microsoft-azure.png");
+                            background-image:url("../img/moni/microsoft-azure.png");
                             background-size:100%;
                         }
                     }
                     &.ex-network {
                         margin-bottom:10px;
                         i {
-                            background-image:url("../images/moni/external-network.png");
+                            background-image:url("../img/moni/external-network.png");
                             background-size:100%;
                         }
                     }
                     &.nhn {
                         margin-bottom:10px;
                         i {
-                            background-image:url("../images/moni/nhn.png");
+                            background-image:url("../img/moni/nhn.png");
                             background-size:100%;
                         }
                     }
                     &.ac-directory {
                         margin-bottom:10px;
                         i {
-                            background-image:url("../images/moni/active-directory.png");
+                            background-image:url("../img/moni/active-directory.png");
                             background-size:100%;
                         }
                     }
                     &.oci {
                         margin-bottom:10px;
                         i {
-                            background-image:url("../images/moni/OCI.png");
+                            background-image:url("../img/moni/OCI.png");
                             background-size:100%;
                         }
                     }
                     &.custom {
                         margin-bottom:10px;
                         i {
-                            background-image:url("../images/moni/custom-discovery.png");
+                            background-image:url("../img/moni/custom-discovery.png");
                             background-size:55%;
                         }
                     }
@@ -3239,82 +3239,82 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 }
                 &.role {
                     i {
-                        background-image:url("../images/role/icon_role.svg");
+                        background-image:url("../img/role/icon_role.svg");
                     }
                 }
                 &.usergp {
                     i {
-                        background-image:url("../images/role/icon_usergp.svg");
+                        background-image:url("../img/role/icon_usergp.svg");
                     }
                 }
                 &.belong {
                     i {
-                        background-image:url("../images/role/icon_belong.svg");
+                        background-image:url("../img/role/icon_belong.svg");
                     }
                 }
                 &.opst {
                     i {
-                        background-image:url("../images/role/icon_opst.svg");
+                        background-image:url("../img/role/icon_opst.svg");
                     }
                 }
                 &.adjst {
                     i {
-                        background-image:url("../images/role/icon_adjst.svg");
+                        background-image:url("../img/role/icon_adjst.svg");
                     }
                 }
                 &.appst {
                     i {
-                        background-image:url("../images/role/icon_appst.svg");
+                        background-image:url("../img/role/icon_appst.svg");
                     }
                 }
                 &.dbst {
                     i {
-                        background-image:url("../images/role/icon_dbst.svg");
+                        background-image:url("../img/role/icon_dbst.svg");
                     }
                 }
                 &.networkst {
                     i {
-                        background-image:url("../images/role/icon_networkst.svg");
+                        background-image:url("../img/role/icon_networkst.svg");
                     }
                 }
                 &.securityact {
                     i {
-                        background-image:url("../images/role/icon_securityact.svg");
+                        background-image:url("../img/role/icon_securityact.svg");
                     }
                 }
                 &.ldapst {
                     i {
-                        background-image:url("../images/role/icon_ldapst.svg");
+                        background-image:url("../img/role/icon_ldapst.svg");
                     }
                 }
                 &.etsst {
                     i {
-                        background-image:url("../images/role/icon_etsst.svg");
+                        background-image:url("../img/role/icon_etsst.svg");
                     }
                 }
                 &.imauth {
                     i {
-                        background-image:url("../images/role/icon_imauth.svg");
+                        background-image:url("../img/role/icon_imauth.svg");
                     }
                 }
                 &.aprauth {
                     i {
-                        background-image:url("../images/role/icon_aprauth.svg");
+                        background-image:url("../img/role/icon_aprauth.svg");
                     }
                 }
                 &.systemauth {
                     i {
-                        background-image:url("../images/role/icon_systemauth.svg");
+                        background-image:url("../img/role/icon_systemauth.svg");
                     }
                 }
                 &.osauth {
                     i {
-                        background-image:url("../images/role/icon_osauth.svg");
+                        background-image:url("../img/role/icon_osauth.svg");
                     }
                 }
                 &.etsauth {
                     i {
-                        background-image:url("../images/role/icon_etsauth.svg");
+                        background-image:url("../img/role/icon_etsauth.svg");
                     }
                 }
             }
@@ -3334,29 +3334,29 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                     @include icon(36px,36px);
                     background-position:unset;
                     &.os {
-                        background-image:url("../images/common/icon_os.svg");
+                        background-image:url("../img/common/icon_os.svg");
                     }
                     &.app {
-                        background-image:url("../images/common/icon_app.svg");
+                        background-image:url("../img/common/icon_app.svg");
                     }
                     &.db {
-                        background-image:url("../images/common/icon_db.svg");
+                        background-image:url("../img/common/icon_db.svg");
                     }
                     &.network {
-                        background-image:url("../images/common/icon_net.svg");
+                        background-image:url("../img/common/icon_net.svg");
                     }
                 }
                 &.on {
                     background-color:#CBF0EA;
                     .tab_tree_icon {
                         &.os {
-                            background-image:url("../images/common/icon_os_on.svg");
+                            background-image:url("../img/common/icon_os_on.svg");
                         }
                         &.app {
-                            background-image:url("../images/common/icon_app_on.svg");
+                            background-image:url("../img/common/icon_app_on.svg");
                         }
                         &.db {
-                            background-image:url("../images/common/icon_db_on.svg");
+                            background-image:url("../img/common/icon_db_on.svg");
                         }
                     }
                 }
@@ -3411,7 +3411,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         font-weight:$font-w-e;
         .more_plus {
             @include icon(24px,24px);
-            background-image:url("../images/common/icon_plus.svg");
+            background-image:url("../img/common/icon_plus.svg");
             background-position:unset;
         }
     }
@@ -3710,7 +3710,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                         bottom:30px;
                         left:50%;
                         transform:translateX(-50%);
-                        background: url("../images/common/icon-nodata.svg") no-repeat;
+                        background: url("../img/common/icon-nodata.svg") no-repeat;
                         opacity: .3;
                     }
                 }
@@ -3825,7 +3825,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         .#{$mo} {
             background-position:unset;
             @include icon (30px, 30px);
-            background-image:url("../images/common/prev.svg");
+            background-image:url("../img/common/prev.svg");
         }
     }
 
@@ -3835,7 +3835,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         .#{$allMo} {
             background-position:unset;
             @include icon (30px, 30px);
-            background-image:url("../images/common/prevv.svg");
+            background-image:url("../img/common/prevv.svg");
         }
     }
     .mo_del,
@@ -3960,8 +3960,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             @include wh (24px, 24px);
             @include mask ($title);
             border:0;
-            -webkit-mask-image:url("../images/common/icon_plus.svg");
-            mask-image:url("../images/common/icon_plus.svg");
+            -webkit-mask-image:url("../img/common/icon_plus.svg");
+            mask-image:url("../img/common/icon_plus.svg");
             -webkit-mask-size:80%;
             mask-size:80%;
             &::after {
@@ -3977,8 +3977,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 left:2px;
                 @include wh (24px,24px);
                 @include mask($white);
-                -webkit-mask-image:url("../images/common/ico_minus.svg");
-                mask-image:url("../images/common/ico_minus.svg");
+                -webkit-mask-image:url("../img/common/ico_minus.svg");
+                mask-image:url("../img/common/ico_minus.svg");
                 background-image:none;
                 background-position:center;
             }
@@ -4117,26 +4117,26 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             }
             .mnt_user {
                 @include mask($text-disabled);
-                -webkit-mask-image:url("../images/common/ico_member.svg");
-                mask-image:url("../images/common/ico_member.svg");
+                -webkit-mask-image:url("../img/common/ico_member.svg");
+                mask-image:url("../img/common/ico_member.svg");
             }
             .mnt_server {
-                background-image:url("../images/moni/ico_server.svg");
+                background-image:url("../img/moni/ico_server.svg");
             }
             .mnt_system {
-                background-image:url("../images/moni/ico_system.svg");
+                background-image:url("../img/moni/ico_system.svg");
             }
             .mnt_connect {
-                background-image:url("../images/moni/ico_check_server.svg");
+                background-image:url("../img/moni/ico_check_server.svg");
             }
             .mnt_unauthorized {
-                background-image:url("../images/moni/ico_unauthorized.svg");
+                background-image:url("../img/moni/ico_unauthorized.svg");
             }
             .mnt_task {
-                background-image:url("../images/moni/ico_work.svg");
+                background-image:url("../img/moni/ico_work.svg");
             }
             .mnt_role {
-                background-image:url("../images/moni/ico_role.svg");
+                background-image:url("../img/moni/ico_role.svg");
             }
         }
         .data_txt_stl {
@@ -4204,8 +4204,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 .icon_networkuse {
                     @include wh (24px, 24px);
                     @include mask ($text-disabled);
-                    -webkit-mask-image:url("../images/common/icon_net.svg");
-                    mask-image:url("../images/common/icon_net.svg");
+                    -webkit-mask-image:url("../img/common/icon_net.svg");
+                    mask-image:url("../img/common/icon_net.svg");
                     background-image:none;
                 }
             }
@@ -4296,8 +4296,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 @include content(24px,24px);
                 margin-right:3px;
                 @include mask ($text-disabled);
-                -webkit-mask-image:url("../images/moni/ico_status.svg");
-                mask-image:url("../images/moni/ico_status.svg");
+                -webkit-mask-image:url("../img/moni/ico_status.svg");
+                mask-image:url("../img/moni/ico_status.svg");
             }
             dt {
                 width:auto;
@@ -4373,7 +4373,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     .btn_dbcontrl {
         left:-35px;
         @include wh (35px,35px);
-        background:url("../images/common/ico_dbcontrl.svg")no-repeat center $basic;
+        background:url("../img/common/ico_dbcontrl.svg")no-repeat center $basic;
     }
     .contrl_wrap {
         width:335px;
@@ -4485,12 +4485,12 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             &.HRsystem {
                 background-image:none;
                 background-position:unset;
-                background:url("../images/common/ico_HRsystem.svg")no-repeat center $btn-disabled;
+                background:url("../img/common/ico_HRsystem.svg")no-repeat center $btn-disabled;
             }
             &.ADserver {
                 background-image:none;
                 background-position:unset;
-                background:url("../images/common/ico_ADserver.svg")no-repeat center $btn-disabled;
+                background:url("../img/common/ico_ADserver.svg")no-repeat center $btn-disabled;
             }
         }
         .system_name_tit {
@@ -4515,8 +4515,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 @include content(24px,24px);
                 display:inline-block;
                 @include mask($title);
-                -webkit-mask-image:url("../images/common/ico_play.svg");
-                mask-image:url("../images/common/ico_play.svg");
+                -webkit-mask-image:url("../img/common/ico_play.svg");
+                mask-image:url("../img/common/ico_play.svg");
             }
             &.diss {
                 border-color:$btn-disabled;
@@ -4544,7 +4544,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             .icon_timer,.icon_realtime {
                 @include icon(16px,16px);
                 background-position:unset;
-                background-image:url("../images/common/icon_time.svg");
+                background-image:url("../img/common/icon_time.svg");
             }
         }
         .sync_ctg_name {
@@ -4613,36 +4613,36 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             }
             &.userGroup {
                 background-position:unset;
-                background-image:url("../images/common/ico_memberGroup.svg");
+                background-image:url("../img/common/ico_memberGroup.svg");
             }
             &.orgzt {
                 background-position:unset;
-                background-image:url("../images/common/ico_organize.svg");
+                background-image:url("../img/common/ico_organize.svg");
             }
             &.personalPolicy {
                 background-position:unset;
-                background-image:url("../images/common/ico_per-policy.svg");
+                background-image:url("../img/common/ico_per-policy.svg");
             }
             &.systemNum {
                 background-position:unset;
-                background-image:url("../images/common/ico_system.svg");
+                background-image:url("../img/common/ico_system.svg");
             }
             &.accountNum {
                 background-position:unset;
-                background-image:url("../images/common/ico_accounts.svg");
+                background-image:url("../img/common/ico_accounts.svg");
             }
             &.device {
                 background-position:unset;
-                background-image:url("../images/common/ico_device.svg");
+                background-image:url("../img/common/ico_device.svg");
             }
             &.Auth {
                 background-position:unset;
-                background-image:url("../images/common/ico_auth.svg");
+                background-image:url("../img/common/ico_auth.svg");
                 background-size:$wh100;
             }
             &.distb {
                 background-position:unset;
-                background-image:url("../images/common/ico_distribution.svg");
+                background-image:url("../img/common/ico_distribution.svg");
                 background-size:$wh100;
             }
         }
@@ -4762,15 +4762,15 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         background-size:contain;
         &.fw_NAC {
             background-position:unset;
-            background-image:url("../images/common/ico_nac.svg");
+            background-image:url("../img/common/ico_nac.svg");
         }
         &.fw_fw {
             background-position:unset;
-            background-image:url("../images/common/ico_fw.svg");
+            background-image:url("../img/common/ico_fw.svg");
         }
         &.fw_VPN {
             background-position:unset;
-            background-image:url("../images/common/ico_vpn.svg");
+            background-image:url("../img/common/ico_vpn.svg");
         }
     }
 }
@@ -4786,28 +4786,28 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         border-radius:7px;
         background-color:$btn-disabled;
         &.AMsystem {
-            background-image:url("../images/role/icon_securityact.svg");
+            background-image:url("../img/role/icon_securityact.svg");
             background-position:center;
             background-size:70%;
         }
         &.OSSystem {
-            background-image:url("../images/common/icon_OSSystem.svg");
+            background-image:url("../img/common/icon_OSSystem.svg");
             background-position:center;
         }
         &.Application {
-            background-image:url("../images/role/icon_appst.svg");
+            background-image:url("../img/role/icon_appst.svg");
             background-position:center;
             background-size:70%;
         }
         &.DBconnectaccount {
-            background-image:url("../images/role/icon_dbst.svg");
+            background-image:url("../img/role/icon_dbst.svg");
             background-position:center;
             background-size:70%;
         }
     }
     .cloud_icon {
         &.GoogleCloud {
-            background-image:url("../images/common/icon_google.svg");
+            background-image:url("../img/common/icon_google.svg");
             background-position:center;
             background-size:70%;
             background-color:$btn-disabled;
@@ -4834,8 +4834,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 i {
                     @include wh(18px,18px);
                     @include mask($info);
-                    -webkit-mask-image: url("../images/common/ico_warning.svg");
-                    mask-image: url("../images/common/ico_warning.svg");
+                    -webkit-mask-image: url("../img/common/ico_warning.svg");
+                    mask-image: url("../img/common/ico_warning.svg");
                 }
             }
         }
@@ -4845,7 +4845,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         background-position:unset;
         border: 1px solid $border-d;
         border-radius: 6px;
-        background: url("../images/common/ico_reset.svg") no-repeat center;
+        background: url("../img/common/ico_reset.svg") no-repeat center;
     }
     .server_loading {
         @include wh(30px, 30px);
@@ -4939,8 +4939,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         background-color:#FFEBDD;
         .icon_warning {
             background-color:$info;
-            -webkit-mask-image:url("../images/common/ico_warning.svg");
-            mask-image:url("../images/common/ico_warning.svg");
+            -webkit-mask-image:url("../img/common/ico_warning.svg");
+            mask-image:url("../img/common/ico_warning.svg");
         }
         .sych_mnt_toast_detail {
             p, em {
@@ -5590,8 +5590,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                         }
                         &.btn_del_option {
                             &::after {
-                                -webkit-mask-image:url("../images/common/btn_minus.svg");
-                                mask-image:url("../images/common/btn_minus.svg");
+                                -webkit-mask-image:url("../img/common/btn_minus.svg");
+                                mask-image:url("../img/common/btn_minus.svg");
                             }
                         }
                     }
@@ -5672,7 +5672,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             transform:translate(-50%,-50%);
             @include icon (24px,24px);
             margin:0;
-            background-image:url("../images/label/ico_FileEdit_f.svg");
+            background-image:url("../img/label/ico_FileEdit_f.svg");
             background-position:center;
         }
     }
@@ -5844,8 +5844,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         @extend %positon_center;
         display:inline-block;
         @include mask($title);
-        -webkit-mask-image:url("../images/common/ico_show.svg");
-        mask-image:url("../images/common/ico_show.svg");
+        -webkit-mask-image:url("../img/common/ico_show.svg");
+        mask-image:url("../img/common/ico_show.svg");
     }
     &.hide {
         border-color:$border-d;
@@ -5925,7 +5925,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                     @include topCenter ($left: 0);
                     display:block;
                     @include icon (24px,24px);
-                    background-image:url("../images/common/ico_notice.svg");
+                    background-image:url("../img/common/ico_notice.svg");
                 }
             }
             .recent_notice {
@@ -5943,8 +5943,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 em {
                     @include wh (24px,24px);
                     @include mask($white);
-                    -webkit-mask-image:url("../images/common/ico_accordion3.svg");
-                    mask-image:url("../images/common/ico_accordion3.svg");
+                    -webkit-mask-image:url("../img/common/ico_accordion3.svg");
+                    mask-image:url("../img/common/ico_accordion3.svg");
                     transform:rotate(-90deg);
                 }
             }
@@ -6002,10 +6002,10 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                     margin-top:2px;
                 }
                 .icon_myauth {
-                    background-image:url("../images/common/icon_myauth.svg");
+                    background-image:url("../img/common/icon_myauth.svg");
                 }
                 .icon_mypw {
-                    background-image:url("../images/label/icon_locked.svg");
+                    background-image:url("../img/label/icon_locked.svg");
                     background-position:unset;
                 }
             }
@@ -6062,22 +6062,22 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         background-color:$btn-disabled;
         i {
             @include wh(34px,34px);
-            background:url("../images/role/icon_opst.svg")no-repeat center;
+            background:url("../img/role/icon_opst.svg")no-repeat center;
             background-size:$wh100;
         }
         &.pwd {
             i {
-                background-image:url("../images/role/icon-locked.svg");
+                background-image:url("../img/role/icon-locked.svg");
             }
         }
         &.task {
             i {
-                background-image:url("../images/role/icon_task.svg");
+                background-image:url("../img/role/icon_task.svg");
             }
         }
         &.req {
             i {
-                background-image:url("../images/role/icon_FileEdit.svg");
+                background-image:url("../img/role/icon_FileEdit.svg");
             }
         }
     }
@@ -6093,8 +6093,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         &.hm_req {
             i {
                 @include mask(#0D64AF);
-                -webkit-mask-image:url("../images/label/ico_FileEdit_f.svg");
-                mask-image:url("../images/label/ico_FileEdit_f.svg");
+                -webkit-mask-image:url("../img/label/ico_FileEdit_f.svg");
+                mask-image:url("../img/label/ico_FileEdit_f.svg");
                 background-image:none;
             }
             .hm_tit,.hm_alimnum, .hm_alimnum em {
@@ -6104,8 +6104,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         &.hm_appr {
             i {
                 @include mask($true);
-                -webkit-mask-image:url("../images/common/ico_ok.svg");
-                mask-image:url("../images/common/ico_ok.svg");
+                -webkit-mask-image:url("../img/common/ico_ok.svg");
+                mask-image:url("../img/common/ico_ok.svg");
                 background-image:unset;
             }
             .hm_tit,.hm_alimnum, .hm_alimnum em {
@@ -6115,8 +6115,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         &.hm_msg {
             i {
                 @include mask($info);
-                -webkit-mask-image:url("../images/common/ico_msg.svg");
-                mask-image:url("../images/common/ico_msg.svg");
+                -webkit-mask-image:url("../img/common/ico_msg.svg");
+                mask-image:url("../img/common/ico_msg.svg");
                 background-image:unset;
             }
             .hm_tit,.hm_alimnum, .hm_alimnum em {
@@ -6189,7 +6189,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     .move_ctrl {
         .mo_del {
             @include icon (30px,30px);
-            background-image:url("../images/common/prev.svg");
+            background-image:url("../img/common/prev.svg");
             background-position:unset;
         }
         .mo_add {
@@ -6220,9 +6220,9 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         }
         .icon_license {
             @include icon(24px,24px);
-            background-image:url("../images/common/ico_medal.svg");
+            background-image:url("../img/common/ico_medal.svg");
             &.expiration {
-                background-image:url("../images/common/ico_medal_off.svg");
+                background-image:url("../img/common/ico_medal_off.svg");
                 background-position:unset;
             }
         }
@@ -6291,13 +6291,13 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             left:0;
             display:inline-block;
             @include icon(20px,20px);
-            background-image:url("../images/moni/ico_connector.svg");
+            background-image:url("../img/moni/ico_connector.svg");
         }
     }
     &:nth-child(1) {
         .tit {
             &::before {
-                background-image:url("../images/moni/ico_server.svg");
+                background-image:url("../img/moni/ico_server.svg");
             }
         }
     }
@@ -6305,15 +6305,15 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         .tit {
             &::before {
                 @include mask($text-disabled);
-                -webkit-mask-image:url("../images/common/ico_member.svg");
-                mask-image:url("../images/common/ico_member.svg");
+                -webkit-mask-image:url("../img/common/ico_member.svg");
+                mask-image:url("../img/common/ico_member.svg");
             }
         }
     }
     &:nth-child(3) {
         .tit {
             &::before {
-                background-image:url("../images/moni/ico_system.svg");
+                background-image:url("../img/moni/ico_system.svg");
             }
         }
     }
@@ -6358,57 +6358,57 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             }
             &.ActLog {
                 &::before {
-                    background-image:url("../images/common/ico_actLog.svg");
+                    background-image:url("../img/common/ico_actLog.svg");
                 }
             }
             &.ThreatIntelli {
                 &::before {
-                    background-image:url("../images/common/ico_threatIntelligence.svg");
+                    background-image:url("../img/common/ico_threatIntelligence.svg");
                 }
             }
             &.SIEM {
                 &::before {
-                    background-image:url("../images/common/icon_siem.svg");
+                    background-image:url("../img/common/icon_siem.svg");
                 }
             }
             &.HRsystem {
                 &::before {
-                    background-image:url("../images/common/ico_HRsystem.svg");
+                    background-image:url("../img/common/ico_HRsystem.svg");
                 }
             }
             &.devMng {
                 &::before {
-                    background-image:url("../images/common/icon_deviceManager.svg");
+                    background-image:url("../img/common/icon_deviceManager.svg");
                 }
             }
             &.OSSystem {
                 &::before {
-                    background-image:url("../images/common/icon_OSSystem.svg");
+                    background-image:url("../img/common/icon_OSSystem.svg");
                 }
             }
             &.DataBase {
                 &::before {
-                    background-image:url("../images/role/icon_dbst.svg");
+                    background-image:url("../img/role/icon_dbst.svg");
                 }
             }
             &.application {
                 &::before {
-                    background-image:url("../images/role/icon_appst.svg");
+                    background-image:url("../img/role/icon_appst.svg");
                 }
             }
             &.network {
                 &::before {
-                    background-image:url("../images/role/icon_networkst.svg");
+                    background-image:url("../img/role/icon_networkst.svg");
                 }
             }
             &.cloud {
                 &::before {
-                    background-image:url("../images/role/ico_cloud.svg");
+                    background-image:url("../img/role/ico_cloud.svg");
                 }
             }
             &.etcSystem {
                 &::before {
-                    background-image:url("../images/role/icon_etsst.svg");
+                    background-image:url("../img/role/icon_etsst.svg");
                 }
             }
         }
@@ -6441,15 +6441,15 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             margin:0;
             background-position:unset;
             &.PAMGateway {
-                background-image:url("../images/common/ico_pAMGateway.svg");
+                background-image:url("../img/common/ico_pAMGateway.svg");
                 background-position:unset;
             }
             &.DBAM {
-                background-image:url("../images/common/ico_accessControl.svg");
+                background-image:url("../img/common/ico_accessControl.svg");
                 background-position:unset;
             }
             &.WebEAM {
-                background-image:url("../images/common/ico_webEAM.svg");
+                background-image:url("../img/common/ico_webEam.svg");
                 background-position:unset;
             }
         }
@@ -6535,7 +6535,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             &.icon_realtime {
                 @include wh(16px,16px);
                 background-position:unset;
-                background-image:url("../images/common/icon_time.svg");
+                background-image:url("../img/common/icon_time.svg");
             }
         }
     }
@@ -6547,15 +6547,15 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             background-position:unset;
         }
         &.UEMClient {
-            background-image:url("../images/common/ico_ume.svg");
+            background-image:url("../img/common/ico_ume.svg");
             background-position:unset;
         }
         &.NACClient {
-            background-image:url("../images/common/ico_nac.svg");
+            background-image:url("../img/common/ico_nac.svg");
             background-position:unset;
         }
         &.PAMClient {
-            background-image:url("../images/common/ico_pam.svg");
+            background-image:url("../img/common/ico_pam.svg");
             background-position:unset;
         }
     }
@@ -6591,7 +6591,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     }
     .donut {
         @include wh (88px,88px);
-        background:url("../images/common/donut.svg")no-repeat center;
+        background:url("../img/common/donut.svg")no-repeat center;
         background-size:100%;
         em {
             font-size:$font28;
@@ -6619,7 +6619,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     }
 }
 .policy_score {
-    background:url("../images/common/score_donut.svg")no-repeat center;
+    background:url("../img/common/score_donut.svg")no-repeat center;
     background-position:0 0;
     &.policy_score_x {
         background-position:0 -16px;
@@ -6865,8 +6865,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                     @include mask($white);
                     -webkit-mask-size:80%;
                     mask-size:80%;
-                    -webkit-mask-image: url("../images/common/ico_reset.svg");
-                    mask-image: url("../images/common/ico_reset.svg");
+                    -webkit-mask-image: url("../img/common/ico_reset.svg");
+                    mask-image: url("../img/common/ico_reset.svg");
                 }
             }
         }
@@ -6958,8 +6958,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             top:1px;
             padding:0;
             background-color:$primary;
-            -webkit-mask-image: url("../images/common/ico_cld_close.svg");
-            mask-image: url("../images/common/ico_cld_close.svg");
+            -webkit-mask-image: url("../img/common/ico_cld_close.svg");
+            mask-image: url("../img/common/ico_cld_close.svg");
         }
     }
     .week_time_schedule_col {
@@ -7037,12 +7037,12 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 }
                 &::before {
                     left: 0;
-                    background-image: url("../images/common/left404.png");
+                    background-image: url("../img/common/left404.png");
                     background-size: 80%;
                 }
                 &::after {
                     right: 0;
-                    background-image: url("../images/common/right404.png");
+                    background-image: url("../img/common/right404.png");
                     background-size: 100%;
                 }
             }
@@ -7076,7 +7076,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 top:0;
                 display:inline-block;
                 @include icon(179px,179px);
-                background-image:url("../images/common/hourglass.gif");
+                background-image:url("../img/common/hourglass.gif");
                 animation:hourglass 2.8s ease-in-out infinite;
 
                 @keyframes hourglass {

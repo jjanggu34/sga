@@ -97,7 +97,7 @@
 
 /* date */
 .form_date .date_ctl {
-  background-image: url("../images/common/ico_calendar.svg");
+  background-image: url("../img/common/ico_calendar.svg");
   background-position: left 5px center;
   background-size: 16px;
   background-repeat: no-repeat;
@@ -136,7 +136,7 @@
   background-repeat: no-repeat;
   background-image: none;
   padding: 0;
-  background-image: url("../images/common/ico_accordion3.svg");
+  background-image: url("../img/common/ico_accordion3.svg");
   background-position: center;
   transform: rotate(90deg);
 }
@@ -147,7 +147,7 @@
   background-repeat: no-repeat;
   background-image: none;
   padding: 0;
-  background-image: url("../images/common/ico_accordion3.svg");
+  background-image: url("../img/common/ico_accordion3.svg");
   background-position: center;
   transform: rotate(90deg);
 }
@@ -200,13 +200,13 @@
   background-position: center;
 }
 .filebox .file_btns button.file {
-  background-image: url("../images/common/btn-file.svg");
+  background-image: url("../img/common/btn-file.svg");
   background-color: unset;
 }
 .filebox .file_btns button.upload {
   border: 0;
   border-radius: 6px;
-  background-image: url("../images/common/ico_upload.svg");
+  background-image: url("../img/common/ico_upload.svg");
   background-color: #162866;
 }
 
@@ -248,8 +248,8 @@
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_file_upload.svg");
-  mask-image: url("../images/common/ico_file_upload.svg");
+  -webkit-mask-image: url("../img/common/ico_file_upload.svg");
+  mask-image: url("../img/common/ico_file_upload.svg");
   background-image: none;
 }
 .file_upload_wrap .file_upload_box p {
@@ -288,7 +288,7 @@
   padding: 0;
   border: 1px solid #DDDDDD;
   border-radius: 6px;
-  background-image: url("../images/common/close.svg");
+  background-image: url("../img/common/close.svg");
   background-size: 80%;
   background-color: #FFFFFF;
   background-position: center;
@@ -381,8 +381,8 @@
   mask-position: center;
   background-color: #BBBBBB;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_check_s.svg");
-  mask-image: url("../images/common/ico_check_s.svg");
+  -webkit-mask-image: url("../img/common/ico_check_s.svg");
+  mask-image: url("../img/common/ico_check_s.svg");
 }
 .check_stl:checked + label.check_stl_lab::before {
   width: 16px;
@@ -444,8 +444,8 @@
   vertical-align: text-bottom;
   -webkit-mask-size: 100%;
   mask-size: 100%;
-  -webkit-mask-image: url("../images/common/ico_check_s.svg");
-  mask-image: url("../images/common/ico_check_s.svg");
+  -webkit-mask-image: url("../img/common/ico_check_s.svg");
+  mask-image: url("../img/common/ico_check_s.svg");
 }
 .check_stl:checked + label.check_stl_lab2 {
   color: #454545;
@@ -540,7 +540,7 @@
 ---------------------------------------------*/
 select.form_contrl {
   padding-right: 26px;
-  background: url("../images/common/ico_accordion.svg") no-repeat right 1px center #FFFFFF;
+  background: url("../img/common/ico_accordion.svg") no-repeat right 1px center #FFFFFF;
 }
 
 .tbl_btm .page_select {

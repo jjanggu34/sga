@@ -155,12 +155,12 @@ body * {
   margin-bottom: 10px;
 }
 #IMwrap .login_input .id_input label, #IMwrap .login_input .userID label {
-  -webkit-mask-image: url("../images/common/ico_member.svg");
-  mask-image: url("../images/common/ico_member.svg");
+  -webkit-mask-image: url("../img/common/ico_member.svg");
+  mask-image: url("../img/common/ico_member.svg");
 }
 #IMwrap .login_input .pw_input label, #IMwrap .login_input .userPWD label {
-  -webkit-mask-image: url("../images/common/icon_locked2.svg");
-  mask-image: url("../images/common/icon_locked2.svg");
+  -webkit-mask-image: url("../img/common/icon_locked2.svg");
+  mask-image: url("../img/common/icon_locked2.svg");
 }
 #IMwrap .login_input .pw_input .fas, #IMwrap .login_input .userPWD .fas {
   transform: translateY(-50%);
@@ -178,10 +178,10 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_login_show.svg");
+  background-image: url("../img/common/ico_login_show.svg");
 }
 #IMwrap .login_input .pw_input .fas.hide::before, #IMwrap .login_input .userPWD .fas.hide::before {
-  background-image: url("../images/common/ico_login_hide.svg");
+  background-image: url("../img/common/ico_login_hide.svg");
   background-position: unset;
 }
 #IMwrap .login_input .pw_input {
@@ -215,8 +215,8 @@ body * {
   mask-position: center;
   background-color: #FF0000;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_info.svg");
-  mask-image: url("../images/common/ico_info.svg");
+  -webkit-mask-image: url("../img/common/ico_info.svg");
+  mask-image: url("../img/common/ico_info.svg");
 }
 #IMwrap .login_input .dupli_check {
   padding-top: 0;
@@ -282,8 +282,8 @@ body * {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_accordion.svg");
-  mask-image: url("../images/common/ico_accordion.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion.svg");
+  mask-image: url("../img/common/ico_accordion.svg");
 }
 #IMwrap .tn_slt .fm_tit .tab_arrow.open {
   transform: translateY(-50%);
@@ -319,7 +319,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_msg.svg");
+  background-image: url("../img/common/ico_msg.svg");
 }
 #IMwrap .security_pledge {
   flex-direction: column-reverse;
@@ -356,8 +356,8 @@ body * {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/close.svg");
-  mask-image: url("../images/common/close.svg");
+  -webkit-mask-image: url("../img/common/close.svg");
+  mask-image: url("../img/common/close.svg");
   background-image: none;
 }
 #IMwrap .txtbtns_devide {
@@ -419,7 +419,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_am.svg");
+  background-image: url("../img/common/ico_am.svg");
 }
 #IMwrap .client_down_list .clientBtn.OTP {
   border: 0;
@@ -431,7 +431,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_otp.svg");
+  background-image: url("../img/common/ico_otp.svg");
   background-position: unset;
 }
 #IMwrap .client_down_list .clientBtn.FIDO {
@@ -444,7 +444,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_uem.svg");
+  background-image: url("../img/common/ico_uem.svg");
   background-position: unset;
 }
 #IMwrap .client_down_list .clientBtn.UEM {
@@ -457,7 +457,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_fido.svg");
+  background-image: url("../img/common/ico_fido.svg");
   background-position: unset;
 }
 
@@ -810,48 +810,48 @@ body * {
   background-image: none;
 }
 #SGIM_wrap .nav_list > li > a i.UserMangement {
-  -webkit-mask-image: url("../images/nav/nav_user.svg");
-  mask-image: url("../images/nav/nav_user.svg");
+  -webkit-mask-image: url("../img/nav/nav_user.svg");
+  mask-image: url("../img/nav/nav_user.svg");
 }
 #SGIM_wrap .nav_list > li > a i.ResourceMangement {
-  -webkit-mask-image: url("../images/nav/nav_resource.svg");
-  mask-image: url("../images/nav/nav_resource.svg");
+  -webkit-mask-image: url("../img/nav/nav_resource.svg");
+  mask-image: url("../img/nav/nav_resource.svg");
 }
 #SGIM_wrap .nav_list > li > a i.ServerZoneMangement {
-  -webkit-mask-image: url("../images/nav/nav_server.svg");
-  mask-image: url("../images/nav/nav_server.svg");
+  -webkit-mask-image: url("../img/nav/nav_server.svg");
+  mask-image: url("../img/nav/nav_server.svg");
 }
 #SGIM_wrap .nav_list > li > a i.RoleMangement {
-  -webkit-mask-image: url("../images/nav/nav_role.svg");
-  mask-image: url("../images/nav/nav_role.svg");
+  -webkit-mask-image: url("../img/nav/nav_role.svg");
+  mask-image: url("../img/nav/nav_role.svg");
 }
 #SGIM_wrap .nav_list > li > a i.AccessPolicyManagement {
-  -webkit-mask-image: url("../images/nav/nav_access.svg");
-  mask-image: url("../images/nav/nav_access.svg");
+  -webkit-mask-image: url("../img/nav/nav_access.svg");
+  mask-image: url("../img/nav/nav_access.svg");
 }
 #SGIM_wrap .nav_list > li > a i.SynchronizeManagment {
-  -webkit-mask-image: url("../images/nav/nav_synchronize.svg");
-  mask-image: url("../images/nav/nav_synchronize.svg");
+  -webkit-mask-image: url("../img/nav/nav_synchronize.svg");
+  mask-image: url("../img/nav/nav_synchronize.svg");
 }
 #SGIM_wrap .nav_list > li > a i.AuditingReport {
-  -webkit-mask-image: url("../images/nav/nav_auditing.svg");
-  mask-image: url("../images/nav/nav_auditing.svg");
+  -webkit-mask-image: url("../img/nav/nav_auditing.svg");
+  mask-image: url("../img/nav/nav_auditing.svg");
 }
 #SGIM_wrap .nav_list > li > a i.SGIMManagement {
-  -webkit-mask-image: url("../images/nav/nav_management.svg");
-  mask-image: url("../images/nav/nav_management.svg");
+  -webkit-mask-image: url("../img/nav/nav_management.svg");
+  mask-image: url("../img/nav/nav_management.svg");
 }
 #SGIM_wrap .nav_list > li > a i.WorkflowManagement {
-  -webkit-mask-image: url("../images/nav/nav_workflow.svg");
-  mask-image: url("../images/nav/nav_workflow.svg");
+  -webkit-mask-image: url("../img/nav/nav_workflow.svg");
+  mask-image: url("../img/nav/nav_workflow.svg");
 }
 #SGIM_wrap .nav_list > li > a i.PolicyMangement {
-  -webkit-mask-image: url("../images/nav/nav_policy.svg");
-  mask-image: url("../images/nav/nav_policy.svg");
+  -webkit-mask-image: url("../img/nav/nav_policy.svg");
+  mask-image: url("../img/nav/nav_policy.svg");
 }
 #SGIM_wrap .nav_list > li > a i.System {
-  -webkit-mask-image: url("../images/nav/nav_system.svg");
-  mask-image: url("../images/nav/nav_system.svg");
+  -webkit-mask-image: url("../img/nav/nav_system.svg");
+  mask-image: url("../img/nav/nav_system.svg");
 }
 #SGIM_wrap .nav_list > li > a span {
   font-size: 13px;
@@ -897,8 +897,8 @@ body * {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/arrow.svg");
-  mask-image: url("../images/common/arrow.svg");
+  -webkit-mask-image: url("../img/common/arrow.svg");
+  mask-image: url("../img/common/arrow.svg");
 }
 #SGIM_wrap .nav_list > li ul li a.on {
   color: #27AD98;
@@ -920,7 +920,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/menu.svg");
+  background-image: url("../img/common/menu.svg");
 }
 #SGIM_wrap .header .btn_lnb_m a {
   display: inline-block;
@@ -929,7 +929,7 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/menu.svg");
+  background-image: url("../img/common/menu.svg");
 }
 #SGIM_wrap .header .btn_lnb a {
   top: 18px;
@@ -971,8 +971,8 @@ body * {
   mask-position: center;
   background-color: #757575;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/arrow.svg");
-  mask-image: url("../images/common/arrow.svg");
+  -webkit-mask-image: url("../img/common/arrow.svg");
+  mask-image: url("../img/common/arrow.svg");
 }
 #SGIM_wrap .header .header_title .link_depth li:last-child a {
   color: #222222;
@@ -996,8 +996,8 @@ body * {
   background-color: #757575;
   vertical-align: text-bottom;
   font-size: 0;
-  -webkit-mask-image: url("../images/common/home.svg");
-  mask-image: url("../images/common/home.svg");
+  -webkit-mask-image: url("../img/common/home.svg");
+  mask-image: url("../img/common/home.svg");
 }
 #SGIM_wrap .header .header_title .link_depth li:first-child::before {
   content: none;
@@ -1055,8 +1055,8 @@ body * {
   mask-position: center;
   background-color: #27AD98;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/icon_refresh.svg");
-  mask-image: url("../images/common/icon_refresh.svg");
+  -webkit-mask-image: url("../img/common/icon_refresh.svg");
+  mask-image: url("../img/common/icon_refresh.svg");
   background-image: none;
 }
 #SGIM_wrap .header .gl_nav li.timer i {
@@ -1064,8 +1064,8 @@ body * {
   top: 3px;
   width: 16px;
   height: 16px;
-  -webkit-mask-image: url("../images/common/ico_time.svg");
-  mask-image: url("../images/common/ico_time.svg");
+  -webkit-mask-image: url("../img/common/ico_time.svg");
+  mask-image: url("../img/common/ico_time.svg");
 }
 #SGIM_wrap .header .gl_nav li.btn_menualdown a, #SGIM_wrap .header .gl_nav li.btn_logout a {
   width: 24px;
@@ -1091,7 +1091,7 @@ body * {
   background-repeat: no-repeat;
   background-image: none;
   margin-top: 0;
-  background-image: url("../images/common/icon-alarm.svg");
+  background-image: url("../img/common/icon-alarm.svg");
 }
 #SGIM_wrap .header .gl_nav li.btn_alim > a > span {
   display: none;
@@ -1100,12 +1100,12 @@ body * {
   background-color: #F76900;
 }
 #SGIM_wrap .header .gl_nav li.btn_menualdown a {
-  -webkit-mask-image: url("../images/common/icon_download.svg");
-  mask-image: url("../images/common/icon_download.svg");
+  -webkit-mask-image: url("../img/common/icon_download.svg");
+  mask-image: url("../img/common/icon_download.svg");
 }
 #SGIM_wrap .header .gl_nav li.btn_logout a {
-  -webkit-mask-image: url("../images/common/icon_logout.svg");
-  mask-image: url("../images/common/icon_logout.svg");
+  -webkit-mask-image: url("../img/common/icon_logout.svg");
+  mask-image: url("../img/common/icon_logout.svg");
 }
 #SGIM_wrap .header .gl_nav li.btn_top_user a {
   width: auto;
@@ -1194,7 +1194,7 @@ body * {
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  background: url("../images/common/icon-nodata.svg") no-repeat center/cover;
+  background: url("../img/common/icon-nodata.svg") no-repeat center/cover;
 }
 #SGIM_wrap .header .alim_pop .alim_pop_wrap .alim_list li.no_msg a {
   padding: 0;
@@ -1376,7 +1376,7 @@ body * {
   background-repeat: no-repeat;
   background-image: none;
   background-color: transparent;
-  background-image: url("../images/common/close.svg");
+  background-image: url("../img/common/close.svg");
 }
 .detail_view .dtv_cont {
   padding: 0;
@@ -1415,7 +1415,7 @@ body * {
   background-repeat: no-repeat;
   background-image: none;
   background-color: transparent;
-  background-image: url("../images/common/close.svg");
+  background-image: url("../img/common/close.svg");
 }
 
 /***************** center popup *****************/
@@ -1458,7 +1458,7 @@ body * {
   background-repeat: no-repeat;
   background-image: none;
   background-color: transparent;
-  background-image: url("../images/common/close.svg");
+  background-image: url("../img/common/close.svg");
 }
 .layer_popup .popup_content .move_tbl {
   border-bottom: 0;
@@ -1565,10 +1565,10 @@ body * {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_ok.svg");
+  background-image: url("../img/common/ico_ok.svg");
 }
 .toast_popup .toast_check.fail span {
-  background-image: url("../images/common/ico_erro.svg");
+  background-image: url("../img/common/ico_erro.svg");
   background-position: unset;
 }
 .toast_popup .toast_check.warning span {
@@ -1580,8 +1580,8 @@ body * {
   mask-position: center;
   background-color: #F76900;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_warning.svg");
-  mask-image: url("../images/common/ico_warning.svg");
+  -webkit-mask-image: url("../img/common/ico_warning.svg");
+  mask-image: url("../img/common/ico_warning.svg");
 }
 .toast_popup .toast_msg {
   margin-top: 9px;
@@ -1616,8 +1616,8 @@ body * {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_accordion.svg");
-  mask-image: url("../images/common/ico_accordion.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion.svg");
+  mask-image: url("../img/common/ico_accordion.svg");
   background-position: unset;
   background-image: none;
 }

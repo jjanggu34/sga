@@ -21,7 +21,7 @@
         .ref {
             @include icon(30px,30px);
             padding:0;
-            background-image:url("../images/common/ico_refresh.svg");
+            background-image:url("../img/common/ico_refresh.svg");
             background-size:85%;
         }
     }
@@ -71,8 +71,8 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
             @include wh (18px,18px);
             margin-right:2px;
             @include mask ($white);
-            -webkit-mask-image:url("../images/common/icon_plus_s.svg");
-            mask-image:url("../images/common/icon_plus_s.svg");
+            -webkit-mask-image:url("../img/common/icon_plus_s.svg");
+            mask-image:url("../img/common/icon_plus_s.svg");
             -webkit-mask-size:90%;
             mask-size:90%;
             background-position:center;
@@ -88,8 +88,8 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
             @include wh (10px,10px);
             margin-left:2px;
             @include mask ($white);
-            -webkit-mask-image:url("../images/common/icon_setting.svg");
-            mask-image:url("../images/common/icon_setting.svg");
+            -webkit-mask-image:url("../img/common/icon_setting.svg");
+            mask-image:url("../img/common/icon_setting.svg");
         }
     }
 }
@@ -189,7 +189,7 @@ table {
     &.list_upload {
         i {
             @include icon(16px, 16px);
-            background-image:url("../images/common/ico_upload.svg");
+            background-image:url("../img/common/ico_upload.svg");
             background-position:unset;
         }
     }
@@ -218,15 +218,15 @@ button, a {
             }
             &.icon_setting {
                 @include mask($title);
-                -webkit-mask-image:url("../images/common/icon_setting.svg");
-                mask-image:url("../images/common/icon_setting.svg");
+                -webkit-mask-image:url("../img/common/icon_setting.svg");
+                mask-image:url("../img/common/icon_setting.svg");
                 background-image:none;
                 -webkit-mask-size: 80%;
                 mask-size: 80%;
             }
             &.icon_applylist {
                 margin:0;
-                background: url("../images/common/ico_m_list.svg")no-repeat center / $wh100;
+                background: url("../img/common/ico_m_list.svg")no-repeat center / $wh100;
             }
             &.icon_reset {
                 font-size:0;
@@ -265,7 +265,7 @@ button, a {
         &.mo_del,
         &.mo_add {
             @include icon (30px,30px);
-            background-image:url("../images/common/prev.svg");
+            background-image:url("../img/common/prev.svg");
             background-position:unset;
         }
         &.mo_add {
@@ -311,8 +311,8 @@ button, a {
         @include wh (16px, 16px);
         padding:0;
         @include mask($content);
-        -webkit-mask-image:url("../images/common/icon_arrow_open.svg");
-        mask-image:url("../images/common/icon_arrow_open.svg");
+        -webkit-mask-image:url("../img/common/icon_arrow_open.svg");
+        mask-image:url("../img/common/icon_arrow_open.svg");
     }
     &.icon_arrow_close {
         @extend .icon_arrow_open;
@@ -363,14 +363,14 @@ button, a {
             @include wh (24px,24px);
             margin:0;
             @include mask ($white);
-            -webkit-mask-image: url("../images/common/btn_add.svg");
-            mask-image: url("../images/common/btn_add.svg");
+            -webkit-mask-image: url("../img/common/btn_add.svg");
+            mask-image: url("../img/common/btn_add.svg");
             background-position:center;
         }
         &.btn_del_option {
             &::after {
-                -webkit-mask-image: url("../images/common/btn_minus.svg");
-                mask-image: url("../images/common/btn_minus.svg");
+                -webkit-mask-image: url("../img/common/btn_minus.svg");
+                mask-image: url("../img/common/btn_minus.svg");
                 background-position:center;
             }
         }
@@ -378,8 +378,8 @@ button, a {
             &::after {
                 width:24px;
                 margin:0;
-                -webkit-mask-image: url("../images/common/btn_special.svg");
-                mask-image: url("../images/common/btn_special.svg");
+                -webkit-mask-image: url("../img/common/btn_special.svg");
+                mask-image: url("../img/common/btn_special.svg");
                 background-position:center;
             }
         }
@@ -436,7 +436,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
             padding:0 23px 0 14px;
             line-height:28px;
             color:$white;
-            background:url("../images/common/icon_plus.svg")no-repeat center right 4px;
+            background:url("../img/common/icon_plus.svg")no-repeat center right 4px;
             background-color:$basic;
         }
     }
@@ -466,7 +466,7 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                     background-position:center;
                 }
                 &.test {
-                    background-image:url("../images/common/ico_code.svg");
+                    background-image:url("../img/common/ico_code.svg");
                     background-position:center;
                 }
             }
@@ -642,8 +642,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                         display:inline-block;
                         @include wh (24px, 24px);
                         @include mask($text-disabled);
-                        -webkit-mask-image:url("../images/common/ico_prev.svg");
-                        mask-image:url("../images/common/ico_prev.svg");
+                        -webkit-mask-image:url("../img/common/ico_prev.svg");
+                        mask-image:url("../img/common/ico_prev.svg");
                         background-position:unset;
                     }
                 }
@@ -654,8 +654,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                     span {
                         @include wh (24px, 24px);
                         @include mask($text-disabled);
-                        -webkit-mask-image:url("../images/common/ico_pprev.svg");
-                        mask-image:url("../images/common/ico_pprev.svg");
+                        -webkit-mask-image:url("../img/common/ico_pprev.svg");
+                        mask-image:url("../img/common/ico_pprev.svg");
                         background-position:unset;
                     }
                 }
@@ -702,8 +702,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                             display:inline-block;
                             @include wh (24px, 24px);
                             @include mask($text-disabled);
-                            -webkit-mask-image:url("../images/common/prev.svg");
-                            mask-image:url("../images/common/prev.svg");
+                            -webkit-mask-image:url("../img/common/prev.svg");
+                            mask-image:url("../img/common/prev.svg");
                             background-position:unset;
                         }
                     }
@@ -714,8 +714,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                         span {
                             @include wh (24px, 24px);
                             @include mask($text-disabled);
-                            -webkit-mask-image:url("../images/common/prevv.svg");
-                            mask-image:url("../images/common/prevv.svg");
+                            -webkit-mask-image:url("../img/common/prevv.svg");
+                            mask-image:url("../img/common/prevv.svg");
                             background-position:unset;
                         }
                     }

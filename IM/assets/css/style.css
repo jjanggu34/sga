@@ -184,7 +184,7 @@
 .bluetxt .mandatxt i {
   width: 24px;
   height: 24px;
-  background-image: url("../images/label/ico_delegated.svg");
+  background-image: url("../img/label/ico_delegated.svg");
 }
 .bluetxt .madna_ed {
   margin-left: 4px;
@@ -194,7 +194,7 @@
 .bluetxt .madna_ed i {
   width: 34px;
   height: 24px;
-  background-image: url("../images/label/ico_delegating.svg");
+  background-image: url("../img/label/ico_delegating.svg");
 }
 
 .redtxt {
@@ -224,8 +224,8 @@
   mask-position: center;
   background-color: #F9AF1C;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/icon_pgs.svg");
-  mask-image: url("../images/label/icon_pgs.svg");
+  -webkit-mask-image: url("../img/label/icon_pgs.svg");
+  mask-image: url("../img/label/icon_pgs.svg");
 }
 
 .status.yelltxt {
@@ -241,7 +241,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/label/ico_hourglass.svg");
+  background-image: url("../img/label/ico_hourglass.svg");
 }
 
 .icon_alim {
@@ -254,23 +254,23 @@
   background-image: none;
 }
 .icon_alim.icon_receive {
-  background-image: url("../images/common/icon_receive.svg");
+  background-image: url("../img/common/icon_receive.svg");
 }
 .icon_alim.icon_notice {
-  background-image: url("../images/common/icon_notice.svg");
+  background-image: url("../img/common/icon_notice.svg");
 }
 .icon_alim.icon_message {
-  background-image: url("../images/common/icon_message.svg");
+  background-image: url("../img/common/icon_message.svg");
 }
 .icon_alim.icon_caution {
-  background-image: url("../images/common/icon_caution.svg");
+  background-image: url("../img/common/icon_caution.svg");
 }
 .icon_alim.msg5 {
-  background-image: url("../images/common/ico_mail.svg");
+  background-image: url("../img/common/ico_mail.svg");
   background-position: center;
 }
 .icon_alim.msg4 {
-  background-image: url("../images/common/icon_alarm.svg");
+  background-image: url("../img/common/icon_alarm.svg");
   background-position: center;
 }
 
@@ -719,8 +719,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_circleOff.svg");
-  mask-image: url("../images/label/ico_circleOff.svg");
+  -webkit-mask-image: url("../img/label/ico_circleOff.svg");
+  mask-image: url("../img/label/ico_circleOff.svg");
 }
 
 .plugConnected {
@@ -735,8 +735,8 @@ input + .loader {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_PlugConnected.svg");
-  mask-image: url("../images/label/ico_PlugConnected.svg");
+  -webkit-mask-image: url("../img/label/ico_PlugConnected.svg");
+  mask-image: url("../img/label/ico_PlugConnected.svg");
 }
 
 .plugZapOff {
@@ -751,8 +751,8 @@ input + .loader {
   mask-position: center;
   background-color: #FF0000;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_PlugZapOff.svg");
-  mask-image: url("../images/label/ico_PlugZapOff.svg");
+  -webkit-mask-image: url("../img/label/ico_PlugZapOff.svg");
+  mask-image: url("../img/label/ico_PlugZapOff.svg");
 }
 
 .icheck {
@@ -767,8 +767,8 @@ input + .loader {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_FilePlus.svg");
-  mask-image: url("../images/label/ico_FilePlus.svg");
+  -webkit-mask-image: url("../img/label/ico_FilePlus.svg");
+  mask-image: url("../img/label/ico_FilePlus.svg");
 }
 .icheck .icon_pgs {
   -webkit-mask-repeat: no-repeat;
@@ -779,8 +779,8 @@ input + .loader {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/icon_pgs.svg");
-  mask-image: url("../images/label/icon_pgs.svg");
+  -webkit-mask-image: url("../img/label/icon_pgs.svg");
+  mask-image: url("../img/label/icon_pgs.svg");
 }
 
 .checkCircle {
@@ -795,8 +795,8 @@ input + .loader {
   mask-position: center;
   background-color: #23AC3D;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_checkCircle.svg");
-  mask-image: url("../images/label/ico_checkCircle.svg");
+  -webkit-mask-image: url("../img/label/ico_checkCircle.svg");
+  mask-image: url("../img/label/ico_checkCircle.svg");
 }
 
 .shippingcart_edit {
@@ -811,8 +811,8 @@ input + .loader {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_FileEdit.svg");
-  mask-image: url("../images/label/ico_FileEdit.svg");
+  -webkit-mask-image: url("../img/label/ico_FileEdit.svg");
+  mask-image: url("../img/label/ico_FileEdit.svg");
 }
 
 .progress_update, .progress_pending {
@@ -827,8 +827,8 @@ input + .loader {
   mask-position: center;
   background-color: #27AD98;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/icon_pgs.svg");
-  mask-image: url("../images/label/icon_pgs.svg");
+  -webkit-mask-image: url("../img/label/icon_pgs.svg");
+  mask-image: url("../img/label/icon_pgs.svg");
 }
 
 .connection_compl {
@@ -843,8 +843,8 @@ input + .loader {
   mask-position: center;
   background-color: #1863BA;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_downloadCircle.svg");
-  mask-image: url("../images/label/ico_downloadCircle.svg");
+  -webkit-mask-image: url("../img/label/ico_downloadCircle.svg");
+  mask-image: url("../img/label/ico_downloadCircle.svg");
 }
 
 .connection_error {
@@ -859,8 +859,8 @@ input + .loader {
   mask-position: center;
   background-color: #FF0000;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_PauseCircle.svg");
-  mask-image: url("../images/label/ico_PauseCircle.svg");
+  -webkit-mask-image: url("../img/label/ico_PauseCircle.svg");
+  mask-image: url("../img/label/ico_PauseCircle.svg");
 }
 
 .idisabled {
@@ -875,8 +875,8 @@ input + .loader {
   mask-position: center;
   background-color: #FF0000;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_trash.svg");
-  mask-image: url("../images/label/ico_trash.svg");
+  -webkit-mask-image: url("../img/label/ico_trash.svg");
+  mask-image: url("../img/label/ico_trash.svg");
 }
 .idisabled .icon_pgs {
   -webkit-mask-repeat: no-repeat;
@@ -887,8 +887,8 @@ input + .loader {
   mask-position: center;
   background-color: #FF0000;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/icon_pgs.svg");
-  mask-image: url("../images/label/icon_pgs.svg");
+  -webkit-mask-image: url("../img/label/icon_pgs.svg");
+  mask-image: url("../img/label/icon_pgs.svg");
 }
 
 .bolt {
@@ -903,8 +903,8 @@ input + .loader {
   mask-position: center;
   background-color: #23AC3D;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_bolt.svg");
-  mask-image: url("../images/label/ico_bolt.svg");
+  -webkit-mask-image: url("../img/label/ico_bolt.svg");
+  mask-image: url("../img/label/ico_bolt.svg");
 }
 
 .Nbolt {
@@ -919,8 +919,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_bolt.svg");
-  mask-image: url("../images/label/ico_bolt.svg");
+  -webkit-mask-image: url("../img/label/ico_bolt.svg");
+  mask-image: url("../img/label/ico_bolt.svg");
 }
 
 .locked {
@@ -935,8 +935,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/icon_locked.svg");
-  mask-image: url("../images/label/icon_locked.svg");
+  -webkit-mask-image: url("../img/label/icon_locked.svg");
+  mask-image: url("../img/label/icon_locked.svg");
 }
 
 .icon_ff {
@@ -950,25 +950,25 @@ input + .loader {
   margin: 0 !important;
 }
 .icon_ff.pdf {
-  background-image: url("../images/common/ico_pdf.svg");
+  background-image: url("../img/common/ico_pdf.svg");
 }
 .icon_ff.excel {
-  background-image: url("../images/common/icon_excel.svg");
+  background-image: url("../img/common/icon_excel.svg");
 }
 .icon_ff.word {
-  background-image: url("../images/common/ico_doc.svg");
+  background-image: url("../img/common/ico_doc.svg");
 }
 .icon_ff.csv {
-  background-image: url("../images/common/ico_csv.svg");
+  background-image: url("../img/common/ico_csv.svg");
 }
 .icon_ff.hwp {
-  background-image: url("../images/common/ico_hwp.svg");
+  background-image: url("../img/common/ico_hwp.svg");
 }
 .icon_ff.text {
-  background-image: url("../images/common/ico_txt.svg");
+  background-image: url("../img/common/ico_txt.svg");
 }
 .icon_ff.ppx {
-  background-image: url("../images/common/ico_ppx.svg");
+  background-image: url("../img/common/ico_ppx.svg");
 }
 .icon_ff.sl_ff {
   height: 16px;
@@ -1069,8 +1069,8 @@ input + .loader {
   mask-position: center;
   background-color: #27AD98;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_info.svg");
-  mask-image: url("../images/common/ico_info.svg");
+  -webkit-mask-image: url("../img/common/ico_info.svg");
+  mask-image: url("../img/common/ico_info.svg");
 }
 .req_txt.inbl {
   display: block;
@@ -1105,8 +1105,8 @@ input + .loader {
   mask-position: center;
   background-color: #FF0000;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_info.svg");
-  mask-image: url("../images/common/ico_info.svg");
+  -webkit-mask-image: url("../img/common/ico_info.svg");
+  mask-image: url("../img/common/ico_info.svg");
 }
 .dupli_check.bluetxt {
   line-height: unset;
@@ -1130,8 +1130,8 @@ input + .loader {
   background-color: #FFFFFF;
   vertical-align: text-bottom;
   vertical-align: inherit;
-  -webkit-mask-image: url("../images/common/ico_check_s.svg");
-  mask-image: url("../images/common/ico_check_s.svg");
+  -webkit-mask-image: url("../img/common/ico_check_s.svg");
+  mask-image: url("../img/common/ico_check_s.svg");
 }
 
 /*********************************************************************
@@ -1166,7 +1166,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_accordion3.svg");
+  background-image: url("../img/common/ico_accordion3.svg");
   background-position: unset;
 }
 .content a.fm_tit .tab_arrow.open {
@@ -1208,7 +1208,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/btn_add.svg");
+  background-image: url("../img/common/btn_add.svg");
   background-position: center;
 }
 .content .def_tit {
@@ -1349,8 +1349,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/arr-next.svg");
-  mask-image: url("../images/common/arr-next.svg");
+  -webkit-mask-image: url("../img/common/arr-next.svg");
+  mask-image: url("../img/common/arr-next.svg");
   background-image: none;
 }
 .topPrss .movbtn.prev {
@@ -1394,7 +1394,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/triangle.svg");
+  background-image: url("../img/common/triangle.svg");
   z-index: 2;
 }
 .detail_process .flx_cell:last-child {
@@ -1423,7 +1423,7 @@ input + .loader {
 .detail_process .flx_cell.process_comple::after {
   left: unset;
   background-color: unset;
-  background-image: url("../images/common/triangle_comp.svg");
+  background-image: url("../img/common/triangle_comp.svg");
 }
 .detail_process .flx_cell.process_comple .s_num {
   font-size: 0;
@@ -1441,15 +1441,15 @@ input + .loader {
   mask-position: center;
   background-color: #162866;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_step.svg");
-  mask-image: url("../images/common/ico_step.svg");
+  -webkit-mask-image: url("../img/common/ico_step.svg");
+  mask-image: url("../img/common/ico_step.svg");
 }
 .detail_process .flx_cell.process_current {
   color: #FFFFFF;
   background-color: #27AD98;
 }
 .detail_process .flx_cell.process_current::after {
-  background-image: url("../images/common/triangle_curr.svg");
+  background-image: url("../img/common/triangle_curr.svg");
 }
 .detail_process .flx_cell.process_current .s_num {
   color: #27AD98;
@@ -1459,7 +1459,7 @@ input + .loader {
   background: #757575;
 }
 .detail_process .flx_cell.process_activ::after {
-  background-image: url("../images/common/triangle_active.svg");
+  background-image: url("../img/common/triangle_active.svg");
 }
 .detail_process .flx_cell.process_activ .s_num {
   color: #999999;
@@ -1476,7 +1476,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/icon_warning.svg");
+  background-image: url("../img/common/icon_warning.svg");
   background-position: top center;
 }
 .detail_process .flx_cell.process_warning .s_num::before {
@@ -1565,24 +1565,24 @@ input + .loader {
   background-image: none;
 }
 .tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.os {
-  -webkit-mask-image: url("../images/common/ico_os.svg");
-  mask-image: url("../images/common/ico_os.svg");
+  -webkit-mask-image: url("../img/common/ico_os.svg");
+  mask-image: url("../img/common/ico_os.svg");
 }
 .tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.app {
-  -webkit-mask-image: url("../images/common/ico_app.svg");
-  mask-image: url("../images/common/ico_app.svg");
+  -webkit-mask-image: url("../img/common/ico_app.svg");
+  mask-image: url("../img/common/ico_app.svg");
 }
 .tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.db {
-  -webkit-mask-image: url("../images/common/ico_db.svg");
-  mask-image: url("../images/common/ico_db.svg");
+  -webkit-mask-image: url("../img/common/ico_db.svg");
+  mask-image: url("../img/common/ico_db.svg");
 }
 .tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.network {
-  -webkit-mask-image: url("../images/common/ico_net.svg");
-  mask-image: url("../images/common/ico_net.svg");
+  -webkit-mask-image: url("../img/common/ico_net.svg");
+  mask-image: url("../img/common/ico_net.svg");
 }
 .tab_wrap.cont_in_tab .tab_list a .tab_tree_icon.etc {
-  -webkit-mask-image: url("../images/common/ico_kebab.svg");
-  mask-image: url("../images/common/ico_kebab.svg");
+  -webkit-mask-image: url("../img/common/ico_kebab.svg");
+  mask-image: url("../img/common/ico_kebab.svg");
 }
 .tab_wrap.cont_in_tab .tab_list a.on .tab_tree_icon {
   background-color: #FFFFFF;
@@ -1751,21 +1751,21 @@ input + .loader {
   background-image: none;
 }
 .tree_menu_inner a .icon_tree.folder {
-  -webkit-mask-image: url("../images/common/ico_folder.svg");
-  mask-image: url("../images/common/ico_folder.svg");
+  -webkit-mask-image: url("../img/common/ico_folder.svg");
+  mask-image: url("../img/common/ico_folder.svg");
 }
 .tree_menu_inner a .icon_tree.folder_open {
   background-color: #222222;
-  -webkit-mask-image: url("../images/common/ico_folder_open.svg");
-  mask-image: url("../images/common/ico_folder_open.svg");
+  -webkit-mask-image: url("../img/common/ico_folder_open.svg");
+  mask-image: url("../img/common/ico_folder_open.svg");
 }
 .tree_menu_inner a .icon_tree.iuser {
-  -webkit-mask-image: url("../images/common/ico_member.svg");
-  mask-image: url("../images/common/ico_member.svg");
+  -webkit-mask-image: url("../img/common/ico_member.svg");
+  mask-image: url("../img/common/ico_member.svg");
 }
 .tree_menu_inner a .icon_tree.file {
-  -webkit-mask-image: url("../images/common/ico_file.svg");
-  mask-image: url("../images/common/ico_file.svg");
+  -webkit-mask-image: url("../img/common/ico_file.svg");
+  mask-image: url("../img/common/ico_file.svg");
 }
 .tree_menu_inner a.diss:hover {
   background-color: #EEEEEE;
@@ -1869,8 +1869,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_accordion2.svg");
-  mask-image: url("../images/common/ico_accordion2.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion2.svg");
+  mask-image: url("../img/common/ico_accordion2.svg");
   transform: rotate(-90deg);
   z-index: 1;
 }
@@ -1924,8 +1924,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/branch.svg");
-  mask-image: url("../images/common/branch.svg");
+  -webkit-mask-image: url("../img/common/branch.svg");
+  mask-image: url("../img/common/branch.svg");
   background-image: none;
 }
 .treeType02 .db_detail.open .inst_list .inst_row .inst_name {
@@ -1971,14 +1971,14 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_folder.svg");
-  mask-image: url("../images/common/ico_folder.svg");
+  -webkit-mask-image: url("../img/common/ico_folder.svg");
+  mask-image: url("../img/common/ico_folder.svg");
   background-image: none;
 }
 .tree_wrap .tree_list li a .icon_folder.open {
   background-color: #222222;
-  -webkit-mask-image: url("../images/common/ico_folder_open.svg");
-  mask-image: url("../images/common/ico_folder_open.svg");
+  -webkit-mask-image: url("../img/common/ico_folder_open.svg");
+  mask-image: url("../img/common/ico_folder_open.svg");
 }
 .tree_wrap .tree_list li a:has(.open) {
   color: #222222;
@@ -2046,8 +2046,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_Kebab.svg");
-  mask-image: url("../images/common/ico_Kebab.svg");
+  -webkit-mask-image: url("../img/common/ico_kebab.svg");
+  mask-image: url("../img/common/ico_kebab.svg");
   background-image: none;
 }
 .tree_wrap .tree_more_wrap .tree_more_list {
@@ -2086,8 +2086,8 @@ input + .loader {
   mask-position: center;
   background-color: #27AD98;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_check_s.svg");
-  mask-image: url("../images/common/ico_check_s.svg");
+  -webkit-mask-image: url("../img/common/ico_check_s.svg");
+  mask-image: url("../img/common/ico_check_s.svg");
 }
 
 /***************** 검색-상세정보 *****************/
@@ -2337,7 +2337,7 @@ input + .loader {
 .apply_card .dash_box .arrow_apply .icon_arrapply {
   position: unset;
   margin: 0;
-  background: url("../images/common/arrow.svg") no-repeat center;
+  background: url("../img/common/arrow.svg") no-repeat center;
 }
 
 /* 사용자 홈 화면 */
@@ -2467,15 +2467,15 @@ input + .loader {
 .workflow_wrap .s_e_w .nav_circle i.i_start {
   width: 40px;
   height: 40px;
-  -webkit-mask-image: url("../images/common/ico_member.svg");
-  mask-image: url("../images/common/ico_member.svg");
+  -webkit-mask-image: url("../img/common/ico_member.svg");
+  mask-image: url("../img/common/ico_member.svg");
 }
 .workflow_wrap .s_e_w .nav_circle i.i_end {
   width: 24px;
   height: 24px;
   background-position: unset;
-  -webkit-mask-image: url("../images/common/ico_check.svg");
-  mask-image: url("../images/common/ico_check.svg");
+  -webkit-mask-image: url("../img/common/ico_check.svg");
+  mask-image: url("../img/common/ico_check.svg");
 }
 .workflow_wrap .s_e_w .nav_circle:has(.i_end) {
   width: 53px;
@@ -2616,8 +2616,8 @@ input + .loader {
   background-color: #23AC3D;
 }
 .workflow_wrap .wf_card.apv_comple .wf_state i {
-  -webkit-mask-image: url("../images/common/ico_check_s.svg");
-  mask-image: url("../images/common/ico_check_s.svg");
+  -webkit-mask-image: url("../img/common/ico_check_s.svg");
+  mask-image: url("../img/common/ico_check_s.svg");
 }
 .workflow_wrap .wf_card.apv_comple .wf_detail .wf_state_txt em {
   color: #23AC3D;
@@ -2629,8 +2629,8 @@ input + .loader {
   background-color: #2262AC;
 }
 .workflow_wrap .wf_card.proceeding .wf_state i {
-  -webkit-mask-image: url("../images/common/ico_pro.svg");
-  mask-image: url("../images/common/ico_pro.svg");
+  -webkit-mask-image: url("../img/common/ico_pro.svg");
+  mask-image: url("../img/common/ico_pro.svg");
 }
 .workflow_wrap .wf_card.proceeding .wf_detail .wf_state_txt em {
   color: #2262AC;
@@ -2642,7 +2642,7 @@ input + .loader {
   background-color: #6A5ACD;
 }
 .workflow_wrap .wf_card.mandate .wf_state i {
-  background-image: url("../images/common/ico_mandate.svg");
+  background-image: url("../img/common/ico_mandate.svg");
 }
 .workflow_wrap .wf_card.mandate .wf_detail .wf_state_txt em {
   color: #6A5ACD;
@@ -2655,8 +2655,8 @@ input + .loader {
 }
 .workflow_wrap .wf_card.error .wf_state i {
   color: #FFFFFF;
-  -webkit-mask-image: url("../images/common/ico_error.svg");
-  mask-image: url("../images/common/ico_error.svg");
+  -webkit-mask-image: url("../img/common/ico_error.svg");
+  mask-image: url("../img/common/ico_error.svg");
 }
 .workflow_wrap .wf_card.error .wf_detail .wf_state_txt {
   display: flex;
@@ -2674,7 +2674,7 @@ input + .loader {
   background-color: #999999;
 }
 .workflow_wrap .wf_card.autopay .wf_state i {
-  background-image: url("../images/common/ico_autopay.svg");
+  background-image: url("../img/common/ico_autopay.svg");
 }
 .workflow_wrap .wf_card.autopay .wf_detail .wf_state_txt em {
   color: #999999;
@@ -2686,7 +2686,7 @@ input + .loader {
   background-color: #FFC107;
 }
 .workflow_wrap .wf_card.reject .wf_state i {
-  background-image: url("../images/common/ico_reject.svg");
+  background-image: url("../img/common/ico_reject.svg");
 }
 .workflow_wrap .wf_card.reject .wf_detail .wf_state_txt em {
   color: #FFC107;
@@ -2698,7 +2698,7 @@ input + .loader {
   background-color: #999999;
 }
 .workflow_wrap .wf_card.waiting .wf_state i {
-  background-image: url("../images/common/ico_autopay.svg");
+  background-image: url("../img/common/ico_autopay.svg");
 }
 .workflow_wrap .wf_card.waiting .wf_detail .wf_state_txt em {
   color: #999999;
@@ -2773,8 +2773,8 @@ input + .loader {
   mask-position: center;
   background-color: #454545;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_wf_arrow.svg");
-  mask-image: url("../images/common/ico_wf_arrow.svg");
+  -webkit-mask-image: url("../img/common/ico_wf_arrow.svg");
+  mask-image: url("../img/common/ico_wf_arrow.svg");
   background-image: none;
   z-index: 3;
 }
@@ -2789,8 +2789,8 @@ input + .loader {
   mask-position: center;
   background-color: #454545;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_wf_arrow.svg");
-  mask-image: url("../images/common/ico_wf_arrow.svg");
+  -webkit-mask-image: url("../img/common/ico_wf_arrow.svg");
+  mask-image: url("../img/common/ico_wf_arrow.svg");
   background-image: none;
   z-index: 3;
 }
@@ -2937,10 +2937,10 @@ input + .loader {
   height: 30px;
   border: 1px solid #DDDDDD;
   border-radius: 6px;
-  background: url("../images/label/ico_FileEdit.svg") no-repeat center/70%;
+  background: url("../img/label/ico_FileEdit.svg") no-repeat center/70%;
 }
 .wf_designer_box .wf_ds_btns button.dt_modfy {
-  background-image: url("../images/common/ico_approval.svg");
+  background-image: url("../img/common/ico_approval.svg");
   background-size: 100%;
 }
 .wf_designer_box .wf_btns_wrap {
@@ -2979,7 +2979,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_roleLane.svg");
+  background-image: url("../img/common/ico_roleLane.svg");
 }
 .wf_designer_box .wf_btns_wrap .sqbtn.itaskBox::before {
   width: 24px;
@@ -2987,7 +2987,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_TaskBox.svg");
+  background-image: url("../img/common/ico_TaskBox.svg");
 }
 .wf_designer_box .wf_btns_wrap .sqbtn.termination::before {
   width: 24px;
@@ -2995,7 +2995,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_termination.svg");
+  background-image: url("../img/common/ico_termination.svg");
 }
 .wf_designer_box .wf_btns_wrap .sqbtn.Connector::before {
   width: 24px;
@@ -3008,8 +3008,8 @@ input + .loader {
   mask-position: center;
   background-color: #51C4C4;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/moni/ico_connector.svg");
-  mask-image: url("../images/moni/ico_connector.svg");
+  -webkit-mask-image: url("../img/moni/ico_connector.svg");
+  mask-image: url("../img/moni/ico_connector.svg");
 }
 .wf_designer_box .wf_btns_wrap .rs_line {
   border-width: 1px;
@@ -3092,8 +3092,8 @@ input + .loader {
 }
 .wf_designer_box .wf_btns_wrap .rs_line.apply::before {
   background-color: #162866;
-  -webkit-mask-image: url("../images/label/ico_FileEdit_f.svg");
-  mask-image: url("../images/label/ico_FileEdit_f.svg");
+  -webkit-mask-image: url("../img/label/ico_FileEdit_f.svg");
+  mask-image: url("../img/label/ico_FileEdit_f.svg");
 }
 .wf_designer_box .wf_btns_wrap .rs_line.succl {
   border-color: #0452CB;
@@ -3101,8 +3101,8 @@ input + .loader {
 }
 .wf_designer_box .wf_btns_wrap .rs_line.succl::before {
   background-color: #0452CB;
-  -webkit-mask-image: url("../images/common/ico_ok.svg");
-  mask-image: url("../images/common/ico_ok.svg");
+  -webkit-mask-image: url("../img/common/ico_ok.svg");
+  mask-image: url("../img/common/ico_ok.svg");
 }
 .wf_designer_box .wf_btns_wrap .rs_line.approl {
   border-color: #23AC3D;
@@ -3110,8 +3110,8 @@ input + .loader {
 }
 .wf_designer_box .wf_btns_wrap .rs_line.approl::before {
   background-color: #23AC3D;
-  -webkit-mask-image: url("../images/common/ico_ok.svg");
-  mask-image: url("../images/common/ico_ok.svg");
+  -webkit-mask-image: url("../img/common/ico_ok.svg");
+  mask-image: url("../img/common/ico_ok.svg");
 }
 .wf_designer_box .wf_btns_wrap .rs_line.waitl {
   border-color: #F9AF1C;
@@ -3119,8 +3119,8 @@ input + .loader {
 }
 .wf_designer_box .wf_btns_wrap .rs_line.waitl::before {
   background-color: #F9AF1C;
-  -webkit-mask-image: url("../images/label/icon_pgs.svg");
-  mask-image: url("../images/label/icon_pgs.svg");
+  -webkit-mask-image: url("../img/label/icon_pgs.svg");
+  mask-image: url("../img/label/icon_pgs.svg");
 }
 .wf_designer_box .wf_btns_wrap .rs_line.reject {
   border-color: #F76900;
@@ -3128,15 +3128,15 @@ input + .loader {
 }
 .wf_designer_box .wf_btns_wrap .rs_line.reject::before {
   background-color: #F76900;
-  -webkit-mask-image: url("../images/common/ico_warning.svg");
-  mask-image: url("../images/common/ico_warning.svg");
+  -webkit-mask-image: url("../img/common/ico_warning.svg");
+  mask-image: url("../img/common/ico_warning.svg");
 }
 .wf_designer_box .wf_btns_wrap .rs_line.cancel {
   border-color: #999999;
   background-color: #EBEBEB;
 }
 .wf_designer_box .wf_btns_wrap .rs_line.cancel::before {
-  background-image: url("../images/label/closeCircle.svg");
+  background-image: url("../img/label/closeCircle.svg");
   background-size: 70%;
   background-position: center;
 }
@@ -3145,7 +3145,7 @@ input + .loader {
   background-color: #FFEFEF;
 }
 .wf_designer_box .wf_btns_wrap .rs_line.errl::before {
-  background-image: url("../images/common/ico_erro.svg");
+  background-image: url("../img/common/ico_erro.svg");
   background-size: 70%;
   background-position: center;
 }
@@ -3173,17 +3173,17 @@ input + .loader {
   padding: 0 8px 0 32px;
 }
 .wf_designer_box .wf_btns_wrap .screenbtn.fitOn {
-  background-image: url("../images/common/ico_fos.svg");
+  background-image: url("../img/common/ico_fos.svg");
   background-position: left 4px center;
 }
 .wf_designer_box .wf_btns_wrap .screenbtn.acSize {
-  background-image: url("../images/common/ico_as.svg");
+  background-image: url("../img/common/ico_as.svg");
   background-position: left 2px center;
 }
 .wf_designer_box .wf_btns_wrap .screenbtn.zoomin, .wf_designer_box .wf_btns_wrap .screenbtn.zoomout {
   position: relative;
   padding: 0;
-  background-image: url("../images/common/ico_btn.svg");
+  background-image: url("../img/common/ico_btn.svg");
   background-position: center;
   background-size: 75%;
 }
@@ -3270,8 +3270,8 @@ input + .loader {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_refresh.svg");
-  mask-image: url("../images/common/ico_refresh.svg");
+  -webkit-mask-image: url("../img/common/ico_refresh.svg");
+  mask-image: url("../img/common/ico_refresh.svg");
 }
 .taskBox .task_elm .tasks {
   border-radius: 6px;
@@ -3314,7 +3314,7 @@ input + .loader {
 }
 .task_elm .tasks {
   display: inline-block;
-  background-image: url("../images/common/wfd_icon_tasks.svg");
+  background-image: url("../img/common/wfd_icon_tasks.svg");
 }
 
 .lanebox {
@@ -3393,8 +3393,8 @@ input + .loader {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_minus.svg");
-  mask-image: url("../images/common/ico_minus.svg");
+  -webkit-mask-image: url("../img/common/ico_minus.svg");
+  mask-image: url("../img/common/ico_minus.svg");
   background-position: center;
 }
 
@@ -3481,8 +3481,8 @@ input + .loader {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_accordion.svg");
-  mask-image: url("../images/common/ico_accordion.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion.svg");
+  mask-image: url("../img/common/ico_accordion.svg");
   background-position: center;
 }
 .wk_tab .btn_d_arw .btn_dtail_arrow.up {
@@ -3528,8 +3528,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_accordion2.svg");
-  mask-image: url("../images/common/ico_accordion2.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion2.svg");
+  mask-image: url("../img/common/ico_accordion2.svg");
   background-position: center;
   transform: rotate(-90deg);
 }
@@ -3666,7 +3666,7 @@ input + .loader {
   background-image: none;
   padding: 0;
   background-color: #162866;
-  background-image: url("../images/common/icon_plus_s.svg");
+  background-image: url("../img/common/icon_plus_s.svg");
   background-position: center;
   background-size: 70%;
 }
@@ -3681,56 +3681,56 @@ input + .loader {
   margin-bottom: 10px;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.local-network i {
-  background-image: url("../images/moni/local-network.png");
+  background-image: url("../img/moni/local-network.png");
   background-size: 100%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.aws {
   margin-bottom: 10px;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.aws i {
-  background-image: url("../images/moni/amazon.png");
+  background-image: url("../img/moni/amazon.png");
   background-size: 100%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.m-azure {
   margin-bottom: 10px;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.m-azure i {
-  background-image: url("../images/moni/microsoft-azure.png");
+  background-image: url("../img/moni/microsoft-azure.png");
   background-size: 100%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.ex-network {
   margin-bottom: 10px;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.ex-network i {
-  background-image: url("../images/moni/external-network.png");
+  background-image: url("../img/moni/external-network.png");
   background-size: 100%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.nhn {
   margin-bottom: 10px;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.nhn i {
-  background-image: url("../images/moni/nhn.png");
+  background-image: url("../img/moni/nhn.png");
   background-size: 100%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.ac-directory {
   margin-bottom: 10px;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.ac-directory i {
-  background-image: url("../images/moni/active-directory.png");
+  background-image: url("../img/moni/active-directory.png");
   background-size: 100%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.oci {
   margin-bottom: 10px;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.oci i {
-  background-image: url("../images/moni/OCI.png");
+  background-image: url("../img/moni/OCI.png");
   background-size: 100%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.custom {
   margin-bottom: 10px;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .server_icon.custom i {
-  background-image: url("../images/moni/custom-discovery.png");
+  background-image: url("../img/moni/custom-discovery.png");
   background-size: 55%;
 }
 .i-card_wrap .dash_box.card_link .i-card_ct .num_t {
@@ -3796,52 +3796,52 @@ input + .loader {
   background-position: center;
 }
 .i-card_wrap .dash_box .i-card_ct .icon.role i {
-  background-image: url("../images/role/icon_role.svg");
+  background-image: url("../img/role/icon_role.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.usergp i {
-  background-image: url("../images/role/icon_usergp.svg");
+  background-image: url("../img/role/icon_usergp.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.belong i {
-  background-image: url("../images/role/icon_belong.svg");
+  background-image: url("../img/role/icon_belong.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.opst i {
-  background-image: url("../images/role/icon_opst.svg");
+  background-image: url("../img/role/icon_opst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.adjst i {
-  background-image: url("../images/role/icon_adjst.svg");
+  background-image: url("../img/role/icon_adjst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.appst i {
-  background-image: url("../images/role/icon_appst.svg");
+  background-image: url("../img/role/icon_appst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.dbst i {
-  background-image: url("../images/role/icon_dbst.svg");
+  background-image: url("../img/role/icon_dbst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.networkst i {
-  background-image: url("../images/role/icon_networkst.svg");
+  background-image: url("../img/role/icon_networkst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.securityact i {
-  background-image: url("../images/role/icon_securityact.svg");
+  background-image: url("../img/role/icon_securityact.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.ldapst i {
-  background-image: url("../images/role/icon_ldapst.svg");
+  background-image: url("../img/role/icon_ldapst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.etsst i {
-  background-image: url("../images/role/icon_etsst.svg");
+  background-image: url("../img/role/icon_etsst.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.imauth i {
-  background-image: url("../images/role/icon_imauth.svg");
+  background-image: url("../img/role/icon_imauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.aprauth i {
-  background-image: url("../images/role/icon_aprauth.svg");
+  background-image: url("../img/role/icon_aprauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.systemauth i {
-  background-image: url("../images/role/icon_systemauth.svg");
+  background-image: url("../img/role/icon_systemauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.osauth i {
-  background-image: url("../images/role/icon_osauth.svg");
+  background-image: url("../img/role/icon_osauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .icon.etsauth i {
-  background-image: url("../images/role/icon_etsauth.svg");
+  background-image: url("../img/role/icon_etsauth.svg");
 }
 .i-card_wrap .dash_box .i-card_ct .num_t {
   display: inline-block;
@@ -3866,28 +3866,28 @@ input + .loader {
   background-position: unset;
 }
 .i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon.os {
-  background-image: url("../images/common/icon_os.svg");
+  background-image: url("../img/common/icon_os.svg");
 }
 .i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon.app {
-  background-image: url("../images/common/icon_app.svg");
+  background-image: url("../img/common/icon_app.svg");
 }
 .i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon.db {
-  background-image: url("../images/common/icon_db.svg");
+  background-image: url("../img/common/icon_db.svg");
 }
 .i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn .tab_tree_icon.network {
-  background-image: url("../images/common/icon_net.svg");
+  background-image: url("../img/common/icon_net.svg");
 }
 .i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on {
   background-color: #CBF0EA;
 }
 .i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on .tab_tree_icon.os {
-  background-image: url("../images/common/icon_os_on.svg");
+  background-image: url("../img/common/icon_os_on.svg");
 }
 .i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on .tab_tree_icon.app {
-  background-image: url("../images/common/icon_app_on.svg");
+  background-image: url("../img/common/icon_app_on.svg");
 }
 .i-card_wrap .dash_box .acs_plc_typ .cnt_tabmn.on .tab_tree_icon.db {
-  background-image: url("../images/common/icon_db_on.svg");
+  background-image: url("../img/common/icon_db_on.svg");
 }
 .i-card_wrap .dash_box .acs_plc_typ .sv_dt_info .sv_name {
   padding-bottom: 7px;
@@ -3937,7 +3937,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/icon_plus.svg");
+  background-image: url("../img/common/icon_plus.svg");
   background-position: unset;
 }
 .i-card_wrap .license_info_card {
@@ -4110,8 +4110,8 @@ input + .loader {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/arrow.svg");
-  mask-image: url("../images/common/arrow.svg");
+  -webkit-mask-image: url("../img/common/arrow.svg");
+  mask-image: url("../img/common/arrow.svg");
   background-position: unset;
 }
 .moved_box .pcs_ctg_list li a:hover, .moved_box .pcs_ctg_list li a .on {
@@ -4217,7 +4217,7 @@ input + .loader {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  background: url("../images/common/icon-nodata.svg") no-repeat;
+  background: url("../img/common/icon-nodata.svg") no-repeat;
   opacity: 0.3;
 }
 .form_txt .move2_box .move_tbl {
@@ -4317,7 +4317,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/prev.svg");
+  background-image: url("../img/common/prev.svg");
 }
 .move_ctrl .mo_del, .aply_box_tit .move_ctrl .mo_add {
   background-position: unset;
@@ -4326,7 +4326,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/prev.svg");
+  background-image: url("../img/common/prev.svg");
 }
 .move_ctrl .all_add {
   background-position: unset;
@@ -4335,7 +4335,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/prevv.svg");
+  background-image: url("../img/common/prevv.svg");
 }
 .move_ctrl .all_del {
   background-position: unset;
@@ -4344,7 +4344,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/prevv.svg");
+  background-image: url("../img/common/prevv.svg");
 }
 .move_ctrl .mo_del, .aply_box_tit .move_ctrl .mo_add,
 .move_ctrl .all_del {
@@ -4390,8 +4390,8 @@ input + .loader {
   vertical-align: text-bottom;
   -webkit-mask-size: 70%;
   mask-size: 70%;
-  -webkit-mask-image: url("../images/common/ico_accordion2.svg");
-  mask-image: url("../images/common/ico_accordion2.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion2.svg");
+  mask-image: url("../img/common/ico_accordion2.svg");
   background-image: none;
   transform: rotate(-90deg);
 }
@@ -4485,8 +4485,8 @@ input + .loader {
   background-color: #222222;
   vertical-align: text-bottom;
   border: 0;
-  -webkit-mask-image: url("../images/common/icon_plus.svg");
-  mask-image: url("../images/common/icon_plus.svg");
+  -webkit-mask-image: url("../img/common/icon_plus.svg");
+  mask-image: url("../img/common/icon_plus.svg");
   -webkit-mask-size: 80%;
   mask-size: 80%;
 }
@@ -4506,8 +4506,8 @@ input + .loader {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_minus.svg");
-  mask-image: url("../images/common/ico_minus.svg");
+  -webkit-mask-image: url("../img/common/ico_minus.svg");
+  mask-image: url("../img/common/ico_minus.svg");
   background-image: none;
   background-position: center;
 }
@@ -4660,26 +4660,26 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_member.svg");
-  mask-image: url("../images/common/ico_member.svg");
+  -webkit-mask-image: url("../img/common/ico_member.svg");
+  mask-image: url("../img/common/ico_member.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_server {
-  background-image: url("../images/moni/ico_server.svg");
+  background-image: url("../img/moni/ico_server.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_system {
-  background-image: url("../images/moni/ico_system.svg");
+  background-image: url("../img/moni/ico_system.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_connect {
-  background-image: url("../images/moni/ico_check_server.svg");
+  background-image: url("../img/moni/ico_check_server.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_unauthorized {
-  background-image: url("../images/moni/ico_unauthorized.svg");
+  background-image: url("../img/moni/ico_unauthorized.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_task {
-  background-image: url("../images/moni/ico_work.svg");
+  background-image: url("../img/moni/ico_work.svg");
 }
 .mod_cont .data_ico_mod .icon_mnt .mnt_role {
-  background-image: url("../images/moni/ico_role.svg");
+  background-image: url("../img/moni/ico_role.svg");
 }
 .mod_cont .data_ico_mod .data_txt_stl {
   display: flex;
@@ -4763,8 +4763,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/icon_net.svg");
-  mask-image: url("../images/common/icon_net.svg");
+  -webkit-mask-image: url("../img/common/icon_net.svg");
+  mask-image: url("../img/common/icon_net.svg");
   background-image: none;
 }
 .mod_cont .use_onoff_mod .use_onoff_stl.on {
@@ -4848,8 +4848,8 @@ input + .loader {
   background-color: #999999;
   vertical-align: text-bottom;
   background-image: none;
-  -webkit-mask-image: url("../images/common/ico_btn.svg");
-  mask-image: url("../images/common/ico_btn.svg");
+  -webkit-mask-image: url("../img/common/ico_btn.svg");
+  mask-image: url("../img/common/ico_btn.svg");
 }
 .mod_cont .chart_info_lyt {
   flex-wrap: wrap;
@@ -4871,8 +4871,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/moni/ico_status.svg");
-  mask-image: url("../images/moni/ico_status.svg");
+  -webkit-mask-image: url("../img/moni/ico_status.svg");
+  mask-image: url("../img/moni/ico_status.svg");
 }
 .mod_cont .chart_info_lyt .data_total dt {
   width: auto;
@@ -4941,7 +4941,7 @@ input + .loader {
   left: -35px;
   width: 35px;
   height: 35px;
-  background: url("../images/common/ico_dbcontrl.svg") no-repeat center #162866;
+  background: url("../img/common/ico_dbcontrl.svg") no-repeat center #162866;
 }
 .dash_contrl .contrl_wrap {
   width: 335px;
@@ -5066,12 +5066,12 @@ input + .loader {
 .server_box .system_name_box .system_icon.HRsystem {
   background-image: none;
   background-position: unset;
-  background: url("../images/common/ico_HRsystem.svg") no-repeat center #EEEEEE;
+  background: url("../img/common/ico_HRsystem.svg") no-repeat center #EEEEEE;
 }
 .server_box .system_name_box .system_icon.ADserver {
   background-image: none;
   background-position: unset;
-  background: url("../images/common/ico_ADserver.svg") no-repeat center #EEEEEE;
+  background: url("../img/common/ico_ADserver.svg") no-repeat center #EEEEEE;
 }
 .server_box .system_name_box .system_name_tit .system_name {
   font-size: 14px;
@@ -5104,8 +5104,8 @@ input + .loader {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_play.svg");
-  mask-image: url("../images/common/ico_play.svg");
+  -webkit-mask-image: url("../img/common/ico_play.svg");
+  mask-image: url("../img/common/ico_play.svg");
 }
 .server_box .system_name_box .btn_run_exc.diss {
   border-color: #EEEEEE;
@@ -5139,7 +5139,7 @@ input + .loader {
   background-repeat: no-repeat;
   background-image: none;
   background-position: unset;
-  background-image: url("../images/common/icon_time.svg");
+  background-image: url("../img/common/icon_time.svg");
 }
 .server_box .sync_stt .sync_ctg_name {
   color: #757575;
@@ -5172,7 +5172,7 @@ input + .loader {
 .server_info .btn_refsh {
   border: 1px solid #DDDDDD;
   border-radius: 6px;
-  background: url("../images/common/ico_reset.svg") no-repeat center;
+  background: url("../img/common/ico_reset.svg") no-repeat center;
 }
 
 .main_server_box {
@@ -5205,41 +5205,41 @@ input + .loader {
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.user {
   background-position: center;
-  background-image: url("../images/common/ico_member.svg");
+  background-image: url("../img/common/ico_member.svg");
   background-size: 90%;
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.userGroup {
   background-position: unset;
-  background-image: url("../images/common/ico_memberGroup.svg");
+  background-image: url("../img/common/ico_memberGroup.svg");
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.orgzt {
   background-position: unset;
-  background-image: url("../images/common/ico_organize.svg");
+  background-image: url("../img/common/ico_organize.svg");
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.personalPolicy {
   background-position: unset;
-  background-image: url("../images/common/ico_per-policy.svg");
+  background-image: url("../img/common/ico_per-policy.svg");
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.systemNum {
   background-position: unset;
-  background-image: url("../images/common/ico_system.svg");
+  background-image: url("../img/common/ico_system.svg");
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.accountNum {
   background-position: unset;
-  background-image: url("../images/common/ico_accounts.svg");
+  background-image: url("../img/common/ico_accounts.svg");
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.device {
   background-position: unset;
-  background-image: url("../images/common/ico_device.svg");
+  background-image: url("../img/common/ico_device.svg");
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.Auth {
   background-position: unset;
-  background-image: url("../images/common/ico_auth.svg");
+  background-image: url("../img/common/ico_auth.svg");
   background-size: 100%;
 }
 .main_server_dt .main_server_dt_info .ms_server_icon.distb {
   background-position: unset;
-  background-image: url("../images/common/ico_distribution.svg");
+  background-image: url("../img/common/ico_distribution.svg");
   background-size: 100%;
 }
 .main_server_dt .main_server_dt_info .ms_server_name {
@@ -5287,8 +5287,8 @@ input + .loader {
   background-position: unset;
 }
 .syc_server_list .rdd_server_wrap.disct .rdd_server_box .rdd_server_stt_icon::before {
-  -webkit-mask-image: url("../images/label/ico_PlugZapOff.svg");
-  mask-image: url("../images/label/ico_PlugZapOff.svg");
+  -webkit-mask-image: url("../img/label/ico_PlugZapOff.svg");
+  mask-image: url("../img/label/ico_PlugZapOff.svg");
 }
 .syc_server_list .rdd_server_wrap.disct .rdd_server_box .server_info_name {
   color: #FF0000;
@@ -5298,8 +5298,8 @@ input + .loader {
   background-position: unset;
 }
 .syc_server_list .rdd_server_wrap.connect .rdd_server_box .rdd_server_stt_icon::before {
-  -webkit-mask-image: url("../images/label/ico_PlugConnected.svg");
-  mask-image: url("../images/label/ico_PlugConnected.svg");
+  -webkit-mask-image: url("../img/label/ico_PlugConnected.svg");
+  mask-image: url("../img/label/ico_PlugConnected.svg");
 }
 .syc_server_list .rdd_server_wrap.connect .rdd_server_box .server_info_txt .server_info_name {
   color: #1863BA;
@@ -5362,15 +5362,15 @@ input + .loader {
 }
 .fw_dt .icon_fw.fw_NAC {
   background-position: unset;
-  background-image: url("../images/common/ico_nac.svg");
+  background-image: url("../img/common/ico_nac.svg");
 }
 .fw_dt .icon_fw.fw_fw {
   background-position: unset;
-  background-image: url("../images/common/ico_fw.svg");
+  background-image: url("../img/common/ico_fw.svg");
 }
 .fw_dt .icon_fw.fw_VPN {
   background-position: unset;
-  background-image: url("../images/common/ico_vpn.svg");
+  background-image: url("../img/common/ico_vpn.svg");
 }
 
 /* dstb_wrap */
@@ -5383,26 +5383,26 @@ input + .loader {
   background-color: #EEEEEE;
 }
 .system_name_box .system_icon.AMsystem {
-  background-image: url("../images/role/icon_securityact.svg");
+  background-image: url("../img/role/icon_securityact.svg");
   background-position: center;
   background-size: 70%;
 }
 .system_name_box .system_icon.OSSystem {
-  background-image: url("../images/common/icon_OSSystem.svg");
+  background-image: url("../img/common/icon_OSSystem.svg");
   background-position: center;
 }
 .system_name_box .system_icon.Application {
-  background-image: url("../images/role/icon_appst.svg");
+  background-image: url("../img/role/icon_appst.svg");
   background-position: center;
   background-size: 70%;
 }
 .system_name_box .system_icon.DBconnectaccount {
-  background-image: url("../images/role/icon_dbst.svg");
+  background-image: url("../img/role/icon_dbst.svg");
   background-position: center;
   background-size: 70%;
 }
 .system_name_box .cloud_icon.GoogleCloud {
-  background-image: url("../images/common/icon_google.svg");
+  background-image: url("../img/common/icon_google.svg");
   background-position: center;
   background-size: 70%;
   background-color: #EEEEEE;
@@ -5429,8 +5429,8 @@ input + .loader {
   mask-position: center;
   background-color: #FF0000;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_info.svg");
-  mask-image: url("../images/common/ico_info.svg");
+  -webkit-mask-image: url("../img/common/ico_info.svg");
+  mask-image: url("../img/common/ico_info.svg");
   background-position: unset;
   background-image: none;
 }
@@ -5445,8 +5445,8 @@ input + .loader {
   mask-position: center;
   background-color: #F76900;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_warning.svg");
-  mask-image: url("../images/common/ico_warning.svg");
+  -webkit-mask-image: url("../img/common/ico_warning.svg");
+  mask-image: url("../img/common/ico_warning.svg");
 }
 .system_name_box .btn_refsh_s {
   width: 30px;
@@ -5454,7 +5454,7 @@ input + .loader {
   background-position: unset;
   border: 1px solid #DDDDDD;
   border-radius: 6px;
-  background: url("../images/common/ico_reset.svg") no-repeat center;
+  background: url("../img/common/ico_reset.svg") no-repeat center;
 }
 .system_name_box .server_loading {
   width: 30px;
@@ -5567,8 +5567,8 @@ input + .loader {
   background-color: #FFEFEF;
 }
 .sych_mnt_toast .err_toast .icon_err {
-  -webkit-mask-image: url("../images/common/ico_info.svg");
-  mask-image: url("../images/common/ico_info.svg");
+  -webkit-mask-image: url("../img/common/ico_info.svg");
+  mask-image: url("../img/common/ico_info.svg");
 }
 .sych_mnt_toast .err_toast .sych_mnt_toast_detail p, .sych_mnt_toast .err_toast .sych_mnt_toast_detail em {
   color: #FF0000;
@@ -5581,8 +5581,8 @@ input + .loader {
 }
 .sych_mnt_toast .warning_toast .icon_warning {
   background-color: #F76900;
-  -webkit-mask-image: url("../images/common/ico_warning.svg");
-  mask-image: url("../images/common/ico_warning.svg");
+  -webkit-mask-image: url("../img/common/ico_warning.svg");
+  mask-image: url("../img/common/ico_warning.svg");
 }
 .sych_mnt_toast .warning_toast .sych_mnt_toast_detail p, .sych_mnt_toast .warning_toast .sych_mnt_toast_detail em {
   color: #F76900;
@@ -5826,8 +5826,8 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_accordion2.svg");
-  mask-image: url("../images/common/ico_accordion2.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion2.svg");
+  mask-image: url("../img/common/ico_accordion2.svg");
 }
 .action_type > ul > li > a.on::after {
   transform: rotate(-180deg);
@@ -5950,7 +5950,7 @@ input + .loader {
   background-image: none;
   background-size: 60%;
   background-position: center;
-  background-image: url("../images/common/ico_document.svg");
+  background-image: url("../img/common/ico_document.svg");
 }
 .action_list .btn_option {
   border-radius: 0;
@@ -5976,8 +5976,8 @@ input + .loader {
   left: 0;
   width: 24px;
   height: 24px;
-  -webkit-mask-image: url("../images/common/ico_Kebab.svg");
-  mask-image: url("../images/common/ico_Kebab.svg");
+  -webkit-mask-image: url("../img/common/ico_kebab.svg");
+  mask-image: url("../img/common/ico_kebab.svg");
 }
 .action_list .add_option .btn_option {
   border-radius: 6px;
@@ -5985,8 +5985,8 @@ input + .loader {
 }
 .action_list .add_option .btn_option::after {
   background-color: #FFFFFF;
-  -webkit-mask-image: url("../images/common/icon_arrow_none.svg");
-  mask-image: url("../images/common/icon_arrow_none.svg");
+  -webkit-mask-image: url("../img/common/icon_arrow_none.svg");
+  mask-image: url("../img/common/icon_arrow_none.svg");
 }
 .action_list .entrybox.entry_connect .entry_top {
   border-left: 5px solid #2159F7;
@@ -6099,8 +6099,8 @@ input + .loader {
   background-color: #999999;
   vertical-align: text-bottom;
   background-image: none;
-  -webkit-mask-image: url("../images/common/close.svg");
-  mask-image: url("../images/common/close.svg");
+  -webkit-mask-image: url("../img/common/close.svg");
+  mask-image: url("../img/common/close.svg");
 }
 .action_list .entry_setting {
   min-width: 643px;
@@ -6159,12 +6159,12 @@ input + .loader {
   width: 24px;
   height: 24px;
   background-color: #FFFFFF;
-  -webkit-mask-image: url("../images/common/btn_add.svg");
-  mask-image: url("../images/common/btn_add.svg");
+  -webkit-mask-image: url("../img/common/btn_add.svg");
+  mask-image: url("../img/common/btn_add.svg");
 }
 .action_list .entry_setting .form_stl .form_row .adddel_bts .btn_option.btn_del_option::after {
-  -webkit-mask-image: url("../images/common/btn_minus.svg");
-  mask-image: url("../images/common/btn_minus.svg");
+  -webkit-mask-image: url("../img/common/btn_minus.svg");
+  mask-image: url("../img/common/btn_minus.svg");
 }
 .action_list .entry_setting .form_stl p.entry_txt.bul_dot {
   position: relative;
@@ -6236,7 +6236,7 @@ input + .loader {
   background-repeat: no-repeat;
   background-image: none;
   margin: 0;
-  background-image: url("../images/label/ico_FileEdit_f.svg");
+  background-image: url("../img/label/ico_FileEdit_f.svg");
   background-position: center;
 }
 .action_list .balloon.entry_help {
@@ -6300,8 +6300,8 @@ input + .loader {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/close.svg");
-  mask-image: url("../images/common/close.svg");
+  -webkit-mask-image: url("../img/common/close.svg");
+  mask-image: url("../img/common/close.svg");
   background-image: none;
 }
 .task_wrap .tasklist .btn_g_del::after {
@@ -6315,8 +6315,8 @@ input + .loader {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/close.svg");
-  mask-image: url("../images/common/close.svg");
+  -webkit-mask-image: url("../img/common/close.svg");
+  mask-image: url("../img/common/close.svg");
   background-image: none;
 }
 .task_wrap .tasklist .btn_g_del {
@@ -6432,8 +6432,8 @@ input + .loader {
   mask-position: center;
   background-color: #222222;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_show.svg");
-  mask-image: url("../images/common/ico_show.svg");
+  -webkit-mask-image: url("../img/common/ico_show.svg");
+  mask-image: url("../img/common/ico_show.svg");
 }
 .box_showbtn.hide {
   border-color: #DDDDDD;
@@ -6521,7 +6521,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_notice.svg");
+  background-image: url("../img/common/ico_notice.svg");
 }
 .home_lyt > .dash_box .notice_box .recent_notice a {
   font-size: 13px;
@@ -6548,8 +6548,8 @@ input + .loader {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_accordion3.svg");
-  mask-image: url("../images/common/ico_accordion3.svg");
+  -webkit-mask-image: url("../img/common/ico_accordion3.svg");
+  mask-image: url("../img/common/ico_accordion3.svg");
   transform: rotate(-90deg);
 }
 .home_lyt > .dash_box .home_pfbox {
@@ -6574,7 +6574,7 @@ input + .loader {
   background-image: none;
   border: 1px solid #DDDDDD;
   border-radius: 6px;
-  background-image: url("../images/label/ico_FileEdit.svg");
+  background-image: url("../img/label/ico_FileEdit.svg");
   background-position: center;
   background-size: 60%;
 }
@@ -6617,10 +6617,10 @@ input + .loader {
   margin-top: 2px;
 }
 .home_lyt > .dash_box .home_pfbox .pf_info_btns .icon_myauth {
-  background-image: url("../images/common/icon_myauth.svg");
+  background-image: url("../img/common/icon_myauth.svg");
 }
 .home_lyt > .dash_box .home_pfbox .pf_info_btns .icon_mypw {
-  background-image: url("../images/label/icon_locked.svg");
+  background-image: url("../img/label/icon_locked.svg");
   background-position: unset;
 }
 
@@ -6679,17 +6679,17 @@ input + .loader {
 .w-4card .h_i_w i {
   width: 34px;
   height: 34px;
-  background: url("../images/role/icon_opst.svg") no-repeat center;
+  background: url("../img/role/icon_opst.svg") no-repeat center;
   background-size: 100%;
 }
 .w-4card .h_i_w.pwd i {
-  background-image: url("../images/role/icon-locked.svg");
+  background-image: url("../img/role/icon-locked.svg");
 }
 .w-4card .h_i_w.task i {
-  background-image: url("../images/role/icon_task.svg");
+  background-image: url("../img/role/icon_task.svg");
 }
 .w-4card .h_i_w.req i {
-  background-image: url("../images/role/icon_FileEdit.svg");
+  background-image: url("../img/role/icon_FileEdit.svg");
 }
 
 .hm_alim .dash_box {
@@ -6709,8 +6709,8 @@ input + .loader {
   mask-position: center;
   background-color: #0D64AF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/label/ico_FileEdit_f.svg");
-  mask-image: url("../images/label/ico_FileEdit_f.svg");
+  -webkit-mask-image: url("../img/label/ico_FileEdit_f.svg");
+  mask-image: url("../img/label/ico_FileEdit_f.svg");
   background-image: none;
 }
 .hm_alim .dash_box.hm_req .hm_tit, .hm_alim .dash_box.hm_req .hm_alimnum, .hm_alim .dash_box.hm_req .hm_alimnum em {
@@ -6725,8 +6725,8 @@ input + .loader {
   mask-position: center;
   background-color: #23AC3D;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_ok.svg");
-  mask-image: url("../images/common/ico_ok.svg");
+  -webkit-mask-image: url("../img/common/ico_ok.svg");
+  mask-image: url("../img/common/ico_ok.svg");
   background-image: unset;
 }
 .hm_alim .dash_box.hm_appr .hm_tit, .hm_alim .dash_box.hm_appr .hm_alimnum, .hm_alim .dash_box.hm_appr .hm_alimnum em {
@@ -6741,8 +6741,8 @@ input + .loader {
   mask-position: center;
   background-color: #F76900;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_msg.svg");
-  mask-image: url("../images/common/ico_msg.svg");
+  -webkit-mask-image: url("../img/common/ico_msg.svg");
+  mask-image: url("../img/common/ico_msg.svg");
   background-image: unset;
 }
 .hm_alim .dash_box.hm_msg .hm_tit, .hm_alim .dash_box.hm_msg .hm_alimnum, .hm_alim .dash_box.hm_msg .hm_alimnum em {
@@ -6821,7 +6821,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/prev.svg");
+  background-image: url("../img/common/prev.svg");
   background-position: unset;
 }
 .aply_box_tit .move_ctrl .mo_add {
@@ -6854,10 +6854,10 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/ico_medal.svg");
+  background-image: url("../img/common/ico_medal.svg");
 }
 .exp_perid_wrap .license_stt .icon_license.expiration {
-  background-image: url("../images/common/ico_medal_off.svg");
+  background-image: url("../img/common/ico_medal_off.svg");
   background-position: unset;
 }
 .exp_perid_wrap .exp_perid_bar {
@@ -6935,10 +6935,10 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/moni/ico_connector.svg");
+  background-image: url("../img/moni/ico_connector.svg");
 }
 .li_gt_info:nth-child(1) .tit::before {
-  background-image: url("../images/moni/ico_server.svg");
+  background-image: url("../img/moni/ico_server.svg");
 }
 .li_gt_info:nth-child(2) .tit::before {
   -webkit-mask-repeat: no-repeat;
@@ -6949,11 +6949,11 @@ input + .loader {
   mask-position: center;
   background-color: #999999;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_member.svg");
-  mask-image: url("../images/common/ico_member.svg");
+  -webkit-mask-image: url("../img/common/ico_member.svg");
+  mask-image: url("../img/common/ico_member.svg");
 }
 .li_gt_info:nth-child(3) .tit::before {
-  background-image: url("../images/moni/ico_system.svg");
+  background-image: url("../img/moni/ico_system.svg");
 }
 
 /***************** ICAM_board_wrap *****************/
@@ -7006,37 +7006,37 @@ input + .loader {
   background-image: none;
 }
 .icam_b_list .icam_b_stl .sicam_icon.ActLog::before {
-  background-image: url("../images/common/ico_actLog.svg");
+  background-image: url("../img/common/ico_actLog.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.ThreatIntelli::before {
-  background-image: url("../images/common/ico_threatIntelligence.svg");
+  background-image: url("../img/common/ico_threatIntelligence.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.SIEM::before {
-  background-image: url("../images/common/icon_siem.svg");
+  background-image: url("../img/common/icon_siem.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.HRsystem::before {
-  background-image: url("../images/common/ico_HRsystem.svg");
+  background-image: url("../img/common/ico_HRsystem.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.devMng::before {
-  background-image: url("../images/common/icon_deviceManager.svg");
+  background-image: url("../img/common/icon_deviceManager.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.OSSystem::before {
-  background-image: url("../images/common/icon_OSSystem.svg");
+  background-image: url("../img/common/icon_OSSystem.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.DataBase::before {
-  background-image: url("../images/role/icon_dbst.svg");
+  background-image: url("../img/role/icon_dbst.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.application::before {
-  background-image: url("../images/role/icon_appst.svg");
+  background-image: url("../img/role/icon_appst.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.network::before {
-  background-image: url("../images/role/icon_networkst.svg");
+  background-image: url("../img/role/icon_networkst.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.cloud::before {
-  background-image: url("../images/role/ico_cloud.svg");
+  background-image: url("../img/role/ico_cloud.svg");
 }
 .icam_b_list .icam_b_stl .sicam_icon.etcSystem::before {
-  background-image: url("../images/role/icon_etsst.svg");
+  background-image: url("../img/role/icon_etsst.svg");
 }
 .icam_b_list .icam_b_stl .sicam_name {
   font-size: 14px;
@@ -7054,7 +7054,7 @@ input + .loader {
   background-position: unset;
   border: 1px solid #DDDDDD;
   border-radius: 6px;
-  background: url("../images/common/ico_reset.svg") no-repeat center;
+  background: url("../img/common/ico_reset.svg") no-repeat center;
 }
 .icam_b_list .icam_b_stl .sync_stt_dtl .sync_ctg_name {
   color: #757575;
@@ -7071,15 +7071,15 @@ input + .loader {
   background-position: unset;
 }
 .icam_b_list .icam_b_stl .sicam_icon_s.PAMGateway {
-  background-image: url("../images/common/ico_pAMGateway.svg");
+  background-image: url("../img/common/ico_pAMGateway.svg");
   background-position: unset;
 }
 .icam_b_list .icam_b_stl .sicam_icon_s.DBAM {
-  background-image: url("../images/common/ico_accessControl.svg");
+  background-image: url("../img/common/ico_accessControl.svg");
   background-position: unset;
 }
 .icam_b_list .icam_b_stl .sicam_icon_s.WebEAM {
-  background-image: url("../images/common/ico_webEAM.svg");
+  background-image: url("../img/common/ico_webEam.svg");
   background-position: unset;
 }
 .icam_b_list .icam_b_stl.b_stl_s .sicam_name_tit {
@@ -7099,8 +7099,8 @@ input + .loader {
   background-color: #FF0000;
   vertical-align: text-bottom;
   margin: 0;
-  -webkit-mask-image: url("../images/common/ico_info.svg");
-  mask-image: url("../images/common/ico_info.svg");
+  -webkit-mask-image: url("../img/common/ico_info.svg");
+  mask-image: url("../img/common/ico_info.svg");
 }
 .icam_b_list .icam_b_stl .sicam_name_box {
   padding: 17px 15px 17px 9px;
@@ -7126,8 +7126,8 @@ input + .loader {
   background-color: #FF0000;
   vertical-align: text-bottom;
   margin: 0;
-  -webkit-mask-image: url("../images/common/ico_info.svg");
-  mask-image: url("../images/common/ico_info.svg");
+  -webkit-mask-image: url("../img/common/ico_info.svg");
+  mask-image: url("../img/common/ico_info.svg");
 }
 .icam_b_list .icam_b_stl .dstb_stt {
   padding: 0 15px 0 9px;
@@ -7170,7 +7170,7 @@ input + .loader {
   width: 16px;
   height: 16px;
   background-position: unset;
-  background-image: url("../images/common/icon_time.svg");
+  background-image: url("../img/common/icon_time.svg");
 }
 .icam_b_list .sicam_icon_s {
   width: 20px;
@@ -7178,19 +7178,19 @@ input + .loader {
   background-size: contain;
 }
 .icam_b_list .sicam_icon_s.admins {
-  background-image: url("../images/common/ico_member.svg");
+  background-image: url("../img/common/ico_member.svg");
   background-position: unset;
 }
 .icam_b_list .sicam_icon_s.UEMClient {
-  background-image: url("../images/common/ico_ume.svg");
+  background-image: url("../img/common/ico_ume.svg");
   background-position: unset;
 }
 .icam_b_list .sicam_icon_s.NACClient {
-  background-image: url("../images/common/ico_nac.svg");
+  background-image: url("../img/common/ico_nac.svg");
   background-position: unset;
 }
 .icam_b_list .sicam_icon_s.PAMClient {
-  background-image: url("../images/common/ico_pam.svg");
+  background-image: url("../img/common/ico_pam.svg");
   background-position: unset;
 }
 
@@ -7223,7 +7223,7 @@ input + .loader {
 .secure_score .donut {
   width: 88px;
   height: 88px;
-  background: url("../images/common/donut.svg") no-repeat center;
+  background: url("../img/common/donut.svg") no-repeat center;
   background-size: 100%;
 }
 .secure_score .donut em {
@@ -7251,7 +7251,7 @@ input + .loader {
 }
 
 .policy_score {
-  background: url("../images/common/score_donut.svg") no-repeat center;
+  background: url("../img/common/score_donut.svg") no-repeat center;
   background-position: 0 0;
 }
 .policy_score.policy_score_x {
@@ -7333,8 +7333,8 @@ input + .loader {
   mask-position: center;
   background-color: #FFFFFF;
   vertical-align: text-bottom;
-  -webkit-mask-image: url("../images/common/ico_check_s.svg");
-  mask-image: url("../images/common/ico_check_s.svg");
+  -webkit-mask-image: url("../img/common/ico_check_s.svg");
+  mask-image: url("../img/common/ico_check_s.svg");
 }
 
 /***************** ICAM_board_setting *****************/
@@ -7519,8 +7519,8 @@ input + .loader {
   vertical-align: text-bottom;
   -webkit-mask-size: 80%;
   mask-size: 80%;
-  -webkit-mask-image: url("../images/common/ico_reset.svg");
-  mask-image: url("../images/common/ico_reset.svg");
+  -webkit-mask-image: url("../img/common/ico_reset.svg");
+  mask-image: url("../img/common/ico_reset.svg");
 }
 .svz_list_stl .svz_info {
   width: auto;
@@ -7600,8 +7600,8 @@ input + .loader {
   top: 1px;
   padding: 0;
   background-color: #27AD98;
-  -webkit-mask-image: url("../images/common/ico_cld_close.svg");
-  mask-image: url("../images/common/ico_cld_close.svg");
+  -webkit-mask-image: url("../img/common/ico_cld_close.svg");
+  mask-image: url("../img/common/ico_cld_close.svg");
 }
 .list_stl .week_time_schedule_col ul > li {
   border-bottom: 1px solid #C9C9C9;
@@ -7682,12 +7682,12 @@ input + .loader {
 }
 .error_txt .txt1 span:first-child::before {
   left: 0;
-  background-image: url("../images/common/left404.png");
+  background-image: url("../img/common/left404.png");
   background-size: 80%;
 }
 .error_txt .txt1 span:first-child::after {
   right: 0;
-  background-image: url("../images/common/right404.png");
+  background-image: url("../img/common/right404.png");
   background-size: 100%;
 }
 .error_txt .txt1 span:last-child {
@@ -7724,7 +7724,7 @@ input + .loader {
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
-  background-image: url("../images/common/hourglass.gif");
+  background-image: url("../img/common/hourglass.gif");
   animation: hourglass 2.8s ease-in-out infinite;
 }
 @keyframes hourglass {

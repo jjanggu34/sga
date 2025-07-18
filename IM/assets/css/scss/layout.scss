@@ -81,8 +81,8 @@ body {
         }
         .pw_input, .userPWD {
             label {
-                -webkit-mask-image:url("../images/common/icon_locked2.svg");
-                mask-image:url("../images/common/icon_locked2.svg");
+                -webkit-mask-image:url("../img/common/icon_locked2.svg");
+                mask-image:url("../img/common/icon_locked2.svg");
             }
             .fas {
                 transform:translateY(-50%);
@@ -94,11 +94,11 @@ body {
                     content:"";
                     display:inline-block;
                     @include icon (20px,20px);
-                    background-image:url("../images/common/ico_login_show.svg");
+                    background-image:url("../img/common/ico_login_show.svg");
                 }
                 &.hide {
                     &::before {
-                        background-image:url("../images/common/ico_login_hide.svg");
+                        background-image:url("../img/common/ico_login_hide.svg");
                         background-position:unset;
                     }
                 }
@@ -222,7 +222,7 @@ body {
                     @include topCenter ($left: 0);
                     display:inline-block;
                     @include icon (24px,24px);
-                    background-image:url("../images/common/ico_msg.svg");
+                    background-image:url("../img/common/ico_msg.svg");
                 }
             }
         }
@@ -308,7 +308,7 @@ body {
                 color:$content;
                 .icon_client {
                     @include icon(60px,40px);
-                    background-image:url("../images/common/ico_am.svg");
+                    background-image:url("../img/common/ico_am.svg");
                 }
             }
             &.OTP {
@@ -316,7 +316,7 @@ body {
                 color:$content;
                 .icon_client {
                     @include icon(60px,40px);
-                    background-image:url("../images/common/ico_otp.svg");
+                    background-image:url("../img/common/ico_otp.svg");
                     background-position:unset;
                 }
             }
@@ -325,7 +325,7 @@ body {
                 color:$content;
                 .icon_client {
                     @include icon(60px,45px);
-                    background-image:url("../images/common/ico_uem.svg");
+                    background-image:url("../img/common/ico_uem.svg");
                     background-position:unset;
                 }
             }
@@ -334,7 +334,7 @@ body {
                 color:$content;
                 .icon_client {
                     @include icon(60px,45px);
-                    background-image:url("../images/common/ico_fido.svg");
+                    background-image:url("../img/common/ico_fido.svg");
                     background-position:unset;
                 }
             }
@@ -703,48 +703,48 @@ body {
                     @include mask ($content);
                     background-image:none;
                     &.UserMangement {
-                        -webkit-mask-image:url("../images/nav/nav_user.svg");
-                        mask-image:url("../images/nav/nav_user.svg");
+                        -webkit-mask-image:url("../img/nav/nav_user.svg");
+                        mask-image:url("../img/nav/nav_user.svg");
                     }
                     &.ResourceMangement {
-                        -webkit-mask-image:url("../images/nav/nav_resource.svg");
-                        mask-image:url("../images/nav/nav_resource.svg");
+                        -webkit-mask-image:url("../img/nav/nav_resource.svg");
+                        mask-image:url("../img/nav/nav_resource.svg");
                     }
                     &.ServerZoneMangement {
-                        -webkit-mask-image:url("../images/nav/nav_server.svg");
-                        mask-image:url("../images/nav/nav_server.svg");
+                        -webkit-mask-image:url("../img/nav/nav_server.svg");
+                        mask-image:url("../img/nav/nav_server.svg");
                     }
                     &.RoleMangement {
-                        -webkit-mask-image:url("../images/nav/nav_role.svg");
-                        mask-image:url("../images/nav/nav_role.svg");
+                        -webkit-mask-image:url("../img/nav/nav_role.svg");
+                        mask-image:url("../img/nav/nav_role.svg");
                     }
                     &.AccessPolicyManagement {
-                        -webkit-mask-image:url("../images/nav/nav_access.svg");
-                        mask-image:url("../images/nav/nav_access.svg");
+                        -webkit-mask-image:url("../img/nav/nav_access.svg");
+                        mask-image:url("../img/nav/nav_access.svg");
                     }
                     &.SynchronizeManagment {
-                        -webkit-mask-image:url("../images/nav/nav_synchronize.svg");
-                        mask-image:url("../images/nav/nav_synchronize.svg");
+                        -webkit-mask-image:url("../img/nav/nav_synchronize.svg");
+                        mask-image:url("../img/nav/nav_synchronize.svg");
                     }
                     &.AuditingReport {
-                        -webkit-mask-image:url("../images/nav/nav_auditing.svg");
-                        mask-image:url("../images/nav/nav_auditing.svg");
+                        -webkit-mask-image:url("../img/nav/nav_auditing.svg");
+                        mask-image:url("../img/nav/nav_auditing.svg");
                     }
                     &.SGIMManagement {
-                        -webkit-mask-image:url("../images/nav/nav_management.svg");
-                        mask-image:url("../images/nav/nav_management.svg");
+                        -webkit-mask-image:url("../img/nav/nav_management.svg");
+                        mask-image:url("../img/nav/nav_management.svg");
                     }
                     &.WorkflowManagement {
-                        -webkit-mask-image:url("../images/nav/nav_workflow.svg");
-                        mask-image:url("../images/nav/nav_workflow.svg");
+                        -webkit-mask-image:url("../img/nav/nav_workflow.svg");
+                        mask-image:url("../img/nav/nav_workflow.svg");
                     }
                     &.PolicyMangement {
-                        -webkit-mask-image:url("../images/nav/nav_policy.svg");
-                        mask-image:url("../images/nav/nav_policy.svg");
+                        -webkit-mask-image:url("../img/nav/nav_policy.svg");
+                        mask-image:url("../img/nav/nav_policy.svg");
                     }
                     &.System {
-                        -webkit-mask-image:url("../images/nav/nav_system.svg");
-                        mask-image:url("../images/nav/nav_system.svg");
+                        -webkit-mask-image:url("../img/nav/nav_system.svg");
+                        mask-image:url("../img/nav/nav_system.svg");
                     }
                 }
                 span {
@@ -804,7 +804,7 @@ body {
                 a {
                     display:inline-block;
                     @include icon(24px, 24px);
-                    background-image:url("../images/common/menu.svg");
+                    background-image:url("../img/common/menu.svg");
                 }
             }
         }
@@ -858,8 +858,8 @@ body {
                             @include wh(24px, 24px);
                             @include mask($secondary);
                             font-size:0;
-                            -webkit-mask-image:url("../images/common/home.svg");
-                            mask-image:url("../images/common/home.svg");
+                            -webkit-mask-image:url("../img/common/home.svg");
+                            mask-image:url("../img/common/home.svg");
                         }
                         &::before {
                             content:none;
@@ -905,8 +905,8 @@ body {
                         margin-top:0;
                         border:0;
                         @include mask($primary);
-                        -webkit-mask-image:url("../images/common/icon_refresh.svg");
-                        mask-image:url("../images/common/icon_refresh.svg");
+                        -webkit-mask-image:url("../img/common/icon_refresh.svg");
+                        mask-image:url("../img/common/icon_refresh.svg");
                         background-image:none;
                     }
                     i {
@@ -914,8 +914,8 @@ body {
                         position:absolute;
                         top:3px;
                         @include wh (16px, 16px);
-                        -webkit-mask-image:url("../images/common/ico_time.svg");
-                        mask-image:url("../images/common/ico_time.svg");
+                        -webkit-mask-image:url("../img/common/ico_time.svg");
+                        mask-image:url("../img/common/ico_time.svg");
                     }
                 }
                 &.btn_menualdown,
@@ -934,7 +934,7 @@ body {
                     &>a {
                         @include icon (24px,24px);
                         margin-top:0;
-                        background-image:url("../images/common/icon-alarm.svg");
+                        background-image:url("../img/common/icon-alarm.svg");
                         &>span {
                             display:none;
                             line-height:20px;
@@ -945,14 +945,14 @@ body {
                 }
                 &.btn_menualdown {
                     a {
-                        -webkit-mask-image:url("../images/common/icon_download.svg");
-                        mask-image:url("../images/common/icon_download.svg");
+                        -webkit-mask-image:url("../img/common/icon_download.svg");
+                        mask-image:url("../img/common/icon_download.svg");
                     }
                 }
                 &.btn_logout {
                     a {
-                        -webkit-mask-image:url("../images/common/icon_logout.svg");
-                        mask-image:url("../images/common/icon_logout.svg");
+                        -webkit-mask-image:url("../img/common/icon_logout.svg");
+                        mask-image:url("../img/common/icon_logout.svg");
                     }
                 }
                 &.btn_top_user a {
@@ -1036,7 +1036,7 @@ body {
                                 top:15px;
                                 left:50%;
                                 transform:translateX(-50%);
-                                background: url("../images/common/icon-nodata.svg") no-repeat  center / cover;
+                                background: url("../img/common/icon-nodata.svg") no-repeat  center / cover;
                             }
                             a {
                                 padding:0;
@@ -1435,19 +1435,19 @@ body {
             transform:translateX(-50%);
             display:block;
             @include icon(50px,50px);
-            background-image:url("../images/common/ico_ok.svg");
+            background-image:url("../img/common/ico_ok.svg");
         }
         &.fail {
             span {
-                background-image:url("../images/common/ico_erro.svg");
+                background-image:url("../img/common/ico_erro.svg");
                 background-position:unset;
             }
         }
         &.warning {
             span {
                 @include mask($info);
-                -webkit-mask-image:url("../images/common/ico_warning.svg");
-                mask-image:url("../images/common/ico_warning.svg");
+                -webkit-mask-image:url("../img/common/ico_warning.svg");
+                mask-image:url("../img/common/ico_warning.svg");
             }
         }
     }
