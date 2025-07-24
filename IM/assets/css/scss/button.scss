@@ -153,11 +153,17 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
         padding-bottom:0;
         background:$icoAccordion no-repeat right 4px center $white;
     }
-    &.diss {
-        color:$text-disabled;
-        background:$disabled-line-bg;
+    &.diss,&:disabled { //[20250723] 추가
         border:1px solid $btn-disabled;
+        color:$text-disabled;
+        background-color:$disabled-line-bg !important;
         cursor:auto;
+        &:hover {
+            border:1px solid $btn-disabled;
+            color:$text-disabled;
+            background-color:$disabled-line-bg !important;
+            cursor:auto;
+        }
     }
     &:hover {
         border:1px solid $line-hover;
@@ -167,10 +173,13 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 /*---------------------------------------------
 	#diss : disabled
 ---------------------------------------------*/
-.diss {
+.diss {//[20250723] 수정
     border:1px solid $btn-disabled;
     color:$text-disabled;
-    background:$btn-disabled;
+    background-color:$btn-disabled;
+    &:hover {
+        background-color:$btn-disabled;
+    }
 }
 
 /*---------------------------------------------
@@ -272,7 +281,7 @@ button, a {
             transform:scale(-1);
         }
     }
-    &.diss {
+    &.diss {//[20250723] 수정
         cursor:auto;
         border:1px solid $btn-disabled;
         color:$text-disabled !important;
@@ -289,11 +298,11 @@ button, a {
         font-weight:$font-w-r;
         color:$content;
         line-height:16px;
-        background:$white;
+        background-color:$white;//[20250723]수정
         &.on {
             padding:6px 12px 6px 6px;
             border:$borderP;
-            background:#EDFFFC;
+            background-color:#EDFFFC;//[20250723]수정
             &::before {
                 content:"";
                 display:inline-block;
@@ -303,6 +312,9 @@ button, a {
                 mask-image:$icoCheckS;
             }
             color:$primary;
+        }
+        &.diss {
+            background-color:$disabled-line-bg;
         }
     }
     /* 테이블 안 토글 버튼 */
@@ -350,6 +362,22 @@ button, a {
     }
     &:focus-visible, &:focus {
         outline-color:$title;
+    }
+}
+
+button {
+    &:disabled {//[20250723] 추가
+        color:$text-disabled;
+        border:1px solid $btn-disabled;
+        background-color:$btn-disabled !important;
+        cursor:auto;
+        i {
+            background-color:$text-disabled !important;
+        }
+        &:hover {
+            background-color:$btn-disabled;
+            cursor:auto;
+        }
     }
 }
 
@@ -538,7 +566,10 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     .diss {
         border:1px solid $btn-disabled;
         color:$text-disabled;
-        background:$btn-disabled;
+        background-color:$btn-disabled;//[20250723]수정
+        &:hover {//[20250723] 추가
+            background-color:$btn-disabled;
+        }
     }
 }
 /*---------------------------------------------
@@ -570,7 +601,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         border-radius:7px;
         color:$white;
         line-height:16px;
-        background:$primary;
+        background:none;//[20250723] 추가
+        background-color:$primary;//[20250723]수정
         &:hover {
             background-color:$btn-hover;
         }

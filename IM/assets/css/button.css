@@ -251,10 +251,16 @@ button:last-child {
   padding-bottom: 0;
   background: url("../img/common/ico_accordion.svg") no-repeat right 4px center #FFFFFF;
 }
-.line.diss {
-  color: #999999;
-  background: #FCFCFC;
+.line.diss, .line:disabled {
   border: 1px solid #EEEEEE;
+  color: #999999;
+  background-color: #FCFCFC !important;
+  cursor: auto;
+}
+.line.diss:hover, .line:disabled:hover {
+  border: 1px solid #EEEEEE;
+  color: #999999;
+  background-color: #FCFCFC !important;
   cursor: auto;
 }
 .line:hover {
@@ -267,7 +273,10 @@ button:last-child {
 .diss {
   border: 1px solid #EEEEEE;
   color: #999999;
-  background: #EEEEEE;
+  background-color: #EEEEEE;
+}
+.diss:hover {
+  background-color: #EEEEEE;
 }
 
 /*---------------------------------------------
@@ -426,12 +435,12 @@ button.normal, a.normal {
   font-weight: 400;
   color: #454545;
   line-height: 16px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
 }
 button.normal.on, a.normal.on {
   padding: 6px 12px 6px 6px;
   border: 1px solid #27AD98;
-  background: #EDFFFC;
+  background-color: #EDFFFC;
   color: #27AD98;
 }
 button.normal.on::before, a.normal.on::before {
@@ -449,6 +458,9 @@ button.normal.on::before, a.normal.on::before {
   vertical-align: text-bottom;
   -webkit-mask-image: url("../img/common/ico_check_s.svg");
   mask-image: url("../img/common/ico_check_s.svg");
+}
+button.normal.diss, a.normal.diss {
+  background-color: #FCFCFC;
 }
 button.icon_arrow_open, button.icon_arrow_none, button.icon_arrow_close, a.icon_arrow_open, a.icon_arrow_none, a.icon_arrow_close {
   display: inline-block;
@@ -501,6 +513,20 @@ button.s_btn_more, a.s_btn_more {
 }
 button:focus-visible, button:focus, a:focus-visible, a:focus {
   outline-color: #222222;
+}
+
+button:disabled {
+  color: #999999;
+  border: 1px solid #EEEEEE;
+  background-color: #EEEEEE !important;
+  cursor: auto;
+}
+button:disabled i {
+  background-color: #999999 !important;
+}
+button:disabled:hover {
+  background-color: #EEEEEE;
+  cursor: auto;
 }
 
 /* 옵션 */
@@ -743,7 +769,10 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
 .btn_box .diss {
   border: 1px solid #EEEEEE;
   color: #999999;
-  background: #EEEEEE;
+  background-color: #EEEEEE;
+}
+.btn_box .diss:hover {
+  background-color: #EEEEEE;
 }
 
 /*---------------------------------------------
@@ -787,7 +816,8 @@ button:focus-visible, button:focus, a:focus-visible, a:focus {
   border-radius: 7px;
   color: #FFFFFF;
   line-height: 16px;
-  background: #27AD98;
+  background: none;
+  background-color: #27AD98;
 }
 .search_box .btn_detail_search:hover {
   background-color: #138170;

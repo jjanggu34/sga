@@ -265,6 +265,27 @@
     }
     .sort_column {
         padding:10px;
+        div.headText {
+            padding:0;
+        }
+        .order_on {
+            &.ascanding {
+                top:3px;
+            }
+        }
+        .ascanding {
+            .asc_num {
+                position:absolute;
+                top:-16px;
+                right:-10px;
+                @include wh (17px,17px);
+                border-radius:30px;
+                font-size:$font12;
+                color:$white;
+                line-height:1.6;
+                background-color:$text-disabled;
+            }
+        }
     }
     .detail_open {
         background-color:$body;

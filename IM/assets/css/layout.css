@@ -821,7 +821,7 @@ body * {
   -webkit-mask-image: url("../img/nav/nav_server.svg");
   mask-image: url("../img/nav/nav_server.svg");
 }
-#SGIM_wrap .nav_list > li > a i.RoleMangement {
+#SGIM_wrap .nav_list > li > a i.RoleManagement {
   -webkit-mask-image: url("../img/nav/nav_role.svg");
   mask-image: url("../img/nav/nav_role.svg");
 }
@@ -849,9 +849,9 @@ body * {
   -webkit-mask-image: url("../img/nav/nav_policy.svg");
   mask-image: url("../img/nav/nav_policy.svg");
 }
-#SGIM_wrap .nav_list > li > a i.System {
-  -webkit-mask-image: url("../img/nav/nav_system.svg");
-  mask-image: url("../img/nav/nav_system.svg");
+#SGIM_wrap .nav_list > li > a i.RequestApproveManagement {
+  -webkit-mask-image: url("../img/nav/nav_workflow.svg");
+  mask-image: url("../img/nav/nav_workflow.svg");
 }
 #SGIM_wrap .nav_list > li > a span {
   font-size: 13px;

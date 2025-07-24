@@ -296,6 +296,24 @@
 .default_tbl .sort_column {
   padding: 10px;
 }
+.default_tbl .sort_column div.headText {
+  padding: 0;
+}
+.default_tbl .sort_column .order_on.ascanding {
+  top: 3px;
+}
+.default_tbl .sort_column .ascanding .asc_num {
+  position: absolute;
+  top: -16px;
+  right: -10px;
+  width: 17px;
+  height: 17px;
+  border-radius: 30px;
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 1.6;
+  background-color: #999999;
+}
 .default_tbl .detail_open {
   background-color: #F3F5F7;
 }

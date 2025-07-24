@@ -1368,6 +1368,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .tree_menu_inner {
     a {
+        position:relative;
+        display:block;
         padding:0;
         border-radius:6px;
         span {
@@ -1457,6 +1459,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         }
                     }
                 }
+            }
+            &> ul.sub_tree_menu {
+                padding-left:10px;
             }
         }
     }
@@ -1594,6 +1599,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         padding-left:20px;
                         padding-bottom:6px;
                     }
+                }
+                & > ul.sub_tree_menu {
+                    padding-left:10px;
                 }
             }
         }

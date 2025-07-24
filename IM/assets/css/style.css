@@ -1715,6 +1715,8 @@ input + .loader {
 }
 
 .tree_menu_inner a {
+  position: relative;
+  display: block;
   padding: 0;
   border-radius: 6px;
 }
@@ -1812,6 +1814,9 @@ input + .loader {
 }
 .tree_menu_inner .sub_tree_menu li a.diss:hover span {
   color: #999999;
+}
+.tree_menu_inner .sub_tree_menu li > ul.sub_tree_menu {
+  padding-left: 10px;
 }
 
 .tree_menu_tab button {
@@ -1948,6 +1953,9 @@ input + .loader {
 .tree_wrap .tree_list ul li ul li {
   padding-left: 20px;
   padding-bottom: 6px;
+}
+.tree_wrap .tree_list ul li > ul.sub_tree_menu {
+  padding-left: 10px;
 }
 .tree_wrap .tree_list li a {
   position: relative;

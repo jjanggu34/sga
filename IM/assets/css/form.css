@@ -39,8 +39,8 @@
   font-size: 13px;
   color: #222222;
 }
-.form_contrl:disabled {
-  background: #EEEEEE;
+.form_contrl:disabled, .form_contrl.diss {
+  background-color: #EEEEEE;
   border: 1px solid #DDDDDD;
   color: #999999;
 }
@@ -101,6 +101,11 @@
   background-position: left 5px center;
   background-size: 16px;
   background-repeat: no-repeat;
+  color: #999999;
+}
+.form_date .date_ctl.diss {
+  background-color: #EEEEEE;
+  border: 1px solid #DDDDDD;
   color: #999999;
 }
 .form_date.flx {
@@ -405,7 +410,10 @@
   color: #999999;
 }
 .check_stl:disabled + label.check_stl_lab::before {
-  background-color: #EEEEEE;
+  background-color: #EEEEEE !important;
+}
+.check_stl:disabled + label.check_stl_lab::after {
+  background-color: #999999;
 }
 .check_stl + label.check_stl_lab2 {
   color: #999999;
@@ -650,4 +658,64 @@ select.form_contrl {
 .moved_tit .dropdown_list li:first-child {
   margin-top: 0;
   border-top: 0;
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+/* disabled 안 되어있는 input */
+.multiselect__tags {
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+}
+
+.multiselect__single {
+  height: 30px;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.multiselect--disabled .multiselect__tags {
+  border: 1px solid #DDDDDD;
+  background-color: #EEEEEE;
+}
+.multiselect--disabled .multiselect__single {
+  color: #999999;
+  background-color: #EEEEEE;
+}
+
+.multiselect__select, .multiselect__tags {
+  min-height: 30px;
+}
+
+/* multiselect__content-wrapper */
+.multiselect__content-wrapper {
+  border: 1px solid #DDDDDD;
+}
+
+.multiselect__option {
+  padding: 0 10px;
+}
+
+.multiselect__option--selected {
+  background: #DAFAF5 !important;
+}
+.multiselect__option--selected span {
+  color: #27AD98;
+}
+
+.multiselect__option--highlight {
+  background: none !important;
+}
+.multiselect__option--highlight span {
+  color: #27AD98;
+}
+
+.multiselect--active:not(.multiselect--above) .multiselect__current, .multiselect--active:not(.multiselect--above) .multiselect__input, .multiselect--active:not(.multiselect--above) .multiselect__tags {
+  border-bottom: 0;
+}
+
+.form_txt .multiselect, .form_txt .multiselect__option, .form_txt .multiselect__placeholder, .form_txt .multiselect__single, .form_txt .multiselect__input {
+  font-size: 13px !important;
+  line-height: 30px !important;
 }

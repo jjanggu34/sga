@@ -714,7 +714,7 @@ body {
                         -webkit-mask-image:url("../img/nav/nav_server.svg");
                         mask-image:url("../img/nav/nav_server.svg");
                     }
-                    &.RoleMangement {
+                    &.RoleManagement {
                         -webkit-mask-image:url("../img/nav/nav_role.svg");
                         mask-image:url("../img/nav/nav_role.svg");
                     }
@@ -742,9 +742,9 @@ body {
                         -webkit-mask-image:url("../img/nav/nav_policy.svg");
                         mask-image:url("../img/nav/nav_policy.svg");
                     }
-                    &.System {
-                        -webkit-mask-image:url("../img/nav/nav_system.svg");
-                        mask-image:url("../img/nav/nav_system.svg");
+                    &.RequestApproveManagement { //[20250723] 추가
+                        -webkit-mask-image:url("../img/nav/nav_workflow.svg");
+                        mask-image:url("../img/nav/nav_workflow.svg");
                     }
                 }
                 span {

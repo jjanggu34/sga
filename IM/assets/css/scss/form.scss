@@ -16,8 +16,8 @@ $borderTs: "search_wrap", "tab_wrap";
     border-radius:6px;
     font-size:$font13;
     color:$title;
-    &:disabled {
-        background:$btn-disabled;
+    &:disabled, &.diss { //[20250723] 수정
+        background-color:$btn-disabled;
         border:$borderD;
         color:$text-disabled;
     }
@@ -82,6 +82,11 @@ $borderTs: "search_wrap", "tab_wrap";
         background-size: 16px;
         background-repeat: no-repeat;
         color:$text-disabled;
+        &.diss { //[20250723] 추가
+            background-color: $btn-disabled;
+            border:$borderD;
+            color:$text-disabled;
+        }
     }
     &.flx {
         gap:4px;
@@ -348,8 +353,11 @@ $labels: "check_stl_lab", "radio_stl_lab";
     &:disabled + label.check_stl_lab {
         color:$text-disabled;
         &::before {
-            background-color: $btn-disabled;
-    }
+            background-color: $btn-disabled !important; //[20250723] 변경
+        }
+        &::after { //[20250723] 추가
+            background-color:$text-disabled;
+        }
     }
     & + label.check_stl_lab2 {
         color:$text-disabled;
@@ -622,4 +630,62 @@ select{
             }
         }
     }
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+// [20250723] 추가
+/* disabled 안 되어있는 input */
+.multiselect__tags {
+    border:$borderD;
+    border-radius:6px;
+}
+.multiselect__single {
+    height:30px;
+    margin-bottom:0;
+    padding-top:0;
+}
+.multiselect--disabled {
+    .multiselect__tags {
+        border:$borderD;
+        background-color:$btn-disabled;
+    }
+    .multiselect__single {
+        color:$text-disabled;
+        background-color:$btn-disabled;
+    }
+}
+
+.multiselect__select, .multiselect__tags {
+    min-height:30px;
+}
+
+/* multiselect__content-wrapper */
+.multiselect__content-wrapper {
+    border:$borderD;
+}
+.multiselect__option {
+    padding:0 10px;
+}
+.multiselect__option--selected {
+    background:#DAFAF5 !important;
+    span {
+        color:$primary;
+    }
+}
+.multiselect__option--highlight {
+    background:none !important;
+    span {
+        color:$primary;
+    }
+}
+
+.multiselect--active:not(.multiselect--above) .multiselect__current, .multiselect--active:not(.multiselect--above) .multiselect__input, .multiselect--active:not(.multiselect--above) .multiselect__tags {
+    border-bottom:0;
+}
+
+.form_txt .multiselect, .form_txt .multiselect__option, .form_txt .multiselect__placeholder, .form_txt .multiselect__single, .form_txt .multiselect__input {
+    font-size:$font13 !important;
+    line-height:30px !important;
 }
