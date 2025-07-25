@@ -761,12 +761,12 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         display:block;
         padding-left:0;
         color:$secondary;
-        &::before {
-            content:"\203B";
-            display:inline-block;
-            @include wh (16px, 16px);
-            color:$secondary;
-        }
+        // &::before {
+        //     content:"\203B";
+        //     display:inline-block;
+        //     @include wh (16px, 16px);
+        //     color:$secondary;
+        // }
     }
 }
 
@@ -1195,7 +1195,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     &.cont_in_tab {
         padding:16px 20px;
-        border-radius:10px;
         background-color:transparent;
         .tab_list {
             a {
@@ -1298,7 +1297,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     참고: guide/views/treemenu.html
 *********************************************************************/
 .tree_menu_wrap {
-    padding:0 20px 20px;
+    padding:0 20px;//[20250724] 수정
     .mini_search { // tree_menu_box 밖에 있을 때
         &+.tree_menu_area {
             margin-top:20px;
@@ -1375,6 +1374,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         span {
             font-weight:$font-w-r;
             color:$title;
+            line-height:2;//[20250724] 추가
         }
         &.on {
             background:#DAFAF5;
@@ -1399,13 +1399,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             &.folder {
                 -webkit-mask-image:$icoFolder;
                 mask-image:$icoFolder;
-                &_open {
+                &.open {
                     background-color:$title;
                     -webkit-mask-image:$icoFolderOpen;
                     mask-image:$icoFolderOpen;
                 }
             }
-            &.iuser {
+            &.iuser, &.open {
                 -webkit-mask-image:$icoMember;
                 mask-image:$icoMember;
             }
@@ -1469,6 +1469,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 
 .tree_menu_tab {
     button {
+        height:45px;
         padding:10px 0;
         font-size:$font14;
         color:$text-disabled;
@@ -1711,6 +1712,43 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         -webkit-mask-image:$icoCheckS;
                         mask-image:$icoCheckS;
                     }
+                }
+            }
+        }
+    }
+}
+
+.move_stl2 { //[20250724] 추가
+    .tree_wrap {
+        .tree_list {
+            li {
+                padding-left:14px;
+                .tree_arrow {
+                    @include wh(30px, 30px);
+                    @include mask($text-disabled);
+                    -webkit-mask-size: 70%;
+                    mask-size: 70%;
+                    -webkit-mask-image:$icoAccordion2;
+                    mask-image:$icoAccordion2;
+                    background-image:none;
+                    transform:rotate(-90deg);
+                    &::before {
+                        content:none;
+                    }
+                    &.open {
+                        background-color:$title;
+                        background-position:center;
+                        transform:rotate(0deg);
+                    }
+                }
+                a {
+                    padding:8px 8px 8px 0;
+                }
+            }
+            ul {
+                padding-left:20px;
+                li ul li {
+                    padding:0;
                 }
             }
         }
@@ -3458,10 +3496,9 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             border-bottom:$borderD;
         }
     }
-    &+.content.only {
-        margin:20px 24px 20px !important;;
+    &+.content {//[20250724] 수정
         .pcs_ctg_wrap {
-            margin-top:20px;
+            margin-top:8px;
         }
         .t_cont_in {
             .list_btn, .tbl_list, .tbl_btm {
@@ -5088,7 +5125,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 // }
             }
         }
-        li {
+        &> li {
             display:flex;
             border-bottom:$borderC;
             .form_tit {
@@ -7099,5 +7136,18 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         .txt2 {
             padding-top:40px;
         }
+    }
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+// [20250724]
+.tree_menu_wrap,.move_box {
+    .search_wrap {
+        margin:0;
+        border:0;
+        border-radius:0;
+        background:none;
     }
 }

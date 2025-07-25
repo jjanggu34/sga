@@ -263,6 +263,7 @@ body * {
   padding-bottom: 10px;
 }
 #IMwrap .tn_slt .fm_tit {
+  height: 45px;
   border: 1px solid #BBBBBB;
   font-weight: 400;
   color: #222222;
@@ -290,6 +291,10 @@ body * {
 }
 #IMwrap .tn_slt .slt_list {
   top: 42px;
+}
+#IMwrap .tn_slt .slt_list.tenant {
+  left: 0;
+  width: 100%;
 }
 #IMwrap .login_btmmsg {
   margin-top: 10px;
@@ -360,9 +365,6 @@ body * {
   mask-image: url("../img/common/close.svg");
   background-image: none;
 }
-#IMwrap .txtbtns_devide {
-  gap: 4px;
-}
 #IMwrap .login_notice {
   padding: 0;
   margin-bottom: 0;
@@ -405,6 +407,7 @@ body * {
 }
 #IMwrap .client_down_list .clientBtn {
   flex-direction: column;
+  height: auto;
   margin-top: 0;
   padding: 12px 0 7px;
   font-size: 16px;
@@ -490,6 +493,25 @@ body * {
 #IMwrap .row2 .client_down_list .clientBtn.UEM .icon_client {
   width: 40px;
   height: 30px;
+}
+
+/***************** [20250724] 추가 버튼 *****************/
+#IMwrap .pledge_btns {
+  flex-direction: column;
+  gap: 10px;
+}
+#IMwrap .txtbtns_devide {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+#IMwrap .txtbtns_devide button {
+  flex: 1;
+  max-width: calc(33.333% - 10px);
+  min-width: 115px;
+}
+#IMwrap .txtbtns_devide .devide {
+  display: none;
 }
 
 /*---------------------------------------------
@@ -853,9 +875,30 @@ body * {
   -webkit-mask-image: url("../img/nav/nav_workflow.svg");
   mask-image: url("../img/nav/nav_workflow.svg");
 }
+#SGIM_wrap .nav_list > li > a i.Home {
+  -webkit-mask-image: url("../img/nav/ico_home.svg");
+  mask-image: url("../img/nav/ico_home.svg");
+}
+#SGIM_wrap .nav_list > li > a i.MyProfiles {
+  -webkit-mask-image: url("../img/nav/ico_my.svg");
+  mask-image: url("../img/nav/ico_my.svg");
+}
+#SGIM_wrap .nav_list > li > a i.MyAuth {
+  -webkit-mask-image: url("../img/nav/ico_myauth.svg");
+  mask-image: url("../img/nav/ico_myauth.svg");
+}
+#SGIM_wrap .nav_list > li > a i.MyApprove {
+  -webkit-mask-image: url("../img/nav/ico_approve_manage.svg");
+  mask-image: url("../img/nav/ico_approve_manage.svg");
+}
+#SGIM_wrap .nav_list > li > a i.MyMessage {
+  -webkit-mask-image: url("../img/nav/ico_mail.svg");
+  mask-image: url("../img/nav/ico_mail.svg");
+}
 #SGIM_wrap .nav_list > li > a span {
   font-size: 13px;
   font-weight: 500;
+  line-height: 1.5;
 }
 #SGIM_wrap .nav_list > li ul {
   margin: 10px 0 0;
@@ -1233,37 +1276,47 @@ body * {
   padding: 20px 0;
   margin-top: 0;
 }
-#SGIM_wrap #container .cont_wrap .content:not(.cnt_lyt_sc .content):last-child {
-  padding-top: 18px;
-}
 #SGIM_wrap #container .cont_wrap .content:not(.cnt_lyt_sc .content) .tab_wrap.cont_in_tab {
   padding-top: 0;
 }
 #SGIM_wrap #container .cont_wrap .content {
+  min-height: calc(100vh - 70px);
+  margin: 0;
   border: 1px solid #C9C9C9;
+  border-radius: 3px;
 }
 #SGIM_wrap #container .cont_wrap .content .default_tbl tbody tr td {
   border: 0;
   line-height: 34px;
 }
 #SGIM_wrap #container .content {
-  padding: 0;
   height: 100%;
-  min-height: calc(100vh - 70px);
   margin: 84px 0 0;
-  border-top: 0;
-  border-radius: 3px;
   box-shadow: unset;
+  min-height: calc(100vh - 100px);
+  margin: 80px 24px 20px;
+  padding: 20px 24px;
+  border: 1px solid #DDDDDD;
+  border-radius: 20px;
 }
-#SGIM_wrap #container .content > div:last-child:not(.list_btn, .sych_mnt_wrap) {
-  padding-bottom: 0;
+#SGIM_wrap #container .content:has(.sych_mnt_wrap) {
+  padding: 20px;
 }
-#SGIM_wrap #container .content > div.list_btn {
-  top: 60px;
+#SGIM_wrap #container .content .tbl_list {
+  padding: 0 0 20px;
 }
 #SGIM_wrap #container .content:has(.search_wrap) {
+  min-height: calc(100vh - 70px);
   margin: 60px 0 0;
-  padding-top: 30px;
+  padding: 30px 0 0;
+  border: 0;
+  border-radius: 0;
+}
+#SGIM_wrap #container .content:has(.search_wrap) .tbl_list {
+  padding: 0 24px;
+}
+#SGIM_wrap #container .content:has(.search_wrap) .tbl_list + .tbl_btm {
+  padding-top: 20px;
 }
 #SGIM_wrap #container .content.scroll {
   height: 100%;
@@ -1312,19 +1365,6 @@ body * {
 #SGIM_wrap #container .content + .cnt_lyt_sc .i-card_wrap .dash_box {
   border-radius: 3px;
 }
-#SGIM_wrap #container .content.only, #SGIM_wrap #container .content.ch_password_cont {
-  min-height: calc(100vh - 100px);
-  margin: 80px 24px 20px;
-  padding: 20px 24px;
-  border: 1px solid #DDDDDD;
-  border-radius: 20px;
-}
-#SGIM_wrap #container .content.only:has(.sych_mnt_wrap), #SGIM_wrap #container .content.ch_password_cont:has(.sych_mnt_wrap) {
-  padding: 20px;
-}
-#SGIM_wrap #container .content.only .tbl_list, #SGIM_wrap #container .content.ch_password_cont .tbl_list {
-  padding: 0 0 20px;
-}
 #SGIM_wrap #container .content.ch_password_cont {
   min-height: auto;
 }
@@ -1337,6 +1377,11 @@ body * {
 }
 #SGIM_wrap #container .content.ch_password_cont .form_tbl li:last-child .form_txt {
   border-bottom: 0;
+}
+#SGIM_wrap #container .i-card_wrap + .content:has(.search_wrap) {
+  padding: 20px 24px;
+  border: 1px solid #DDDDDD;
+  border-radius: 20px;
 }
 
 #ONSD_wrap .content {

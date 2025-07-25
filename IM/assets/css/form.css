@@ -59,11 +59,6 @@
   border-radius: 20px;
   background: #F9F9F9;
 }
-.search_wrap + .tab_wrap.cont_in_tab {
-  margin-top: 0;
-  border-radius: 0;
-  background-color: #F3F5F7;
-}
 
 .search_box {
   max-width: 458px;

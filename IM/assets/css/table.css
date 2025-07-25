@@ -134,6 +134,7 @@
   color: #454545;
 }
 .default_tbl tbody tr td {
+  position: relative;
   padding: 0 20px;
   border: 0;
   font-size: 13px;
@@ -143,7 +144,6 @@
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 .default_tbl tbody tr td div {
   color: #454545;
@@ -451,8 +451,8 @@
 }
 
 .move_tbl {
-  height: 100%;
-  max-height: 370px;
+  height: 390px;
+  max-height: 390px;
   margin-top: 7px;
   border: 0;
   border-top: 1px solid #C9C9C9;
@@ -467,8 +467,37 @@
 .move_tbl .default_tbl tbody tr td.check_list {
   line-height: unset;
 }
+.move_tbl.pg_m_tbl {
+  padding-bottom: 0;
+}
 
 /* dash_box > table */
 .dash_box .default_tbl td {
   line-height: 35px;
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+[data-tooltip]:before {
+  margin: 0;
+  padding: 0;
+}
+[data-tooltip]:not([data-tooltip=""]):hover:before {
+  top: 40px;
+  left: 40px;
+  padding: 5px;
+}
+
+tbody [data-tooltip]:not([data-tooltip=""]):hover:before {
+  top: 30px;
+  left: 60px;
+}
+
+.default_tbl tbodytr, .default_tbl tbodytd {
+  position: relative;
+}
+
+.move_tbl thead tr.nodt th {
+  border-top: 1px solid #C9C9C9;
 }

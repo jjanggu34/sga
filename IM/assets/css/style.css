@@ -1077,13 +1077,6 @@ input + .loader {
   padding-left: 0;
   color: #757575;
 }
-.req_txt.inbl::before {
-  content: "※";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  color: #757575;
-}
 
 .dupli_check {
   display: flex;
@@ -1550,7 +1543,6 @@ input + .loader {
 }
 .tab_wrap.cont_in_tab {
   padding: 16px 20px;
-  border-radius: 10px;
   background-color: transparent;
 }
 .tab_wrap.cont_in_tab .tab_list a .tab_tree_icon {
@@ -1646,7 +1638,7 @@ input + .loader {
     참고: guide/views/treemenu.html
 *********************************************************************/
 .tree_menu_wrap {
-  padding: 0 20px 20px;
+  padding: 0 20px;
 }
 .tree_menu_wrap .mini_search + .tree_menu_area {
   margin-top: 20px;
@@ -1723,6 +1715,7 @@ input + .loader {
 .tree_menu_inner a span {
   font-weight: 400;
   color: #222222;
+  line-height: 2;
 }
 .tree_menu_inner a.on {
   background: #DAFAF5;
@@ -1756,12 +1749,12 @@ input + .loader {
   -webkit-mask-image: url("../img/common/ico_folder.svg");
   mask-image: url("../img/common/ico_folder.svg");
 }
-.tree_menu_inner a .icon_tree.folder_open {
+.tree_menu_inner a .icon_tree.folder.open {
   background-color: #222222;
   -webkit-mask-image: url("../img/common/ico_folder_open.svg");
   mask-image: url("../img/common/ico_folder_open.svg");
 }
-.tree_menu_inner a .icon_tree.iuser {
+.tree_menu_inner a .icon_tree.iuser, .tree_menu_inner a .icon_tree.open {
   -webkit-mask-image: url("../img/common/ico_member.svg");
   mask-image: url("../img/common/ico_member.svg");
 }
@@ -1820,6 +1813,7 @@ input + .loader {
 }
 
 .tree_menu_tab button {
+  height: 45px;
   padding: 10px 0;
   font-size: 14px;
   color: #999999;
@@ -2096,6 +2090,45 @@ input + .loader {
   vertical-align: text-bottom;
   -webkit-mask-image: url("../img/common/ico_check_s.svg");
   mask-image: url("../img/common/ico_check_s.svg");
+}
+
+.move_stl2 .tree_wrap .tree_list li {
+  padding-left: 14px;
+}
+.move_stl2 .tree_wrap .tree_list li .tree_arrow {
+  width: 30px;
+  height: 30px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #999999;
+  vertical-align: text-bottom;
+  -webkit-mask-size: 70%;
+  mask-size: 70%;
+  -webkit-mask-image: url("../img/common/ico_accordion2.svg");
+  mask-image: url("../img/common/ico_accordion2.svg");
+  background-image: none;
+  transform: rotate(-90deg);
+}
+.move_stl2 .tree_wrap .tree_list li .tree_arrow::before {
+  content: none;
+}
+.move_stl2 .tree_wrap .tree_list li .tree_arrow.open {
+  background-color: #222222;
+  background-position: center;
+  transform: rotate(0deg);
+}
+.move_stl2 .tree_wrap .tree_list li a {
+  padding: 8px 8px 8px 0;
+}
+.move_stl2 .tree_wrap .tree_list ul {
+  padding-left: 20px;
+}
+.move_stl2 .tree_wrap .tree_list ul li ul li {
+  padding: 0;
 }
 
 /***************** 검색-상세정보 *****************/
@@ -3982,13 +4015,10 @@ input + .loader {
 .i-card_wrap + .content.tab_cont .tab_wrap {
   border-bottom: 1px solid #DDDDDD;
 }
-.i-card_wrap + .content.only {
-  margin: 20px 24px 20px !important;
+.i-card_wrap + .content .pcs_ctg_wrap {
+  margin-top: 8px;
 }
-.i-card_wrap + .content.only .pcs_ctg_wrap {
-  margin-top: 20px;
-}
-.i-card_wrap + .content.only .t_cont_in .list_btn, .i-card_wrap + .content.only .t_cont_in .tbl_list, .i-card_wrap + .content.only .t_cont_in .tbl_btm {
+.i-card_wrap + .content .t_cont_in .list_btn, .i-card_wrap + .content .t_cont_in .moved_box .tbl_list, .moved_box .i-card_wrap + .content .t_cont_in .tbl_list, .i-card_wrap + .content .t_cont_in .tbl_list, .i-card_wrap + .content .t_cont_in .tbl_btm {
   padding: 0 0 20px;
 }
 .i-card_wrap.grid {
@@ -5714,11 +5744,11 @@ input + .loader {
   display: inline-block;
   padding: 8px 0 0;
 }
-.form_stl .form_tbl li {
+.form_stl .form_tbl > li {
   display: flex;
   border-bottom: 1px solid #C9C9C9;
 }
-.form_stl .form_tbl li .form_tit {
+.form_stl .form_tbl > li .form_tit {
   border-bottom: 0;
   font-weight: 400;
 }
@@ -7746,4 +7776,14 @@ input + .loader {
 }
 #error_wrap.waiting_wrap .error_txt .txt2 {
   padding-top: 40px;
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+.tree_menu_wrap .search_wrap, .move_box .search_wrap {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
 }

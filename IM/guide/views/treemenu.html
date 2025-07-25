@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>menu</title>
+    <title>treemenu</title>
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,7 +60,7 @@
                                 <div class="tree_menu_tl">
                                     <ul class="tree_menu_inner">
                                         <li>
-                                            <a><i class="icon_tree folder_open"></i><span>Root</span></a>
+                                            <a><i class="icon_tree folder open"></i><span>Root</span></a>
                                             <!-- s: class명 추가 sub_tree_menu -->
                                             <ul class="sub_tree_menu">
                                                 <li>
@@ -108,7 +108,7 @@
 								<div class="tree_menu_tl">
 									<ul class="tree_menu_inner">
 										<li>
-											<a><i class="icon_tree folder_open"></i><span>Root</span></a>
+											<a><i class="icon_tree folder open"></i><span>Root</span></a>
 											<ul class="sub_tree_menu">
 												<li>
 													<a><i class="icon_tree folder"></i><span>최고관리자</span></a>
@@ -304,6 +304,103 @@
 						</div>
 					</div>
 
+					<p class="tit">화살표 tree</p>
+					<div class="move_stl2">
+						<div class="move_box">
+							<div class="scroll tree_wrap">
+								<ul class="tree_list">
+									<li>
+										<button type="button" class="tree_arrow"></button>
+										<a class="">Root</a>
+										<ul>
+											<li id="101">
+												<button type="button" class="tree_arrow open" style="display: none;"></button>
+												<a class="">이사회</a>
+												<ul></ul>
+											</li>
+											<li id="201">
+												<button type="button" class="tree_arrow open"></button>
+												<a class="" draggable="false">경영혁신총괄</a>
+												<ul>
+													<li id="202">
+														<button type="button" class="tree_arrow open"></button>
+														<a class="" draggable="false">경역혁신실</a>
+														<ul>
+															<li id="203">
+																<button type="button" class="tree_arrow open" style="display: none;"></button>
+																<a class="" draggable="false"> 재무관리팀</a>
+																<ul></ul>
+															</li>
+															<li id="204">
+																<button type="button" class="tree_arrow open" style="display: none;"></button>
+																<a class="" draggable="false">IPR팀</a>
+																<ul></ul>
+															</li>
+															<li id="205">
+																<button type="button" class="tree_arrow open" style="display: none;"></button>
+																<a class="" draggable="false">총무팀</a>
+																<ul></ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li id="301">
+												<button type="button" class="tree_arrow open" style="display: none;"></button>
+												<a class="">인사기획실</a>
+												<ul></ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<p class="tit">화살표 tree + check</p>
+					<div class="move_stl2">
+						<div class="move_box">
+							<ul class="moved_list scroll">
+								<li>
+									<button class="tree_arrow"></button>
+									<input type="checkbox" name="mapKey" id="mlist01" class="check_stl"><label for="mlist01" class="check_stl_lab2"><i></i>menu01</label>
+								</li>
+								<li>
+									<button class="tree_arrow"></button>
+									<input type="checkbox" name="" id="mlist02" class="check_stl"><label for="mlist02" class="check_stl_lab2"><i></i>menu02</label>
+								</li>
+								<li>
+									<button class="tree_arrow open"></button>
+									<input type="checkbox" name="" id="mlist03" class="check_stl"><label for="mlist03" class="check_stl_lab2"><i></i>menu03</label>
+									<ul>
+										<li>
+											<button class="tree_arrow open"></button>
+											<input type="checkbox" name="" id="mlist03_1" class="check_stl"><label for="mlist03_1" class="check_stl_lab2"><i></i>menu03_1</label>
+											<ul>
+												<li><input type="checkbox" name="" id="mlist03_1" class="check_stl"><label for="mlist03_1" class="check_stl_lab2"><i></i>menu03_1_1</label></li>
+												<li><input type="checkbox" name="" id="mlist03_1" class="check_stl"><label for="mlist03_1" class="check_stl_lab2"><i></i>menu03_1_2</label></li>
+												<li><input type="checkbox" name="" id="mlist03_1" class="check_stl"><label for="mlist03_1" class="check_stl_lab2"><i></i>menu03_1_3</label></li>
+											</ul>
+										</li>
+										<li><input type="checkbox" name="" id="mlist03_2" class="check_stl"><label for="mlist03_2" class="check_stl_lab2"><i></i>menu03_2</label></li>
+										<li><input type="checkbox" name="" id="mlist03_3" class="check_stl"><label for="mlist03_3" class="check_stl_lab2"><i></i>menu03_3</label></li>
+									</ul>
+								</li>
+								<li>
+									<button class="tree_arrow"></button>
+									<input type="checkbox" name="" id="mlist04" class="check_stl"><label for="mlist04" class="check_stl_lab2"><i></i>menu04</label>
+								</li>
+								<li>
+									<button class="tree_arrow"></button>
+									<input type="checkbox" name="" id="mlist05" class="check_stl"><label for="mlist05" class="check_stl_lab2"><i></i>menu05</label>
+								</li>
+								<li>
+									<button class="tree_arrow"></button>
+									<input type="checkbox" name="" id="mlist06" class="check_stl"><label for="mlist06" class="check_stl_lab2"><i></i>menu06</label>
+								</li>
+							</ul>
+						</div>
+					</div>
                 </section>
             </div>
             <!-- E: content -->

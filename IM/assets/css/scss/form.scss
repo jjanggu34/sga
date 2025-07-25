@@ -30,17 +30,12 @@ $borderTs: "search_wrap", "tab_wrap";
 }
 
 /* search */
-.search_wrap {
+.search_wrap { //[20250724] 수정
     padding:0;
     margin:0 24px 37px;
     border:$borderD;
     border-radius:20px;
     background:#F9F9F9;
-    &+ .tab_wrap.cont_in_tab {
-        margin-top:0;
-        border-radius:0;
-        background-color:$body;
-    }
 }
 .search_box {
     max-width:458px;

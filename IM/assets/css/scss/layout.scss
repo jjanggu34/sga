@@ -183,6 +183,7 @@ body {
     .tn_slt {
         padding-bottom:10px;
         .fm_tit {
+            height:45px;//[20250724] 추가
             border:1px solid $default;
             font-weight:$font-w-r;
             color:$title;
@@ -202,6 +203,10 @@ body {
         }
         .slt_list {
             top:42px;
+            &.tenant { //[20250724] 추가
+                left:0;
+                width:$wh100;
+            }
         }
     }
     .login_btmmsg {
@@ -256,10 +261,6 @@ body {
             }
         }
     }
-    .txtbtns_devide {
-        gap:4px;
-    }
-    
     /* 오른쪽 */
     .login_notice {
         padding:0;
@@ -300,6 +301,7 @@ body {
         gap:10px;
         .clientBtn {
             flex-direction:column;
+            height:auto; //[20250724] 추가
             margin-top:0;
             padding:12px 0 7px;
             font-size:$font16;
@@ -381,6 +383,26 @@ body {
     }
 }
 
+/***************** [20250724] 추가 버튼 *****************/
+#IMwrap {
+    .pledge_btns {
+        flex-direction:column;
+        gap:10px;
+    }
+    .txtbtns_devide {
+        flex-direction:row;
+        flex-wrap:wrap;
+        gap:4px;
+        button {
+            flex:1;
+            max-width:calc(33.333% - 10px);
+            min-width:115px;
+        }
+        .devide {
+            display:none;
+        }
+    }
+}
 /*---------------------------------------------
     #비밀번호 찾기 레이아웃
 ---------------------------------------------*/
@@ -746,10 +768,31 @@ body {
                         -webkit-mask-image:url("../img/nav/nav_workflow.svg");
                         mask-image:url("../img/nav/nav_workflow.svg");
                     }
+                    &.Home { //[20250724] 추가
+                        -webkit-mask-image:url("../img/nav/ico_home.svg");
+                        mask-image:url("../img/nav/ico_home.svg");
+                    }
+                    &.MyProfiles { //[20250724] 추가
+                        -webkit-mask-image:url("../img/nav/ico_my.svg");
+                        mask-image:url("../img/nav/ico_my.svg");
+                    }
+                    &.MyAuth { //[20250724] 추가
+                        -webkit-mask-image:url("../img/nav/ico_myauth.svg");
+                        mask-image:url("../img/nav/ico_myauth.svg");
+                    }
+                    &.MyApprove { //[20250724] 추가
+                        -webkit-mask-image:url("../img/nav/ico_approve_manage.svg");
+                        mask-image:url("../img/nav/ico_approve_manage.svg");
+                    }
+                    &.MyMessage { //[20250724] 추가
+                        -webkit-mask-image:url("../img/nav/ico_mail.svg");
+                        mask-image:url("../img/nav/ico_mail.svg");
+                    }
                 }
                 span {
                     font-size:$font13;
                     font-weight:$font-w-m;
+                    line-height:1.5;
                 }
             }
             ul {
@@ -1058,7 +1101,7 @@ body {
     content 안에 search 들어갈 때에는 padding 없음
 ---------------------------------------------*/
 #SGIM_wrap {
-    #container {
+    #container { //[20250724] 수정
         padding-left:0;
         margin-left:240px;
         background:$body;
@@ -1080,9 +1123,6 @@ body {
                 width:calc(($wh100 - 8px) / 2);
                 padding:20px 0;
                 margin-top:0;
-                &:last-child{
-                    padding-top:18px;
-                }
                 .tab_wrap {
                     &.cont_in_tab {
                         padding-top:0;
@@ -1091,7 +1131,10 @@ body {
             }
             .content {
                 // min-height:calc(100vh - 80px);//header + 위아래 margin
+                min-height:calc(100vh - 70px);
+                margin:0;
                 border:$borderC;
+                border-radius:3px;
                 .default_tbl tbody tr td {
                     border:0;
                     line-height:34px;
@@ -1099,25 +1142,46 @@ body {
             }
         }
         .content {
-            padding:0;
+            // padding:0;
             // margin:60px 0 20px;
             height:$wh100;
-            min-height:calc(100vh - 70px);//header + 위아래 margin
+            // min-height:calc(100vh - 70px);//header + 위아래 margin
             margin:84px 0 0 ;
-            border-top:0;
-            border-radius:3px;
+            // border-top:0;
+            // border-radius:3px;
             box-shadow:unset;
-            > div {
-                &:last-child:not(.list_btn, .sych_mnt_wrap) {
-                    padding-bottom:0;
-                }
-                &.list_btn {
-                    top:60px;
-                }
+
+            min-height:calc(100vh - 100px);
+            margin:80px 24px 20px;
+            padding:20px 24px;
+            border:$borderD;
+            border-radius:20px;
+            &:has(.sych_mnt_wrap) {
+                padding:20px;
             }
+            .tbl_list {
+                padding:0 0 20px;
+            }
+            // > div {
+            //     &:last-child:not(.list_btn, .sych_mnt_wrap) {
+            //         padding-bottom:0;
+            //     }
+            //     &.list_btn {
+            //         top:60px;
+            //     }
+            // }
             &:has(.search_wrap) {
+                min-height:calc(100vh - 70px);
                 margin:60px 0 0 ;
-                padding-top:30px;
+                padding:30px 0 0;
+                border:0;
+                border-radius:0;
+                .tbl_list {
+                    padding:0 24px;
+                    &+.tbl_btm {
+                        padding-top:20px;
+                    }
+                }
             }
             &.scroll {
                 height:$wh100;
@@ -1171,21 +1235,7 @@ body {
                     }
                 }
             }
-            &.only {
-                min-height:calc(100vh - 100px);
-                margin:80px 24px 20px;
-                padding:20px 24px;
-                border:$borderD;
-                border-radius:20px;
-                &:has(.sych_mnt_wrap) {
-                    padding:20px;
-                }
-                .tbl_list {
-                    padding:0 0 20px;
-                }
-            }
             &.ch_password_cont {
-                @extend .only;
                 min-height:auto;
                 &+.content {
                     margin-top:0;
@@ -1199,6 +1249,13 @@ body {
                 .form_tbl li:last-child .form_txt {
                     border-bottom:0;
                 }
+            }
+        }
+        .i-card_wrap {
+            &+.content:has(.search_wrap) {
+                padding:20px 24px;
+                border:$borderD;
+                border-radius:20px;
             }
         }
     }

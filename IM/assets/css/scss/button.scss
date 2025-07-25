@@ -30,11 +30,11 @@
 $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
 
 @each $btn in $btns {
-    #{$btn} {
-        padding:0 14px;
+    #{$btn} {//[20250724] 수정
+        height:30px;
+        padding:0 10px;
         border-radius:6px;
         font-size:$font13;
-        line-height:30px;
         &.big {
             height:38px;
             font-size:$font14;

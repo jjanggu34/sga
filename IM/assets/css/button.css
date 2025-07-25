@@ -69,10 +69,10 @@
 }
 
 .btn_box a {
-  padding: 0 14px;
+  height: 30px;
+  padding: 0 10px;
   border-radius: 6px;
   font-size: 13px;
-  line-height: 30px;
 }
 .btn_box a.big {
   height: 38px;
@@ -85,10 +85,10 @@
 }
 
 .btn_box button {
-  padding: 0 14px;
+  height: 30px;
+  padding: 0 10px;
   border-radius: 6px;
   font-size: 13px;
-  line-height: 30px;
 }
 .btn_box button.big {
   height: 38px;
@@ -101,10 +101,10 @@
 }
 
 .list_btn button {
-  padding: 0 14px;
+  height: 30px;
+  padding: 0 10px;
   border-radius: 6px;
   font-size: 13px;
-  line-height: 30px;
 }
 .list_btn button.big {
   height: 38px;
@@ -117,10 +117,10 @@
 }
 
 button {
-  padding: 0 14px;
+  height: 30px;
+  padding: 0 10px;
   border-radius: 6px;
   font-size: 13px;
-  line-height: 30px;
 }
 button.big {
   height: 38px;

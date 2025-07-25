@@ -90,6 +90,7 @@
                 }
             }
             td {
+                position:relative; //[20250725] 추가
                 padding:0 20px;
                 border:0;
                 @include title ($font13, $font-w-r, $content);
@@ -97,7 +98,7 @@
                 text-align:center;
                 text-overflow:ellipsis;
                 white-space:nowrap;
-                overflow:hidden;
+                // overflow:hidden; [20250724] 주석처리
                 div {
                     color:$content;
                 }
@@ -458,8 +459,8 @@
 }
 
 .move_tbl {
-    height:$wh100;
-    max-height:370px;//10개 기준
+    height:390px;//[20250725] 수정
+    max-height:390px;//[20250725] 수정
     margin-top:7px;
     border:0;
     border-top:$borderC;
@@ -473,6 +474,9 @@
             line-height:unset;
         }
     }
+    &.pg_m_tbl { //[20250725] 추가
+        padding-bottom:0;
+    }
 }
 
 /* dash_box > table */
@@ -482,4 +486,38 @@
             line-height:35px;
         }
     }
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+//[20250725]
+[data-tooltip] {
+    &:before {
+        margin:0;
+        padding:0;
+    }
+    &:not([data-tooltip=""]):hover:before {
+        top:40px;
+        left:40px;
+        padding:5px;
+    }
+}
+tbody {
+    [data-tooltip] {
+        &:not([data-tooltip=""]):hover:before {
+            top:30px;
+            left:60px;
+        }
+    }
+}
+
+.default_tbl tbody {
+    &tr,&td {
+        position:relative;
+    }
+}
+
+.move_tbl thead tr.nodt th {
+    border-top:1px solid $list-border;
 }

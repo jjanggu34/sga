@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
   <defs>
     <clipPath id="clip-path">
-      <rect id="사각형_111" data-name="사각형 111" width="24" height="24" transform="translate(0 0)" fill="none" stroke="#707070" stroke-width="1.5"/>
+      <rect id="mask" width="24" height="24" transform="translate(-8 -7.5)" fill="#b621ff" opacity="0.62"/>
     </clipPath>
   </defs>
-  <g id="nav_role" transform="translate(0 0)" clip-path="url(#clip-path)">
-    <g id="그룹_872" data-name="그룹 872" transform="translate(0.5 1.5)">
-      <path id="패스_134" data-name="패스 134" d="M13.308,5.8a4.3,4.3,0,1,1-4.3-4.3A4.3,4.3,0,0,1,13.308,5.8Z" transform="translate(-2.704 -1.5)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-      <path id="패스_135" data-name="패스 135" d="M14.116,24.374a3.879,3.879,0,0,0-3.879-3.88H5.379A3.879,3.879,0,0,0,1.5,24.374v6.359H14.116Z" transform="translate(-1.5 -8.61)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-      <path id="패스_136" data-name="패스 136" d="M33.253,6.857h-3.6V22.277h3.6" transform="translate(-12.039 -3.505)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-      <line id="선_92" data-name="선 92" x2="3.598" transform="translate(17.615 11.062)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <g id="ico_rl_ctrl" transform="translate(7.5 16) rotate(-90)" clip-path="url(#clip-path)">
+    <g id="img" transform="translate(14.537 -6.013) rotate(90)">
+      <path id="pass03" d="M13.1,5.689A4.19,4.19,0,1,1,8.9,1.5,4.19,4.19,0,0,1,13.1,5.689Z" transform="translate(-2.754 -1.5)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="pass02" d="M13.8,24.278a3.783,3.783,0,0,0-3.783-3.784H5.283A3.783,3.783,0,0,0,1.5,24.278v6.2H13.8Z" transform="translate(-1.5 -8.905)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="pass01" d="M33.164,6.857H29.655V21.895h3.509" transform="translate(-12.476 -3.588)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="line" x2="3.509" transform="translate(17.178 10.787)" fill="none" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     </g>
   </g>
 </svg>
