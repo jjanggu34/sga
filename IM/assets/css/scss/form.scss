@@ -16,7 +16,7 @@ $borderTs: "search_wrap", "tab_wrap";
     border-radius:6px;
     font-size:$font13;
     color:$title;
-    &:disabled, &.diss { //[20250723] 수정
+    &:disabled, &.diss, &[readonly] { //[20250723] 수정
         background-color:$btn-disabled;
         border:$borderD;
         color:$text-disabled;
@@ -513,8 +513,8 @@ select{
     tg_sch_stl = 기본 사이즈 토글
     tg_sch_stl_s = content 안 토글
 ---------------------------------------------*/
-.tg_sch_stl {
-    .tg_sch{
+.tg_sch_stl,.tg_sch_stl[data-v-bf9a7256] {//[20250730] 추가
+    .tg_sch,.tg_sch[data-v-bf9a7256]{
         &:checked {
             &+ label {
                 &::before {
@@ -525,7 +525,7 @@ select{
                 }
             }
         }
-        &+ label {
+        &+ label,label[data-v-bf9a7256] {//[20250730] 추가
             &::before {
                 @include wh(53px,28px);
                 background-color:$btn-disabled;
@@ -632,14 +632,23 @@ select{
 ---------------------------------------------*/
 // [20250723] 추가
 /* disabled 안 되어있는 input */
+.list_btn {
+    .multiselect__tags {
+        padding-top:0;
+    }
+}
 .multiselect__tags {
     border:$borderD;
     border-radius:6px;
 }
-.multiselect__single {
-    height:30px;
+.multiselect__input { //[20250731] 추가
     margin-bottom:0;
-    padding-top:0;
+    padding:0;
+    line-height:18px;
+}
+.multiselect__single {//[20250730] 수정
+    margin-bottom:0;
+    padding-top:7px;
 }
 .multiselect--disabled {
     .multiselect__tags {
@@ -649,6 +658,11 @@ select{
     .multiselect__single {
         color:$text-disabled;
         background-color:$btn-disabled;
+    }
+}
+.multiselect__select { //[20250730] 추가
+    &::before {
+        top:56%;
     }
 }
 
@@ -661,7 +675,7 @@ select{
     border:$borderD;
 }
 .multiselect__option {
-    padding:0 10px;
+    padding:8px 10px;//[20250730] 수정
 }
 .multiselect__option--selected {
     background:#DAFAF5 !important;

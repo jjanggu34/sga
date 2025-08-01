@@ -40,8 +40,8 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
     color:$text-disabled !important;
 }
 
-.bluetxt {
-    line-height:1.9;
+.bluetxt {//[20250730] 수정
+    color:$blue !important;
     .mandatxt {
         @extend %tag-base;
         border:0;
@@ -170,7 +170,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 }
 
 // row
-.scroll_r {
+.scroll_r,div {
     @extend .scrollbar-common;
     &::-webkit-scrollbar {
         height: 5px;
@@ -740,6 +740,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /* 나누는 선 */
 .divide {
     height:10px;
+    margin:0 8px 0 4px;//[20250729] 추가
     background-color:$border-d;
 }
 
@@ -842,7 +843,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     //form title
-    p {
+    p, div { //[20250729] div 추가
         &.fm_tit {
             margin-top:20px;
             padding:10px 0 10px 6px;
@@ -1159,6 +1160,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     padding:16px 24px;
     border-bottom:0;
     .tab_list {
+        flex-wrap:wrap;//[20250729] 추가
+        gap:10px 4px;//[20250729] 추가
         li {
             &+li {
                 margin-left:4px;
@@ -1268,12 +1271,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .tab_list {
             li {
                 a {
-                    padding:8px 12px;
+                    padding:8px;//[20250729] 변경
                     margin:0;
                     font-size:$font14;
                     color:$text-disabled;
                     &.on {
                         color:$white;
+                        .tab_stt{ //[20250729] 변경
+                            padding-top:1px;
+                            background-color:$info;
+                        }
                     }
                     .tab_stt {
                         @include wh (15px, 15px);
@@ -1281,10 +1288,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         font-size:$font10;
                         color:$white;
                         background-color:$text-disabled;
-                        &.new_org {
-                            padding-top:1px;
-                            background-color:$info;
-                        }
                     }
                 }
             }
@@ -1588,129 +1591,155 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
-.tree_wrap {
+.tree_wrap {//[20250731] 수정
     border:0;
     border-radius:0;
     .tree_list {
         padding:10px 0;
-        ul {
-            li {
-                ul {
-                    li {
-                        padding-left:20px;
-                        padding-bottom:6px;
-                    }
-                }
-                & > ul.sub_tree_menu {
-                    padding-left:10px;
-                }
-            }
-        }
         li {
-            a {
-                position:relative;
-                padding-left:32px;
-                line-height:16px;
-                color:$text-disabled;
-                font-weight:$font-w-r;
-                .icon_folder {
-                    @include topCenter ($left: 0);
-                    @include wh(24px, 24px);
-                    @include mask ($text-disabled);
-                    -webkit-mask-image:$icoFolder;
-                    mask-image:$icoFolder;
-                    background-image:none;
-                    &.open {
-                        background-color: $title;
-                        -webkit-mask-image:$icoFolderOpen;
-                        mask-image:$icoFolderOpen;
-                    }
-                }
-                &:has(.open) {
-                    color:$title;
-                }
-            }
             .tree_arrow {
+                display:inline-block;
+                @include wh(24px, 24px);
                 margin-top:0;
                 padding:0;
                 font-weight:$font-w-r;
-                background:none;
+                @include mask($text-disabled);
+                -webkit-mask-image:$icoAccordion2;
+                mask-image:$icoAccordion2;
+                background-image:none;
+                transform:rotate(-90deg);
                 &::before {
-                    content:"ㄴ";
-                    display:inline-block;
-                    @include wh (auto, auto);
-                    color:$border-d;
+                    content:none;
                 }
                 &.open {
-                    &::before {
-                        content:none;
-                    }
+                    background-color:$content;
+                    background-position:center;
+                    transform:rotate(0deg);
                 }
             }
-            .sub_tree_menu {
-                margin-top:4px;
-                li {
-                    padding-left:0;
-                    a {
-                        padding-left:50px;
-                        &::before {
-                            content:"ㄴ";
-                            @include topCenter ($left: 7px);
-                            display:inline-block;
-                            @include wh (auto, auto);
-                            color:$text-disabled;
-                        }
-                        &.selected {
-                            position:relative;
-                            border:0;
-                            border-radius:6px;
-                            color:$primary;
-                            background-color:#DAFAF5;
-                            &::before {
-                                color:$primary;
-                            }
-                            .icon_folder {
-                                left:20px;
-                                background-color:$primary;
-                            }
-                        }
-                    }
-                    
+            a {
+                position:relative;
+                line-height:16px;
+                color:$text-disabled;
+                font-weight:$font-w-r;
+                &.selected {
+                    border:0;
+                    color:$title;
+                    background-color:transparent;
                 }
             }
         }
     }
-    .tree_more_wrap {
-        top:0;
-        right:0;
-        .btn_tree_more {
-            @include mask ($text-disabled);
-            -webkit-mask-image:$icoKebab;
-            mask-image:$icoKebab;
-            background-image:none;
-        }
-        .tree_more_list {
-            right:9px;
-            width:110px;
-            margin-top:4px;
-            .tmlist {
-                padding:8px 5px;
-                border-radius:0;
-                @include title ($font12,$font-w-r,$content);
-                color:unset;
-                line-height:unset
-                ;
-                &:hover {
-                    position: relative;
-                    color:$primary;
-                    background-color:#DAFAF5;
-                    &::after {
-                        @include content(24px, 24px);
-                        @include topCenter ($right: 0);
+}
+
+.treeview { //[20250731] 수정
+    .tree_wrap {
+        .tree_list {
+            li {
+                a {
+                    padding-left:32px;
+                    .icon_folder {
+                        @include topCenter ($left: 0);
+                        @include wh(24px, 24px);
+                        @include mask ($text-disabled);
+                        -webkit-mask-image:$icoFolder;
+                        mask-image:$icoFolder;
+                        background-image:none;
+                        &.open {
+                            background-color: $title;
+                            -webkit-mask-image:$icoFolderOpen;
+                            mask-image:$icoFolderOpen;
+                        }
+                    }
+                    &:has(.open) {
+                        color:$title;
+                    }
+                }
+                .tree_arrow {
+                    background:none;
+                    &::before {
+                        content:"ㄴ";
                         display:inline-block;
-                        @include mask($primary);
-                        -webkit-mask-image:$icoCheckS;
-                        mask-image:$icoCheckS;
+                        @include wh (auto, auto);
+                        color:$border-d;
+                    }
+                    &.open {
+                        &::before {
+                            content:none;
+                        }
+                    }
+                }
+                .sub_tree_menu {
+                    margin-top:4px;
+                    li {
+                        padding-left:0;
+                        a {
+                            padding-left:50px;
+                            &::before {
+                                content:"ㄴ";
+                                @include topCenter ($left: 7px);
+                                display:inline-block;
+                                @include wh (auto, auto);
+                                color:$text-disabled;
+                            }
+                            &.selected {
+                                position:relative;
+                                border:0;
+                                border-radius:6px;
+                                color:$primary;
+                                background-color:#DAFAF5;
+                                &::before {
+                                    color:$primary;
+                                }
+                                .icon_folder {
+                                    left:20px;
+                                    background-color:$primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // &:has(.tree_arrow:not(.treeview .tree_arrow)) { //[20250731] 수정
+            //     li {
+            //         a {
+            //             padding-left:0;
+            //         }
+            //     }
+            // }
+        }
+        .tree_more_wrap {
+            top:0;
+            right:0;
+            .btn_tree_more {
+                @include mask ($text-disabled);
+                -webkit-mask-image:$icoKebab;
+                mask-image:$icoKebab;
+                background-image:none;
+            }
+            .tree_more_list {
+                right:9px;
+                width:110px;
+                margin-top:4px;
+                .tmlist {
+                    padding:8px 5px;
+                    border-radius:0;
+                    @include title ($font12,$font-w-r,$content);
+                    color:unset;
+                    line-height:unset
+                    ;
+                    &:hover {
+                        position: relative;
+                        color:$primary;
+                        background-color:#DAFAF5;
+                        &::after {
+                            @include content(24px, 24px);
+                            @include topCenter ($right: 0);
+                            display:inline-block;
+                            @include mask($primary);
+                            -webkit-mask-image:$icoCheckS;
+                            mask-image:$icoCheckS;
+                        }
                     }
                 }
             }
@@ -1723,24 +1752,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .tree_list {
             li {
                 padding-left:14px;
-                .tree_arrow {
-                    @include wh(30px, 30px);
-                    @include mask($text-disabled);
-                    -webkit-mask-size: 70%;
-                    mask-size: 70%;
-                    -webkit-mask-image:$icoAccordion2;
-                    mask-image:$icoAccordion2;
-                    background-image:none;
-                    transform:rotate(-90deg);
-                    &::before {
-                        content:none;
-                    }
-                    &.open {
-                        background-color:$title;
-                        background-position:center;
-                        transform:rotate(0deg);
-                    }
-                }
                 a {
                     padding:8px 8px 8px 0;
                 }
@@ -1766,7 +1777,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .detail_search_btn {
         top:-63px;
         left:49%;
-        @include wh (auto, 36px);
+        @include wh (97px, 36px);//[20250730] 수정
         margin-left:140px;
         padding:10px 28px 10px 15px;
         border:$borderD;
@@ -1991,9 +2002,10 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .aply_box_wrap {
-    padding:16px 0 0;
+    padding:16px 0;//[20250728] 변경
     border-radius:0;
     background-color:transparent;
+    overflow:auto;//[20250728] 추가
     .apply_card {
         display:grid;
         grid-auto-flow: column;
@@ -3089,8 +3101,6 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
 .minitbl_scr {
     .minitbl {
         thead {
-            position:sticky;
-            top:0;
             box-shadow:inset 0 1px 0 $list-border, inset 0 -1px 0 $title;
         }
     }
@@ -3566,8 +3576,12 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             border:0;
             border-radius:0;
         }
-        .moved_tit {
+        .moved_tit {//[20250731] 수정
             flex-wrap: wrap;
+            padding:0;
+            border:0;
+            border-radius:0;
+            background-color:transparent;
             .treem_btn_lyt {
                 justify-content:flex-end;
                 width:$wh100;
@@ -3682,7 +3696,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     }
 }
 
-/* move data */
+/* move data */z
 .moved_tit {
     padding:0 0 14px;
     border:0;
@@ -3840,19 +3854,22 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         .tab_wrap.cont_in_tab {
             padding:0 0 16px;
         }
-        .search_wrap {
+        .search_wrap { //[20250729] 수정
             margin:0 0 20px;
             border-radius:6px;
             &+.list_btn {
                 padding:0 0 22px;
                 border-top:0;
             }
+            &+.tab_wrap {
+                padding:16px 0;
+                &+.list_btn {
+                    padding:4px 0 20px;
+                }
+            }
         }
-        .tbl_btm {
-            padding:10px 20px 20px;
-        }
-        .list_btn {
-            padding:0;
+        .list_btn {//[20250731] 추가
+            padding:0 0 20px;
         }
     }
 }
@@ -3914,16 +3931,16 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             }
         }
         .tree_arrow {
-            @include wh(30px, 30px);
+            @include wh(24px, 24px);
             @include mask($text-disabled);
-            -webkit-mask-size: 70%;
-            mask-size: 70%;
+            -webkit-mask-size: 100%;
+            mask-size:100%;
             -webkit-mask-image:$icoAccordion2;
             mask-image:$icoAccordion2;
             background-image:none;
             transform:rotate(-90deg);
             &.open {
-                background-color:$title;
+                background-color:$content;
                 background-position:center;
                 transform:rotate(0deg);
             }
@@ -4130,6 +4147,9 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         font-weight:$font-w-m;
         text-align:right;
     }
+    .tab_wrap {//[20250730] 추가
+        padding:0 0 10px;
+    }
     .mod_cont_df { //기본 타이틀
         padding:7px 0 0;
         .bul_dot {
@@ -4303,7 +4323,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         &.data_sml {
             .data_txt_stl {
                 flex-wrap:nowrap;
-                width:calc(33.333% - 7px);
+                // [20250730] width:calc(33.333% - 7px);
                 height:auto;
                 dt {
                     line-height:18px;
@@ -4410,28 +4430,37 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     }
 }
 
-/* dash_contrl */
-.dash_contrl {
+/* dash_contrl */ //[20250730] 수정
+.dash_contrl,.dash_contrl[data-v-59b75fba] {
     top:60px;
     right:-336px;
     height:calc($wh100 - 60px);
-    .btn_dbcontrl {
+    .btn_dbcontrl,.btn_dbcontrl[data-v-bf9a7256] {
         left:-35px;
         @include wh (35px,35px);
         background:url("../img/common/ico_dbcontrl.svg")no-repeat center $basic;
     }
-    .contrl_wrap {
+    .contrl_wrap,.contrl_wrap[data-v-bf9a7256] { //[20250730] 추가
         width:335px;
         height:$wh100;
         padding:23px 20px 0;
     }
 }
-.contrl_cont {
+.contrl_cont,.contrl_cont[data-v-bf9a7256] {
     padding:10px 0;
-    .contrl_list {
+    .contrl_list,.contrl_list[data-v-bf9a7256] {
+        height:$wh100;
+        max-height:620px;
         margin-bottom:10px;
+        padding-right:10px;
         border-bottom:$borderD;
-        li {
+        overflow-y:auto;
+        @extend .scrollbar-common;
+        scrollbar-width:inherit;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        li, .contrl_list li[data-v-bf9a7256] {
             padding:10px 0;
         }
     }
@@ -4439,12 +4468,12 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         text-align:right;
     }
 }
-.contrl_tit {
+.contrl_tit,.contrl_tit[data-v-bf9a7256] {
     padding:10px 7px;
-    &>p {
+    &>p, p[data-v-bf9a7256] {
         @include title ($font18, $font-w-b, $title);
     }
-    .icon_reset {
+    .icon_reset, button[data-v-bf9a7256] {
         position:absolute;
         bottom:3px;
         right:0;
@@ -5129,6 +5158,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             display:flex;
             border-bottom:$borderC;
             .form_tit {
+                position:relative; //[20250801] 추가
                 border-bottom:0;
                 font-weight:$font-w-r;
             }
@@ -5188,7 +5218,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     }
 }
 .tbl_btm {
-    padding:0 24px 20px;
+    padding:20px 24px;//[20250730] 수정
 }
 
 /***************** action_tree *****************/
@@ -6075,7 +6105,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         margin:0;
         padding:22px 17px;
         border-radius:20px;
-        &>.flx {
+        &>.clickPointer { //[20250728] 기존 클래스명으로 변경
             flex-direction:column;
             width:calc($wh100 - 63px);
             &.h_i_type {
@@ -7150,4 +7180,10 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         border-radius:0;
         background:none;
     }
+}
+
+//[20250729]
+.mtit_info_txt {
+    margin:0 4px 0 0;
+    line-height:30px;
 }

@@ -50,9 +50,6 @@
 /*---------------------------------------------
     #기본 테이블
 ---------------------------------------------*/
-.tbl_list {
-  padding: 0 24px 20px;
-}
 .tbl_list:has(.tblStl3) {
   border-top: 1px solid #222222;
   padding: 0 0 20px;
@@ -304,8 +301,8 @@
 }
 .default_tbl .sort_column .ascanding .asc_num {
   position: absolute;
-  top: -16px;
-  right: -10px;
+  top: -11px;
+  right: -14px;
   width: 17px;
   height: 17px;
   border-radius: 30px;
@@ -500,4 +497,7 @@ tbody [data-tooltip]:not([data-tooltip=""]):hover:before {
 
 .move_tbl thead tr.nodt th {
   border-top: 1px solid #C9C9C9;
+}
+.move_tbl thead th {
+  position: unset;
 }

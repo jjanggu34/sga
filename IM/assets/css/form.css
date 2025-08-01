@@ -39,7 +39,7 @@
   font-size: 13px;
   color: #222222;
 }
-.form_contrl:disabled, .form_contrl.diss {
+.form_contrl:disabled, .form_contrl.diss, .form_contrl[readonly] {
   background-color: #EEEEEE;
   border: 1px solid #DDDDDD;
   color: #999999;
@@ -561,35 +561,35 @@ select.form_contrl {
     tg_sch_stl = 기본 사이즈 토글
     tg_sch_stl_s = content 안 토글
 ---------------------------------------------*/
-.tg_sch_stl .tg_sch:checked + label::before {
+.tg_sch_stl .tg_sch:checked + label::before, .tg_sch_stl .tg_sch[data-v-bf9a7256]:checked + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch:checked + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256]:checked + label::before {
   background-color: #27AD98;
 }
-.tg_sch_stl .tg_sch:checked + label::after {
+.tg_sch_stl .tg_sch:checked + label::after, .tg_sch_stl .tg_sch[data-v-bf9a7256]:checked + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch:checked + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256]:checked + label::after {
   left: 8px;
 }
-.tg_sch_stl .tg_sch + label::before {
+.tg_sch_stl .tg_sch + label::before, .tg_sch_stl .tg_sch label[data-v-bf9a7256]::before, .tg_sch_stl .tg_sch[data-v-bf9a7256] + label::before, .tg_sch_stl .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch label[data-v-bf9a7256]::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::before {
   width: 53px;
   height: 28px;
   background-color: #EEEEEE;
 }
-.tg_sch_stl .tg_sch + label::after {
+.tg_sch_stl .tg_sch + label::after, .tg_sch_stl .tg_sch label[data-v-bf9a7256]::after, .tg_sch_stl .tg_sch[data-v-bf9a7256] + label::after, .tg_sch_stl .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch label[data-v-bf9a7256]::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::after {
   left: 3px;
   bottom: 2px;
   width: 24px;
   height: 24px;
 }
-.tg_sch_stl.mini .tg_sch:checked + label::before {
+.tg_sch_stl.mini .tg_sch:checked + label::before, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch:checked + label::before {
   background-color: #27AD98;
 }
-.tg_sch_stl.mini .tg_sch:checked + label::after {
+.tg_sch_stl.mini .tg_sch:checked + label::after, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch:checked + label::after {
   left: 8px;
 }
-.tg_sch_stl.mini .tg_sch + label::before {
+.tg_sch_stl.mini .tg_sch + label::before, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch + label::before {
   width: 40px;
   height: 18px;
   background-color: #EEEEEE;
 }
-.tg_sch_stl.mini .tg_sch + label::after {
+.tg_sch_stl.mini .tg_sch + label::after, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch + label::after {
   left: 3px;
   bottom: 2px;
   width: 14px;
@@ -659,15 +659,24 @@ select.form_contrl {
 	#개발 디자인 입힌 후 추가 작업
 ---------------------------------------------*/
 /* disabled 안 되어있는 input */
+.list_btn .multiselect__tags {
+  padding-top: 0;
+}
+
 .multiselect__tags {
   border: 1px solid #DDDDDD;
   border-radius: 6px;
 }
 
-.multiselect__single {
-  height: 30px;
+.multiselect__input {
   margin-bottom: 0;
-  padding-top: 0;
+  padding: 0;
+  line-height: 18px;
+}
+
+.multiselect__single {
+  margin-bottom: 0;
+  padding-top: 7px;
 }
 
 .multiselect--disabled .multiselect__tags {
@@ -677,6 +686,10 @@ select.form_contrl {
 .multiselect--disabled .multiselect__single {
   color: #999999;
   background-color: #EEEEEE;
+}
+
+.multiselect__select::before {
+  top: 56%;
 }
 
 .multiselect__select, .multiselect__tags {
@@ -689,7 +702,7 @@ select.form_contrl {
 }
 
 .multiselect__option {
-  padding: 0 10px;
+  padding: 8px 10px;
 }
 
 .multiselect__option--selected {

@@ -397,6 +397,7 @@ body {
             flex:1;
             max-width:calc(33.333% - 10px);
             min-width:115px;
+            margin:0;
         }
         .devide {
             display:none;
@@ -796,7 +797,7 @@ body {
                 }
             }
             ul {
-                margin:10px 0 0;
+                // [20250729] margin:10px 0 0;
                 border:0;
                 border-radius:11px;
                 background-color:transparent;
@@ -921,6 +922,20 @@ body {
                 display:inline-block;
                 padding-left:10px;
                 font-size:0;
+                &.btn_modetrans { //[20250730] 추가
+                    a {
+                        padding:0 8px 0 10px;
+                        background:$primary;
+                        box-shadow:none;
+                        i {
+                            @include wh(16px,16px);
+                            display:inline-block;
+                            @include mask ($white);
+                            -webkit-mask-image:$icoArrow;
+                            mask-image:$icoArrow;
+                        }
+                    }
+                }
                 &.timer{
                     position:relative;
                     padding-right:10px;
@@ -1132,6 +1147,7 @@ body {
             .content {
                 // min-height:calc(100vh - 80px);//header + 위아래 margin
                 min-height:calc(100vh - 70px);
+                height:auto;//[20250731] 추가
                 margin:0;
                 border:$borderC;
                 border-radius:3px;
@@ -1170,17 +1186,17 @@ body {
             //         top:60px;
             //     }
             // }
-            &:has(.search_wrap) {
+            &:has(.search_wrap:not(.pcs_ctg_wrap .search_wrap)){//[20250729] 수정
                 min-height:calc(100vh - 70px);
                 margin:60px 0 0 ;
                 padding:30px 0 0;
                 border:0;
                 border-radius:0;
-                .tbl_list {
+                .tbl_list:not(.move_wrap .tbl_list) {
                     padding:0 24px;
-                    &+.tbl_btm {
-                        padding-top:20px;
-                    }
+                }
+                .tbl_btm { //[20250731] 수정
+                    padding-top:20px;
                 }
             }
             &.scroll {
@@ -1195,7 +1211,7 @@ body {
                     margin:0 20px;
                     overflow-x:auto;
                 }
-                .tbl_btm { //table 아래 pagination
+                .tbl_btm, .mini_paging { //table 아래 pagination
                     padding:10px 20px 20px;
                 }
             }
@@ -1259,14 +1275,11 @@ body {
             }
         }
     }
-    // &.show_nav {
-
-    // }
 }
 
 #ONSD_wrap {
     .content {
-        padding:30px 0 0;
+        padding:30px 24px 0;//[20250729] 변경
         .con_tit {
             padding-left: 24px;
         }

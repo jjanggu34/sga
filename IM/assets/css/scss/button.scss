@@ -4,15 +4,18 @@
 	#상단 버튼
     #tit_in_btn: absolute
 ---------------------------------------------*/
-// .list_btn_stk {
-//     position:unset;
-// }
 .list_btn {
     position:unset;
     padding:20px 24px;
     .opttxt {
         font-weight:$font-w-r;
         color:$title;
+    }
+    &.list_btn_stk {//[20250731] 추가
+        &.btnarea {
+            padding:20px 24px;
+            border-bottom:0;
+        }
     }
 }
 .btn_box {
@@ -33,6 +36,7 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     #{$btn} {//[20250724] 수정
         height:30px;
         padding:0 10px;
+        margin:0 4px 0 0;//[20250729] 추가
         border-radius:6px;
         font-size:$font13;
         &.big {
@@ -46,6 +50,12 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
         }
     }
 }
+
+.list_btn, .btn_box, .list_left_btn, .list_right_btn, .f_r, .f_l { //[20250729] 추가
+    font-size:0;
+}
+
+
 
 /*---------------------------------------------
 	#기본
@@ -130,6 +140,9 @@ $btns: ".btn_box a", ".btn_box button", ".list_btn button", "button";
     }
     &:hover {
         background-color:$btn-hover;
+    }
+    &:disabled { //[20250728] 추가
+        border:0;
     }
 }
 
@@ -280,6 +293,14 @@ button, a {
         &.mo_add {
             transform:scale(-1);
         }
+        &.n_text {
+            padding:0 2px;
+            font-size:0;
+            i {
+                margin-bottom:0;
+                mask-size:100%;
+            }
+        }
     }
     &.diss {//[20250723] 수정
         cursor:auto;
@@ -375,7 +396,7 @@ button {
             background-color:$text-disabled !important;
         }
         &:hover {
-            background-color:$btn-disabled;
+            background-color:$btn-disabled !important;//[20250730] 수정
             cursor:auto;
         }
     }
@@ -572,6 +593,15 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         }
     }
 }
+
+/* [20250801] 알럿창 버튼 */
+.dg-btn--ok {
+    .dg-btn-content {
+        span {
+            color:$white;
+        }
+    }
+}
 /*---------------------------------------------
 	#search button
 ---------------------------------------------*/
@@ -701,7 +731,10 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                     @extend .last;
                     transform:rotate(180deg);
                 }
-                &.diss {
+            }
+            .diss {
+                background-color:$btn-disabled;
+                &:hover {
                     background-color:$btn-disabled;
                 }
             }

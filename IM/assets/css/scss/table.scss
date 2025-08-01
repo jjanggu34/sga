@@ -4,7 +4,7 @@
     #기본 테이블
 ---------------------------------------------*/
 .tbl_list {
-    padding:0 24px 20px;
+    // [20250729] padding:0 24px 20px;
     &:has(.tblStl3) {
         border-top:1px solid $title;
         padding:0 0 20px;
@@ -277,8 +277,8 @@
         .ascanding {
             .asc_num {
                 position:absolute;
-                top:-16px;
-                right:-10px;
+                top:-11px;//[20250729] 수정
+                right:-14px;//[20250729] 수정
                 @include wh (17px,17px);
                 border-radius:30px;
                 font-size:$font12;
@@ -518,6 +518,11 @@ tbody {
     }
 }
 
-.move_tbl thead tr.nodt th {
-    border-top:1px solid $list-border;
+.move_tbl thead {//[20250731] 수정
+    tr.nodt th {
+        border-top:1px solid $list-border;
+    }
+    th {
+        position:unset;
+    }
 }
