@@ -674,9 +674,7 @@ select{
 .multiselect__content-wrapper {
     border:$borderD;
 }
-.multiselect__option {
-    padding:8px 10px;//[20250730] 수정
-}
+
 .multiselect__option--selected {
     background:#DAFAF5 !important;
     span {
@@ -691,10 +689,26 @@ select{
 }
 
 .multiselect--active:not(.multiselect--above) .multiselect__current, .multiselect--active:not(.multiselect--above) .multiselect__input, .multiselect--active:not(.multiselect--above) .multiselect__tags {
+    margin:0;//[20250801] 추가
     border-bottom:0;
 }
 
-.form_txt .multiselect, .form_txt .multiselect__option, .form_txt .multiselect__placeholder, .form_txt .multiselect__single, .form_txt .multiselect__input {
+.form_txt .multiselect, .form_txt .multiselect__input, .form_txt .multiselect__placeholder, .form_txt .multiselect__single {//[20250804] 수정
+    margin:0;
+    padding:0;
     font-size:$font13 !important;
     line-height:30px !important;
+}
+
+.multiselect__option, .multiselect__placeholder, .multiselect__single {//[20250801] 추가
+    line-height:30px;
+}
+
+.multiselect, .multiselect__input, .multiselect__option, .multiselect__placeholder, .multiselect__single {//[20250801] 추가
+    margin:0;
+    line-height:30px;
+}
+
+.multiselect__option {
+    padding:8px 10px;//[20250730] 수정
 }

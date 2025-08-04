@@ -701,10 +701,6 @@ select.form_contrl {
   border: 1px solid #DDDDDD;
 }
 
-.multiselect__option {
-  padding: 8px 10px;
-}
-
 .multiselect__option--selected {
   background: #DAFAF5 !important;
 }
@@ -720,10 +716,26 @@ select.form_contrl {
 }
 
 .multiselect--active:not(.multiselect--above) .multiselect__current, .multiselect--active:not(.multiselect--above) .multiselect__input, .multiselect--active:not(.multiselect--above) .multiselect__tags {
+  margin: 0;
   border-bottom: 0;
 }
 
-.form_txt .multiselect, .form_txt .multiselect__option, .form_txt .multiselect__placeholder, .form_txt .multiselect__single, .form_txt .multiselect__input {
+.form_txt .multiselect, .form_txt .multiselect__input, .form_txt .multiselect__placeholder, .form_txt .multiselect__single {
+  margin: 0;
+  padding: 0;
   font-size: 13px !important;
   line-height: 30px !important;
+}
+
+.multiselect__option, .multiselect__placeholder, .multiselect__single {
+  line-height: 30px;
+}
+
+.multiselect, .multiselect__input, .multiselect__option, .multiselect__placeholder, .multiselect__single {
+  margin: 0;
+  line-height: 30px;
+}
+
+.multiselect__option {
+  padding: 8px 10px;
 }

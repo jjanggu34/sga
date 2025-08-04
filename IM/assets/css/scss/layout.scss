@@ -1135,7 +1135,7 @@ body {
             padding:0;
             background:$body;
             .content:not(.cnt_lyt_sc .content) {
-                width:calc(($wh100 - 8px) / 2);
+                width:calc((84% - 8px) / 2);
                 padding:20px 0;
                 margin-top:0;
                 .tab_wrap {
@@ -1145,7 +1145,6 @@ body {
                 }
             }
             .content {
-                // min-height:calc(100vh - 80px);//header + 위아래 margin
                 min-height:calc(100vh - 70px);
                 height:auto;//[20250731] 추가
                 margin:0;
@@ -1155,16 +1154,14 @@ body {
                     border:0;
                     line-height:34px;
                 }
+                .btn_box {//[20250804] 추가
+                    padding:0 20px 10px;
+                }
             }
         }
         .content {
-            // padding:0;
-            // margin:60px 0 20px;
             height:$wh100;
-            // min-height:calc(100vh - 70px);//header + 위아래 margin
             margin:84px 0 0 ;
-            // border-top:0;
-            // border-radius:3px;
             box-shadow:unset;
 
             min-height:calc(100vh - 100px);
@@ -1178,14 +1175,6 @@ body {
             .tbl_list {
                 padding:0 0 20px;
             }
-            // > div {
-            //     &:last-child:not(.list_btn, .sych_mnt_wrap) {
-            //         padding-bottom:0;
-            //     }
-            //     &.list_btn {
-            //         top:60px;
-            //     }
-            // }
             &:has(.search_wrap:not(.pcs_ctg_wrap .search_wrap)){//[20250729] 수정
                 min-height:calc(100vh - 70px);
                 margin:60px 0 0 ;
@@ -1292,6 +1281,7 @@ body {
 /***************** side popup - detail_view *****************/
 .detail_view {
     top:60px;
+    width:40%;//[20250804] 추가
     height:calc($wh100 - 60px);
     padding:10px 20px 20px;
     border:1px solid $border-d;
@@ -1437,10 +1427,8 @@ body {
             }
         }
     }
-    .poptable {
-        .btn_box {
-            padding-top:30px;
-        }
+    .btn_box { //[20250804] 수정
+        padding-top:30px;
     }
     .test_result {
         &.loading {

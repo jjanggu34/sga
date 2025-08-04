@@ -3,9 +3,8 @@
 /***************** 공통 *****************/
 $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 @each $btnstl in $btnstls {
-    .#{$btnstl}.btnstl {
-        @include wh (76px, 26px);
-        padding:0;
+    .#{$btnstl}.btnstl { //[20250804] 수정
+        @include wh (auto, 26px);
         border:0;
         border-radius:14px;
         line-height:16px;
@@ -174,6 +173,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
     @extend .scrollbar-common;
     &::-webkit-scrollbar {
         height: 5px;
+        width:5px;//[20250804] 추가
     }
 }
 
@@ -781,6 +781,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         background-image:none;
     }
     &.redtxt {
+        line-height:1.5;//[20250804] 추가
         i {
             @include mask ($false);
             -webkit-mask-image:$icoInfo;
@@ -1312,7 +1313,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     gap:15px;
     padding-bottom:20px;
     .tree_menu_box {
-        flex:1;
+        // [20250801]flex:1;
         width:$wh100;
         max-width:240px;
         border:$borderD;
@@ -1320,7 +1321,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         border-radius:5px;
         .mini_search{ // tree_menu_box 안에 있을 때
             height:auto;
-            margin-bottom:10px;
+            margin-bottom:0;//[20250804] 수정
             .search_inputbox {
                 // height:28px;
                 border-radius:0;
@@ -1334,7 +1335,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 background-size:contain;
             }
             &+.tree_menu_tl {
-                padding-top:0;
+                padding-top:10px;//[20250804] 수정
                 border-top:0;
             }
         }
@@ -1380,6 +1381,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             line-height:2;//[20250724] 추가
         }
         &.on {
+            padding:0 5px;//[20250801] 추가
             background:#DAFAF5;
             span {
                 color:$primary;
@@ -1597,7 +1599,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     .tree_list {
         padding:10px 0;
         li {
-            .tree_arrow {
+            .tree_arrow { //[20250804] 수정
                 display:inline-block;
                 @include wh(24px, 24px);
                 margin-top:0;
@@ -1606,6 +1608,8 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 @include mask($text-disabled);
                 -webkit-mask-image:$icoAccordion2;
                 mask-image:$icoAccordion2;
+                -webkit-mask-size:80%;
+                mask-size:80%;
                 background-image:none;
                 transform:rotate(-90deg);
                 &::before {
@@ -3271,6 +3275,9 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 p {
                     padding-bottom:10px;
                     color:$secondary;
+                    overflow: unset;//[20250801] 추가
+                    text-overflow: unset;//[20250801] 추가
+                    white-space: normal;//[20250801] 추가
                     &:last-child {
                         padding-bottom:0;
                     }
@@ -3568,6 +3575,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     #move_box
 *********************************************************************/
 .move_wrap {
+    align-items:stretch;//[20250804] 추가
     padding-bottom:20px;
     &.treeview {
         margin:4px 24px 0;
@@ -3696,8 +3704,8 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     }
 }
 
-/* move data */z
-.moved_tit {
+/* move data */
+.moved_tit { //[20250804] 수정
     padding:0 0 14px;
     border:0;
     @include title ($font16, $font-w-b, $title);
@@ -4056,6 +4064,9 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
 }
 .monitoring_flx {
     gap:20px 10px;
+    &>div {//[20250801] 추가
+        gap:20px 10px;
+    }
 }
 .mod_stl {
     width:calc(($wh100 - 20px) / 3);
@@ -4067,7 +4078,9 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         padding:20px 20px 12px;
         border-bottom:$borderD;
         border-radius:0;
-        @include title ($font16, $font-w-b, $title);
+        span { //[20250801] 수정
+            @include title ($font16, $font-w-b, $title);
+        }
     }
 }
 
@@ -4223,6 +4236,10 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             .data_ico_lyt {
                 padding-bottom:0;
                 padding-right:107px;
+                .ico_wrap {//[20250804] 추가
+                    display:flex;
+                    align-items:center;
+                }
                 &:last-child {
                     padding-right:0;
                 }
@@ -5209,6 +5226,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     }
     &+.btn_box {
         margin-top:20px;
+        padding-top:0;//[20250804] 추가
     }
     .btn_columnadd {
         margin-top:9px;
@@ -6430,6 +6448,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                 @extend %positon_center;
                 display:inline-block;
                 @include icon(24px,24px);
+                background-image:url("../img/common/ico_HRsystem.svg");//[20250801] 추가
             }
             &.ActLog {
                 &::before {
@@ -7186,4 +7205,17 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
 .mtit_info_txt {
     margin:0 4px 0 0;
     line-height:30px;
+}
+
+//[20250801]
+.ico_wrap {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.guage_wrap {
+    display: flex;
+    padding-bottom: 30px;
 }

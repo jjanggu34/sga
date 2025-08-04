@@ -484,6 +484,7 @@
   top: 40px;
   left: 40px;
   padding: 5px;
+  white-space: normal;
 }
 
 tbody [data-tooltip]:not([data-tooltip=""]):hover:before {
