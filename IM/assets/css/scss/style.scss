@@ -169,7 +169,7 @@ $btnstls: "trcolor", "fcolor", "score_table .ngt_num", "score_table .pst_num";
 }
 
 // row
-.scroll_r,div {
+.scroll_r,div, .scrollx { //[20250805] ㄴscrollx 추가
     @extend .scrollbar-common;
     &::-webkit-scrollbar {
         height: 5px;
@@ -522,119 +522,108 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 
-.circleOff { //상태없음
-    color:$text-disabled !important;
-    .icon_list {
+// [20250807] 수정 icon_list, icon_pgs
+.icon_list {
+    &.none { //상태없음
+        color:$text-disabled !important;
         @include mask($text-disabled);
         -webkit-mask-image:url("../img/label/ico_circleOff.svg");
         mask-image:url("../img/label/ico_circleOff.svg");
+        background-position:unset;
     }
-}
-.plugConnected { //연결됨
-    color:$blue!important;
-    .icon_list {
+    &.sv_connect { //연결됨
+        color:$blue!important;
         @include mask(#1863BA);
         -webkit-mask-image:$icoPlugConnected;
         mask-image:$icoPlugConnected;
+        background-position:unset;
     }
-}
-.plugZapOff { //연결끊김
-    color:$false !important;
-    .icon_list {
+    &.sv_disconnect { //연결끊김
+        color:$false !important;
         @include mask($false);
         -webkit-mask-image:$icoPlugZapOff;
         mask-image:$icoPlugZapOff;
+        background-position:unset;
     }
-}
-.icheck { //생성
-    color:$blue!important;
-    .icon_list {
+    &.icheck { //생성
+        color:$blue!important;
         @include mask($blue);
         -webkit-mask-image:url("../img/label/ico_FilePlus.svg");
         mask-image:url("../img/label/ico_FilePlus.svg");
+        background-position:unset;
     }
-    .icon_pgs {
-        @include mask(#1863BA);
-        -webkit-mask-image:$iconPgs;
-        mask-image:$iconPgs;
-    }
-}
-.checkCircle { //정상
-    color:$true !important;
-    .icon_list {
+    &.checkCircle { //정상
+        color:$true !important;
         @include mask($true);
         -webkit-mask-image:url("../img/label/ico_checkCircle.svg");
         mask-image:url("../img/label/ico_checkCircle.svg");
+        background-position:unset;
     }
-}
-.shippingcart_edit { //수정작업중
-    color:$blue!important;
-    .icon_pgs {
-        @include mask(#1863BA);
-        -webkit-mask-image:$icoFileEdit;
-        mask-image:$icoFileEdit;
-    }
-}
-.progress_update,.progress_pending { //수정진행중, 작업보류중
-    color: $primary !important;
-    .icon_pgs {
-        @include mask($primary);
-        -webkit-mask-image:$iconPgs;
-        mask-image:$iconPgs;
-    }
-}
-.connection_compl { //수집완료
-    color:$blue!important;
-    .icon_list {
+    &.connection_compl { //수집완료
+        color:$blue!important;
         @include mask($blue);
         -webkit-mask-image:url("../img/label/ico_downloadCircle.svg");
         mask-image:url("../img/label/ico_downloadCircle.svg");
+        background-position:unset;
     }
-}
-.connection_error { //접속오류, 작업중 오류, 수집오류
-    color:$false !important;
-    .icon_list {
+    &.connection_error { //접속오류, 작업중 오류, 수집오류
+        color:$false !important;
         @include mask($false );
         -webkit-mask-image:url("../img/label/ico_PauseCircle.svg");
         mask-image:url("../img/label/ico_PauseCircle.svg");
+        background-position:unset;
     }
-}
-.idisabled { //삭제, 삭제됨
-    color:$false !important;
-    .icon_list, .icon_pgs {
+    &.idisabled { //삭제, 삭제됨
+        color:$false !important;
         @include mask($false);
         -webkit-mask-image:$icoTrash;
         mask-image:$icoTrash;
+        background-position:unset;
     }
-    .icon_pgs { //삭제진행중
-        @include mask($false);
-        -webkit-mask-image:$iconPgs;
-        mask-image:$iconPgs;
-    }
-}
-.bolt { //활성
-    color:$true !important;
-    .icon_list {
+    &.bolt { //활성화
+        color:$true !important;
         @include mask($true);
         -webkit-mask-image:$icoBolt;
         mask-image:$icoBolt;
+        background-position:unset;
     }
-}
-.Nbolt { //비활성
-    color:$text-disabled !important;
-    .icon_list {
+    &.disabled { //비활성
+        color:$text-disabled !important;
         @include mask($text-disabled );
         -webkit-mask-image:$icoBolt;
         mask-image:$icoBolt;
+        background-position:unset;
     }
-}
-.locked { //잠금
-    color:$text-disabled !important;
-    .icon_list {
+    &.locked { //잠금
+        color:$text-disabled !important;
         @include mask($text-disabled );
         -webkit-mask-image:$iconLocked;
         mask-image:$iconLocked;
+        background-position:unset;
     }
+}
+
+.icon_pgs {
+    @include icon(16px,16px);
+    border-radius:3px;
+    background-image:url("../img/label/icon_pgs.gif");
+    &.icheck { //생성
+        background-color:#1863BA;
+        background-position:unset;
+    }
+    &.inprogress_pending,&.progress_pending, &.shippingcart_edit  { //수정진행중, 작업보류중, 수정작업중
+        background-color:$primary;
+        background-position:unset;
+    }
+    &.progress_del { //삭제진행중
+        background-color:$false;
+        background-position:unset;
+    }
+    &.shippingcart_edit, &.inprogress_ing, &.progress_update {//수정작업중, 작업보류중
+        background-color:#F9AF1C;
+        background-position:unset;
+    }
+
 }
 
 .icon_ff {
@@ -949,7 +938,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 .noline {
     .form_tit {
         position:relative;
-        display:inline-block;
+        //[20250807] display:inline-block;
         width:$wh100;
         padding-left:10px;
     }
@@ -1030,7 +1019,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .detail_process {
-    background:$white;
+    background:$white !important;//[20250808]수정
     border-radius:7px;
     .flx_cell {
         padding:8px 0;
@@ -1221,9 +1210,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                         -webkit-mask-image:url("../img/common/ico_net.svg");
                         mask-image:url("../img/common/ico_net.svg");
                     }
-                    &.etc {
-                        -webkit-mask-image:$icoKebab;
-                        mask-image:$icoKebab;
+                    &.etc {//[20250805] 수정
+                        -webkit-mask-image:url("../img/nav/ico_etc.svg");
+                        mask-image:url("../img/nav/ico_etc.svg");
+                    }
+                    &.web {//[20250805] 추가
+                        -webkit-mask-image:url("../img/common/ico_Network.svg");
+                        mask-image:url("../img/common/ico_Network.svg");
                     }
                 }
                 &.on {
@@ -1336,6 +1329,16 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
             }
             &+.tree_menu_tl {
                 padding-top:10px;//[20250804] 수정
+                border-top:0;
+            }
+            &+.tab_wrap {//20250808] 추가
+                padding-top:10px;
+            }
+        }
+        .tab_wrap { //[20250805] 추가
+            margin:0 !important;
+            padding-bottom:10px;
+            &+.tree_menu_tl {
                 border-top:0;
             }
         }
@@ -2099,7 +2102,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
 }
 .workflow_wrap {
-    padding:20px 10px;
+    padding:20px 24px;//[20250808] 수정
     .s_e_w {
         .nav_circle {
             @include wh (62px, 62px);
@@ -2125,6 +2128,11 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 i {
                     margin-top:13px;
                 }
+            }
+        }
+        .diss {//[20250808] 추가
+            .nav_circle {
+                background-color:$btn-disabled;
             }
         }
     }
@@ -3159,13 +3167,16 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             }
         }
         /* server zone */
-        &.card_link {
-            padding:14px 18px 0 24px;
+        &.card_link { //[20250807] 수정
+            padding:14px 14px 0;
             &:hover {
                 border:1px solid $line-hover;
             }
+            &[disabled] {
+                opacity:0.7;
+            }
             .i-card_title {
-                padding:0 0 17px;
+                padding:0 0 5px;
                 @include title ($font14, $font-w-b, $content);
             }
             .add_btn {
@@ -3178,78 +3189,71 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             }
             .i-card_ct {
                 align-items:center;
-                padding-top:17px;
                 .server_icon {
+                    width:auto;
                     i {
+                        width:120px;
                         background-repeat:no-repeat;
                     }
                     &.local-network {
-                        margin-bottom:10px;
                         i {
                             background-image:url("../img/moni/local-network.png");
                             background-size:100%;
                         }
                     }
                     &.aws {
-                        margin-bottom:10px;
                         i {
                             background-image:url("../img/moni/amazon.png");
                             background-size:100%;
                         }
                     }
                     &.m-azure {
-                        margin-bottom:10px;
                         i {
                             background-image:url("../img/moni/microsoft-azure.png");
                             background-size:100%;
                         }
                     }
                     &.ex-network {
-                        margin-bottom:10px;
                         i {
                             background-image:url("../img/moni/external-network.png");
                             background-size:100%;
                         }
                     }
                     &.nhn {
-                        margin-bottom:10px;
                         i {
                             background-image:url("../img/moni/nhn.png");
                             background-size:100%;
                         }
                     }
                     &.ac-directory {
-                        margin-bottom:10px;
                         i {
                             background-image:url("../img/moni/active-directory.png");
                             background-size:100%;
                         }
                     }
                     &.oci {
-                        margin-bottom:10px;
                         i {
                             background-image:url("../img/moni/OCI.png");
                             background-size:100%;
                         }
                     }
                     &.custom {
-                        margin-bottom:10px;
                         i {
                             background-image:url("../img/moni/custom-discovery.png");
-                            background-size:55%;
+                            background-size:100%;
                         }
                     }
                 }
                 .num_t {
                     width:auto;
-                    @include title (24px , $font-w-e, $title);
+                    @include title (20px , $font-w-e, $title);
                 }
             }
         }
         /* synchronize_card */
-        &.system_tab {
+        &.system_tab { //[20250807] 수정
             width:calc(($wh100 - 170px) / 6);
-            padding:14px 22px;
+            padding:10px 14px;
             border:$borderC;
             &:hover {
                 border:1px solid $line-hover;
@@ -3268,16 +3272,12 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             }
             .i-card_title {
                 padding:0 0 10px;
-                @include title($font16,$font-w-b,$title);
+                @include title($font14,$font-w-b,$title);
             }
             .system_info {
                 padding:0;
                 p {
-                    padding-bottom:10px;
                     color:$secondary;
-                    overflow: unset;//[20250801] 추가
-                    text-overflow: unset;//[20250801] 추가
-                    white-space: normal;//[20250801] 추가
                     &:last-child {
                         padding-bottom:0;
                     }
@@ -3617,6 +3617,12 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         padding-top:20px;
         border:0;
     }
+    .moved_tit { //[20250806] 추가
+        margin-bottom:10px;
+        border:0;
+        border-bottom:1px solid $title;
+        background-color:unset;
+    }
 }
 
 .move_box {
@@ -3778,7 +3784,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                         left:50%;
                         transform:translateX(-50%);
                         background: url("../img/common/icon-nodata.svg") no-repeat;
-                        opacity: .3;
+                        opacity: .5;
                     }
                 }
             }
@@ -3793,6 +3799,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         border-radius:6px;
         .moved_tit {
             padding:10px 16px;
+            border:0;//[20250806] 추가
             border-bottom:1px solid $title;
             border-radius:6px 6px 0 0;
             font-size:$font13;
@@ -4080,6 +4087,9 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         border-radius:0;
         span { //[20250801] 수정
             @include title ($font16, $font-w-b, $title);
+        }
+        .btn_more {
+            background-size:16px;
         }
     }
 }
@@ -4452,6 +4462,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
     top:60px;
     right:-336px;
     height:calc($wh100 - 60px);
+    z-index:1;//[20250805] 추가
     .btn_dbcontrl,.btn_dbcontrl[data-v-bf9a7256] {
         left:-35px;
         @include wh (35px,35px);
@@ -4691,6 +4702,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
 }
 .main_server_dt {
     .main_server_dt_info {
+        gap:20px;//[20250804] 추가
         padding:0 0 18px;
         &:last-child {
             padding-bottom:0;
@@ -5776,6 +5788,34 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
 }
 
 /***************** 업무 *****************/
+.multiselect__tags-wrap { //[20250805] 추가
+    left:0;
+}
+.multiselect__tag { //[20250805] 추가
+    padding:4px 10px;
+    margin:0;
+    border-radius:3px;
+    line-height:normal;
+    background-color:$basic;
+    span {
+        font-size:$font12;
+        color:$white;
+        line-height:1.3;
+    }
+    .multiselect__tag-icon {
+        position:unset;
+        display:inline-block;
+        @include wh (14px,14px);
+        margin-left:6px;
+        font-weight:$font-w-m;
+        &:after {
+            font-size:$font14;
+            color:$white;
+            line-height:normal;
+        }
+    }
+}
+
 .task_wrap {
     margin-top:17px;
     padding:10px 13px;
@@ -5997,7 +6037,6 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
         }
         .tbl_list {
             padding:0;
-            margin-top:10px;
             .default_tbl {
                 border-color:$list-border;
                 thead tr th{
@@ -7038,37 +7077,6 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             }
         }
     }
-    .week_time_schedule {
-        margin:0;
-        border:0;
-        border-left:2px solid $primary;
-        background-color:#DAFAF5;
-        .time_txt {
-            padding:4px 7px;
-            font-weight:$font-w-m;
-            color:$primary;
-        }
-        .small_delbtn {
-            top:1px;
-            padding:0;
-            background-color:$primary;
-            -webkit-mask-image: url("../img/common/ico_cld_close.svg");
-            mask-image: url("../img/common/ico_cld_close.svg");
-        }
-    }
-    .week_time_schedule_col {
-        ul {
-            &>li {
-                border-bottom:$borderC;
-                &:last-child {
-                    border-bottom:0;
-                }
-                &.dashline {
-                    border-color:$border-d;
-                }
-            }
-        }
-    }
     .mini_popup {
         border-radius:12px;
         border:$borderD;
@@ -7085,6 +7093,38 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
             padding:10px 0 0;
             border-top:$borderD;
             text-align:right;
+        }
+    }
+}
+
+.week_time_schedule {
+    margin:0;
+    border:0;
+    border-left:2px solid $primary;
+    background-color:#DAFAF5;
+    .time_txt {
+        padding:4px 7px;
+        font-weight:$font-w-m;
+        color:$primary;
+    }
+    .small_delbtn {
+        top:1px;
+        padding:0;
+        background-color:$primary;
+        -webkit-mask-image: url("../img/common/ico_cld_close.svg");
+        mask-image: url("../img/common/ico_cld_close.svg");
+    }
+}
+.week_time_schedule_col {
+    ul {
+        &>li {
+            border-bottom:$borderC;
+            &:last-child {
+                border-bottom:0;
+            }
+            &.dashline {
+                border-color:$border-d;
+            }
         }
     }
 }

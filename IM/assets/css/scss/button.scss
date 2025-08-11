@@ -215,6 +215,19 @@ table {
             background-position:unset;
         }
     }
+    &.arrow { //[20250807] 추가
+        i {
+            @include wh (16px,16px);
+            @include mask($title);
+            -webkit-mask-image:$icoArrow;
+            mask-image:$icoArrow;
+        }
+        &.basic {
+            i {
+                background-color:$white;
+            }
+        }
+    }
 }
 button, a {
     color:$white;
@@ -379,7 +392,8 @@ button, a {
     }
     &.s_btn_more {
         height:28px;
-        padding:0 10px;
+        padding:0 20px 0 10px;//[20250808] 수정
+        background-size:16px;//[20250808] 추가
     }
     &:focus-visible, &:focus {
         outline-color:$title;
@@ -397,6 +411,7 @@ button {
         }
         &:hover {
             background-color:$btn-disabled !important;//[20250730] 수정
+            color:$text-disabled; //[20250807] 추가
             cursor:auto;
         }
     }
@@ -594,12 +609,22 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
     }
 }
 
-/* [20250801] 알럿창 버튼 */
-.dg-btn--ok {
-    .dg-btn-content {
-        span {
-            color:$white;
+/* [20250807] 알럿창 버튼 */
+.dg-btn {
+    &.dg-btn--ok {
+        background-color:$primary;
+        .dg-btn-content {
+            span {
+                color:$white;
+            }
         }
+    }
+    &.dg-btn--cancel {
+        border:$borderD;
+        border-radius:6px;
+        font-size:$font13;
+        color:$content;
+        background-color:$white;
     }
 }
 /*---------------------------------------------
@@ -754,7 +779,12 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                         color:$primary;
                     }
                 }
+                &.page_select { //[20250807] 추가
+                    position:absolute;
+                    right:0;
+                }
                 a {
+                    background-color:transparent;//[20250805] 추가
                     &.prev {
                         @extend .next;
                         transform:rotate(180deg);

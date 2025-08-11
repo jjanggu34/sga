@@ -187,7 +187,7 @@
   margin: 0;
   column-gap: 5px;
 }
-.filebox .file_btns button {
+.filebox .file_btns button:not(button.line) {
   display: inline-block;
   padding: 3px;
   width: 24px;
@@ -199,15 +199,25 @@
   background-size: 80%;
   background-position: center;
 }
-.filebox .file_btns button.file {
+.filebox .file_btns button:not(button.line).file {
   background-image: url("../img/common/btn-file.svg");
   background-color: unset;
 }
-.filebox .file_btns button.upload {
+.filebox .file_btns button:not(button.line).upload {
   border: 0;
   border-radius: 6px;
   background-image: url("../img/common/ico_upload.svg");
   background-color: #162866;
+}
+.filebox .file_btns button:not(button.line).line {
+  margin: 0 4px 0 0;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+  font-size: 13px;
+  background-color: #FFFFFF;
+}
+.filebox .file_btns button:not(button.line):last-child {
+  border-radius: 6px;
 }
 
 .file_output {
@@ -295,9 +305,6 @@
 }
 
 /* textarea, file_upload_wrap */
-.form_stl .form_contrl {
-  width: 100%;
-}
 .form_stl textarea.form_contrl {
   width: 100%;
 }
@@ -313,7 +320,7 @@
 
 /* check */
 .check_stl_lab {
-  color: #999999;
+  color: #454545;
 }
 .check_stl_lab:before {
   margin-top: 0;
@@ -322,7 +329,7 @@
 }
 
 .radio_stl_lab {
-  color: #999999;
+  color: #454545;
 }
 .radio_stl_lab:before {
   margin-top: 0;
@@ -331,7 +338,8 @@
 }
 
 .check_stl:checked + label {
-  color: #454545;
+  font-weight: 500;
+  color: #222222;
 }
 .check_stl:checked + label:before {
   border: 1px solid #27AD98;
@@ -342,7 +350,8 @@
 }
 
 .radio_stl:checked + label {
-  color: #454545;
+  font-weight: 500;
+  color: #222222;
 }
 .radio_stl:checked + label:before {
   border: 1px solid #27AD98;
@@ -411,7 +420,7 @@
   background-color: #999999;
 }
 .check_stl + label.check_stl_lab2 {
-  color: #999999;
+  color: #454545;
 }
 .check_stl + label.check_stl_lab2 i {
   width: 16px;
@@ -451,7 +460,8 @@
   mask-image: url("../img/common/ico_check_s.svg");
 }
 .check_stl:checked + label.check_stl_lab2 {
-  color: #454545;
+  font-weight: 500;
+  color: #222222;
 }
 .check_stl:checked + label.check_stl_lab2 i::before {
   width: 16px;
@@ -720,6 +730,10 @@ select.form_contrl {
   border-bottom: 0;
 }
 
+.multiselect--active .multiselect__select {
+  top: 65%;
+}
+
 .form_txt .multiselect, .form_txt .multiselect__input, .form_txt .multiselect__placeholder, .form_txt .multiselect__single {
   margin: 0;
   padding: 0;
@@ -727,15 +741,13 @@ select.form_contrl {
   line-height: 30px !important;
 }
 
-.multiselect__option, .multiselect__placeholder, .multiselect__single {
-  line-height: 30px;
-}
-
 .multiselect, .multiselect__input, .multiselect__option, .multiselect__placeholder, .multiselect__single {
   margin: 0;
+  padding: 0;
   line-height: 30px;
+  background-color: unset;
 }
 
 .multiselect__option {
-  padding: 8px 10px;
+  padding: 0 10px;
 }

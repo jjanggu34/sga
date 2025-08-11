@@ -316,6 +316,23 @@ table .btnstl {
   background-image: url("../img/common/ico_upload.svg");
   background-position: unset;
 }
+.btnstl.arrow i {
+  width: 16px;
+  height: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: #222222;
+  vertical-align: text-bottom;
+  -webkit-mask-image: url("../img/common/arrow.svg");
+  mask-image: url("../img/common/arrow.svg");
+}
+.btnstl.arrow.basic i {
+  background-color: #FFFFFF;
+}
 
 button, a {
   color: #FFFFFF;
@@ -532,7 +549,8 @@ button.text.icon_reset::before, a.text.icon_reset::before {
 }
 button.s_btn_more, a.s_btn_more {
   height: 28px;
-  padding: 0 10px;
+  padding: 0 20px 0 10px;
+  background-size: 16px;
 }
 button:focus-visible, button:focus, a:focus-visible, a:focus {
   outline-color: #222222;
@@ -549,6 +567,7 @@ button:disabled i {
 }
 button:disabled:hover {
   background-color: #EEEEEE !important;
+  color: #999999;
   cursor: auto;
 }
 
@@ -798,9 +817,19 @@ button:disabled:hover {
   background-color: #EEEEEE;
 }
 
-/* [20250801] 알럿창 버튼 */
-.dg-btn--ok .dg-btn-content span {
+/* [20250807] 알럿창 버튼 */
+.dg-btn.dg-btn--ok {
+  background-color: #27AD98;
+}
+.dg-btn.dg-btn--ok .dg-btn-content span {
   color: #FFFFFF;
+}
+.dg-btn.dg-btn--cancel {
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #454545;
+  background-color: #FFFFFF;
 }
 
 /*---------------------------------------------
@@ -993,6 +1022,13 @@ button:disabled:hover {
 }
 .pagination.mini_paging ul li.currentpage em {
   color: #27AD98;
+}
+.pagination.mini_paging ul li.page_select {
+  position: absolute;
+  right: 0;
+}
+.pagination.mini_paging ul li a {
+  background-color: transparent;
 }
 .pagination.mini_paging ul li a.prev {
   transform: rotate(180deg);

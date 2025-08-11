@@ -162,7 +162,7 @@ $borderTs: "search_wrap", "tab_wrap";
         @include topCenter ($right: 4px);
         margin:0;
         column-gap:5px;
-        button {
+        button:not(button.line) {//[20250804] 수정
             display:inline-block;
             padding:3px;
             @include icon(24px, 24px);
@@ -178,6 +178,16 @@ $borderTs: "search_wrap", "tab_wrap";
                 border-radius:6px;
                 background-image:url("../img/common/ico_upload.svg");
                 background-color:$basic;
+            }
+            &.line { //[20250804] 추가
+                margin:0 4px 0 0;
+                border:$borderD;
+                border-radius:6px;
+                font-size:$font13;
+                background-color:$white;
+            }
+            &:last-child { //[20250804] 추가
+                border-radius:6px;
             }
         }
     }
@@ -250,10 +260,7 @@ $borderTs: "search_wrap", "tab_wrap";
 }
 
 /* textarea, file_upload_wrap */
-.form_stl {
-    .form_contrl {
-        width:$wh100;
-    }
+.form_stl {//[20250806] 추가
     textarea {
         &.form_contrl {
             width:$wh100;
@@ -279,7 +286,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
 // default
 @each $label in $labels {
     .#{$label} {
-        color:$text-disabled;
+        color:$content;
         &:before {
             margin-top:0;
             margin-right:5px;
@@ -291,7 +298,8 @@ $labels: "check_stl_lab", "radio_stl_lab";
 @each $input in $inputs {
     // checked
     .#{$input}:checked + label {
-        color:$content;
+        font-weight:$font-w-m;
+        color:$title;
         &:before {
             border: $borderP;
         }
@@ -355,7 +363,7 @@ $labels: "check_stl_lab", "radio_stl_lab";
         }
     }
     & + label.check_stl_lab2 {
-        color:$text-disabled;
+        color:$content;
         i {
             @include wh (16px,16px);
             border:0;
@@ -386,7 +394,8 @@ $labels: "check_stl_lab", "radio_stl_lab";
         }
     }
     &:checked + label.check_stl_lab2 {
-        color:$content;
+        font-weight:$font-w-m;
+        color:$title;
         i {
             &::before {
                 @include wh(16px, 16px);
@@ -693,6 +702,12 @@ select{
     border-bottom:0;
 }
 
+.multiselect--active { //[20250806] 추가
+    .multiselect__select {
+        top:65%;
+    }
+}
+
 .form_txt .multiselect, .form_txt .multiselect__input, .form_txt .multiselect__placeholder, .form_txt .multiselect__single {//[20250804] 수정
     margin:0;
     padding:0;
@@ -700,15 +715,13 @@ select{
     line-height:30px !important;
 }
 
-.multiselect__option, .multiselect__placeholder, .multiselect__single {//[20250801] 추가
-    line-height:30px;
-}
-
 .multiselect, .multiselect__input, .multiselect__option, .multiselect__placeholder, .multiselect__single {//[20250801] 추가
     margin:0;
+    padding:0; //[20250807] 추가
     line-height:30px;
+    background-color:unset;//[20250808] 추가
 }
 
 .multiselect__option {
-    padding:8px 10px;//[20250730] 수정
+    padding:0 10px;//[20250730] 수정
 }

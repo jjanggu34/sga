@@ -55,9 +55,11 @@
     tbody {
         tr {
             border-bottom:$borderC;
-            // &:last-child {
-            //     border-bottom:0;
-            // }
+            &:hover {//[20250805] 추가
+                tbody {
+                    background-color:$white;
+                }
+            }
             th {
                 border:0;
                 @include title($font13,$font-w-r,$title);
@@ -106,13 +108,12 @@
                     padding:5px 10px;
                     line-height:unset;
                 }
-                &.nodata {
-                    position:relative;
-                    @include wh ($wh100, $wh100);
+                &.nodata { //[20250807] 수정
                     padding:60px 0 20px;
+                    @include wh ($wh100, $wh100);
                     line-height:normal;
                     color:$text-disabled;
-                    &::after {
+                    &::before {
                         display:inline-block;
                         @include content(35px, 35px);
                         position:absolute;
@@ -120,7 +121,7 @@
                         left:50%;
                         transform:translateX(-50%);
                         background: url("../img/common/icon-nodata.svg") no-repeat;
-                        opacity: .3;
+                        opacity: .5;
                     }
                 }
             }
@@ -129,6 +130,13 @@
     &.tblStl2 {
         border-top:0;
         tbody {
+            tr {//[20250808] 추가
+                &:first-child {
+                    td {
+                        border-top:0;
+                    }
+                }
+            }
             th{
                 background-color:#F0F0F0;
                 border-top:$borderC;
@@ -153,6 +161,23 @@
                 line-height:35px;
                 &:last-child {
                     border-right:0;
+                }
+                .default_tbl {//[20250808] 추가
+                    tr {
+                        border-bottom:0;
+                    }
+                    td {
+                        border-bottom:0;
+                        &:first-child {
+                            border-left:0;
+                            &:last-child {
+                                border-right:0;
+                            }
+                        }
+                        &:last-child {
+                            border-right:0;
+                        }
+                    }
                 }
             }
         }
@@ -372,6 +397,7 @@
 
 /* mini_tbl */
 .mini_tbl {
+    padding-bottom:40px;//[20250807] 추가
     border:0;
     border-bottom:$borderC;
     .default_tbl {
@@ -384,6 +410,7 @@
         }
     }
     .mini_paging {
+        margin-bottom:5px;//[20250807] 추가
         border-top:0;
     }
 }
@@ -525,5 +552,23 @@ tbody {
     }
     th {
         position:unset;
+    }
+}
+
+//[20250804]
+.slide_row {
+    .form_tbl {
+        li {
+            flex-wrap:wrap;
+        }
+        .form_txt {
+            padding:10px;
+            &>div {
+                padding:0 !important;
+            }
+            .form_txt_sub {
+                min-height:auto;
+            }
+        }
     }
 }
