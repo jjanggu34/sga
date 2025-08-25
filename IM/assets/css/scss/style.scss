@@ -770,6 +770,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         background-image:none;
     }
     &.redtxt {
+        font-size:$font14;//[20250811] 추가
         line-height:1.5;//[20250804] 추가
         i {
             @include mask ($false);
@@ -778,6 +779,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         }
     }
     &.bluetxt {
+        font-size:$font14;//[20250811] 추가
         line-height:unset;
         color:$true;
         i {
@@ -1153,9 +1155,6 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         flex-wrap:wrap;//[20250729] 추가
         gap:10px 4px;//[20250729] 추가
         li {
-            &+li {
-                margin-left:4px;
-            }
             a {
                 padding:7px 12px;
                 @include title ($font14, $font-w-m, $text-disabled);
@@ -1776,13 +1775,13 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
 /***************** 검색-상세정보 *****************/
 .detail_search_wrap {
     margin:0;
-    padding:25px;
+    padding:15px;//[20250812] 수정
     border:0;
     border-top:$borderD;
     background-color:transparent;
     box-shadow:none;
     .detail_search_btn {
-        top:-63px;
+        top:-58px;//[20250812] 수정
         left:49%;
         @include wh (97px, 36px);//[20250730] 수정
         margin-left:140px;
@@ -1813,6 +1812,9 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
                 }
             }
         }
+    }
+    .list_btn {//[20250812] 추가
+        padding:0;
     }
     dl {
         &.bul_dot {
@@ -1845,7 +1847,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
     }
     .box2 {
         min-height:unset;
-        padding:18px 3px 0 0;
+        padding:0;//[20250812] 수정
         margin:0;
         border:0;
         .btn_box {
@@ -2022,7 +2024,7 @@ $icons: "icon_list", "icon_pgs", "icon_ff";
         .dash_box {
             @include wh($wh100,auto);
             margin:0;
-            padding:17px 14px 18px 19px;
+            padding:17px 35px 18px 19px; //[20250820] 수정
             border-color:$list-border;
             background-color:$white;
             &.grbox { //시스템 그룹
@@ -3375,6 +3377,11 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                         background-image:url("../img/role/icon_osauth.svg");
                     }
                 }
+                &.resource_role {//[20250811] 추가
+                    i {
+                        background-image:url("../img/role/icon_resource_role.svg");
+                    }
+                }
                 &.etsauth {
                     i {
                         background-image:url("../img/role/icon_etsauth.svg");
@@ -3819,6 +3826,7 @@ $Dashs: "wk_form.leftbd", "leftbd", "tb_dt_link.hrzbd", "first.leftbd", "wk_gr_t
                     }
                     td {
                         color:$text-disabled;
+                        text-align:center;//[20250814] 추가
                         &.check_list {
                             padding:7px 10px;
                         }

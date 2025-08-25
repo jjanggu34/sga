@@ -148,7 +148,7 @@
 .default_tbl tbody tr td div {
   color: #454545;
 }
-.default_tbl tbody tr td:has(.form_contrl) {
+.default_tbl tbody tr td:has(.form_contrl, .multiselect) {
   padding: 5px 10px;
   line-height: unset;
 }
@@ -175,7 +175,7 @@
   border-top: 0;
 }
 .default_tbl.tblStl2 tbody tr:first-child td {
-  border-top: 0;
+  border-top: 1px solid #C9C9C9;
 }
 .default_tbl.tblStl2 tbody th {
   background-color: #F0F0F0;
@@ -498,23 +498,7 @@
 /*---------------------------------------------
 	#개발 디자인 입힌 후 추가 작업
 ---------------------------------------------*/
-[data-tooltip]:before {
-  margin: 0;
-  padding: 0;
-}
-[data-tooltip]:not([data-tooltip=""]):hover:before {
-  top: 40px;
-  left: 40px;
-  padding: 5px;
-  white-space: normal;
-}
-
-tbody [data-tooltip]:not([data-tooltip=""]):hover:before {
-  top: 30px;
-  left: 60px;
-}
-
-.default_tbl tbodytr, .default_tbl tbodytd {
+.default_tbl tbody tr, .default_tbl tbody td {
   position: relative;
 }
 
@@ -536,4 +520,12 @@ tbody [data-tooltip]:not([data-tooltip=""]):hover:before {
 }
 .slide_row .form_tbl .form_txt .form_txt_sub {
   min-height: auto;
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+.form_tbl.flx_frm_tbl .form_tit, .form_tbl.flx_frm_tbl .wid50.flx .form_tit {
+  max-width: 300px;
+  width: auto;
 }

@@ -1345,7 +1345,7 @@ body * {
 #SGIM_wrap #container .content:has(.search_wrap:not(.pcs_ctg_wrap .search_wrap)) {
   min-height: calc(100vh - 70px);
   margin: 60px 0 0;
-  padding: 30px 0 0;
+  padding: 20px 0 0;
   border: 0;
   border-radius: 0;
 }
@@ -1358,9 +1358,6 @@ body * {
 }
 #SGIM_wrap #container .content:has(.search_wrap:not(.pcs_ctg_wrap .search_wrap)) .topPrss:has(.flx_cell:only-child) .movbtn {
   display: none;
-}
-#SGIM_wrap #container .content:has(.search_wrap:not(.pcs_ctg_wrap .search_wrap)) .btn_box {
-  padding: 0 24px 10px;
 }
 #SGIM_wrap #container .content:has(.search_wrap:not(.pcs_ctg_wrap .search_wrap)) .btn_box.tit_in_btn {
   padding: 0;
@@ -1444,6 +1441,9 @@ body * {
   padding: 20px 24px;
   border: 1px solid #DDDDDD;
   border-radius: 20px;
+}
+#SGIM_wrap #container .i-card_wrap + .content:has(.search_wrap:not(.pcs_ctg_wrap .search_wrap)) {
+  margin-top: 0;
 }
 #SGIM_wrap #container .i-card_wrap + .content:has(.search_wrap:not(.pcs_ctg_wrap .search_wrap)) {
   margin-top: 0;

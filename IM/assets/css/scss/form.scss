@@ -32,7 +32,7 @@ $borderTs: "search_wrap", "tab_wrap";
 /* search */
 .search_wrap { //[20250724] 수정
     padding:0;
-    margin:0 24px 37px;
+    margin:0 24px 15px;//[20250812] 수정
     border:$borderD;
     border-radius:20px;
     background:#F9F9F9;
@@ -40,7 +40,7 @@ $borderTs: "search_wrap", "tab_wrap";
 .search_box {
     max-width:458px;
     height:48px;
-    margin:20px auto;
+    margin:15px auto;//[20250812] 수정
     border:0;
     .search_inputbox {
         @include wh ($wh100, 48px);
@@ -157,25 +157,29 @@ $borderTs: "search_wrap", "tab_wrap";
 
 /* 파일첨부 */
 .filebox { // input + 첨부파일 아이콘 + 업로드 아이콘
-    position:relative;
-    .file_btns {
-        @include topCenter ($right: 4px);
+    gap:5px;
+    .remove-file {//[20250814] 추가
+        color:$title;
+    }
+    .file_btns { //[20250814] 수정
         margin:0;
         column-gap:5px;
         button:not(button.line) {//[20250804] 수정
             display:inline-block;
             padding:3px;
-            @include icon(24px, 24px);
+            margin:0;
+            @include icon(30px,30px);
+            border:$borderD;
+            border-radius:6px;
             font-size:0;
-            background-size:80%;
+            background-size:70%;
             background-position:center;
+            background-color:unset;
             &.file {
                 background-image:url("../img/common/btn-file.svg");
-                background-color:unset;
             }
             &.upload{
                 border:0;
-                border-radius:6px;
                 background-image:url("../img/common/ico_upload.svg");
                 background-color:$basic;
             }
@@ -188,6 +192,15 @@ $borderTs: "search_wrap", "tab_wrap";
             }
             &:last-child { //[20250804] 추가
                 border-radius:6px;
+            }
+            &.del {//[20250811] 추가
+                background-image:$icoTrash;
+            }
+            &.icon_mymodify {
+                background-image:$icoFileEdit;
+            }
+            &.basic:hover {
+                background-color:unset;
             }
         }
     }
@@ -521,8 +534,9 @@ select{
 	#toggle
     tg_sch_stl = 기본 사이즈 토글
     tg_sch_stl_s = content 안 토글
+    .tg_sch_lab .tg_sch
 ---------------------------------------------*/
-.tg_sch_stl,.tg_sch_stl[data-v-bf9a7256] {//[20250730] 추가
+.tg_sch_stl, .tg_sch_stl, .tg_sch_stl[data-v-bf9a7256] {//[20250730] 추가
     .tg_sch,.tg_sch[data-v-bf9a7256]{
         &:checked {
             &+ label {
@@ -570,6 +584,16 @@ select{
                 }
             }
         }
+    }
+}
+
+.tg_sch_lab { //[20250814] 추가
+    gap:10px;
+    &::before {
+        background-color:$btn-disabled;
+    }
+    .tg_sch:checked+label:before {
+        background-color:$primary;
     }
 }
 
@@ -702,11 +726,11 @@ select{
     border-bottom:0;
 }
 
-.multiselect--active { //[20250806] 추가
-    .multiselect__select {
-        top:65%;
-    }
-}
+// .multiselect--active { //[20250806] 추가
+//     .multiselect__select {
+//         top:65%;
+//     }
+// }
 
 .form_txt .multiselect, .form_txt .multiselect__input, .form_txt .multiselect__placeholder, .form_txt .multiselect__single {//[20250804] 수정
     margin:0;

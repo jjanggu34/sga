@@ -879,6 +879,9 @@ button:disabled:hover {
 .search_box .btn_detail_search:hover {
   background-color: #138170;
 }
+.search_box .btn_detail_search:disabled {
+  color: #999999;
+}
 
 .btn_box .icon_reset, .list_right_btn .icon_reset {
   padding: 6px 12px 6px 6px;
@@ -1013,6 +1016,10 @@ button:disabled:hover {
   border-color: #27AD98 !important;
   background-color: #27AD98 !important;
 }
+.pagination.mini_paging {
+  position: relative;
+  padding-top: 20px;
+}
 .pagination.mini_paging ul {
   gap: 0;
 }
@@ -1081,4 +1088,11 @@ button:disabled:hover {
 }
 .pagination.mini_paging ul li a.diss span {
   background-color: #C9C9C9;
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+.file_btns button {
+  background-color: #FFFFFF;
 }

@@ -54,7 +54,7 @@
 /* search */
 .search_wrap {
   padding: 0;
-  margin: 0 24px 37px;
+  margin: 0 24px 15px;
   border: 1px solid #DDDDDD;
   border-radius: 20px;
   background: #F9F9F9;
@@ -63,7 +63,7 @@
 .search_box {
   max-width: 458px;
   height: 48px;
-  margin: 20px auto;
+  margin: 15px auto;
   border: 0;
 }
 .search_box .search_inputbox {
@@ -177,35 +177,36 @@
 
 /* 파일첨부 */
 .filebox {
-  position: relative;
+  gap: 5px;
+}
+.filebox .remove-file {
+  color: #222222;
 }
 .filebox .file_btns {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 4px;
   margin: 0;
   column-gap: 5px;
 }
 .filebox .file_btns button:not(button.line) {
   display: inline-block;
   padding: 3px;
-  width: 24px;
-  height: 24px;
+  margin: 0;
+  width: 30px;
+  height: 30px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: none;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
   font-size: 0;
-  background-size: 80%;
+  background-size: 70%;
   background-position: center;
+  background-color: unset;
 }
 .filebox .file_btns button:not(button.line).file {
   background-image: url("../img/common/btn-file.svg");
-  background-color: unset;
 }
 .filebox .file_btns button:not(button.line).upload {
   border: 0;
-  border-radius: 6px;
   background-image: url("../img/common/ico_upload.svg");
   background-color: #162866;
 }
@@ -218,6 +219,15 @@
 }
 .filebox .file_btns button:not(button.line):last-child {
   border-radius: 6px;
+}
+.filebox .file_btns button:not(button.line).del {
+  background-image: url("../img/label/ico_trash.svg");
+}
+.filebox .file_btns button:not(button.line).icon_mymodify {
+  background-image: url("../img/label/ico_FileEdit.svg");
+}
+.filebox .file_btns button:not(button.line).basic:hover {
+  background-color: unset;
 }
 
 .file_output {
@@ -570,40 +580,51 @@ select.form_contrl {
 	#toggle
     tg_sch_stl = 기본 사이즈 토글
     tg_sch_stl_s = content 안 토글
+    .tg_sch_lab .tg_sch
 ---------------------------------------------*/
-.tg_sch_stl .tg_sch:checked + label::before, .tg_sch_stl .tg_sch[data-v-bf9a7256]:checked + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch:checked + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256]:checked + label::before {
+.tg_sch_stl .tg_sch:checked + label::before, .tg_sch_stl .tg_sch[data-v-bf9a7256]:checked + label::before, .tg_sch_stl .tg_sch:checked + label::before, .tg_sch_stl .tg_sch[data-v-bf9a7256]:checked + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch:checked + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256]:checked + label::before {
   background-color: #27AD98;
 }
-.tg_sch_stl .tg_sch:checked + label::after, .tg_sch_stl .tg_sch[data-v-bf9a7256]:checked + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch:checked + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256]:checked + label::after {
+.tg_sch_stl .tg_sch:checked + label::after, .tg_sch_stl .tg_sch[data-v-bf9a7256]:checked + label::after, .tg_sch_stl .tg_sch:checked + label::after, .tg_sch_stl .tg_sch[data-v-bf9a7256]:checked + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch:checked + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256]:checked + label::after {
   left: 8px;
 }
-.tg_sch_stl .tg_sch + label::before, .tg_sch_stl .tg_sch label[data-v-bf9a7256]::before, .tg_sch_stl .tg_sch[data-v-bf9a7256] + label::before, .tg_sch_stl .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch label[data-v-bf9a7256]::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::before {
+.tg_sch_stl .tg_sch + label::before, .tg_sch_stl .tg_sch label[data-v-bf9a7256]::before, .tg_sch_stl .tg_sch[data-v-bf9a7256] + label::before, .tg_sch_stl .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::before, .tg_sch_stl .tg_sch + label::before, .tg_sch_stl .tg_sch label[data-v-bf9a7256]::before, .tg_sch_stl .tg_sch[data-v-bf9a7256] + label::before, .tg_sch_stl .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch label[data-v-bf9a7256]::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] + label::before, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::before {
   width: 53px;
   height: 28px;
   background-color: #EEEEEE;
 }
-.tg_sch_stl .tg_sch + label::after, .tg_sch_stl .tg_sch label[data-v-bf9a7256]::after, .tg_sch_stl .tg_sch[data-v-bf9a7256] + label::after, .tg_sch_stl .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch label[data-v-bf9a7256]::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::after {
+.tg_sch_stl .tg_sch + label::after, .tg_sch_stl .tg_sch label[data-v-bf9a7256]::after, .tg_sch_stl .tg_sch[data-v-bf9a7256] + label::after, .tg_sch_stl .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::after, .tg_sch_stl .tg_sch + label::after, .tg_sch_stl .tg_sch label[data-v-bf9a7256]::after, .tg_sch_stl .tg_sch[data-v-bf9a7256] + label::after, .tg_sch_stl .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch label[data-v-bf9a7256]::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] + label::after, .tg_sch_stl[data-v-bf9a7256] .tg_sch[data-v-bf9a7256] label[data-v-bf9a7256]::after {
   left: 3px;
   bottom: 2px;
   width: 24px;
   height: 24px;
 }
-.tg_sch_stl.mini .tg_sch:checked + label::before, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch:checked + label::before {
+.tg_sch_stl.mini .tg_sch:checked + label::before, .tg_sch_stl.mini .tg_sch:checked + label::before, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch:checked + label::before {
   background-color: #27AD98;
 }
-.tg_sch_stl.mini .tg_sch:checked + label::after, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch:checked + label::after {
+.tg_sch_stl.mini .tg_sch:checked + label::after, .tg_sch_stl.mini .tg_sch:checked + label::after, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch:checked + label::after {
   left: 8px;
 }
-.tg_sch_stl.mini .tg_sch + label::before, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch + label::before {
+.tg_sch_stl.mini .tg_sch + label::before, .tg_sch_stl.mini .tg_sch + label::before, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch + label::before {
   width: 40px;
   height: 18px;
   background-color: #EEEEEE;
 }
-.tg_sch_stl.mini .tg_sch + label::after, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch + label::after {
+.tg_sch_stl.mini .tg_sch + label::after, .tg_sch_stl.mini .tg_sch + label::after, .tg_sch_stl[data-v-bf9a7256].mini .tg_sch + label::after {
   left: 3px;
   bottom: 2px;
   width: 14px;
   height: 14px;
+}
+
+.tg_sch_lab {
+  gap: 10px;
+}
+.tg_sch_lab::before {
+  background-color: #EEEEEE;
+}
+.tg_sch_lab .tg_sch:checked + label:before {
+  background-color: #27AD98;
 }
 
 /*---------------------------------------------
@@ -728,10 +749,6 @@ select.form_contrl {
 .multiselect--active:not(.multiselect--above) .multiselect__current, .multiselect--active:not(.multiselect--above) .multiselect__input, .multiselect--active:not(.multiselect--above) .multiselect__tags {
   margin: 0;
   border-bottom: 0;
-}
-
-.multiselect--active .multiselect__select {
-  top: 65%;
 }
 
 .form_txt .multiselect, .form_txt .multiselect__input, .form_txt .multiselect__placeholder, .form_txt .multiselect__single {

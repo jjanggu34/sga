@@ -2446,11 +2446,11 @@ li ul li .tree_arrow{margin-left:-16px}
 .datepicker,.timepicker,.datetime-picker{position:relative}
 .date-time-picker, .date-time-picker input, .date-time-picker label, .date-time-picker p, .date-time-picker span {font-family: 'Noto Sans CJK KR','Noto Sans KR','Helvetica Neue',Helvetica,'Malgun Gothic','Dotum',sans-serif !important;color:#494949 !important;font-weight:400 !important;}
 
-[data-tooltip]:before {content:attr(data-tooltip);position:absolute;margin-left:50px;margin-top:20px;transition: all 0.6s ease;opacity:0;padding:5px;color:#333;border-radius:2px;box-shadow:0px 0px 3px 1px rgba(50, 50, 50, 0.4);overflow:hidden;max-width:400px;word-break:keep-all;word-wrap:break-word;z-index:1000;text-align:left;}
+/* [data-tooltip]:before {content:attr(data-tooltip);position:absolute;margin-left:50px;margin-top:20px;transition: all 0.6s ease;opacity:0;padding:5px;color:#333;border-radius:2px;box-shadow:0px 0px 3px 1px rgba(50, 50, 50, 0.4);overflow:hidden;max-width:400px;word-break:keep-all;word-wrap:break-word;z-index:1000;text-align:left;} */
 /*.fixedtip[data-tooltip]:before{position:fixed}*/
-[data-tooltip]:not([data-tooltip-persistent])::before {pointer-events: none;}
+/* [data-tooltip]:not([data-tooltip-persistent])::before {pointer-events: none;}
 [data-tooltip]:not([data-tooltip=""]):hover:before {opacity:1;background-color:rgba(0, 0, 0, 0.7);color:#fff;transition-delay:0.5s;}
-[data-tooltip]:not([data-tooltip=""]):after {opacity:0;transition: all 0.5s ease;transition-delay:0s;}
+[data-tooltip]:not([data-tooltip=""]):after {opacity:0;transition: all 0.5s ease;transition-delay:0s;} */
 
 /* autocomplete */
 .autocomplete-input{width:73%;height:30px;line-height:1.4;padding-left:12px}

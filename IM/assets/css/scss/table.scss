@@ -104,7 +104,7 @@
                 div {
                     color:$content;
                 }
-                &:has(.form_contrl) {
+                &:has(.form_contrl,.multiselect) { //[20250811] 추가
                     padding:5px 10px;
                     line-height:unset;
                 }
@@ -130,10 +130,10 @@
     &.tblStl2 {
         border-top:0;
         tbody {
-            tr {//[20250808] 추가
+            tr {//[20250811] 수정
                 &:first-child {
                     td {
-                        border-top:0;
+                        border-top:1px solid $list-border;
                     }
                 }
             }
@@ -519,29 +519,30 @@
 	#개발 디자인 입힌 후 추가 작업
 ---------------------------------------------*/
 //[20250725]
-[data-tooltip] {
-    &:before {
-        margin:0;
-        padding:0;
-    }
-    &:not([data-tooltip=""]):hover:before {
-        top:40px;
-        left:40px;
-        padding:5px;
-        white-space:normal;//[20250801] 추가
-    }
-}
-tbody {
-    [data-tooltip] {
-        &:not([data-tooltip=""]):hover:before {
-            top:30px;
-            left:60px;
-        }
-    }
-}
+// [data-tooltip] {
+//     &:before {
+//         margin:0;
+//         padding:0;
+//         width:190px;//[20250814] 추가
+//     }
+//     &:not([data-tooltip=""]):hover:before {
+//         top:40px;
+//         left:40px;
+//         padding:5px;
+//         white-space:normal;//[20250801] 추가
+//     }
+// }
+// tbody {
+//     [data-tooltip] {
+//         &:not([data-tooltip=""]):hover:before {
+//             top:30px;
+//             left:60px;
+//         }
+//     }
+// }
 
 .default_tbl tbody {
-    &tr,&td {
+    tr,td {
         position:relative;
     }
 }
@@ -571,4 +572,13 @@ tbody {
             }
         }
     }
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+// [20250814] 수정
+.form_tbl.flx_frm_tbl .form_tit, .form_tbl.flx_frm_tbl .wid50.flx .form_tit {
+    max-width:300px;
+    width:auto;
 }

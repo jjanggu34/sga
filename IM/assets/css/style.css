@@ -1037,6 +1037,7 @@ input + .loader {
   background-image: none;
 }
 .dupli_check.redtxt {
+  font-size: 14px;
   line-height: 1.5;
 }
 .dupli_check.redtxt i {
@@ -1052,6 +1053,7 @@ input + .loader {
   mask-image: url("../img/common/ico_info.svg");
 }
 .dupli_check.bluetxt {
+  font-size: 14px;
   line-height: unset;
   color: #23AC3D;
 }
@@ -1460,9 +1462,6 @@ input + .loader {
 .tab_wrap .tab_list {
   flex-wrap: wrap;
   gap: 10px 4px;
-}
-.tab_wrap .tab_list li + li {
-  margin-left: 4px;
 }
 .tab_wrap .tab_list li a {
   padding: 7px 12px;
@@ -2103,14 +2102,14 @@ input + .loader {
 /***************** 검색-상세정보 *****************/
 .detail_search_wrap {
   margin: 0;
-  padding: 25px;
+  padding: 15px;
   border: 0;
   border-top: 1px solid #DDDDDD;
   background-color: transparent;
   box-shadow: none;
 }
 .detail_search_wrap .detail_search_btn {
-  top: -63px;
+  top: -58px;
   left: 49%;
   width: 97px;
   height: 36px;
@@ -2145,6 +2144,9 @@ input + .loader {
 }
 .detail_search_wrap .search_column4 .col dl + dl {
   margin-top: 10px;
+}
+.detail_search_wrap .list_btn, .detail_search_wrap .moved_box .tbl_list, .moved_box .detail_search_wrap .tbl_list {
+  padding: 0;
 }
 .detail_search_wrap dl.bul_dot dt::before {
   left: 0;
@@ -2199,7 +2201,7 @@ input + .loader {
 }
 .detail_search_wrap .box2 {
   min-height: unset;
-  padding: 18px 3px 0 0;
+  padding: 0;
   margin: 0;
   border: 0;
 }
@@ -2383,7 +2385,7 @@ input + .loader {
   width: 100%;
   height: auto;
   margin: 0;
-  padding: 17px 14px 18px 19px;
+  padding: 17px 35px 18px 19px;
   border-color: #C9C9C9;
   background-color: #FFFFFF;
 }
@@ -3833,6 +3835,9 @@ input + .loader {
 .i-card_wrap .dash_box .i-card_ct .icon.osauth i {
   background-image: url("../img/role/icon_osauth.svg");
 }
+.i-card_wrap .dash_box .i-card_ct .icon.resource_role i {
+  background-image: url("../img/role/icon_resource_role.svg");
+}
 .i-card_wrap .dash_box .i-card_ct .icon.etsauth i {
   background-image: url("../img/role/icon_etsauth.svg");
 }
@@ -4249,6 +4254,7 @@ input + .loader {
 }
 .form_txt .moved_box .move_tbl .default_tbl tr td {
   color: #999999;
+  text-align: center;
 }
 .form_txt .moved_box .move_tbl .default_tbl tr td.check_list {
   padding: 7px 10px;

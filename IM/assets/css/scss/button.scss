@@ -661,6 +661,9 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         &:hover {
             background-color:$btn-hover;
         }
+        &:disabled {//[20250811] 추가
+            color:$text-disabled;
+        }
     }
 }
 
@@ -770,6 +773,8 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
         }
     }
     &.mini_paging {
+        position:relative;//[20250814] 추가
+        padding-top:20px;//[20250814] 추가
         ul {
             gap:0;
             li {
@@ -823,5 +828,15 @@ $closes: "detail_search_btn i", "small_delbtn", "sych_mnt_toast .btn_close";
                 }
             }
         }
+    }
+}
+
+/*---------------------------------------------
+	#개발 디자인 입힌 후 추가 작업
+---------------------------------------------*/
+// [20250814]
+.file_btns {
+    button {
+        background-color:$white;
     }
 }
