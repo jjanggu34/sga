@@ -589,7 +589,8 @@
   background-position: 0 0;
 }
 .jstree-default > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url("../../images/throbber.gif") center center no-repeat;
+	/* 해당 이미지가 없으므로 주석처리 하였습니다.*/
+  /*background: url("../../images/throbber.gif") center center no-repeat;*/
 }
 .jstree-default .jstree-file {
   display: inline-block;
@@ -603,28 +604,10 @@
   background: url("../../images/32px.png") -100px -68px no-repeat;
   filter: opacity(0.5) drop-shadow(0 0 0 #ff0000);
 }
-.jstree-default .jstree-container {
+.jstree-default .jstree-file_notcheck {
   display: inline-block;
   width: 14px!important;
   background: url("../../images/32px.png") -100px -68px no-repeat;
-}
-.jstree-default .jstree-groups {
-  display: inline-block;
-  width: 5px!important;
-  background: url("../../images/32px.png") -190px -68px no-repeat;
-  filter: opacity(0.5) drop-shadow(0 0 0 #ff0000);
-}
-.jstree-default .jstree-groups_base {
-  display: inline-block;
-  width: 5px!important;
-  background: url("../../images/32px.png") -110px -68px no-repeat;
-  filter: opacity(0.5) drop-shadow(0 0 0 #ffffff);
-}
-.jstree-default .jstree-groups_unused {
-  display: inline-block;
-  width: 5px!important;
-  background: url("../../images/32px.png") -110px -68px no-repeat;
-  filter: opacity(0.5) drop-shadow(0 0 0 #ff0000);
 }
 .jstree-default .jstree-folder {
   display: inline-block;
@@ -758,7 +741,8 @@
   background-position: 0 0;
 }
 .jstree-default-small > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url("../../images/throbber.gif") center center no-repeat;
+	/* 해당 이미지가 없으므로 주석처리 하였습니다.*/
+  /*background: url("../../images/throbber.gif") center center no-repeat;*/
 }
 .jstree-default-small .jstree-file {
   background: url("../../images/32px.png") -103px -71px no-repeat;
@@ -768,7 +752,7 @@
   background: url("../../images/32px.png") -103px -71px no-repeat;
   filter: opacity(0.5) drop-shadow(0 0 0 #ff0000);
 }
-.jstree-default-small .jstree-container {
+.jstree-default-small .jstree-file_notcheck {
   background: url("../../images/32px.png") -103px -71px no-repeat;
 }
 .jstree-default-small .jstree-folder {
@@ -902,7 +886,8 @@
   background-position: 0 0;
 }
 .jstree-default-large > .jstree-container-ul .jstree-loading > .jstree-ocl {
-  background: url("../../images/throbber.gif") center center no-repeat;
+	/* 해당 이미지가 없으므로 주석처리 하였습니다.*/
+  /*background: url("../../images/throbber.gif") center center no-repeat;*/
 }
 .jstree-default-large .jstree-file {
   background: url("../../images/32px.png") -96px -64px no-repeat;
@@ -912,7 +897,7 @@
   background: url("../../images/32px.png") -96px -64px no-repeat;
   filter: opacity(0.5) drop-shadow(0 0 0 #ff0000);
 }
-.jstree-default-large .jstree-container {
+.jstree-default-large .jstree-file_notcheck {
   background: url("../../images/32px.png") -96px -64px no-repeat;
 }
 filter: opacity(0.5) drop-shadow(0 0 0 #ff0000);
